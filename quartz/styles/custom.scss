@@ -1,0 +1,378 @@
+// Modern Blue-White Theme Custom CSS
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Page background gradient
+body {
+  background: linear-gradient(180deg, var(--light) 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+// Enhanced typography
+article {
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+  }
+
+  h2 {
+    font-size: 1.65rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--lightgray);
+    color: var(--dark);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: var(--dark);
+  }
+
+  h4, h5, h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+}
+
+// Modern link styling
+a {
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+
+  &:hover {
+    color: var(--tertiary) !important;
+  }
+
+  &.internal {
+    background-color: var(--highlight);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: rgba(59, 130, 246, 0.15);
+      border-bottom-color: var(--secondary);
+    }
+  }
+}
+
+// Enhanced blockquote
+blockquote {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.05) 100%);
+  border-left: 4px solid var(--secondary);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+// Modern table styling
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  thead {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--tertiary) 100%);
+    color: white;
+
+    th {
+      padding: 1rem;
+      font-weight: 600;
+      text-align: left;
+      color: white !important;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.15s ease;
+
+      &:nth-child(even) {
+        background-color: rgba(59, 130, 246, 0.03);
+      }
+
+      &:hover {
+        background-color: rgba(59, 130, 246, 0.06);
+      }
+
+      td {
+        padding: 0.875rem 1rem;
+        border-bottom: 1px solid var(--lightgray);
+      }
+
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// Enhanced code blocks
+div[data-rehype-pretty-code-fragment] {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+
+  pre {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+}
+
+// Inline code styling
+code {
+  background-color: rgba(59, 130, 246, 0.08);
+  color: var(--secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+// Callout modern styling
+.callout {
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--lightgray);
+
+  &[data-callout="info"] {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.05) 100%);
+    border-color: rgba(59, 130, 246, 0.2);
+
+    .callout-title {
+      color: var(--secondary);
+    }
+  }
+
+  &[data-callout="warning"] {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(252, 211, 77, 0.05) 100%);
+    border-color: rgba(245, 158, 11, 0.2);
+  }
+
+  &[data-callout="tip"] {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(110, 231, 183, 0.05) 100%);
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+}
+
+// Modern horizontal rule
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--lightgray) 20%, var(--secondary) 50%, var(--lightgray) 80%, transparent 100%);
+  margin: 2.5rem 0;
+}
+
+// Sidebar styling
+.sidebar {
+  .page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+  }
+
+  .search-button {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--tertiary) 100%);
+    border-radius: 10px;
+    color: white;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+  }
+}
+
+// Breadcrumbs styling
+.breadcrumb-element {
+  a {
+    color: var(--gray);
+    font-weight: 500;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+
+  &:last-child a {
+    color: var(--secondary);
+    font-weight: 600;
+  }
+}
+
+// Backlinks styling
+.backlinks {
+  .backlink-title {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+
+  .backlink-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(147, 197, 253, 0.03) 100%);
+    border: 1px solid var(--lightgray);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Tag styling
+a.tag-link {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--tertiary) 100%);
+  color: white !important;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+    color: white !important;
+  }
+}
+
+// Popover modern styling
+.popover {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--lightgray);
+  overflow: hidden;
+}
+
+// Graph view styling
+.graph > .graph-outer {
+  border-radius: 12px;
+  border: 1px solid var(--lightgray);
+  overflow: hidden;
+}
+
+// TOC styling
+.toc {
+  .toc-title {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+
+  li a {
+    color: var(--gray);
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+}
+
+// Modern scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--secondary);
+  }
+}
+
+// Checkbox styling
+input[type="checkbox"] {
+  border-radius: 4px;
+  border: 2px solid var(--gray);
+  width: 18px;
+  height: 18px;
+
+  &:checked {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--tertiary) 100%);
+    border-color: var(--secondary);
+  }
+}
+
+// KaTeX math styling
+.katex-display {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(59, 130, 246, 0.02);
+  border-radius: 8px;
+}
+
+// Responsive improvements
+@media all and (max-width: 600px) {
+  article h1 {
+    font-size: 1.75rem;
+  }
+
+  article h2 {
+    font-size: 1.35rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  .callout {
+    padding: 1rem;
+  }
+}
+
+// Footer styling
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lightgray);
+  color: var(--gray);
+  font-size: 0.875rem;
+}
