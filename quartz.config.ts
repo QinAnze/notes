@@ -4,12 +4,12 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "🪴 Quartz 4.0",
-    enableSPA: true,
+    enableSPA: false,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "https://QinAnze.github.io/chemistry-notes",
+    baseUrl: "qinanze.github.io/chemistry-notes",
     ignorePatterns: ["private", "templates"],
     theme: {
       typography: {
