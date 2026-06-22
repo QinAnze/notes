@@ -14,4 +14,4 @@ title: 我的有机化学笔记
 请我喝雪碧或吃巧乐兹
 ---
 
-<img src="图片保存/sponsor.jpg" width="300" />
+<img src="chemistry-notes/图片保存/sponsor.jpg" width="300" />
