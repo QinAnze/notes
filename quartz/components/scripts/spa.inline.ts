@@ -133,6 +133,18 @@ function createRouter() {
 createRouter()
 notifyNav(getFullSlug(window))
 
+// Add scroll event listener for background blur effect
+if (typeof window !== "undefined") {
+  window.addEventListener("scroll", () => {
+    const body = document.body
+    if (window.scrollY > 50) {
+      body.classList.add("scrolled")
+    } else {
+      body.classList.remove("scrolled")
+    }
+  })
+}
+
 if (!customElements.get("route-announcer")) {
   const attrs = {
     "aria-live": "assertive",
