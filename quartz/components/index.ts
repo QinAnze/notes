@@ -19,6 +19,7 @@ import RecentNotes from "./RecentNotes"
 import MarkMap from "./MarkMap"
 import Timer from "./Timer"
 import Chat from "./Chat"
+import Radio from "./Radio"
 
 export {
   ArticleTitle,
@@ -42,4 +43,5 @@ export {
   MarkMap,
   Timer,
   Chat,
+  Radio,
 }

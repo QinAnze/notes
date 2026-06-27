@@ -3,7 +3,7 @@
   bottom: 2rem;
   right: 2rem;
   z-index: 9999;
-  font-family: var(--font-mono);
+  font-family: var(--codeFont);
 }
 
 .timer-ball {
@@ -50,8 +50,8 @@
   bottom: 70px;
   right: 0;
   width: 280px;
-  background: var(--bg);
-  border: 1px solid var(--border);
+  background: var(--light);
+  border: 1px solid var(--lightgray);
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   padding: 1rem;
@@ -74,9 +74,9 @@
   right: 16px;
   width: 16px;
   height: 16px;
-  background: var(--bg);
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--light);
+  border-right: 1px solid var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
   transform: rotate(45deg);
 }
 
@@ -90,16 +90,16 @@
 .timer-title {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--dark);
 }
 
 .timer-close {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--border);
+  background: var(--lightgray);
   border: none;
-  color: var(--text);
+  color: var(--dark);
   font-size: 0.75rem;
   cursor: pointer;
   display: flex;
@@ -108,7 +108,7 @@
 }
 
 .timer-close:hover {
-  background: var(--lightgray);
+  background: var(--gray);
 }
 
 .timer-display {
@@ -119,13 +119,13 @@
 .timer-time {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--text);
-  font-family: var(--font-mono);
+  color: var(--dark);
+  font-family: var(--codeFont);
 }
 
 .timer-mode {
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--secondary);
   margin-top: 0.25rem;
 }
 
@@ -138,10 +138,10 @@
 .timer-mode-btn {
   flex: 1;
   padding: 0.5rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--lightgray);
   border-radius: 6px;
-  background: transparent;
-  color: var(--text-secondary);
+  background: var(--light);
+  color: var(--secondary);
   font-size: 0.75rem;
   cursor: pointer;
   transition: all 0.2s;
@@ -164,7 +164,7 @@
 
 .timer-custom label {
   font-size: 0.75rem;
-  color: var(--text-secondary);
+  color: var(--secondary);
   display: block;
   margin-bottom: 0.25rem;
 }
@@ -172,12 +172,12 @@
 .timer-custom input {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--lightgray);
   border-radius: 6px;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--light);
+  color: var(--dark);
   font-size: 0.875rem;
-  font-family: var(--font-mono);
+  font-family: var(--codeFont);
   box-sizing: border-box;
 }
 
@@ -207,7 +207,7 @@
 }
 
 .timer-btn.pause {
-  background: var(--warning);
+  background: #f0ad4e;
   color: white;
 }
 
@@ -216,17 +216,17 @@
 }
 
 .timer-btn.reset {
-  background: var(--border);
-  color: var(--text);
+  background: var(--lightgray);
+  color: var(--dark);
 }
 
 .timer-btn.reset:hover {
-  background: var(--lightgray);
+  background: var(--gray);
 }
 
 .timer-progress {
   height: 4px;
-  background: var(--border);
+  background: var(--lightgray);
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 0.5rem;

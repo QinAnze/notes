@@ -14,7 +14,7 @@ export default ((opts?: Options) => {
       <footer>
         <hr />
         <p>
-          Powered by Kimi 2.6 and Seed 2.1
+          Powered by GLM-5.2, Kimi 2.6 and Seed 2.1
         </p>
         <p>
           Created with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>, © {year}

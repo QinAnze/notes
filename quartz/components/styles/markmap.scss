@@ -22,7 +22,7 @@
 
 .markmap-container {
   position: relative;
-  min-height: 500px;
+  min-height: 680px;
 }
 
 .markmap-container .markmap {
@@ -31,5 +31,35 @@
 
 .markmap-container .markmap > svg {
   width: 100%;
-  height: 600px;
+  height: 680px;
+}
+
+.markmap-container .markmap svg text {
+  fill: var(--text) !important;
+}
+
+.markmap-container .markmap svg .markmap-link text {
+  fill: var(--accent) !important;
+}
+
+.markmap-container .markmap svg path,
+.markmap-container .markmap svg line {
+  stroke: var(--lightgray) !important;
+}
+
+.markmap-container .markmap svg rect {
+  fill: transparent !important;
+  stroke: var(--lightgray) !important;
+}
+
+.markmap-container .markmap svg .markmap-foreign object {
+  background: transparent !important;
+}
+
+.markmap-container .markmap svg .markmap-foreign div {
+  color: var(--text) !important;
+}
+
+.markmap-container .markmap svg .markmap-foreign span {
+  color: var(--text) !important;
 }

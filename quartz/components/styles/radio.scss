@@ -1,0 +1,208 @@
+#radio-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-mono);
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.radio-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 200px;
+  flex: 1;
+}
+
+.radio-icon {
+  font-size: 1.2rem;
+}
+
+.radio-title {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.radio-song-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.radio-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-btn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.radio-btn:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.radio-play-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+.radio-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 2;
+  min-width: 200px;
+}
+
+.radio-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.radio-progress-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.radio-time {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.radio-volume {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-volume-icon {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#radio-volume {
+  width: 80px;
+  height: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1.5px;
+  cursor: pointer;
+}
+
+#radio-volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#radio-volume::-webkit-slider-thumb:hover {
+  background: white;
+}
+
+#radio-volume::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  border: none;
+}
+
+body {
+  padding-top: 60px !important;
+}
+
+@media (max-width: 768px) {
+  .radio-container {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .radio-info {
+    min-width: auto;
+    flex: 0 0 auto;
+  }
+  
+  .radio-song-name {
+    display: none;
+  }
+  
+  .radio-volume {
+    display: none;
+  }
+  
+  .radio-progress {
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .radio-time {
+    font-size: 0.7rem;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .radio-title {
+    display: none;
+  }
+  
+  .radio-progress {
+    min-width: 60px;
+  }
+  
+  .radio-time {
+    display: none;
+  }
+  
+  #radio-volume {
+    width: 60px;
+  }
+}

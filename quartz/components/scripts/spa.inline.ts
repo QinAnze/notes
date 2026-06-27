@@ -61,8 +61,26 @@ async function navigate(url: URL, isBack: boolean = false) {
   announcer.dataset.persist = ""
   html.body.appendChild(announcer)
 
+  const preservedElements: { el: Element; nextSibling: Element | null; parent: Element }[] = []
+  document.body.querySelectorAll("[data-spa-preserve]").forEach((el) => {
+    preservedElements.push({
+      el,
+      nextSibling: el.nextSibling,
+      parent: el.parentElement!,
+    })
+    el.remove()
+  })
+
   // morph body
   micromorph(document.body, html.body)
+
+  preservedElements.forEach(({ el }) => {
+    const existingEl = document.getElementById(el.id)
+    if (existingEl) {
+      existingEl.remove()
+    }
+    document.body.appendChild(el)
+  })
 
   // scroll into place and add history
   if (!isBack) {
