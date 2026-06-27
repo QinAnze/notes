@@ -9,7 +9,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "qinanze.github.io",
+    baseUrl: "qinanze.github.io/chemistry-notes",
     ignorePatterns: ["private", "templates"],
     theme: {
       typography: {
