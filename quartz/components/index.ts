@@ -1,47 +1,28 @@
-import ArticleTitle from "./ArticleTitle"
-import Content from "./pages/Content"
-import TagContent from "./pages/TagContent"
-import FolderContent from "./pages/FolderContent"
-import Darkmode from "./Darkmode"
-import Head from "./Head"
-import PageTitle from "./PageTitle"
-import ContentMeta from "./ContentMeta"
-import Spacer from "./Spacer"
-import TableOfContents from "./TableOfContents"
-import TagList from "./TagList"
-import Graph from "./Graph"
-import Backlinks from "./Backlinks"
-import Search from "./Search"
-import Footer from "./Footer"
-import DesktopOnly from "./DesktopOnly"
-import MobileOnly from "./MobileOnly"
-import RecentNotes from "./RecentNotes"
-import MarkMap from "./MarkMap"
-import Timer from "./Timer"
-import Chat from "./Chat"
-import Radio from "./Radio"
-
-export {
-  ArticleTitle,
-  Content,
-  TagContent,
-  FolderContent,
-  Darkmode,
-  Head,
-  PageTitle,
-  ContentMeta,
-  Spacer,
-  TableOfContents,
-  TagList,
-  Graph,
-  Backlinks,
-  Search,
-  Footer,
-  DesktopOnly,
-  MobileOnly,
-  RecentNotes,
-  MarkMap,
-  Timer,
-  Chat,
-  Radio,
-}
+export { default as ArticleTitle } from "./ArticleTitle"
+export { default as Body } from "./Body"
+export { default as Chat } from "./Chat"
+export { default as ContentMeta } from "./ContentMeta"
+export { default as Darkmode } from "./Darkmode"
+export { default as Date } from "./Date"
+export { default as DesktopOnly } from "./DesktopOnly"
+export { default as Footer } from "./Footer"
+export { default as Graph } from "./Graph"
+export { default as Head } from "./Head"
+export { default as Header } from "./Header"
+export { default as MarkMap } from "./MarkMap"
+export { default as MobileOnly } from "./MobileOnly"
+export { default as PageList } from "./PageList"
+export { default as PageTitle } from "./PageTitle"
+export { default as Radio } from "./Radio"
+export { default as RecentNotes } from "./RecentNotes"
+export { default as Search } from "./Search"
+export { default as Spacer } from "./Spacer"
+export { default as TableOfContents } from "./TableOfContents"
+export { default as TagList } from "./TagList"
+export { default as Timer } from "./Timer"
+export { default as TodoList } from "./TodoList"
+export { default as Todo } from "./Todo"
+export { default as Backlinks } from "./Backlinks"
+export { default as Content } from "./pages/Content"
+export { default as FolderContent } from "./pages/FolderContent"
+export { default as TagContent } from "./pages/TagContent"

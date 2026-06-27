@@ -1,0 +1,123 @@
+.todo-list-container {
+  margin: 1rem 0;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.todo-list-header {
+  padding: 10px 12px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: move;
+  user-select: none;
+}
+
+.todo-list-input-container {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--lightgray);
+  display: flex;
+  gap: 8px;
+}
+
+.todo-list-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.todo-list-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.todo-list-add-btn {
+  padding: 6px 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+.todo-list-add-btn:hover {
+  opacity: 0.9;
+}
+
+.todo-list-items {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 6px;
+}
+
+.todo-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.todo-list-item:hover {
+  background: var(--bg);
+}
+
+.todo-list-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.todo-list-item label {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--text);
+  word-break: break-word;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.todo-list-item.checked label {
+  text-decoration: line-through;
+  color: var(--secondary);
+}
+
+.todo-list-item .delete-btn {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.todo-list-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.todo-list-item .delete-btn:hover {
+  color: #e74c3c;
+}
+
+.todo-list-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--secondary);
+  font-size: 0.85rem;
+}
