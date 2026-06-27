@@ -8,11 +8,11 @@ title: 知识点
 
 ## 📚 分类
 
-- [[命名]] - 有机化合物命名规则
-- [[术语]] - 有机化学术语
-- [[上课和作业的一些思考]] - 学习思考笔记
+- [命名](https://qinanze.github.io/chemistry-notes/知识点/命名) - 有机化合物命名规则
+- [术语](https://qinanze.github.io/chemistry-notes/知识点/术语) - 有机化学术语
+- [上课和作业的一些思考](https://qinanze.github.io/chemistry-notes/知识点/上课和作业的一些思考) - 学习思考笔记
 
 ## 📂 反应分类
 
-- [[反应特点]] - 按反应特点分类
-- [[反应类型]] - 按反应类型分类
+- [反应特点](https://qinanze.github.io/chemistry-notes/知识点/反应特点) - 按反应特点分类
+- [反应类型](https://qinanze.github.io/chemistry-notes/知识点/反应类型) - 按反应类型分类

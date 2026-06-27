@@ -9,7 +9,7 @@ title: 我的有机化学笔记
 
 ## 📚 目录
 
-- [[上课笔记]]
+- [上课笔记](https://qinanze.github.io/chemistry-notes/上课笔记)
 
 请我喝咖啡
 ---

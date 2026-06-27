@@ -8,15 +8,15 @@ title: 上课笔记
 
 ## 📝 章节笔记
 
-- [[绪论]] - 有机化学概述
-- [[烷烃和环烷烃]] - 烷烃和环烷烃的结构与性质
-- [[不饱和烃和共轭体系]] - 烯烃、炔烃及共轭效应
-- [[芳烃和芳香性]] - 芳香族化合物
-- [[立体化学]] - 立体异构
-- [[卤代烃]] - 卤代烃的反应
-- [[醇酚醚]] - 含氧有机化合物
-- [[醛酮]] - 羰基化合物
-- [[羧酸及其衍生物]] - 羧酸及其衍生物
-- [[胺及杂环化合物]] - 含氮化合物
-- [[生物大分子]] - 生物大分子化合物
-- [[结构解析]] - 结构解析方法
+- [绪论](https://qinanze.github.io/chemistry-notes/上课笔记/绪论) - 有机化学概述
+- [烷烃和环烷烃](https://qinanze.github.io/chemistry-notes/上课笔记/烷烃和环烷烃) - 烷烃和环烷烃的结构与性质
+- [不饱和烃和共轭体系](https://qinanze.github.io/chemistry-notes/上课笔记/不饱和烃和共轭体系) - 烯烃、炔烃及共轭效应
+- [芳烃和芳香性](https://qinanze.github.io/chemistry-notes/上课笔记/芳烃和芳香性) - 芳香族化合物
+- [立体化学](https://qinanze.github.io/chemistry-notes/上课笔记/立体化学) - 立体异构
+- [卤代烃](https://qinanze.github.io/chemistry-notes/上课笔记/卤代烃) - 卤代烃的反应
+- [醇酚醚](https://qinanze.github.io/chemistry-notes/上课笔记/醇酚醚) - 含氧有机化合物
+- [醛酮](https://qinanze.github.io/chemistry-notes/上课笔记/醛酮) - 羰基化合物
+- [羧酸及其衍生物](https://qinanze.github.io/chemistry-notes/上课笔记/羧酸及其衍生物) - 羧酸及其衍生物
+- [胺及杂环化合物](https://qinanze.github.io/chemistry-notes/上课笔记/胺及杂环化合物) - 含氮化合物
+- [生物大分子](https://qinanze.github.io/chemistry-notes/上课笔记/生物大分子) - 生物大分子化合物
+- [结构解析](https://qinanze.github.io/chemistry-notes/上课笔记/结构解析) - 结构解析方法
