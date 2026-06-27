@@ -133,6 +133,26 @@ async function navigate(url: URL, isBack: boolean = false) {
 window.spaNavigate = navigate
 
 function createRouter() {
+  // Base path for GitHub Pages
+  const BASE_PATH = "/chemistry-notes"
+  
+  // Handle page back button click
+  document.addEventListener("click", async (e) => {
+    const target = e.target as Element
+    if (target.id === "page-back-btn" || target.closest("#page-back-btn")) {
+      e.preventDefault()
+      const currentPath = window.location.pathname
+      // If we're not at base path, go back in history
+      if (currentPath !== BASE_PATH + "/" && currentPath !== BASE_PATH) {
+        window.history.back()
+      } else {
+        // Already at base, go to base path
+        window.location.href = "https://qinanze.github.io" + BASE_PATH
+      }
+      return
+    }
+  })
+  
   if (typeof window !== "undefined") {
     window.addEventListener("click", async (event) => {
       const { url } = getOpts(event) ?? {}
@@ -148,6 +168,15 @@ function createRouter() {
     window.addEventListener("popstate", (event) => {
       const { url } = getOpts(event) ?? {}
       if (window.location.hash && window.location.pathname === url?.pathname) return
+      
+      // Check if we're returning to root path (without /chemistry-notes)
+      // This handles the case when history back leads to qinanze.github.io instead of qinanze.github.io/chemistry-notes
+      const BASE_PATH = "/chemistry-notes"
+      if (window.location.pathname === "/" || window.location.pathname === "") {
+        window.location.href = "https://qinanze.github.io" + BASE_PATH
+        return
+      }
+      
       try {
         navigate(new URL(window.location.toString()), true)
       } catch (e) {

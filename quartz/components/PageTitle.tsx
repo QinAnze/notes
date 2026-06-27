@@ -9,7 +9,7 @@ function PageTitle({ fileData, cfg }: QuartzComponentProps) {
     <h1 class="page-title">
       <a href="https://qinanze.github.io/chemistry-notes/" data-router-ignore>{title}</a>
       {!isRoot && (
-        <a href={parentDir} class="page-back" data-router-ignore title="返回上一级">←</a>
+        <a href="#" class="page-back" id="page-back-btn" title="返回上一级">←</a>
       )}
     </h1>
   )
