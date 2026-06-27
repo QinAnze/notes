@@ -7,9 +7,42 @@ html {
 
 // Page background gradient
 body {
-  background: linear-gradient(180deg, var(--light) 0%, #ffffff 100%);
+  background: transparent;
   min-height: 100vh;
   position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./chemistry-notes/图片保存/bg-light.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  transition: filter 0.5s ease;
+  filter: blur(0px);
+}
+
+body.scrolled::before {
+  filter: blur(8px);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+  pointer-events: none;
 }
 
 // Dark mode background image
