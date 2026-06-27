@@ -86,16 +86,17 @@ export function transformInternalLink(link: string): RelativeURL {
 
 // resolve /a/b/c to ../..
 export function pathToRoot(slug: FullSlug): RelativeURL {
-  const segments = slug.split("/").filter((x) => x !== "")
-  // folder-style pages (ending in "index") have a trailing-slash URL,
-  // so they need one fewer "../" than content pages whose URL has no trailing slash
-  const isFolder = segments.length > 0 && segments.at(-1) === "index"
-  const upCount = isFolder ? segments.slice(0, -1) : segments
+  let rootPath = slug
+    .split("/")
+    .filter((x) => x !== "")
+    .slice(0, -1)
+    .map((_) => "..")
+    .join("/")
 
-  let rootPath = upCount.map((_) => "..").join("/")
   if (rootPath.length === 0) {
     rootPath = "."
   }
+
   return rootPath as RelativeURL
 }
 
