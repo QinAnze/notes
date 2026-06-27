@@ -22,19 +22,23 @@ PageTitle.css = `
   align-items: center;
   gap: 0.5rem;
 }
+.page-title > a:first-child {
+  margin-right: auto;
+}
 .page-back {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--lightgray);
   color: var(--dark);
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  margin-left: 0.75rem;
 }
 .page-back:hover {
   background: var(--gray);
