@@ -203,14 +203,25 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                   width ||= "auto"
                   height ||= "auto"
                   return {
-                    type: "image",
+                    type: "link",
                     url,
                     data: {
                       hProperties: {
-                        width,
-                        height,
+                        target: "_blank",
                       },
                     },
+                    children: [
+                      {
+                        type: "image",
+                        url,
+                        data: {
+                          hProperties: {
+                            width,
+                            height,
+                          },
+                        },
+                      },
+                    ],
                   }
                 } else if ([".mp4", ".webm", ".ogv", ".mov", ".mkv"].includes(ext)) {
                   return {
@@ -226,8 +237,19 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                   }
                 } else if ([".pdf"].includes(ext)) {
                   return {
-                    type: "html",
-                    value: `<iframe src="${url}"></iframe>`,
+                    type: "link",
+                    url,
+                    data: {
+                      hProperties: {
+                        target: "_blank",
+                      },
+                    },
+                    children: [
+                      {
+                        type: "text",
+                        value: alias ?? fp,
+                      },
+                    ],
                   }
                 } else if (ext === "") {
                   // TODO: note embed
@@ -237,9 +259,12 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
 
               // internal link
               const url = fp + anchor
+              const ext = path.extname(fp).toLowerCase()
+              const isFileLink = [".pdf"].includes(ext)
               return {
                 type: "link",
                 url,
+                data: isFileLink ? { hProperties: { target: "_blank" } } : undefined,
                 children: [
                   {
                     type: "text",
