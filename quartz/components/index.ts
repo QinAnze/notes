@@ -16,6 +16,9 @@ import Footer from "./Footer"
 import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
+import MarkMap from "./MarkMap"
+import Timer from "./Timer"
+import Chat from "./Chat"
 
 export {
   ArticleTitle,
@@ -36,4 +39,7 @@ export {
   DesktopOnly,
   MobileOnly,
   RecentNotes,
+  MarkMap,
+  Timer,
+  Chat,
 }

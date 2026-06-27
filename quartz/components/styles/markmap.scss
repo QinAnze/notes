@@ -1,0 +1,35 @@
+.markmap-wrapper {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  background: var(--light);
+}
+
+.markmap-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.markmap-wrapper h3::before {
+  content: "🧠";
+}
+
+.markmap-container {
+  position: relative;
+  min-height: 500px;
+}
+
+.markmap-container .markmap {
+  position: relative;
+}
+
+.markmap-container .markmap > svg {
+  width: 100%;
+  height: 600px;
+}

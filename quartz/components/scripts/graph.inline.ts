@@ -26,6 +26,10 @@ function addToVisited(slug: SimpleSlug) {
 }
 
 async function renderGraph(container: string, fullSlug: FullSlug) {
+  if (!fullSlug) {
+    console.warn("Graph: fullSlug is undefined, skipping render")
+    return
+  }
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
   const graph = document.getElementById(container)
@@ -297,7 +301,20 @@ function renderGlobalGraph() {
 }
 
 document.addEventListener("nav", async (e: unknown) => {
-  const slug = (e as CustomEventMap["nav"]).detail.url
+  const event = e as CustomEventMap["nav"]
+  const slug = event?.detail?.url
+  if (!slug) {
+    console.warn("Graph: slug not found in nav event, using fallback")
+    // Fallback to current page slug from body dataset
+    const fallbackSlug = document.body.dataset.slug as FullSlug
+    if (!fallbackSlug) {
+      console.error("Graph: no slug available, skipping render")
+      return
+    }
+    addToVisited(simplifySlug(fallbackSlug))
+    await renderGraph("graph-container", fallbackSlug)
+    return
+  }
   addToVisited(slug)
   await renderGraph("graph-container", slug)
 
