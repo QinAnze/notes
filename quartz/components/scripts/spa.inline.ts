@@ -114,9 +114,10 @@ async function navigate(url: URL, isBack: boolean = false) {
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   history.pushState({}, "", url)
 
-  // normalize relative links to absolute paths so they always include the base subpath
-  // (e.g. /chemistry-notes/...). Fixes GitHub Pages subpath deployment where ../ etc.
-  // can resolve incorrectly if document.baseURI shifts during morphing.
+  // normalize all relative links to absolute paths so subsequent clicks always
+  // include the full base URL (e.g. /chemistry-notes/...). This fixes the known
+  // Quartz subpath issue where ../ and ./ paths can lose the repo prefix during
+  // GitHub Pages SPA navigation across multiple directory levels.
   normalizeRelativeURLs(document.body, url)
 
   notifyNav(getFullSlug(window))
