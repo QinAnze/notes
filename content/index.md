@@ -9,7 +9,10 @@ title: 我的有机化学笔记
 
 ## 📚 目录
 
-- [上课笔记](https://qinanze.github.io/chemistry-notes/上课笔记)
+- [上课笔记](https://qinanze.github.io/chemistry-notes/上课笔记) - 课程笔记整理
+- [知识点](https://qinanze.github.io/chemistry-notes/知识点) - 知识点归纳总结
+- [PDF资料](https://qinanze.github.io/chemistry-notes/pdf) - 课程PDF资料
+- [教师](https://qinanze.github.io/chemistry-notes/教师) - 教师信息
 
 请我喝咖啡
 ---
