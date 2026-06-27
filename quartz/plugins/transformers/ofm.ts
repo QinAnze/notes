@@ -92,6 +92,7 @@ const calloutMapping: Record<string, keyof typeof callouts> = {
   example: "example",
   quote: "quote",
   cite: "quote",
+  summary: "abstract",
 }
 
 function canonicalizeCallout(calloutName: string): keyof typeof callouts {
