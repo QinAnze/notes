@@ -1,6 +1,18 @@
 import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug } from "../../util/path"
 
+// adapted from `popover.inline.ts`
+// normalize relative URLs to absolute paths so they resolve correctly
+// even when the document baseURL has changed mid-navigation
+function normalizeRelativeURLs(el: Element | Document, base: string | URL) {
+  const update = (el: Element, attr: string, base: string | URL) => {
+    el.setAttribute(attr, new URL(el.getAttribute(attr)!, base).pathname)
+  }
+
+  el.querySelectorAll('[href^="./"], [href^="../"]').forEach((item) => update(item, "href", base))
+  el.querySelectorAll('[src^="./"], [src^="../"]').forEach((item) => update(item, "src", base))
+}
+
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
 
@@ -101,6 +113,12 @@ async function navigate(url: URL, isBack: boolean = false) {
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   history.pushState({}, "", url)
+
+  // normalize relative links to absolute paths so they always include the base subpath
+  // (e.g. /chemistry-notes/...). Fixes GitHub Pages subpath deployment where ../ etc.
+  // can resolve incorrectly if document.baseURI shifts during morphing.
+  normalizeRelativeURLs(document.body, url)
+
   notifyNav(getFullSlug(window))
   delete announcer.dataset.persist
 }
