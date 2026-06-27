@@ -1,6 +1,18 @@
 import micromorph from "micromorph"
 import { FullSlug, RelativeURL, getFullSlug } from "../../util/path"
 
+// adapted from `popover.inline.ts`
+// normalize relative URLs to absolute paths so they resolve correctly
+// even when the document baseURL has changed mid-navigation
+function normalizeRelativeURLs(el: Element | Document, base: string | URL) {
+  const update = (el: Element, attr: string, base: string | URL) => {
+    el.setAttribute(attr, new URL(el.getAttribute(attr)!, base).pathname)
+  }
+
+  el.querySelectorAll('[href^="./"], [href^="../"]').forEach((item) => update(item, "href", base))
+  el.querySelectorAll('[src^="./"], [src^="../"]').forEach((item) => update(item, "src", base))
+}
+
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
 
@@ -61,8 +73,26 @@ async function navigate(url: URL, isBack: boolean = false) {
   announcer.dataset.persist = ""
   html.body.appendChild(announcer)
 
+  const preservedElements: { el: Element; nextSibling: Element | null; parent: Element }[] = []
+  document.body.querySelectorAll("[data-spa-preserve]").forEach((el) => {
+    preservedElements.push({
+      el,
+      nextSibling: el.nextSibling,
+      parent: el.parentElement!,
+    })
+    el.remove()
+  })
+
   // morph body
   micromorph(document.body, html.body)
+
+  preservedElements.forEach(({ el }) => {
+    const existingEl = document.getElementById(el.id)
+    if (existingEl) {
+      existingEl.remove()
+    }
+    document.body.appendChild(el)
+  })
 
   // scroll into place and add history
   if (!isBack) {
@@ -83,6 +113,12 @@ async function navigate(url: URL, isBack: boolean = false) {
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   history.pushState({}, "", url)
+
+  // normalize relative links to absolute paths so they always include the base subpath
+  // (e.g. /chemistry-notes/...). Fixes GitHub Pages subpath deployment where ../ etc.
+  // can resolve incorrectly if document.baseURI shifts during morphing.
+  normalizeRelativeURLs(document.body, url)
+
   notifyNav(getFullSlug(window))
   delete announcer.dataset.persist
 }
@@ -132,6 +168,18 @@ function createRouter() {
 
 createRouter()
 notifyNav(getFullSlug(window))
+
+// Add scroll event listener for background blur effect
+if (typeof window !== "undefined") {
+  window.addEventListener("scroll", () => {
+    const body = document.body
+    if (window.scrollY > 50) {
+      body.classList.add("scrolled")
+    } else {
+      body.classList.remove("scrolled")
+    }
+  })
+}
 
 if (!customElements.get("route-announcer")) {
   const attrs = {
