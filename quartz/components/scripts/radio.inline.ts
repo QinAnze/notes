@@ -1,7 +1,5 @@
-const PLAYLIST_ID = "18095645858"
+const PLAYLIST_ID = "18098781989"
 const API_URL = "https://api.injahow.cn/meting/"
-const CACHE_KEY = "radio-playlist-cache"
-const CACHE_EXPIRY = 30 * 60 * 1000 // 30分钟缓存过期
 
 interface Song {
   id: string
@@ -63,17 +61,7 @@ class RadioPlayer {
   }
 
   private async fetchPlaylist() {
-    // 检查缓存是否过期
-    const cacheData = localStorage.getItem(CACHE_KEY)
-    if (cacheData) {
-      try {
-        const { playlist, timestamp } = JSON.parse(cacheData)
-        if (playlist.length > 0 && Date.now() - timestamp < CACHE_EXPIRY) {
-          this.playlist = playlist
-          return
-        }
-      } catch {}
-    }
+    if (this.playlist.length > 0) return
     
     try {
       const response = await fetch(`${API_URL}?type=playlist&id=${PLAYLIST_ID}`)
@@ -87,12 +75,6 @@ class RadioPlayer {
           url: item.url,
           pic: item.pic,
         }))
-        
-        // 保存到缓存
-        localStorage.setItem(CACHE_KEY, JSON.stringify({
-          playlist: this.playlist,
-          timestamp: Date.now()
-        }))
       }
       
       if (this.playlist.length > 0) {
@@ -100,7 +82,6 @@ class RadioPlayer {
       }
     } catch (error) {
       console.error("Failed to fetch playlist:", error)
-      await this.fetchPlaylistAlternative()
     }
   }
 
