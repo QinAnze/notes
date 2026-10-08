@@ -47,11 +47,14 @@ const defaultOptions: GraphOptions = {
 
 export default ((opts?: GraphOptions) => {
   function Graph() {
-    const localGraph = { ...opts?.localGraph, ...defaultOptions.localGraph }
-    const globalGraph = { ...opts?.globalGraph, ...defaultOptions.globalGraph }
+    // 注意合并顺序：默认在前、用户传参在后。
+    // 反过来写（`{...opts, ...defaults}`）会让默认值覆盖掉外部配置，
+    // 表现为「传了 depth: -1 但局部图还是只看一层」——而且不报错，很难查。
+    const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
+    const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
     return (
       <div class="graph">
-        <h3>Graph View</h3>
+        <h3>双向链接图谱</h3>
         <div class="graph-outer">
           <div id="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
           <svg

@@ -4,13 +4,23 @@
   & > h3 {
     font-size: 1rem;
     margin: 0;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  // 与下方思维导图的标题样式保持一致
+  & > h3::before {
+    content: "🕸️";
   }
 
   & > .graph-outer {
     border-radius: 5px;
     border: 1px solid var(--lightgray);
     box-sizing: border-box;
-    height: 250px;
+    // 侧栏里放的是全库图（约 60+ 节点），250px 太挤了
+    height: 380px;
     margin: 0.5em 0;
     position: relative;
     overflow: hidden;
