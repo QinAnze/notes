@@ -44266,15 +44266,20 @@ function getFullSlug(window2) {
   const res = window2.document.body.dataset.slug;
   return res;
 }
+var _rebaseHtmlElement = (el, attr, newBase) => {
+  const rebased = new URL(el.getAttribute(attr), newBase);
+  el.setAttribute(attr, rebased.pathname + rebased.hash);
+};
+function normalizeRelativeURLs(el, destination) {
+  el.querySelectorAll('[href=""], [href^="./"], [href^="../"]').forEach(
+    (item) => _rebaseHtmlElement(item, "href", destination)
+  );
+  el.querySelectorAll('[src=""], [src^="./"], [src^="../"]').forEach(
+    (item) => _rebaseHtmlElement(item, "src", destination)
+  );
+}
 
 // quartz/components/scripts/quartz/components/scripts/spa.inline.ts
-function normalizeRelativeURLs(el, base) {
-  const update = (el2, attr, base2) => {
-    el2.setAttribute(attr, new URL(el2.getAttribute(attr), base2).pathname);
-  };
-  el.querySelectorAll('[href^="./"], [href^="../"]').forEach((item) => update(item, "href", base));
-  el.querySelectorAll('[src^="./"], [src^="../"]').forEach((item) => update(item, "src", base));
-}
 var NODE_TYPE_ELEMENT = 1;
 var announcer = document.createElement("route-announcer");
 var isElement = (target) => target?.nodeType === NODE_TYPE_ELEMENT;
@@ -44321,6 +44326,7 @@ async function navigate(url, isBack = false) {
   if (!contents)
     return;
   const html = p2.parseFromString(contents, "text/html");
+  normalizeRelativeURLs(html, url);
   let title = html.querySelector("title")?.textContent;
   if (title) {
     document.title = title;
@@ -44363,7 +44369,6 @@ async function navigate(url, isBack = false) {
   const elementsToAdd = html.head.querySelectorAll(":not([spa-preserve])");
   elementsToAdd.forEach((el) => document.head.appendChild(el));
   history.pushState({}, "", url);
-  normalizeRelativeURLs(document.body, url);
   notifyNav(getFullSlug(window));
   delete announcer.dataset.persist;
 }
