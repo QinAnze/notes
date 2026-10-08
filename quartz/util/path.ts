@@ -68,6 +68,35 @@ export function simplifySlug(fp: FullSlug): SimpleSlug {
   return _stripSlashes(_trimSuffix(fp, "index"), true) as SimpleSlug
 }
 
+// ---------------------------------------------------------------------------
+// 以下两个是从 micromorph 移植过来的，Quartz 4.0.8 没有。
+//
+// SPA 导航时 fetch 拿到的是**目标页面**的 HTML，但它的相对链接是相对目标
+// 页面算出来的。如果不重基就morph 进当前文档，浏览器会以**当前地址栏**去
+// 解析这些相对路径 —— 于是每深一层就丢掉一层前缀：
+// 站点部署在子目录（qinanze.github.io/notes/）时，从 /notes/ 有机化学笔记/
+// 再点进上课笔记，链接会变成 /有机化学笔记/上课笔记/，丢掉 /notes 这层 → 404。
+//
+// 修法：在 morph **之前**，把目标 HTML 里的相对链接重基到目标 URL 上。
+// 搬运自 https://github.com/natemoo-re/micromorph/blob/main/src/utils.ts
+// ---------------------------------------------------------------------------
+
+const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) => {
+  const rebased = new URL(el.getAttribute(attr)!, newBase)
+  // hash 要一起带上，否则锚点链接重基后会丢掉锚点
+  el.setAttribute(attr, rebased.pathname + rebased.hash)
+}
+
+export function normalizeRelativeURLs(el: Element | Document, destination: string | URL) {
+  // 选择器里的 [href=""] 不能漏 —— 空 href 指向当前页，也要一起重基
+  el.querySelectorAll('[href=""], [href^="./"], [href^="../"]').forEach((item) =>
+    _rebaseHtmlElement(item, "href", destination),
+  )
+  el.querySelectorAll('[src=""], [src^="./"], [src^="../"]').forEach((item) =>
+    _rebaseHtmlElement(item, "src", destination),
+  )
+}
+
 export function transformInternalLink(link: string): RelativeURL {
   let [fplike, anchor] = splitAnchor(decodeURI(link))
 

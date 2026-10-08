@@ -147,6 +147,25 @@ npm run format             # Prettier 格式化
 > `.afterDOMLoaded`，所以**从 layout 移除 = 从构建图移除**，
 > 比删文件安全（组件源码留着随时能加回来）。
 
+> ⚠️ **SPA 导航在子目录部署下的前缀丢失，已按上游修好**
+> （`quartz/util/path.ts` 的 `normalizeRelativeURLs` + `spa.inline.ts`）。
+>
+> 症状：从 `/notes/` 点进 `/notes/有机化学笔记/` 正常，再点进上课笔记却变成
+> `/有机化学笔记/上课笔记/`，**丢了 `/notes` 这层前缀**，直接 404。
+>
+> 原因是重基相对链接的时机和对象都不对：
+> SPA 用 fetch 拿到的 HTML 里的相对链接是**相对目标页面**算的，
+> 而这些链接被 morph 进了**当前**文档，浏览器就按当前地址栏去解析 ——
+> 子目录部署时每深一层丢一层前缀。
+>
+> 修法（与[上游](https://github.com/jackyzha0/quartz/blob/v4/quartz/util/path.ts)一致）：
+> **在 `micromorph` 之前**，对**刚 fetch 回来的 `html`** 调用
+> `normalizeRelativeURLs(html, url)`，把里面的 `./`、`../` 重基成绝对路径。
+> 注意是对 `html` 做、且在 morph 之前 —— 不能对 morph 之后的 `document.body` 做，
+> 因为 `micromorph` 只增不删，旧页面残留的节点会被一起重基到错误的基准上。
+>
+> `spa.inline.ts` 里的 `BASE_PATH`（返回按钮用）要继续和 `baseUrl` 保持一致。
+
 笔记内容为老师傅手敲 + AI 统一格式化。**如果有错误，欢迎指正，欢迎提 issue 和 PR。**
 
 ---

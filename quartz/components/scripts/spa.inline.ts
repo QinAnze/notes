@@ -1,17 +1,5 @@
 import micromorph from "micromorph"
-import { FullSlug, RelativeURL, getFullSlug } from "../../util/path"
-
-// adapted from `popover.inline.ts`
-// normalize relative URLs to absolute paths so they resolve correctly
-// even when the document baseURL has changed mid-navigation
-function normalizeRelativeURLs(el: Element | Document, base: string | URL) {
-  const update = (el: Element, attr: string, base: string | URL) => {
-    el.setAttribute(attr, new URL(el.getAttribute(attr)!, base).pathname)
-  }
-
-  el.querySelectorAll('[href^="./"], [href^="../"]').forEach((item) => update(item, "href", base))
-  el.querySelectorAll('[src^="./"], [src^="../"]').forEach((item) => update(item, "src", base))
-}
+import { FullSlug, RelativeURL, getFullSlug, normalizeRelativeURLs } from "../../util/path"
 
 // adapted from `micromorph`
 // https://github.com/natemoo-re/micromorph
@@ -66,6 +54,12 @@ async function navigate(url: URL, isBack: boolean = false) {
   if (!contents) return
 
   const html = p.parseFromString(contents, "text/html")
+
+  // 关键：必须在 morph **之前**，把目标 HTML 里的相对链接重基到目标 URL 上。
+  // 否则浏览器会用当前地址栏去解析那些相对路径，子目录部署时每深一层丢一层前缀
+  // （/notes/有机化学笔记/ → /有机化学笔记/上课笔记/）。
+  normalizeRelativeURLs(html, url)
+
   let title = html.querySelector("title")?.textContent
   if (title) {
     document.title = title
@@ -119,12 +113,6 @@ async function navigate(url: URL, isBack: boolean = false) {
   // delay setting the url until now
   // at this point everything is loaded so changing the url should resolve to the correct addresses
   history.pushState({}, "", url)
-
-  // normalize all relative links to absolute paths so subsequent clicks always
-  // include the full base URL (e.g. /chemistry-notes/...). This fixes the known
-  // Quartz subpath issue where ../ and ./ paths can lose the repo prefix during
-  // GitHub Pages SPA navigation across multiple directory levels.
-  normalizeRelativeURLs(document.body, url)
 
   notifyNav(getFullSlug(window))
   delete announcer.dataset.persist
