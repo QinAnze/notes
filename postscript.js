@@ -40237,8 +40237,9 @@ async function navigate(url, isBack = false) {
   delete announcer.dataset.persist;
 }
 window.spaNavigate = navigate;
+var BASE_PATH = "/notes";
+var SITE_ORIGIN = "https://qinanze.github.io";
 function createRouter() {
-  const BASE_PATH = "/chemistry-notes";
   document.addEventListener("click", async (e) => {
     const target = e.target;
     if (target.id === "page-back-btn" || target.closest("#page-back-btn")) {
@@ -40247,7 +40248,7 @@ function createRouter() {
       if (currentPath !== BASE_PATH + "/" && currentPath !== BASE_PATH) {
         window.history.back();
       } else {
-        window.location.href = "https://qinanze.github.io" + BASE_PATH;
+        window.location.href = SITE_ORIGIN + BASE_PATH;
       }
       return;
     }
@@ -40268,9 +40269,8 @@ function createRouter() {
       const { url } = getOpts(event) ?? {};
       if (window.location.hash && window.location.pathname === url?.pathname)
         return;
-      const BASE_PATH2 = "/chemistry-notes";
       if (window.location.pathname === "/" || window.location.pathname === "") {
-        window.location.href = "https://qinanze.github.io" + BASE_PATH2;
+        window.location.href = SITE_ORIGIN + BASE_PATH;
         return;
       }
       try {
