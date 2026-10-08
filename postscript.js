@@ -43070,6 +43070,30 @@ markmap-common/dist/index.mjs:
   (*! @gera2ld/jsx-dom v2.2.2 | ISC License *)
 */
 })();
+(function () {// quartz/components/scripts/quartz/components/scripts/sitefx.inline.ts
+var BASE_PATH = "/notes";
+var SITE_ORIGIN = "https://qinanze.github.io";
+var SCROLL_THRESHOLD = 50;
+function syncScrollState() {
+  document.body.classList.toggle("scrolled", window.scrollY > SCROLL_THRESHOLD);
+}
+syncScrollState();
+window.addEventListener("scroll", syncScrollState, { passive: true });
+document.addEventListener("click", (e) => {
+  const target = e.target;
+  if (!target)
+    return;
+  if (target.id !== "page-back-btn" && !target.closest("#page-back-btn"))
+    return;
+  e.preventDefault();
+  const currentPath = window.location.pathname;
+  if (currentPath !== BASE_PATH + "/" && currentPath !== BASE_PATH) {
+    window.history.back();
+  } else {
+    window.location.href = SITE_ORIGIN + BASE_PATH;
+  }
+});
+})();
 (function () {// quartz/components/scripts/quartz/components/scripts/timer.inline.ts
 var POMODORO_MINUTES = 25;
 var SHORT_BREAK_MINUTES = 5;
