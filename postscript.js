@@ -30,235 +30,6 @@ document.addEventListener("nav", () => {
   }
 });
 })();
-(function () {// quartz/components/scripts/quartz/components/scripts/radio.inline.ts
-var PLAYLIST_ID = "18098781989";
-var API_URL = "https://api.injahow.cn/meting/";
-var RadioPlayer = class _RadioPlayer {
-  audio;
-  playlist = [];
-  currentIndex = 0;
-  isPlaying = false;
-  isInitialized = false;
-  static instance = null;
-  static getInstance() {
-    if (!_RadioPlayer.instance) {
-      _RadioPlayer.instance = new _RadioPlayer();
-    }
-    return _RadioPlayer.instance;
-  }
-  constructor() {
-    if (_RadioPlayer.instance) {
-      return _RadioPlayer.instance;
-    }
-    this.audio = this.createAudioElement();
-    _RadioPlayer.instance = this;
-    this.init();
-  }
-  createAudioElement() {
-    let audio = document.getElementById("radio-audio");
-    if (!audio) {
-      audio = document.createElement("audio");
-      audio.id = "radio-audio";
-      audio.preload = "metadata";
-      audio.setAttribute("spa-preserve", "");
-      document.head.appendChild(audio);
-    }
-    return audio;
-  }
-  async init() {
-    if (this.isInitialized)
-      return;
-    await this.fetchPlaylist();
-    this.bindEvents();
-    this.loadVolume();
-    this.updateUI();
-    this.isInitialized = true;
-  }
-  async fetchPlaylist() {
-    if (this.playlist.length > 0)
-      return;
-    try {
-      const response = await fetch(`${API_URL}?type=playlist&id=${PLAYLIST_ID}`);
-      const data = await response.json();
-      if (Array.isArray(data)) {
-        this.playlist = data.map((item) => ({
-          id: item.id || item.url_id,
-          name: item.name || item.title,
-          artist: item.artist || item.author,
-          url: item.url,
-          pic: item.pic
-        }));
-      }
-      if (this.playlist.length > 0) {
-        this.loadSong(0);
-      }
-    } catch (error) {
-      console.error("Failed to fetch playlist:", error);
-    }
-  }
-  async fetchPlaylistAlternative() {
-    if (this.playlist.length > 0)
-      return;
-    try {
-      const response = await fetch(`https://music.163.com/api/playlist/detail?id=${PLAYLIST_ID}`);
-      const data = await response.json();
-      if (data.playlist && data.playlist.tracks) {
-        this.playlist = data.playlist.tracks.slice(0, 20).map((track) => ({
-          id: track.id,
-          name: track.name,
-          artist: track.ar.map((a) => a.name).join(", "),
-          url: `https://music.163.com/song/media/outer/url?id=${track.id}.mp3`,
-          pic: track.al.picUrl
-        }));
-        if (this.playlist.length > 0) {
-          this.loadSong(0);
-        }
-      }
-    } catch (error) {
-      console.error("Alternative API also failed:", error);
-      this.updateSongName("\u52A0\u8F7D\u6B4C\u5355\u5931\u8D25");
-    }
-  }
-  bindEvents() {
-    const playBtn = document.getElementById("radio-play");
-    const prevBtn = document.getElementById("radio-prev");
-    const nextBtn = document.getElementById("radio-next");
-    const progressBar = document.getElementById("radio-progress-bar");
-    const volumeInput = document.getElementById("radio-volume");
-    playBtn?.addEventListener("click", () => this.togglePlay());
-    prevBtn?.addEventListener("click", () => this.playPrev());
-    nextBtn?.addEventListener("click", () => this.playNext());
-    progressBar?.addEventListener("click", (e) => this.seek(e));
-    if (volumeInput) {
-      volumeInput.addEventListener("input", (e) => {
-        const value = e.target.value;
-        this.setVolume(parseInt(value));
-      });
-    }
-    this.audio.addEventListener("timeupdate", () => this.updateProgress());
-    this.audio.addEventListener("ended", () => this.playNext());
-    this.audio.addEventListener("loadedmetadata", () => this.updateUI());
-    this.audio.addEventListener("error", () => {
-      console.error("Audio error, trying next song");
-      this.playNext();
-    });
-  }
-  loadSong(index) {
-    if (index < 0 || index >= this.playlist.length)
-      return;
-    this.currentIndex = index;
-    const song = this.playlist[index];
-    this.audio.src = song.url;
-    this.updateSongName(`${song.name} - ${song.artist}`);
-    this.updateUI();
-  }
-  updateSongName(text) {
-    const songNameEl = document.getElementById("radio-song-name");
-    if (songNameEl) {
-      songNameEl.textContent = text;
-      songNameEl.title = text;
-    }
-  }
-  togglePlay() {
-    if (this.playlist.length === 0)
-      return;
-    if (this.isPlaying) {
-      this.audio.pause();
-    } else {
-      this.audio.play().catch((error) => {
-        console.error("Play error:", error);
-      });
-    }
-    this.isPlaying = !this.isPlaying;
-    this.updatePlayButton();
-  }
-  playPrev() {
-    if (this.playlist.length === 0)
-      return;
-    let newIndex = this.currentIndex - 1;
-    if (newIndex < 0) {
-      newIndex = this.playlist.length - 1;
-    }
-    this.loadSong(newIndex);
-    if (this.isPlaying) {
-      this.audio.play().catch(() => {
-      });
-    }
-  }
-  playNext() {
-    if (this.playlist.length === 0)
-      return;
-    let newIndex = this.currentIndex + 1;
-    if (newIndex >= this.playlist.length) {
-      newIndex = 0;
-    }
-    this.loadSong(newIndex);
-    if (this.isPlaying) {
-      this.audio.play().catch(() => {
-      });
-    }
-  }
-  seek(e) {
-    const progressBar = document.getElementById("radio-progress-bar");
-    if (!progressBar)
-      return;
-    const rect = progressBar.getBoundingClientRect();
-    const percent = (e.clientX - rect.left) / rect.width;
-    const duration = this.audio.duration;
-    if (duration && !isNaN(duration)) {
-      this.audio.currentTime = percent * duration;
-    }
-  }
-  setVolume(value) {
-    this.audio.volume = value / 100;
-    localStorage.setItem("radio-volume", value.toString());
-  }
-  loadVolume() {
-    const savedVolume = localStorage.getItem("radio-volume");
-    const volume = savedVolume ? parseInt(savedVolume) : 80;
-    this.audio.volume = volume / 100;
-    const volumeInput = document.getElementById("radio-volume");
-    if (volumeInput) {
-      volumeInput.value = volume.toString();
-    }
-  }
-  updateProgress() {
-    const currentTime = this.audio.currentTime;
-    const duration = this.audio.duration;
-    if (duration && !isNaN(duration)) {
-      const percent = currentTime / duration * 100;
-      const progressFill = document.getElementById("radio-progress-fill");
-      if (progressFill) {
-        progressFill.style.width = `${percent}%`;
-      }
-      const timeEl = document.getElementById("radio-time");
-      if (timeEl) {
-        timeEl.textContent = `${this.formatTime(currentTime)} / ${this.formatTime(duration)}`;
-      }
-    }
-  }
-  updateUI() {
-    this.updateProgress();
-    this.updatePlayButton();
-  }
-  updatePlayButton() {
-    const playBtn = document.getElementById("radio-play");
-    if (playBtn) {
-      playBtn.textContent = this.isPlaying ? "\u23F8" : "\u25B6";
-    }
-  }
-  formatTime(seconds) {
-    if (isNaN(seconds))
-      return "00:00";
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-  }
-};
-if (!window.radioPlayerInstance) {
-  window.radioPlayerInstance = RadioPlayer.getInstance();
-}
-})();
 (function () {var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -39180,13 +38951,8 @@ var timerState = {
   customMinutes: 25
 };
 var timerInterval = null;
-var isDragging = false;
-var dragStartX = 0;
-var dragStartY = 0;
-var initialX = 0;
-var initialY = 0;
 function saveState() {
-  localStorage.setItem("quartz-timer", JSON.stringify(timerState));
+  localStorage.setItem("quartz-timer", JSON.stringify({ ...timerState, timestamp: Date.now() }));
 }
 function loadState() {
   try {
@@ -39349,43 +39115,14 @@ function initTimer() {
   }
   const ball = document.querySelector(".timer-ball");
   const panel = document.querySelector(".timer-panel");
-  const timerFloat = document.querySelector(".timer-float");
   const closeBtn = document.querySelector(".timer-close");
   const startPauseBtn = document.querySelector(".timer-btn.start, .timer-btn.pause");
   const resetBtn = document.querySelector(".timer-btn.reset");
   const modeButtons = document.querySelectorAll(".timer-mode-btn");
   const customInput = document.querySelector(".timer-custom input");
-  if (ball && timerFloat) {
-    ball.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      dragStartX = e.clientX;
-      dragStartY = e.clientY;
-      const rect = timerFloat.getBoundingClientRect();
-      initialX = rect.left;
-      initialY = rect.top;
-      ball.style.cursor = "grabbing";
-      e.preventDefault();
-    });
-    document.addEventListener("mousemove", (e) => {
-      if (!isDragging)
-        return;
-      const deltaX = e.clientX - dragStartX;
-      const deltaY = e.clientY - dragStartY;
-      timerFloat.style.left = `${initialX + deltaX}px`;
-      timerFloat.style.top = `${initialY + deltaY}px`;
-      timerFloat.style.right = "auto";
-      timerFloat.style.bottom = "auto";
-    });
-    document.addEventListener("mouseup", () => {
-      if (isDragging) {
-        isDragging = false;
-        ball.style.cursor = "move";
-      }
-    });
-    ball.addEventListener("click", (e) => {
-      if (Math.abs(e.clientX - dragStartX) < 5 && Math.abs(e.clientY - dragStartY) < 5) {
-        togglePanel();
-      }
+  if (ball) {
+    ball.addEventListener("click", () => {
+      togglePanel();
     });
   }
   if (closeBtn) {
@@ -39453,100 +39190,9 @@ if (document.readyState === "loading") {
   initTimer();
 }
 })();
-(function () {// quartz/components/scripts/quartz/components/scripts/chat.inline.ts
-var isDragging = false;
-var dragStartX = 0;
-var dragStartY = 0;
-var initialX = 0;
-var initialY = 0;
-function toggleChat() {
-  const panel = document.querySelector(".chat-panel");
-  const ball = document.querySelector(".chat-ball");
-  if (panel) {
-    panel.classList.toggle("open");
-  }
-  if (ball) {
-    ball.classList.toggle("active");
-  }
-}
-function closeChat() {
-  const panel = document.querySelector(".chat-panel");
-  const ball = document.querySelector(".chat-ball");
-  if (panel) {
-    panel.classList.remove("open");
-  }
-  if (ball) {
-    ball.classList.remove("active");
-  }
-}
-function initChat() {
-  const ball = document.querySelector(".chat-ball");
-  const panel = document.querySelector(".chat-panel");
-  const chatFloat = document.querySelector(".chat-float");
-  const closeBtn = document.querySelector(".chat-close");
-  if (ball && chatFloat) {
-    ball.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      dragStartX = e.clientX;
-      dragStartY = e.clientY;
-      const rect = chatFloat.getBoundingClientRect();
-      initialX = rect.left;
-      initialY = rect.top;
-      ball.style.cursor = "grabbing";
-      e.preventDefault();
-      e.stopPropagation();
-    });
-    document.addEventListener("mousemove", (e) => {
-      if (!isDragging)
-        return;
-      const deltaX = e.clientX - dragStartX;
-      const deltaY = e.clientY - dragStartY;
-      chatFloat.style.left = `${initialX + deltaX}px`;
-      chatFloat.style.top = `${initialY + deltaY}px`;
-      chatFloat.style.right = "auto";
-      chatFloat.style.bottom = "auto";
-    });
-    document.addEventListener("mouseup", () => {
-      if (isDragging) {
-        isDragging = false;
-        ball.style.cursor = "move";
-      }
-    });
-    ball.addEventListener("click", (e) => {
-      const dx = Math.abs(e.clientX - dragStartX);
-      const dy = Math.abs(e.clientY - dragStartY);
-      if (dx < 5 && dy < 5) {
-        toggleChat();
-      }
-    });
-  }
-  if (closeBtn) {
-    closeBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      closeChat();
-    });
-  }
-  document.addEventListener("click", (e) => {
-    if (!panel?.contains(e.target) && !ball?.contains(e.target)) {
-      closeChat();
-    }
-  });
-}
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initChat);
-} else {
-  initChat();
-}
-})();
 (function () {// quartz/components/scripts/quartz/components/scripts/todo.inline.ts
 var STORAGE_KEY = "quartz-todo-list";
 var todoList = [];
-var isDragging = false;
-var dragTarget = null;
-var dragStartX = 0;
-var dragStartY = 0;
-var initialLeft = 0;
-var initialTop = 0;
 function loadTodos() {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -39636,74 +39282,19 @@ function closePanel() {
     ball?.classList.remove("active");
   }
 }
-function startDrag(e, target) {
-  isDragging = true;
-  dragTarget = target;
-  dragStartX = e.clientX;
-  dragStartY = e.clientY;
-  const todoFloat = document.querySelector(".todo-float");
-  if (todoFloat) {
-    const rect = todoFloat.getBoundingClientRect();
-    initialLeft = rect.left;
-    initialTop = rect.top;
-    todoFloat.style.transform = "none";
-  }
-  e.preventDefault();
-  e.stopPropagation();
-}
-function handleMouseMove(e) {
-  if (!isDragging || !dragTarget)
-    return;
-  const todoFloat = document.querySelector(".todo-float");
-  if (!todoFloat)
-    return;
-  const deltaX = e.clientX - dragStartX;
-  const deltaY = e.clientY - dragStartY;
-  todoFloat.style.left = `${initialLeft + deltaX}px`;
-  todoFloat.style.top = `${initialTop + deltaY}px`;
-  todoFloat.style.right = "auto";
-  todoFloat.style.bottom = "auto";
-}
-function handleMouseUp() {
-  if (isDragging) {
-    isDragging = false;
-    dragTarget = null;
-  }
-}
-function handleBallClick(e) {
-  const startX = dragStartX;
-  const startY = dragStartY;
-  setTimeout(() => {
-    if (Math.abs(e.clientX - startX) < 5 && Math.abs(e.clientY - startY) < 5) {
-      togglePanel();
-    }
-  }, 0);
+function handleBallClick() {
+  togglePanel();
 }
 function initTodo() {
   todoList = loadTodos();
   const ball = document.querySelector(".todo-ball");
-  const header = document.querySelector(".todo-header");
-  const todoFloat = document.querySelector(".todo-float");
   const panel = document.querySelector(".todo-panel");
   const closeBtn = document.querySelector(".todo-close");
   const addBtn = document.querySelector(".todo-add-btn");
   const input = document.querySelector(".todo-input");
-  if (todoFloat) {
-    todoFloat.style.left = "50%";
-    todoFloat.style.top = "auto";
-    todoFloat.style.bottom = "20px";
-    todoFloat.style.right = "auto";
-    todoFloat.style.transform = "translateX(-50%)";
-  }
-  if (ball && todoFloat) {
-    ball.addEventListener("mousedown", (e) => startDrag(e, ball));
+  if (ball) {
     ball.addEventListener("click", handleBallClick);
   }
-  if (header && todoFloat) {
-    header.addEventListener("mousedown", (e) => startDrag(e, header));
-  }
-  document.addEventListener("mousemove", handleMouseMove);
-  document.addEventListener("mouseup", handleMouseUp);
   if (closeBtn) {
     closeBtn.addEventListener("click", (e) => {
       e.stopPropagation();
