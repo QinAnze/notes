@@ -7,12 +7,6 @@ interface TodoItem {
 const STORAGE_KEY = "quartz-todo-list"
 
 let todoList: TodoItem[] = []
-let isDragging = false
-let dragTarget: HTMLElement | null = null
-let dragStartX = 0
-let dragStartY = 0
-let initialLeft = 0
-let initialTop = 0
 
 function loadTodos(): TodoItem[] {
   try {
@@ -116,90 +110,23 @@ function closePanel() {
   }
 }
 
-function startDrag(e: MouseEvent, target: HTMLElement) {
-  isDragging = true
-  dragTarget = target
-  dragStartX = e.clientX
-  dragStartY = e.clientY
-  
-  const todoFloat = document.querySelector(".todo-float") as HTMLElement
-  if (todoFloat) {
-    const rect = todoFloat.getBoundingClientRect()
-    initialLeft = rect.left
-    initialTop = rect.top
-    todoFloat.style.transform = "none"
-  }
-  
-  e.preventDefault()
-  e.stopPropagation()
-}
-
-function handleMouseMove(e: MouseEvent) {
-  if (!isDragging || !dragTarget) return
-
-  const todoFloat = document.querySelector(".todo-float") as HTMLElement
-  if (!todoFloat) return
-
-  const deltaX = e.clientX - dragStartX
-  const deltaY = e.clientY - dragStartY
-
-  todoFloat.style.left = `${initialLeft + deltaX}px`
-  todoFloat.style.top = `${initialTop + deltaY}px`
-  todoFloat.style.right = "auto"
-  todoFloat.style.bottom = "auto"
-}
-
-function handleMouseUp() {
-  if (isDragging) {
-    isDragging = false
-    dragTarget = null
-  }
-}
-
-function handleBallClick(e: MouseEvent) {
-  const startX = dragStartX
-  const startY = dragStartY
-  
-  setTimeout(() => {
-    if (Math.abs(e.clientX - startX) < 5 && Math.abs(e.clientY - startY) < 5) {
-      togglePanel()
-    }
-  }, 0)
+function handleBallClick() {
+  togglePanel()
 }
 
 function initTodo() {
   todoList = loadTodos()
 
   const ball = document.querySelector(".todo-ball") as HTMLElement
-  const header = document.querySelector(".todo-header") as HTMLElement
-  const todoFloat = document.querySelector(".todo-float") as HTMLElement
   const panel = document.querySelector(".todo-panel") as HTMLElement
   const closeBtn = document.querySelector(".todo-close")
   const addBtn = document.querySelector(".todo-add-btn")
   const input = document.querySelector(".todo-input") as HTMLInputElement
 
-  // Initial position - bottom center
-  if (todoFloat) {
-    todoFloat.style.left = "50%"
-    todoFloat.style.top = "auto"
-    todoFloat.style.bottom = "20px"
-    todoFloat.style.right = "auto"
-    todoFloat.style.transform = "translateX(-50%)"
-  }
-
-  // Drag on ball
-  if (ball && todoFloat) {
-    ball.addEventListener("mousedown", (e) => startDrag(e, ball))
+  // Ball toggles the panel; the module itself stays docked bottom-right.
+  if (ball) {
     ball.addEventListener("click", handleBallClick)
   }
-
-  // Drag on header
-  if (header && todoFloat) {
-    header.addEventListener("mousedown", (e) => startDrag(e, header))
-  }
-
-  document.addEventListener("mousemove", handleMouseMove)
-  document.addEventListener("mouseup", handleMouseUp)
 
   // Close button
   if (closeBtn) {

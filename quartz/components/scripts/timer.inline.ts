@@ -4,6 +4,8 @@ interface TimerState {
   remaining: number
   isRunning: boolean
   customMinutes: number
+  /** Wall-clock time of the last save, used to recover elapsed time across reloads */
+  timestamp?: number
 }
 
 const POMODORO_MINUTES = 25
@@ -19,14 +21,9 @@ let timerState: TimerState = {
 }
 
 let timerInterval: number | null = null
-let isDragging = false
-let dragStartX = 0
-let dragStartY = 0
-let initialX = 0
-let initialY = 0
 
 function saveState() {
-  localStorage.setItem('quartz-timer', JSON.stringify(timerState))
+  localStorage.setItem('quartz-timer', JSON.stringify({ ...timerState, timestamp: Date.now() }))
 }
 
 function loadState(): TimerState | null {
@@ -213,50 +210,16 @@ function initTimer() {
 
   const ball = document.querySelector('.timer-ball') as HTMLElement
   const panel = document.querySelector('.timer-panel') as HTMLElement
-  const timerFloat = document.querySelector('.timer-float') as HTMLElement
   const closeBtn = document.querySelector('.timer-close')
   const startPauseBtn = document.querySelector('.timer-btn.start, .timer-btn.pause')
   const resetBtn = document.querySelector('.timer-btn.reset')
   const modeButtons = document.querySelectorAll('.timer-mode-btn')
   const customInput = document.querySelector('.timer-custom input')
 
-  if (ball && timerFloat) {
-    // Drag functionality
-    ball.addEventListener('mousedown', (e) => {
-      isDragging = true
-      dragStartX = e.clientX
-      dragStartY = e.clientY
-      const rect = timerFloat.getBoundingClientRect()
-      initialX = rect.left
-      initialY = rect.top
-      ball.style.cursor = 'grabbing'
-      e.preventDefault()
-    })
-
-    document.addEventListener('mousemove', (e) => {
-      if (!isDragging) return
-      
-      const deltaX = e.clientX - dragStartX
-      const deltaY = e.clientY - dragStartY
-      
-      timerFloat.style.left = `${initialX + deltaX}px`
-      timerFloat.style.top = `${initialY + deltaY}px`
-      timerFloat.style.right = 'auto'
-      timerFloat.style.bottom = 'auto'
-    })
-
-    document.addEventListener('mouseup', () => {
-      if (isDragging) {
-        isDragging = false
-        ball.style.cursor = 'move'
-      }
-    })
-
-    // Click to toggle panel (only if not dragging significantly)
-    ball.addEventListener('click', (e) => {
-      if (Math.abs(e.clientX - dragStartX) < 5 && Math.abs(e.clientY - dragStartY) < 5) {
-        togglePanel()
-      }
+  // Ball toggles the panel; the module itself stays docked bottom-right.
+  if (ball) {
+    ball.addEventListener('click', () => {
+      togglePanel()
     })
   }
 
