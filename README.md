@@ -39,6 +39,16 @@ content/
 
 `content/index.md` 是站点总目录。以后加新科目 = 新建同级文件夹 + 在总目录加一行。
 
+> ⚠️ **SPA 是关闭的（`enableSPA: false`），这是故意的。**
+> 站点部署在子路径 `qinanze.github.io/notes/`，而 Quartz 的 SPA 子路径路由有
+> [上游 bug #1572](https://github.com/jackyzha0/quartz/issues/1572)：
+> 页面本身加载正确，但**新页面里的链接会丢掉 `/notes` 这层前缀**，第二跳之后 404。
+> 报告者的原话是「刷新一下就好了」—— 因为静态 HTML 里的 href 本来是对的。
+>
+> 静态链接生成逻辑（`transformLink` / `resolveRelative` / `PageList`）都验证过是正确的，
+> 关掉 SPA 后每次跳转都是整页加载，链接永远来自服务端新生成的 HTML，这类 bug 直接消失。
+> 代价是没有 SPA 的顺滑过渡。想恢复改成 `true` 即可，但要接受上面这个 bug 还在。
+
 ## 本地开发
 
 环境要求：Node.js ≥ 18.14
@@ -147,24 +157,16 @@ npm run format             # Prettier 格式化
 > `.afterDOMLoaded`，所以**从 layout 移除 = 从构建图移除**，
 > 比删文件安全（组件源码留着随时能加回来）。
 
-> ⚠️ **SPA 导航在子目录部署下的前缀丢失，已按上游修好**
-> （`quartz/util/path.ts` 的 `normalizeRelativeURLs` + `spa.inline.ts`）。
+> ⚠️ **SPA 导航在子目录部署下的前缀丢失（已绕开）**
+> 根因是 [上游 issue #1572](https://github.com/jackyzha0/quartz/issues/1572)，
+> 4.0.8 也中招：页面本身加载正确，但**新页面里的链接丢掉 `/notes` 这层前缀**，
+> 第二跳之后 404。报告者的原话是「刷新一下就好了」。
 >
-> 症状：从 `/notes/` 点进 `/notes/有机化学笔记/` 正常，再点进上课笔记却变成
-> `/有机化学笔记/上课笔记/`，**丢了 `/notes` 这层前缀**，直接 404。
->
-> 原因是重基相对链接的时机和对象都不对：
-> SPA 用 fetch 拿到的 HTML 里的相对链接是**相对目标页面**算的，
-> 而这些链接被 morph 进了**当前**文档，浏览器就按当前地址栏去解析 ——
-> 子目录部署时每深一层丢一层前缀。
->
-> 修法（与[上游](https://github.com/jackyzha0/quartz/blob/v4/quartz/util/path.ts)一致）：
-> **在 `micromorph` 之前**，对**刚 fetch 回来的 `html`** 调用
-> `normalizeRelativeURLs(html, url)`，把里面的 `./`、`../` 重基成绝对路径。
-> 注意是对 `html` 做、且在 morph 之前 —— 不能对 morph 之后的 `document.body` 做，
-> 因为 `micromorph` 只增不删，旧页面残留的节点会被一起重基到错误的基准上。
->
-> `spa.inline.ts` 里的 `BASE_PATH`（返回按钮用）要继续和 `baseUrl` 保持一致。
+> 我已按上游把 `normalizeRelativeURLs` 补进 `quartz/util/path.ts`，
+> 并在 `spa.inline.ts` 里改成正确用法（**morph 之前**、对**fetch 回来的 `html`** 做，
+> 不能对 morph 之后的 `document.body` 做 —— `micromorph` 只增不删）。
+> 但最终**直接关掉了 SPA**，见上面「内容」一节的说明。
+> `popover.inline.ts` 里原本有一份重复的旧版实现，也已统一到 util 里同一个。
 
 笔记内容为老师傅手敲 + AI 统一格式化。**如果有错误，欢迎指正，欢迎提 issue 和 PR。**
 

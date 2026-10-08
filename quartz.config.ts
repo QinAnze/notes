@@ -4,7 +4,23 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "🪴 Quartz 4.0",
-    enableSPA: true,
+    // SPA 关闭 —— 这是**故意的**，不是漏配。
+    //
+    // 站点部署在 qinanze.github.io/notes/（子路径），而 SPA 的子路径路由在
+    // Quartz 上游是已知 bug（issue #1572）：用 fetch 拿回目标页HTML、
+    // micromorph 进当前文档后，新页面里的相对链接会丢掉 /notes 这层前缀，
+    // 于是第二跳之后的链接全指向 /有机化学笔记/... 而 404。
+    // 报告者的原话是「页面本身加载正确，但新页面里的链接全坏了，刷新一下就好」。
+    //
+    // 静态 HTML 里的 href 是正确的（`../有机化学笔记/上课笔记` 解析出来正好是
+    // /notes/有机化学笔记/上课笔记），所以关掉 SPA 之后每次都是整页跳转，
+    // 链接永远来自服务端 freshly 生成的正确 HTML，这类 bug 直接消失。
+    //
+    // 代价：没有 SPA 的顺滑过渡，每次跳转是整页加载。
+    // 笔记站不值得为这个冒索引坏掉的风险。
+    //
+    // 想恢复：改成 true，但要接受上面这个上游 bug 还在。
+    enableSPA: false,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
