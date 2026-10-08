@@ -132,10 +132,12 @@ async function navigate(url: URL, isBack: boolean = false) {
 
 window.spaNavigate = navigate
 
+// Base path for GitHub Pages.
+// Keep in sync with `baseUrl` in quartz.config.ts and the header link in PageTitle.tsx
+const BASE_PATH = "/notes"
+const SITE_ORIGIN = "https://qinanze.github.io"
+
 function createRouter() {
-  // Base path for GitHub Pages
-  const BASE_PATH = "/chemistry-notes"
-  
   // Handle page back button click
   document.addEventListener("click", async (e) => {
     const target = e.target as Element
@@ -147,7 +149,7 @@ function createRouter() {
         window.history.back()
       } else {
         // Already at base, go to base path
-        window.location.href = "https://qinanze.github.io" + BASE_PATH
+        window.location.href = SITE_ORIGIN + BASE_PATH
       }
       return
     }
@@ -168,12 +170,12 @@ function createRouter() {
     window.addEventListener("popstate", (event) => {
       const { url } = getOpts(event) ?? {}
       if (window.location.hash && window.location.pathname === url?.pathname) return
-      
-      // Check if we're returning to root path (without /chemistry-notes)
-      // This handles the case when history back leads to qinanze.github.io instead of qinanze.github.io/chemistry-notes
-      const BASE_PATH = "/chemistry-notes"
+
+      // Check if we're returning to root path (without BASE_PATH).
+      // This handles the case when history back lands on the bare origin
+      // (qinanze.github.io) instead of the site root (qinanze.github.io/notes)
       if (window.location.pathname === "/" || window.location.pathname === "") {
-        window.location.href = "https://qinanze.github.io" + BASE_PATH
+        window.location.href = SITE_ORIGIN + BASE_PATH
         return
       }
       

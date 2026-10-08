@@ -7,9 +7,30 @@ function PageTitle({ fileData, cfg }: QuartzComponentProps) {
   const parentDir = isRoot ? "" : pathToRoot(fileData.slug!)
   return (
     <h1 class="page-title">
-      <a href="https://qinanze.github.io/chemistry-notes/" data-router-ignore>{title}</a>
+      <a href="https://qinanze.github.io/notes/" data-router-ignore>{title}</a>
       {!isRoot && (
-        <a href="#" class="page-back" id="page-back-btn" title="返回上一级">←</a>
+        <a
+          href="#"
+          class="page-back"
+          id="page-back-btn"
+          title="返回上一级"
+          aria-label="返回上一级"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="20" y1="12" x2="5" y2="12" />
+            <polyline points="11,18 5,12 11,6" />
+          </svg>
+        </a>
       )}
     </h1>
   )
@@ -34,7 +55,6 @@ PageTitle.css = `
   border-radius: 50%;
   background: var(--lightgray);
   color: var(--dark);
-  font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.2s ease;
   flex-shrink: 0;
@@ -44,6 +64,9 @@ PageTitle.css = `
   background: var(--gray);
   color: var(--dark);
   transform: scale(1.1);
+}
+.page-back svg {
+  display: block;
 }
 `
 
