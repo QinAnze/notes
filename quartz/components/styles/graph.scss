@@ -19,8 +19,12 @@
     border-radius: 5px;
     border: 1px solid var(--lightgray);
     box-sizing: border-box;
-    // 侧栏里放的是全库图（约 60+ 节点），250px 太挤了
-    height: 380px;
+    // 保持官方默认的 250px，不要动。
+    // graph.inline.ts 里 svg 高度是 `Math.max(graph.offsetHeight, 250)`，
+    // 这里的框高必须 >= 250，否则框比 svg 矮，图会被 overflow: hidden 裁掉底部；
+    // 框高大于 250 则相反 —— svg 仍是 250，框底部空一截。
+    // 250 正好两边对齐，是唯一不会出问题的取值。
+    height: 250px;
     margin: 0.5em 0;
     position: relative;
     overflow: hidden;

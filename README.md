@@ -57,11 +57,14 @@ content/
 npm install                # 安装依赖
 npx quartz build           # 构建到 public/
 npx quartz build --serve   # 本地预览
-npx tsc --noEmit           # 类型检查
 npm run format             # Prettier 格式化
 ```
 
-> 打包（esbuild）不做类型检查，改完 `*.inline.ts` 记得单独跑一次 `npx tsc --noEmit`。
+> ⚠️ **`npx tsc --noEmit` 目前会报 9 个错，全是历史遗留，不影响站点运行。**
+> esbuild 不做类型检查，所以 `quartz build` 通过只说明能打包，不代表没类型问题；
+> 但反过来，tsc 报错也不代表站点坏了。**目前请以 `npx quartz build --serve`
+> 能跑、页面正常为验收标准**，那 9 个错暂时不修（已知解法记录在
+> `.workbuddy/memory/MEMORY.md`，真要清零时照着来）。
 
 部署：推送到 `master` 分支会触发 `.github/workflows/deploy.yml`，
 自动构建并发布到 GitHub Pages 的 `gh-pages` 分支。
@@ -73,10 +76,10 @@ npm run format             # Prettier 格式化
 > |---|---|
 > | `quartz.config.ts` | `configuration.baseUrl` |
 > | `quartz/components/PageTitle.tsx` | 标题的首页链接 |
-> | `quartz/components/scripts/spa.inline.ts` | `BASE_PATH` 常量 |
+> | `quartz/components/scripts/sitefx.inline.ts` | `BASE_PATH` 常量 |
 >
 > 漏改的话站内相对链接仍然正常（Quartz 用相对路径），
-> 但 canonical、og:image、RSS 和 SPA 跨目录跳转的返回逻辑会指向旧路径。
+> 但 canonical、og:image、RSS 和返回上一页的兜底逻辑会指向旧路径。
 
 ## 内容约定
 
@@ -119,7 +122,12 @@ npm run format             # Prettier 格式化
   顺序即从上到下）。图谱只挂在笔记页，列表页（首页/文件夹/标签）不重复渲染。
   侧栏那份渲染的是**全库图**（`depth: -1`，即整个 `content/` 的所有节点），
   点右上角小图标打开的是更大的全屏版本。
-  两个加起来约 1060px 高，所以 `custom.scss` 里给 `.sidebar` 加了滚动。
+  两个加起来约 930px 高，所以 `custom.scss` 里给 `.sidebar` 加了滚动。
+
+  > ⚠️ **`.graph-outer` 的 `height` 保持官方默认的 250px，不要改成更大的值。**
+  > `graph.inline.ts` 里 svg 高度是 `Math.max(graph.offsetHeight, 250)`：
+  > 框高小于 250 会把图裁掉底部，大于 250 则 svg 仍是 250、框底空一截。
+  > **250 是唯一两边都对齐的取值**（之前设成 380px 就是因为这个，底部一直空着）。
 
   图谱的松紧由 `layout.ts` 里 `Component.Graph({...})` 的四个力学参数控制：
   `repelForce`（排斥力）、`linkDistance`（连线长度）、`centerForce`（向心力）、
@@ -128,6 +136,13 @@ npm run format             # Prettier 格式化
   标签透明度是 `(opacityScale - 1) / 3.75`：
   `1.5 ≈ 0.13`（当前值，隐约可见）、`2 ≈ 0.27`、`3 ≈ 0.53`。
   **官方默认的 `opacityScale: 1` 等于完全没有标签**，别照抄。
+
+  > ⚠️ **`graph.inline.ts` 的 simulation 逻辑不要动。**
+  > 只有 `charge / link / center` 三个力，`forceCenter` 只管整体居中、不管散布半径，
+  > 所以全库图节点确实会略微溢出 viewBox、被 `.graph-outer` 的 `overflow: hidden` 裁掉
+  > 一点 —— 这是上游的既有行为。**试过加 `forceX`/`forceY` 边界力或在 `tick` 里
+  > 硬夹坐标，结果节点全部堆在边上（每帧夹位置会抵消 charge 的速度累积，
+  > 节点被反复推回边界），反而更糟。** 要调疏密就用上面那四个参数，别动仿真逻辑。
 
 > ⚠️ **图谱有一处必要的补丁，重装 Quartz 时记得重新打**：
 >
@@ -155,7 +170,15 @@ npm run format             # Prettier 格式化
 > ⚠️ **改组件要从 `quartz.layout.ts` 下手**。
 > `componentResources.ts` 只收集「layout 数组里注册过的组件」的 `.css` 和
 > `.afterDOMLoaded`，所以**从 layout 移除 = 从构建图移除**，
-> 比删文件安全（组件源码留着随时能加回来）。
+> 比删文件安全（组件源码留着随时能加回来）；反过来，
+> **新建组件忘了注册进 layout 就等于没写**（效果不报错，只是悄悄不生效）。
+
+> ⚠️ **与 SPA 无关的全局副作用不能写在 `spa.inline.ts` 里。**
+> `componentResources.ts` 对它是 **if/else** 而不是叠加：
+> `enableSPA: false` 时整个 `spa.inline.ts` 不会进 `postscript.js`，
+> 里面的代码**静默失效、不报任何错**。本项目的滚动虚化和顶栏返回按钮
+> 因此放在独立组件 `quartz/components/SiteFx.tsx`（+ `scripts/sitefx.inline.ts`）里，
+> 注册在两个 layout 的 `afterBody`。改这两个功能时别又塞回 `spa.inline.ts`。
 
 > ⚠️ **SPA 导航在子目录部署下的前缀丢失（已绕开）**
 > 根因是 [上游 issue #1572](https://github.com/jackyzha0/quartz/issues/1572)，

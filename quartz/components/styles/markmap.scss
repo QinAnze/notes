@@ -3,7 +3,15 @@
   padding: 1.5rem;
   border: 1px solid var(--lightgray);
   border-radius: 8px;
-  background: var(--light);
+  // 故意不写background —— 和上方 .graph-outer 保持一致（只有边框圆角，背景透明），
+  // 这样两块侧栏模块能透出同一张站点背景图。写了 background 就是一块不透明底板。
+}
+
+// markmap 的节点块是 foreignObject 里的 div，默认带白色实底。
+// 容器透明了但这里不压掉的话，里面还是一坨白块，等于没改。
+.markmap-container .markmap svg .markmap-foreign div {
+  background-color: transparent !important;
+  color: var(--dark) !important;
 }
 
 .markmap-wrapper h3 {
@@ -54,10 +62,6 @@
 
 .markmap-container .markmap svg .markmap-foreign object {
   background: transparent !important;
-}
-
-.markmap-container .markmap svg .markmap-foreign div {
-  color: var(--dark) !important;
 }
 
 .markmap-container .markmap svg .markmap-foreign span {

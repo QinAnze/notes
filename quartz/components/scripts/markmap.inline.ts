@@ -57,9 +57,11 @@ function renderMarkmap() {
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
   svg.setAttribute("width", "100%")
-  svg.setAttribute("height", "520")
+  // 高度必须和 markmap.scss 里 .markmap-container 的 680px 一致。
+  // 这里的 inline style 优先级高于 CSS，写小了容器底部会空出一截。
+  svg.setAttribute("height", "680")
   svg.style.width = "100%"
-  svg.style.height = "520px"
+  svg.style.height = "680px"
   container.appendChild(svg)
 
   const transformer = new Transformer()
@@ -72,9 +74,13 @@ function renderMarkmap() {
   markmapInstance = Markmap.create(svg, {
     theme: {
       color: {
+        // bg0/bg1/bg2 全透明 —— 节点不画卡片底色，只留文字和连线，
+        // 和上方双向链接图谱同一套视觉，背景图能直接透上来。
+        // markmap.scss 里还有一条 background-color: transparent !important 兜底，
+        // 改这里之前先看那条，两边会打架。
         bg0: "transparent",
-        bg1: isDark ? "#1a1a1a" : "#f8f8f8",
-        bg2: isDark ? "#2a2a2a" : "#f0f0f0",
+        bg1: "transparent",
+        bg2: "transparent",
         border: isDark ? "#444" : "#ddd",
         text: textColor,
         textSecondary: isDark ? "#a0a0a0" : "#666",
