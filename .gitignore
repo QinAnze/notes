@@ -2,8 +2,12 @@
 node_modules/
 
 # Quartz 构建产物
+# public/ 是 `npx quartz build` 的输出（含全部 PDF/PNG 的构建副本），可由源码完全重建
 .quartz-cache/
 public/
+
+# 打包产物
+*.tgz
 
 # 环境与编辑器
 .env
