@@ -1,8 +1,43 @@
+@use "./variables.scss" as *;
+
 // Modern Blue-White Theme Custom CSS
 
 // Smooth scrolling
 html {
   scroll-behavior: smooth;
+}
+
+// 侧栏可滚动。
+// 桌面端侧栏是 position: fixed，而右侧现在有「关系图谱 250px + 思维导图 680px」，
+// 合计约 1000px，超过多数笔记本的一屏高度 —— 不给滚动条的话下方会被裁掉。
+// 只在桌面断点以上生效；窄屏下侧栏会变成常规流式布局，不能加滚动限制。
+.sidebar {
+  @media all and (min-width: $fullPageWidth + 1px) {
+    max-height: 100vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    // 顶部留出间距，滚到底时最后一项不会贴着视口边缘
+    padding-bottom: 3rem;
+  }
+}
+
+// 侧栏滚动条做细，避免和内容抢视线
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--lightgray);
+  border-radius: 3px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: var(--gray);
 }
 
 // Page background gradient
@@ -12,76 +47,88 @@ body {
   position: relative;
 }
 
-body::before {
-  content: '';
+// ---------------------------------------------------------------------------
+// 背景层：亮色图 + 暗色图 + 着色层，三层叠在一起。
+// 主题切换时靠 opacity 交叉淡入淡出（见 quartz/components/Body.tsx），
+// 不再是 background-image 硬替换，所以不会突兀。
+// ---------------------------------------------------------------------------
+.bg-stack {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  transition: filter 0.5s ease;
+}
+
+.bg-layer {
+  position: absolute;
+  // 比容器大一圈：滚动时 body.scrolled 会给 .bg-stack 加 blur(8px)，
+  // 不留余量的话模糊会在四边露出透明边
+  inset: -16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // 交叉淡入淡出 + 轻微推近，消掉生硬的"换壁纸"感
+  opacity: 0;
+  transform: scale(1.06);
+  transition:
+    opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.bg-image-light {
   background-image: url('./有机化学笔记/图片保存/bg-light.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: -1;
-  transition: filter 0.5s ease;
-  filter: blur(0px);
+  opacity: 1;
+  transform: scale(1);
 }
 
-body.scrolled::before {
-  filter: blur(8px);
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  z-index: -1;
-  pointer-events: none;
-}
-
-// Dark mode background image
-[saved-theme="dark"] body {
-  background: transparent;
-  position: relative;
-}
-
-[saved-theme="dark"] body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.bg-image-dark {
   background-image: url('./有机化学笔记/图片保存/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: -1;
-  transition: filter 0.5s ease;
-  filter: blur(0px);
 }
 
-[saved-theme="dark"] body.scrolled::before {
+// 着色层：压在两张图之上，负责压暗/提亮，保证文字对比度
+.bg-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// 滚动时背景虚化（类由 spa.inline.ts 挂在 body 上）
+body.scrolled .bg-stack {
   filter: blur(8px);
 }
 
-[saved-theme="dark"] body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+// 暗色模式：淡出亮图、淡入暗图、换成暗色着色
+[saved-theme="dark"] .bg-image-light {
+  opacity: 0;
+  transform: scale(1.06);
+}
+
+[saved-theme="dark"] .bg-image-dark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[saved-theme="dark"] .bg-tint {
   background: rgba(15, 23, 42, 0.85);
-  z-index: -1;
-  pointer-events: none;
+}
+
+// 尊重系统的"减少动态效果"设置
+@media (prefers-reduced-motion: reduce) {
+  .bg-layer,
+  .bg-tint {
+    transition: none;
+  }
+
+  body.scrolled .bg-stack {
+    filter: none;
+  }
 }
 
 // Enhanced typography
