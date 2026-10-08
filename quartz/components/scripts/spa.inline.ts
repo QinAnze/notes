@@ -195,17 +195,8 @@ function createRouter() {
 createRouter()
 notifyNav(getFullSlug(window))
 
-// Add scroll event listener for background blur effect
-if (typeof window !== "undefined") {
-  window.addEventListener("scroll", () => {
-    const body = document.body
-    if (window.scrollY > 50) {
-      body.classList.add("scrolled")
-    } else {
-      body.classList.remove("scrolled")
-    }
-  })
-}
+// 滚动虚化和返回按钮已移到 components/scripts/sitefx.inline.ts
+// —— enableSPA: false 时本文件整个不会被打包，放在这里的逻辑会静默失效。
 
 if (!customElements.get("route-announcer")) {
   const attrs = {

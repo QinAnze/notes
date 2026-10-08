@@ -99,7 +99,9 @@ body {
   transition: background-color 0.75s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// 滚动时背景虚化（类由 spa.inline.ts 挂在 body 上）
+// 滚动时背景虚化。
+// .scrolled 由 components/scripts/sitefx.inline.ts 挂在 body 上 —— 注意它已经
+// 不在 spa.inline.ts 里了，因为 enableSPA: false 时那份脚本整个不会被打包。
 body.scrolled .bg-stack {
   filter: blur(8px);
 }

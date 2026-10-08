@@ -63,7 +63,10 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.MarkMap(),
   ],
-  afterBody: [Component.Timer(), Component.Todo()],
+  // SiteFx 负责滚动虚化（body.scrolled -> 背景层 blur）和顶栏返回按钮。
+  // 必须在 layout 里注册，componentResources 才会把它的 afterDOMLoaded 打进
+  // postscript —— 放进 spa.inline.ts 的话 enableSPA: false 时会被整段跳过。
+  afterBody: [Component.SiteFx(), Component.Timer(), Component.Todo()],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
@@ -78,5 +81,5 @@ export const defaultListPageLayout: PageLayout = {
   // 列表页（首页、文件夹、标签）不重复渲染图谱 —— 全局图谱入口
   // 在任意笔记页右上角的小图标上，这里再放一份纯属浪费
   right: [],
-  afterBody: [Component.Timer(), Component.Todo()],
+  afterBody: [Component.SiteFx(), Component.Timer(), Component.Todo()],
 }
