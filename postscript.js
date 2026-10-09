@@ -1222,6 +1222,490 @@ document.addEventListener("nav", () => {
   headers.forEach((header) => observer.observe(header));
 });
 })();
+(function () {// quartz/components/scripts/quartz/components/scripts/molecule.inline.ts
+var BASE_PATH = "/notes";
+function loadScript(urls) {
+  return new Promise((resolve) => {
+    let idx = 0;
+    const tryNext = () => {
+      if (idx >= urls.length) {
+        resolve(false);
+        return;
+      }
+      const url = urls[idx++];
+      const el = document.createElement("script");
+      el.src = url;
+      el.async = true;
+      el.onload = () => resolve(true);
+      el.onerror = () => {
+        el.remove();
+        tryNext();
+      };
+      document.head.appendChild(el);
+    };
+    tryNext();
+  });
+}
+var rdkitPromise = null;
+function getRDKit() {
+  if (rdkitPromise)
+    return rdkitPromise;
+  rdkitPromise = (async () => {
+    const w = window;
+    if (typeof w.RDKit?.get_mol === "function")
+      return w.RDKit;
+    const ok = await loadScript([
+      "https://cdn.jsdelivr.net/npm/@rdkit/rdkit/dist/RDKit_minimal.js",
+      "https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"
+    ]);
+    if (!ok) {
+      console.warn("[molecule] RDKit \u811A\u672C\u52A0\u8F7D\u5931\u8D25");
+      return null;
+    }
+    if (typeof w.initRDKitModule !== "function") {
+      console.warn("[molecule] \u627E\u4E0D\u5230 initRDKitModule");
+      return null;
+    }
+    try {
+      return await w.initRDKitModule();
+    } catch (err) {
+      console.warn("[molecule] RDKit WASM \u521D\u59CB\u5316\u5931\u8D25", err);
+      return null;
+    }
+  })();
+  return rdkitPromise;
+}
+var drawer = null;
+var drawerReady = null;
+function ensureDrawer() {
+  if (drawerReady)
+    return drawerReady;
+  drawerReady = (async () => {
+    const w = window;
+    if (!w.SmilesDrawer) {
+      const ok = await loadScript([
+        "https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js",
+        "https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js"
+      ]);
+      if (!ok)
+        return false;
+    }
+    const SD = w.SmilesDrawer;
+    if (!SD?.Drawer)
+      return false;
+    const host = document.querySelector("#molecule-view");
+    if (!host)
+      return false;
+    drawer = new SD.Drawer(
+      {
+        width: Math.max(260, Math.min(460, host.clientWidth - 8)),
+        height: 180,
+        bondThickness: 1.1,
+        padding: 12,
+        terminalCarbons: true
+      },
+      SD
+    );
+    return true;
+  })();
+  return drawerReady;
+}
+var wrapper = document.querySelector("#molecule-wrapper");
+var view = document.querySelector("#molecule-view");
+var titleEl = document.querySelector("#molecule-title");
+var groupEl = document.querySelector("#molecule-group");
+var metaEl = document.querySelector("#molecule-meta");
+var tipEl = document.querySelector("#molecule-tip");
+var indexEl = document.querySelector("#molecule-index");
+var prevBtn = document.querySelector("#molecule-prev");
+var nextBtn = document.querySelector("#molecule-next");
+var modeBtn = document.querySelector("#molecule-mode");
+var entries = [];
+var current = 0;
+var is3D = false;
+function setHint(html) {
+  if (!view)
+    return;
+  view.innerHTML = `<div class="molecule-hint">${html}</div>`;
+}
+function currentSlug() {
+  return (document.body?.dataset?.slug ?? "").replace(/\/+$/, "");
+}
+function siteRoot() {
+  const slugSegs = currentSlug().split("/").filter(Boolean).length;
+  const pathSegs = location.pathname.split("/").filter(Boolean).filter((s) => s.toLowerCase() !== "index.html");
+  const n = Math.max(0, pathSegs.length - slugSegs);
+  const root = pathSegs.slice(0, n).join("/");
+  return root ? "/" + root : "";
+}
+function staticUrls(name) {
+  const out = [];
+  const push = (u) => {
+    if (u && !out.includes(u))
+      out.push(u);
+  };
+  push(`${siteRoot()}/static/${name}`);
+  push(`${BASE_PATH}/static/${name}`);
+  push(`/static/${name}`);
+  return out;
+}
+async function fetchFirst(urls) {
+  let last = "\u672A\u77E5\u9519\u8BEF";
+  for (const url of urls) {
+    try {
+      const res = await fetch(url);
+      if (res.ok)
+        return await res.text();
+      last = `HTTP ${res.status}`;
+    } catch (err) {
+      last = err instanceof Error ? err.message : String(err);
+    }
+  }
+  throw new Error(`\u90FD\u53D6\u4E0D\u5230\uFF08\u8BD5\u8FC7 ${urls.join("\u3001")}\uFF0C\u6700\u540E\uFF1A${last}\uFF09`);
+}
+var fileMap = null;
+async function loadFileMap() {
+  if (fileMap)
+    return fileMap;
+  const map = {};
+  const put = (raw) => {
+    for (const slug of Object.keys(raw)) {
+      const base = slug.split("/").pop() ?? "";
+      if (base)
+        map[slug] = base.replace(/\.(md|pdf|mdx)$/i, "");
+    }
+  };
+  try {
+    if (typeof fetchData !== "undefined") {
+      put(await fetchData);
+    }
+  } catch (err) {
+    console.warn("[molecule] \u590D\u7528 fetchData \u5931\u8D25", err);
+  }
+  if (Object.keys(map).length === 0) {
+    try {
+      put(JSON.parse(await fetchFirst(staticUrls("contentIndex.json"))));
+    } catch (err) {
+      console.warn("[molecule] contentIndex.json \u8BFB\u53D6\u5931\u8D25", err);
+    }
+  }
+  fileMap = map;
+  return map;
+}
+var allMolecules = [];
+async function loadMolecules() {
+  if (allMolecules.length > 0)
+    return allMolecules;
+  const data = JSON.parse(await fetchFirst(staticUrls("molecules.json")));
+  allMolecules = Array.isArray(data.molecules) ? data.molecules : [];
+  return allMolecules;
+}
+function pickEntries() {
+  const slug = currentSlug();
+  if (!slug || allMolecules.length === 0)
+    return [];
+  const fileName = fileMap?.[slug];
+  if (!fileName)
+    return [];
+  const key = fileName.toLowerCase();
+  return allMolecules.filter((m) => m.note.toLowerCase() === key);
+}
+function noteHref(fileName) {
+  const key = fileName.toLowerCase();
+  for (const [slug, value] of Object.entries(fileMap ?? {})) {
+    if (value.toLowerCase() === key)
+      return `${siteRoot()}/${encodeURI(slug)}`;
+  }
+  return null;
+}
+function preprocessSvg(svgText) {
+  let doc;
+  try {
+    doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+  } catch {
+    return svgText;
+  }
+  const root = doc.documentElement;
+  if (!root || root.nodeName.toLowerCase() !== "svg")
+    return svgText;
+  root.removeAttribute("width");
+  root.removeAttribute("height");
+  const isColor = (v) => {
+    const s = v.trim().toLowerCase();
+    return s !== "" && s !== "none" && s !== "transparent" && !s.startsWith("url(");
+  };
+  root.querySelectorAll("rect").forEach((r) => {
+    const w = (r.getAttribute("width") ?? "").trim();
+    const h = (r.getAttribute("height") ?? "").trim();
+    const fill = (r.getAttribute("fill") ?? "").trim().toLowerCase();
+    if (w === "100%" || h === "100%" || fill === "#ffffff" || fill === "#fff" || fill === "white") {
+      r.remove();
+    }
+  });
+  root.querySelectorAll("*").forEach((el) => {
+    for (const attr of ["fill", "stroke"]) {
+      const v = el.getAttribute(attr);
+      if (v && isColor(v))
+        el.setAttribute(attr, "currentColor");
+    }
+    const style = el.getAttribute("style");
+    if (style) {
+      el.setAttribute("style", style.replace(/(fill|stroke)(\s*:\s*)[^;]+/gi, "$1$2currentColor"));
+    }
+  });
+  return new XMLSerializer().serializeToString(doc);
+}
+function renderWithRDKit(mol, host) {
+  host.innerHTML = preprocessSvg(mol.get_svg());
+}
+function drawTree(host, tree) {
+  const NS = "http://www.w3.org/2000/svg";
+  const w = tree?.width || 300;
+  const h = tree?.height || 180;
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "180");
+  const walk = (n) => {
+    if (!n || typeof n !== "object")
+      return;
+    if (n.type === "atom" || n.type === "node") {
+      if (n.element && n.position) {
+        const t = document.createElementNS(NS, "text");
+        t.setAttribute("x", String(n.position.x));
+        t.setAttribute("y", String(n.position.y));
+        t.setAttribute("fill", "currentColor");
+        t.textContent = n.element;
+        svg.appendChild(t);
+      }
+    } else if ((n.type === "bond" || n.type === "edge") && n.begin && n.end) {
+      const dx = n.end.position.x - n.begin.position.x;
+      const dy = n.end.position.y - n.begin.position.y;
+      const len = Math.hypot(dx, dy) || 1;
+      const order = n.order || 1;
+      const count = order > 2 ? 3 : order;
+      for (let i = 0; i < count; i++) {
+        const f = count === 1 ? 0 : (i / (count - 1) - 0.5) * 2;
+        const nx = -dy / len * 2 * f;
+        const ny = dx / len * 2 * f;
+        const l = document.createElementNS(NS, "line");
+        l.setAttribute("x1", String(n.begin.position.x + nx));
+        l.setAttribute("y1", String(n.begin.position.y + ny));
+        l.setAttribute("x2", String(n.end.position.x + nx));
+        l.setAttribute("y2", String(n.end.position.y + ny));
+        l.setAttribute("stroke", "currentColor");
+        l.setAttribute("stroke-width", "1.2");
+        svg.appendChild(l);
+      }
+    }
+    if (Array.isArray(n.children))
+      n.children.forEach(walk);
+  };
+  if (Array.isArray(tree))
+    tree.forEach(walk);
+  else
+    walk(tree);
+  host.appendChild(svg);
+}
+async function render2D(mol) {
+  if (!view || !mol.smiles)
+    return;
+  setHint("\u6B63\u5728\u52A0\u8F7D 2D \u6E32\u67D3\u5668\u2026");
+  const RDKit = await getRDKit();
+  if (RDKit) {
+    try {
+      const m = RDKit.get_mol(mol.smiles);
+      if (m) {
+        renderWithRDKit(m, view);
+        m.delete();
+        return;
+      }
+      setHint(
+        `RDKit \u65E0\u6CD5\u89E3\u6790\u8FD9\u4E2A\u7ED3\u6784\u5F0F<br/><span style="font-family:var(--codeFont)">${mol.smiles}</span>`
+      );
+      return;
+    } catch (err) {
+      console.warn("[molecule] RDKit \u89E3\u6790\u5931\u8D25", err);
+      setHint(
+        `RDKit \u89E3\u6790\u51FA\u9519<br/><span style="font-family:var(--codeFont)">${mol.smiles}</span>`
+      );
+      return;
+    }
+  }
+  const ok = await ensureDrawer();
+  if (ok && drawer) {
+    try {
+      drawer.draw(
+        mol.smiles,
+        (tree) => {
+          view.innerHTML = "";
+          drawTree(view, tree);
+        },
+        () => {
+          setHint(
+            `\u5907\u7528\u6E32\u67D3\u5668\u4E5F\u5931\u8D25\u4E86<br/><span style="font-family:var(--codeFont)">${mol.smiles}</span>`
+          );
+        }
+      );
+      return;
+    } catch (err) {
+      console.warn("[molecule] SmilesDrawer \u7ED8\u5236\u5931\u8D25", err);
+    }
+  }
+  setHint(`2D \u6E32\u67D3\u5668\u52A0\u8F7D\u5931\u8D25\uFF08\u53EF\u80FD\u662F CDN \u88AB\u6321\uFF09<br/>SMILES\uFF1A${mol.smiles}`);
+}
+async function render3D(mol, host) {
+  if (!mol.pdb)
+    return;
+  setHint("\u6B63\u5728\u52A0\u8F7D 3Dmol.js\u2026");
+  const w = window;
+  if (!w.$3Dmol) {
+    const ok = await loadScript([
+      "https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js",
+      "https://3Dmol.org/build/3Dmol-min.js"
+    ]);
+    if (!ok || !w.$3Dmol) {
+      setHint("3D \u6E32\u67D3\u5668\u52A0\u8F7D\u5931\u8D25<br/>\u68C0\u67E5\u7F51\u7EDC\u540E\u91CD\u8BD5");
+      return;
+    }
+  }
+  const D = w.$3Dmol;
+  host.innerHTML = "";
+  const stage = document.createElement("div");
+  stage.className = "molecule-3d";
+  host.appendChild(stage);
+  const viewer = D.createViewer(stage, { backgroundAlpha: 0, antialias: true });
+  if (!viewer) {
+    setHint("3D \u6E32\u67D3\u5668\u521D\u59CB\u5316\u5931\u8D25");
+    return;
+  }
+  const styleAndZoom = () => {
+    viewer.setStyle({}, { cartoon: { color: "spectrum" } });
+    viewer.zoomTo();
+    viewer.render();
+  };
+  if (mol.pdb.startsWith("AF-")) {
+    const url = `https://alphafold.ebi.ac.uk/files/${mol.pdb}-F1-model_v4.pdb`;
+    fetch(url).then((res) => {
+      if (!res.ok)
+        throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    }).then((text) => {
+      viewer.addModel(text, "pdb");
+      styleAndZoom();
+    }).catch((err) => {
+      console.warn("[molecule] AlphaFold \u52A0\u8F7D\u5931\u8D25", err);
+      setHint(`AlphaFold \u7ED3\u6784 ${mol.pdb} \u52A0\u8F7D\u5931\u8D25`);
+    });
+    return;
+  }
+  D.download(`pdb:${mol.pdb}`, viewer, { multimodel: false }, styleAndZoom);
+}
+function renderMeta(mol) {
+  if (!metaEl)
+    return;
+  const parts = [`<span class="molecule-formula">${mol.formula}</span>`];
+  const href = noteHref(mol.note);
+  parts.push(href ? `<a href="${href}">\u{1F4D6} ${mol.note}</a>` : `<span>\u{1F4D6} ${mol.note}</span>`);
+  if (is3D && mol.pdb)
+    parts.push(`<span>PDB ${mol.pdb}</span>`);
+  if (mol.src === "manual")
+    parts.push(`<span title="\u4EBA\u5DE5\u4E66\u5199\u5E76\u6838\u5BF9\u4E86\u539F\u5B50\u6570">\xB7</span>`);
+  metaEl.innerHTML = parts.join("");
+}
+function render() {
+  const mol = entries[current];
+  if (!view || !mol)
+    return;
+  if (titleEl)
+    titleEl.textContent = mol.name;
+  if (groupEl)
+    groupEl.textContent = mol.group;
+  if (indexEl)
+    indexEl.textContent = `${current + 1} / ${entries.length}`;
+  if (tipEl)
+    tipEl.textContent = mol.tip ?? "";
+  renderMeta(mol);
+  if (modeBtn) {
+    const can3D = Boolean(mol.pdb);
+    modeBtn.disabled = !can3D;
+    modeBtn.textContent = is3D ? "\u770B 2D" : "\u770B 3D";
+    modeBtn.classList.toggle("is-on", is3D);
+    modeBtn.title = can3D ? "\u5207\u6362 2D \u7ED3\u6784\u5F0F / 3D \u7ED3\u6784" : "\u8BE5\u6761\u76EE\u53EA\u6709 2D \u7ED3\u6784\u5F0F\uFF083D \u4EC5\u63D0\u4F9B PDB \u7ED3\u6784\u7684\u5927\u5206\u5B50\uFF09";
+  }
+  if (is3D && mol.pdb) {
+    render3D(mol, view);
+  } else if (mol.smiles) {
+    render2D(mol);
+  } else {
+    setHint("\u672C\u6761\u76EE\u53EA\u63D0\u4F9B 3D \u7ED3\u6784\uFF0C\u70B9\u4E0B\u65B9\u300C3D\u300D\u6309\u94AE\u52A0\u8F7D");
+  }
+}
+function step(delta) {
+  if (entries.length === 0)
+    return;
+  current = (current + delta + entries.length) % entries.length;
+  render();
+}
+async function init() {
+  if (!wrapper || !view)
+    return;
+  const problems = [];
+  try {
+    await loadMolecules();
+  } catch (err) {
+    problems.push(
+      `\u5206\u5B50\u6570\u636E\u52A0\u8F7D\u5931\u8D25\uFF1A${err instanceof Error ? err.message : String(err)}`
+    );
+  }
+  try {
+    await loadFileMap();
+    if (!fileMap || Object.keys(fileMap).length === 0) {
+      problems.push("contentIndex \u7D22\u5F15\u4E3A\u7A7A\uFF0C\u65E0\u6CD5\u6309\u5F53\u524D\u9875\u9762\u7B5B\u9009");
+    }
+  } catch (err) {
+    problems.push(`contentIndex \u52A0\u8F7D\u5931\u8D25\uFF1A${err instanceof Error ? err.message : String(err)}`);
+  }
+  entries = problems.length === 0 ? pickEntries() : [];
+  if (entries.length === 0) {
+    if (problems.length > 0) {
+      wrapper.style.display = "";
+      if (titleEl)
+        titleEl.textContent = "\u7ED3\u6784\u6F14\u793A";
+      setHint(
+        `${problems.join("<br/>")}<br/><span style="font-family:var(--codeFont);opacity:.7">\u7AD9\u70B9\u6839 ${siteRoot() || "/"} \xB7 \u67E5\u627E ${staticUrls("molecules.json").join("\u3001")}</span>`
+      );
+    }
+    return;
+  }
+  wrapper.style.display = "";
+  await getRDKit();
+  prevBtn?.addEventListener("click", () => step(-1));
+  nextBtn?.addEventListener("click", () => step(1));
+  modeBtn?.addEventListener("click", () => {
+    is3D = !is3D;
+    render();
+  });
+  let lastTheme = document.documentElement.getAttribute("saved-theme");
+  new MutationObserver(() => {
+    const now = document.documentElement.getAttribute("saved-theme");
+    if (now === lastTheme)
+      return;
+    lastTheme = now;
+    const mol = entries[current];
+    if (is3D && mol?.pdb && view)
+      render3D(mol, view);
+  }).observe(document.documentElement, { attributeFilter: ["saved-theme"] });
+  render();
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
+{
+}
+})();
 (function () {// node_modules/d3-dispatch/src/dispatch.js
 var noop = { value: () => {
 } };
