@@ -268,6 +268,40 @@ div[data-rehype-pretty-code-fragment] {
   }
 }
 
+// Mermaid 图渲染完成后仍带着 rehype-pretty-code 的外壳（深色渐变背景 + 内阴影 +
+// IBM Plex Mono），会让 SVG 看起来像"贴在代码框里"，且暗色模式下配色打架。
+// 这里把外壳拆掉，让图自己居中、跟随主题。
+// ⚠️ mermaid 是 CDN 动态加载的，v10 的 `securityLevel: 'loose'` 会让 SVG
+// 自带配色，所以**不能反色处理**，只能去掉容器样式让它用主题默认色。
+div[data-rehype-pretty-code-fragment]:has(> pre > code > .mermaid),
+figure:has(.mermaid) {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+
+  pre {
+    background: transparent !important;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: normal;
+    background: transparent;
+    color: inherit;
+  }
+
+  // mermaid 渲染成功后会把源码文本替换成 <svg>
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 // Inline code styling
 code {
   background-color: rgba(59, 130, 246, 0.08);
