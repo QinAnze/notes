@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html><head><title>结构与光谱主线：从小分子四谱到蛋白质结构</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="结构与光谱主线：从小分子四谱到蛋白质结构"/><meta property="og:description" content="结构与光谱主线：从小分子四谱到蛋白质结构 这篇在解决什么 「怎么知道一个分子/一个蛋白质长什么样」这个问题， 在有机化学里答案是 MS → IR → UV → NMR 四步， 在生物化学里答案是 A₂₈₀ 定量 + 二维电泳 + CD + 质谱， 在分析化学里答案是 吸收曲线 + 标准曲线。 三者共用同一条逻辑：不同波长的光/粒子只对特定跃迁响应， 响应强度和结构成分成正比，所以能反推结构。 一、先统一语言：跃迁决定”谁在说话” 有机化学的 UV 四条跃迁规则，本质是”电子能级差 ΔE = hc/λ”： 跃迁波长范围需要共轭强度 εσ → σ*&amp;lt; 150 nm否强n → σ*150~250 nm否中π → π*200~800 nm必须共轭强，ε &amp;gt; 10⁴n → π*250~600 nm需要孤对**弱，ε 10~100 两条能直接用的推论： 没有共轭就测不到 200 nm 以上的 π→π* —— 所以简单烯烃在紫外区”隐形”， 需要有苯环或长共轭体系才能被 UV 检出； ε &amp;gt; 10⁴ 是强吸收带 —— 这个数在分析化学里就是定量分析能不能做的门槛（见 O1-可见分光光度法）。 朗伯-比尔定律是这三门课共用的那支笔： A=lgII0​​=εcl 什么时候偏离朗伯-比尔 浓度太高、溶液太稀（太稀时 A 落在仪器噪声区）、以及分子缔合/解离随浓度变化时都会偏离。 生物实验室的蛋白质浓度常常低到 A &amp;lt; 0."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="结构与光谱主线：从小分子四谱到蛋白质结构 这篇在解决什么 「怎么知道一个分子/一个蛋白质长什么样」这个问题， 在有机化学里答案是 MS → IR → UV → NMR 四步， 在生物化学里答案是 A₂₈₀ 定量 + 二维电泳 + CD + 质谱， 在分析化学里答案是 吸收曲线 + 标准曲线。 三者共用同一条逻辑：不同波长的光/粒子只对特定跃迁响应， 响应强度和结构成分成正比，所以能反推结构。 一、先统一语言：跃迁决定”谁在说话” 有机化学的 UV 四条跃迁规则，本质是”电子能级差 ΔE = hc/λ”： 跃迁波长范围需要共轭强度 εσ → σ*&amp;lt; 150 nm否强n → σ*150~250 nm否中π → π*200~800 nm必须共轭强，ε &amp;gt; 10⁴n → π*250~600 nm需要孤对**弱，ε 10~100 两条能直接用的推论： 没有共轭就测不到 200 nm 以上的 π→π* —— 所以简单烯烃在紫外区”隐形”， 需要有苯环或长共轭体系才能被 UV 检出； ε &amp;gt; 10⁴ 是强吸收带 —— 这个数在分析化学里就是定量分析能不能做的门槛（见 O1-可见分光光度法）。 朗伯-比尔定律是这三门课共用的那支笔： A=lgII0​​=εcl 什么时候偏离朗伯-比尔 浓度太高、溶液太稀（太稀时 A 落在仪器噪声区）、以及分子缔合/解离随浓度变化时都会偏离。 生物实验室的蛋白质浓度常常低到 A &amp;lt; 0."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="跨学科/结构与光谱主线-从小分子四谱到蛋白质结构"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#结构与光谱主线从小分子四谱到蛋白质结构" data-for="结构与光谱主线从小分子四谱到蛋白质结构">结构与光谱主线：从小分子四谱到蛋白质结构</a></li><li class="depth-1"><a href="#一先统一语言跃迁决定谁在说话" data-for="一先统一语言跃迁决定谁在说话">一、先统一语言：跃迁决定&quot;谁在说话&quot;</a></li><li class="depth-1"><a href="#二小分子四谱为什么顺序是-ms--ir--uv--nmr" data-for="二小分子四谱为什么顺序是-ms--ir--uv--nmr">二、小分子四谱：为什么顺序是 MS → IR → UV → NMR</a></li><li class="depth-1"><a href="#三大分子侧同一条逻辑换成谁在-280-nm-吸收" data-for="三大分子侧同一条逻辑换成谁在-280-nm-吸收">三、大分子侧：同一条逻辑，换成&quot;谁在 280 nm 吸收&quot;</a></li><li class="depth-1"><a href="#四探针与荧光给分子装发报机" data-for="四探针与荧光给分子装发报机">四、探针与荧光：给分子装&quot;发报机&quot;</a></li><li class="depth-1"><a href="#五二级结构怎么看见ir-与-cd" data-for="五二级结构怎么看见ir-与-cd">五、二级结构怎么&quot;看见&quot;：IR 与 CD</a></li><li class="depth-1"><a href="#六把两条流程并排放" data-for="六把两条流程并排放">六、把两条流程并排放</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">结构与光谱主线：从小分子四谱到蛋白质结构</h1><p class="content-meta">Oct 09, 2026, 10 min read</p></div></div><article class="popover-hint"><h1 id="结构与光谱主线从小分子四谱到蛋白质结构">结构与光谱主线：从小分子四谱到蛋白质结构<a aria-hidden="true" tabindex="-1" href="#结构与光谱主线从小分子四谱到蛋白质结构" class="internal"></a></h1>
+<blockquote class="callout" data-callout="abstract">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div>
+                  <div class="callout-title-inner"><p>这篇在解决什么 </p></div>
+                  
+                </div>
+<p>「怎么知道一个分子/一个蛋白质长什么样」这个问题，
+在有机化学里答案是 <strong>MS → IR → UV → NMR 四步</strong>，
+在生物化学里答案是 <strong>A₂₈₀ 定量 + 二维电泳 + CD + 质谱</strong>，
+在分析化学里答案是 <strong>吸收曲线 + 标准曲线</strong>。
+三者共用同一条逻辑：<strong>不同波长的光/粒子只对特定跃迁响应</strong>，
+响应强度和结构成分成正比，所以能反推结构。</p>
+</blockquote>
+<h2 id="一先统一语言跃迁决定谁在说话">一、先统一语言：跃迁决定”谁在说话”<a aria-hidden="true" tabindex="-1" href="#一先统一语言跃迁决定谁在说话" class="internal"></a></h2>
+<p>有机化学的 UV 四条跃迁规则，本质是”电子能级差 ΔE = hc/λ”：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>跃迁</th><th>波长范围</th><th>需要共轭</th><th>强度 ε</th></tr></thead><tbody><tr><td>σ → σ*</td><td>&lt; 150 nm</td><td>否</td><td>强</td></tr><tr><td>n → σ*</td><td>150~250 nm</td><td>否</td><td>中</td></tr><tr><td>π → π*</td><td>200~800 nm</td><td><strong>必须共轭</strong></td><td>强，ε > 10⁴</td></tr><tr><td>n → π*</td><td>250~600 nm</td><td>需要孤对</td><td>**弱，ε 10~100</td></tr></tbody></table>
+<p>两条能直接用的推论：</p>
+<ul>
+<li><strong>没有共轭就测不到 200 nm 以上的 π→π*</strong> —— 所以简单烯烃在紫外区”隐形”，
+需要有苯环或长共轭体系才能被 UV 检出；</li>
+<li><strong>ε > 10⁴ 是强吸收带</strong> —— 这个数在分析化学里就是定量分析能不能做的门槛（见 <a href="../无机及分析化学笔记/光分析/O1-可见分光光度法" class="internal">O1-可见分光光度法</a>）。</li>
+</ul>
+<p>朗伯-比尔定律是这三门课共用的那支笔：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2334em;vertical-align:-0.345em;"></span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8884em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0785em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">ε</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span></span></p>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>什么时候偏离朗伯-比尔 </p></div>
+                  
+                </div>
+<p><strong>浓度太高、溶液太稀（太稀时 A 落在仪器噪声区）、以及分子缔合/解离随浓度变化时都会偏离。</strong>
+生物实验室的蛋白质浓度常常低到 A &lt; 0.1，此时用标准曲线外推会放大误差，
+所以一般选 <strong>BCA/Bradford 之类显色法</strong>或荧光法而不是直接 A₂₈₀。</p>
+</blockquote>
+<h2 id="二小分子四谱为什么顺序是-ms--ir--uv--nmr">二、小分子四谱：为什么顺序是 MS → IR → UV → NMR<a aria-hidden="true" tabindex="-1" href="#二小分子四谱为什么顺序是-ms--ir--uv--nmr" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>谱</th><th>灵敏度</th><th>提供什么信息</th><th>能回答的问题</th></tr></thead><tbody><tr><td><strong>MS</strong></td><td>最高（0.001~0.1 mg）</td><td>分子量、碎片</td><td><strong>分子式和碎片拼接顺序</strong></td></tr><tr><td>IR</td><td>中（0.1~1 mg）</td><td>指纹区官能团</td><td>“有没有 C=O / OH / 芳环”</td></tr><tr><td>UV-Vis</td><td>较低（0.01~5 mg）</td><td>共轭体系</td><td>“共轭链多长、是否有生色团”</td></tr><tr><td><strong>NMR</strong></td><td>最差（1~5 mg）</td><td>骨架 + 化学环境</td><td><strong>原子怎么连的、每个 H 在哪</strong></td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>为什么先做 MS </p></div>
+                  
+                </div>
+<p>因为分子量是<strong>唯一能一上来就锁定的高价值信息</strong>——
+拿到 M 之后，后面所有谱图的解析都有边界了。
+有机化学里最经典的用法就是 MS 碎片的 m/z 差值拼回结构
+（如 M、M−18 脱水、M−32 脱 CH₃OH 等，见 <a href="../有机化学笔记/上课笔记/结构解析" class="internal">结构解析</a>）。</p>
+</blockquote>
+<p>IR 的”指纹区”是<strong>有机物唯一性</strong>的来源：指纹区（1500~500 cm⁻¹）的峰位组合，
+对任何两个不同的分子都不同。所以<strong>红外光谱可以直接拿来查库比对</strong>。</p>
+<h2 id="三大分子侧同一条逻辑换成谁在-280-nm-吸收">三、大分子侧：同一条逻辑，换成”谁在 280 nm 吸收”<a aria-hidden="true" tabindex="-1" href="#三大分子侧同一条逻辑换成谁在-280-nm-吸收" class="internal"></a></h2>
+<p>蛋白质的芳香族残基是天然的紫外标记物：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>残基</th><th>λmax / nm</th><th>ε</th></tr></thead><tbody><tr><td>色氨酸</td><td>280</td><td>5690</td></tr><tr><td>酪氨酸</td><td>274</td><td>1280</td></tr><tr><td>苯丙氨酸</td><td>257</td><td>190</td></tr><tr><td>核酸碱基（嘌呤）</td><td>260</td><td>10⁴ ~ 13000</td></tr><tr><td>核酸碱基（嘧啶）</td><td>260</td><td>6000 ~ 8000</td></tr><tr><td><strong>NADH</strong></td><td><strong>340</strong></td><td>6220</td></tr><tr><td>FAD</td><td>450</td><td>11300</td></tr><tr><td>血红素</td><td>400~450</td><td>10⁵+</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>260 与 280 两个波长各管一件事 </p></div>
+                  
+                </div>
+<p><strong>260 nm 核酸，280 nm 蛋白</strong>。所以定量核酸/蛋白各有换算系数：
+DNA = A₂₆₀ × 50 μg/mL，RNA = A₂₆₀ × 40 μg/mL。
+纯度也用两个比值判：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>比值</th><th>纯品标准</th><th>说明</th></tr></thead><tbody><tr><td>A₂₆₀/A₂₈₀</td><td>DNA <strong>1.8</strong>，RNA <strong>2.0</strong></td><td>偏低说明有蛋白或酚污染</td></tr><tr><td>A₂₆₀/A₂₃₀</td><td>> 2.0</td><td>偏低说明有盐/EDTA/有机物污染</td></tr></tbody></table>
+<p><strong>双波长比值是”这台仪器上一个字符都不用改的质量自检”</strong>，
+每次测完顺手看一眼，比等到跑完胶才发现污染省事得多。</p>
+</blockquote>
+<p>定量方法的选择，本质是<strong>挑灵敏度最高的那条吸收带</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>检出下限 (mg/mL)</th><th>原理</th></tr></thead><tbody><tr><td>荧光法</td><td>0.001~0.1</td><td>激发→发射，灵敏度最高</td></tr><tr><td>A₂₈₀ 直接法</td><td>0.01~1</td><td>无需显色，但依赖消光系数</td></tr><tr><td>Lowry</td><td>0.01~1</td><td>铜显色 + 还原显色两步</td></tr><tr><td>BCA</td><td>0.02~2</td><td>铜显色，对还原剂干扰敏感</td></tr><tr><td>Bradford</td><td>0.1~1.5</td><td>考马斯亮蓝结合，<strong>短时间完成</strong></td></tr></tbody></table>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>荧光法为什么比吸收法灵敏 </p></div>
+                  
+                </div>
+<p>吸收测的是”被吃掉多少光”，荧光测的是”激发后吐出多少光” ——
+后者的<strong>背景为零</strong>，信噪比天然高一到两个数量级。
+代价是必须先有荧光探针或荧光基团。</p>
+</blockquote>
+<h2 id="四探针与荧光给分子装发报机">四、探针与荧光：给分子装”发报机”<a aria-hidden="true" tabindex="-1" href="#四探针与荧光给分子装发报机" class="internal"></a></h2>
+<p>荧光测量的两个核心参数：</p>
+<ul>
+<li><strong>Stokes 位移</strong> <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">Δ</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span> ——
+发射总比激发长，所以能用滤光片把激���光滤掉；</li>
+<li><strong>量子产率</strong> <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord">Φ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2173em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">吸收光子数</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">发射光子数</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>。</li>
+</ul>
+<p>常见探针的 ex/em（nm）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>探针</th><th>激发</th><th>发射</th><th>用途</th></tr></thead><tbody><tr><td>FITC</td><td>495</td><td>519</td><td>抗体标记（绿）</td></tr><tr><td>Rhodamine</td><td>555</td><td>575</td><td>抗体标记（红）</td></tr><tr><td>DAPI</td><td>358</td><td>461</td><td>DNA</td></tr><tr><td>GFP</td><td>488</td><td>507</td><td>活细胞示踪</td></tr><tr><td>SYBR Green</td><td>497</td><td>520</td><td>实时 PCR</td></tr><tr><td>PI</td><td>535</td><td>617</td><td>死细胞（不透过完整膜）</td></tr><tr><td>MitoTracker</td><td>579</td><td>599</td><td>线粒体</td></tr></tbody></table>
+<p><strong>FRET</strong> 是荧光里最有用的一个概念：供体发射的光正好被受体吸收
+（要求 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9805em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">m</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9805em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">x</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span>），效率对距离极敏感：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.7258em;vertical-align:-0.5916em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1341em;"><span style="top:-2.6264em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1885em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3115em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.5102em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.214em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5916em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<blockquote class="callout" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-inner"><p>FRET 能当&quot;分子尺&quot; </p></div>
+                  
+                </div>
+<p>因为 E 在 r ≈ 1~10 nm 范围内从 1 掉到 0，
+测量 E 反推距离 r，就能在<strong>活细胞里</strong>测构象变化。
+这就是能量转移（RET）的原理：受激发供体若在 10 nm 内，
+能量可能直接传给受体而不发荧光 —— 这是蛋白质构象研究的核心工具。
+完整参数见 <a href="../无机及分析化学笔记/拓展/拓展-光谱分析在结构生物学中的应用" class="internal">拓展-光谱分析在结构生物学中的应用</a>。</p>
+</blockquote>
+<h2 id="五二级结构怎么看见ir-与-cd">五、二级结构怎么”看见”：IR 与 CD<a aria-hidden="true" tabindex="-1" href="#五二级结构怎么看见ir-与-cd" class="internal"></a></h2>
+<p>蛋白质二级结构的经典判据是<strong>酰胺 I 带</strong>（1650~1600 cm⁻¹，来自 C=O 伸缩振动）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>二级结构</th><th>酰胺 I 峰位 (cm⁻¹)</th></tr></thead><tbody><tr><td>α-螺旋</td><td>1650~1657</td></tr><tr><td>β-折叠</td><td>1620~1640</td></tr><tr><td>无规卷曲</td><td>1640~1650</td></tr><tr><td>β-转角</td><td>1660~1695</td></tr></tbody></table>
+<p><strong>圆二色光谱（CD）</strong> 给的是另一套标记：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>结构</th><th>特征峰 (nm)</th></tr></thead><tbody><tr><td>α-螺旋</td><td>208 和 222 两个<strong>负峰</strong></td></tr><tr><td>β-折叠</td><td>215~218</td></tr><tr><td>无规卷曲</td><td>195</td></tr></tbody></table>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mord text"><span class="mord">-</span><span class="mord cjk_fallback">螺旋含量</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">39000</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mopen mtight">[</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">θ</span><span class="mclose mtight"><span class="mclose mtight">]</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">222</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight">3000</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>红外和拉曼是一对互补的工具 </p></div>
+                  
+                </div>
+<p><strong>红外看偶极矩变化，拉曼看极化率变化</strong> ——
+同一种振动的选择定则相反，所以在水溶液里（水是强红外吸收），
+拉曼往往能给出更干净的二级结构信息（表面增强拉曼 SERS 甚至能到单分子级）。</p>
+</blockquote>
+<h2 id="六把两条流程并排放">六、把两条流程并排放<a aria-hidden="true" tabindex="-1" href="#六把两条流程并排放" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>小分子（有机）</th><th>蛋白质（生物）</th></tr></thead><tbody><tr><td>定量</td><td>称量 / 滴定</td><td>A₂₈₀ / BCA / Bradford</td></tr><tr><td>粗判</td><td>R_f (TLC)、熔点、沸点</td><td>SDS-PAGE 分子量、SEC-HPLC</td></tr><tr><td>主键</td><td>IR 官能团</td><td>酰胺 I、II 区</td></tr><tr><td>精细结构</td><td>NMR 化学位移与耦合</td><td><strong>二维 NMR（HSQC / NOESY）</strong></td></tr><tr><td>定量浓度证据</td><td>ε 与标准曲线</td><td>A₂₆₀/A₂₈₀ 纯度比</td></tr><tr><td>构象</td><td>构象分析、NOE</td><td>CD、FRET、冷冻电镜</td></tr><tr><td>最终确认</td><td>合成 + X 射线晶体学</td><td>质谱、晶体学、冷冻电镜</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>共同点：都是&quot;多证据交叉&quot;而不是单一证据 </p></div>
+                  
+                </div>
+<p>任何一个谱都可能被误解（红外同样吸收峰可能来自不同基团、
+CD 的 f_α 依赖经验公式），所以结构生物学和有机结构解析一样，
+<strong>永远靠两条以上正交证据相互印证</strong>。</p>
+</blockquote>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li>有机化学：<a href="../有机化学笔记/上课笔记/结构解析" class="internal">结构解析</a>、<a href="../有机化学笔记/上课笔记/生物大分子" class="internal">生物大分子</a>、<a href="../有机化学笔记/上课笔记/立体化学" class="internal">立体化学</a>、<a href="../有机化学笔记/知识点/反应类型/酸碱反应" class="internal">酸碱反应</a></li>
+<li>分析化学：<a href="../无机及分析化学笔记/光分析/O1-可见分光光度法" class="internal">O1-可见分光光度法</a>、<a href="../无机及分析化学笔记/上课笔记/E2-酸碱平衡" class="internal">E2-酸碱平衡</a>、
+<a href="../无机及分析化学笔记/拓展/拓展-光谱分析在结构生物学中的应用" class="internal">拓展-光谱分析在结构生物学中的应用</a></li>
+<li>生物学：<a href="../基本生物学笔记/上课笔记/生命的化学基础" class="internal">生命的化学基础</a>、<a href="../基本生物学笔记/知识点/大笔记" class="internal">大笔记</a>、<a href="../基本生物学笔记/上课笔记/细胞结构与细胞通讯" class="internal">细胞结构与细胞通讯</a></li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><div id="markmap-container" class="markmap-container"></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>

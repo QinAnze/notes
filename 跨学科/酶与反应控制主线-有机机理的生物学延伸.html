@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html><head><title>酶与反应控制主线：有机机理的生物学延伸</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="酶与反应控制主线：有机机理的生物学延伸"/><meta property="og:description" content="酶与反应控制主线：有机机理的生物学延伸 这篇在解决什么 有机化学里「为什么要控温」「为什么会拿到两种构型」「为什么这个试剂专一」， 背后都是动力学：谁快、谁慢、活化能差多少。 酶催化用的还是同一套 Arrhenius 方程，只是把 Ea 降了几十 kJ/mol。 这篇把三门课的”选择性”统一成一件事：过渡态被稳定得有多好。 一、共同的两个方程 k=Ae−Ea​/RT,K=e−ΔG⊖/RT 温度为什么能改产物比例：因为改变的是 e−Ea​/RT，而两条路径的 Ea​ 不同。 低温和高温不是在”快慢”上分岔，是在相对速率上分岔。 温度为什么能改平衡：K 只随温度变（ΔG 变了），k 随温度变（Ea 决定）。 这两件事的区别是热力学与动力学的分界线。 控制类型条件产物特点经典实例动力学控制低温、短时间活化能低、生成快1,2-加成热力学控制高温、长时间、可逆能量最低、最稳定1,4-加成（双键移到中间成共轭） 这张表在生物学里的直接对应物 酶的作用就是”只抬高中间体的选择性”—— 它同时压低通往过渡态的 Ea，于是某个特定构型的形成速率被放大到压倒性优势。 这在有机里对应 Diels-Alder 的 endo 选择性、在药物合成里对应 Sharpless 环氧化， 在生物学里对应酶的立体专一性。三者不是类比，是同一件事。 有机里控温的具体数字很有用（合成失败时先查温度）： 反应温度窗口硝化0~50 ℃磺化室温 ~ 200 ℃卤化−20 ~ 80 ℃格氏反应回流（乙醚沸点 34."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="酶与反应控制主线：有机机理的生物学延伸 这篇在解决什么 有机化学里「为什么要控温」「为什么会拿到两种构型」「为什么这个试剂专一」， 背后都是动力学：谁快、谁慢、活化能差多少。 酶催化用的还是同一套 Arrhenius 方程，只是把 Ea 降了几十 kJ/mol。 这篇把三门课的”选择性”统一成一件事：过渡态被稳定得有多好。 一、共同的两个方程 k=Ae−Ea​/RT,K=e−ΔG⊖/RT 温度为什么能改产物比例：因为改变的是 e−Ea​/RT，而两条路径的 Ea​ 不同。 低温和高温不是在”快慢”上分岔，是在相对速率上分岔。 温度为什么能改平衡：K 只随温度变（ΔG 变了），k 随温度变（Ea 决定）。 这两件事的区别是热力学与动力学的分界线。 控制类型条件产物特点经典实例动力学控制低温、短时间活化能低、生成快1,2-加成热力学控制高温、长时间、可逆能量最低、最稳定1,4-加成（双键移到中间成共轭） 这张表在生物学里的直接对应物 酶的作用就是”只抬高中间体的选择性”—— 它同时压低通往过渡态的 Ea，于是某个特定构型的形成速率被放大到压倒性优势。 这在有机里对应 Diels-Alder 的 endo 选择性、在药物合成里对应 Sharpless 环氧化， 在生物学里对应酶的立体专一性。三者不是类比，是同一件事。 有机里控温的具体数字很有用（合成失败时先查温度）： 反应温度窗口硝化0~50 ℃磺化室温 ~ 200 ℃卤化−20 ~ 80 ℃格氏反应回流（乙醚沸点 34."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="跨学科/酶与反应控制主线-有机机理的生物学延伸"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#酶与反应控制主线有机机理的生物学延伸" data-for="酶与反应控制主线有机机理的生物学延伸">酶与反应控制主线：有机机理的生物学延伸</a></li><li class="depth-1"><a href="#一共同的两个方程" data-for="一共同的两个方程">一、共同的两个方程</a></li><li class="depth-1"><a href="#二选择性的三种类型" data-for="二选择性的三种类型">二、选择性的三种类型</a></li><li class="depth-2"><a href="#区域选择性regioselectivity" data-for="区域选择性regioselectivity">区域选择性（regioselectivity）</a></li><li class="depth-2"><a href="#立体选择性stereoselectivity" data-for="立体选择性stereoselectivity">立体选择性（stereoselectivity）</a></li><li class="depth-2"><a href="#化学选择性chemoselectivity" data-for="化学选择性chemoselectivity">化学选择性（chemoselectivity）</a></li><li class="depth-1"><a href="#三酶的三个核心概念都能在有机里找到对应" data-for="三酶的三个核心概念都能在有机里找到对应">三、酶的三个核心概念，都能在有机里找到对应</a></li><li class="depth-1"><a href="#四糖酵解一条被研究得最透的有机反应链" data-for="四糖酵解一条被研究得最透的有机反应链">四、糖酵解：一条被研究得最透的&quot;有机反应链&quot;</a></li><li class="depth-1"><a href="#五实战对照表" data-for="五实战对照表">五、实战对照表</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">酶与反应控制主线：有机机理的生物学延伸</h1><p class="content-meta">Oct 09, 2026, 11 min read</p></div></div><article class="popover-hint"><h1 id="酶与反应控制主线有机机理的生物学延伸">酶与反应控制主线：有机机理的生物学延伸<a aria-hidden="true" tabindex="-1" href="#酶与反应控制主线有机机理的生物学延伸" class="internal"></a></h1>
+<blockquote class="callout" data-callout="abstract">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div>
+                  <div class="callout-title-inner"><p>这篇在解决什么 </p></div>
+                  
+                </div>
+<p>有机化学里「为什么要控温」「为什么会拿到两种构型」「为什么这个试剂专一」，
+背后都是<strong>动力学</strong>：谁快、谁慢、活化能差多少。
+酶催化用的还是同一套 Arrhenius 方程，只是把 Ea 降了几十 kJ/mol。
+这篇把三门课的”选择性”统一成一件事：<strong>过渡态被稳定得有多好。</strong></p>
+</blockquote>
+<h2 id="一共同的两个方程">一、共同的两个方程<a aria-hidden="true" tabindex="-1" href="#一共同的两个方程" class="internal"></a></h2>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0824em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.0576em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">RT</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9564em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9564em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">Δ</span><span class="mord mtight"><span class="mord mathnormal mtight">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8477em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mbin mtight">⊖</span></span></span></span></span></span></span></span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">RT</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<ul>
+<li><strong>温度为什么能改产物比例</strong>：因为改变的是 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.0576em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight">/</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">RT</span></span></span></span></span></span></span></span></span></span></span></span></span>，而两条路径的 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 不同。
+低温和高温不是在”快慢”上分岔，是在<strong>相对速率</strong>上分岔。</li>
+<li><strong>温度为什么能改平衡</strong>：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span></span> 只随温度变（ΔG 变了），<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span></span> 随温度变（Ea 决定）。
+这两件事的区别是热力学与动力学的分界线。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>控制类型</th><th>条件</th><th>产物特点</th><th>经典实例</th></tr></thead><tbody><tr><td><strong>动力学控制</strong></td><td>低温、短时间</td><td>活化能低、生成快</td><td>1,2-加成</td></tr><tr><td><strong>热力学控制</strong></td><td>高温、长时间、可逆</td><td>能量最低、最稳定</td><td>1,4-加成（双键移到中间成共轭）</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>这张表在生物学里的直接对应物 </p></div>
+                  
+                </div>
+<p><strong>酶的作用就是”只抬高中间体的选择性”</strong>——
+它同时压低通往过渡态的 Ea，于是某个特定构型的形成速率被放大到压倒性优势。
+这在有机里对应 Diels-Alder 的 endo 选择性、在药物合成里对应 Sharpless 环氧化，
+在生物学里对应<strong>酶的立体专一性</strong>。三者不是类比，是同一件事。</p>
+</blockquote>
+<p>有机里控温的具体数字很有用（合成失败时先查温度）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>反应</th><th>温度窗口</th></tr></thead><tbody><tr><td>硝化</td><td>0~50 ℃</td></tr><tr><td>磺化</td><td>室温 ~ 200 ℃</td></tr><tr><td>卤化</td><td>−20 ~ 80 ℃</td></tr><tr><td>格氏反应</td><td>回流（乙醚沸点 34.6 ℃）</td></tr><tr><td>重氮盐制备</td><td>0~5 ℃</td></tr><tr><td>Vilsmeier-Haack</td><td>0 ℃ 以下滴加 POCl₃</td></tr><tr><td>锂-卤交换</td><td>−78 ℃（干冰/丙酮）</td></tr></tbody></table>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>酶最适温度 25~40 ℃ 是&quot;结构决定&quot;的，不是巧合 </p></div>
+                  
+                </div>
+<p>高温使蛋白质变性（见 <a href="../有机化学笔记/上课笔记/生物大分子" class="internal">生物大分子</a>，以及 pH 主线里那张变性边界表），
+低温则分子运动慢。所以酶制剂冻存要在 −20 ℃ 冰柜，
+用液氮从 −196 ℃ 取出来化冻时也要快。<strong>温度控制的本质是控制构象</strong>。</p>
+</blockquote>
+<h2 id="二选择性的三种类型">二、选择性的三种类型<a aria-hidden="true" tabindex="-1" href="#二选择性的三种类型" class="internal"></a></h2>
+<h3 id="区域选择性regioselectivity">区域选择性（regioselectivity）<a aria-hidden="true" tabindex="-1" href="#区域选择性regioselectivity" class="internal"></a></h3>
+<p>加成的活性顺序就是电子密度顺序（见 <a href="../有机化学笔记/知识点/反应类型/加成" class="internal">加成</a>）：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">C</span><span class="mord"><span class="mrel">=</span></span><span class="mord mathrm">C</span><span class="mord"><span class="mord mathrm">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathrm">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">C</span><span class="mord"><span class="mrel">=</span></span><span class="mord mathrm">CHR</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathrm">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">C</span><span class="mord"><span class="mrel">=</span></span><span class="mord mathrm">C</span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">RCH</span><span class="mord"><span class="mrel">=</span></span><span class="mord mathrm">CHR</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">RCH</span><span class="mord"><span class="mrel">=</span></span><span class="mord mathrm">C</span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">C</span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mrel">=</span></span><span class="mord mathrm">C</span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>羰基活性：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.791em;vertical-align:-0.0391em;"></span><span class="mord"><span class="mord mathrm">HCHO</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">RCHO</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">ArCHO</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">RCO</span><span class="mord"><span class="mord"><span class="mord mathrm">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">ArCOR</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">ArCOA</span><span class="mord"><span class="mord mathrm">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p><strong>同一套电子效应在生物学里决定结合的松紧</strong>：酶活性口袋靠氢键和盐桥抓底物，
+谁提供氢键、谁提供电荷，匹配得越”紧”选择性越高 ——
+这就是有机里”电子密度决定谁先被进攻”的另一种表述。</p>
+<h3 id="立体选择性stereoselectivity">立体选择性（stereoselectivity）<a aria-hidden="true" tabindex="-1" href="#立体选择性stereoselectivity" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>反应</th><th>立体结果</th><th>记忆要点</th></tr></thead><tbody><tr><td>SN2</td><td>100% 翻转（Walden）</td><td>背面进攻</td></tr><tr><td>E2</td><td>反式共平面消除</td><td>轨道对齐</td></tr><tr><td>Br₂ 加成</td><td><strong>反式</strong>（环状溴鎓离子）</td><td>鎓离子开环必反式</td></tr><tr><td>硼氢化</td><td><strong>顺式</strong> + 反马氏</td><td>协同四中心过渡态</td></tr><tr><td>催化氢化</td><td><strong>顺式</strong>（金属表面同侧吸附）</td><td>表面机理</td></tr><tr><td>羟汞化</td><td>马氏 + 反式</td><td>桥连汞离子</td></tr><tr><td>mCPBA 环氧化</td><td><strong>顺式</strong></td><td>三元环环加成</td></tr><tr><td>环氧开环</td><td>一律<strong>反式</strong></td><td>酸进攻取代多碳，碱进攻取代少碳</td></tr><tr><td>Diels-Alder</td><td>立体专一、<strong>endo 占优</strong></td><td>协同 + 二级轨道</td></tr></tbody></table>
+<p>口诀：<strong>鎓离子开环→反式；协同过渡态→顺式；背面进攻→翻转。</strong></p>
+<blockquote class="callout" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-inner"><p>生物里的立体专一：L-氨基酸和 D-糖 </p></div>
+                  
+                </div>
+<p>生命几乎只合成 <strong>L-氨基酸</strong> 和 <strong>D-糖</strong>（参见 <a href="../有机化学笔记/上课笔记/生物大分子" class="internal">生物大分子</a>）。
+合成 L-氨基酸的酶有手性的活性口袋，只认一个构型；
+同样的酶换个底物浓度就会催化出 D 型 —— 这本身是”手性口袋”的实验证据。
+有机化学里想造手性分子，也要靠手性催化剂：
+<strong>Sharpless 环氧化</strong>（Ti(OiPr)₄ + 酒石酸二乙酯 + t-BuOOH，2001 年诺贝尔奖）
+和 <strong>Noyori 不对称氢化</strong>做的是同一件事（见 <a href="../有机化学笔记/知识点/反应特点/人名反应" class="internal">人名反应</a>）。</p>
+</blockquote>
+<h3 id="化学选择性chemoselectivity">化学选择性（chemoselectivity）<a aria-hidden="true" tabindex="-1" href="#化学选择性chemoselectivity" class="internal"></a></h3>
+<p>有机里的”温和试剂 vs 强试剂”，生物学里对应”底物专一”：
+一锅乱炖的反应在生物体系里根本不会出现，因为<strong>每一步都是不同的酶</strong>。</p>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>天然的多步合成 = 分步表达 + 体外重建 </p></div>
+                  
+                </div>
+<p>人工合成做不到”一次加一串试剂”，于是合成生物学的标准做法是
+<strong>把一个代谢通路拆成若干个酶反应单元，在体外依次串联</strong> ——
+化学选择性由此变成”时间上的分离”。
+这就是酶工程和有机化学的分工点。</p>
+</blockquote>
+<h2 id="三酶的三个核心概念都能在有机里找到对应">三、酶的三个核心概念，都能在有机里找到对应<a aria-hidden="true" tabindex="-1" href="#三酶的三个核心概念都能在有机里找到对应" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>酶的概念</th><th>含义</th><th>有机里的对应</th></tr></thead><tbody><tr><td><strong>1 U</strong></td><td>25 ℃、最适 pH、底物过量下 1 min 催化 1 μmol 底物</td><td>单位（unit）本身就是化学动力学量</td></tr><tr><td><strong>Km</strong></td><td>半最大速率时的底物浓度，越小亲和力越高</td><td>类似”过渡态稳定程度”</td></tr><tr><td><strong>Vmax</strong></td><td>底物饱和时的最大速率</td><td>与 E_a 负相关</td></tr><tr><td><strong>诱导契合</strong></td><td>底物结合引起活性位构象变化</td><td>与诱导效应/构象张力类似</td></tr></tbody></table>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.53em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.0715em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mopen mtight">[</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span><span class="mclose mtight">]</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.2222em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ma</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mopen mtight">[</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p><strong>为什么 Km 常被用来”记住”一个酶</strong>：Km 越小的酶越”贪婪”，
+在低底物浓度下就能跑满速 —— 这一性质直接决定了补料策略。</p>
+<p><strong>反馈抑制</strong>（终产物抑制前面的酶）是生物调控的经典手段，
+而它在有机合成里的对应物是<strong>产物抑制 / 平衡移动</strong>（勒夏特列原理）。
+两者都是”末端多了就压制上游”。</p>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>别把酶当催化剂之外的东西 </p></div>
+                  
+                </div>
+<p>酶<strong>只改变速率、不改变平衡</strong>。所以
+<strong>指望酶把不利平衡变成有利平衡是错的</strong> ——
+酶只能让你在几小时内到达平衡，而不是把平衡挪过去。
+想改变平衡，得改底物浓度、移走产物或改 pH（见 pH 主线）。</p>
+</blockquote>
+<h2 id="四糖酵解一条被研究得最透的有机反应链">四、糖酵解：一条被研究得最透的”有机反应链”<a aria-hidden="true" tabindex="-1" href="#四糖酵解一条被研究得最透的有机反应链" class="internal"></a></h2>
+<p>葡萄糖 → 2 丙酮酸 + 2 ATP + 2 NADH，10 步反应，全程不需氧。
+把每一步按有机反应类型归类，会发现一个规律（见 <a href="../基本生物学笔记/上课笔记/细胞代谢" class="internal">细胞代谢</a>）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤类型</th><th>有机化学里的名字</th><th>例（糖酵解）</th></tr></thead><tbody><tr><td>异构化</td><td>烯二醇式互变异构（和糖的 Lobry de Bruyn 转化同类）</td><td>葡萄糖 ⇌ 果糖-6-磷酸</td></tr><tr><td>裂解/脱水</td><td>消除反应</td><td>烯醇化酶脱水</td></tr><tr><td>氧化</td><td>醇 → 醛/酮（PNAP⁺ 作 NAD⁺ 类似物）</td><td>甘油醛-3-磷酸脱氢</td></tr><tr><td>基团转移</td><td>酯化/酰基转移</td><td>1,3-二磷酸甘油酸 → 3-磷酸甘油酸</td></tr><tr><td>底物水平磷酸化</td><td>磷酸酯化</td><td>磷酸烯醇式丙酮酸 → 丙酮酸</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>一个视角上的统一 </p></div>
+                  
+                </div>
+<p>糖酵解里的 NAD⁺ 在化学角色上就是<strong>有机试剂</strong>：
+它是外来的氢受体（相当于合成化学里的还原剂，如 LiAlH₄ 或 H₂）。
+生物把”试剂”做成可循环再生的辅酶 —— 这就是辅酶工程的核心思想。
+注意有机化学里 NAD⁺/NADH 的 φ°′ = <strong>−0.320 V</strong>，和细胞质 Eh 对得上（见氧化还原主线）。</p>
+</blockquote>
+<h2 id="五实战对照表">五、实战对照表<a aria-hidden="true" tabindex="-1" href="#五实战对照表" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>你的问题</th><th>有机化学的答案</th><th>酶/生物的答案</th></tr></thead><tbody><tr><td>反应太慢</td><td>加热 / 换高活性试剂 / 催化</td><td>升温到最适温度（但注意 25~40 ℃）</td></tr><tr><td>产物太多</td><td>控温（动力学 vs 热力学）</td><td>缩短时间、降低底物浓度</td></tr><tr><td>得到混合物</td><td>保护基、试剂选择</td><td>酶专一性 / 分步反应</td></tr><tr><td>想要单一构型</td><td>手性催化剂、不对称合成</td><td>L/D 选择性、手性底物</td></tr><tr><td>反应物被”吃掉”了</td><td>移走产物、加热</td><td>持续补料、在线分离</td></tr></tbody></table>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li>有机化学：<a href="../有机化学笔记/知识点/反应特点/控温" class="internal">控温</a>、<a href="../有机化学笔记/知识点/反应特点/立体选择性" class="internal">立体选择性</a>、<a href="../有机化学笔记/知识点/反应特点/人名反应" class="internal">人名反应</a>、<a href="../有机化学笔记/知识点/反应类型/加成" class="internal">加成</a>、
+<a href="../有机化学笔记/上课笔记/羧酸及其衍生物" class="internal">羧酸及其衍生物</a>、<a href="../有机化学笔记/知识点/反应类型/氧化" class="internal">氧化</a>、<a href="../有机化学笔记/上课笔记/生物大分子" class="internal">生物大分子</a></li>
+<li>生物学：<a href="../基本生物学笔记/上课笔记/细胞代谢" class="internal">细胞代谢</a>、<a href="../基本生物学笔记/上课笔记/生命的化学基础" class="internal">生命的化学基础</a>、<a href="../基本生物学笔记/知识点/大笔记" class="internal">大笔记</a></li>
+<li>分析化学：<a href="../无机及分析化学笔记/上课笔记/E4-氧化还原平衡与电极电势" class="internal">E4-氧化还原平衡与电极电势</a>、<a href="../无机及分析化学笔记/拓展/拓展-缓冲溶液与生物体系" class="internal">拓展-缓冲溶液与生物体系</a></li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><div id="markmap-container" class="markmap-container"></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>

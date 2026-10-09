@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html><head><title>pH 主线：从酸碱平衡到细胞内稳态</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="pH 主线：从酸碱平衡到细胞内稳态"/><meta property="og:description" content="pH 主线：从分析化学到细胞内稳态 这篇在解决什么 同一个「pH」在三门课里出现三次： 分析化学问「怎么算准」→ 有机化学问「谁被质子化、谁先反应」→ 生物学问「细胞凭什么把 pH 稳在 6.8~7.2」。 其实是同一个 Henderson-Hasselbalch 方程在三个尺度上使用， 差别只在缓冲对的选择和浓度上限。 一、起点：分析化学给的工具 酸碱平衡的全部工具就两件：分布分数和质子条件式。 分布分数（E2 的核心）： δHA​=[H+]+Ka​[H+]​ 它有两个非常有用的性质，务必记住： 条件结果性质类型pH = pKaδ(HA) = δ(A⁻) = 0."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="pH 主线：从分析化学到细胞内稳态 这篇在解决什么 同一个「pH」在三门课里出现三次： 分析化学问「怎么算准」→ 有机化学问「谁被质子化、谁先反应」→ 生物学问「细胞凭什么把 pH 稳在 6.8~7.2」。 其实是同一个 Henderson-Hasselbalch 方程在三个尺度上使用， 差别只在缓冲对的选择和浓度上限。 一、起点：分析化学给的工具 酸碱平衡的全部工具就两件：分布分数和质子条件式。 分布分数（E2 的核心）： δHA​=[H+]+Ka​[H+]​ 它有两个非常有用的性质，务必记住： 条件结果性质类型pH = pKaδ(HA) = δ(A⁻) = 0."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="跨学科/pH主线-从酸碱平衡到细胞内稳态"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#ph-主线从分析化学到细胞内稳态" data-for="ph-主线从分析化学到细胞内稳态">pH 主线：从分析化学到细胞内稳态</a></li><li class="depth-1"><a href="#一起点分析化学给的工具" data-for="一起点分析化学给的工具">一、起点：分析化学给的工具</a></li><li class="depth-1"><a href="#二有机化学给的地图pka-差决定性质" data-for="二有机化学给的地图pka-差决定性质">二、有机化学给的地图：pKa 差决定性质</a></li><li class="depth-1"><a href="#三缓冲henderson-hasselbalch-的三个尺度" data-for="三缓冲henderson-hasselbalch-的三个尺度">三、缓冲：Henderson-Hasselbalch 的三个尺度</a></li><li class="depth-1"><a href="#四生物端可电离基团--等电点-pi" data-for="四生物端可电离基团--等电点-pi">四、生物端：可电离基团 → 等电点 pI</a></li><li class="depth-1"><a href="#五从化学到生理ph-出问题会怎样" data-for="五从化学到生理ph-出问题会怎样">五、从化学到生理：pH 出问题会怎样</a></li><li class="depth-1"><a href="#六速查同一件事的三种说法" data-for="六速查同一件事的三种说法">六、速查：同一件事的三种说法</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">pH 主线：从酸碱平衡到细胞内稳态</h1><p class="content-meta">Oct 09, 2026, 12 min read</p></div></div><article class="popover-hint"><h1 id="ph-主线从分析化学到细胞内稳态">pH 主线：从分析化学到细胞内稳态<a aria-hidden="true" tabindex="-1" href="#ph-主线从分析化学到细胞内稳态" class="internal"></a></h1>
+<blockquote class="callout" data-callout="abstract">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div>
+                  <div class="callout-title-inner"><p>这篇在解决什么 </p></div>
+                  
+                </div>
+<p>同一个「pH」在三门课里出现三次：
+分析化学问「怎么算准」→ 有机化学问「谁被质子化、谁先反应」→
+生物学问「细胞凭什么把 pH 稳在 6.8~7.2」。
+其实是<strong>同一个 Henderson-Hasselbalch 方程</strong>在三个尺度上使用，
+差别只在缓冲对的选择和浓度上限。</p>
+</blockquote>
+<h2 id="一起点分析化学给的工具">一、起点：分析化学给的工具<a aria-hidden="true" tabindex="-1" href="#一起点分析化学给的工具" class="internal"></a></h2>
+<p>酸碱平衡的全部工具就两件：<strong>分布分数</strong>和<strong>质子条件式</strong>。</p>
+<p>分布分数（E2 的核心）：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0379em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.5984em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0784em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7027em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mclose mtight">]</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1645em;"><span style="top:-2.357em;margin-left:-0.0715em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8477em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>它有两个非常有用的性质，务必记住：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>条件</th><th>结果</th><th>性质类型</th></tr></thead><tbody><tr><td>pH = pKa</td><td>δ(HA) = δ(A⁻) = 0.5</td><td><strong>定义性质，不是近似</strong></td></tr><tr><td>pH = pKa ± 1</td><td>δ(HA) ≈ 0.09，δ(A⁻) ≈ 0.91</td><td>过渡区，有效范围</td></tr><tr><td>pH = pKa + 2</td><td>δ(A⁻) ≈ 0.99</td><td>反应基本完全</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>为什么&quot;pH = pKa 时各占一半&quot;可以拿来设计缓冲 </p></div>
+                  
+                </div>
+<p>因为这是<strong>定义的直接结果</strong>，不用任何近似。
+所以选缓冲剂的口诀就一句：<strong>要缓冲在 pH 几，就选 pKa 等于 pH 的那对酸碱</strong>。
+想缓冲能力最强，缓冲对的总浓度越大越好（见第三节）。</p>
+</blockquote>
+<p>另一条不能忘的：<strong>Kw 随温度升高而增大</strong>（25 ℃ 时 1.0×10⁻¹⁴，100 ℃ 时 5.5×10⁻¹³）。
+这就是为什么<strong>巴氏消毒和牛奶加热依赖温度杀不死芽孢</strong>的化学基础，
+也是为什么 Tris 缓冲在低温下 pH 会漂（见下文）。</p>
+<h2 id="二有机化学给的地图pka-差决定性质">二、有机化学给的地图：pKa 差决定性质<a aria-hidden="true" tabindex="-1" href="#二有机化学给的地图pka-差决定性质" class="internal"></a></h2>
+<p>有机化学其实是在做同一件事：<strong>给不同官能团排一张 pKa 表</strong>，
+然后判断「同一体系里谁先被质子化、谁先离去」。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>物种</th><th>pKa</th><th>相对水</th></tr></thead><tbody><tr><td>盐酸</td><td>≈ −7</td><td>强 10⁷ 倍</td></tr><tr><td>三氟乙酸</td><td>0.23</td><td>强</td></tr><tr><td>苦味酸</td><td>0.38</td><td>强</td></tr><tr><td>甲酸</td><td>3.75</td><td>弱酸</td></tr><tr><td>乙酸</td><td>4.76</td><td>弱酸（羧酸典型 4~5）</td></tr><tr><td>苯酚</td><td>10.0</td><td>极弱酸</td></tr><tr><td>水</td><td>15.7</td><td>参照</td></tr><tr><td>乙醇</td><td>15.9</td><td>与水几乎相同</td></tr><tr><td>丙酮</td><td>19.2</td><td>弱于水</td></tr><tr><td>乙炔</td><td>≈ 25</td><td>需强碱才拔氢</td></tr><tr><td>苯 / 乙烯</td><td>≈ 43 / 44</td><td>基本不参与</td></tr><tr><td>乙烷</td><td>≈ 50</td><td>化学惰性</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>一条贯穿有机化学的判据 </p></div>
+                  
+                </div>
+<p><strong>pKa 每差 1 个单位，平衡差 10 倍；差 5 个单位，差 10⁵ 倍。</strong>
+所以「羧酸（4~5）能从水（15.7）里把手夺走」，
+而「苯酚（10.0）不能从水手里夺」—— 解释了为什么苯酚在 NaHCO₃
+里不溶、在 NaOH 里溶。详见 <a href="../有机化学笔记/知识点/反应类型/酸碱反应" class="internal">酸碱反应</a> 的第四节。</p>
+</blockquote>
+<p>这张表在生物工程的实验室里天天用：</p>
+<ul>
+<li><strong>三氟乙酸（TFA）</strong> pKa 0.23 —— 液质联用（LC-MS）流动相里加 0.1% TFA，
+目的就是让肽上的碱性氨基全部质子化、正离子模式响应最好；</li>
+<li><strong>乙酸</strong> pKa 4.76 —— 发酵产酸阶段控 pH 就靠它；</li>
+<li><strong>邻苯二甲酰亚胺 N–H</strong> pKa ≈ 8.3 —— 所以 Gabriel 合成要先用碱把亚胺
+负离子做出来，它才有亲核性（见 <a href="../有机化学笔记/知识点/反应特点/控pH反应" class="internal">控pH反应</a>）。</li>
+</ul>
+<p>酸的结构效应同样重要：卤素的诱导效应顺序 F(2.66) > Cl(2.81) > Br(2.87) > I(3.31)，
+所以三氟乙酸 &lt; 一氯乙酸 &lt; 溴乙酸 &lt; 碘乙酸 &lt; 乙酸。
+草酸是二元酸，pKa₁ 1.29、pKa₂ 4.28，<strong>第一个羧基的负电场把第二个的酸性拉强了</strong> ——
+这就是「分子内静电效应」在有机里的样子（见 <a href="../有机化学笔记/上课笔记/羧酸及其衍生物" class="internal">羧酸及其衍生物</a>）。</p>
+<h2 id="三缓冲henderson-hasselbalch-的三个尺度">三、缓冲：Henderson-Hasselbalch 的三个尺度<a aria-hidden="true" tabindex="-1" href="#三缓冲henderson-hasselbalch-的三个尺度" class="internal"></a></h2>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathrm">pH</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathrm">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.53em;vertical-align:-0.52em;"></span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord text mtight"><span class="mord cjk_fallback mtight">酸</span></span><span class="mclose mtight">]</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord text mtight"><span class="mord cjk_fallback mtight">碱</span></span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p><strong>血液 pH 是怎么算出来的</strong>：HCO₃⁻/CO₂ 体系，pKa 6.1（开放体系）：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathrm">pH</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">6.1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1.2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">24</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">6.1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1.30</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">7.40</span></span></span></span></span></p>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>这里有个容易忽略的细节 </p></div>
+                  
+                </div>
+<p>血液是<strong>开放体系</strong>（CO₂ 随时与外界交换），它的实际缓冲能力是
+同浓度封闭体系的 <strong>5~10 倍</strong> —— 因为肺能直接排掉 CO₂。
+封闭体系的 Henderson 公式只适用于实验室里那杯缓冲液。</p>
+</blockquote>
+<p><strong>缓冲容量</strong>的定量关系（同样是分析化学给的）：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">ma</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.576</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">总</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">pH</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathrm">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">时</span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>所以想提高缓冲能力只有两条路：<strong>提高总浓度</strong>、或<strong>选对 pKa</strong>。
+血液的 β 约 25~30 mmol/(L·pH)，相当高，靠的是血红蛋白（pKa 6.8）兜底。</p>
+<p><strong>实验室里怎么选</strong>：Good 缓冲剂（Norman Good, 1966）把常用的对偶出来了。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缓冲剂</th><th>pKa</th><th>典型用途</th></tr></thead><tbody><tr><td>MES</td><td>6.15</td><td>低 pH 蛋白工作液</td></tr><tr><td>PIPES</td><td>6.80</td><td>与 pH 6.8 的酶反应</td></tr><tr><td>MOPS</td><td>7.20</td><td>膜相关实验</td></tr><tr><td><strong>HEPES</strong></td><td>7.55</td><td><strong>细胞培养最常用</strong></td></tr><tr><td>Tricine</td><td>8.15</td><td>低温 SDS-PAGE</td></tr><tr><td><strong>Tris</strong></td><td>8.07</td><td><strong>核酸缓冲，pH 8~9 的限制性内切酶</strong></td></tr><tr><td>Bicine</td><td>8.35</td><td>—</td></tr><tr><td>TAPS</td><td>8.55</td><td>高 pH</td></tr></tbody></table>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>Tris 的温度陷阱 </p></div>
+                  
+                </div>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">25℃</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.031</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">25</span><span class="mclose">)</span></span></span></span></span>。
+配成 pH 8.0 的 Tris 在 4 ℃ 会漂到 <strong>8.62</strong>，在 37 ℃ 会掉到 <strong>7.63</strong>。
+所以<strong>Tris 缓冲的酶反应不能直接在冰上和 37 ℃ 之间搬</strong>——
+冷不丁活性就没了。这不是酶坏了，是缓冲剂 pH 变了。
+完整讨论见 <a href="../无机及分析化学笔记/拓展/拓展-缓冲溶液与生物体系" class="internal">拓展-缓冲溶液与生物体系</a>。</p>
+</blockquote>
+<p>PBS（0.01 M，pH 7.4）标准配方（mmol/L）：
+NaCl 137、KCl 2.7、Na₂HPO₄ 10、KH₂PO₄ 1.8。
+<strong>注意它是磷酸盐体系</strong>，所以在有 Mg²⁺ 的反应里会沉淀（见下一节和 <a href="../无机及分析化学笔记/上课笔记/E5-配合物与配位平衡" class="internal">E5-配合物与配位平衡</a>）。</p>
+<h2 id="四生物端可电离基团--等电点-pi">四、生物端：可电离基团 → 等电点 pI<a aria-hidden="true" tabindex="-1" href="#四生物端可电离基团--等电点-pi" class="internal"></a></h2>
+<p>蛋白质和氨基酸的 pKa 就那几个可电离基团，累加出来就是 pI。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>氨基酸</th><th>pKa₁(COOH)</th><th>pKa₂(NH₃⁺)</th><th>侧链</th><th>pI</th></tr></thead><tbody><tr><td>甘氨酸</td><td>2.34</td><td>9.60</td><td>—</td><td><strong>5.97</strong></td></tr><tr><td>天冬氨酸</td><td>1.88</td><td>9.60</td><td>3.65</td><td><strong>2.77</strong></td></tr><tr><td>赖氨酸</td><td>2.18</td><td>8.95</td><td>10.53</td><td><strong>9.74</strong></td></tr><tr><td>半胱氨酸</td><td>1.96</td><td>10.28</td><td>8.18</td><td><strong>5.07</strong></td></tr><tr><td>丝氨酸</td><td>5.68</td><td>—</td><td>—</td><td>5.68</td></tr><tr><td>酪氨酸</td><td>5.66</td><td>—</td><td>10.07</td><td>5.66</td></tr></tbody></table>
+<p>蛋白质（天然蛋白质）：胃蛋白酶 ≈ 1.0、血清白蛋白 4.7、血红蛋白 6.8、
+细胞色素 c 10.0、溶菌酶 11.0、鱼精蛋白 12.0。</p>
+<p><strong>pI 怎么用</strong>（这是生物实验室里最实用的部分）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>操作</th><th>pH 怎么选</th><th>原理</th></tr></thead><tbody><tr><td>阳离子交换层析</td><td>pH &lt; pI（一般 pI − 1.5~2）</td><td>蛋白带净正电，吸附阴离子交换基</td></tr><tr><td>阴离子交换层析</td><td>pH > pI（一般 pI + 1.5~2）</td><td>蛋白带净负电</td></tr><tr><td>酸溶碱沉</td><td>pH 调到 pI 附近</td><td>净电荷为零，溶解度最低</td></tr><tr><td>等电聚焦 IEF</td><td>目标 pH 落在凝胶两端之间</td><td>蛋白在 pH = pI 处停下，分辨可达 0.01 pH 单位</td></tr><tr><td>结晶</td><td>pH 略偏 pI</td><td>净电荷低 + 浓度高</td></tr></tbody></table>
+<p><strong>血红蛋白的 Bohr 效应</strong>是这条线最漂亮的例子：氧合时 pKa 6.6，脱氧时 pKa 7.7。
+结合 O₂ 会把酸性残基的 pKa 拉低 1 个单位，于是<strong>氧合血红蛋白更亲碱、更能结合 H⁺ 和 CO₂</strong>——
+这正是组织把 CO₂ 运到肺的分子机制，也是「构象改变能改电学性质」的直接证据。</p>
+<p><strong>pH 把蛋白搞坏的边界</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>pH 区间</th><th>发生什么</th><th>可逆否</th></tr></thead><tbody><tr><td>pH 4~10</td><td>侧链可电离基团质子化/去质子化，构象松动</td><td><strong>可逆</strong>，调回去就恢复</td></tr><tr><td>pH &lt; 2</td><td>Asp/Glu 质子化、盐桥破坏</td><td>不可逆</td></tr><tr><td>pH > 12</td><td>Cys/Tyr/Ser 去质子化、二硫键断裂</td><td>不可逆</td></tr></tbody></table>
+<blockquote class="callout" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-inner"><p>实验室里最容易踩的 pH 坑 </p></div>
+                  
+                </div>
+<p><strong>等电聚焦跑完别急着去掉平衡液</strong>。载体两性电解质（两性电解质 Ampholyte）
+本身就是两性的缓冲体系，往透析袋里一装是常见起手式，
+但如果你把它直接倒进等电转的缓冲槽，电极附近会形成一个 pH 平台区，
+蛋白还没跑到就先被 pH 挤到别处了。</p>
+</blockquote>
+<h2 id="五从化学到生理ph-出问题会怎样">五、从化学到生理：pH 出问题会怎样<a aria-hidden="true" tabindex="-1" href="#五从化学到生理ph-出问题会怎样" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>场景</th><th>pH</th><th>后果</th><th>涉及笔记</th></tr></thead><tbody><tr><td>口腔（吃糖后产酸）</td><td>降到 <strong>4.5~5.5</strong></td><td>牙釉质羟基磷灰石溶解 → 龋齿</td><td><a href="../无机及分析化学笔记/拓展/拓展-生物矿化与沉淀平衡" class="internal">拓展-生物矿化与沉淀平衡</a></td></tr><tr><td>尿液偏酸</td><td>&lt; 6.0</td><td>草酸钙/磷酸钙析出 → 结石</td><td><a href="../无机及分析化学笔记/拓展/拓展-生物矿化与沉淀平衡" class="internal">拓展-生物矿化与沉淀平衡</a></td></tr><tr><td>溶酶体</td><td><strong>5.0</strong></td><td>酸性水解酶活性最高，对外不漏</td><td><a href="../基本生物学笔记/上课笔记/细胞结构与细胞通讯" class="internal">细胞结构与细胞通讯</a></td></tr><tr><td>正常细胞内</td><td><strong>6.8~7.2</strong></td><td>磷酸盐体系主导</td><td><a href="../无机及分析化学笔记/拓展/拓展-缓冲溶液与生物体系" class="internal">拓展-缓冲溶液与生物体系</a></td></tr><tr><td>血液</td><td>7.35~7.45</td><td>HCO₃⁻/CO₂ + 血红蛋白</td><td><a href="../无机及分析化学笔记/拓展/拓展-生物电化学与膜电位" class="internal">拓展-生物电化学与膜电位</a></td></tr><tr><td>发酵罐（常规）</td><td>恒 pH <strong>7.0</strong></td><td>报废物/菌体活性平衡</td><td><a href="../基本生物学笔记/上课笔记/生命的化学基础" class="internal">生命的化学基础</a></td></tr><tr><td>乳酸发酵</td><td>自然降到 <strong>&lt; 4</strong></td><td>产酸菌受抑 → 自然终止</td><td><a href="../基本生物学笔记/上课笔记/生命的化学基础" class="internal">生命的化学基础</a></td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>为什么磷酸盐的 pKa₂ = 7.21 这么重要 </p></div>
+                  
+                </div>
+<p>因为它恰好落在生理 pH 7.4 附近。pH 7.4 时
+δ(H₂PO₄⁻) ≈ 0.39、δ(HPO₄²⁻) ≈ 0.61 ——
+两者都在百分之几十的量级，<strong>这是一个相当”宽”的缓冲对</strong>，
+意味着细胞用很小的浓度变化就能扛住相当大的 pH 扰动。
+反过来看 HCO₃⁻/CO₂ 的 pKa 6.1，离 7.4 差 1.3，缓冲能力更依赖血红蛋白补位。</p>
+</blockquote>
+<h2 id="六速查同一件事的三种说法">六、速查：同一件事的三种说法<a aria-hidden="true" tabindex="-1" href="#六速查同一件事的三种说法" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>你要干的事</th><th>分析化学</th><th>有机化学</th><th>生物学</th></tr></thead><tbody><tr><td>判断谁先反应</td><td>pKa 小的是酸，先质子化</td><td>pKa 小的先成盐</td><td>侧链 pKa 决定等电点</td></tr><tr><td>让反应向右</td><td>提高底物浓度或降低产物</td><td>加碱夺质子 / 移走产物</td><td>维持 pH 在酶的 pI 附近</td></tr><tr><td>提纯蛋白质</td><td>—</td><td>—</td><td>pH 跨 pI + 离子交换层析</td></tr><tr><td>灭菌消毒</td><td>Kw 随温度升</td><td>—</td><td>高温变性蛋白质（25~40 ℃ 已开始）</td></tr></tbody></table>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li>分析化学：<a href="../无机及分析化学笔记/上课笔记/E2-酸碱平衡" class="internal">E2-酸碱平衡</a>、<a href="../无机及分析化学笔记/拓展/拓展-缓冲溶液与生物体系" class="internal">拓展-缓冲溶液与生物体系</a>、<a href="../无机及分析化学笔记/拓展/拓展-蛋白质化学与酸碱平衡" class="internal">拓展-蛋白质化学与酸碱平衡</a>、
+<a href="../无机及分析化学笔记/上课笔记/E5-配合物与配位平衡" class="internal">E5-配合物与配位平衡</a>、<a href="../无机及分析化学笔记/拓展/拓展-生物矿化与沉淀平衡" class="internal">拓展-生物矿化与沉淀平衡</a></li>
+<li>有机化学：<a href="../有机化学笔记/知识点/反应类型/酸碱反应" class="internal">酸碱反应</a>、<a href="../有机化学笔记/知识点/反应特点/控pH反应" class="internal">控pH反应</a>、<a href="../有机化学笔记/上课笔记/羧酸及其衍生物" class="internal">羧酸及其衍生物</a>、<a href="../有机化学笔记/上课笔记/生物大分子" class="internal">生物大分子</a></li>
+<li>生物学：<a href="../基本生物学笔记/上课笔记/生命的化学基础" class="internal">生命的化学基础</a>、<a href="../基本生物学笔记/上课笔记/细胞结构与细胞通讯" class="internal">细胞结构与细胞通讯</a>、<a href="../基本生物学笔记/知识点/大笔记" class="internal">大笔记</a>、<a href="../基本生物学笔记/上课笔记/细胞代谢" class="internal">细胞代谢</a></li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><div id="markmap-container" class="markmap-container"></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>

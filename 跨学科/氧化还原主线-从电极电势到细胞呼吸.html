@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html><head><title>氧化还原主线：从电极电势到细胞呼吸</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="氧化还原主线：从电极电势到细胞呼吸"/><meta property="og:description" content="氧化还原主线：从电极电势到细胞呼吸 这篇在解决什么 「氧化还原」在分析化学里是一堆电势数字，在有机化学里是一串氧化态箭头， 在生物学里是 NADH 和氧气的电子传递链。 三者其实是同一件事：某对物种之间的电子电势差 ΔE， 乘以转移电子数 n，得到自由能变化 ΔG = −nFΔE。 这篇把三个尺度对齐，让你看到一个 ΔE 值怎么直接变成 ATP 数量。 一、分析化学给的尺子：电势与 ΔG 标准电极电势 φ°（25 ℃，标准状态 1 mol/L、100 kPa）： 电对φ° / VLi⁺/Li−3."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="氧化还原主线：从电极电势到细胞呼吸 这篇在解决什么 「氧化还原」在分析化学里是一堆电势数字，在有机化学里是一串氧化态箭头， 在生物学里是 NADH 和氧气的电子传递链。 三者其实是同一件事：某对物种之间的电子电势差 ΔE， 乘以转移电子数 n，得到自由能变化 ΔG = −nFΔE。 这篇把三个尺度对齐，让你看到一个 ΔE 值怎么直接变成 ATP 数量。 一、分析化学给的尺子：电势与 ΔG 标准电极电势 φ°（25 ℃，标准状态 1 mol/L、100 kPa）： 电对φ° / VLi⁺/Li−3."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="跨学科/氧化还原主线-从电极电势到细胞呼吸"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#氧化还原主线从电极电势到细胞呼吸" data-for="氧化还原主线从电极电势到细胞呼吸">氧化还原主线：从电极电势到细胞呼吸</a></li><li class="depth-1"><a href="#一分析化学给的尺子电势与-δg" data-for="一分析化学给的尺子电势与-δg">一、分析化学给的尺子：电势与 ΔG</a></li><li class="depth-1"><a href="#二有机化学给的地图氧化态就是电子账本" data-for="二有机化学给的地图氧化态就是电子账本">二、有机化学给的地图：氧化态就是电子账本</a></li><li class="depth-1"><a href="#三生物端的第一层修正ph-7-的电势表" data-for="三生物端的第一层修正ph-7-的电势表">三、生物端的第一层修正：pH 7 的电势表</a></li><li class="depth-1"><a href="#四把-δe-折算成-atp" data-for="四把-δe-折算成-atp">四、把 ΔE 折算成 ATP</a></li><li class="depth-1"><a href="#五生物端的第二层把电子交给谁是被调控的" data-for="五生物端的第二层把电子交给谁是被调控的">五、生物端的第二层：把电子交给谁，是被调控的</a></li><li class="depth-1"><a href="#六回到实验室电化学怎么用起来" data-for="六回到实验室电化学怎么用起来">六、回到实验室：电化学怎么用起来</a></li><li class="depth-1"><a href="#七速查同一件事的三种说法" data-for="七速查同一件事的三种说法">七、速查：同一件事的三种说法</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">氧化还原主线：从电极电势到细胞呼吸</h1><p class="content-meta">Oct 09, 2026, 10 min read</p></div></div><article class="popover-hint"><h1 id="氧化还原主线从电极电势到细胞呼吸">氧化还原主线：从电极电势到细胞呼吸<a aria-hidden="true" tabindex="-1" href="#氧化还原主线从电极电势到细胞呼吸" class="internal"></a></h1>
+<blockquote class="callout" data-callout="abstract">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div>
+                  <div class="callout-title-inner"><p>这篇在解决什么 </p></div>
+                  
+                </div>
+<p>「氧化还原」在分析化学里是一堆电势数字，在有机化学里是一串氧化态箭头，
+在生物学里是 NADH 和氧气的电子传递链。
+三者其实是<strong>同一件事</strong>：某对物种之间的电子电势差 ΔE，
+乘以转移电子数 n，得到自由能变化 ΔG = −nFΔE。
+这篇把三个尺度对齐，让你看到一个 ΔE 值怎么直接变成 ATP 数量。</p>
+</blockquote>
+<h2 id="一分析化学给的尺子电势与-δg">一、分析化学给的尺子：电势与 ΔG<a aria-hidden="true" tabindex="-1" href="#一分析化学给的尺子电势与-δg" class="internal"></a></h2>
+<p>标准电极电势 φ°（25 ℃，标准状态 1 mol/L、100 kPa）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>电对</th><th>φ° / V</th></tr></thead><tbody><tr><td>Li⁺/Li</td><td>−3.040</td></tr><tr><td>Zn²⁺/Zn</td><td>−0.762</td></tr><tr><td>Fe²⁺/Fe</td><td>−0.447</td></tr><tr><td>H⁺/H₂（SHE 定义为 0）</td><td>0.000</td></tr><tr><td>Cu²⁺/Cu</td><td>+0.342</td></tr><tr><td>Fe³⁺/Fe²⁺</td><td>+0.771</td></tr><tr><td>MnO₄⁻/Mn²⁺</td><td>+1.507</td></tr><tr><td>F₂/F⁻</td><td>+2.866</td></tr></tbody></table>
+<p>能斯特方程（25 ℃）：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9658em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">φ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">⊖</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.53em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0.0592</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight"><span class="mord mathrm mtight">Red</span></span><span class="mclose mtight">]</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight"><span class="mord mathrm mtight">Ox</span></span><span class="mclose mtight">]</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">96485</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">C/mol</span></span></span></span></span></span></p>
+<p>两个容易丢分的地方：</p>
+<ul>
+<li><strong>φ 是强度量，不可加</strong>；电动势 E 可以加（把半反应拼起来，φ 不变）。</li>
+<li>求平衡常数用 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1343em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4483em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0.0592</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">⊖</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> —— 这里的 n 是<strong>总转移电子数</strong>，
+和算 ΔG 时那个 n 是同一个数。</li>
+</ul>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>一条贯穿三门课的换算 </p></div>
+                  
+                </div>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:1em;"></span><span class="mord text"><span class="mord cjk_fallback">（伏特</span><span class="mord"> → </span><span class="mord cjk_fallback">千焦）</span></span></span></span></span></span>
+记住 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">96485</span></span></span></span></span>、<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7713em;"></span><span class="mord">1</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">mol</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathrm">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">96.5</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ</span></span></span></span></span></span>。
+生物体系的标准是 <strong>ΔG_ATP ≈ +30.5 kJ/mol</strong>，
+有了这两个数，任何 ΔE 都能立刻折算成「够做几个 ATP」。</p>
+</blockquote>
+<h2 id="二有机化学给的地图氧化态就是电子账本">二、有机化学给的地图：氧化态就是电子账本<a aria-hidden="true" tabindex="-1" href="#二有机化学给的地图氧化态就是电子账本" class="internal"></a></h2>
+<p>有机化学做的是<strong>把分子里的每个碳按氧化数记账</strong>，反应就是账目变动。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>官能团</th><th>碳的氧化态</th></tr></thead><tbody><tr><td>−CH₃</td><td>−3</td></tr><tr><td>−CH₂OH</td><td>−1</td></tr><tr><td>−CHO</td><td>+1</td></tr><tr><td>−COOH</td><td>+3</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>氧化态最大的用处：预测氧化剂打到哪 </p></div>
+                  
+                </div>
+<p>因为「氧化」就是往高氧化态走，<strong>能被氧化的位置一定是电子密度高的地方</strong>。
+烯烃双键碳（各 −1）比羰基碳（+1）电子密度高，所以 KMnO₄ 优先攻击双键；
+苯环虽然形式上也是不饱和，但芳环稳定、活化能高，
+所以温和条件下苯环不被氧化，<strong>侧链才被氧化</strong>（见 <a href="../有机化学笔记/知识点/反应类型/氧化" class="internal">氧化</a>）。</p>
+</blockquote>
+<p>氧化剂的三档划分（选错了就过度氧化）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>档次</th><th>试剂</th><th>用途</th></tr></thead><tbody><tr><td>温和、选择性</td><td>PCC / Swern / DMP / mCPBA / OsO₄</td><td>醇 → 醛不伤双键</td></tr><tr><td>强氧化</td><td>KMnO₄ / K₂Cr₂O₇ / Jones / HNO₃</td><td>醇 → 酸、二醇 → 断链</td></tr><tr><td>鉴别型</td><td>Tollens / Fehling / Benedict</td><td>只氧化醛和 α-羟基酮</td></tr></tbody></table>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>臭氧化后处理决定产物，别记混 </p></div>
+                  
+                </div>
+<p>还原性处理（Zn/H₂O）→ 醛 + 酮；
+氧化性处理（H₂O₂）→ 羧酸；
+NaBH₄ → 醇。
+这是有机里最典型的「同一个中间体、不同后处理、不同产物」。
+写成流程图反而更容易乱，直接记住三行对照更稳（见 <a href="../有机化学笔记/知识点/反应类型/氧化" class="internal">氧化</a> 的第三节）。</p>
+</blockquote>
+<p>还原端的核心是<strong>氢化剂的分工</strong>（见 <a href="../有机化学笔记/知识点/反应类型/还原" class="internal">还原</a>）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>试剂</th><th>能还原什么</th><th>不能还原什么</th></tr></thead><tbody><tr><td>H₂ / 催化</td><td>烯、炔、芳香环（后两者条件苛刻）</td><td>羧酸几乎不反应</td></tr><tr><td>NaBH₄</td><td>醛、酮</td><td>羧酸、酯、酰胺</td></tr><tr><td>LiAlH₄</td><td>醛酮、羧酸、酯、酰胺、腈（全能）</td><td>—</td></tr><tr><td>Lindlar</td><td>炔 → <strong>顺式</strong>烯</td><td>止停于烯</td></tr></tbody></table>
+<h2 id="三生物端的第一层修正ph-7-的电势表">三、生物端的第一层修正：pH 7 的电势表<a aria-hidden="true" tabindex="-1" href="#三生物端的第一层修正ph-7-的电势表" class="internal"></a></h2>
+<p>生物学里电势几乎都在 pH 7 下测，所以要用<strong>生化标准电势</strong>：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1369em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">φ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9425em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mbin mtight">⊖</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9658em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">φ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">⊖</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0.0592</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3419em;"><span style="top:-2.55em;margin-left:-0.0637em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7027em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>也就是<strong>把质子从标准状态”扣掉”</strong>，让反应写成不显式含 H⁺ 的形式。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>电对</th><th>φ° / V</th><th>φ°′ (pH 7) / V</th><th>方向</th></tr></thead><tbody><tr><td>H⁺/H₂</td><td>0.000</td><td><strong>−0.414</strong></td><td>细胞里氢气是还原剂</td></tr><tr><td>NAD⁺/NADH</td><td>−0.106</td><td><strong>−0.320</strong></td><td>主要电子供体</td></tr><tr><td>FAD/FADH₂</td><td>−0.031</td><td><strong>−0.219</strong></td><td>次要供体</td></tr><tr><td>GSSG/2GSH</td><td>−0.040</td><td>−0.240</td><td>谷胱甘肽氧化还原对</td></tr><tr><td>Cyt c</td><td>+0.254</td><td>+0.254</td><td>血红素铁（不受 pH 影响）</td></tr><tr><td>O₂/H₂O</td><td>+1.229</td><td><strong>+0.815</strong></td><td>最终电子受体</td></tr></tbody></table>
+<blockquote class="callout" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-inner"><p>为什么要引入 φ°′ </p></div>
+                  
+                </div>
+<p>因为 H⁺ 出现在半反应里，pH 一变电势就变，<strong>不同实验的 pH 不同就没法比</strong>。
+φ°′ 把 pH 固定在 7，等于把所有数据搬到同一张桌子上。
+细胞质里 Eh 大约 −240<del>−270 mV，线粒体更负（−280</del>−320 mV），
+这就是「线粒体内还原性更强」的定量表述（见 <a href="../无机及分析化学笔记/拓展/拓展-生物电化学与膜电位" class="internal">拓展-生物电化学与膜电位</a>）。</p>
+</blockquote>
+<h2 id="四把-δe-折算成-atp">四、把 ΔE 折算成 ATP<a aria-hidden="true" tabindex="-1" href="#四把-δe-折算成-atp" class="internal"></a></h2>
+<p>呼吸链电子传递：NADH → FMN → CoQ → Cyt b → Cyt c₁ → Cyt c → Cyt aa₃ → O₂。</p>
+<p>以 NADH 氧化到氧为例：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">0.815</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">0.320</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1.135</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span></span></span></span></span>
+<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">96485</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1.135</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord">219</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ/mol</span></span></span></span></span></span></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">219/30.5</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">7.2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2.5</span><span class="mspace"> </span><span class="mord text"><span class="mord cjk_fallback">个</span><span class="mord"> ATP</span><span class="mord cjk_fallback">（用</span><span class="mord"> P/O </span><span class="mord cjk_fallback">比）</span></span></span></span></span></span></p>
+<blockquote class="callout" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div>
+                  <div class="callout-title-inner"><p>为什么算出来是 2.5 而不是 7 </p></div>
+                  
+                </div>
+<p>因为 ΔG 是热力学上界，实际产 ATP 还要扣掉把 ADP 运进线粒体、
+把 ATP 运出来的代价，<strong>真正做功的只有约 1/3</strong>。
+分子数也对得上：电子从 NADH 走到 O₂ 一共跨了约 10 个氧化还原步骤，
+每步推动一次质子泵，约 4 H⁺/ATP，最终 P/O ≈ 2.5。</p>
+</blockquote>
+<p>对上账（见 <a href="../基本生物学笔记/上课笔记/细胞代谢" class="internal">细胞代谢</a>）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>全流程（每分子葡萄糖）</th><th>产量</th></tr></thead><tbody><tr><td>糖酵解</td><td>2 ATP + 2 NADH</td></tr><tr><td>丙酮酸氧化脱羧</td><td>2 NADH</td></tr><tr><td>Krebs 循环（两轮）</td><td>6 NADH + 2 FADH₂ + 2 ATP</td></tr><tr><td><strong>合计</strong></td><td><strong>10 NADH + 2 FADH₂ + 4 ATP → 约 30~32 ATP</strong></td></tr></tbody></table>
+<p><strong>这就是「一分子葡萄糖 ≈ 30 ATP」这个数字的来源</strong> —— 它是化学，不是估的。</p>
+<h2 id="五生物端的第二层把电子交给谁是被调控的">五、生物端的第二层：把电子交给谁，是被调控的<a aria-hidden="true" tabindex="-1" href="#五生物端的第二层把电子交给谁是被调控的" class="internal"></a></h2>
+<p>把 ΔE 理解成”钱”之后，细胞做的事就是<strong>决定这笔钱花在哪儿</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>要点</th><th>内容</th></tr></thead><tbody><tr><td>谷胱甘肽</td><td>GSH 1<del>10 mmol/L，GSSG 1</del>100 μmol/L，<strong>比值 30~100</strong></td></tr><tr><td>ROS 半衰期</td><td>O₂•⁻ 1 μs → H₂O₂ 1 ms → HO• <strong>1 ns</strong></td></tr><tr><td>Fenton</td><td>Fe²⁺ + H₂O₂ → Fe³⁺ + HO• + OH⁻</td></tr><tr><td>NO + O₂•⁻</td><td>→ ONOO⁻，速率常数 <strong>6.7×10⁹ L/(mol·s)</strong>，极快</td></tr></tbody></table>
+<blockquote class="callout" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-inner"><p>Eh 的阈值决定细胞是&quot;适应&quot;还是&quot;死&quot; </p></div>
+                  
+                </div>
+<p>细胞质 Eh 从 −240 mV 往上抬，等于把氧化压力当信号读：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Eh / mV</th><th>细胞反应</th></tr></thead><tbody><tr><td>−240 ~ −270</td><td>正常</td></tr><tr><td>−220 ~ −240</td><td>Nrf2 激活，进入抗氧化应激应答</td></tr><tr><td>−200 ~ −220</td><td>周期阻滞</td></tr><tr><td>−180 ~ −200</td><td>凋亡</td></tr><tr><td>> −180</td><td>坏死</td></tr></tbody></table>
+<p>也就是说「氧化还原平衡」不是”越平衡越好”，而是<strong>有一个窗口，越过阈值后果不可逆</strong>。
+完整通路见 <a href="../无机及分析化学笔记/拓展/拓展-氧化还原与细胞信号转导" class="internal">拓展-氧化还原与细胞信号转导</a>。</p>
+</blockquote>
+<p>半胱氨酸的四步氧化也是同一条逻辑：
+–SH → –SOH（<strong>可逆，这是信号</strong>）→ –SO₂H（部分可逆）→ –SO₃H（<strong>不可逆，损伤</strong>）。
+Keap1-Nrf2 通路正是靠”Cys151 被氧化”这个可逆步骤当开关的。</p>
+<h2 id="六回到实验室电化学怎么用起来">六、回到实验室：电化学怎么用起来<a aria-hidden="true" tabindex="-1" href="#六回到实验室电化学怎么用起来" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>场景</th><th>做法</th><th>电势数字</th></tr></thead><tbody><tr><td>测葡萄糖</td><td>GOD 葡萄糖传感器</td><td>H₂O₂→O₂+2H⁺+2e⁻ <strong>+0.682 V</strong></td></tr><tr><td>测溶氧</td><td>Clark 氧电极</td><td>O₂+4H⁺+4e⁻ <strong>+1.229 V</strong></td></tr><tr><td>测 pH</td><td>玻璃电极</td><td><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">膜</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0.0592</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">内</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">外</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></td></tr><tr><td>产电</td><td>微生物燃料电池</td><td>E = 1.229 − (−0.414) = <strong>1.643 V</strong></td></tr><tr><td>测生物膜活性</td><td>电化学阻抗</td><td>—</td></tr></tbody></table>
+<p><strong>燃料电池那 1.643 V 是个很好的自检题</strong>：把它代进 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></span>，
+再除以 30.5，就知道每摩尔葡萄糖理论上能出多少 ATP，
+和第��节算的 30~32 对得上—— 两条完全不同的路，同一个答案。</p>
+<p>材料腐蚀的电势也在这张表上（vs SCE）：
+Ti 合金 −0.1<del>−0.3 V、316L −0.2</del>−0.4 V、Co-Cr −0.3<del>−0.5 V、纯铁 −0.6</del>−0.8 V。
+<strong>电位越负越容易腐蚀</strong>，所以纯铁最危险（见 <a href="../无机及分析化学笔记/拓展/拓展-生物电化学与膜电位" class="internal">拓展-生物电化学与膜电位</a>）。</p>
+<h2 id="七速查同一件事的三种说法">七、速查：同一件事的三种说法<a aria-hidden="true" tabindex="-1" href="#七速查同一件事的三种说法" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>你要干的事</th><th>分析化学</th><th>有机化学</th><th>生物学</th></tr></thead><tbody><tr><td>判断谁氧化谁</td><td>φ° 大的一方做氧化剂</td><td>高氧化态产物</td><td>Eh 高的一方做电子受体</td></tr><tr><td>算能量</td><td>ΔG = −nFΔE</td><td>—</td><td>折算成 ATP 数</td></tr><tr><td>控制反应</td><td>控 pH、控配位（条件电势）</td><td>控温、控当量、控试剂选择</td><td>控 Eh、控 ROS 清除</td></tr><tr><td>避免过度反应</td><td>定量控制</td><td>选择性试剂（PCC）</td><td>时序：信号 vs 损伤</td></tr></tbody></table>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li>分析化学：<a href="../无机及分析化学笔记/上课笔记/E4-氧化还原平衡与电极电势" class="internal">E4-氧化还原平衡与电极电势</a>、<a href="../无机及分析化学笔记/拓展/拓展-生物电化学与膜电位" class="internal">拓展-生物电化学与膜电位</a>、
+<a href="../无机及分析化学笔记/拓展/拓展-氧化还原与细胞信号转导" class="internal">拓展-氧化还原与细胞信号转导</a>、<a href="../无机及分析化学笔记/拓展/拓展-生物矿化与沉淀平衡" class="internal">拓展-生物矿化与沉淀平衡</a></li>
+<li>有机化学：<a href="../有机化学笔记/知识点/反应类型/氧化" class="internal">氧化</a>、<a href="../有机化学笔记/知识点/反应类型/还原" class="internal">还原</a>、<a href="../有机化学笔记/知识点/反应类型/加成" class="internal">加成</a>、<a href="../有机化学笔记/上课笔记/羧酸及其衍生物" class="internal">羧酸及其衍生物</a></li>
+<li>生物学：<a href="../基本生物学笔记/上课笔记/细胞代谢" class="internal">细胞代谢</a>、<a href="../基本生物学笔记/上课笔记/生命的化学基础" class="internal">生命的化学基础</a>、<a href="../基本生物学笔记/知识点/大笔记" class="internal">大笔记</a></li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><div id="markmap-container" class="markmap-container"></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>
