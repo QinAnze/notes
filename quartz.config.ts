@@ -82,6 +82,10 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         enableRSS: true,
       }),
+      // 把 static/molecules.json 发到 public/static/，侧栏「结构演示」组件要 fetch 它。
+      // ⚠️ 上游的 Plugin.Static 只从 quartz/static/ 复制，
+      // 放在项目根的 static/ 必须靠这个 emitter 才能进 build 产物。
+      Plugin.MoleculeData(),
       Plugin.Assets(),
       Plugin.Static(),
     ],
