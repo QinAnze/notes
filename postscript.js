@@ -43200,12 +43200,9 @@ function updateModeButtons() {
     }
   });
 }
-function startTimer() {
-  if (timerState.isRunning)
+function startTicking() {
+  if (timerInterval !== null)
     return;
-  timerState.isRunning = true;
-  updateDisplay();
-  saveState();
   timerInterval = window.setInterval(() => {
     if (timerState.remaining > 0) {
       timerState.remaining--;
@@ -43215,6 +43212,14 @@ function startTimer() {
       finishTimer();
     }
   }, 1e3);
+}
+function startTimer() {
+  if (timerState.isRunning)
+    return;
+  timerState.isRunning = true;
+  updateDisplay();
+  saveState();
+  startTicking();
 }
 function pauseTimer() {
   timerState.isRunning = false;
@@ -43337,7 +43342,12 @@ function initTimer() {
     timerState.remaining = Math.max(0, timerState.remaining - elapsed);
     updateDisplay();
     saveState();
-    startTimer();
+    startTicking();
+    if (startPauseBtn) {
+      startPauseBtn.textContent = "\u6682\u505C";
+      startPauseBtn.classList.remove("start");
+      startPauseBtn.classList.add("pause");
+    }
   }
 }
 document.addEventListener("nav", () => {
