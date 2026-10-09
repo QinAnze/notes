@@ -124,12 +124,8 @@ function updateModeButtons() {
   })
 }
 
-function startTimer() {
-  if (timerState.isRunning) return
-
-  timerState.isRunning = true
-  updateDisplay()
-  saveState()
+function startTicking() {
+  if (timerInterval !== null) return
 
   timerInterval = window.setInterval(() => {
     if (timerState.remaining > 0) {
@@ -140,6 +136,15 @@ function startTimer() {
       finishTimer()
     }
   }, 1000)
+}
+
+function startTimer() {
+  if (timerState.isRunning) return
+
+  timerState.isRunning = true
+  updateDisplay()
+  saveState()
+  startTicking()
 }
 
 function pauseTimer() {
@@ -278,12 +283,24 @@ function initTimer() {
   updateDisplay()
 
   if (timerState.isRunning) {
+    // 上次离开页面时还在跑：先把离开这段时间扣掉，再把计时器重新拉起来。
+    // ⚠️ 这里必须调 startTicking() 而不是 startTimer() ——
+    // 从 localStorage 恢复出来的 isRunning 本来就是 true，
+    // startTimer() 开头 `if (timerState.isRunning) return` 会直接跳过，
+    // 结果就是「数字停住不倒数」（2026-10-09 修的就是这个）。
     const now = Date.now()
     const elapsed = Math.floor((now - (savedState?.timestamp || now)) / 1000)
     timerState.remaining = Math.max(0, timerState.remaining - elapsed)
     updateDisplay()
     saveState()
-    startTimer()
+    startTicking()
+
+    // 按钮文案也要跟着恢复，否则显示"开始"但实际在跑
+    if (startPauseBtn) {
+      startPauseBtn.textContent = '暂停'
+      startPauseBtn.classList.remove('start')
+      startPauseBtn.classList.add('pause')
+    }
   }
 }
 
