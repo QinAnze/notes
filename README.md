@@ -108,6 +108,22 @@ npm run format             # Prettier 格式化
 
 **颜色框里只放文字，不要包表格。** 表格一律拆到框外紧跟着，
 否则表格被压在彩色块的 padding 里，窄了会错行。
+**超长的「比大小」序列也不要放框内** —— 5 项以上的 `$$A > B > C > ...$$`
+横向一定溢出，改成竖排表格（「梯队 | 基团」两列）提到框外。
+
+### 画图用 mermaid，不要用 code fence 拼 ASCII
+
+Quartz v4 **内置** mermaid 支持，**不需要 npm 装任何东西、不用改配置**
+（`quartz/plugins/transformers/ofm.ts` 的 `mermaid` 选项默认 `true`，
+运行时从 `cdn.jsdelivr.net` 动态 import，渲染类名 `.mermaid`）。
+
+```mermaid
+flowchart TB
+    R["反应物"] -->|"Ea 低 · 快"| TS1["过渡态 1（低能）"]
+```
+
+- 能量图、反应机理流程、层级关系一律用 ` ```mermaid ` 围栏。
+- code fence 只留给真正的代码和结构化文本（JSON 等），不当画板用。
 
 可用类型由 `quartz/plugins/transformers/ofm.ts` 的 `calloutMapping` 决定，
 **没有 `danger`**（有 `bug` 和 `failure`）。
