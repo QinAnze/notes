@@ -22,6 +22,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
+    // 结构演示：只在当前这篇笔记里挑可演示的结构（靠 location + contentIndex 匹配），
+    // 匹配不到就整块隐藏。用 DesktopOnly 包住 —— 移动端加载 RDKit 的 WASM 太重。
+    // 视觉与右栏的图谱/思维导图一致：同样的边框圆角、同样的透明背景。
+    Component.DesktopOnly(Component.MoleculeViewer()),
   ],
   // 关系图谱在上、思维导图在下。侧栏可滚动由 custom.scss 处理
   // （两个加起来约 1000px，会超过一屏）。

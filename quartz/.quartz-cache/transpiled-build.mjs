@@ -1,9 +1,9 @@
-var __defProp=Object.defineProperty;var __name=(target,value)=>__defProp(target,"name",{value,configurable:!0});import sourceMapSupport from"source-map-support";import path12 from"path";import chalk from"chalk";import pretty from"pretty-time";var PerfTimer=class{static{__name(this,"PerfTimer")}evts;constructor(){this.evts={},this.addEvent("start")}addEvent(evtName){this.evts[evtName]=process.hrtime()}timeSince(evtName){return chalk.yellow(pretty(process.hrtime(this.evts[evtName??"start"])))}};import{rimraf}from"rimraf";import{isGitIgnored}from"globby";import chalk3 from"chalk";import esbuild from"esbuild";import remarkParse from"remark-parse";import remarkRehype from"remark-rehype";import{unified}from"unified";import{read}from"to-vfile";import{slug}from"github-slugger";var QUARTZ="quartz";function slugifyFilePath(fp,excludeExt){fp=_stripSlashes(fp);let ext=_getFileExtension(fp),withoutFileExt=fp.replace(new RegExp(ext+"$"),"");(excludeExt||[".md",".html",void 0].includes(ext))&&(ext="");let slug2=withoutFileExt.split("/").map(segment=>segment.replace(/\s/g,"-")).join("/").replace(/\/$/,"");return _endsWith(slug2,"_index")&&(slug2=slug2.replace(/_index$/,"index")),slug2+ext}__name(slugifyFilePath,"slugifyFilePath");function simplifySlug(fp){return _stripSlashes(_trimSuffix(fp,"index"),!0)}__name(simplifySlug,"simplifySlug");function transformInternalLink(link){let[fplike,anchor]=splitAnchor(decodeURI(link)),folderPath=_isFolderPath(fplike),segments=fplike.split("/").filter(x=>x.length>0),prefix=segments.filter(_isRelativeSegment).join("/"),fp=segments.filter(seg=>!_isRelativeSegment(seg)&&seg!=="").join("/"),simpleSlug=simplifySlug(slugifyFilePath(fp)),joined=joinSegments(_stripSlashes(prefix),_stripSlashes(simpleSlug)),trail=folderPath?"/":"";return _addRelativeToStart(joined)+trail+anchor}__name(transformInternalLink,"transformInternalLink");function pathToRoot(slug2){let rootPath=slug2.split("/").filter(x=>x!=="").slice(0,-1).map(_=>"..").join("/");return rootPath.length===0&&(rootPath="."),rootPath}__name(pathToRoot,"pathToRoot");function resolveRelative(current,target){return joinSegments(pathToRoot(current),simplifySlug(target))}__name(resolveRelative,"resolveRelative");function splitAnchor(link){let[fp,anchor]=link.split("#",2);return anchor=anchor===void 0?"":"#"+slugAnchor(anchor),[fp,anchor]}__name(splitAnchor,"splitAnchor");function slugAnchor(anchor){return slug(anchor)}__name(slugAnchor,"slugAnchor");function slugTag(tag){return tag.split("/").map(tagSegment=>slug(tagSegment)).join("/")}__name(slugTag,"slugTag");function joinSegments(...args){return args.filter(segment=>segment!=="").join("/")}__name(joinSegments,"joinSegments");function getAllSegmentPrefixes(tags){let segments=tags.split("/"),results=[];for(let i=0;i<segments.length;i++)results.push(segments.slice(0,i+1).join("/"));return results}__name(getAllSegmentPrefixes,"getAllSegmentPrefixes");function transformLink(src,target,opts){let targetSlug=transformInternalLink(target);if(opts.strategy==="relative")return targetSlug;{let folderTail=_isFolderPath(targetSlug)?"/":"",canonicalSlug=_stripSlashes(targetSlug.slice(1)),[targetCanonical,targetAnchor]=splitAnchor(canonicalSlug);if(opts.strategy==="shortest"){let matchingFileNames=opts.allSlugs.filter(slug2=>{let fileName=slug2.split("/").at(-1);return targetCanonical===fileName});if(matchingFileNames.length===1){let targetSlug2=matchingFileNames[0];return resolveRelative(src,targetSlug2)+targetAnchor}}return joinSegments(pathToRoot(src),canonicalSlug)+folderTail}}__name(transformLink,"transformLink");function _isFolderPath(fplike){return fplike.endsWith("/")||_endsWith(fplike,"index")||_endsWith(fplike,"index.md")||_endsWith(fplike,"index.html")}__name(_isFolderPath,"_isFolderPath");function _endsWith(s,suffix){return s===suffix||s.endsWith("/"+suffix)}__name(_endsWith,"_endsWith");function _trimSuffix(s,suffix){return _endsWith(s,suffix)&&(s=s.slice(0,-suffix.length)),s}__name(_trimSuffix,"_trimSuffix");function _getFileExtension(s){return s.match(/\.[A-Za-z0-9]+$/)?.[0]}__name(_getFileExtension,"_getFileExtension");function _isRelativeSegment(s){return/^\.{0,2}$/.test(s)}__name(_isRelativeSegment,"_isRelativeSegment");function _stripSlashes(s,onlyStripPrefix){return s.startsWith("/")&&(s=s.substring(1)),!onlyStripPrefix&&s.endsWith("/")&&(s=s.slice(0,-1)),s}__name(_stripSlashes,"_stripSlashes");function _addRelativeToStart(s){return s===""&&(s="."),s.startsWith(".")||(s=joinSegments(".",s)),s}__name(_addRelativeToStart,"_addRelativeToStart");import path from"path";import workerpool,{Promise as WorkerPromise}from"workerpool";import{Spinner}from"cli-spinner";var QuartzLogger=class{static{__name(this,"QuartzLogger")}verbose;spinner;constructor(verbose){this.verbose=verbose}start(text){this.verbose?console.log(text):(this.spinner=new Spinner(`%s ${text}`),this.spinner.setSpinnerString(18),this.spinner.start())}end(text){this.verbose||this.spinner.stop(!0),text&&console.log(text)}};import chalk2 from"chalk";import process2 from"process";import{isMainThread}from"workerpool";var rootFile=/.*at file:/;function trace(msg,err){let stack=err.stack,lines=[];if(lines.push(""),lines.push(`
+var __defProp=Object.defineProperty;var __name=(target,value)=>__defProp(target,"name",{value,configurable:!0});import sourceMapSupport from"source-map-support";import path13 from"path";import chalk from"chalk";import pretty from"pretty-time";var PerfTimer=class{static{__name(this,"PerfTimer")}evts;constructor(){this.evts={},this.addEvent("start")}addEvent(evtName){this.evts[evtName]=process.hrtime()}timeSince(evtName){return chalk.yellow(pretty(process.hrtime(this.evts[evtName??"start"])))}};import{rimraf}from"rimraf";import{isGitIgnored}from"globby";import chalk3 from"chalk";import esbuild from"esbuild";import remarkParse from"remark-parse";import remarkRehype from"remark-rehype";import{unified}from"unified";import{read}from"to-vfile";import{slug}from"github-slugger";var QUARTZ="quartz";function slugifyFilePath(fp,excludeExt){fp=_stripSlashes(fp);let ext=_getFileExtension(fp),withoutFileExt=fp.replace(new RegExp(ext+"$"),"");(excludeExt||[".md",".html",void 0].includes(ext))&&(ext="");let slug2=withoutFileExt.split("/").map(segment=>segment.replace(/\s/g,"-")).join("/").replace(/\/$/,"");return _endsWith(slug2,"_index")&&(slug2=slug2.replace(/_index$/,"index")),slug2+ext}__name(slugifyFilePath,"slugifyFilePath");function simplifySlug(fp){return _stripSlashes(_trimSuffix(fp,"index"),!0)}__name(simplifySlug,"simplifySlug");function transformInternalLink(link){let[fplike,anchor]=splitAnchor(decodeURI(link)),folderPath=_isFolderPath(fplike),segments=fplike.split("/").filter(x=>x.length>0),prefix=segments.filter(_isRelativeSegment).join("/"),fp=segments.filter(seg=>!_isRelativeSegment(seg)&&seg!=="").join("/"),simpleSlug=simplifySlug(slugifyFilePath(fp)),joined=joinSegments(_stripSlashes(prefix),_stripSlashes(simpleSlug)),trail=folderPath?"/":"";return _addRelativeToStart(joined)+trail+anchor}__name(transformInternalLink,"transformInternalLink");function pathToRoot(slug2){let rootPath=slug2.split("/").filter(x=>x!=="").slice(0,-1).map(_=>"..").join("/");return rootPath.length===0&&(rootPath="."),rootPath}__name(pathToRoot,"pathToRoot");function resolveRelative(current,target){return joinSegments(pathToRoot(current),simplifySlug(target))}__name(resolveRelative,"resolveRelative");function splitAnchor(link){let[fp,anchor]=link.split("#",2);return anchor=anchor===void 0?"":"#"+slugAnchor(anchor),[fp,anchor]}__name(splitAnchor,"splitAnchor");function slugAnchor(anchor){return slug(anchor)}__name(slugAnchor,"slugAnchor");function slugTag(tag){return tag.split("/").map(tagSegment=>slug(tagSegment)).join("/")}__name(slugTag,"slugTag");function joinSegments(...args){return args.filter(segment=>segment!=="").join("/")}__name(joinSegments,"joinSegments");function getAllSegmentPrefixes(tags){let segments=tags.split("/"),results=[];for(let i=0;i<segments.length;i++)results.push(segments.slice(0,i+1).join("/"));return results}__name(getAllSegmentPrefixes,"getAllSegmentPrefixes");function transformLink(src,target,opts){let targetSlug=transformInternalLink(target);if(opts.strategy==="relative")return targetSlug;{let folderTail=_isFolderPath(targetSlug)?"/":"",canonicalSlug=_stripSlashes(targetSlug.slice(1)),[targetCanonical,targetAnchor]=splitAnchor(canonicalSlug);if(opts.strategy==="shortest"){let matchingFileNames=opts.allSlugs.filter(slug2=>{let fileName=slug2.split("/").at(-1);return targetCanonical===fileName});if(matchingFileNames.length===1){let targetSlug2=matchingFileNames[0];return resolveRelative(src,targetSlug2)+targetAnchor}}return joinSegments(pathToRoot(src),canonicalSlug)+folderTail}}__name(transformLink,"transformLink");function _isFolderPath(fplike){return fplike.endsWith("/")||_endsWith(fplike,"index")||_endsWith(fplike,"index.md")||_endsWith(fplike,"index.html")}__name(_isFolderPath,"_isFolderPath");function _endsWith(s,suffix){return s===suffix||s.endsWith("/"+suffix)}__name(_endsWith,"_endsWith");function _trimSuffix(s,suffix){return _endsWith(s,suffix)&&(s=s.slice(0,-suffix.length)),s}__name(_trimSuffix,"_trimSuffix");function _getFileExtension(s){return s.match(/\.[A-Za-z0-9]+$/)?.[0]}__name(_getFileExtension,"_getFileExtension");function _isRelativeSegment(s){return/^\.{0,2}$/.test(s)}__name(_isRelativeSegment,"_isRelativeSegment");function _stripSlashes(s,onlyStripPrefix){return s.startsWith("/")&&(s=s.substring(1)),!onlyStripPrefix&&s.endsWith("/")&&(s=s.slice(0,-1)),s}__name(_stripSlashes,"_stripSlashes");function _addRelativeToStart(s){return s===""&&(s="."),s.startsWith(".")||(s=joinSegments(".",s)),s}__name(_addRelativeToStart,"_addRelativeToStart");import path from"path";import workerpool,{Promise as WorkerPromise}from"workerpool";import{Spinner}from"cli-spinner";var QuartzLogger=class{static{__name(this,"QuartzLogger")}verbose;spinner;constructor(verbose){this.verbose=verbose}start(text){this.verbose?console.log(text):(this.spinner=new Spinner(`%s ${text}`),this.spinner.setSpinnerString(18),this.spinner.start())}end(text){this.verbose||this.spinner.stop(!0),text&&console.log(text)}};import chalk2 from"chalk";import process2 from"process";import{isMainThread}from"workerpool";var rootFile=/.*at file:/;function trace(msg,err){let stack=err.stack,lines=[];if(lines.push(""),lines.push(`
 `+chalk2.bgRed.black.bold(" ERROR ")+`
 `+chalk2.red(` ${msg}`)+(err.message.length>0?`: ${err.message}`:"")),!stack)return;let reachedEndOfLegibleTrace=!1;for(let line of stack.split(`
 `).slice(1)){if(reachedEndOfLegibleTrace)break;line.includes("node_modules")||(lines.push(` ${line}`),rootFile.test(line)&&(reachedEndOfLegibleTrace=!0))}let traceMsg=lines.join(`
 `);if(isMainThread)console.error(traceMsg),process2.exit(1);else throw new Error(traceMsg)}__name(trace,"trace");function createProcessor(ctx){let transformers=ctx.cfg.plugins.transformers,processor=unified().use(remarkParse);for(let plugin of transformers.filter(p=>p.markdownPlugins))processor=processor.use(plugin.markdownPlugins(ctx));processor=processor.use(remarkRehype,{allowDangerousHtml:!0});for(let plugin of transformers.filter(p=>p.htmlPlugins))processor=processor.use(plugin.htmlPlugins(ctx));return processor}__name(createProcessor,"createProcessor");function*chunks(arr,n){for(let i=0;i<arr.length;i+=n)yield arr.slice(i,i+n)}__name(chunks,"chunks");async function transpileWorkerScript(){let cacheFile="./.quartz-cache/transpiled-worker.mjs",fp="./quartz/worker.ts";return esbuild.build({entryPoints:[fp],outfile:path.join(QUARTZ,cacheFile),bundle:!0,keepNames:!0,platform:"node",format:"esm",packages:"external",sourcemap:!0,sourcesContent:!1,plugins:[{name:"css-and-scripts-as-text",setup(build){build.onLoad({filter:/\.scss$/},_=>({contents:"",loader:"text"})),build.onLoad({filter:/\.inline\.(ts|js)$/},_=>({contents:"",loader:"text"}))}}]})}__name(transpileWorkerScript,"transpileWorkerScript");function createFileParser(ctx,fps){let{argv,cfg}=ctx;return async processor=>{let res=[];for(let fp of fps)try{let perf=new PerfTimer,file=await read(fp);file.value=file.value.toString().trim();for(let plugin of cfg.plugins.transformers.filter(p=>p.textTransform))file.value=plugin.textTransform(ctx,file.value);file.data.slug=slugifyFilePath(path.posix.relative(argv.directory,file.path)),file.data.filePath=fp;let ast=processor.parse(file),newAst=await processor.run(ast,file);res.push([newAst,file]),argv.verbose&&console.log(`[process] ${fp} -> ${file.data.slug} (${perf.timeSince()})`)}catch(err){trace(`
-Failed to process \`${fp}\``,err)}return res}}__name(createFileParser,"createFileParser");var clamp=__name((num,min,max)=>Math.min(Math.max(Math.round(num),min),max),"clamp");async function parseMarkdown(ctx,fps){let{argv}=ctx,perf=new PerfTimer,log=new QuartzLogger(argv.verbose),CHUNK_SIZE=128,concurrency=ctx.argv.concurrency??clamp(fps.length/CHUNK_SIZE,1,4),res=[];if(log.start(`Parsing input files using ${concurrency} threads`),concurrency===1)try{let processor=createProcessor(ctx);res=await createFileParser(ctx,fps)(processor)}catch(error){throw log.end(),error}else{await transpileWorkerScript();let pool=workerpool.pool("./quartz/bootstrap-worker.mjs",{minWorkers:"max",maxWorkers:concurrency,workerType:"thread"}),childPromises=[];for(let chunk of chunks(fps,CHUNK_SIZE))childPromises.push(pool.exec("parseFiles",[argv,chunk,ctx.allSlugs]));res=(await WorkerPromise.all(childPromises).catch(err=>{let errString=err.toString().slice(6);console.error(errString),process.exit(1)})).flat(),await pool.terminate()}return log.end(`Parsed ${res.length} Markdown files in ${perf.timeSince()}`),res}__name(parseMarkdown,"parseMarkdown");function filterContent(ctx,content){let{cfg,argv}=ctx,perf=new PerfTimer,initialLength=content.length;for(let plugin of cfg.plugins.filters){let updatedContent=content.filter(item=>plugin.shouldPublish(ctx,item));if(argv.verbose){let diff=content.filter(x=>!updatedContent.includes(x));for(let file of diff)console.log(`[filter:${plugin.name}] ${file[1].data.slug}`)}content=updatedContent}return console.log(`Filtered out ${initialLength-content.length} files in ${perf.timeSince()}`),content}__name(filterContent,"filterContent");import path11 from"path";import fs4 from"fs";import matter from"gray-matter";import remarkFrontmatter from"remark-frontmatter";import yaml from"js-yaml";var defaultOptions={delims:"---"},FrontMatter=__name(userOpts=>{let opts={...defaultOptions,...userOpts};return{name:"FrontMatter",markdownPlugins(){return[remarkFrontmatter,()=>(_,file)=>{let{data}=matter(file.value,{...opts,engines:{yaml:s=>yaml.load(s,{schema:yaml.JSON_SCHEMA})}});data.tag&&(data.tags=data.tag),data.tags&&!Array.isArray(data.tags)&&(data.tags=data.tags.toString().split(",").map(tag=>tag.trim())),data.tags=data.tags?.map(tag=>slugTag(tag))??[],file.data.frontmatter={title:file.stem??"Untitled",tags:[],...data}}]}}},"FrontMatter");import remarkGfm from"remark-gfm";import smartypants from"remark-smartypants";import rehypeSlug from"rehype-slug";import rehypeAutolinkHeadings from"rehype-autolink-headings";var defaultOptions2={enableSmartyPants:!0,linkHeadings:!0},GitHubFlavoredMarkdown=__name(userOpts=>{let opts={...defaultOptions2,...userOpts};return{name:"GitHubFlavoredMarkdown",markdownPlugins(){return opts.enableSmartyPants?[remarkGfm,smartypants]:[remarkGfm]},htmlPlugins(){return opts.linkHeadings?[rehypeSlug,[rehypeAutolinkHeadings,{behavior:"append",content:{type:"text",value:""}}]]:[]}}},"GitHubFlavoredMarkdown");import fs from"fs";import path2 from"path";import{Repository}from"@napi-rs/simple-git";var defaultOptions3={priority:["frontmatter","git","filesystem"]},CreatedModifiedDate=__name(userOpts=>{let opts={...defaultOptions3,...userOpts};return{name:"CreatedModifiedDate",markdownPlugins(){return[()=>{let repo;return async(_tree,file)=>{let created,modified,published,fp=path2.posix.join(file.cwd,file.data.filePath);for(let source of opts.priority)if(source==="filesystem"){let st=await fs.promises.stat(fp);created||=st.birthtimeMs,modified||=st.mtimeMs}else source==="frontmatter"&&file.data.frontmatter?(created||=file.data.frontmatter.date,modified||=file.data.frontmatter.lastmod,modified||=file.data.frontmatter.updated,modified||=file.data.frontmatter["last-modified"],published||=file.data.frontmatter.publishDate):source==="git"&&(repo||(repo=new Repository(file.cwd)),modified||=await repo.getFileLatestModifiedDateAsync(file.data.filePath));file.data.dates={created:created?new Date(created):new Date,modified:modified?new Date(modified):new Date,published:published?new Date(published):new Date}}}]}}},"CreatedModifiedDate");import remarkMath from"remark-math";import rehypeKatex from"rehype-katex";import rehypeMathjax from"rehype-mathjax/svg.js";var Latex=__name(opts=>{let engine=opts?.renderEngine??"katex";return{name:"Latex",markdownPlugins(){return[remarkMath]},htmlPlugins(){return engine==="katex"?[[rehypeKatex,{output:"html"}]]:[rehypeMathjax]},externalResources(){return engine==="katex"?{css:["https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"],js:[{src:"https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js",loadTime:"afterDOMReady",contentType:"external"}]}:{}}}},"Latex");import{toString}from"hast-util-to-string";var defaultOptions4={descriptionLength:150},escapeHTML=__name(unsafe=>unsafe.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;"),"escapeHTML"),Description=__name(userOpts=>{let opts={...defaultOptions4,...userOpts};return{name:"Description",htmlPlugins(){return[()=>async(tree,file)=>{let frontMatterDescription=file.data.frontmatter?.description,text=escapeHTML(toString(tree)),sentences=(frontMatterDescription??text).replace(/\s+/g," ").split("."),finalDesc="",sentenceIdx=0,len=opts.descriptionLength;for(;finalDesc.length<len;){let sentence=sentences[sentenceIdx];if(!sentence)break;finalDesc+=sentence+".",sentenceIdx++}file.data.description=finalDesc,file.data.text=text}]}}},"Description");import path3 from"path";import{visit}from"unist-util-visit";import isAbsoluteUrl from"is-absolute-url";var defaultOptions5={markdownLinkResolution:"absolute",prettyLinks:!0},CrawlLinks=__name(userOpts=>{let opts={...defaultOptions5,...userOpts};return{name:"LinkProcessing",htmlPlugins(ctx){return[()=>(tree,file)=>{let curSlug=simplifySlug(file.data.slug),outgoing=new Set,transformOptions={strategy:opts.markdownLinkResolution,allSlugs:ctx.allSlugs};visit(tree,"element",(node,_index,_parent)=>{if(node.tagName==="a"&&node.properties&&typeof node.properties.href=="string"){let dest=node.properties.href;if(node.properties.className??=[],node.properties.className.push(isAbsoluteUrl(dest)?"external":"internal"),!(isAbsoluteUrl(dest)||dest.startsWith("#"))){dest=node.properties.href=transformLink(file.data.slug,dest,transformOptions);let url=new URL(dest,`https://base.com/${curSlug}`),[destCanonical,_destAnchor]=splitAnchor(url.pathname);destCanonical.endsWith("/")&&(destCanonical+="index");let full=decodeURIComponent(_stripSlashes(destCanonical,!0)),simple=simplifySlug(full);outgoing.add(simple)}opts.prettyLinks&&node.children.length===1&&node.children[0].type==="text"&&!node.children[0].value.startsWith("#")&&(node.children[0].value=path3.basename(node.children[0].value))}if(["img","video","audio","iframe"].includes(node.tagName)&&node.properties&&typeof node.properties.src=="string"&&!isAbsoluteUrl(node.properties.src)){let dest=node.properties.src;dest=node.properties.src=transformLink(file.data.slug,dest,transformOptions),node.properties.src=dest}}),file.data.links=[...outgoing]}]}}},"CrawlLinks");import{findAndReplace as mdastFindReplace}from"mdast-util-find-and-replace";import{slug as slugAnchor2}from"github-slugger";import rehypeRaw from"rehype-raw";import{visit as visit2}from"unist-util-visit";import path4 from"path";var callout_inline_default=`// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+Failed to process \`${fp}\``,err)}return res}}__name(createFileParser,"createFileParser");var clamp=__name((num,min,max)=>Math.min(Math.max(Math.round(num),min),max),"clamp");async function parseMarkdown(ctx,fps){let{argv}=ctx,perf=new PerfTimer,log=new QuartzLogger(argv.verbose),CHUNK_SIZE=128,concurrency=ctx.argv.concurrency??clamp(fps.length/CHUNK_SIZE,1,4),res=[];if(log.start(`Parsing input files using ${concurrency} threads`),concurrency===1)try{let processor=createProcessor(ctx);res=await createFileParser(ctx,fps)(processor)}catch(error){throw log.end(),error}else{await transpileWorkerScript();let pool=workerpool.pool("./quartz/bootstrap-worker.mjs",{minWorkers:"max",maxWorkers:concurrency,workerType:"thread"}),childPromises=[];for(let chunk of chunks(fps,CHUNK_SIZE))childPromises.push(pool.exec("parseFiles",[argv,chunk,ctx.allSlugs]));res=(await WorkerPromise.all(childPromises).catch(err=>{let errString=err.toString().slice(6);console.error(errString),process.exit(1)})).flat(),await pool.terminate()}return log.end(`Parsed ${res.length} Markdown files in ${perf.timeSince()}`),res}__name(parseMarkdown,"parseMarkdown");function filterContent(ctx,content){let{cfg,argv}=ctx,perf=new PerfTimer,initialLength=content.length;for(let plugin of cfg.plugins.filters){let updatedContent=content.filter(item=>plugin.shouldPublish(ctx,item));if(argv.verbose){let diff=content.filter(x=>!updatedContent.includes(x));for(let file of diff)console.log(`[filter:${plugin.name}] ${file[1].data.slug}`)}content=updatedContent}return console.log(`Filtered out ${initialLength-content.length} files in ${perf.timeSince()}`),content}__name(filterContent,"filterContent");import path12 from"path";import fs5 from"fs";import matter from"gray-matter";import remarkFrontmatter from"remark-frontmatter";import yaml from"js-yaml";var defaultOptions={delims:"---"},FrontMatter=__name(userOpts=>{let opts={...defaultOptions,...userOpts};return{name:"FrontMatter",markdownPlugins(){return[remarkFrontmatter,()=>(_,file)=>{let{data}=matter(file.value,{...opts,engines:{yaml:s=>yaml.load(s,{schema:yaml.JSON_SCHEMA})}});data.tag&&(data.tags=data.tag),data.tags&&!Array.isArray(data.tags)&&(data.tags=data.tags.toString().split(",").map(tag=>tag.trim())),data.tags=data.tags?.map(tag=>slugTag(tag))??[],file.data.frontmatter={title:file.stem??"Untitled",tags:[],...data}}]}}},"FrontMatter");import remarkGfm from"remark-gfm";import smartypants from"remark-smartypants";import rehypeSlug from"rehype-slug";import rehypeAutolinkHeadings from"rehype-autolink-headings";var defaultOptions2={enableSmartyPants:!0,linkHeadings:!0},GitHubFlavoredMarkdown=__name(userOpts=>{let opts={...defaultOptions2,...userOpts};return{name:"GitHubFlavoredMarkdown",markdownPlugins(){return opts.enableSmartyPants?[remarkGfm,smartypants]:[remarkGfm]},htmlPlugins(){return opts.linkHeadings?[rehypeSlug,[rehypeAutolinkHeadings,{behavior:"append",content:{type:"text",value:""}}]]:[]}}},"GitHubFlavoredMarkdown");import fs from"fs";import path2 from"path";import{Repository}from"@napi-rs/simple-git";var defaultOptions3={priority:["frontmatter","git","filesystem"]},CreatedModifiedDate=__name(userOpts=>{let opts={...defaultOptions3,...userOpts};return{name:"CreatedModifiedDate",markdownPlugins(){return[()=>{let repo;return async(_tree,file)=>{let created,modified,published,fp=path2.posix.join(file.cwd,file.data.filePath);for(let source of opts.priority)if(source==="filesystem"){let st=await fs.promises.stat(fp);created||=st.birthtimeMs,modified||=st.mtimeMs}else source==="frontmatter"&&file.data.frontmatter?(created||=file.data.frontmatter.date,modified||=file.data.frontmatter.lastmod,modified||=file.data.frontmatter.updated,modified||=file.data.frontmatter["last-modified"],published||=file.data.frontmatter.publishDate):source==="git"&&(repo||(repo=new Repository(file.cwd)),modified||=await repo.getFileLatestModifiedDateAsync(file.data.filePath));file.data.dates={created:created?new Date(created):new Date,modified:modified?new Date(modified):new Date,published:published?new Date(published):new Date}}}]}}},"CreatedModifiedDate");import remarkMath from"remark-math";import rehypeKatex from"rehype-katex";import rehypeMathjax from"rehype-mathjax/svg.js";var Latex=__name(opts=>{let engine=opts?.renderEngine??"katex";return{name:"Latex",markdownPlugins(){return[remarkMath]},htmlPlugins(){return engine==="katex"?[[rehypeKatex,{output:"html"}]]:[rehypeMathjax]},externalResources(){return engine==="katex"?{css:["https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"],js:[{src:"https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js",loadTime:"afterDOMReady",contentType:"external"}]}:{}}}},"Latex");import{toString}from"hast-util-to-string";var defaultOptions4={descriptionLength:150},escapeHTML=__name(unsafe=>unsafe.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;"),"escapeHTML"),Description=__name(userOpts=>{let opts={...defaultOptions4,...userOpts};return{name:"Description",htmlPlugins(){return[()=>async(tree,file)=>{let frontMatterDescription=file.data.frontmatter?.description,text=escapeHTML(toString(tree)),sentences=(frontMatterDescription??text).replace(/\s+/g," ").split("."),finalDesc="",sentenceIdx=0,len=opts.descriptionLength;for(;finalDesc.length<len;){let sentence=sentences[sentenceIdx];if(!sentence)break;finalDesc+=sentence+".",sentenceIdx++}file.data.description=finalDesc,file.data.text=text}]}}},"Description");import path3 from"path";import{visit}from"unist-util-visit";import isAbsoluteUrl from"is-absolute-url";var defaultOptions5={markdownLinkResolution:"absolute",prettyLinks:!0},CrawlLinks=__name(userOpts=>{let opts={...defaultOptions5,...userOpts};return{name:"LinkProcessing",htmlPlugins(ctx){return[()=>(tree,file)=>{let curSlug=simplifySlug(file.data.slug),outgoing=new Set,transformOptions={strategy:opts.markdownLinkResolution,allSlugs:ctx.allSlugs};visit(tree,"element",(node,_index,_parent)=>{if(node.tagName==="a"&&node.properties&&typeof node.properties.href=="string"){let dest=node.properties.href;if(node.properties.className??=[],node.properties.className.push(isAbsoluteUrl(dest)?"external":"internal"),!(isAbsoluteUrl(dest)||dest.startsWith("#"))){dest=node.properties.href=transformLink(file.data.slug,dest,transformOptions);let url=new URL(dest,`https://base.com/${curSlug}`),[destCanonical,_destAnchor]=splitAnchor(url.pathname);destCanonical.endsWith("/")&&(destCanonical+="index");let full=decodeURIComponent(_stripSlashes(destCanonical,!0)),simple=simplifySlug(full);outgoing.add(simple)}opts.prettyLinks&&node.children.length===1&&node.children[0].type==="text"&&!node.children[0].value.startsWith("#")&&(node.children[0].value=path3.basename(node.children[0].value))}if(["img","video","audio","iframe"].includes(node.tagName)&&node.properties&&typeof node.properties.src=="string"&&!isAbsoluteUrl(node.properties.src)){let dest=node.properties.src;dest=node.properties.src=transformLink(file.data.slug,dest,transformOptions),node.properties.src=dest}}),file.data.links=[...outgoing]}]}}},"CrawlLinks");import{findAndReplace as mdastFindReplace}from"mdast-util-find-and-replace";import{slug as slugAnchor2}from"github-slugger";import rehypeRaw from"rehype-raw";import{visit as visit2}from"unist-util-visit";import path4 from"path";var callout_inline_default=`// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
 function toggleCallout() {
   const outerBlock = this.parentElement;
   outerBlock.classList.toggle(\`is-collapsed\`);
@@ -42220,7 +42220,667 @@ if (document.readyState === "loading") {
 markmap-common/dist/index.mjs:
   (*! @gera2ld/jsx-dom v2.2.2 | ISC License *)
 */
-`;import{jsx as jsx13,jsxs as jsxs7}from"preact/jsx-runtime";function MarkMap(){return jsxs7("div",{class:"markmap-wrapper",children:[jsx13("h3",{children:"\u601D\u7EF4\u5BFC\u56FE"}),jsx13("div",{id:"markmap-container",class:"markmap-container"})]})}__name(MarkMap,"MarkMap");MarkMap.css=markmap_default;MarkMap.afterDOMLoaded=markmap_inline_default;var MarkMap_default=__name(()=>MarkMap,"default");import{Fragment as Fragment4,jsx as jsx14}from"preact/jsx-runtime";var MobileOnly_default=__name(component=>{if(component){let MobileOnly2=function(props){return jsx14(Component,{displayClass:"mobile-only",...props})};var MobileOnly=MobileOnly2;__name(MobileOnly2,"MobileOnly");let Component=component;return MobileOnly2.displayName=component.displayName,MobileOnly2.afterDOMLoaded=component?.afterDOMLoaded,MobileOnly2.beforeDOMLoaded=component?.beforeDOMLoaded,MobileOnly2.css=component?.css,MobileOnly2}else return()=>jsx14(Fragment4,{})},"default");import{jsx as jsx15,jsxs as jsxs8}from"preact/jsx-runtime";function byDateAndAlphabetical(f1,f2){if(f1.dates&&f2.dates)return f2.dates.modified.getTime()-f1.dates.modified.getTime();if(f1.dates&&!f2.dates)return-1;if(!f1.dates&&f2.dates)return 1;let f1Title=f1.frontmatter?.title.toLowerCase()??"",f2Title=f2.frontmatter?.title.toLowerCase()??"";return f1Title.localeCompare(f2Title)}__name(byDateAndAlphabetical,"byDateAndAlphabetical");function PageList({fileData,allFiles,limit}){let list=allFiles.sort(byDateAndAlphabetical);return limit&&(list=list.slice(0,limit)),jsx15("ul",{class:"section-ul",children:list.map(page=>{let title=page.frontmatter?.title,tags=page.frontmatter?.tags??[];return jsx15("li",{class:"section-li",children:jsxs8("div",{class:"section",children:[page.dates&&jsx15("p",{class:"meta",children:jsx15(Date2,{date:page.dates.modified})}),jsx15("div",{class:"desc",children:jsx15("h3",{children:jsx15("a",{href:resolveRelative(fileData.slug,page.slug),class:"internal",children:title})})}),jsx15("ul",{class:"tags",children:tags.map(tag=>jsx15("li",{children:jsxs8("a",{class:"internal tag-link",href:resolveRelative(fileData.slug,`tags/${tag}`),children:["#",tag]})}))})]})})})})}__name(PageList,"PageList");PageList.css=`
+`;import{jsx as jsx13,jsxs as jsxs7}from"preact/jsx-runtime";function MarkMap(){return jsxs7("div",{class:"markmap-wrapper",children:[jsx13("h3",{children:"\u601D\u7EF4\u5BFC\u56FE"}),jsx13("div",{id:"markmap-container",class:"markmap-container"})]})}__name(MarkMap,"MarkMap");MarkMap.css=markmap_default;MarkMap.afterDOMLoaded=markmap_inline_default;var MarkMap_default=__name(()=>MarkMap,"default");var molecule_default=`
+@charset "UTF-8";
+.molecule-wrapper {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+}
+
+.molecule-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.molecule-wrapper h3::before {
+  content: "\u{1F9EA}";
+}
+
+.molecule-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.molecule-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.molecule-group {
+  font-size: 0.7rem;
+  color: var(--gray);
+  border: 1px solid var(--lightgray);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  white-space: nowrap;
+}
+
+.molecule-view {
+  position: relative;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.molecule-3d {
+  width: 100%;
+  height: 100%;
+}
+
+.molecule-view svg {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  color: var(--dark);
+}
+
+.molecule-view svg rect {
+  fill: none !important;
+  stroke: none !important;
+}
+
+.molecule-view svg text {
+  font-family: var(--bodyFont) !important;
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+.molecule-view svg path {
+  stroke-linecap: round;
+}
+
+.molecule-hint {
+  font-size: 0.8rem;
+  color: var(--gray);
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+.molecule-meta {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  align-items: center;
+  min-height: 1.2em;
+}
+
+.molecule-meta .molecule-formula {
+  font-family: var(--codeFont);
+  color: var(--darkgray);
+}
+
+.molecule-meta a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--lightgray);
+}
+
+.molecule-meta a:hover {
+  border-bottom-color: var(--secondary);
+}
+
+.molecule-ctrl {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.molecule-btn {
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: var(--darkgray);
+  background: transparent;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  padding: 0.1rem 0.55rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.molecule-btn:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.molecule-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.molecule-btn:disabled:hover {
+  color: var(--darkgray);
+  border-color: var(--lightgray);
+}
+
+.molecule-btn-mode {
+  margin-left: 0.25rem;
+}
+
+.molecule-btn-mode.is-on {
+  color: white;
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.molecule-index {
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-family: var(--codeFont);
+  min-width: 3.2em;
+  text-align: center;
+}
+
+.molecule-tip {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--gray);
+  min-height: 2.4em;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibW9sZWN1bGUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTs7O0FBSUY7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUlGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFJRjtFQUNFO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFHQTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFPRjtFQUNFO0VBQ0E7RUFDQTs7O0FBSUY7RUFDRTs7O0FBSUY7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFJRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7OztBQUlGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0EsWUFDRTs7O0FBSUo7RUFDRTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTs7O0FBR0Y7RUFDRTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBSUY7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLy8g5ZKM5LiK5pa5IC5ncmFwaC1vdXRlciAvIC5tYXJrbWFwLXdyYXBwZXIg5L+d5oyB5ZCM5LiA5aWX6KeG6KeJ77yaXG4vLyDlj6rmnIkgMXB4IOi+ueahhiArIDhweCDlnIbop5LvvIwqKuS4jeWGmeiDjOaZryoq77yM6K6p56uZ54K555qE6IOM5pmv5Zu+6YCP5LiK5p2l44CCXG4ubW9sZWN1bGUtd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDJyZW07XG4gIHBhZGRpbmc6IDEuNXJlbTtcbiAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xufVxuXG4ubW9sZWN1bGUtd3JhcHBlciBoMyB7XG4gIG1hcmdpbi10b3A6IDA7XG4gIG1hcmdpbi1ib3R0b206IDFyZW07XG4gIGZvbnQtc2l6ZTogMXJlbTtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGdhcDogMC41cmVtO1xufVxuXG4ubW9sZWN1bGUtd3JhcHBlciBoMzo6YmVmb3JlIHtcbiAgY29udGVudDogXCLwn6eqXCI7XG59XG5cbi8vIOagh+mimOihjO+8muW9k+WJjee7k+aehOWQjSArIOaJgOWxnuWIhuexu1xuLm1vbGVjdWxlLWhlYWQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgZ2FwOiAwLjVyZW07XG4gIG1hcmdpbi1ib3R0b206IDAuNXJlbTtcbn1cblxuLm1vbGVjdWxlLXRpdGxlIHtcbiAgZm9udC1zaXplOiAwLjk1cmVtO1xuICBmb250LXdlaWdodDogNjAwO1xuICBjb2xvcjogdmFyKC0tZGFyayk7XG59XG5cbi5tb2xlY3VsZS1ncm91cCB7XG4gIGZvbnQtc2l6ZTogMC43cmVtO1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gIGJvcmRlci1yYWRpdXM6IDk5OXB4O1xuICBwYWRkaW5nOiAwLjA1cmVtIDAuNXJlbTtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbn1cblxuLy8g5riy5p+T5Yy677ya5Zu65a6a6auY5bqm77yM57+76aG15pe26aG16Z2i5LiN5Lya6Lez5YqoXG4ubW9sZWN1bGUtdmlldyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgaGVpZ2h0OiAxOTBweDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG92ZXJmbG93OiBoaWRkZW47XG59XG5cbi8vIDNEbW9sLmpzIOeahOaMgui9veeCue+8muWug+iHquW3seS8muW+gOmHjOWhniBjYW52YXPvvIzlv4XpobvmmL7lvI/nu5nlsLrlr7hcbi5tb2xlY3VsZS0zZCB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbi5tb2xlY3VsZS12aWV3IHN2ZyB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgbWF4LWhlaWdodDogMTAwJTtcbiAgaGVpZ2h0OiBhdXRvO1xuICB3aWR0aDogYXV0bztcbiAgLy8g6ISa5pys5oqKIFJES2l0IC8gU21pbGVzRHJhd2VyIOi+k+WHuueahOminOiJsue7n+S4gOabv+aNouaIkCBjdXJyZW50Q29sb3LvvIxcbiAgLy8g6L+Z6YeM57uZ5LiA5Liq6Imy5YC85bCx562J5LqO57uZ5pW05Liq57uT5p6E5byP5LiK6ImyIOKAlOKAlCDkuLvpopjliIfmjaLkuI3nlKjph43nu5jjgIJcbiAgY29sb3I6IHZhcigtLWRhcmspO1xufVxuXG4vLyDlhZzlupXvvJrnu5PmnoTlvI/ph4znmoQgPHJlY3Q+IOWPquWPr+iDveaYryBSREtpdCDnlLvnmoTog4zmma/mnb/vvIxcbi8vIOiEmuacrOW3sue7j+WIoOi/h+S4gOasoe+8jOi/memHjOWGjeWOi+S4gOmBk++8jOS/neivgeS7u+S9leaDheWGteS4i+mDveaYr+mAj+aYjuiDjOaZr+OAglxuLm1vbGVjdWxlLXZpZXcgc3ZnIHJlY3Qge1xuICBmaWxsOiBub25lICFpbXBvcnRhbnQ7XG4gIHN0cm9rZTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4vLyDimqDvuI8gUkRLaXQg5oqKIGZvbnQtZmFtaWx5IC8gZm9udC1zaXplIOWGmeWcqCA8dGV4dD4g55qEKirlhoXogZQgc3R5bGUqKiDkuIrvvIxcbi8vIOWGheiBlOagt+W8j+S8mOWFiOe6p+mrmOS6juWklumDqOinhOWIme+8jOaJgOS7pei/memHjOW/hemhu+eUqCAhaW1wb3J0YW50IOaJjeebluW+l+S9j1xuLy8g77yI5Y+q5pyJICFpbXBvcnRhbnQg6IO95Y6L6L+H5pmu6YCa55qE5YaF6IGUIHN0eWxl77yJ44CCXG4vLyDliqDnspfmmK/kuLrkuoblj6/or7vmgKfvvJrnu5PmnoTlvI/ph4znmoTlhYPntKDnrKblj7fmnKzmnaXlsLHlsI/jgIJcbi5tb2xlY3VsZS12aWV3IHN2ZyB0ZXh0IHtcbiAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KSAhaW1wb3J0YW50O1xuICBmb250LXNpemU6IDEycHggIWltcG9ydGFudDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cblxuLy8g6ZSu57q/55qE5YWc5bqV77ya5LiH5LiA5pyJ5rKh6KKr6ISa5pys5o2i5o6J6aKc6Imy55qE5YWD57Sg77yM6Iez5bCR57q/5a695Yir57uG5Yiw55yL5LiN5riF44CCXG4ubW9sZWN1bGUtdmlldyBzdmcgcGF0aCB7XG4gIHN0cm9rZS1saW5lY2FwOiByb3VuZDtcbn1cblxuLy8gU21pbGVzRHJhd2VyIC8g5Yqg6L295Lit55qE5Y2g5L2NXG4ubW9sZWN1bGUtaGludCB7XG4gIGZvbnQtc2l6ZTogMC44cmVtO1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcGFkZGluZzogMCAxcmVtO1xuICBsaW5lLWhlaWdodDogMS42O1xufVxuXG4vLyDliIblrZDlvI8gLyDliIblrZDph48gLyDlhbPogZTnrJTorrBcbi5tb2xlY3VsZS1tZXRhIHtcbiAgbWFyZ2luLXRvcDogMC41cmVtO1xuICBmb250LXNpemU6IDAuNzhyZW07XG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBnYXA6IDAuNHJlbSAwLjhyZW07XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1pbi1oZWlnaHQ6IDEuMmVtO1xufVxuXG4ubW9sZWN1bGUtbWV0YSAubW9sZWN1bGUtZm9ybXVsYSB7XG4gIGZvbnQtZmFtaWx5OiB2YXIoLS1jb2RlRm9udCk7XG4gIGNvbG9yOiB2YXIoLS1kYXJrZ3JheSk7XG59XG5cbi5tb2xlY3VsZS1tZXRhIGEge1xuICBjb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBib3JkZXItYm90dG9tOiAxcHggZG90dGVkIHZhcigtLWxpZ2h0Z3JheSk7XG59XG5cbi5tb2xlY3VsZS1tZXRhIGE6aG92ZXIge1xuICBib3JkZXItYm90dG9tLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xufVxuXG4vLyDnv7vpobXmjqfku7Zcbi5tb2xlY3VsZS1jdHJsIHtcbiAgbWFyZ2luLXRvcDogMC43NXJlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGdhcDogMC41cmVtO1xufVxuXG4ubW9sZWN1bGUtYnRuIHtcbiAgZm9udC1mYW1pbHk6IGluaGVyaXQ7XG4gIGZvbnQtc2l6ZTogMC43NXJlbTtcbiAgY29sb3I6IHZhcigtLWRhcmtncmF5KTtcbiAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgcGFkZGluZzogMC4xcmVtIDAuNTVyZW07XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgdHJhbnNpdGlvbjpcbiAgICBjb2xvciAwLjE1cyBlYXNlLFxuICAgIGJvcmRlci1jb2xvciAwLjE1cyBlYXNlO1xufVxuXG4ubW9sZWN1bGUtYnRuOmhvdmVyIHtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbn1cblxuLm1vbGVjdWxlLWJ0bjpkaXNhYmxlZCB7XG4gIG9wYWNpdHk6IDAuNDtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuXG4ubW9sZWN1bGUtYnRuOmRpc2FibGVkOmhvdmVyIHtcbiAgY29sb3I6IHZhcigtLWRhcmtncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1saWdodGdyYXkpO1xufVxuXG4ubW9sZWN1bGUtYnRuLW1vZGUge1xuICBtYXJnaW4tbGVmdDogMC4yNXJlbTtcbn1cblxuLm1vbGVjdWxlLWJ0bi1tb2RlLmlzLW9uIHtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1zZWNvbmRhcnkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG59XG5cbi5tb2xlY3VsZS1pbmRleCB7XG4gIGZvbnQtc2l6ZTogMC43NXJlbTtcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBmb250LWZhbWlseTogdmFyKC0tY29kZUZvbnQpO1xuICBtaW4td2lkdGg6IDMuMmVtO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi8vIOW6lemDqOS4gOWPpeivneaVmeWtpueCuVxuLm1vbGVjdWxlLXRpcCB7XG4gIG1hcmdpbi10b3A6IDAuNnJlbTtcbiAgZm9udC1zaXplOiAwLjc1cmVtO1xuICBsaW5lLWhlaWdodDogMS42O1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIG1pbi1oZWlnaHQ6IDIuNGVtO1xufVxuIl19 */`;var molecule_inline_default=`// quartz/components/scripts/quartz/components/scripts/molecule.inline.ts
+var BASE_PATH = "/notes";
+function loadScript(urls) {
+  return new Promise((resolve) => {
+    let idx = 0;
+    const tryNext = () => {
+      if (idx >= urls.length) {
+        resolve(false);
+        return;
+      }
+      const url = urls[idx++];
+      const el = document.createElement("script");
+      el.src = url;
+      el.async = true;
+      el.onload = () => resolve(true);
+      el.onerror = () => {
+        el.remove();
+        tryNext();
+      };
+      document.head.appendChild(el);
+    };
+    tryNext();
+  });
+}
+var rdkitPromise = null;
+function getRDKit() {
+  if (rdkitPromise)
+    return rdkitPromise;
+  rdkitPromise = (async () => {
+    const w = window;
+    if (typeof w.RDKit?.get_mol === "function")
+      return w.RDKit;
+    const ok = await loadScript([
+      "https://cdn.jsdelivr.net/npm/@rdkit/rdkit/dist/RDKit_minimal.js",
+      "https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"
+    ]);
+    if (!ok) {
+      console.warn("[molecule] RDKit \\u811A\\u672C\\u52A0\\u8F7D\\u5931\\u8D25");
+      return null;
+    }
+    if (typeof w.initRDKitModule !== "function") {
+      console.warn("[molecule] \\u627E\\u4E0D\\u5230 initRDKitModule");
+      return null;
+    }
+    try {
+      return await w.initRDKitModule();
+    } catch (err) {
+      console.warn("[molecule] RDKit WASM \\u521D\\u59CB\\u5316\\u5931\\u8D25", err);
+      return null;
+    }
+  })();
+  return rdkitPromise;
+}
+var drawer = null;
+var drawerReady = null;
+function ensureDrawer() {
+  if (drawerReady)
+    return drawerReady;
+  drawerReady = (async () => {
+    const w = window;
+    if (!w.SmilesDrawer) {
+      const ok = await loadScript([
+        "https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js",
+        "https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js"
+      ]);
+      if (!ok)
+        return false;
+    }
+    const SD = w.SmilesDrawer;
+    if (!SD?.Drawer)
+      return false;
+    const host = document.querySelector("#molecule-view");
+    if (!host)
+      return false;
+    drawer = new SD.Drawer(
+      {
+        width: Math.max(260, Math.min(460, host.clientWidth - 8)),
+        height: 180,
+        bondThickness: 1.1,
+        padding: 12,
+        terminalCarbons: true
+      },
+      SD
+    );
+    return true;
+  })();
+  return drawerReady;
+}
+var wrapper = document.querySelector("#molecule-wrapper");
+var view = document.querySelector("#molecule-view");
+var titleEl = document.querySelector("#molecule-title");
+var groupEl = document.querySelector("#molecule-group");
+var metaEl = document.querySelector("#molecule-meta");
+var tipEl = document.querySelector("#molecule-tip");
+var indexEl = document.querySelector("#molecule-index");
+var prevBtn = document.querySelector("#molecule-prev");
+var nextBtn = document.querySelector("#molecule-next");
+var modeBtn = document.querySelector("#molecule-mode");
+var entries = [];
+var current = 0;
+var is3D = false;
+function setHint(html) {
+  if (!view)
+    return;
+  view.innerHTML = \`<div class="molecule-hint">\${html}</div>\`;
+}
+function currentSlug() {
+  return (document.body?.dataset?.slug ?? "").replace(/\\/+$/, "");
+}
+function siteRoot() {
+  const slugSegs = currentSlug().split("/").filter(Boolean).length;
+  const pathSegs = location.pathname.split("/").filter(Boolean).filter((s) => s.toLowerCase() !== "index.html");
+  const n = Math.max(0, pathSegs.length - slugSegs);
+  const root = pathSegs.slice(0, n).join("/");
+  return root ? "/" + root : "";
+}
+function staticUrls(name) {
+  const out = [];
+  const push = (u) => {
+    if (u && !out.includes(u))
+      out.push(u);
+  };
+  push(\`\${siteRoot()}/static/\${name}\`);
+  push(\`\${BASE_PATH}/static/\${name}\`);
+  push(\`/static/\${name}\`);
+  return out;
+}
+async function fetchFirst(urls) {
+  let last = "\\u672A\\u77E5\\u9519\\u8BEF";
+  for (const url of urls) {
+    try {
+      const res = await fetch(url);
+      if (res.ok)
+        return await res.text();
+      last = \`HTTP \${res.status}\`;
+    } catch (err) {
+      last = err instanceof Error ? err.message : String(err);
+    }
+  }
+  throw new Error(\`\\u90FD\\u53D6\\u4E0D\\u5230\\uFF08\\u8BD5\\u8FC7 \${urls.join("\\u3001")}\\uFF0C\\u6700\\u540E\\uFF1A\${last}\\uFF09\`);
+}
+var fileMap = null;
+async function loadFileMap() {
+  if (fileMap)
+    return fileMap;
+  const map = {};
+  const put = (raw) => {
+    for (const slug of Object.keys(raw)) {
+      const base = slug.split("/").pop() ?? "";
+      if (base)
+        map[slug] = base.replace(/\\.(md|pdf|mdx)$/i, "");
+    }
+  };
+  try {
+    if (typeof fetchData !== "undefined") {
+      put(await fetchData);
+    }
+  } catch (err) {
+    console.warn("[molecule] \\u590D\\u7528 fetchData \\u5931\\u8D25", err);
+  }
+  if (Object.keys(map).length === 0) {
+    try {
+      put(JSON.parse(await fetchFirst(staticUrls("contentIndex.json"))));
+    } catch (err) {
+      console.warn("[molecule] contentIndex.json \\u8BFB\\u53D6\\u5931\\u8D25", err);
+    }
+  }
+  fileMap = map;
+  return map;
+}
+var allMolecules = [];
+async function loadMolecules() {
+  if (allMolecules.length > 0)
+    return allMolecules;
+  const data = JSON.parse(await fetchFirst(staticUrls("molecules.json")));
+  allMolecules = Array.isArray(data.molecules) ? data.molecules : [];
+  return allMolecules;
+}
+function pickEntries() {
+  const slug = currentSlug();
+  if (!slug || allMolecules.length === 0)
+    return [];
+  const fileName = fileMap?.[slug];
+  if (!fileName)
+    return [];
+  const key = fileName.toLowerCase();
+  return allMolecules.filter((m) => m.note.toLowerCase() === key);
+}
+function noteHref(fileName) {
+  const key = fileName.toLowerCase();
+  for (const [slug, value] of Object.entries(fileMap ?? {})) {
+    if (value.toLowerCase() === key)
+      return \`\${siteRoot()}/\${encodeURI(slug)}\`;
+  }
+  return null;
+}
+function preprocessSvg(svgText) {
+  let doc;
+  try {
+    doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+  } catch {
+    return svgText;
+  }
+  const root = doc.documentElement;
+  if (!root || root.nodeName.toLowerCase() !== "svg")
+    return svgText;
+  root.removeAttribute("width");
+  root.removeAttribute("height");
+  const isColor = (v) => {
+    const s = v.trim().toLowerCase();
+    return s !== "" && s !== "none" && s !== "transparent" && !s.startsWith("url(");
+  };
+  root.querySelectorAll("rect").forEach((r) => {
+    const w = (r.getAttribute("width") ?? "").trim();
+    const h = (r.getAttribute("height") ?? "").trim();
+    const fill = (r.getAttribute("fill") ?? "").trim().toLowerCase();
+    if (w === "100%" || h === "100%" || fill === "#ffffff" || fill === "#fff" || fill === "white") {
+      r.remove();
+    }
+  });
+  root.querySelectorAll("*").forEach((el) => {
+    for (const attr of ["fill", "stroke"]) {
+      const v = el.getAttribute(attr);
+      if (v && isColor(v))
+        el.setAttribute(attr, "currentColor");
+    }
+    const style = el.getAttribute("style");
+    if (style) {
+      el.setAttribute("style", style.replace(/(fill|stroke)(\\s*:\\s*)[^;]+/gi, "$1$2currentColor"));
+    }
+  });
+  return new XMLSerializer().serializeToString(doc);
+}
+function renderWithRDKit(mol, host) {
+  host.innerHTML = preprocessSvg(mol.get_svg());
+}
+function drawTree(host, tree) {
+  const NS = "http://www.w3.org/2000/svg";
+  const w = tree?.width || 300;
+  const h = tree?.height || 180;
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", \`0 0 \${w} \${h}\`);
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "180");
+  const walk = (n) => {
+    if (!n || typeof n !== "object")
+      return;
+    if (n.type === "atom" || n.type === "node") {
+      if (n.element && n.position) {
+        const t = document.createElementNS(NS, "text");
+        t.setAttribute("x", String(n.position.x));
+        t.setAttribute("y", String(n.position.y));
+        t.setAttribute("fill", "currentColor");
+        t.textContent = n.element;
+        svg.appendChild(t);
+      }
+    } else if ((n.type === "bond" || n.type === "edge") && n.begin && n.end) {
+      const dx = n.end.position.x - n.begin.position.x;
+      const dy = n.end.position.y - n.begin.position.y;
+      const len = Math.hypot(dx, dy) || 1;
+      const order = n.order || 1;
+      const count = order > 2 ? 3 : order;
+      for (let i = 0; i < count; i++) {
+        const f = count === 1 ? 0 : (i / (count - 1) - 0.5) * 2;
+        const nx = -dy / len * 2 * f;
+        const ny = dx / len * 2 * f;
+        const l = document.createElementNS(NS, "line");
+        l.setAttribute("x1", String(n.begin.position.x + nx));
+        l.setAttribute("y1", String(n.begin.position.y + ny));
+        l.setAttribute("x2", String(n.end.position.x + nx));
+        l.setAttribute("y2", String(n.end.position.y + ny));
+        l.setAttribute("stroke", "currentColor");
+        l.setAttribute("stroke-width", "1.2");
+        svg.appendChild(l);
+      }
+    }
+    if (Array.isArray(n.children))
+      n.children.forEach(walk);
+  };
+  if (Array.isArray(tree))
+    tree.forEach(walk);
+  else
+    walk(tree);
+  host.appendChild(svg);
+}
+async function render2D(mol) {
+  if (!view || !mol.smiles)
+    return;
+  setHint("\\u6B63\\u5728\\u52A0\\u8F7D 2D \\u6E32\\u67D3\\u5668\\u2026");
+  const RDKit = await getRDKit();
+  if (RDKit) {
+    try {
+      const m = RDKit.get_mol(mol.smiles);
+      if (m) {
+        renderWithRDKit(m, view);
+        m.delete();
+        return;
+      }
+      setHint(
+        \`RDKit \\u65E0\\u6CD5\\u89E3\\u6790\\u8FD9\\u4E2A\\u7ED3\\u6784\\u5F0F<br/><span style="font-family:var(--codeFont)">\${mol.smiles}</span>\`
+      );
+      return;
+    } catch (err) {
+      console.warn("[molecule] RDKit \\u89E3\\u6790\\u5931\\u8D25", err);
+      setHint(
+        \`RDKit \\u89E3\\u6790\\u51FA\\u9519<br/><span style="font-family:var(--codeFont)">\${mol.smiles}</span>\`
+      );
+      return;
+    }
+  }
+  const ok = await ensureDrawer();
+  if (ok && drawer) {
+    try {
+      drawer.draw(
+        mol.smiles,
+        (tree) => {
+          view.innerHTML = "";
+          drawTree(view, tree);
+        },
+        () => {
+          setHint(
+            \`\\u5907\\u7528\\u6E32\\u67D3\\u5668\\u4E5F\\u5931\\u8D25\\u4E86<br/><span style="font-family:var(--codeFont)">\${mol.smiles}</span>\`
+          );
+        }
+      );
+      return;
+    } catch (err) {
+      console.warn("[molecule] SmilesDrawer \\u7ED8\\u5236\\u5931\\u8D25", err);
+    }
+  }
+  setHint(\`2D \\u6E32\\u67D3\\u5668\\u52A0\\u8F7D\\u5931\\u8D25\\uFF08\\u53EF\\u80FD\\u662F CDN \\u88AB\\u6321\\uFF09<br/>SMILES\\uFF1A\${mol.smiles}\`);
+}
+async function render3D(mol, host) {
+  if (!mol.pdb)
+    return;
+  setHint("\\u6B63\\u5728\\u52A0\\u8F7D 3Dmol.js\\u2026");
+  const w = window;
+  if (!w.$3Dmol) {
+    const ok = await loadScript([
+      "https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js",
+      "https://3Dmol.org/build/3Dmol-min.js"
+    ]);
+    if (!ok || !w.$3Dmol) {
+      setHint("3D \\u6E32\\u67D3\\u5668\\u52A0\\u8F7D\\u5931\\u8D25<br/>\\u68C0\\u67E5\\u7F51\\u7EDC\\u540E\\u91CD\\u8BD5");
+      return;
+    }
+  }
+  const D = w.$3Dmol;
+  host.innerHTML = "";
+  const stage = document.createElement("div");
+  stage.className = "molecule-3d";
+  host.appendChild(stage);
+  const viewer = D.createViewer(stage, { backgroundAlpha: 0, antialias: true });
+  if (!viewer) {
+    setHint("3D \\u6E32\\u67D3\\u5668\\u521D\\u59CB\\u5316\\u5931\\u8D25");
+    return;
+  }
+  const styleAndZoom = () => {
+    viewer.setStyle({}, { cartoon: { color: "spectrum" } });
+    viewer.zoomTo();
+    viewer.render();
+  };
+  if (mol.pdb.startsWith("AF-")) {
+    const url = \`https://alphafold.ebi.ac.uk/files/\${mol.pdb}-F1-model_v4.pdb\`;
+    fetch(url).then((res) => {
+      if (!res.ok)
+        throw new Error(\`HTTP \${res.status}\`);
+      return res.text();
+    }).then((text) => {
+      viewer.addModel(text, "pdb");
+      styleAndZoom();
+    }).catch((err) => {
+      console.warn("[molecule] AlphaFold \\u52A0\\u8F7D\\u5931\\u8D25", err);
+      setHint(\`AlphaFold \\u7ED3\\u6784 \${mol.pdb} \\u52A0\\u8F7D\\u5931\\u8D25\`);
+    });
+    return;
+  }
+  D.download(\`pdb:\${mol.pdb}\`, viewer, { multimodel: false }, styleAndZoom);
+}
+function renderMeta(mol) {
+  if (!metaEl)
+    return;
+  const parts = [\`<span class="molecule-formula">\${mol.formula}</span>\`];
+  const href = noteHref(mol.note);
+  parts.push(href ? \`<a href="\${href}">\\u{1F4D6} \${mol.note}</a>\` : \`<span>\\u{1F4D6} \${mol.note}</span>\`);
+  if (is3D && mol.pdb)
+    parts.push(\`<span>PDB \${mol.pdb}</span>\`);
+  if (mol.src === "manual")
+    parts.push(\`<span title="\\u4EBA\\u5DE5\\u4E66\\u5199\\u5E76\\u6838\\u5BF9\\u4E86\\u539F\\u5B50\\u6570">\\xB7</span>\`);
+  metaEl.innerHTML = parts.join("");
+}
+function render() {
+  const mol = entries[current];
+  if (!view || !mol)
+    return;
+  if (titleEl)
+    titleEl.textContent = mol.name;
+  if (groupEl)
+    groupEl.textContent = mol.group;
+  if (indexEl)
+    indexEl.textContent = \`\${current + 1} / \${entries.length}\`;
+  if (tipEl)
+    tipEl.textContent = mol.tip ?? "";
+  renderMeta(mol);
+  if (modeBtn) {
+    const can3D = Boolean(mol.pdb);
+    modeBtn.disabled = !can3D;
+    modeBtn.textContent = is3D ? "\\u770B 2D" : "\\u770B 3D";
+    modeBtn.classList.toggle("is-on", is3D);
+    modeBtn.title = can3D ? "\\u5207\\u6362 2D \\u7ED3\\u6784\\u5F0F / 3D \\u7ED3\\u6784" : "\\u8BE5\\u6761\\u76EE\\u53EA\\u6709 2D \\u7ED3\\u6784\\u5F0F\\uFF083D \\u4EC5\\u63D0\\u4F9B PDB \\u7ED3\\u6784\\u7684\\u5927\\u5206\\u5B50\\uFF09";
+  }
+  if (is3D && mol.pdb) {
+    render3D(mol, view);
+  } else if (mol.smiles) {
+    render2D(mol);
+  } else {
+    setHint("\\u672C\\u6761\\u76EE\\u53EA\\u63D0\\u4F9B 3D \\u7ED3\\u6784\\uFF0C\\u70B9\\u4E0B\\u65B9\\u300C3D\\u300D\\u6309\\u94AE\\u52A0\\u8F7D");
+  }
+}
+function step(delta) {
+  if (entries.length === 0)
+    return;
+  current = (current + delta + entries.length) % entries.length;
+  render();
+}
+async function init() {
+  if (!wrapper || !view)
+    return;
+  const problems = [];
+  try {
+    await loadMolecules();
+  } catch (err) {
+    problems.push(
+      \`\\u5206\\u5B50\\u6570\\u636E\\u52A0\\u8F7D\\u5931\\u8D25\\uFF1A\${err instanceof Error ? err.message : String(err)}\`
+    );
+  }
+  try {
+    await loadFileMap();
+    if (!fileMap || Object.keys(fileMap).length === 0) {
+      problems.push("contentIndex \\u7D22\\u5F15\\u4E3A\\u7A7A\\uFF0C\\u65E0\\u6CD5\\u6309\\u5F53\\u524D\\u9875\\u9762\\u7B5B\\u9009");
+    }
+  } catch (err) {
+    problems.push(\`contentIndex \\u52A0\\u8F7D\\u5931\\u8D25\\uFF1A\${err instanceof Error ? err.message : String(err)}\`);
+  }
+  entries = problems.length === 0 ? pickEntries() : [];
+  if (entries.length === 0) {
+    if (problems.length > 0) {
+      wrapper.style.display = "";
+      if (titleEl)
+        titleEl.textContent = "\\u7ED3\\u6784\\u6F14\\u793A";
+      setHint(
+        \`\${problems.join("<br/>")}<br/><span style="font-family:var(--codeFont);opacity:.7">\\u7AD9\\u70B9\\u6839 \${siteRoot() || "/"} \\xB7 \\u67E5\\u627E \${staticUrls("molecules.json").join("\\u3001")}</span>\`
+      );
+    }
+    return;
+  }
+  wrapper.style.display = "";
+  await getRDKit();
+  prevBtn?.addEventListener("click", () => step(-1));
+  nextBtn?.addEventListener("click", () => step(1));
+  modeBtn?.addEventListener("click", () => {
+    is3D = !is3D;
+    render();
+  });
+  let lastTheme = document.documentElement.getAttribute("saved-theme");
+  new MutationObserver(() => {
+    const now = document.documentElement.getAttribute("saved-theme");
+    if (now === lastTheme)
+      return;
+    lastTheme = now;
+    const mol = entries[current];
+    if (is3D && mol?.pdb && view)
+      render3D(mol, view);
+  }).observe(document.documentElement, { attributeFilter: ["saved-theme"] });
+  render();
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
+{
+}
+`;import{jsx as jsx14,jsxs as jsxs8}from"preact/jsx-runtime";function MoleculeViewer({displayClass}){return jsxs8("div",{class:`molecule-wrapper ${displayClass??""}`,id:"molecule-wrapper",style:{display:"none"},children:[jsx14("h3",{children:"\u7ED3\u6784\u6F14\u793A"}),jsxs8("div",{class:"molecule-head",children:[jsx14("span",{class:"molecule-title",id:"molecule-title",children:"\u7ED3\u6784\u6F14\u793A"}),jsx14("span",{class:"molecule-group",id:"molecule-group"})]}),jsx14("div",{class:"molecule-view",id:"molecule-view",children:jsx14("div",{class:"molecule-hint",id:"molecule-hint",children:"\u6B63\u5728\u52A0\u8F7D\u6E32\u67D3\u5668\u2026"})}),jsx14("div",{class:"molecule-meta",id:"molecule-meta"}),jsxs8("div",{class:"molecule-ctrl",children:[jsx14("button",{class:"molecule-btn",id:"molecule-prev",title:"\u4E0A\u4E00\u4E2A\u7ED3\u6784","aria-label":"\u4E0A\u4E00\u4E2A",children:"\u25C0"}),jsx14("span",{class:"molecule-index",id:"molecule-index",children:"0 / 0"}),jsx14("button",{class:"molecule-btn",id:"molecule-next",title:"\u4E0B\u4E00\u4E2A\u7ED3\u6784","aria-label":"\u4E0B\u4E00\u4E2A",children:"\u25B6"}),jsx14("button",{class:"molecule-btn molecule-btn-mode",id:"molecule-mode",title:"\u5207\u6362 2D / 3D",children:"\u770B 3D"})]}),jsx14("div",{class:"molecule-tip",id:"molecule-tip"})]})}__name(MoleculeViewer,"MoleculeViewer");MoleculeViewer.css=molecule_default;MoleculeViewer.afterDOMLoaded=molecule_inline_default;var MoleculeViewer_default=__name(()=>MoleculeViewer,"default");import{Fragment as Fragment4,jsx as jsx15}from"preact/jsx-runtime";var MobileOnly_default=__name(component=>{if(component){let MobileOnly2=function(props){return jsx15(Component,{displayClass:"mobile-only",...props})};var MobileOnly=MobileOnly2;__name(MobileOnly2,"MobileOnly");let Component=component;return MobileOnly2.displayName=component.displayName,MobileOnly2.afterDOMLoaded=component?.afterDOMLoaded,MobileOnly2.beforeDOMLoaded=component?.beforeDOMLoaded,MobileOnly2.css=component?.css,MobileOnly2}else return()=>jsx15(Fragment4,{})},"default");import{jsx as jsx16,jsxs as jsxs9}from"preact/jsx-runtime";function byDateAndAlphabetical(f1,f2){if(f1.dates&&f2.dates)return f2.dates.modified.getTime()-f1.dates.modified.getTime();if(f1.dates&&!f2.dates)return-1;if(!f1.dates&&f2.dates)return 1;let f1Title=f1.frontmatter?.title.toLowerCase()??"",f2Title=f2.frontmatter?.title.toLowerCase()??"";return f1Title.localeCompare(f2Title)}__name(byDateAndAlphabetical,"byDateAndAlphabetical");function PageList({fileData,allFiles,limit}){let list=allFiles.sort(byDateAndAlphabetical);return limit&&(list=list.slice(0,limit)),jsx16("ul",{class:"section-ul",children:list.map(page=>{let title=page.frontmatter?.title,tags=page.frontmatter?.tags??[];return jsx16("li",{class:"section-li",children:jsxs9("div",{class:"section",children:[page.dates&&jsx16("p",{class:"meta",children:jsx16(Date2,{date:page.dates.modified})}),jsx16("div",{class:"desc",children:jsx16("h3",{children:jsx16("a",{href:resolveRelative(fileData.slug,page.slug),class:"internal",children:title})})}),jsx16("ul",{class:"tags",children:tags.map(tag=>jsx16("li",{children:jsxs9("a",{class:"internal tag-link",href:resolveRelative(fileData.slug,`tags/${tag}`),children:["#",tag]})}))})]})})})})}__name(PageList,"PageList");PageList.css=`
 .section h3 {
   margin: 0;
 }
@@ -42228,7 +42888,7 @@ markmap-common/dist/index.mjs:
 .section > .tags {
   margin: 0;
 }
-`;import{jsx as jsx16,jsxs as jsxs9}from"preact/jsx-runtime";function PageTitle({fileData,cfg}){let title=cfg?.pageTitle??"Untitled Quartz",isRoot=fileData.slug==="index",parentDir=isRoot?"":pathToRoot(fileData.slug);return jsxs9("h1",{class:"page-title",children:[jsx16("a",{href:"https://qinanze.github.io/notes/","data-router-ignore":!0,children:title}),!isRoot&&jsx16("a",{href:"#",class:"page-back",id:"page-back-btn",title:"\u8FD4\u56DE\u4E0A\u4E00\u7EA7","aria-label":"\u8FD4\u56DE\u4E0A\u4E00\u7EA7",children:jsxs9("svg",{viewBox:"0 0 24 24",width:"18",height:"18",fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true",children:[jsx16("line",{x1:"20",y1:"12",x2:"5",y2:"12"}),jsx16("polyline",{points:"11,18 5,12 11,6"})]})})]})}__name(PageTitle,"PageTitle");PageTitle.css=`
+`;import{jsx as jsx17,jsxs as jsxs10}from"preact/jsx-runtime";function PageTitle({fileData,cfg}){let title=cfg?.pageTitle??"Untitled Quartz",isRoot=fileData.slug==="index",parentDir=isRoot?"":pathToRoot(fileData.slug);return jsxs10("h1",{class:"page-title",children:[jsx17("a",{href:"https://qinanze.github.io/notes/","data-router-ignore":!0,children:title}),!isRoot&&jsx17("a",{href:"#",class:"page-back",id:"page-back-btn",title:"\u8FD4\u56DE\u4E0A\u4E00\u7EA7","aria-label":"\u8FD4\u56DE\u4E0A\u4E00\u7EA7",children:jsxs10("svg",{viewBox:"0 0 24 24",width:"18",height:"18",fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round","aria-hidden":"true",children:[jsx17("line",{x1:"20",y1:"12",x2:"5",y2:"12"}),jsx17("polyline",{points:"11,18 5,12 11,6"})]})})]})}__name(PageTitle,"PageTitle");PageTitle.css=`
 .page-title {
   margin: 0;
   display: flex;
@@ -42260,7 +42920,7 @@ markmap-common/dist/index.mjs:
 .page-back svg {
   display: block;
 }
-`;var PageTitle_default=__name(()=>PageTitle,"default");import{jsx as jsx17,jsxs as jsxs10}from"preact/jsx-runtime";var search_default=`
+`;var PageTitle_default=__name(()=>PageTitle,"default");import{jsx as jsx18,jsxs as jsxs11}from"preact/jsx-runtime";var search_default=`
 .search {
   min-width: fit-content;
   max-width: 14rem;
@@ -43528,7 +44188,7 @@ document.addEventListener("nav", async (e) => {
   }
   registerEscapeHandler(container, hideSearch);
 });
-`;import{jsx as jsx18,jsxs as jsxs11}from"preact/jsx-runtime";var Search_default=__name(()=>{function Search(){return jsxs11("div",{class:"search",children:[jsxs11("div",{id:"search-icon",children:[jsx18("p",{children:"Search"}),jsx18("div",{}),jsxs11("svg",{tabIndex:0,"aria-labelledby":"title desc",role:"img",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 19.9 19.7",children:[jsx18("title",{id:"title",children:"Search"}),jsx18("desc",{id:"desc",children:"Search"}),jsxs11("g",{class:"search-path",fill:"none",children:[jsx18("path",{"stroke-linecap":"square",d:"M18.5 18.3l-5.4-5.4"}),jsx18("circle",{cx:"8",cy:"8",r:"7"})]})]})]}),jsx18("div",{id:"search-container",children:jsxs11("div",{id:"search-space",children:[jsx18("input",{autocomplete:"off",id:"search-bar",name:"search",type:"text","aria-label":"Search for something",placeholder:"Search for something"}),jsx18("div",{id:"results-container"})]})})]})}return __name(Search,"Search"),Search.afterDOMLoaded=search_inline_default,Search.css=search_default,Search},"default");var sitefx_inline_default=`// quartz/components/scripts/quartz/components/scripts/sitefx.inline.ts
+`;import{jsx as jsx19,jsxs as jsxs12}from"preact/jsx-runtime";var Search_default=__name(()=>{function Search(){return jsxs12("div",{class:"search",children:[jsxs12("div",{id:"search-icon",children:[jsx19("p",{children:"Search"}),jsx19("div",{}),jsxs12("svg",{tabIndex:0,"aria-labelledby":"title desc",role:"img",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 19.9 19.7",children:[jsx19("title",{id:"title",children:"Search"}),jsx19("desc",{id:"desc",children:"Search"}),jsxs12("g",{class:"search-path",fill:"none",children:[jsx19("path",{"stroke-linecap":"square",d:"M18.5 18.3l-5.4-5.4"}),jsx19("circle",{cx:"8",cy:"8",r:"7"})]})]})]}),jsx19("div",{id:"search-container",children:jsxs12("div",{id:"search-space",children:[jsx19("input",{autocomplete:"off",id:"search-bar",name:"search",type:"text","aria-label":"Search for something",placeholder:"Search for something"}),jsx19("div",{id:"results-container"})]})})]})}return __name(Search,"Search"),Search.afterDOMLoaded=search_inline_default,Search.css=search_default,Search},"default");var sitefx_inline_default=`// quartz/components/scripts/quartz/components/scripts/sitefx.inline.ts
 var BASE_PATH = "/notes";
 var SITE_ORIGIN = "https://qinanze.github.io";
 var SCROLL_THRESHOLD = 50;
@@ -43551,7 +44211,7 @@ document.addEventListener("click", (e) => {
     window.location.href = SITE_ORIGIN + BASE_PATH;
   }
 });
-`;function SiteFx(){return null}__name(SiteFx,"SiteFx");SiteFx.afterDOMLoaded=sitefx_inline_default;var SiteFx_default=__name(()=>SiteFx,"default");import{jsx as jsx19}from"preact/jsx-runtime";function Spacer({displayClass}){let className=displayClass?`spacer ${displayClass}`:"spacer";return jsx19("div",{class:className})}__name(Spacer,"Spacer");var Spacer_default=__name(()=>Spacer,"default");var legacyToc_default=`
+`;function SiteFx(){return null}__name(SiteFx,"SiteFx");SiteFx.afterDOMLoaded=sitefx_inline_default;var SiteFx_default=__name(()=>SiteFx,"default");import{jsx as jsx20}from"preact/jsx-runtime";function Spacer({displayClass}){let className=displayClass?`spacer ${displayClass}`:"spacer";return jsx20("div",{class:className})}__name(Spacer,"Spacer");var Spacer_default=__name(()=>Spacer,"default");var legacyToc_default=`
 details#toc summary {
   cursor: pointer;
 }
@@ -43691,7 +44351,7 @@ document.addEventListener("nav", () => {
   const headers = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
   headers.forEach((header) => observer.observe(header));
 });
-`;import{jsx as jsx20,jsxs as jsxs12}from"preact/jsx-runtime";var defaultOptions9={layout:"modern"};function TableOfContents2({fileData,displayClass}){return fileData.toc?jsxs12("div",{class:`toc ${displayClass}`,children:[jsxs12("button",{type:"button",id:"toc",children:[jsx20("h3",{children:"Table of Contents"}),jsx20("svg",{xmlns:"http://www.w3.org/2000/svg",width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round",class:"fold",children:jsx20("polyline",{points:"6 9 12 15 18 9"})})]}),jsx20("div",{id:"toc-content",children:jsx20("ul",{class:"overflow",children:fileData.toc.map(tocEntry=>jsx20("li",{class:`depth-${tocEntry.depth}`,children:jsx20("a",{href:`#${tocEntry.slug}`,"data-for":tocEntry.slug,children:tocEntry.text})},tocEntry.slug))})})]}):null}__name(TableOfContents2,"TableOfContents");TableOfContents2.css=toc_default;TableOfContents2.afterDOMLoaded=toc_inline_default;function LegacyTableOfContents({fileData}){return fileData.toc?jsxs12("details",{id:"toc",open:!0,children:[jsx20("summary",{children:jsx20("h3",{children:"Table of Contents"})}),jsx20("ul",{children:fileData.toc.map(tocEntry=>jsx20("li",{class:`depth-${tocEntry.depth}`,children:jsx20("a",{href:`#${tocEntry.slug}`,"data-for":tocEntry.slug,children:tocEntry.text})},tocEntry.slug))})]}):null}__name(LegacyTableOfContents,"LegacyTableOfContents");LegacyTableOfContents.css=legacyToc_default;var TableOfContents_default=__name(opts=>(opts?.layout??defaultOptions9.layout)==="modern"?TableOfContents2:LegacyTableOfContents,"default");import{jsx as jsx21}from"preact/jsx-runtime";function TagList({fileData}){let tags=fileData.frontmatter?.tags,baseDir=pathToRoot(fileData.slug);return tags&&tags.length>0?jsx21("ul",{class:"tags",children:tags.map(tag=>{let display=`#${tag}`,linkDest=baseDir+`/tags/${slugTag(tag)}`;return jsx21("li",{children:jsx21("a",{href:linkDest,class:"internal tag-link",children:display})})})}):null}__name(TagList,"TagList");TagList.css=`
+`;import{jsx as jsx21,jsxs as jsxs13}from"preact/jsx-runtime";var defaultOptions9={layout:"modern"};function TableOfContents2({fileData,displayClass}){return fileData.toc?jsxs13("div",{class:`toc ${displayClass}`,children:[jsxs13("button",{type:"button",id:"toc",children:[jsx21("h3",{children:"Table of Contents"}),jsx21("svg",{xmlns:"http://www.w3.org/2000/svg",width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round",class:"fold",children:jsx21("polyline",{points:"6 9 12 15 18 9"})})]}),jsx21("div",{id:"toc-content",children:jsx21("ul",{class:"overflow",children:fileData.toc.map(tocEntry=>jsx21("li",{class:`depth-${tocEntry.depth}`,children:jsx21("a",{href:`#${tocEntry.slug}`,"data-for":tocEntry.slug,children:tocEntry.text})},tocEntry.slug))})})]}):null}__name(TableOfContents2,"TableOfContents");TableOfContents2.css=toc_default;TableOfContents2.afterDOMLoaded=toc_inline_default;function LegacyTableOfContents({fileData}){return fileData.toc?jsxs13("details",{id:"toc",open:!0,children:[jsx21("summary",{children:jsx21("h3",{children:"Table of Contents"})}),jsx21("ul",{children:fileData.toc.map(tocEntry=>jsx21("li",{class:`depth-${tocEntry.depth}`,children:jsx21("a",{href:`#${tocEntry.slug}`,"data-for":tocEntry.slug,children:tocEntry.text})},tocEntry.slug))})]}):null}__name(LegacyTableOfContents,"LegacyTableOfContents");LegacyTableOfContents.css=legacyToc_default;var TableOfContents_default=__name(opts=>(opts?.layout??defaultOptions9.layout)==="modern"?TableOfContents2:LegacyTableOfContents,"default");import{jsx as jsx22}from"preact/jsx-runtime";function TagList({fileData}){let tags=fileData.frontmatter?.tags,baseDir=pathToRoot(fileData.slug);return tags&&tags.length>0?jsx22("ul",{class:"tags",children:tags.map(tag=>{let display=`#${tag}`,linkDest=baseDir+`/tags/${slugTag(tag)}`;return jsx22("li",{children:jsx22("a",{href:linkDest,class:"internal tag-link",children:display})})})}):null}__name(TagList,"TagList");TagList.css=`
 .tags {
   list-style: none;
   display: flex;
@@ -44229,7 +44889,7 @@ if (document.readyState === "loading") {
 } else {
   initTimer();
 }
-`;import{jsx as jsx22,jsxs as jsxs13}from"preact/jsx-runtime";function Timer(){return jsxs13("div",{class:"timer-float",children:[jsx22("div",{class:"timer-ball",children:"25:00"}),jsxs13("div",{class:"timer-panel",children:[jsxs13("div",{class:"timer-header",children:[jsx22("span",{class:"timer-title",children:"\u23F1\uFE0F \u8BA1\u65F6\u5668"}),jsx22("button",{class:"timer-close",children:"\xD7"})]}),jsx22("div",{class:"timer-progress",children:jsx22("div",{class:"timer-progress-bar"})}),jsxs13("div",{class:"timer-display",children:[jsx22("div",{class:"timer-time",children:"25:00"}),jsx22("div",{class:"timer-mode",children:"\u4E13\u6CE8\u6A21\u5F0F"})]}),jsxs13("div",{class:"timer-modes",children:[jsx22("button",{class:"timer-mode-btn active","data-mode":"pomodoro",children:"\u4E13\u6CE8"}),jsx22("button",{class:"timer-mode-btn","data-mode":"shortBreak",children:"\u77ED\u4F11\u606F"}),jsx22("button",{class:"timer-mode-btn","data-mode":"longBreak",children:"\u957F\u4F11\u606F"}),jsx22("button",{class:"timer-mode-btn","data-mode":"custom",children:"\u81EA\u5B9A\u4E49"})]}),jsxs13("div",{class:"timer-custom",children:[jsx22("label",{children:"\u81EA\u5B9A\u4E49\u65F6\u957F\uFF08\u5206\u949F\uFF09"}),jsx22("input",{type:"number",value:"25",min:"1",max:"120"})]}),jsxs13("div",{class:"timer-controls",children:[jsx22("button",{class:"timer-btn start",children:"\u5F00\u59CB"}),jsx22("button",{class:"timer-btn reset",children:"\u91CD\u7F6E"})]})]})]})}__name(Timer,"Timer");Timer.css=timer_default;Timer.afterDOMLoaded=timer_inline_default;var Timer_default=__name(()=>Timer,"default");import{useState,useEffect}from"preact/hooks";var todoList_default=`
+`;import{jsx as jsx23,jsxs as jsxs14}from"preact/jsx-runtime";function Timer(){return jsxs14("div",{class:"timer-float",children:[jsx23("div",{class:"timer-ball",children:"25:00"}),jsxs14("div",{class:"timer-panel",children:[jsxs14("div",{class:"timer-header",children:[jsx23("span",{class:"timer-title",children:"\u23F1\uFE0F \u8BA1\u65F6\u5668"}),jsx23("button",{class:"timer-close",children:"\xD7"})]}),jsx23("div",{class:"timer-progress",children:jsx23("div",{class:"timer-progress-bar"})}),jsxs14("div",{class:"timer-display",children:[jsx23("div",{class:"timer-time",children:"25:00"}),jsx23("div",{class:"timer-mode",children:"\u4E13\u6CE8\u6A21\u5F0F"})]}),jsxs14("div",{class:"timer-modes",children:[jsx23("button",{class:"timer-mode-btn active","data-mode":"pomodoro",children:"\u4E13\u6CE8"}),jsx23("button",{class:"timer-mode-btn","data-mode":"shortBreak",children:"\u77ED\u4F11\u606F"}),jsx23("button",{class:"timer-mode-btn","data-mode":"longBreak",children:"\u957F\u4F11\u606F"}),jsx23("button",{class:"timer-mode-btn","data-mode":"custom",children:"\u81EA\u5B9A\u4E49"})]}),jsxs14("div",{class:"timer-custom",children:[jsx23("label",{children:"\u81EA\u5B9A\u4E49\u65F6\u957F\uFF08\u5206\u949F\uFF09"}),jsx23("input",{type:"number",value:"25",min:"1",max:"120"})]}),jsxs14("div",{class:"timer-controls",children:[jsx23("button",{class:"timer-btn start",children:"\u5F00\u59CB"}),jsx23("button",{class:"timer-btn reset",children:"\u91CD\u7F6E"})]})]})]})}__name(Timer,"Timer");Timer.css=timer_default;Timer.afterDOMLoaded=timer_inline_default;var Timer_default=__name(()=>Timer,"default");import{useState,useEffect}from"preact/hooks";var todoList_default=`
 .todo-list-container {
   margin: 1rem 0;
   background: var(--light);
@@ -44353,7 +45013,7 @@ if (document.readyState === "loading") {
   color: var(--secondary);
   font-size: 0.85rem;
 }
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsidG9kb0xpc3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRjtFQUNFOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTs7O0FBR0Y7RUFDRTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi50b2RvLWxpc3QtY29udGFpbmVyIHtcbiAgbWFyZ2luOiAxcmVtIDA7XG4gIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG4udG9kby1saXN0LWhlYWRlciB7XG4gIHBhZGRpbmc6IDEwcHggMTJweDtcbiAgYmFja2dyb3VuZDogdmFyKC0tYWNjZW50KTtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDAuOXJlbTtcbiAgY3Vyc29yOiBtb3ZlO1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbn1cblxuLnRvZG8tbGlzdC1pbnB1dC1jb250YWluZXIge1xuICBwYWRkaW5nOiAxMHB4IDEycHg7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICBkaXNwbGF5OiBmbGV4O1xuICBnYXA6IDhweDtcbn1cblxuLnRvZG8tbGlzdC1pbnB1dCB7XG4gIGZsZXg6IDE7XG4gIHBhZGRpbmc6IDZweCAxMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcbiAgYmFja2dyb3VuZDogdmFyKC0tYmcpO1xuICBjb2xvcjogdmFyKC0tdGV4dCk7XG59XG5cbi50b2RvLWxpc3QtaW5wdXQ6Zm9jdXMge1xuICBvdXRsaW5lOiBub25lO1xuICBib3JkZXItY29sb3I6IHZhcigtLWFjY2VudCk7XG59XG5cbi50b2RvLWxpc3QtYWRkLWJ0biB7XG4gIHBhZGRpbmc6IDZweCAxMnB4O1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1hY2NlbnQpO1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAwLjJzO1xufVxuXG4udG9kby1saXN0LWFkZC1idG46aG92ZXIge1xuICBvcGFjaXR5OiAwLjk7XG59XG5cbi50b2RvLWxpc3QtaXRlbXMge1xuICBtYXgtaGVpZ2h0OiAyNTBweDtcbiAgb3ZlcmZsb3cteTogYXV0bztcbiAgcGFkZGluZzogNnB4O1xufVxuXG4udG9kby1saXN0LWl0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcbiAgZ2FwOiA4cHg7XG4gIHBhZGRpbmc6IDZweCA4cHg7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAwLjJzO1xufVxuXG4udG9kby1saXN0LWl0ZW06aG92ZXIge1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1iZyk7XG59XG5cbi50b2RvLWxpc3QtaXRlbSBpbnB1dFt0eXBlPVwiY2hlY2tib3hcIl0ge1xuICB3aWR0aDogMTZweDtcbiAgaGVpZ2h0OiAxNnB4O1xuICBtYXJnaW4tdG9wOiAycHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYWNjZW50LWNvbG9yOiB2YXIoLS1hY2NlbnQpO1xuICBmbGV4LXNocmluazogMDtcbn1cblxuLnRvZG8tbGlzdC1pdGVtIGxhYmVsIHtcbiAgZmxleDogMTtcbiAgZm9udC1zaXplOiAwLjg1cmVtO1xuICBjb2xvcjogdmFyKC0tdGV4dCk7XG4gIHdvcmQtYnJlYWs6IGJyZWFrLXdvcmQ7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgbGluZS1oZWlnaHQ6IDEuNDtcbn1cblxuLnRvZG8tbGlzdC1pdGVtLmNoZWNrZWQgbGFiZWwge1xuICB0ZXh0LWRlY29yYXRpb246IGxpbmUtdGhyb3VnaDtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG59XG5cbi50b2RvLWxpc3QtaXRlbSAuZGVsZXRlLWJ0biB7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG4gIGJvcmRlcjogbm9uZTtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuMnM7XG4gIHBhZGRpbmc6IDA7XG4gIGxpbmUtaGVpZ2h0OiAxO1xufVxuXG4udG9kby1saXN0LWl0ZW06aG92ZXIgLmRlbGV0ZS1idG4ge1xuICBvcGFjaXR5OiAxO1xufVxuXG4udG9kby1saXN0LWl0ZW0gLmRlbGV0ZS1idG46aG92ZXIge1xuICBjb2xvcjogI2U3NGMzYztcbn1cblxuLnRvZG8tbGlzdC1lbXB0eSB7XG4gIHBhZGRpbmc6IDE2cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcbn1cbiJdfQ== */`;import{jsx as jsx23,jsxs as jsxs14}from"preact/jsx-runtime";var STORAGE_KEY="quartz-todo-list";function loadTodos(){try{let stored=localStorage.getItem(STORAGE_KEY);return stored?JSON.parse(stored):[]}catch{return[]}}__name(loadTodos,"loadTodos");function saveTodos(todos){localStorage.setItem(STORAGE_KEY,JSON.stringify(todos))}__name(saveTodos,"saveTodos");function TodoListComponent(){let[todos,setTodos]=useState([]),[inputValue,setInputValue]=useState("");useEffect(()=>{setTodos(loadTodos())},[]),useEffect(()=>{let handleNav=__name(()=>{setTimeout(()=>{setTodos(loadTodos())},100)},"handleNav");return document.addEventListener("nav",handleNav),()=>document.removeEventListener("nav",handleNav)},[]);let toggleTodo=__name(id=>{let updated=todos.map(todo=>todo.id===id?{...todo,checked:!todo.checked}:todo);setTodos(updated),saveTodos(updated)},"toggleTodo"),addTodo=__name(()=>{if(!inputValue.trim())return;let newTodo={id:Date.now().toString(),text:inputValue.trim(),checked:!1},updated=[...todos,newTodo];setTodos(updated),saveTodos(updated),setInputValue("")},"addTodo"),deleteTodo=__name(id=>{let updated=todos.filter(todo=>todo.id!==id);setTodos(updated),saveTodos(updated)},"deleteTodo");return jsxs14("div",{class:"todo-list-container",children:[jsx23("div",{class:"todo-list-header",children:jsx23("span",{children:"\u5F85\u529E\u4E8B\u9879"})}),jsxs14("div",{class:"todo-list-input-container",children:[jsx23("input",{type:"text",class:"todo-list-input",placeholder:"\u6DFB\u52A0\u5F85\u529E...",value:inputValue,onInput:e=>setInputValue(e.target.value),onKeyDown:__name(e=>{e.key==="Enter"&&addTodo()},"handleKeyDown")}),jsx23("button",{class:"todo-list-add-btn",onClick:addTodo,children:"\u6DFB\u52A0"})]}),jsx23("div",{class:"todo-list-items",children:todos.length===0?jsx23("div",{class:"todo-list-empty",children:"\u6682\u65E0\u5F85\u529E\u4E8B\u9879"}):todos.map(todo=>jsxs14("div",{class:`todo-list-item ${todo.checked?"checked":""}`,children:[jsx23("input",{type:"checkbox",checked:todo.checked,onChange:()=>toggleTodo(todo.id)}),jsx23("label",{onClick:()=>toggleTodo(todo.id),children:todo.text}),jsx23("button",{class:"delete-btn",onClick:()=>deleteTodo(todo.id),children:"\xD7"})]},todo.id))})]})}__name(TodoListComponent,"TodoListComponent");var TodoList=__name(()=>TodoListComponent,"TodoList");TodoList.css=todoList_default;var todo_default=`
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsidG9kb0xpc3Quc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRjtFQUNFOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTs7O0FBR0Y7RUFDRTs7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi50b2RvLWxpc3QtY29udGFpbmVyIHtcbiAgbWFyZ2luOiAxcmVtIDA7XG4gIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG4udG9kby1saXN0LWhlYWRlciB7XG4gIHBhZGRpbmc6IDEwcHggMTJweDtcbiAgYmFja2dyb3VuZDogdmFyKC0tYWNjZW50KTtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDAuOXJlbTtcbiAgY3Vyc29yOiBtb3ZlO1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbn1cblxuLnRvZG8tbGlzdC1pbnB1dC1jb250YWluZXIge1xuICBwYWRkaW5nOiAxMHB4IDEycHg7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICBkaXNwbGF5OiBmbGV4O1xuICBnYXA6IDhweDtcbn1cblxuLnRvZG8tbGlzdC1pbnB1dCB7XG4gIGZsZXg6IDE7XG4gIHBhZGRpbmc6IDZweCAxMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcbiAgYmFja2dyb3VuZDogdmFyKC0tYmcpO1xuICBjb2xvcjogdmFyKC0tdGV4dCk7XG59XG5cbi50b2RvLWxpc3QtaW5wdXQ6Zm9jdXMge1xuICBvdXRsaW5lOiBub25lO1xuICBib3JkZXItY29sb3I6IHZhcigtLWFjY2VudCk7XG59XG5cbi50b2RvLWxpc3QtYWRkLWJ0biB7XG4gIHBhZGRpbmc6IDZweCAxMnB4O1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1hY2NlbnQpO1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAwLjJzO1xufVxuXG4udG9kby1saXN0LWFkZC1idG46aG92ZXIge1xuICBvcGFjaXR5OiAwLjk7XG59XG5cbi50b2RvLWxpc3QtaXRlbXMge1xuICBtYXgtaGVpZ2h0OiAyNTBweDtcbiAgb3ZlcmZsb3cteTogYXV0bztcbiAgcGFkZGluZzogNnB4O1xufVxuXG4udG9kby1saXN0LWl0ZW0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcbiAgZ2FwOiA4cHg7XG4gIHBhZGRpbmc6IDZweCA4cHg7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAwLjJzO1xufVxuXG4udG9kby1saXN0LWl0ZW06aG92ZXIge1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1iZyk7XG59XG5cbi50b2RvLWxpc3QtaXRlbSBpbnB1dFt0eXBlPVwiY2hlY2tib3hcIl0ge1xuICB3aWR0aDogMTZweDtcbiAgaGVpZ2h0OiAxNnB4O1xuICBtYXJnaW4tdG9wOiAycHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYWNjZW50LWNvbG9yOiB2YXIoLS1hY2NlbnQpO1xuICBmbGV4LXNocmluazogMDtcbn1cblxuLnRvZG8tbGlzdC1pdGVtIGxhYmVsIHtcbiAgZmxleDogMTtcbiAgZm9udC1zaXplOiAwLjg1cmVtO1xuICBjb2xvcjogdmFyKC0tdGV4dCk7XG4gIHdvcmQtYnJlYWs6IGJyZWFrLXdvcmQ7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgbGluZS1oZWlnaHQ6IDEuNDtcbn1cblxuLnRvZG8tbGlzdC1pdGVtLmNoZWNrZWQgbGFiZWwge1xuICB0ZXh0LWRlY29yYXRpb246IGxpbmUtdGhyb3VnaDtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG59XG5cbi50b2RvLWxpc3QtaXRlbSAuZGVsZXRlLWJ0biB7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG4gIGJvcmRlcjogbm9uZTtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuMnM7XG4gIHBhZGRpbmc6IDA7XG4gIGxpbmUtaGVpZ2h0OiAxO1xufVxuXG4udG9kby1saXN0LWl0ZW06aG92ZXIgLmRlbGV0ZS1idG4ge1xuICBvcGFjaXR5OiAxO1xufVxuXG4udG9kby1saXN0LWl0ZW0gLmRlbGV0ZS1idG46aG92ZXIge1xuICBjb2xvcjogI2U3NGMzYztcbn1cblxuLnRvZG8tbGlzdC1lbXB0eSB7XG4gIHBhZGRpbmc6IDE2cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcbn1cbiJdfQ== */`;import{jsx as jsx24,jsxs as jsxs15}from"preact/jsx-runtime";var STORAGE_KEY="quartz-todo-list";function loadTodos(){try{let stored=localStorage.getItem(STORAGE_KEY);return stored?JSON.parse(stored):[]}catch{return[]}}__name(loadTodos,"loadTodos");function saveTodos(todos){localStorage.setItem(STORAGE_KEY,JSON.stringify(todos))}__name(saveTodos,"saveTodos");function TodoListComponent(){let[todos,setTodos]=useState([]),[inputValue,setInputValue]=useState("");useEffect(()=>{setTodos(loadTodos())},[]),useEffect(()=>{let handleNav=__name(()=>{setTimeout(()=>{setTodos(loadTodos())},100)},"handleNav");return document.addEventListener("nav",handleNav),()=>document.removeEventListener("nav",handleNav)},[]);let toggleTodo=__name(id=>{let updated=todos.map(todo=>todo.id===id?{...todo,checked:!todo.checked}:todo);setTodos(updated),saveTodos(updated)},"toggleTodo"),addTodo=__name(()=>{if(!inputValue.trim())return;let newTodo={id:Date.now().toString(),text:inputValue.trim(),checked:!1},updated=[...todos,newTodo];setTodos(updated),saveTodos(updated),setInputValue("")},"addTodo"),deleteTodo=__name(id=>{let updated=todos.filter(todo=>todo.id!==id);setTodos(updated),saveTodos(updated)},"deleteTodo");return jsxs15("div",{class:"todo-list-container",children:[jsx24("div",{class:"todo-list-header",children:jsx24("span",{children:"\u5F85\u529E\u4E8B\u9879"})}),jsxs15("div",{class:"todo-list-input-container",children:[jsx24("input",{type:"text",class:"todo-list-input",placeholder:"\u6DFB\u52A0\u5F85\u529E...",value:inputValue,onInput:e=>setInputValue(e.target.value),onKeyDown:__name(e=>{e.key==="Enter"&&addTodo()},"handleKeyDown")}),jsx24("button",{class:"todo-list-add-btn",onClick:addTodo,children:"\u6DFB\u52A0"})]}),jsx24("div",{class:"todo-list-items",children:todos.length===0?jsx24("div",{class:"todo-list-empty",children:"\u6682\u65E0\u5F85\u529E\u4E8B\u9879"}):todos.map(todo=>jsxs15("div",{class:`todo-list-item ${todo.checked?"checked":""}`,children:[jsx24("input",{type:"checkbox",checked:todo.checked,onChange:()=>toggleTodo(todo.id)}),jsx24("label",{onClick:()=>toggleTodo(todo.id),children:todo.text}),jsx24("button",{class:"delete-btn",onClick:()=>deleteTodo(todo.id),children:"\xD7"})]},todo.id))})]})}__name(TodoListComponent,"TodoListComponent");var TodoList=__name(()=>TodoListComponent,"TodoList");TodoList.css=todoList_default;var todo_default=`
 @charset "UTF-8";
 .todo-float {
   position: fixed;
@@ -44772,7 +45432,7 @@ if (document.readyState === "loading") {
 } else {
   initTodo();
 }
-`;import{jsx as jsx24,jsxs as jsxs15}from"preact/jsx-runtime";function Todo(){return jsxs15("div",{class:"todo-float","data-spa-preserve":"true",id:"todo-component",children:[jsx24("div",{class:"todo-ball",children:"\u5F85\u529E"}),jsxs15("div",{class:"todo-panel",children:[jsxs15("div",{class:"todo-header",children:[jsx24("span",{class:"todo-title",children:"\u5F85\u529E\u4E8B\u9879"}),jsx24("button",{class:"todo-close",children:"\xD7"})]}),jsxs15("div",{class:"todo-input-container",children:[jsx24("input",{type:"text",class:"todo-input",placeholder:"\u6DFB\u52A0\u5F85\u529E..."}),jsx24("button",{class:"todo-add-btn",children:"\u6DFB\u52A0"})]}),jsx24("div",{class:"todo-list"})]})]})}__name(Todo,"Todo");Todo.css=todo_default;Todo.afterDOMLoaded=todo_inline_default;var Todo_default=__name(()=>Todo,"default");var backlinks_default=`
+`;import{jsx as jsx25,jsxs as jsxs16}from"preact/jsx-runtime";function Todo(){return jsxs16("div",{class:"todo-float","data-spa-preserve":"true",id:"todo-component",children:[jsx25("div",{class:"todo-ball",children:"\u5F85\u529E"}),jsxs16("div",{class:"todo-panel",children:[jsxs16("div",{class:"todo-header",children:[jsx25("span",{class:"todo-title",children:"\u5F85\u529E\u4E8B\u9879"}),jsx25("button",{class:"todo-close",children:"\xD7"})]}),jsxs16("div",{class:"todo-input-container",children:[jsx25("input",{type:"text",class:"todo-input",placeholder:"\u6DFB\u52A0\u5F85\u529E..."}),jsx25("button",{class:"todo-add-btn",children:"\u6DFB\u52A0"})]}),jsx25("div",{class:"todo-list"})]})]})}__name(Todo,"Todo");Todo.css=todo_default;Todo.afterDOMLoaded=todo_inline_default;var Todo_default=__name(()=>Todo,"default");var backlinks_default=`
 .backlinks {
   position: relative;
 }
@@ -44788,7 +45448,7 @@ if (document.readyState === "loading") {
 .backlinks > ul > li > a {
   background-color: transparent;
 }
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsiYmFja2xpbmtzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7O0FBR0U7RUFDRSIsInNvdXJjZXNDb250ZW50IjpbIi5iYWNrbGlua3Mge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgJiA+IGgzIHtcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgbWFyZ2luOiAwO1xuICB9XG5cbiAgJiA+IHVsIHtcbiAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgIHBhZGRpbmc6IDA7XG4gICAgbWFyZ2luOiAwLjVyZW0gMDtcblxuICAgICYgPiBsaSB7XG4gICAgICAmID4gYSB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */`;import{jsx as jsx25,jsxs as jsxs16}from"preact/jsx-runtime";function Backlinks({fileData,allFiles}){let slug2=simplifySlug(fileData.slug),backlinkFiles=allFiles.filter(file=>file.links?.includes(slug2));return jsxs16("div",{class:"backlinks",children:[jsx25("h3",{children:"Backlinks"}),jsx25("ul",{class:"overflow",children:backlinkFiles.length>0?backlinkFiles.map(f=>jsx25("li",{children:jsx25("a",{href:resolveRelative(fileData.slug,f.slug),class:"internal",children:f.frontmatter?.title})})):jsx25("li",{children:"No backlinks found"})})]})}__name(Backlinks,"Backlinks");Backlinks.css=backlinks_default;import{Fragment as Fragment5,jsx as jsx26,jsxs as jsxs17}from"preact/jsx-runtime";import{toJsxRuntime}from"hast-util-to-jsx-runtime";import{jsx as jsx27}from"preact/jsx-runtime";function Content({tree}){let content=toJsxRuntime(tree,{Fragment:Fragment5,jsx:jsx26,jsxs:jsxs17,elementAttributeNameCase:"html"});return jsx27("article",{class:"popover-hint",children:content})}__name(Content,"Content");var Content_default=__name(()=>Content,"default");import{Fragment as Fragment6,jsx as jsx28,jsxs as jsxs18}from"preact/jsx-runtime";import{toJsxRuntime as toJsxRuntime2}from"hast-util-to-jsx-runtime";import path5 from"path";var listPage_default=`
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsiYmFja2xpbmtzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7O0FBR0U7RUFDRSIsInNvdXJjZXNDb250ZW50IjpbIi5iYWNrbGlua3Mge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgJiA+IGgzIHtcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgbWFyZ2luOiAwO1xuICB9XG5cbiAgJiA+IHVsIHtcbiAgICBsaXN0LXN0eWxlOiBub25lO1xuICAgIHBhZGRpbmc6IDA7XG4gICAgbWFyZ2luOiAwLjVyZW0gMDtcblxuICAgICYgPiBsaSB7XG4gICAgICAmID4gYSB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */`;import{jsx as jsx26,jsxs as jsxs17}from"preact/jsx-runtime";function Backlinks({fileData,allFiles}){let slug2=simplifySlug(fileData.slug),backlinkFiles=allFiles.filter(file=>file.links?.includes(slug2));return jsxs17("div",{class:"backlinks",children:[jsx26("h3",{children:"Backlinks"}),jsx26("ul",{class:"overflow",children:backlinkFiles.length>0?backlinkFiles.map(f=>jsx26("li",{children:jsx26("a",{href:resolveRelative(fileData.slug,f.slug),class:"internal",children:f.frontmatter?.title})})):jsx26("li",{children:"No backlinks found"})})]})}__name(Backlinks,"Backlinks");Backlinks.css=backlinks_default;import{Fragment as Fragment5,jsx as jsx27,jsxs as jsxs18}from"preact/jsx-runtime";import{toJsxRuntime}from"hast-util-to-jsx-runtime";import{jsx as jsx28}from"preact/jsx-runtime";function Content({tree}){let content=toJsxRuntime(tree,{Fragment:Fragment5,jsx:jsx27,jsxs:jsxs18,elementAttributeNameCase:"html"});return jsx28("article",{class:"popover-hint",children:content})}__name(Content,"Content");var Content_default=__name(()=>Content,"default");import{Fragment as Fragment6,jsx as jsx29,jsxs as jsxs19}from"preact/jsx-runtime";import{toJsxRuntime as toJsxRuntime2}from"hast-util-to-jsx-runtime";import path5 from"path";var listPage_default=`
 ul.section-ul {
   list-style: none;
   margin-top: 2em;
@@ -44826,7 +45486,7 @@ li.section-li > .section > .meta {
 .popover .section > .tags {
   display: none;
 }
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibGlzdFBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTs7QUFFQTtFQUNFO0VBQ0E7O0FBRUE7RUFDRTtJQUNFOzs7QUFJSjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTs7O0FBTU47RUFDRTs7QUFDQTtFQUNFIiwic291cmNlc0NvbnRlbnQiOlsiQHVzZSBcIi4uLy4uL3N0eWxlcy92YXJpYWJsZXMuc2Nzc1wiIGFzICo7XG5cbnVsLnNlY3Rpb24tdWwge1xuICBsaXN0LXN0eWxlOiBub25lO1xuICBtYXJnaW4tdG9wOiAyZW07XG4gIHBhZGRpbmctbGVmdDogMDtcbn1cblxubGkuc2VjdGlvbi1saSB7XG4gIG1hcmdpbi1ib3R0b206IDFlbTtcblxuICAmID4gLnNlY3Rpb24ge1xuICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiA2ZW0gM2ZyIDFmcjtcblxuICAgIEBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6ICRtb2JpbGVCcmVha3BvaW50KSB7XG4gICAgICAmID4gLnRhZ3Mge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAudGFncyB7XG4gICAgICBqdXN0aWZ5LXNlbGY6IGVuZDtcbiAgICAgIG1hcmdpbi1sZWZ0OiAxcmVtO1xuICAgIH1cblxuICAgICYgPiAuZGVzYyA+IGgzID4gYSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICB9XG5cbiAgICAmID4gLm1ldGEge1xuICAgICAgbWFyZ2luOiAwO1xuICAgICAgZmxleC1iYXNpczogNmVtO1xuICAgICAgb3BhY2l0eTogMC42O1xuICAgIH1cbiAgfVxufVxuXG4vLyBtb2RpZmljYXRpb25zIGluIHBvcG92ZXIgY29udGV4dFxuLnBvcG92ZXIgLnNlY3Rpb24ge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDZlbSAxZnIgIWltcG9ydGFudDtcbiAgJiA+IC50YWdzIHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXX0= */`;import{jsx as jsx29,jsxs as jsxs19}from"preact/jsx-runtime";function FolderContent(props){let{tree,fileData,allFiles}=props,folderSlug=_stripSlashes(simplifySlug(fileData.slug)),allPagesInFolder=allFiles.filter(file=>{let fileSlug=_stripSlashes(simplifySlug(file.slug)),prefixed=fileSlug.startsWith(folderSlug)&&fileSlug!==folderSlug,folderParts=folderSlug.split(path5.posix.sep),isDirectChild=fileSlug.split(path5.posix.sep).length===folderParts.length+1;return prefixed&&isDirectChild}),listProps={...props,allFiles:allPagesInFolder},content=tree.children.length===0?fileData.description:toJsxRuntime2(tree,{Fragment:Fragment6,jsx:jsx28,jsxs:jsxs18,elementAttributeNameCase:"html"});return jsxs19("div",{class:"popover-hint",children:[jsx29("article",{children:content}),jsxs19("p",{children:[allPagesInFolder.length," items under this folder."]}),jsx29("div",{children:jsx29(PageList,{...listProps})})]})}__name(FolderContent,"FolderContent");FolderContent.css=listPage_default+PageList.css;var FolderContent_default=__name(()=>FolderContent,"default");import{Fragment as Fragment7,jsx as jsx30,jsxs as jsxs20}from"preact/jsx-runtime";import{toJsxRuntime as toJsxRuntime3}from"hast-util-to-jsx-runtime";import{jsx as jsx31,jsxs as jsxs21}from"preact/jsx-runtime";var numPages=10;function TagContent(props){let{tree,fileData,allFiles}=props,slug2=fileData.slug;if(!(slug2?.startsWith("tags/")||slug2==="tags"))throw new Error(`Component "TagContent" tried to render a non-tag page: ${slug2}`);let tag=simplifySlug(slug2.slice(5)),allPagesWithTag=__name(tag2=>allFiles.filter(file=>(file.frontmatter?.tags??[]).flatMap(getAllSegmentPrefixes).includes(tag2)),"allPagesWithTag"),content=tree.children.length===0?fileData.description:toJsxRuntime3(tree,{Fragment:Fragment7,jsx:jsx30,jsxs:jsxs20,elementAttributeNameCase:"html"});if(tag===""){let tags=[...new Set(allFiles.flatMap(data=>data.frontmatter?.tags??[]))],tagItemMap=new Map;for(let tag2 of tags)tagItemMap.set(tag2,allPagesWithTag(tag2));return jsxs21("div",{class:"popover-hint",children:[jsx31("article",{children:content}),jsxs21("p",{children:["Found ",tags.length," total tags."]}),jsx31("div",{children:tags.map(tag2=>{let pages=tagItemMap.get(tag2),listProps={...props,allFiles:pages},content2=allFiles.filter(file=>file.slug===`tags/${tag2}`)[0]?.description;return jsxs21("div",{children:[jsx31("h2",{children:jsxs21("a",{class:"internal tag-link",href:`./${tag2}`,children:["#",tag2]})}),content2&&jsx31("p",{children:content2}),jsxs21("p",{children:[pages.length," items with this tag."," ",pages.length>numPages&&`Showing first ${numPages}.`]}),jsx31(PageList,{limit:numPages,...listProps})]})})})]})}else{let pages=allPagesWithTag(tag),listProps={...props,allFiles:pages};return jsxs21("div",{class:"popover-hint",children:[jsx31("article",{children:content}),jsxs21("p",{children:[pages.length," items with this tag."]}),jsx31("div",{children:jsx31(PageList,{...listProps})})]})}}__name(TagContent,"TagContent");TagContent.css=listPage_default+PageList.css;var TagContent_default=__name(()=>TagContent,"default");var sharedPageComponents={head:Head_default(),header:[],footer:Footer_default({links:{GitHub:"https://github.com/jackyzha0/quartz","Discord Community":"https://discord.gg/cRFFHYye7t"}})},defaultContentPageLayout={beforeBody:[ArticleTitle_default(),ContentMeta_default(),TagList_default()],left:[PageTitle_default(),MobileOnly_default(Spacer_default()),Search_default(),Darkmode_default(),DesktopOnly_default(TableOfContents_default())],right:[Graph_default({localGraph:{depth:-1,scale:.7,repelForce:.7,centerForce:.4,linkDistance:18,fontSize:.5,opacityScale:1.5},globalGraph:{depth:-1,scale:1,repelForce:.7,centerForce:.35,linkDistance:45,fontSize:.7,opacityScale:1.5}}),MarkMap_default()],afterBody:[SiteFx_default(),Timer_default(),Todo_default()]},defaultListPageLayout={beforeBody:[ArticleTitle_default()],left:[PageTitle_default(),MobileOnly_default(Spacer_default()),Search_default(),Darkmode_default()],right:[],afterBody:[SiteFx_default(),Timer_default(),Todo_default()]};var ContentPage=__name(userOpts=>{let opts={...sharedPageComponents,...defaultContentPageLayout,pageBody:Content_default(),...userOpts},{head:Head,header,beforeBody,pageBody,left,right,afterBody,footer:Footer}=opts,Header2=Header_default(),Body2=Body_default();return{name:"ContentPage",getQuartzComponents(){return[Head,Header2,Body2,...header,...beforeBody,pageBody,...left,...right,...afterBody,Footer]},async emit(ctx,content,resources,emit){let cfg=ctx.cfg.configuration,fps=[],allFiles=content.map(c=>c[1].data);for(let[tree,file]of content){let slug2=file.data.slug,externalResources=pageResources(slug2,resources),componentData={fileData:file.data,externalResources,cfg,children:[],tree,allFiles},content2=renderPage(slug2,componentData,opts,externalResources),fp=await emit({content:content2,slug:slug2,ext:".html"});fps.push(fp)}return fps}}},"ContentPage");import{VFile}from"vfile";function defaultProcessedContent(vfileData){let root={type:"root",children:[]},vfile=new VFile("");return vfile.data=vfileData,[root,vfile]}__name(defaultProcessedContent,"defaultProcessedContent");var TagPage=__name(userOpts=>{let opts={...sharedPageComponents,...defaultListPageLayout,pageBody:TagContent_default(),...userOpts},{head:Head,header,beforeBody,pageBody,left,right,afterBody,footer:Footer}=opts,Header2=Header_default(),Body2=Body_default();return{name:"TagPage",getQuartzComponents(){return[Head,Header2,Body2,...header,...beforeBody,pageBody,...left,...right,...afterBody,Footer]},async emit(ctx,content,resources,emit){let fps=[],allFiles=content.map(c=>c[1].data),cfg=ctx.cfg.configuration,tags=new Set(allFiles.flatMap(data=>data.frontmatter?.tags??[]).flatMap(getAllSegmentPrefixes));tags.add("index");let tagDescriptions=Object.fromEntries([...tags].map(tag=>{let title=tag===""?"Tag Index":`Tag: #${tag}`;return[tag,defaultProcessedContent({slug:joinSegments("tags",tag),frontmatter:{title,tags:[]}})]}));for(let[tree,file]of content){let slug2=file.data.slug;if(slug2.startsWith("tags/")){let tag=slug2.slice(5);tags.has(tag)&&(tagDescriptions[tag]=[tree,file])}}for(let tag of tags){let slug2=joinSegments("tags",tag),externalResources=pageResources(slug2,resources),[tree,file]=tagDescriptions[tag],componentData={fileData:file.data,externalResources,cfg,children:[],tree,allFiles},content2=renderPage(slug2,componentData,opts,externalResources),fp=await emit({content:content2,slug:file.data.slug,ext:".html"});fps.push(fp)}return fps}}},"TagPage");import path6 from"path";var FolderPage=__name(userOpts=>{let opts={...sharedPageComponents,...defaultListPageLayout,pageBody:FolderContent_default(),...userOpts},{head:Head,header,beforeBody,pageBody,left,right,afterBody,footer:Footer}=opts,Header2=Header_default(),Body2=Body_default();return{name:"FolderPage",getQuartzComponents(){return[Head,Header2,Body2,...header,...beforeBody,pageBody,...left,...right,...afterBody,Footer]},async emit(ctx,content,resources,emit){let fps=[],allFiles=content.map(c=>c[1].data),cfg=ctx.cfg.configuration,folders=new Set(allFiles.flatMap(data=>{let slug2=data.slug,folderName=path6.dirname(slug2??"");return slug2&&folderName!=="."&&folderName!=="tags"?[folderName]:[]})),folderDescriptions=Object.fromEntries([...folders].map(folder=>[folder,defaultProcessedContent({slug:joinSegments(folder,"index"),frontmatter:{title:`Folder: ${folder}`,tags:[]}})]));for(let[tree,file]of content){let slug2=_stripSlashes(simplifySlug(file.data.slug));folders.has(slug2)&&(folderDescriptions[slug2]=[tree,file])}for(let folder of folders){let slug2=joinSegments(folder,"index"),externalResources=pageResources(slug2,resources),[tree,file]=folderDescriptions[folder],componentData={fileData:file.data,externalResources,cfg,children:[],tree,allFiles},content2=renderPage(slug2,componentData,opts,externalResources),fp=await emit({content:content2,slug:slug2,ext:".html"});fps.push(fp)}return fps}}},"FolderPage");import path7 from"path";var defaultOptions10={enableSiteMap:!0,enableRSS:!0,includeEmptyFiles:!1};function generateSiteMap(cfg,idx){let base=cfg.baseUrl??"",createURLEntry=__name((slug2,content)=>`<url>
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcm9iaW4v5paH5qGjL1F1YXJ0ek5vdGVzL25vdGVzL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibGlzdFBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFO0VBQ0E7RUFDQTs7O0FBR0Y7RUFDRTs7QUFFQTtFQUNFO0VBQ0E7O0FBRUE7RUFDRTtJQUNFOzs7QUFJSjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTs7O0FBTU47RUFDRTs7QUFDQTtFQUNFIiwic291cmNlc0NvbnRlbnQiOlsiQHVzZSBcIi4uLy4uL3N0eWxlcy92YXJpYWJsZXMuc2Nzc1wiIGFzICo7XG5cbnVsLnNlY3Rpb24tdWwge1xuICBsaXN0LXN0eWxlOiBub25lO1xuICBtYXJnaW4tdG9wOiAyZW07XG4gIHBhZGRpbmctbGVmdDogMDtcbn1cblxubGkuc2VjdGlvbi1saSB7XG4gIG1hcmdpbi1ib3R0b206IDFlbTtcblxuICAmID4gLnNlY3Rpb24ge1xuICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiA2ZW0gM2ZyIDFmcjtcblxuICAgIEBtZWRpYSBhbGwgYW5kIChtYXgtd2lkdGg6ICRtb2JpbGVCcmVha3BvaW50KSB7XG4gICAgICAmID4gLnRhZ3Mge1xuICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAudGFncyB7XG4gICAgICBqdXN0aWZ5LXNlbGY6IGVuZDtcbiAgICAgIG1hcmdpbi1sZWZ0OiAxcmVtO1xuICAgIH1cblxuICAgICYgPiAuZGVzYyA+IGgzID4gYSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgICB9XG5cbiAgICAmID4gLm1ldGEge1xuICAgICAgbWFyZ2luOiAwO1xuICAgICAgZmxleC1iYXNpczogNmVtO1xuICAgICAgb3BhY2l0eTogMC42O1xuICAgIH1cbiAgfVxufVxuXG4vLyBtb2RpZmljYXRpb25zIGluIHBvcG92ZXIgY29udGV4dFxuLnBvcG92ZXIgLnNlY3Rpb24ge1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDZlbSAxZnIgIWltcG9ydGFudDtcbiAgJiA+IC50YWdzIHtcbiAgICBkaXNwbGF5OiBub25lO1xuICB9XG59XG4iXX0= */`;import{jsx as jsx30,jsxs as jsxs20}from"preact/jsx-runtime";function FolderContent(props){let{tree,fileData,allFiles}=props,folderSlug=_stripSlashes(simplifySlug(fileData.slug)),allPagesInFolder=allFiles.filter(file=>{let fileSlug=_stripSlashes(simplifySlug(file.slug)),prefixed=fileSlug.startsWith(folderSlug)&&fileSlug!==folderSlug,folderParts=folderSlug.split(path5.posix.sep),isDirectChild=fileSlug.split(path5.posix.sep).length===folderParts.length+1;return prefixed&&isDirectChild}),listProps={...props,allFiles:allPagesInFolder},content=tree.children.length===0?fileData.description:toJsxRuntime2(tree,{Fragment:Fragment6,jsx:jsx29,jsxs:jsxs19,elementAttributeNameCase:"html"});return jsxs20("div",{class:"popover-hint",children:[jsx30("article",{children:content}),jsxs20("p",{children:[allPagesInFolder.length," items under this folder."]}),jsx30("div",{children:jsx30(PageList,{...listProps})})]})}__name(FolderContent,"FolderContent");FolderContent.css=listPage_default+PageList.css;var FolderContent_default=__name(()=>FolderContent,"default");import{Fragment as Fragment7,jsx as jsx31,jsxs as jsxs21}from"preact/jsx-runtime";import{toJsxRuntime as toJsxRuntime3}from"hast-util-to-jsx-runtime";import{jsx as jsx32,jsxs as jsxs22}from"preact/jsx-runtime";var numPages=10;function TagContent(props){let{tree,fileData,allFiles}=props,slug2=fileData.slug;if(!(slug2?.startsWith("tags/")||slug2==="tags"))throw new Error(`Component "TagContent" tried to render a non-tag page: ${slug2}`);let tag=simplifySlug(slug2.slice(5)),allPagesWithTag=__name(tag2=>allFiles.filter(file=>(file.frontmatter?.tags??[]).flatMap(getAllSegmentPrefixes).includes(tag2)),"allPagesWithTag"),content=tree.children.length===0?fileData.description:toJsxRuntime3(tree,{Fragment:Fragment7,jsx:jsx31,jsxs:jsxs21,elementAttributeNameCase:"html"});if(tag===""){let tags=[...new Set(allFiles.flatMap(data=>data.frontmatter?.tags??[]))],tagItemMap=new Map;for(let tag2 of tags)tagItemMap.set(tag2,allPagesWithTag(tag2));return jsxs22("div",{class:"popover-hint",children:[jsx32("article",{children:content}),jsxs22("p",{children:["Found ",tags.length," total tags."]}),jsx32("div",{children:tags.map(tag2=>{let pages=tagItemMap.get(tag2),listProps={...props,allFiles:pages},content2=allFiles.filter(file=>file.slug===`tags/${tag2}`)[0]?.description;return jsxs22("div",{children:[jsx32("h2",{children:jsxs22("a",{class:"internal tag-link",href:`./${tag2}`,children:["#",tag2]})}),content2&&jsx32("p",{children:content2}),jsxs22("p",{children:[pages.length," items with this tag."," ",pages.length>numPages&&`Showing first ${numPages}.`]}),jsx32(PageList,{limit:numPages,...listProps})]})})})]})}else{let pages=allPagesWithTag(tag),listProps={...props,allFiles:pages};return jsxs22("div",{class:"popover-hint",children:[jsx32("article",{children:content}),jsxs22("p",{children:[pages.length," items with this tag."]}),jsx32("div",{children:jsx32(PageList,{...listProps})})]})}}__name(TagContent,"TagContent");TagContent.css=listPage_default+PageList.css;var TagContent_default=__name(()=>TagContent,"default");var sharedPageComponents={head:Head_default(),header:[],footer:Footer_default({links:{GitHub:"https://github.com/jackyzha0/quartz","Discord Community":"https://discord.gg/cRFFHYye7t"}})},defaultContentPageLayout={beforeBody:[ArticleTitle_default(),ContentMeta_default(),TagList_default()],left:[PageTitle_default(),MobileOnly_default(Spacer_default()),Search_default(),Darkmode_default(),DesktopOnly_default(TableOfContents_default()),DesktopOnly_default(MoleculeViewer_default())],right:[Graph_default({localGraph:{depth:-1,scale:.7,repelForce:.7,centerForce:.4,linkDistance:18,fontSize:.5,opacityScale:1.5},globalGraph:{depth:-1,scale:1,repelForce:.7,centerForce:.35,linkDistance:45,fontSize:.7,opacityScale:1.5}}),MarkMap_default()],afterBody:[SiteFx_default(),Timer_default(),Todo_default()]},defaultListPageLayout={beforeBody:[ArticleTitle_default()],left:[PageTitle_default(),MobileOnly_default(Spacer_default()),Search_default(),Darkmode_default()],right:[],afterBody:[SiteFx_default(),Timer_default(),Todo_default()]};var ContentPage=__name(userOpts=>{let opts={...sharedPageComponents,...defaultContentPageLayout,pageBody:Content_default(),...userOpts},{head:Head,header,beforeBody,pageBody,left,right,afterBody,footer:Footer}=opts,Header2=Header_default(),Body2=Body_default();return{name:"ContentPage",getQuartzComponents(){return[Head,Header2,Body2,...header,...beforeBody,pageBody,...left,...right,...afterBody,Footer]},async emit(ctx,content,resources,emit){let cfg=ctx.cfg.configuration,fps=[],allFiles=content.map(c=>c[1].data);for(let[tree,file]of content){let slug2=file.data.slug,externalResources=pageResources(slug2,resources),componentData={fileData:file.data,externalResources,cfg,children:[],tree,allFiles},content2=renderPage(slug2,componentData,opts,externalResources),fp=await emit({content:content2,slug:slug2,ext:".html"});fps.push(fp)}return fps}}},"ContentPage");import{VFile}from"vfile";function defaultProcessedContent(vfileData){let root={type:"root",children:[]},vfile=new VFile("");return vfile.data=vfileData,[root,vfile]}__name(defaultProcessedContent,"defaultProcessedContent");var TagPage=__name(userOpts=>{let opts={...sharedPageComponents,...defaultListPageLayout,pageBody:TagContent_default(),...userOpts},{head:Head,header,beforeBody,pageBody,left,right,afterBody,footer:Footer}=opts,Header2=Header_default(),Body2=Body_default();return{name:"TagPage",getQuartzComponents(){return[Head,Header2,Body2,...header,...beforeBody,pageBody,...left,...right,...afterBody,Footer]},async emit(ctx,content,resources,emit){let fps=[],allFiles=content.map(c=>c[1].data),cfg=ctx.cfg.configuration,tags=new Set(allFiles.flatMap(data=>data.frontmatter?.tags??[]).flatMap(getAllSegmentPrefixes));tags.add("index");let tagDescriptions=Object.fromEntries([...tags].map(tag=>{let title=tag===""?"Tag Index":`Tag: #${tag}`;return[tag,defaultProcessedContent({slug:joinSegments("tags",tag),frontmatter:{title,tags:[]}})]}));for(let[tree,file]of content){let slug2=file.data.slug;if(slug2.startsWith("tags/")){let tag=slug2.slice(5);tags.has(tag)&&(tagDescriptions[tag]=[tree,file])}}for(let tag of tags){let slug2=joinSegments("tags",tag),externalResources=pageResources(slug2,resources),[tree,file]=tagDescriptions[tag],componentData={fileData:file.data,externalResources,cfg,children:[],tree,allFiles},content2=renderPage(slug2,componentData,opts,externalResources),fp=await emit({content:content2,slug:file.data.slug,ext:".html"});fps.push(fp)}return fps}}},"TagPage");import path6 from"path";var FolderPage=__name(userOpts=>{let opts={...sharedPageComponents,...defaultListPageLayout,pageBody:FolderContent_default(),...userOpts},{head:Head,header,beforeBody,pageBody,left,right,afterBody,footer:Footer}=opts,Header2=Header_default(),Body2=Body_default();return{name:"FolderPage",getQuartzComponents(){return[Head,Header2,Body2,...header,...beforeBody,pageBody,...left,...right,...afterBody,Footer]},async emit(ctx,content,resources,emit){let fps=[],allFiles=content.map(c=>c[1].data),cfg=ctx.cfg.configuration,folders=new Set(allFiles.flatMap(data=>{let slug2=data.slug,folderName=path6.dirname(slug2??"");return slug2&&folderName!=="."&&folderName!=="tags"?[folderName]:[]})),folderDescriptions=Object.fromEntries([...folders].map(folder=>[folder,defaultProcessedContent({slug:joinSegments(folder,"index"),frontmatter:{title:`Folder: ${folder}`,tags:[]}})]));for(let[tree,file]of content){let slug2=_stripSlashes(simplifySlug(file.data.slug));folders.has(slug2)&&(folderDescriptions[slug2]=[tree,file])}for(let folder of folders){let slug2=joinSegments(folder,"index"),externalResources=pageResources(slug2,resources),[tree,file]=folderDescriptions[folder],componentData={fileData:file.data,externalResources,cfg,children:[],tree,allFiles},content2=renderPage(slug2,componentData,opts,externalResources),fp=await emit({content:content2,slug:slug2,ext:".html"});fps.push(fp)}return fps}}},"FolderPage");import path7 from"path";var defaultOptions10={enableSiteMap:!0,enableRSS:!0,includeEmptyFiles:!1};function generateSiteMap(cfg,idx){let base=cfg.baseUrl??"",createURLEntry=__name((slug2,content)=>`<url>
     <loc>https://${base}/${slug2}</loc>
     <lastmod>${content.date?.toISOString()}</lastmod>
   </url>`,"createURLEntry");return`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${Array.from(idx).map(([slug2,content])=>createURLEntry(simplifySlug(slug2),content)).join("")}</urlset>`}__name(generateSiteMap,"generateSiteMap");function generateRSSFeed(cfg,idx){let root=`https://${cfg.baseUrl??""}`,createURLEntry=__name((slug2,content)=>`<items>
@@ -46968,6 +47628,7 @@ ${stylesheet.join(`
         document.dispatchEvent(event)`),reloadScript&&staticResources.js.push({loadTime:"afterDOMReady",contentType:"inline",script:`
           const socket = new WebSocket('ws://localhost:3001')
           socket.addEventListener('message', () => document.location.reload())
-        `})}__name(addGlobalPageResources,"addGlobalPageResources");var defaultOptions11={fontOrigin:"googleFonts"},ComponentResources=__name(opts=>{let{fontOrigin}={...defaultOptions11,...opts};return{name:"ComponentResources",getQuartzComponents(){return[]},async emit(ctx,_content,resources,emit){let componentResources=getComponentResources(ctx);fontOrigin==="googleFonts"&&resources.css.push(googleFontHref(ctx.cfg.configuration.theme)),addGlobalPageResources(ctx,resources,componentResources);let stylesheet=joinStyles(ctx.cfg.configuration.theme,base_default,...componentResources.css),prescript=joinScripts(componentResources.beforeDOMLoaded),postscript=joinScripts(componentResources.afterDOMLoaded);return await Promise.all([emit({slug:"index",ext:".css",content:transform({filename:"index.css",code:Buffer.from(stylesheet),minify:!0,targets:{safari:984576,ios_saf:984576,edge:7536640,firefox:6684672,chrome:7143424},include:Features.MediaQueries}).code.toString()}),emit({slug:"prescript",ext:".js",content:prescript}),emit({slug:"postscript",ext:".js",content:postscript})])}}},"ComponentResources");function getStaticResourcesFromPlugins(ctx){let staticResources={css:[],js:[]};for(let transformer of ctx.cfg.plugins.transformers){let res=transformer.externalResources?transformer.externalResources(ctx):{};res?.js&&staticResources.js.push(...res.js),res?.css&&staticResources.css.push(...res.css)}return staticResources}__name(getStaticResourcesFromPlugins,"getStaticResourcesFromPlugins");async function emitContent(ctx,content){let{argv,cfg}=ctx,perf=new PerfTimer,log=new QuartzLogger(ctx.argv.verbose);log.start("Emitting output files");let emit=__name(async({slug:slug2,ext,content:content2})=>{let pathToPage=joinSegments(argv.output,slug2+ext),dir=path11.dirname(pathToPage);return await fs4.promises.mkdir(dir,{recursive:!0}),await fs4.promises.writeFile(pathToPage,content2),pathToPage},"emit"),emittedFiles=0,staticResources=getStaticResourcesFromPlugins(ctx);for(let emitter of cfg.plugins.emitters)try{let emitted=await emitter.emit(ctx,content,staticResources,emit);if(emittedFiles+=emitted.length,ctx.argv.verbose)for(let file of emitted)console.log(`[emit:${emitter.name}] ${file}`)}catch(err){trace(`Failed to emit from plugin \`${emitter.name}\``,err)}log.end(`Emitted ${emittedFiles} files to \`${argv.output}\` in ${perf.timeSince()}`)}__name(emitContent,"emitContent");var config={configuration:{pageTitle:"\u{1FAB4} Quartz 4.0",enableSPA:!1,enablePopovers:!0,analytics:{provider:"plausible"},baseUrl:"qinanze.github.io/notes",ignorePatterns:["private","templates"],theme:{typography:{header:"Schibsted Grotesk",body:"Source Sans Pro",code:"IBM Plex Mono"},colors:{lightMode:{light:"#f8fbff",lightgray:"#e2e8f0",gray:"#94a3b8",darkgray:"#334155",dark:"#0f172a",secondary:"#2563eb",tertiary:"#3b82f6",highlight:"rgba(59, 130, 246, 0.08)"},darkMode:{light:"#0f172a",lightgray:"#1e293b",gray:"#64748b",darkgray:"#cbd5e1",dark:"#f8fafc",secondary:"#60a5fa",tertiary:"#93c5fd",highlight:"rgba(96, 165, 250, 0.15)"}}}},plugins:{transformers:[FrontMatter(),TableOfContents(),CreatedModifiedDate({priority:["frontmatter","filesystem"]}),SyntaxHighlighting(),ObsidianFlavoredMarkdown({enableInHtmlEmbed:!1}),Latex({renderEngine:"katex"}),GitHubFlavoredMarkdown(),CrawlLinks({markdownLinkResolution:"shortest"}),Description()],filters:[RemoveDrafts()],emitters:[AliasRedirects(),ComponentResources({fontOrigin:"googleFonts"}),ContentPage(),FolderPage(),TagPage(),ContentIndex({enableSiteMap:!0,enableRSS:!0}),Assets(),Static()]}},quartz_config_default=config;import chokidar from"chokidar";import fs5 from"fs";import{fileURLToPath}from"url";var options={retrieveSourceMap(source){if(source.includes(".quartz-cache")){let realSource=fileURLToPath(source.split("?",2)[0]+".map");return{map:fs5.readFileSync(realSource,"utf8")}}else return null}};import{Mutex}from"async-mutex";sourceMapSupport.install(options);async function buildQuartz(argv,clientRefresh){let ctx={argv,cfg:quartz_config_default,allSlugs:[]},perf=new PerfTimer,output=argv.output,pluginCount=Object.values(quartz_config_default.plugins).flat().length,pluginNames=__name(key=>quartz_config_default.plugins[key].map(plugin=>plugin.name),"pluginNames");argv.verbose&&(console.log(`Loaded ${pluginCount} plugins`),console.log(`  Transformers: ${pluginNames("transformers").join(", ")}`),console.log(`  Filters: ${pluginNames("filters").join(", ")}`),console.log(`  Emitters: ${pluginNames("emitters").join(", ")}`)),perf.addEvent("clean"),await rimraf(output),console.log(`Cleaned output directory \`${output}\` in ${perf.timeSince("clean")}`),perf.addEvent("glob");let allFiles=await glob("**/*.*",argv.directory,quartz_config_default.configuration.ignorePatterns),fps=allFiles.filter(fp=>fp.endsWith(".md"));console.log(`Found ${fps.length} input files from \`${argv.directory}\` in ${perf.timeSince("glob")}`);let filePaths=fps.map(fp=>joinSegments(argv.directory,fp));ctx.allSlugs=allFiles.map(fp=>slugifyFilePath(fp));let parsedFiles=await parseMarkdown(ctx,filePaths),filteredContent=filterContent(ctx,parsedFiles);if(await emitContent(ctx,filteredContent),console.log(chalk3.green(`Done processing ${fps.length} files in ${perf.timeSince()}`)),argv.serve)return startServing(ctx,parsedFiles,clientRefresh)}__name(buildQuartz,"buildQuartz");async function startServing(ctx,initialContent,clientRefresh){let{argv}=ctx,ignored=await isGitIgnored(),contentMap=new Map;for(let content of initialContent){let[_tree,vfile]=content;contentMap.set(vfile.data.filePath,content)}let initialSlugs=ctx.allSlugs,buildMutex=new Mutex,timeoutIds=new Set,toRebuild=new Set,toRemove=new Set,trackedAssets=new Set;async function rebuild(fp,action){if(ignored(fp))return;fp=toPosixPath(fp);let filePath=joinSegments(argv.directory,fp);if(path12.extname(fp)!==".md"){action==="add"||action==="change"?trackedAssets.add(filePath):action==="delete"&&trackedAssets.delete(filePath),clientRefresh();return}action==="add"||action==="change"?toRebuild.add(filePath):action==="delete"&&toRemove.add(filePath),timeoutIds.forEach(id=>clearTimeout(id)),timeoutIds.add(setTimeout(async()=>{await buildMutex.acquire();let perf=new PerfTimer;console.log(chalk3.yellow("Detected change, rebuilding..."));try{let filesToRebuild=[...toRebuild].filter(fp2=>!toRemove.has(fp2)),trackedSlugs=[...new Set([...contentMap.keys(),...toRebuild,...trackedAssets])].filter(fp2=>!toRemove.has(fp2)).map(fp2=>slugifyFilePath(path12.posix.relative(argv.directory,fp2)));ctx.allSlugs=[...new Set([...initialSlugs,...trackedSlugs])];let parsedContent=await parseMarkdown(ctx,filesToRebuild);for(let content of parsedContent){let[_tree,vfile]=content;contentMap.set(vfile.data.filePath,content)}for(let fp2 of toRemove)contentMap.delete(fp2);await rimraf(argv.output);let parsedFiles=[...contentMap.values()],filteredContent=filterContent(ctx,parsedFiles);await emitContent(ctx,filteredContent),console.log(chalk3.green(`Done rebuilding in ${perf.timeSince()}`))}catch{console.log(chalk3.yellow("Rebuild failed. Waiting on a change to fix the error..."))}clientRefresh(),toRebuild.clear(),toRemove.clear(),buildMutex.release()},250))}__name(rebuild,"rebuild"),chokidar.watch(".",{persistent:!0,cwd:argv.directory,ignoreInitial:!0}).on("add",fp=>rebuild(fp,"add")).on("change",fp=>rebuild(fp,"change")).on("unlink",fp=>rebuild(fp,"delete"))}__name(startServing,"startServing");var build_default=__name(async(argv,clientRefresh)=>{try{return await buildQuartz(argv,clientRefresh)}catch(err){trace(`
+        `})}__name(addGlobalPageResources,"addGlobalPageResources");var defaultOptions11={fontOrigin:"googleFonts"},ComponentResources=__name(opts=>{let{fontOrigin}={...defaultOptions11,...opts};return{name:"ComponentResources",getQuartzComponents(){return[]},async emit(ctx,_content,resources,emit){let componentResources=getComponentResources(ctx);fontOrigin==="googleFonts"&&resources.css.push(googleFontHref(ctx.cfg.configuration.theme)),addGlobalPageResources(ctx,resources,componentResources);let stylesheet=joinStyles(ctx.cfg.configuration.theme,base_default,...componentResources.css),prescript=joinScripts(componentResources.beforeDOMLoaded),postscript=joinScripts(componentResources.afterDOMLoaded);return await Promise.all([emit({slug:"index",ext:".css",content:transform({filename:"index.css",code:Buffer.from(stylesheet),minify:!0,targets:{safari:984576,ios_saf:984576,edge:7536640,firefox:6684672,chrome:7143424},include:Features.MediaQueries}).code.toString()}),emit({slug:"prescript",ext:".js",content:prescript}),emit({slug:"postscript",ext:".js",content:postscript})])}}},"ComponentResources");import fs4 from"fs";import path11 from"path";var MoleculeData=__name(()=>({name:"MoleculeData",getQuartzComponents(){return[]},async emit(ctx,_content,_resources,emit){let src=path11.resolve(process.cwd(),"static","molecules.json");if(!fs4.existsSync(src))throw new Error(`\u627E\u4E0D\u5230\u5206\u5B50\u6570\u636E\u6587\u4EF6\uFF1A${src}
+\uFF08cwd = ${process.cwd()}\uFF0C\u8BF7\u5728\u9879\u76EE\u6839\u76EE\u5F55\u4E0B\u8FD0\u884C npx quartz build\uFF09`);let content=await fs4.promises.readFile(src,"utf8"),count=0;try{count=(JSON.parse(content).molecules??[]).length}catch(err){throw new Error(`static/molecules.json \u4E0D\u662F\u5408\u6CD5 JSON\uFF1A${err.message}`)}let out=await emit({content,slug:"static/molecules",ext:".json"});return console.log(`[MoleculeData] ${src} \u2192 ${path11.join(ctx.argv.output,"static/molecules.json")}\uFF08${count} \u6761\uFF09`),[out]}}),"MoleculeData");function getStaticResourcesFromPlugins(ctx){let staticResources={css:[],js:[]};for(let transformer of ctx.cfg.plugins.transformers){let res=transformer.externalResources?transformer.externalResources(ctx):{};res?.js&&staticResources.js.push(...res.js),res?.css&&staticResources.css.push(...res.css)}return staticResources}__name(getStaticResourcesFromPlugins,"getStaticResourcesFromPlugins");async function emitContent(ctx,content){let{argv,cfg}=ctx,perf=new PerfTimer,log=new QuartzLogger(ctx.argv.verbose);log.start("Emitting output files");let emit=__name(async({slug:slug2,ext,content:content2})=>{let pathToPage=joinSegments(argv.output,slug2+ext),dir=path12.dirname(pathToPage);return await fs5.promises.mkdir(dir,{recursive:!0}),await fs5.promises.writeFile(pathToPage,content2),pathToPage},"emit"),emittedFiles=0,staticResources=getStaticResourcesFromPlugins(ctx);for(let emitter of cfg.plugins.emitters)try{let emitted=await emitter.emit(ctx,content,staticResources,emit);if(emittedFiles+=emitted.length,ctx.argv.verbose)for(let file of emitted)console.log(`[emit:${emitter.name}] ${file}`)}catch(err){trace(`Failed to emit from plugin \`${emitter.name}\``,err)}log.end(`Emitted ${emittedFiles} files to \`${argv.output}\` in ${perf.timeSince()}`)}__name(emitContent,"emitContent");var config={configuration:{pageTitle:"\u{1FAB4} Quartz 4.0",enableSPA:!1,enablePopovers:!0,analytics:{provider:"plausible"},baseUrl:"qinanze.github.io/notes",ignorePatterns:["private","templates"],theme:{typography:{header:"Schibsted Grotesk",body:"Source Sans Pro",code:"IBM Plex Mono"},colors:{lightMode:{light:"#f8fbff",lightgray:"#e2e8f0",gray:"#94a3b8",darkgray:"#334155",dark:"#0f172a",secondary:"#2563eb",tertiary:"#3b82f6",highlight:"rgba(59, 130, 246, 0.08)"},darkMode:{light:"#0f172a",lightgray:"#1e293b",gray:"#64748b",darkgray:"#cbd5e1",dark:"#f8fafc",secondary:"#60a5fa",tertiary:"#93c5fd",highlight:"rgba(96, 165, 250, 0.15)"}}}},plugins:{transformers:[FrontMatter(),TableOfContents(),CreatedModifiedDate({priority:["frontmatter","filesystem"]}),SyntaxHighlighting(),ObsidianFlavoredMarkdown({enableInHtmlEmbed:!1}),Latex({renderEngine:"katex"}),GitHubFlavoredMarkdown(),CrawlLinks({markdownLinkResolution:"shortest"}),Description()],filters:[RemoveDrafts()],emitters:[AliasRedirects(),ComponentResources({fontOrigin:"googleFonts"}),ContentPage(),FolderPage(),TagPage(),ContentIndex({enableSiteMap:!0,enableRSS:!0}),MoleculeData(),Assets(),Static()]}},quartz_config_default=config;import chokidar from"chokidar";import fs6 from"fs";import{fileURLToPath}from"url";var options={retrieveSourceMap(source){if(source.includes(".quartz-cache")){let realSource=fileURLToPath(source.split("?",2)[0]+".map");return{map:fs6.readFileSync(realSource,"utf8")}}else return null}};import{Mutex}from"async-mutex";sourceMapSupport.install(options);async function buildQuartz(argv,clientRefresh){let ctx={argv,cfg:quartz_config_default,allSlugs:[]},perf=new PerfTimer,output=argv.output,pluginCount=Object.values(quartz_config_default.plugins).flat().length,pluginNames=__name(key=>quartz_config_default.plugins[key].map(plugin=>plugin.name),"pluginNames");argv.verbose&&(console.log(`Loaded ${pluginCount} plugins`),console.log(`  Transformers: ${pluginNames("transformers").join(", ")}`),console.log(`  Filters: ${pluginNames("filters").join(", ")}`),console.log(`  Emitters: ${pluginNames("emitters").join(", ")}`)),perf.addEvent("clean"),await rimraf(output),console.log(`Cleaned output directory \`${output}\` in ${perf.timeSince("clean")}`),perf.addEvent("glob");let allFiles=await glob("**/*.*",argv.directory,quartz_config_default.configuration.ignorePatterns),fps=allFiles.filter(fp=>fp.endsWith(".md"));console.log(`Found ${fps.length} input files from \`${argv.directory}\` in ${perf.timeSince("glob")}`);let filePaths=fps.map(fp=>joinSegments(argv.directory,fp));ctx.allSlugs=allFiles.map(fp=>slugifyFilePath(fp));let parsedFiles=await parseMarkdown(ctx,filePaths),filteredContent=filterContent(ctx,parsedFiles);if(await emitContent(ctx,filteredContent),console.log(chalk3.green(`Done processing ${fps.length} files in ${perf.timeSince()}`)),argv.serve)return startServing(ctx,parsedFiles,clientRefresh)}__name(buildQuartz,"buildQuartz");async function startServing(ctx,initialContent,clientRefresh){let{argv}=ctx,ignored=await isGitIgnored(),contentMap=new Map;for(let content of initialContent){let[_tree,vfile]=content;contentMap.set(vfile.data.filePath,content)}let initialSlugs=ctx.allSlugs,buildMutex=new Mutex,timeoutIds=new Set,toRebuild=new Set,toRemove=new Set,trackedAssets=new Set;async function rebuild(fp,action){if(ignored(fp))return;fp=toPosixPath(fp);let filePath=joinSegments(argv.directory,fp);if(path13.extname(fp)!==".md"){action==="add"||action==="change"?trackedAssets.add(filePath):action==="delete"&&trackedAssets.delete(filePath),clientRefresh();return}action==="add"||action==="change"?toRebuild.add(filePath):action==="delete"&&toRemove.add(filePath),timeoutIds.forEach(id=>clearTimeout(id)),timeoutIds.add(setTimeout(async()=>{await buildMutex.acquire();let perf=new PerfTimer;console.log(chalk3.yellow("Detected change, rebuilding..."));try{let filesToRebuild=[...toRebuild].filter(fp2=>!toRemove.has(fp2)),trackedSlugs=[...new Set([...contentMap.keys(),...toRebuild,...trackedAssets])].filter(fp2=>!toRemove.has(fp2)).map(fp2=>slugifyFilePath(path13.posix.relative(argv.directory,fp2)));ctx.allSlugs=[...new Set([...initialSlugs,...trackedSlugs])];let parsedContent=await parseMarkdown(ctx,filesToRebuild);for(let content of parsedContent){let[_tree,vfile]=content;contentMap.set(vfile.data.filePath,content)}for(let fp2 of toRemove)contentMap.delete(fp2);await rimraf(argv.output);let parsedFiles=[...contentMap.values()],filteredContent=filterContent(ctx,parsedFiles);await emitContent(ctx,filteredContent),console.log(chalk3.green(`Done rebuilding in ${perf.timeSince()}`))}catch{console.log(chalk3.yellow("Rebuild failed. Waiting on a change to fix the error..."))}clientRefresh(),toRebuild.clear(),toRemove.clear(),buildMutex.release()},250))}__name(rebuild,"rebuild"),chokidar.watch(".",{persistent:!0,cwd:argv.directory,ignoreInitial:!0}).on("add",fp=>rebuild(fp,"add")).on("change",fp=>rebuild(fp,"change")).on("unlink",fp=>rebuild(fp,"delete"))}__name(startServing,"startServing");var build_default=__name(async(argv,clientRefresh)=>{try{return await buildQuartz(argv,clientRefresh)}catch(err){trace(`
 Exiting Quartz due to a fatal error`,err)}},"default");export{build_default as default};
 //# sourceMappingURL=transpiled-build.mjs.map

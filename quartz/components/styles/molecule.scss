@@ -1,0 +1,195 @@
+// 和上方 .graph-outer / .markmap-wrapper 保持同一套视觉：
+// 只有 1px 边框 + 8px 圆角，**不写背景**，让站点的背景图透上来。
+.molecule-wrapper {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+}
+
+.molecule-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.molecule-wrapper h3::before {
+  content: "🧪";
+}
+
+// 标题行：当前结构名 + 所属分类
+.molecule-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.molecule-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.molecule-group {
+  font-size: 0.7rem;
+  color: var(--gray);
+  border: 1px solid var(--lightgray);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  white-space: nowrap;
+}
+
+// 渲染区：固定高度，翻页时页面不会跳动
+.molecule-view {
+  position: relative;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+// 3Dmol.js 的挂载点：它自己会往里塞 canvas，必须显式给尺寸
+.molecule-3d {
+  width: 100%;
+  height: 100%;
+}
+
+.molecule-view svg {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  // 脚本把 RDKit / SmilesDrawer 输出的颜色统一替换成 currentColor，
+  // 这里给一个色值就等于给整个结构式上色 —— 主题切换不用重绘。
+  color: var(--dark);
+}
+
+// 兜底：结构式里的 <rect> 只可能是 RDKit 画的背景板，
+// 脚本已经删过一次，这里再压一道，保证任何情况下都是透明背景。
+.molecule-view svg rect {
+  fill: none !important;
+  stroke: none !important;
+}
+
+// ⚠️ RDKit 把 font-family / font-size 写在 <text> 的**内联 style** 上，
+// 内联样式优先级高于外部规则，所以这里必须用 !important 才盖得住
+// （只有 !important 能压过普通的内联 style）。
+// 加粗是为了可读性：结构式里的元素符号本来就小。
+.molecule-view svg text {
+  font-family: var(--bodyFont) !important;
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+// 键线的兜底：万一有没被脚本换掉颜色的元素，至少线宽别细到看不清。
+.molecule-view svg path {
+  stroke-linecap: round;
+}
+
+// SmilesDrawer / 加载中的占位
+.molecule-hint {
+  font-size: 0.8rem;
+  color: var(--gray);
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+
+// 分子式 / 分子量 / 关联笔记
+.molecule-meta {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  align-items: center;
+  min-height: 1.2em;
+}
+
+.molecule-meta .molecule-formula {
+  font-family: var(--codeFont);
+  color: var(--darkgray);
+}
+
+.molecule-meta a {
+  color: var(--secondary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--lightgray);
+}
+
+.molecule-meta a:hover {
+  border-bottom-color: var(--secondary);
+}
+
+// 翻页控件
+.molecule-ctrl {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.molecule-btn {
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: var(--darkgray);
+  background: transparent;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  padding: 0.1rem 0.55rem;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.molecule-btn:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.molecule-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.molecule-btn:disabled:hover {
+  color: var(--darkgray);
+  border-color: var(--lightgray);
+}
+
+.molecule-btn-mode {
+  margin-left: 0.25rem;
+}
+
+.molecule-btn-mode.is-on {
+  color: white;
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.molecule-index {
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-family: var(--codeFont);
+  min-width: 3.2em;
+  text-align: center;
+}
+
+// 底部一句话教学点
+.molecule-tip {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--gray);
+  min-height: 2.4em;
+}

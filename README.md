@@ -83,6 +83,7 @@ npm run format             # Prettier 格式化
 > | `quartz.config.ts` | `configuration.baseUrl` |
 > | `quartz/components/PageTitle.tsx` | 标题的首页链接 |
 > | `quartz/components/scripts/sitefx.inline.ts` | `BASE_PATH` 常量 |
+> | `quartz/components/scripts/molecule.inline.ts` | `BASE_PATH` 常量（结构演示组件的**兜底**候选，主逻辑走 `siteRoot()` 自动推算） |
 >
 > 漏改的话站内相对链接仍然正常（Quartz 用相对路径），
 > 但 canonical、og:image、RSS 和返回上一页的兜底逻辑会指向旧路径。
@@ -116,6 +117,11 @@ npm run format             # Prettier 格式化
 否则表格被压在彩色块的 padding 里，窄了会错行。
 **超长的「比大小」序列也不要放框内** —— 5 项以上的 `$$A > B > C > ...$$`
 横向一定溢出，改成竖排表格（「梯队 | 基团」两列）提到框外。
+
+> 📋 **已知待修**（不急，但别忘了）：有机化学笔记里还有约 **17 处「中文直接写进
+> math mode」**（`\xrightarrow{燃烧}`、`\mathrm{苯}` 这种）和 **11 处 callout 内超长
+> 「比大小」序列**没改。完整清单（文件 + 行号 + 片段 + 「哪些不是问题」的排除项）
+> 在 `.workbuddy/memory/tex-audit-backlog.md`。P0 的 3 处 KaTeX 报错已于 8 日修完。
 
 ### 不要用代码块画图
 
@@ -199,6 +205,89 @@ code fence 只留给真正的代码和结构化文本（JSON 等）。
 - 右下角有计时器与待办两个悬浮模块，固定竖排，**不要加回拖拽逻辑**
   （拖拽写 inline `left/top`，与 fixed 定位冲突）。
 - 顶栏左侧的圆形返回按钮是内联 SVG，在 `PageTitle.tsx`。
+- **左侧栏 TOC 下方是「🧪 结构演示」**（`components/MoleculeViewer.tsx`），
+  和右栏图谱/思维导图同样的边框圆角 + 透明背景。
+  - **只显示当前这篇笔记的内容**：脚本读 `<body data-slug>`（`renderPage.tsx` 渲染的
+    full slug）拿到本页 slug，再从 contentIndex 里取出**末段文件名**，
+    和条目里的 `note` 字段比对。**匹配不到就保持隐藏**，不留空框。
+    - contentIndex.json 的结构是 `{ "<fullSlug>": { title, links, tags, content } }`
+      —— **key 是 slug，value 里没有 `slug`/`filePath` 字段**。
+      按 value 取字段会拿到 undefined，匹配全失败，组件会把自己隐藏掉。
+    - 它的 URL 是 **`static/contentIndex.json`**（不是 `/contentIndex.json`），
+      而且 Quartz 已经把这份数据预加载成全局 `fetchData` 了，脚本直接复用，
+      拿不到才自己 fetch。
+    - ⚠️ slug 末段可以直接当文件名用：Quartz 的 `slugifyFilePath`
+      **只把空格换成连字符，不会转小写**（`E5-配合物与配位平衡` 的 slug 就是它本身）。
+  - 一篇笔记可以对应多个条目（比如 L-丙氨酸 / D-丙氨酸 在 `立体化学.md` 里），
+    ◀ ▶ 在这些条目之间翻页。
+  - 2D 结构式用 **RDKit.js（WASM）**，CDN 挂了自动降级到 **SmilesDrawer**，
+    再失败就显示 SMILES 原文。
+  - 3D 结构用 **3Dmol.js 2.0.1**，**只有填了 `pdb` 的条目才有「3D」按钮**，
+    点了才去拉结构，首屏不占带宽。两种写法：
+    | 写法 | 数据源 | 适用 |
+    |---|---|---|
+    | `pdb: "1MBO"` | RCSB（实验测定） | 有晶体/核磁结构的经典蛋白 |
+    | `pdb: "AF-P01308-F1"` | AlphaFold DB（预测） | 没有实验结构的蛋白，覆盖面几乎全库 |
+  - **数据在项目根的 `static/molecules.json`，不在代码里**（约 296 条，覆盖 55 篇笔记；
+    只差 2 篇教师介绍和 1 篇课程大纲 —— 那三篇本来就没有化合物）。
+    每条：`name / smiles / formula / note / group / tip`，蛋白质条目还有 `pdb`。
+
+    > ⚠️ **取数据的 URL 是运行时算出来的，不要写死 `/notes`。**
+    > `staticUrls()` 用「`location.pathname` 的层数 − `<body data-slug>` 的层数」
+    > 反推站点根（`siteRoot()`），再拼出候选列表逐个试到 200 为止。
+    > 原因：本地 `npx quartz build --serve` **不加 `--baseDir`** 时，
+    > `public/` 是挂在服务器根上的（页面 URL = `/有机化学笔记/...`），
+    > 根本没有 `/notes` 这层 —— 写死就会 404，而线上（`/notes` 子路径）又必须带。
+    > `BASE_PATH` 常量现在只是兜底候选之一。
+    > 顺带：`contentIndex.json` 不受影响，因为它走 Quartz 注入的全局 `fetchData`（相对路径）。
+
+    > ⚠️ **这个 JSON 需要一个自定义 emitter 才能进 build 产物**（重装 Quartz 要重打）：
+    > 上游的 `Plugin.Static` 只从 **`quartz/static/`** 复制文件，
+    > 放在项目根的 `static/` 会被**整个忽略**（浏览器 fetch 404，框直接不显示）。
+    > 所以项目里有 `quartz/plugins/emitters/moleculeData.ts`，
+    > 在 `quartz.config.ts` 的 emitters 里注册（和上游 `ContentIndex`
+    > 发 `static/contentIndex.json` 是同一个套路）。它还会在构建期 `JSON.parse` 一次，
+    > 数据写坏了直接构建失败，而不是静默。
+    - **`note` 填目标笔记的文件名**（不含 `.md`、不带路径），填对才在这篇笔记里出现。
+      一篇笔记可以挂多条，侧栏 ◀ ▶ 依次翻。
+    - **加新条目的唯一入口就是改这个 JSON**，不用碰任何 `.ts`。
+    - `src` 字段标注数据来源：`cactus` = NCI/CADD Cactus 解析器查得并核对了 InChIKey；
+      `manual` = 人工书写，已按分子式核对过原子数。
+    - ⚠️ **Cactus 本身偶发返回错结构**（查 `succinic acid` 给的是戊二酸），
+      所以每条都配了 `formula`。**加条目时务必让 SMILES 的原子数和 formula 对得上** ——
+      2026-10-09 那次 159 条里就抓出 5 处不一致（甲硫氨酸/谷氨酰胺多一个 CH₂、
+      PIPES 分子式、C柠檬酸根少一个负电荷、环丙烯正离子）。
+    - 3D 入口有两种：`"pdb": "1MBO"` 走 RCSB，`"pdb": "AF-P01308-F1"` 走 AlphaFold DB。
+
+  > ⚠️ **主题配色：字母和键靠 `currentColor` 跟随明暗，而颜色藏在两个地方。**
+  > `preprocessSvg()` 用 **`DOMParser` 遍历 DOM**（不是正则）把 `fill`/`stroke` 换成
+  > `currentColor`，再由 `.molecule-view svg { color: var(--dark) }` 上色 ——
+  > 浅色模式是深色字、暗色模式是浅色字，切换主题**不用重绘**。
+  > 只有一个坑但很致命：**RDKit 把原子字母的颜色写在 `<text>` 的内联
+  > `style="...;fill:#000000"` 里**，不是 `fill="#000000"` 属性。
+  > 2026-10-09 只做了属性形式，结果暗色模式下「键变浅了、字母还是黑的」。
+  > 所以属性形式和内联 style 必须都换。
+  > 另外 `.molecule-view svg text` 的字体规则要加 `!important` ——
+  > RDKit 的 `font-family`/`font-size` 也在内联 style 里，不加压不过去。
+
+  > ⚠️ **加新条目时不要用在线 API 查 SMILES**（用户明确要求：太慢）。
+  > 用知识库直接写，但**每条必须带 `formula`，并自己把 SMILES 的原子数数一遍核对**
+  > —— 这是唯一能机械防错的手段。历史上手写的 5 处错（甲硫氨酸/谷氨酰胺多一个 CH₂、
+  > PIPES 分子式、柠檬酸根少一个负电荷、环丙烯正离子 sp³ 写反）全是靠数原子抓出来的。
+  > **数不准的就别加**，宁缺勿错。
+
+  > ⚠️ **`getRDKit()` 里必须先 `loadScript` 再 `initRDKitModule`。**
+  > 少了第一步会直接找不到 `initRDKitModule` —— 页面整块显示「渲染错误」。
+  > 这是本组件踩过的第一个坑，改这块时先确认加载顺序没退化。
+
+  > ⚠️ **组件初始 `style="display:none"`，由脚本决定要不要显示。**
+  > 早期版本服务端先渲染出框、脚本再判断隐藏，会看到「闪一下就没了」。
+  > 现在服务端就不输出可见框，脚本匹配到内容才 `display:""`。
+
+  > ⚠️ **渲染器全部走 CDN，降级链不能省**（mermaid 踩过的同一个坑）：
+  > RDKit → SmilesDrawer → 纯文本 SMILES。RDKit 的 SVG 颜色会被脚本统一替换成
+  > `currentColor`，再由 CSS `svg { color: var(--dark) }` 上色，
+  > 所以暗色模式切换**不需要重新渲染**。
 
 > ⚠️ **改组件要从 `quartz.layout.ts` 下手**。
 > `componentResources.ts` 只收集「layout 数组里注册过的组件」的 `.css` 和
