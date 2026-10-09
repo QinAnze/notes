@@ -111,19 +111,30 @@ npm run format             # Prettier 格式化
 **超长的「比大小」序列也不要放框内** —— 5 项以上的 `$$A > B > C > ...$$`
 横向一定溢出，改成竖排表格（「梯队 | 基团」两列）提到框外。
 
-### 画图用 mermaid，不要用 code fence 拼 ASCII
+### 不要用代码块画图
 
-Quartz v4 **内置** mermaid 支持，**不需要 npm 装任何东西、不用改配置**
-（`quartz/plugins/transformers/ofm.ts` 的 `mermaid` 选项默认 `true`，
-运行时从 `cdn.jsdelivr.net` 动态 import，渲染类名 `.mermaid`）。
+关系、流程、层级这类内容**一律用表格或单行文字**表达，
+例如 `A ──(试剂/条件)──► B`，一行写一条，窄屏也不会错行。
 
-```mermaid
-flowchart TB
-    R["反应物"] -->|"Ea 低 · 快"| TS1["过渡态 1（低能）"]
-```
+**⛔ ASCII 字符画（`┌─┐│└┘` 拼的转化图、能量图）和 mermaid 围栏都不要用。**
+前者是排版必然错行；后者是本站根本渲染不出来（见下）。
 
-- 能量图、反应机理流程、层级关系一律用 ` ```mermaid ` 围栏。
-- code fence 只留给真正的代码和结构化文本（JSON 等），不当画板用。
+> ⚠️ **本站的 mermaid 渲染不出来，已放弃。**
+> 站内原本只有一处 mermaid（`控温.md` 的动力学/热力学控制示意图），
+> 试过锁 `mermaid@10.9.3`、首屏主动调 `renderMermaid()`、
+> 构建期把源码写进 `data-mermaid-src` 属性三轮修复，
+> 页面仍然显示代码块，已于 2026-10-09 连同 `ofm.ts`、`custom.scss`
+> 里的改动全部回退成上游 v4.0.8 原样。**别再动它。**
+>
+> 查过的线索留在 `.workbuddy/memory/MEMORY.md`：
+> 上游 issue #638（现象同为「we get a codeblock again」，根因是
+> **rehype-pretty-code**）、官方现用 `mermaid.inline.ts` 的四个关键点
+> （cdnjs 加载 11.4.0、用 `innerText` 而非 `textContent` 取源码、
+> 重渲染清 `data-processed`、构建期把原文写进 `data-clipboard`）。
+> **本项目的 rehype-pretty-code 是 0.10.0，而上游修好时是 0.12.3** ——
+> 将来要重启这件事，先升 RPC，别再改 `ofm.ts` 的 JS。
+
+code fence 只留给真正的代码和结构化文本（JSON 等）。
 
 可用类型由 `quartz/plugins/transformers/ofm.ts` 的 `calloutMapping` 决定，
 **没有 `danger`**（有 `bug` 和 `failure`）。
