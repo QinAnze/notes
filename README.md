@@ -159,14 +159,51 @@ code fence 只留给真正的代码和结构化文本（JSON 等）。
   切换主题时靠 `opacity` 交叉淡入淡出，不是硬替换。
 - 右侧栏是**关系图谱 + 思维导图**（`quartz.layout.ts` 的 `right` 数组，
   顺序即从上到下）。图谱只挂在笔记页，列表页（首页/文件夹/标签）不重复渲染。
-  侧栏那份渲染的是**全库图**（`depth: -1`，即整个 `content/` 的所有节点），
-  点右上角小图标打开的是更大的全屏版本。
+  侧栏那份渲染的是**全库图**（`depth: -1`，即整个 `content/` 的所有节点）。
   两个加起来约 930px 高，所以 `custom.scss` 里给 `.sidebar` 加了滚动。
+
+  三个侧栏模块（图谱 / 思维导图 / 结构演示）现在**视觉完全一致**：
+  同为「1px 边框 + 8px 圆角 + 透明背景」，且**标题都在框里面**（`<h3>` 带 emoji 前缀）。
+  以前图谱的标题在框外，和另外两个不一样，已统一。
 
   > ⚠️ **`.graph-outer` 的 `height` 保持官方默认的 250px，不要改成更大的值。**
   > `graph.inline.ts` 里 svg 高度是 `Math.max(graph.offsetHeight, 250)`：
   > 框高小于 250 会把图裁掉底部，大于 250 则 svg 仍是 250、框底空一截。
   > **250 是唯一两边都对齐的取值**（之前设成 380px 就是因为这个，底部一直空着）。
+
+  > 🔍 **三个模块右上角的「放大」按钮是同一套实现**（2026-10-10 加的）：
+  > - 样式：`.zoom-btn` + `.zoom-overlay`，都在 `quartz/styles/custom.scss`（写一份三处共用）
+  > - 逻辑：`quartz/components/scripts/zoom.ts` 的 `setupZoomOverlay()` ——
+  >   开合、Esc 关闭、点浮层空白关闭、幂等绑定全在那里
+  > - **浮层内容由各模块自己生成**，因为三种内容的正确做法不一样：
+  >   | 模块 | 浮层里放什么 | 为什么 |
+  >   |---|---|---|
+  >   | 图谱 | 按浮层尺寸**重跑一遍力导向** | 侧栏那份挤在 ~380px 里只能看个大概，拉伸没意义 |
+  >   | 思维导图 | 在浮层里**重建一个 markmap 实例** | 侧栏那份又高又窄，等比放大的倍率不到 1.2×，重建才能重新排版 |
+  >   | 结构演示（2D） | **克隆已经画好的 SVG** | 本来就是矢量图，克隆即无损放大；省得重跑 RDKit 还要算比例 |
+  >   | 结构演示（3D） | **把画布容器整个「移动」进浮层** | 克隆 canvas 只会得到空白，但**移动 DOM 节点不丢 WebGL 上下文**，连旋转/缩放状态都保留；搬完调 `viewer.resize()` 按新尺寸重算投影 |
+  > - ⚠️ 结构演示的按钮在 **2D/3D 画出来之前是隐藏的**（脚本挂 `.is-hidden`），
+  >   免得点了给一个空浮层。3D 要等模型加载完才会亮。
+  > - ⚠️ 浮层挂在 `.sidebar` 里面，而侧栏是 `position: fixed`（**fixed 恒成层叠上下文**），
+  >   所以浮层的 `z-index: 9999` 只在侧栏内部生效。`zoom.ts` 打开时会顺手把
+  >   `.sidebar` 抬到 `z-index: 1`，关闭时清掉 —— 三处共用，别再各写一份。
+  > - ⚠️ `zoom.ts` 里读完容器尺寸要等一个 `requestAnimationFrame`：
+  >   浮层从 `display: none` 变成 `flex` 的那一帧 `clientWidth` 还是 0，
+  >   markmap 的 `autoFit` 会因此算出乱七八糟的缩放。
+  > - ⚠️ 关闭时的顺序是**先跑清理函数、再清空浮层**（`zoom.ts` 的 `close()`）——
+  >   3D 那个搬回去的动作就靠这个顺序，改成先清空会把画布直接删掉。
+
+  > ⚠️ **「放大按钮点了没反应」的根因：`nav` 事件里 `detail` 的键名不一致**
+  > （上游 4.0.8 的历史问题，2026-10-10 修）。
+  > `componentResources.ts` 在 `enableSPA: false` 分支派发的是
+  > `new CustomEvent("nav", { detail: { slug: ... } })`，
+  > 而 `spa.inline.ts`（SPA 模式）派发的是 `{ detail: { url: ... } }` ——
+  > 下游组件读的都是 `detail.url`。非 SPA 时读到 `undefined`，
+  > `graph.inline.ts` 因此走进兜底分支并 **提前 `return`**：
+  > 图谱照常画出来（兜底分支也画），但**按钮的 click 监听根本没挂上**，
+  > 点了完全没反应，控制台也不报错。
+  > 现在 `componentResources.ts` 里**两个键都给**，`graph.inline.ts` 也两个都认。
+  > 以后再加读 `detail` 的组件，记得保持这个双键约定。
 
   图谱的松紧由 `layout.ts` 里 `Component.Graph({...})` 的四个力学参数控制：
   `repelForce`（排斥力）、`linkDistance`（连线长度）、`centerForce`（向心力）、
@@ -228,9 +265,16 @@ code fence 只留给真正的代码和结构化文本（JSON 等）。
     |---|---|---|
     | `pdb: "1MBO"` | RCSB（实验测定） | 有晶体/核磁结构的经典蛋白 |
     | `pdb: "AF-P01308-F1"` | AlphaFold DB（预测） | 没有实验结构的蛋白，覆盖面几乎全库 |
-  - **数据在项目根的 `static/molecules.json`，不在代码里**（约 296 条，覆盖 55 篇笔记；
+  - **数据在项目根的 `static/molecules.json`，不在代码里**（约 410 条，覆盖 55 篇笔记；
     只差 2 篇教师介绍和 1 篇课程大纲 —— 那三篇本来就没有化合物）。
-    每条：`name / smiles / formula / note / group / tip`，蛋白质条目还有 `pdb`。
+    其中 **21 个蛋白质给的是 PDB 结构**（RCSB），走 3D 视图。
+    每条：`name / smiles / formula / note / group / tip`，蛋白质条目用 `pdb` 代替 `smiles`。
+
+    > ⚠️ **「过于简单」的条目不收**（用户 2026-10-10 明确要求）：
+    > 甲烷、乙烷、乙醇、甲醇、水、氢气、氮气、CO/CO₂/SO₂/O₃、卤素单质、常见金属离子
+    > 这类「画出来只有一两个原子」的条目一律剔除 ——
+    > 侧栏位置有限，要放的是**有官能团、有构型、有环系**、能看出教学点的结构。
+    > 唯一例外：该结构本身就是那篇笔记的主题（例如无机 S2 讲 VSEPR 时的 CO₂ / SO₂）。
 
     > ⚠️ **取数据的 URL 是运行时算出来的，不要写死 `/notes`。**
     > `staticUrls()` 用「`location.pathname` 的层数 − `<body data-slug>` 的层数」

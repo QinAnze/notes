@@ -1,6 +1,7 @@
 import type { ContentDetails } from "../../plugins/emitters/contentIndex"
 import * as d3 from "d3"
-import { registerEscapeHandler, removeAllChildren } from "./util"
+import { removeAllChildren } from "./util"
+import { setupZoomOverlay } from "./zoom"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
 
 type NodeData = {
@@ -276,49 +277,45 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   })
 }
 
-function renderGlobalGraph() {
+/**
+ * 放大浮层的内容：**按浮层尺寸重新跑一遍力导向**，而不是把侧栏那份图拉伸。
+ * 侧栏 60+ 个节点挤在 ~380px 宽里本来就只能看个大概（所以 label 透明度压得很低），
+ * 只有重新布局才真的多看清点东西。
+ *
+ * 侧栏的 z-index 抬升由 components/scripts/zoom.ts 统一处理，这里不用管。
+ */
+function buildGlobalGraph(body: HTMLElement): () => void {
   const slug = getFullSlug(window)
-  const container = document.getElementById("global-graph-outer")
-  const sidebar = container?.closest(".sidebar") as HTMLElement
-  container?.classList.add("active")
-  if (sidebar) {
-    sidebar.style.zIndex = "1"
-  }
 
   renderGraph("global-graph-container", slug)
 
-  function hideGlobalGraph() {
-    container?.classList.remove("active")
-    const graph = document.getElementById("global-graph-container")
-    if (sidebar) {
-      sidebar.style.zIndex = "unset"
-    }
-    if (!graph) return
-    removeAllChildren(graph)
+  return () => {
+    removeAllChildren(body)
   }
-
-  registerEscapeHandler(container, hideGlobalGraph)
 }
 
 document.addEventListener("nav", async (e: unknown) => {
   const event = e as CustomEventMap["nav"]
-  const slug = event?.detail?.url
+  // ⚠️ detail 里两个键都认。
+  // 非 SPA 模式下 componentResources 派发的是 `slug`，SPA 模式下 spa.inline.ts 派发的是 `url`。
+  // 以前这里只读 url，非 SPA 时永远是 undefined —— 于是走下面那个兜底分支并提前 return，
+  // 结果是「图谱照常画出来（兜底分支也画），但放大按钮的 click 监听根本没挂上」，
+  // 点了一动不动，控制台也不报错。2026-10-10 修的就是这个。
+  const detail = ((event?.detail ?? {}) as { url?: FullSlug; slug?: FullSlug }) ?? {}
+  const slug = detail.url ?? detail.slug ?? (document.body.dataset.slug as FullSlug | undefined)
   if (!slug) {
-    console.warn("Graph: slug not found in nav event, using fallback")
-    // Fallback to current page slug from body dataset
-    const fallbackSlug = document.body.dataset.slug as FullSlug
-    if (!fallbackSlug) {
-      console.error("Graph: no slug available, skipping render")
-      return
-    }
-    addToVisited(simplifySlug(fallbackSlug))
-    await renderGraph("graph-container", fallbackSlug)
+    console.warn("Graph: no slug available, skipping render")
     return
   }
-  addToVisited(slug)
+
+  addToVisited(simplifySlug(slug))
   await renderGraph("graph-container", slug)
 
-  const containerIcon = document.getElementById("global-graph-icon")
-  containerIcon?.removeEventListener("click", renderGlobalGraph)
-  containerIcon?.addEventListener("click", renderGlobalGraph)
+  // 「放大」按钮 + 全屏浮层。逻辑和思维导图 / 结构演示共用（components/scripts/zoom.ts）。
+  setupZoomOverlay({
+    buttonId: "global-graph-icon",
+    overlayId: "global-graph-outer",
+    bodyId: "global-graph-container",
+    build: buildGlobalGraph,
+  })
 })

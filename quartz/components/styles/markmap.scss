@@ -1,4 +1,6 @@
 .markmap-wrapper {
+  // 放大按钮（.zoom-btn）要相对这个框定位
+  position: relative;
   margin-top: 2rem;
   padding: 1.5rem;
   border: 1px solid var(--lightgray);

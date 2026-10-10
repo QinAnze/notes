@@ -1,9 +1,20 @@
-@use "../../styles/variables.scss" as *;
-
+// 双向链接图谱。
+//
+// 视觉和另外两个侧栏模块（思维导图 .markmap-wrapper / 结构演示 .molecule-wrapper）
+// 完全对齐：1px 边框 + 8px 圆角、不写 background（让站点背景图透上来）、
+// 标题在框**里面**。放大按钮（.zoom-btn）和全屏浮层（.zoom-overlay）是三处共用的，
+// 样式写在 quartz/styles/custom.scss，这里不重复。
 .graph {
+  position: relative;
+  // 图谱是右栏的第一项，不加 margin-top —— 让框顶和左栏的站点标题齐平。
+  // 与下面思维导图的间距由侧栏自身的 gap: 2rem + .markmap-wrapper 的 margin-top 给。
+  padding: 1.5rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+
   & > h3 {
+    margin: 0 0 1rem;
     font-size: 1rem;
-    margin: 0;
     color: var(--secondary);
     display: flex;
     align-items: center;
@@ -15,70 +26,16 @@
     content: "🕸️";
   }
 
+  // 图谱的画布。**这里不画边框**（框已经画在 .graph 上了），只负责裁切。
   & > .graph-outer {
-    border-radius: 5px;
-    border: 1px solid var(--lightgray);
-    box-sizing: border-box;
+    position: relative;
     // 保持官方默认的 250px，不要动。
     // graph.inline.ts 里 svg 高度是 `Math.max(graph.offsetHeight, 250)`，
-    // 这里的框高必须 >= 250，否则框比 svg 矮，图会被 overflow: hidden 裁掉底部；
-    // 框高大于 250 则相反 —— svg 仍是 250，框底部空一截。
-    // 250 正好两边对齐，是唯一不会出问题的取值。
+    // 而 #graph-container 在量高度时是空的（offsetHeight = 0），所以永远是 250。
+    // 框比 250 矮 → 图被 overflow: hidden 裁掉底部；框比 250 高 → 底部空一截。
+    // 250 是唯一两边对齐的取值。
     height: 250px;
-    margin: 0.5em 0;
-    position: relative;
+    margin: 0;
     overflow: hidden;
-
-    & > #global-graph-icon {
-      color: var(--dark);
-      opacity: 0.5;
-      width: 18px;
-      height: 18px;
-      position: absolute;
-      padding: 0.2rem;
-      margin: 0.3rem;
-      top: 0;
-      right: 0;
-      border-radius: 4px;
-      background-color: transparent;
-      transition: background-color 0.5s ease;
-      cursor: pointer;
-      &:hover {
-        background-color: var(--lightgray);
-      }
-    }
-  }
-
-  & > #global-graph-outer {
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100%;
-    backdrop-filter: blur(4px);
-    display: none;
-    overflow: hidden;
-
-    &.active {
-      display: inline-block;
-    }
-
-    & > #global-graph-container {
-      border: 1px solid var(--lightgray);
-      background-color: var(--light);
-      border-radius: 5px;
-      box-sizing: border-box;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 60vh;
-      width: 50vw;
-
-      @media all and (max-width: $fullPageWidth) {
-        width: 90%;
-      }
-    }
   }
 }

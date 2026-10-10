@@ -19,6 +19,8 @@
 //
 // 4. **SVG 颜色统一替换成 currentColor**，由 CSS 上色，主题切换不用重绘。
 
+import { setupZoomOverlay } from "./zoom"
+
 interface Molecule {
   /** 显示名 */
   name: string
@@ -183,12 +185,25 @@ const indexEl = document.querySelector<HTMLElement>("#molecule-index")
 const prevBtn = document.querySelector<HTMLButtonElement>("#molecule-prev")
 const nextBtn = document.querySelector<HTMLButtonElement>("#molecule-next")
 const modeBtn = document.querySelector<HTMLButtonElement>("#molecule-mode")
+const zoomIcon = document.querySelector<SVGElement>("#molecule-zoom-icon")
 
 let entries: Molecule[] = []
 let current = 0
 let is3D = false
+/** 当前活着的 3Dmol viewer（放大时要对它调 resize/ render）。切回 2D 后它就作废了 */
+let viewer3d: any = null
+
+/**
+ * 「放大」按钮只在真的有东西可放大的时候才出现：
+ * 2D 画成了 SVG，或者 3D 的模型加载完了。
+ * （3D 渲染器还没起来 / 加载失败时按钮是藏着的，免得点了给一个空浮层。）
+ */
+function setZoomAvailable(on: boolean) {
+  zoomIcon?.classList.toggle("is-hidden", !on)
+}
 
 function setHint(html: string) {
+  setZoomAvailable(false)
   if (!view) return
   view.innerHTML = `<div class="molecule-hint">${html}</div>`
 }
@@ -393,6 +408,8 @@ function preprocessSvg(svgText: string): string {
 
 function renderWithRDKit(mol: RdkitMol, host: HTMLElement) {
   host.innerHTML = preprocessSvg(mol.get_svg())
+  // 画好了，可以放大
+  setZoomAvailable(true)
 }
 
 /** 把 SmilesDrawer 给出的 atomTree 画成 SVG（同样是 currentColor） */
@@ -442,6 +459,8 @@ function drawTree(host: HTMLElement, tree: any) {
   if (Array.isArray(tree)) tree.forEach(walk)
   else walk(tree)
   host.appendChild(svg)
+  // 降级渲染器画的也是矢量 SVG，同样可以放大
+  setZoomAvailable(true)
 }
 
 async function render2D(mol: Molecule) {
@@ -520,17 +539,24 @@ async function render3D(mol: Molecule, host: HTMLElement) {
   const stage = document.createElement("div")
   stage.className = "molecule-3d"
   host.appendChild(stage)
+  // 结构还没加载出来之前不给放大（放大是把这个容器整个搬进浮层，
+  // 空容器搬过去只会看到空白）。加载完在 styleAndZoom() 里再打开。
+  setZoomAvailable(false)
 
   const viewer = D.createViewer(stage, { backgroundAlpha: 0, antialias: true })
   if (!viewer) {
     setHint("3D 渲染器初始化失败")
     return
   }
+  // 留给「放大」用：放大时不是克隆画布（克隆出来是空白），
+  // 而是把这个容器连同 WebGL 上下文一起移动过去，再让 viewer 按新尺寸重算。
+  viewer3d = viewer
 
   const styleAndZoom = () => {
     viewer.setStyle({}, { cartoon: { color: "spectrum" } })
     viewer.zoomTo()
     viewer.render()
+    setZoomAvailable(true)
   }
 
   // 两类数据源：
@@ -608,11 +634,116 @@ function step(delta: number) {
 }
 
 // ---------------------------------------------------------------------------
+// 放大浮层
+// ---------------------------------------------------------------------------
+
+/**
+ * 浮层内容。2D 和 3D 的做法**不一样**，别想着统一：
+ *
+ * **2D —— 克隆已经画好的 SVG。**
+ *   结构式本来就是矢量图，克隆一份塞进大容器里就是无损放大。没必要重跑 RDKit
+ *   （重跑还得处理字号/键长的比例，反而更容易画歪）。
+ *   前提是目标得有 viewBox，否则没有等比缩放的依据 —— 万一渲染器没给，
+ *   用 source.getBBox() 现补一个。
+ *
+ * **3D —— 把整个画布容器「移动」进浮层。**
+ *   ⚠️ 克隆 canvas 只会得到空白（像素内容不跟着 cloneNode 走），
+ *   但**移动 DOM 节点是安全的**：WebGL 上下文和画布位图都不会丢，
+ *   用户当前的旋转/缩放状态也原样保留。
+ *   搬过去之后调 `viewer.resize()` 让 3Dmol 按新容器尺寸重算投影 ——
+ *   画布变高，模型在视口里就跟着变大了。
+ *   关浮层时再搬回来并 resize 一次（放在这里返回的清理函数里，
+ *   zoom.ts 是先跑清理、再清空浮层，所以顺序是安全的）。
+ */
+function buildMoleculeZoom(body: HTMLElement) {
+  // --- 3D ---
+  const stage = is3D ? view?.querySelector<HTMLElement>(".molecule-3d") : null
+  if (stage && viewer3d) {
+    // 容器尺寸变了，得让 3Dmol 按新尺寸重算一次投影，否则画布还是旧大小。
+    // ⚠️ 包一层：resize 是 3Dmol 的公开方法，但万一某个版本没有，
+    // 也不能让异常把整次点击弄崩（那样浮层会开着但里面是空的）。
+    const refresh = () => {
+      try {
+        viewer3d?.resize?.()
+        viewer3d?.render?.()
+      } catch (err) {
+        console.warn("[molecule] 3D 画布尺寸刷新失败", err)
+      }
+      // 兜底：万一某个 3Dmol 版本没有/用不了 resize，至少让 canvas 铺满新容器
+      // （位图会被拉伸，略糊，但总比缩在左上角一小块强）。
+      // 正常路径下 canvas 的位图尺寸已经等于容器尺寸，这行等于没写。
+      const canvas = stage.querySelector("canvas")
+      if (canvas instanceof HTMLElement) {
+        canvas.style.width = "100%"
+        canvas.style.height = "100%"
+      }
+    }
+
+    body.appendChild(stage)
+    refresh()
+
+    return () => {
+      if (!view) {
+        stage.remove()
+        return
+      }
+      // 中间若切过主题/换过条目，3D 会被重建，这块旧画布就不是当前的那块了
+      if (view.querySelector(".molecule-3d") !== stage) {
+        stage.remove()
+        return
+      }
+      view.appendChild(stage)
+      refresh()
+    }
+  }
+
+  // --- 2D ---
+  const source = view?.querySelector<SVGSVGElement>("svg")
+  if (!source) {
+    body.innerHTML =
+      '<div class="molecule-hint">这个视图暂时没有可放大的内容。<br/>' +
+      "（2D 要等结构式画出来，3D 要等模型加载完。）</div>"
+    return
+  }
+
+  const clone = source.cloneNode(true) as SVGSVGElement
+
+  if (!clone.getAttribute("viewBox")) {
+    try {
+      const box = source.getBBox()
+      if (box && box.width > 0 && box.height > 0) {
+        clone.setAttribute("viewBox", `${box.x} ${box.y} ${box.width} ${box.height}`)
+      }
+    } catch (err) {
+      // getBBox 在元素不可见等情况会抛，忽略 —— 那就只能按原尺寸显示了
+      console.warn("[molecule] getBBox 失败，放大可能不完整", err)
+    }
+  }
+
+  // 显式撑满浮层：没有 viewBox 的 SVG 若留着 width:auto，浏览器会退回到默认的
+  // 300×150，放大等于没放。有 viewBox 时配合默认的 preserveAspectRatio
+  // （xMidYMid meet）等比放大并居中，正是想要的效果。
+  clone.style.width = "100%"
+  clone.style.height = "100%"
+
+  body.innerHTML = ""
+  body.appendChild(clone)
+}
+
+// ---------------------------------------------------------------------------
 // 启动
 // ---------------------------------------------------------------------------
 
 async function init() {
   if (!wrapper || !view) return
+
+  // 放大浮层的开合逻辑和另外两个侧栏模块共用（components/scripts/zoom.ts）
+  setupZoomOverlay({
+    buttonId: "molecule-zoom-icon",
+    overlayId: "molecule-zoom-outer",
+    bodyId: "molecule-zoom-body",
+    build: buildMoleculeZoom,
+  })
 
   // ⚠️ 失败原因一定要显示出来。之前这里是「加载失败就静默隐藏」，
   // 结果数据文件 404 时用户只看到「框没了」，完全无从判断是哪一步坏的。

@@ -439,11 +439,87 @@ a.tag-link {
   overflow: hidden;
 }
 
-// Graph view styling
-.graph > .graph-outer {
-  border-radius: 12px;
-  border: 1px solid var(--lightgray);
-  overflow: hidden;
+// ---------------------------------------------------------------------------
+// 侧栏三个模块（双向链接图谱 / 思维导图 / 结构演示）共用的两件东西：
+//   1. .zoom-btn     —— 框右上角的「放大」按钮
+//   2. .zoom-overlay —— 全屏浮层（点按钮开，Esc / 点浮层空白处关）
+// 三处 DOM 结构一致，所以样式写一份就够（开合逻辑见 components/scripts/zoom.ts）。
+// ⚠️ 原来这里有一条 `.graph > .graph-outer { border-radius: 12px; border: 1px ... }`，
+//    现在框改画在 .graph 上了（跟另外两个模块一样），那条会和 .graph 的边框叠成双线框，
+//    已删除；图谱画布现在只负责裁切。
+// ---------------------------------------------------------------------------
+
+.zoom-btn {
+  position: absolute;
+  // 和框的 padding 对齐，视觉上落在标题那一行的最右边
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 18px;
+  height: 18px;
+  padding: 0.2rem;
+  box-sizing: content-box;
+  color: var(--dark);
+  opacity: 0.5;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease;
+  z-index: 2;
+
+  &:hover {
+    background-color: var(--lightgray);
+    opacity: 1;
+  }
+
+  // 没有可放大的内容时隐藏（结构演示在 2D/3D 画出来之前会先挂上这个类）
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+
+  &.active {
+    display: flex;
+  }
+
+  .zoom-overlay-inner {
+    position: relative;
+    box-sizing: border-box;
+    width: 88vw;
+    height: 82vh;
+    padding: 1rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    background-color: var(--light);
+    overflow: hidden;
+
+    @media all and (max-width: $fullPageWidth) {
+      width: 94vw;
+      height: 88vh;
+    }
+  }
+
+  .zoom-overlay-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    // 结构演示的 RDKit SVG 把颜色统一换成了 currentColor，靠这里给色
+    color: var(--dark);
+  }
 }
 
 // TOC styling

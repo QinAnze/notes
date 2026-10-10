@@ -101,9 +101,15 @@ function addGlobalPageResources(
   if (cfg.enableSPA) {
     componentResources.afterDOMLoaded.push(spaRouterScript)
   } else {
+    // ⚠️ detail 里**两个键都要给**（url 和 slug）。
+    // spa.inline.ts 派发的是 { url }，这里原来只给了 { slug }，
+    // 而下游组件（components/scripts/graph.inline.ts 等）读的是 detail.url ——
+    // 读不到就走进兜底分支并提前 return，表现是「图谱能画出来、但右上角放大按钮
+    // 的 click 监听永远挂不上」，点了完全没反应，且不报任何错。
+    // 两个键并存后两边都认，谁也不用改。
     componentResources.afterDOMLoaded.push(`
         window.spaNavigate = (url, _) => window.location.assign(url)
-        const event = new CustomEvent("nav", { detail: { slug: document.body.dataset.slug } })
+        const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug, slug: document.body.dataset.slug } })
         document.dispatchEvent(event)`)
   }
 
