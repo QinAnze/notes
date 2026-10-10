@@ -3,14 +3,6 @@
   "note": "侧栏「结构演示」的数据源。SMILES 来源：Cactus Chemical Identifier Resolver (NCI/CADD) 逐个解析 + InChIKey 多源交叉核对；少数条目（标 src:manual）由人工书写并按分子式核对了原子数。",
   "molecules": [
     {
-      "name": "甲烷",
-      "smiles": "C",
-      "formula": "CH₄",
-      "note": "绪论",
-      "group": "有机",
-      "tip": "sp³ 杂化的最简模型：正四面体，键角 109.5°。"
-    },
-    {
       "name": "乙烯",
       "smiles": "C=C",
       "formula": "C₂H₄",
@@ -65,14 +57,6 @@
       "note": "绪论",
       "group": "有机",
       "tip": "三个氟的 −I 效应把 pKa 压到 0.23，是 −I 增强酸性的定量标杆。"
-    },
-    {
-      "name": "尿素",
-      "smiles": "NC(N)=O",
-      "formula": "CH₄N₂O",
-      "note": "绪论",
-      "group": "有机",
-      "tip": "1828 年维勒合成尿素，打破了「生命力论」，有机化学从此成为一门科学。"
     },
     {
       "name": "正己烷",
@@ -225,14 +209,6 @@
       "note": "卤代烃",
       "group": "有机",
       "tip": "脂溶性强 + 难以代谢 → 生物放大，已全球禁用。"
-    },
-    {
-      "name": "乙醇",
-      "smiles": "CCO",
-      "formula": "C₂H₆O",
-      "note": "醇酚醚",
-      "group": "有机",
-      "tip": "ADH/ALDH 两步代谢的起点，也是制药工业最常用的溶剂。"
     },
     {
       "name": "异丙醇",
@@ -1355,15 +1331,6 @@
       "src": "manual"
     },
     {
-      "name": "正丁烷",
-      "smiles": "CCCC",
-      "formula": "C₄H₁₀",
-      "note": "术语",
-      "group": "有机",
-      "tip": "把它和异丁烷并排看，就是「同分异构」四个字最直白的图示。",
-      "src": "manual"
-    },
-    {
       "name": "顺-2-丁烯",
       "smiles": "C/C=C\\C",
       "formula": "C₄H₈",
@@ -1382,15 +1349,6 @@
       "src": "manual"
     },
     {
-      "name": "乙烷",
-      "smiles": "CC",
-      "formula": "C₂H₆",
-      "note": "术语",
-      "group": "有机",
-      "tip": "单键能自由旋转 → 交叉式/重叠式只是「构象」；术语表里最容易和构型混的一条。",
-      "src": "manual"
-    },
-    {
       "name": "乙酰苯胺",
       "smiles": "CC(=O)Nc1ccccc1",
       "formula": "C₈H₉NO",
@@ -1406,15 +1364,6 @@
       "note": "上课和作业的一些思考",
       "group": "有机",
       "tip": "二级醇的参照物：氧化成环己酮、脱水成环己烯，一个分子串起三种反应类型。",
-      "src": "manual"
-    },
-    {
-      "name": "正丁醇",
-      "smiles": "CCCCO",
-      "formula": "C₄H₁₀O",
-      "note": "上课和作业的一些思考",
-      "group": "有机",
-      "tip": "直链伯醇，「溶解度随碳链增长而下降」的入门样本。",
       "src": "manual"
     },
     {
@@ -1463,24 +1412,6 @@
       "src": "manual"
     },
     {
-      "name": "溴",
-      "smiles": "BrBr",
-      "formula": "Br₂",
-      "note": "加成",
-      "group": "有机",
-      "tip": "烯烃的检验试剂：溴水褪色；同时它是反式加成的立体化学范例。",
-      "src": "manual"
-    },
-    {
-      "name": "氯化氢",
-      "smiles": "Cl",
-      "formula": "HCl",
-      "note": "加成",
-      "group": "有机",
-      "tip": "与烯烃加成给出马氏产物；换成 HBr + 过氧化物就是反向的自由基加成。",
-      "src": "manual"
-    },
-    {
       "name": "1,2-二溴乙烷",
       "smiles": "BrCCBr",
       "formula": "C₂H₄Br₂",
@@ -1505,15 +1436,6 @@
       "note": "还原",
       "group": "有机",
       "tip": "连羧酸、酯、酰胺都能还原成醇或胺，和 NaBH₄ 一起考「还原剂强弱」。",
-      "src": "manual"
-    },
-    {
-      "name": "氢气",
-      "smiles": "[H][H]",
-      "formula": "H₂",
-      "note": "还原",
-      "group": "有机",
-      "tip": "催化加氢（Pd / Pt / Ni）；立体上永远是顺式加成，从同面上去。",
       "src": "manual"
     },
     {
@@ -1580,15 +1502,6 @@
       "src": "manual"
     },
     {
-      "name": "甲醇",
-      "smiles": "CO",
-      "formula": "CH₄O",
-      "note": "取代",
-      "group": "有机",
-      "tip": "强碱下变成 CH₃O⁻ 当亲核试剂；也是自由基链转移的常用氢供体。",
-      "src": "manual"
-    },
-    {
       "name": "甲苯",
       "smiles": "Cc1ccccc1",
       "formula": "C₇H₈",
@@ -1649,15 +1562,6 @@
       "note": "氧化",
       "group": "有机",
       "tip": "琼斯氧化的氧化剂：伯醇→羧酸、仲醇→酮、叔醇不反应。",
-      "src": "manual"
-    },
-    {
-      "name": "臭氧",
-      "smiles": "[O-][O+]=O",
-      "formula": "O₃",
-      "note": "氧化",
-      "group": "有机",
-      "tip": "臭氧化-还原水解：把双键切成两个羰基，是推断双键位置的第一手段。",
       "src": "manual"
     },
     {
@@ -1778,42 +1682,6 @@
       "src": "manual"
     },
     {
-      "name": "二氧化碳",
-      "smiles": "O=C=O",
-      "formula": "CO₂",
-      "note": "脱气体",
-      "group": "有机",
-      "tip": "脱羧反应的信号分子：羧酸或 β-酮酸受热冒泡就是它。",
-      "src": "manual"
-    },
-    {
-      "name": "氮气",
-      "smiles": "N#N",
-      "formula": "N₂",
-      "note": "脱气体",
-      "group": "有机",
-      "tip": "重氮盐分解、叠氮化物还原都会放出它 —— 所以脱气体的反应要控温控酸。",
-      "src": "manual"
-    },
-    {
-      "name": "二氧化硫",
-      "smiles": "O=S=O",
-      "formula": "SO₂",
-      "note": "脱气体",
-      "group": "有机",
-      "tip": "亚硫酸盐和磺酰氯的分解产物；磺化反应的可逆性就靠它体现。",
-      "src": "manual"
-    },
-    {
-      "name": "一氧化碳",
-      "smiles": "[C-]#[O+]",
-      "formula": "CO",
-      "note": "脱气体",
-      "group": "有机",
-      "tip": "羰基化（氢甲酰化）的 C1 源：直接给烯烃接上一个羰基。",
-      "src": "manual"
-    },
-    {
       "name": "1,3-丁二烯",
       "smiles": "C=CC=C",
       "formula": "C₄H₆",
@@ -1841,84 +1709,12 @@
       "src": "manual"
     },
     {
-      "name": "溴化氢",
-      "smiles": "Br",
-      "formula": "HBr",
-      "note": "控温",
-      "group": "有机",
-      "tip": "与共轭二烯加成正是「低温 1,2 / 高温 1,4」的经典体系。",
-      "src": "manual"
-    },
-    {
-      "name": "水",
-      "smiles": "O",
-      "formula": "H₂O",
-      "note": "普通生物学绪论",
-      "group": "生物",
-      "tip": "极性分子 + 氢键网络 → 比热和汽化热都异常高，这是「生命能泡在液态水里发生」的物理前提。",
-      "src": "manual"
-    },
-    {
-      "name": "氨",
-      "smiles": "N",
-      "formula": "NH₃",
-      "note": "普通生物学绪论",
-      "group": "生物",
-      "tip": "米勒-尤里实验的原料气体之一；生物体排氮的最简形式。",
-      "src": "manual"
-    },
-    {
-      "name": "甲醛",
-      "smiles": "C=O",
-      "formula": "CH₂O",
-      "note": "普通生物学绪论",
-      "group": "生物",
-      "tip": "米勒实验产物里的关键中间体：在水里自发缩合就能成糖，是有机物「从无到有」的第一步。",
-      "src": "manual"
-    },
-    {
-      "name": "葡萄糖",
-      "smiles": "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C=O",
-      "formula": "C₆H₁₂O₆",
-      "note": "普通生物学绪论",
-      "group": "生物",
-      "tip": "生命的通用燃料，也是淀粉、纤维素、糖原共同的单体。",
-      "src": "manual"
-    },
-    {
       "name": "胆固醇",
       "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
       "formula": "C₂₇H₄₆O",
       "note": "细胞结构与细胞通讯",
       "group": "生物",
       "tip": "嵌在磷脂双分子层里调节流动性：高温降、低温升；同时还是所有类固醇激素的母体。",
-      "src": "manual"
-    },
-    {
-      "name": "钠离子",
-      "smiles": "[Na+]",
-      "formula": "Na⁺",
-      "note": "细胞结构与细胞通讯",
-      "group": "生物",
-      "tip": "膜内外浓度差就是动作电位的电源；钠钾泵每轮泵出 3 个它、泵进 2 个 K⁺。",
-      "src": "manual"
-    },
-    {
-      "name": "钾离子",
-      "smiles": "[K+]",
-      "formula": "K⁺",
-      "note": "细胞结构与细胞通讯",
-      "group": "生物",
-      "tip": "细胞内的主要阳离子；静息电位非常接近它的平衡电位，因为它是最主要的漏离子。",
-      "src": "manual"
-    },
-    {
-      "name": "钙离子",
-      "smiles": "[Ca+2]",
-      "formula": "Ca²⁺",
-      "note": "细胞结构与细胞通讯",
-      "group": "生物",
-      "tip": "胞内浓度比胞外低 4 个数量级 —— 正是这个巨大梯度让它能当第二信使。",
       "src": "manual"
     },
     {
@@ -2093,15 +1889,6 @@
       "src": "manual"
     },
     {
-      "name": "尿素",
-      "smiles": "NC(N)=O",
-      "formula": "CH₄N₂O",
-      "note": "酶与反应控制主线-有机机理的生物学延伸",
-      "group": "有机",
-      "tip": "脲酶专一到只认它，反应速度受扩散限制 —— 讲「酶降低活化能」时最好的量化例子。",
-      "src": "manual"
-    },
-    {
       "name": "L-丙氨酸",
       "smiles": "C[C@H](N)C(O)=O",
       "formula": "C₃H₇NO₂",
@@ -2270,15 +2057,6 @@
       "note": "E4-氧化还原平衡与电极电势",
       "group": "无机",
       "tip": "重铬酸钾法的被滴定物；Fe²⁺/Fe³⁺ 是电极电势表的入门一栏。",
-      "src": "manual"
-    },
-    {
-      "name": "碘",
-      "smiles": "II",
-      "formula": "I₂",
-      "note": "E4-氧化还原平衡与电极电势",
-      "group": "无机",
-      "tip": "碘量法的枢纽。它水溶性极差，必须加 KI 生成 I₃⁻ 才配得成溶液。",
       "src": "manual"
     },
     {
@@ -2549,6 +2327,1266 @@
       "note": "拓展-生物电化学与膜电位",
       "group": "生化",
       "tip": "钙电位的能斯特式常和钠钾并列讲；细胞内外的 4 个数量级梯度就是第二信使的电源。",
+      "src": "manual"
+    },
+    {
+      "name": "乙二醇",
+      "smiles": "OCCO",
+      "formula": "C₂H₆O₂",
+      "note": "绪论",
+      "group": "有机",
+      "tip": "两个羟基 → 氢键网络翻倍，沸点 197 ℃ 比乙醇还高；也是防冻液和聚酯的原料。",
+      "src": "manual"
+    },
+    {
+      "name": "乙酸酐",
+      "smiles": "CC(=O)OC(C)=O",
+      "formula": "C₄H₆O₃",
+      "note": "绪论",
+      "group": "有机",
+      "tip": "两个羰基共用一个桥氧：乙酰化能力仅次于酰氯，阿司匹林工业合成就用它。",
+      "src": "manual"
+    },
+    {
+      "name": "硝基乙烷",
+      "smiles": "CC[N+]([O-])=O",
+      "formula": "C₂H₅NO₂",
+      "note": "绪论",
+      "group": "有机",
+      "tip": "硝基的 −I 和 −M 双吸电子：连原本「不活泼」的烷基氢都被拉出酸性。",
+      "src": "manual"
+    },
+    {
+      "name": "反-1,2-二甲基环己烷",
+      "smiles": "C[C@H]1CCCC[C@@H]1C",
+      "formula": "C₈H₁₆",
+      "note": "烷烃和环烷烃",
+      "group": "有机",
+      "tip": "一上一下（一个直立一个平伏）才是稳定的反式；和顺式一比，差的就是一个 1,3-二直立相互作用。",
+      "src": "manual"
+    },
+    {
+      "name": "甲基环戊烷",
+      "smiles": "CC1CCCC1",
+      "formula": "C₆H₁₂",
+      "note": "烷烃和环烷烃",
+      "group": "有机",
+      "tip": "五元环只有一个位向可选 —— 和甲基环己烷的 a/e 选择形成对照。",
+      "src": "manual"
+    },
+    {
+      "name": "环庚烷",
+      "smiles": "C1CCCCCC1",
+      "formula": "C₇H₁₄",
+      "note": "烷烃和环烷烃",
+      "group": "有机",
+      "tip": "七元环开始出现跨环张力，构象不再只有一个「信封」—— 环大小与张力的分界点。",
+      "src": "manual"
+    },
+    {
+      "name": "1,1-二甲基环己烷",
+      "smiles": "CC1(C)CCCCC1",
+      "formula": "C₈H₁₆",
+      "note": "烷烃和环烷烃",
+      "group": "有机",
+      "tip": "同一个碳上挂两个甲基，必然一上一下 —— 所以它没有顺反异构体，这点常考。",
+      "src": "manual"
+    },
+    {
+      "name": "1-溴丙烷",
+      "smiles": "CCCBr",
+      "formula": "C₃H₇Br",
+      "note": "卤代烃",
+      "group": "有机",
+      "tip": "直链伯卤代烃：SN2 的正面教材，和 2-溴丙烷并排看就是「位阻决定机理」。",
+      "src": "manual"
+    },
+    {
+      "name": "溴苯",
+      "smiles": "Brc1ccccc1",
+      "formula": "C₆H₅Br",
+      "note": "卤代烃",
+      "group": "有机",
+      "tip": "卤素直接连在 sp² 碳上 → 键短、不活泼；但它的孤对又能钝化苯环（仍走邻对位）。",
+      "src": "manual"
+    },
+    {
+      "name": "碘甲烷",
+      "smiles": "CI",
+      "formula": "CH₃I",
+      "note": "卤代烃",
+      "group": "有机",
+      "tip": "最好的离去基团 + 最小的位阻 → SN2 速率之王，也是常用的甲基化试剂。",
+      "src": "manual"
+    },
+    {
+      "name": "六氯环己烷",
+      "smiles": "ClC1(Cl)C(Cl)C(Cl)C(Cl)C(Cl)C1(Cl)",
+      "formula": "C₆H₆Cl₆",
+      "note": "卤代烃",
+      "group": "有机",
+      "tip": "「六六六」：同一张键线式下有多个立体异构体，只有 γ 体是杀虫剂 —— 构型决定活性。",
+      "src": "manual"
+    },
+    {
+      "name": "苯甲醇",
+      "smiles": "OCc1ccccc1",
+      "formula": "C₇H₈O",
+      "note": "醇酚醚",
+      "group": "有机",
+      "tip": "苄位醇：羟基不直接连苯环，所以没有酚的酸性；氧化两步就到苯甲酸。",
+      "src": "manual"
+    },
+    {
+      "name": "2,6-二叔丁基-4-甲基苯酚",
+      "smiles": "Cc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1",
+      "formula": "C₁₅H₂₄O",
+      "note": "醇酚醚",
+      "group": "有机",
+      "tip": "BHT：两个叔丁基把酚羟基包起来，位阻让它当抗氧化剂时自己不会被消耗掉。",
+      "src": "manual"
+    },
+    {
+      "name": "邻甲酚",
+      "smiles": "Cc1ccccc1O",
+      "formula": "C₇H₈O",
+      "note": "醇酚醚",
+      "group": "有机",
+      "tip": "甲基在邻位，位阻使它亲电取代比苯酚慢 —— 定位效应和位阻要一起看。",
+      "src": "manual"
+    },
+    {
+      "name": "乙二醇单乙醚",
+      "smiles": "CCOCCO",
+      "formula": "C₄H₁₀O₂",
+      "note": "醇酚醚",
+      "group": "有机",
+      "tip": "一头醚一头醇：既亲水又能溶油，正是「溶纤剂」这一类工业溶剂的设计思路。",
+      "src": "manual"
+    },
+    {
+      "name": "肉桂醛",
+      "smiles": "O=C/C=C/c1ccccc1",
+      "formula": "C₉H₈O",
+      "note": "醛酮",
+      "group": "有机",
+      "tip": "C=C 与 C=O 共轭：亲核加成活性比普通醛低，但它是「共轭加成」的活教材。",
+      "src": "manual"
+    },
+    {
+      "name": "二苯甲酮",
+      "smiles": "O=C(c1ccccc1)c1ccccc1",
+      "formula": "C₁₃H₁₀O",
+      "note": "醛酮",
+      "group": "有机",
+      "tip": "两个苯环共轭把羰基保护住 → 几乎不水合、不易被氧化，只被还原成二苯甲醇。",
+      "src": "manual"
+    },
+    {
+      "name": "乙二醛",
+      "smiles": "O=CC=O",
+      "formula": "C₂H₂O₂",
+      "note": "醛酮",
+      "group": "有机",
+      "tip": "最简单的二醛：两个羰基互相影响，水合后还会缩合成环状结构。",
+      "src": "manual"
+    },
+    {
+      "name": "2,4-二硝基苯肼",
+      "smiles": "NNC1=CC=C([N+]([O-])=O)C=C1[N+]([O-])=O",
+      "formula": "C₆H₆N₄O₄",
+      "note": "醛酮",
+      "group": "有机",
+      "tip": "检验醛酮的「万能试剂」：生成的 2,4-二硝基苯腙是晶体，测熔点就能定性。",
+      "src": "manual"
+    },
+    {
+      "name": "1,3-环己二烯",
+      "smiles": "C1CC=CC=C1",
+      "formula": "C₆H₈",
+      "note": "不饱和烃和共轭体系",
+      "group": "有机",
+      "tip": "共轭二烯被锁在六元环里，取不到 s-trans 构象 —— 所以它的 Diels-Alder 活性明显更高。",
+      "src": "manual"
+    },
+    {
+      "name": "异戊二烯",
+      "smiles": "CC(=C)C=C",
+      "formula": "C₅H₈",
+      "note": "不饱和烃和共轭体系",
+      "group": "有机",
+      "tip": "天然橡胶和各类萜类的基本单元，「异戊二烯规则」讲的就是它怎么头尾相接。",
+      "src": "manual"
+    },
+    {
+      "name": "1,3,5-己三烯",
+      "smiles": "C=CC=CC=C",
+      "formula": "C₆H₈",
+      "note": "不饱和烃和共轭体系",
+      "group": "有机",
+      "tip": "共轭链再拉长 → 紫外吸收红移，说明共轭越长、能级差越小。",
+      "src": "manual"
+    },
+    {
+      "name": "乙烯基乙炔",
+      "smiles": "C=CC#C",
+      "formula": "C₄H₄",
+      "note": "不饱和烃和共轭体系",
+      "group": "有机",
+      "tip": "双键与三键共轭：最容易看出「累积二烯」和「共轭」差别的一个同分异构体。",
+      "src": "manual"
+    },
+    {
+      "name": "对二甲苯",
+      "smiles": "Cc1ccc(C)cc1",
+      "formula": "C₈H₁₀",
+      "note": "芳烃和芳香性",
+      "group": "有机",
+      "tip": "两个甲基互相协同活化，气相比苯还好氧化 —— 工业上直接空气氧化成对苯二甲酸。",
+      "src": "manual"
+    },
+    {
+      "name": "苯磺酰氯",
+      "smiles": "O=S(=O)(Cl)c1ccccc1",
+      "formula": "C₆H₅ClO₂S",
+      "note": "芳烃和芳香性",
+      "group": "有机",
+      "tip": "Hinsberg 试验的试剂：与伯/仲/叔胺生成三种溶解性不同的产物，一步分清胺的级数。",
+      "src": "manual"
+    },
+    {
+      "name": "苯乙腈",
+      "smiles": "N#Cc1ccccc1",
+      "formula": "C₈H₇N",
+      "note": "芳烃和芳香性",
+      "group": "有机",
+      "tip": "苄位氢被腈基活化 → 强碱一拔就走，是合成苯乙酸类药物的常用起点。",
+      "src": "manual"
+    },
+    {
+      "name": "二苯甲烷",
+      "smiles": "c1ccccc1Cc1ccccc1",
+      "formula": "C₁₃H₁₂",
+      "note": "芳烃和芳香性",
+      "group": "有机",
+      "tip": "两个苯环共享一个 CH₂：它的苄位氢就是后面做 Friedel-Crafts 烷基化的靶点。",
+      "src": "manual"
+    },
+    {
+      "name": "苯甲酰氯",
+      "smiles": "O=C(Cl)c1ccccc1",
+      "formula": "C₇H₅ClO",
+      "note": "羧酸及其衍生物",
+      "group": "有机",
+      "tip": "Schotten-Baumann 酰化的主角；也是用「闻香识酯」检验醇和酚的经典试剂。",
+      "src": "manual"
+    },
+    {
+      "name": "乙酰胺",
+      "smiles": "CC(N)=O",
+      "formula": "C₂H₅NO",
+      "note": "羧酸及其衍生物",
+      "group": "有机",
+      "tip": "酰胺的典型：氮上孤对喂给羰基，所以它既不显碱性、也不显酸性。",
+      "src": "manual"
+    },
+    {
+      "name": "对苯二甲酸",
+      "smiles": "OC(=O)c1ccc(cc1)C(O)=O",
+      "formula": "C₈H₆O₄",
+      "note": "羧酸及其衍生物",
+      "group": "有机",
+      "tip": "两头都是羧基、且严格对位 —— 和乙二醇缩聚就是 PET 瓶片。",
+      "src": "manual"
+    },
+    {
+      "name": "丁二酸酐",
+      "smiles": "O=C1CCC(=O)O1",
+      "formula": "C₄H₄O₃",
+      "note": "羧酸及其衍生物",
+      "group": "有机",
+      "tip": "五元环酸酐：成环张力小又能共振稳定，所以琥珀酸一加热就自己脱水成它。",
+      "src": "manual"
+    },
+    {
+      "name": "三甲胺",
+      "smiles": "CN(C)C",
+      "formula": "C₃H₉N",
+      "note": "胺及杂环化合物",
+      "group": "有机",
+      "tip": "三个甲基一挤，反而比二甲胺更弱碱（溶剂化变差）—— 碱性不随取代增多而单调上升。",
+      "src": "manual"
+    },
+    {
+      "name": "喹啉",
+      "smiles": "c1ccc2ncccc2c1",
+      "formula": "C₉H₇N",
+      "note": "胺及杂环化合物",
+      "group": "有机",
+      "tip": "苯环与吡啶环稠合：氮上有碱性，但整个环系缺电子 —— 亲电取代只在苯环那一侧发生。",
+      "src": "manual"
+    },
+    {
+      "name": "吡嗪",
+      "smiles": "c1cnccn1",
+      "formula": "C₄H₄N₂",
+      "note": "胺及杂环化合物",
+      "group": "有机",
+      "tip": "1,4-二嗪：两个氮互不共轭，所以既没有显著碱性、又缺电子 —— 和嘧啶对照看。",
+      "src": "manual"
+    },
+    {
+      "name": "咔唑",
+      "smiles": "c1ccc2c(c1)[nH]c1ccccc21",
+      "formula": "C₁₂H₉N",
+      "note": "胺及杂环化合物",
+      "group": "有机",
+      "tip": "两个苯环夹一个吡咯：N 上的 H 酸性明显（能被碱拔走），是「吡咯型氮」的放大版。",
+      "src": "manual"
+    },
+    {
+      "name": "天冬氨酸",
+      "smiles": "N[C@@H](CC(O)=O)C(O)=O",
+      "formula": "C₄H₇NO₄",
+      "note": "生物大分子",
+      "group": "生物",
+      "tip": "酸性氨基酸：侧链羧基 pKa 3.65，所以 pH 5 以上它就已经带负电了。",
+      "src": "manual"
+    },
+    {
+      "name": "半胱氨酸",
+      "smiles": "N[C@@H](CS)C(O)=O",
+      "formula": "C₃H₇NO₂S",
+      "note": "生物大分子",
+      "group": "生物",
+      "tip": "巯基 pKa 只有 8.18，是 20 种侧链里最低的 —— 所以它最先去质子、也最先被氧化成二硫键。",
+      "src": "manual"
+    },
+    {
+      "name": "磷酸二羟丙酮",
+      "smiles": "OCC(=O)COP(=O)(O)O",
+      "formula": "C₃H₇O₆P",
+      "note": "生物大分子",
+      "group": "生物",
+      "tip": "磷酸化的酮糖：糖酵解和甘油三酯合成都从它分岔，是「代谢十字路口」的样本。",
+      "src": "manual"
+    },
+    {
+      "name": "苯甲酸乙酯",
+      "smiles": "CCOC(=O)c1ccccc1",
+      "formula": "C₉H₁₀O₂",
+      "note": "结构解析",
+      "group": "有机",
+      "tip": "NMR 例题常客：乙氧基给出一组四重峰 + 一组三重峰，苯环的峰位置也很干净。",
+      "src": "manual"
+    },
+    {
+      "name": "对硝基甲苯",
+      "smiles": "Cc1ccc(cc1)[N+]([O-])=O",
+      "formula": "C₇H₇NO₂",
+      "note": "结构解析",
+      "group": "有机",
+      "tip": "苯环对位二取代 → 氢谱只剩两组「双峰」，各积分 2H，是判断对位的标准图案。",
+      "src": "manual"
+    },
+    {
+      "name": "2-氯丙烷",
+      "smiles": "CC(C)Cl",
+      "formula": "C₃H₇Cl",
+      "note": "结构解析",
+      "group": "有机",
+      "tip": "二级碳加一个氯：氢谱里甲基会裂成二重峰，正好练 n+1 规则。",
+      "src": "manual"
+    },
+    {
+      "name": "1,1,2-三氯乙烷",
+      "smiles": "ClCC(Cl)Cl",
+      "formula": "C₂H₃Cl₃",
+      "note": "结构解析",
+      "group": "有机",
+      "tip": "两个碳上氢的环境完全不同 → 两组信号都裂成二重峰，是「相邻碳偶合」的入门题。",
+      "src": "manual"
+    },
+    {
+      "name": "meso-2,3-二溴丁烷",
+      "smiles": "C[C@H](Br)[C@@H](Br)C",
+      "formula": "C₄H₈Br₂",
+      "note": "立体化学",
+      "group": "有机",
+      "tip": "内消旋体：两个手性中心但分子整体有对称面 → 自己就是自己的镜像，旋光度为零。",
+      "src": "manual"
+    },
+    {
+      "name": "布洛芬",
+      "smiles": "CC(C)Cc1ccc(cc1)C(C)C(O)=O",
+      "formula": "C₁₃H₁₈O₂",
+      "note": "立体化学",
+      "group": "有机",
+      "tip": "市售是外消旋体，但只有 S 体有活性，R 体在体内会慢慢转过去 —— 和沙利度胺对照看。",
+      "src": "manual"
+    },
+    {
+      "name": "(S)-布洛芬",
+      "smiles": "CC(C)Cc1ccc(cc1)[C@@H](C)C(O)=O",
+      "formula": "C₁₃H₁₈O₂",
+      "note": "立体化学",
+      "group": "有机",
+      "tip": "有活性的那一半。同一个分子，R 体几乎无效 —— 手性药物的核心论证。",
+      "src": "manual"
+    },
+    {
+      "name": "顺-1,2-环己二醇",
+      "smiles": "O[C@H]1CCCC[C@H]1O",
+      "formula": "C₆H₁₂O₂",
+      "note": "立体化学",
+      "group": "有机",
+      "tip": "两个羟基一个直立一个平伏 → 顺式；而环氧化合物开环只给反式，两者可以互相验证。",
+      "src": "manual"
+    },
+    {
+      "name": "3-甲基环己烯",
+      "smiles": "CC1CCC=CC1",
+      "formula": "C₇H₁₂",
+      "note": "命名",
+      "group": "有机",
+      "tip": "双键优先取低编号，所以甲基落在 3 位而不是 5 位 —— 编号规则的综合练习。",
+      "src": "manual"
+    },
+    {
+      "name": "2,4-二甲基-3-戊酮",
+      "smiles": "CC(C)C(=O)C(C)C",
+      "formula": "C₇H₁₄O",
+      "note": "命名",
+      "group": "有机",
+      "tip": "两个异丙基夹一个羰基：先定含羰基的最长链，才发现它其实以 3-戊酮为母体。",
+      "src": "manual"
+    },
+    {
+      "name": "邻二氯苯",
+      "smiles": "Clc1ccccc1Cl",
+      "formula": "C₆H₄Cl₂",
+      "note": "术语",
+      "group": "有机",
+      "tip": "位置异构（邻/间/对）属于构造异构，不是构型异构 —— 术语表里最容易划错界的一类。",
+      "src": "manual"
+    },
+    {
+      "name": "间二氯苯",
+      "smiles": "Clc1cccc(Cl)c1",
+      "formula": "C₆H₄Cl₂",
+      "note": "术语",
+      "group": "有机",
+      "tip": "间位：偶极矩比邻位小、比对位大，物理量随位置单调变化。",
+      "src": "manual"
+    },
+    {
+      "name": "对二氯苯",
+      "smiles": "Clc1ccc(Cl)cc1",
+      "formula": "C₆H₄Cl₂",
+      "note": "术语",
+      "group": "有机",
+      "tip": "对位对称 → 偶极矩为零；三个异构体摆一起，就是「同分异构」的完整图示。",
+      "src": "manual"
+    },
+    {
+      "name": "甲乙醚",
+      "smiles": "CCOC",
+      "formula": "C₃H₈O",
+      "note": "术语",
+      "group": "有机",
+      "tip": "和丙醇同分子式、不同官能团 —— 官能团异构，异构分类的第二层。",
+      "src": "manual"
+    },
+    {
+      "name": "1-丁烯",
+      "smiles": "CCC=C",
+      "formula": "C₄H₈",
+      "note": "加成",
+      "group": "有机",
+      "tip": "末端烯烃：质子化只能生成二级碳正离子，是「马氏规则」最干净的一个例子。",
+      "src": "manual"
+    },
+    {
+      "name": "苯乙炔",
+      "smiles": "C#Cc1ccccc1",
+      "formula": "C₈H₆",
+      "note": "加成",
+      "group": "有机",
+      "tip": "三键与苯环共轭 → 亲电加成比普通炔烃慢，说明共轭稳定了中间体。",
+      "src": "manual"
+    },
+    {
+      "name": "叔丁基氯",
+      "smiles": "CC(C)(C)Cl",
+      "formula": "C₄H₉Cl",
+      "note": "加成",
+      "group": "有机",
+      "tip": "拿来做对照：异丁烯加成路径里出现的叔碳正离子，就是它解离后的产物。",
+      "src": "manual"
+    },
+    {
+      "name": "硼烷",
+      "smiles": "B",
+      "formula": "BH₃",
+      "note": "还原",
+      "group": "有机",
+      "tip": "缺电子试剂：硼氢化-氧化给出反马氏醇，和酸催化加水正好相反。",
+      "src": "manual"
+    },
+    {
+      "name": "二异丁基氢化铝",
+      "smiles": "CC(C)C[AlH]C(C)C",
+      "formula": "C₈H₁₉Al",
+      "note": "还原",
+      "group": "有机",
+      "tip": "DIBAL-H：低温下能把酯停在醛这一步，是「控制还原深度」的经典试剂。",
+      "src": "manual"
+    },
+    {
+      "name": "苯甲醛",
+      "smiles": "O=Cc1ccccc1",
+      "formula": "C₇H₆O",
+      "note": "还原",
+      "group": "有机",
+      "tip": "无 α-H 的醛：不能烯醇化，所以还原路径很干净，常拿来当对照底物。",
+      "src": "manual"
+    },
+    {
+      "name": "碳酸钾",
+      "smiles": "[K+].[K+].O=C([O-])[O-]",
+      "formula": "K₂CO₃",
+      "note": "酸碱反应",
+      "group": "有机",
+      "tip": "温和的固体碱：无水体系里常用它当缚酸剂，比 NaOH 好控制得多。",
+      "src": "manual"
+    },
+    {
+      "name": "吡啶",
+      "smiles": "c1ccncc1",
+      "formula": "C₅H₅N",
+      "note": "酸碱反应",
+      "group": "有机",
+      "tip": "酰化反应里的经典缚酸剂：氮上孤对不进共轭体系，所以能老老实实吸质子。",
+      "src": "manual"
+    },
+    {
+      "name": "1-氯-2-甲基丙烷",
+      "smiles": "CC(C)CCl",
+      "formula": "C₄H₉Cl",
+      "note": "取代",
+      "group": "有机",
+      "tip": "伯卤代烃却带 β-分支：SN2 速率明显下降，说明「位阻」比「级数」更管用。",
+      "src": "manual"
+    },
+    {
+      "name": "硫酸二甲酯",
+      "smiles": "COS(=O)(=O)OC",
+      "formula": "C₂H₆O₄S",
+      "note": "取代",
+      "group": "有机",
+      "tip": "甲基化试剂：酚羟基、氨基的甲基化都用它；但它是强致癌物，必须在通风橱里操作。",
+      "src": "manual"
+    },
+    {
+      "name": "2-甲基-2-丁烯",
+      "smiles": "CC=C(C)C",
+      "formula": "C₅H₁₀",
+      "note": "消除",
+      "group": "有机",
+      "tip": "消除产物里双键取代最多的那个 —— Zaitsev 规则说的就是它更稳定、所以是主产物。",
+      "src": "manual"
+    },
+    {
+      "name": "3-甲基-1-丁烯",
+      "smiles": "CC(C)C=C",
+      "formula": "C₅H₁₀",
+      "note": "消除",
+      "group": "有机",
+      "tip": "末端双键的异构体：位阻小但取代少，所以只有用大位阻强碱时才当主产物。",
+      "src": "manual"
+    },
+    {
+      "name": "间氯过氧苯甲酸",
+      "smiles": "O=C(OO)c1cccc(Cl)c1",
+      "formula": "C₇H₅ClO₃",
+      "note": "氧化",
+      "group": "有机",
+      "tip": "mCPBA：把烯烃变环氧、把硫醚变亚砜 —— 温和的「送氧」试剂，拜耳-维利格也用它。",
+      "src": "manual"
+    },
+    {
+      "name": "四氧化锇",
+      "smiles": "O=[Os](=O)(=O)=O",
+      "formula": "OsO₄",
+      "note": "氧化",
+      "group": "有机",
+      "tip": "顺式双羟基化的金标准：立体专一性极好，但剧毒又贵，所以现在多用催化量。",
+      "src": "manual"
+    },
+    {
+      "name": "顺-4-叔丁基环己醇",
+      "smiles": "CC(C)(C)[C@H]1CC[C@@H](O)CC1",
+      "formula": "C₁₀H₂₀O",
+      "note": "立体选择性",
+      "group": "有机",
+      "tip": "叔丁基把构象「锁」死，羟基只能取平伏（顺式）或直立（反式）—— 构象分析的标尺。",
+      "src": "manual"
+    },
+    {
+      "name": "反-4-叔丁基环己醇",
+      "smiles": "CC(C)(C)[C@H]1CC[C@H](O)CC1",
+      "formula": "C₁₀H₂₀O",
+      "note": "立体选择性",
+      "group": "有机",
+      "tip": "两个取代基都取平伏 → 更稳定。顺/反两个异构体的能量差可以直接算出来。",
+      "src": "manual"
+    },
+    {
+      "name": "丙烯酸甲酯",
+      "smiles": "C=CC(=O)OC",
+      "formula": "C₄H₆O₂",
+      "note": "人名反应",
+      "group": "有机",
+      "tip": "Diels-Alder 的经典亲双烯体：酯基吸电子把双键的 LUMO 压下去，反应活性大增。",
+      "src": "manual"
+    },
+    {
+      "name": "三苯基氧膦",
+      "smiles": "O=P(c1ccccc1)(c1ccccc1)c1ccccc1",
+      "formula": "C₁₈H₁₅OP",
+      "note": "人名反应",
+      "group": "有机",
+      "tip": "Wittig 反应的副产物：极性大、结晶好，水洗一下就能和烯烃产物分开。",
+      "src": "manual"
+    },
+    {
+      "name": "丙酮",
+      "smiles": "CC(C)=O",
+      "formula": "C₃H₆O",
+      "note": "人名反应",
+      "group": "有机",
+      "tip": "Aldol 缩合的底物之一；和苯甲醛交叉缩合就成了苄叉丙酮，是 Claisen-Schmidt 的例题。",
+      "src": "manual"
+    },
+    {
+      "name": "苯重氮盐",
+      "smiles": "N#[N+]c1ccccc1.[Cl-]",
+      "formula": "C₆H₅ClN₂",
+      "note": "脱气体",
+      "group": "有机",
+      "tip": "重氮化产物：室温就不稳定，一分解就放 N₂ —— 所以必须 0～5 ℃ 现场制备。",
+      "src": "manual"
+    },
+    {
+      "name": "叠氮化钠",
+      "smiles": "[Na+].[N-]=[N+]=[N-]",
+      "formula": "NaN₃",
+      "note": "脱气体",
+      "group": "有机",
+      "tip": "叠氮酸根：既能当亲核试剂接碳链，又能一解放出大量 N₂（安全气囊就靠它）。",
+      "src": "manual"
+    },
+    {
+      "name": "氨基甲酸铵",
+      "smiles": "[NH4+].NC([O-])=O",
+      "formula": "CH₆N₂O₂",
+      "note": "脱气体",
+      "group": "有机",
+      "tip": "氨与 CO₂ 加合的中间体：一加热又分解回两种气体，是「可逆脱气」的样本。",
+      "src": "manual"
+    },
+    {
+      "name": "1-苯基-1,3-丁二烯",
+      "smiles": "C=CC=Cc1ccccc1",
+      "formula": "C₁₀H₁₀",
+      "note": "控温",
+      "group": "有机",
+      "tip": "苯环把共轭链再延长一节：1,2- 和 1,4- 两种加成的能量差被拉得更开。",
+      "src": "manual"
+    },
+    {
+      "name": "对甲基苯磺酸",
+      "smiles": "Cc1ccc(cc1)S(O)(=O)=O",
+      "formula": "C₇H₈O₃S",
+      "note": "上课和作业的一些思考",
+      "group": "有机",
+      "tip": "TsOH：不挥发的强有机酸，酯化、缩醛化都拿它当酸催化剂 —— 比硫酸好控。",
+      "src": "manual"
+    },
+    {
+      "name": "N,N'-二环己基碳二亚胺",
+      "smiles": "C1CCC(CC1)N=C=NC1CCCCC1",
+      "formula": "C₁₃H₂₂N₂",
+      "note": "上课和作业的一些思考",
+      "group": "有机",
+      "tip": "DCC：脱水缩合剂，专门把羧酸和胺「拉」到一起成酰胺，是固相肽合成的常客。",
+      "src": "manual"
+    },
+    {
+      "name": "4-二甲氨基吡啶",
+      "smiles": "CN(C)c1ccncc1",
+      "formula": "C₇H₁₀N₂",
+      "note": "上课和作业的一些思考",
+      "group": "有机",
+      "tip": "DMAP：酰化反应的超强催化亲核体，加催化量就能让位阻大的醇也反应。",
+      "src": "manual"
+    },
+    {
+      "name": "磷酸丝氨酸",
+      "smiles": "CC(N)C(=O)OP(=O)(O)O",
+      "formula": "C₃H₈NO₆P",
+      "note": "生命的化学基础",
+      "group": "生物",
+      "tip": "磷酸化修饰的最小单元：一个磷酸基挂上去，蛋白的电荷和构象就全变了。",
+      "src": "manual"
+    },
+    {
+      "name": "牛磺酸",
+      "smiles": "NCCS(=O)(=O)O",
+      "formula": "C₂H₇NO₃S",
+      "note": "生命的化学基础",
+      "group": "生物",
+      "tip": "氨基 + 磺酸基：磺酸是强酸，所以它在生理 pH 下永远是两性离子 —— 和氨基酸形成对照。",
+      "src": "manual"
+    },
+    {
+      "name": "一氧化氮",
+      "smiles": "N=O",
+      "formula": "NO",
+      "note": "生命的化学基础",
+      "group": "生物",
+      "tip": "最小的气体信号分子：由精氨酸经 NO 合酶生成，能直接扩散过膜去松弛血管。",
+      "src": "manual"
+    },
+    {
+      "name": "异柠檬酸",
+      "smiles": "OC(=O)C(O)C(CC(O)=O)C(O)=O",
+      "formula": "C₆H₈O₇",
+      "note": "细胞代谢",
+      "group": "生化",
+      "tip": "TCA 循环第一次脱羧的位置：它是异柠檬酸脱氢酶的底物，也是限速步骤。",
+      "src": "manual"
+    },
+    {
+      "name": "乙酰乙酸",
+      "smiles": "CC(=O)CC(O)=O",
+      "formula": "C₄H₆O₃",
+      "note": "细胞代谢",
+      "group": "生化",
+      "tip": "酮体的一种：糖尿病失控时它在血里堆积，就是这个结构让血液变酸。",
+      "src": "manual"
+    },
+    {
+      "name": "磷酸烯醇式丙酮酸",
+      "smiles": "C=C(C(=O)O)OP(=O)(O)O",
+      "formula": "C₃H₅O₆P",
+      "note": "细胞代谢",
+      "group": "生化",
+      "tip": "PEP：糖酵解里唯一一个「高能磷酸化合物」，它的水解能直接把 ADP 变成 ATP。",
+      "src": "manual"
+    },
+    {
+      "name": "甘氨酸",
+      "smiles": "NCC(O)=O",
+      "formula": "C₂H₅NO₂",
+      "note": "普通生物学绪论",
+      "group": "生物",
+      "tip": "最简单的氨基酸：20 种里唯一没有手性碳的，所以它没有 D/L 之分。",
+      "src": "manual"
+    },
+    {
+      "name": "核糖",
+      "smiles": "OC[C@@H](O)[C@@H](O)[C@@H](O)C=O",
+      "formula": "C₅H₁₀O₅",
+      "note": "普通生物学绪论",
+      "group": "生物",
+      "tip": "五碳糖：把碱基和磷酸串起来就是核苷酸，RNA 骨架里的那一环。",
+      "src": "manual"
+    },
+    {
+      "name": "乙酸",
+      "smiles": "CC(O)=O",
+      "formula": "C₂H₄O₂",
+      "note": "普通生物学绪论",
+      "group": "生物",
+      "tip": "米勒-尤里实验产物里的常客：无机气体放电就能变成它，是「生命前化学」的实证之一。",
+      "src": "manual"
+    },
+    {
+      "name": "水通道蛋白",
+      "pdb": "1J4N",
+      "formula": "269 aa · 同源四聚体",
+      "note": "细胞结构与细胞通讯",
+      "group": "蛋白",
+      "tip": "点「3D」。四个亚基各有一条只容水分子单列通过的孔道 —— 连质子都被挡住，这是「选择通透」的结构证据。",
+      "src": "manual"
+    },
+    {
+      "name": "钾离子通道 KcsA",
+      "pdb": "1BL8",
+      "formula": "四聚体 · 选择性滤器",
+      "note": "细胞结构与细胞通讯",
+      "group": "蛋白",
+      "tip": "点「3D」。滤器里那圈羰基氧「假装」成水，把 K⁺ 骗进来却把更小的 Na⁺ 挡在外面。",
+      "src": "manual"
+    },
+    {
+      "name": "肌动蛋白",
+      "pdb": "1ATN",
+      "formula": "375 aa · 微丝单体",
+      "note": "细胞结构与细胞通讯",
+      "group": "蛋白",
+      "tip": "点「3D」。有极性的一条「轨道」，聚合就是细胞爬行和胞质分裂的动力来源。",
+      "src": "manual"
+    },
+    {
+      "name": "钙调蛋白",
+      "pdb": "1CLL",
+      "formula": "148 aa · 4 个 EF-hand",
+      "note": "细胞结构与细胞通讯",
+      "group": "蛋白",
+      "tip": "点「3D」。两个球状结构域中间一条长螺旋，结合 Ca²⁺ 后张开去抱靶酶 —— 钙信号的通用解码器。",
+      "src": "manual"
+    },
+    {
+      "name": "微管蛋白",
+      "pdb": "1JFF",
+      "formula": "α/β 二聚体",
+      "note": "细胞分裂与细胞周期",
+      "group": "蛋白",
+      "tip": "点「3D」。纺锤丝的基本砖块：秋水仙碱和紫杉醇都作用于它，所以它是明星抗癌靶点。",
+      "src": "manual"
+    },
+    {
+      "name": "驱动蛋白",
+      "pdb": "1BG2",
+      "formula": "325 aa · 马达结构域",
+      "note": "细胞分裂与细胞周期",
+      "group": "蛋白",
+      "tip": "点「3D」。吃 ATP 沿微管一步一步「走」的马达蛋白，分裂时负责把染色体拉向两极。",
+      "src": "manual"
+    },
+    {
+      "name": "核小体",
+      "pdb": "1AOI",
+      "formula": "组蛋白八聚体 + 147 bp DNA",
+      "note": "细胞分裂与细胞周期",
+      "group": "蛋白",
+      "tip": "点「3D」。DNA 绕组蛋白八聚体 1.65 圈 —— 所以「染色体能被装进细胞核」在结构上说得通。",
+      "src": "manual"
+    },
+    {
+      "name": "p53 蛋白",
+      "pdb": "1TUP",
+      "formula": "DNA 结合结构域 + DNA",
+      "note": "细胞分裂与细胞周期",
+      "group": "蛋白",
+      "tip": "点「3D」。基因组守卫：检测到 DNA 损伤就停在 G1 期，修不好就启动凋亡。",
+      "src": "manual"
+    },
+    {
+      "name": "免疫球蛋白 IgG",
+      "pdb": "1IGT",
+      "formula": "Y 形四链 · 2 重链 + 2 轻链",
+      "note": "大笔记",
+      "group": "蛋白",
+      "tip": "点「3D」。两个 Fab 臂结合抗原、Fc 段负责效应功能 —— 抗体的「Y」形不是画着好看的。",
+      "src": "manual"
+    },
+    {
+      "name": "核糖核酸酶 A",
+      "pdb": "7RSA",
+      "formula": "124 aa · 4 对二硫键",
+      "note": "大笔记",
+      "group": "蛋白",
+      "tip": "点「3D」。Anfinsen 实验的主角：变性后再氧化，它能自己折叠回原构象 —— 一级结构决定高级结构。",
+      "src": "manual"
+    },
+    {
+      "name": "胰岛素",
+      "pdb": "4INS",
+      "formula": "A 链 21 aa + B 链 30 aa",
+      "note": "大笔记",
+      "group": "蛋白",
+      "tip": "点「3D」。两条链靠三对二硫键连在一起，是第一个被测定完整序列的蛋白质。",
+      "src": "manual"
+    },
+    {
+      "name": "泛素",
+      "pdb": "1UBQ",
+      "formula": "76 aa",
+      "note": "大笔记",
+      "group": "蛋白",
+      "tip": "点「3D」。只有 76 个残基的「标签」：穿成链挂在靶蛋白上，就是蛋白酶体降解的信号。",
+      "src": "manual"
+    },
+    {
+      "name": "氨",
+      "smiles": "N",
+      "formula": "NH₃",
+      "note": "pH主线-从酸碱平衡到细胞内稳态",
+      "group": "生化",
+      "tip": "NH₄⁺/NH₃ 的 pKa 9.25：生理 pH 下它几乎全是 NH₄⁺，所以氨只能少量排泄、大量要转成尿素。",
+      "src": "manual"
+    },
+    {
+      "name": "碳酸",
+      "smiles": "O=C(O)O",
+      "formula": "CH₂O₃",
+      "note": "pH主线-从酸碱平衡到细胞内稳态",
+      "group": "生化",
+      "tip": "CO₂ 溶于水的产物：pKa₁ 6.35 —— 碳酸氢盐缓冲体系能成立，全靠它这一级。",
+      "src": "manual"
+    },
+    {
+      "name": "硫辛酸",
+      "smiles": "OC(=O)CCCCC1CCSS1",
+      "formula": "C₈H₁₄O₂S₂",
+      "note": "氧化还原主线-从电极电势到细胞呼吸",
+      "group": "生化",
+      "tip": "五元环里的二硫键：可逆地开环/闭环来搬运电子和酰基，丙酮酸脱氢酶复合体靠的就是它。",
+      "src": "manual"
+    },
+    {
+      "name": "细胞色素 c",
+      "pdb": "1HRC",
+      "formula": "104 aa · 含血红素",
+      "note": "氧化还原主线-从电极电势到细胞呼吸",
+      "group": "蛋白",
+      "tip": "点「3D」。血红素里铁的 Fe³⁺/Fe²⁺ 就是一个可逆电对，在复合体 III 和 IV 之间接驳电子。",
+      "src": "manual"
+    },
+    {
+      "name": "尿素",
+      "smiles": "NC(N)=O",
+      "formula": "CH₄N₂O",
+      "note": "分离纯化主线-从萃取色谱到蛋白下游",
+      "group": "生化",
+      "tip": "8 M 尿素是常用的离液剂：它打散氢键网络，让变性的蛋白不再聚集。",
+      "src": "manual"
+    },
+    {
+      "name": "盐酸胍",
+      "smiles": "NC(N)=N.[Cl-]",
+      "formula": "CH₆ClN₃",
+      "note": "分离纯化主线-从萃取色谱到蛋白下游",
+      "group": "生化",
+      "tip": "比尿素更狠的离液剂：6 M 盐酸胍基本能让蛋白彻底变性 —— 包涵体复性就靠它先解折叠。",
+      "src": "manual"
+    },
+    {
+      "name": "溶菌酶",
+      "pdb": "1LYZ",
+      "formula": "129 aa · 4 对二硫键",
+      "note": "结构与光谱主线-从小分子四谱到蛋白质结构",
+      "group": "蛋白",
+      "tip": "点「3D」。第一个被解出结构的酶：裂解细菌细胞壁的糖苷键，活性位点那条裂缝一眼可见。",
+      "src": "manual"
+    },
+    {
+      "name": "磷酸吡哆醛",
+      "smiles": "CC1=NC=C(COP(=O)(O)O)C(C=O)=C1O",
+      "formula": "C₈H₁₀NO₆P",
+      "note": "酶与反应控制主线-有机机理的生物学延伸",
+      "group": "生化",
+      "tip": "PLP：维生素 B₆ 的活性形式。它和氨基酸形成希夫碱，把「转氨」和「脱羧」都变成有机化学里学过的亚胺化学。",
+      "src": "manual"
+    },
+    {
+      "name": "木瓜蛋白酶",
+      "pdb": "9PAP",
+      "formula": "212 aa · 含 Cys 活性位点",
+      "note": "酶与反应控制主线-有机机理的生物学延伸",
+      "group": "蛋白",
+      "tip": "点「3D」。半胱氨酸蛋白酶的代表：催化和丝氨酸蛋白酶一样是共价两步，只是亲核体换成了 S⁻。",
+      "src": "manual"
+    },
+    {
+      "name": "布洛芬",
+      "smiles": "CC(C)Cc1ccc(cc1)C(C)C(O)=O",
+      "formula": "C₁₃H₁₈O₂",
+      "note": "手性主线-从有机合成到生命大分子",
+      "group": "有机",
+      "tip": "外消旋体上市、体内单侧转化 —— 手性从合成层面一直延伸到药代动力学。",
+      "src": "manual"
+    },
+    {
+      "name": "硫酸铜",
+      "smiles": "[Cu+2].[O-]S(=O)(=O)[O-]",
+      "formula": "CuSO₄",
+      "note": "E1-定量分析基础",
+      "group": "无机",
+      "tip": "碘量法里常用的氧化剂（Cu²⁺ 与 I⁻ 反应）；五水合物又是配制铜标准溶液的基准物。",
+      "src": "manual"
+    },
+    {
+      "name": "硝酸银",
+      "smiles": "[Ag+].[O-][N+](=O)[O-]",
+      "formula": "AgNO₃",
+      "note": "E1-定量分析基础",
+      "group": "无机",
+      "tip": "沉淀滴定的滴定剂（莫尔法）；见光会分解，必须避光保存。",
+      "src": "manual"
+    },
+    {
+      "name": "硫化氢",
+      "smiles": "S",
+      "formula": "H₂S",
+      "note": "E2-酸碱平衡",
+      "group": "无机",
+      "tip": "二元弱酸分级电离的最好例子：Ka₁ 约 10⁻⁷、Ka₂ 约 10⁻¹³ —— 两级差了好几个数量级。",
+      "src": "manual"
+    },
+    {
+      "name": "亚硫酸",
+      "smiles": "O=S(O)O",
+      "formula": "H₂SO₃",
+      "note": "E2-酸碱平衡",
+      "group": "无机",
+      "tip": "弱酸里少见的「酸式盐比正盐稳定」：亚硫酸氢钠存在，但亚硫酸本身其实并不游离存在。",
+      "src": "manual"
+    },
+    {
+      "name": "硫化铜",
+      "smiles": "[Cu+2].[S-2]",
+      "formula": "CuS",
+      "note": "E3-沉淀生成与溶解平衡",
+      "group": "无机",
+      "tip": "Ksp 小到约 10⁻³⁶：连强酸都溶不动它，所以硫化氢分组沉淀能把它和 Zn²⁺ 分开。",
+      "src": "manual"
+    },
+    {
+      "name": "碘化银",
+      "smiles": "[Ag+].[I-]",
+      "formula": "AgI",
+      "note": "E3-沉淀生成与溶解平衡",
+      "group": "无机",
+      "tip": "AgX 系列里最不溶的一个：和 AgCl、AgBr 并排比 Ksp，就能看出卤离子半径的作用。",
+      "src": "manual"
+    },
+    {
+      "name": "硫酸铈",
+      "smiles": "[Ce+4].[O-]S(=O)(=O)[O-].[O-]S(=O)(=O)[O-]",
+      "formula": "CeO₈S₂",
+      "note": "E4-氧化还原平衡与电极电势",
+      "group": "无机",
+      "tip": "铈量法：Ce⁴⁺/Ce³⁺ 只有一个电子转移，所以副反应少、终点比高锰酸钾法干净。",
+      "src": "manual"
+    },
+    {
+      "name": "过氧化氢",
+      "smiles": "OO",
+      "formula": "H₂O₂",
+      "note": "E4-氧化还原平衡与电极电势",
+      "group": "无机",
+      "tip": "教材里的「两面派」：在电极电势表上既可作氧化剂又可作还原剂，全看对手的强弱。",
+      "src": "manual"
+    },
+    {
+      "name": "硫氰化钾",
+      "smiles": "[K+].[S-]C#N",
+      "formula": "CKNS",
+      "note": "E5-配合物与配位平衡",
+      "group": "无机",
+      "tip": "沉淀滴定（佛尔哈德法）的指示剂：Fe³⁺ 与 SCN⁻ 生成血红色配合物，就是终点信号。",
+      "src": "manual"
+    },
+    {
+      "name": "乙酰丙酮",
+      "smiles": "CC(=O)CC(C)=O",
+      "formula": "C₅H₈O₂",
+      "note": "E5-配合物与配位平衡",
+      "group": "无机",
+      "tip": "酮式-烯醇式互变：烯醇式一去质子就成双齿配体，和金属形成六元螯合环。",
+      "src": "manual"
+    },
+    {
+      "name": "氯化钠",
+      "smiles": "[Na+].[Cl-]",
+      "formula": "NaCl",
+      "note": "S2-分子结构与晶体结构",
+      "group": "无机",
+      "tip": "面心立方离子晶体：配位数 6，半径比决定配位构型 —— 这一整套讨论都从它开始。",
+      "src": "manual"
+    },
+    {
+      "name": "甲烷",
+      "smiles": "C",
+      "formula": "CH₄",
+      "note": "S2-分子结构与晶体结构",
+      "group": "无机",
+      "tip": "正四面体、键角 109.5°：VSEPR 的起点，也是「等性 sp³ 杂化」的标准答案。",
+      "src": "manual"
+    },
+    {
+      "name": "二氧化碳",
+      "smiles": "O=C=O",
+      "formula": "CO₂",
+      "note": "S2-分子结构与晶体结构",
+      "group": "无机",
+      "tip": "直线形（sp 杂化）：虽然有两对孤对电子，但它们指向相反，正好互相抵消。",
+      "src": "manual"
+    },
+    {
+      "name": "二氧化硫",
+      "smiles": "O=S=O",
+      "formula": "SO₂",
+      "note": "S2-分子结构与晶体结构",
+      "group": "无机",
+      "tip": "V 形（约 119°）：一对孤对电子占了一个方向，所以它是「不等价杂化」的入门题。",
+      "src": "manual"
+    },
+    {
+      "name": "硫酸铜",
+      "smiles": "[Cu+2].[O-]S(=O)(=O)[O-]",
+      "formula": "CuSO₄",
+      "note": "O1-可见分光光度法",
+      "group": "无机",
+      "tip": "稀溶液本身几乎无色，所以测微量铜必须加显色剂（如双环己酮草酰二腙）再比色。",
+      "src": "manual"
+    },
+    {
+      "name": "邻菲罗啉",
+      "smiles": "c1ccc2c(c1)ccc1cccnc12",
+      "formula": "C₁₂H₈N₂",
+      "note": "O1-可见分光光度法",
+      "group": "无机",
+      "tip": "显色剂：和 Fe²⁺ 生成深红色配合物，最大吸收在 510 nm 附近，是铁的经典光度法。",
+      "src": "manual"
+    },
+    {
+      "name": "碘",
+      "smiles": "II",
+      "formula": "I₂",
+      "note": "O2-常用分离方法",
+      "group": "无机",
+      "tip": "薄层色谱的显色剂：碘蒸气能被吸附到有机化合物的斑点上，直接把板子熏出棕色点。",
+      "src": "manual"
+    },
+    {
+      "name": "二氯甲烷",
+      "smiles": "ClCCl",
+      "formula": "CH₂Cl₂",
+      "note": "O2-常用分离方法",
+      "group": "有机",
+      "tip": "萃取和柱层析的万能溶剂：密度比水大、易挥发，萃取时它在下层，这点常考。",
+      "src": "manual"
+    },
+    {
+      "name": "溶菌酶",
+      "pdb": "1LYZ",
+      "formula": "129 aa · 4 对二硫键",
+      "note": "拓展-蛋白质化学与酸碱平衡",
+      "group": "蛋白",
+      "tip": "点「3D」。pI 约 11 的碱性蛋白：在 pH 7 的离子交换柱上带正电，所以用阳离子交换柱来纯化。",
+      "src": "manual"
+    },
+    {
+      "name": "核糖核酸酶 A",
+      "pdb": "7RSA",
+      "formula": "124 aa · 4 对二硫键",
+      "note": "拓展-蛋白质化学与酸碱平衡",
+      "group": "蛋白",
+      "tip": "点「3D」。pI 约 9.6：同样是碱性蛋白，但四个二硫键让它在极端 pH 下也不容易散架。",
+      "src": "manual"
+    },
+    {
+      "name": "溶菌酶",
+      "pdb": "1LYZ",
+      "formula": "129 aa · 4 对二硫键",
+      "note": "拓展-光谱分析在结构生物学中的应用",
+      "group": "蛋白",
+      "tip": "点「3D」。里面那 6 个色氨酸就是 A280 定量的来源，也是它内源荧光的主要贡献者。",
+      "src": "manual"
+    },
+    {
+      "name": "钙调蛋白",
+      "pdb": "1CLL",
+      "formula": "148 aa · 4 个 EF-hand",
+      "note": "拓展-光谱分析在结构生物学中的应用",
+      "group": "蛋白",
+      "tip": "点「3D」。结合 Ca²⁺ 后构象大变 → 内源荧光和 CD 谱都会变，是「光谱能报告构象」的经典体系。",
+      "src": "manual"
+    },
+    {
+      "name": "溶菌酶",
+      "pdb": "1LYZ",
+      "formula": "129 aa · 4 对二硫键",
+      "note": "拓展-色谱理论与生物分离",
+      "group": "蛋白",
+      "tip": "点「3D」。实验室纯化的「标准品」：分子量小、pI 高、又稳定，几种层析方法都能拿它练手。",
+      "src": "manual"
+    },
+    {
+      "name": "木瓜蛋白酶",
+      "pdb": "9PAP",
+      "formula": "212 aa · 含 Cys 活性位点",
+      "note": "拓展-色谱理论与生物分离",
+      "group": "蛋白",
+      "tip": "点「3D」。因为它耐热耐碱，工业上大量用于亲和层析里切掉标签（IgG 的 Fc 段也常用它切）。",
+      "src": "manual"
+    },
+    {
+      "name": "钾离子通道 KcsA",
+      "pdb": "1BL8",
+      "formula": "四聚体 · 选择性滤器",
+      "note": "拓展-生物电化学与膜电位",
+      "group": "蛋白",
+      "tip": "点「3D」。孔道里的水分子和羰基氧排成一列，这就是「K⁺ 通过而 Na⁺ 过不去」的全部秘密。",
+      "src": "manual"
+    },
+    {
+      "name": "细胞色素 c",
+      "pdb": "1HRC",
+      "formula": "104 aa · 含血红素",
+      "note": "拓展-生物电化学与膜电位",
+      "group": "蛋白",
+      "tip": "点「3D」。血红素铁的可逆氧化还原就是一个天然「电极」，呼吸链上的电子全靠它接力。",
+      "src": "manual"
+    },
+    {
+      "name": "铁蛋白",
+      "pdb": "1FHA",
+      "formula": "24 聚体 · 可储 4500 个铁原子",
+      "note": "拓展-生物矿化与沉淀平衡",
+      "group": "蛋白",
+      "tip": "点「3D」。球形外壳里挖空一个腔，把 Fe³⁺ 存成铁核 —— 生物矿化的教科书案例。",
+      "src": "manual"
+    },
+    {
+      "name": "磷酸钙",
+      "smiles": "[Ca+2].[Ca+2].[Ca+2].[O-]P(=O)([O-])[O-].[O-]P(=O)([O-])[O-]",
+      "formula": "Ca₃(PO₄)₂",
+      "note": "拓展-生物矿化与沉淀平衡",
+      "group": "生化",
+      "tip": "骨骼与牙齿的无机相：合成羟基磷灰石时先经过它这一步，有机基质决定最终长成什么晶型。",
+      "src": "manual"
+    },
+    {
+      "name": "超氧化物歧化酶",
+      "pdb": "2SOD",
+      "formula": "2 × 151 aa · Cu/Zn 双金属",
+      "note": "拓展-氧化还原与细胞信号转导",
+      "group": "蛋白",
+      "tip": "点「3D」。Cu 和 Zn 分工明确：Cu 负责传递电子，Zn 只负责把结构撑住。",
+      "src": "manual"
+    },
+    {
+      "name": "一氧化氮",
+      "smiles": "N=O",
+      "formula": "NO",
+      "note": "拓展-氧化还原与细胞信号转导",
+      "group": "生化",
+      "tip": "半衰期只有几秒的自由基气体：靠扩散传递信号，所以它的「作用半径」天然很短。",
+      "src": "manual"
+    },
+    {
+      "name": "抗坏血酸",
+      "smiles": "OC[C@H](O)[C@H]1OC(=O)C(O)=C1O",
+      "formula": "C₆H₈O₆",
+      "note": "拓展-氧化还原与细胞信号转导",
+      "group": "生化",
+      "tip": "维生素 C：烯二醇结构让它既能给出两个电子，又能把 Fe³⁺ 还原回 Fe²⁺ —— 抗氧化和促吸收是同一件事。",
       "src": "manual"
     }
   ]
