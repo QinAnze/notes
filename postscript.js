@@ -1222,7 +1222,65 @@ document.addEventListener("nav", () => {
   headers.forEach((header) => observer.observe(header));
 });
 })();
-(function () {// quartz/components/scripts/quartz/components/scripts/molecule.inline.ts
+(function () {// quartz/components/scripts/zoom.ts
+var BOUND_FLAG = "zoomBound";
+function setupZoomOverlay(opts) {
+  const overlay = document.getElementById(opts.overlayId);
+  const body = document.getElementById(opts.bodyId);
+  const button = document.getElementById(opts.buttonId);
+  if (!overlay || !body || !button)
+    return false;
+  if (button.dataset[BOUND_FLAG] === "1")
+    return true;
+  button.dataset[BOUND_FLAG] = "1";
+  let isOpen = false;
+  let cleanup = null;
+  const sidebar = overlay.closest(".sidebar");
+  function close() {
+    if (!isOpen)
+      return;
+    isOpen = false;
+    overlay.classList.remove("active");
+    if (sidebar)
+      sidebar.style.zIndex = "";
+    if (cleanup) {
+      cleanup();
+      cleanup = null;
+    }
+    body.innerHTML = "";
+  }
+  function open() {
+    if (isOpen) {
+      close();
+      return;
+    }
+    isOpen = true;
+    overlay.classList.add("active");
+    if (sidebar)
+      sidebar.style.zIndex = "1";
+    requestAnimationFrame(() => {
+      if (!isOpen)
+        return;
+      const result = opts.build(body);
+      cleanup = typeof result === "function" ? result : null;
+    });
+  }
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    open();
+  });
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay)
+      close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen)
+      close();
+  });
+  return true;
+}
+
+// quartz/components/scripts/quartz/components/scripts/molecule.inline.ts
 var BASE_PATH = "/notes";
 function loadScript(urls) {
   return new Promise((resolve) => {
@@ -1320,10 +1378,16 @@ var indexEl = document.querySelector("#molecule-index");
 var prevBtn = document.querySelector("#molecule-prev");
 var nextBtn = document.querySelector("#molecule-next");
 var modeBtn = document.querySelector("#molecule-mode");
+var zoomIcon = document.querySelector("#molecule-zoom-icon");
 var entries = [];
 var current = 0;
 var is3D = false;
+var viewer3d = null;
+function setZoomAvailable(on) {
+  zoomIcon?.classList.toggle("is-hidden", !on);
+}
 function setHint(html) {
+  setZoomAvailable(false);
   if (!view)
     return;
   view.innerHTML = `<div class="molecule-hint">${html}</div>`;
@@ -1457,6 +1521,7 @@ function preprocessSvg(svgText) {
 }
 function renderWithRDKit(mol, host) {
   host.innerHTML = preprocessSvg(mol.get_svg());
+  setZoomAvailable(true);
 }
 function drawTree(host, tree) {
   const NS = "http://www.w3.org/2000/svg";
@@ -1506,6 +1571,7 @@ function drawTree(host, tree) {
   else
     walk(tree);
   host.appendChild(svg);
+  setZoomAvailable(true);
 }
 async function render2D(mol) {
   if (!view || !mol.smiles)
@@ -1574,15 +1640,18 @@ async function render3D(mol, host) {
   const stage = document.createElement("div");
   stage.className = "molecule-3d";
   host.appendChild(stage);
+  setZoomAvailable(false);
   const viewer = D.createViewer(stage, { backgroundAlpha: 0, antialias: true });
   if (!viewer) {
     setHint("3D \u6E32\u67D3\u5668\u521D\u59CB\u5316\u5931\u8D25");
     return;
   }
+  viewer3d = viewer;
   const styleAndZoom = () => {
     viewer.setStyle({}, { cartoon: { color: "spectrum" } });
     viewer.zoomTo();
     viewer.render();
+    setZoomAvailable(true);
   };
   if (mol.pdb.startsWith("AF-")) {
     const url = `https://alphafold.ebi.ac.uk/files/${mol.pdb}-F1-model_v4.pdb`;
@@ -1647,9 +1716,67 @@ function step(delta) {
   current = (current + delta + entries.length) % entries.length;
   render();
 }
+function buildMoleculeZoom(body) {
+  const stage = is3D ? view?.querySelector(".molecule-3d") : null;
+  if (stage && viewer3d) {
+    const refresh = () => {
+      try {
+        viewer3d?.resize?.();
+        viewer3d?.render?.();
+      } catch (err) {
+        console.warn("[molecule] 3D \u753B\u5E03\u5C3A\u5BF8\u5237\u65B0\u5931\u8D25", err);
+      }
+      const canvas = stage.querySelector("canvas");
+      if (canvas instanceof HTMLElement) {
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+      }
+    };
+    body.appendChild(stage);
+    refresh();
+    return () => {
+      if (!view) {
+        stage.remove();
+        return;
+      }
+      if (view.querySelector(".molecule-3d") !== stage) {
+        stage.remove();
+        return;
+      }
+      view.appendChild(stage);
+      refresh();
+    };
+  }
+  const source = view?.querySelector("svg");
+  if (!source) {
+    body.innerHTML = '<div class="molecule-hint">\u8FD9\u4E2A\u89C6\u56FE\u6682\u65F6\u6CA1\u6709\u53EF\u653E\u5927\u7684\u5185\u5BB9\u3002<br/>\uFF082D \u8981\u7B49\u7ED3\u6784\u5F0F\u753B\u51FA\u6765\uFF0C3D \u8981\u7B49\u6A21\u578B\u52A0\u8F7D\u5B8C\u3002\uFF09</div>';
+    return;
+  }
+  const clone = source.cloneNode(true);
+  if (!clone.getAttribute("viewBox")) {
+    try {
+      const box = source.getBBox();
+      if (box && box.width > 0 && box.height > 0) {
+        clone.setAttribute("viewBox", `${box.x} ${box.y} ${box.width} ${box.height}`);
+      }
+    } catch (err) {
+      console.warn("[molecule] getBBox \u5931\u8D25\uFF0C\u653E\u5927\u53EF\u80FD\u4E0D\u5B8C\u6574", err);
+    }
+  }
+  clone.style.width = "100%";
+  clone.style.height = "100%";
+  body.innerHTML = "";
+  body.appendChild(clone);
+}
 async function init() {
   if (!wrapper || !view)
     return;
+  setupZoomOverlay({
+    buttonId: "molecule-zoom-icon",
+    overlayId: "molecule-zoom-outer",
+    bodyId: "molecule-zoom-body",
+    build: buildMoleculeZoom
+  });
   const problems = [];
   try {
     await loadMolecules();
@@ -5569,30 +5696,68 @@ function zoom_default2() {
 }
 
 // quartz/components/scripts/util.ts
-function registerEscapeHandler(outsideContainer, cb) {
-  if (!outsideContainer)
-    return;
-  function click(e) {
-    if (e.target !== this)
-      return;
-    e.preventDefault();
-    cb();
-  }
-  function esc(e) {
-    if (!e.key.startsWith("Esc"))
-      return;
-    e.preventDefault();
-    cb();
-  }
-  outsideContainer?.removeEventListener("click", click);
-  outsideContainer?.addEventListener("click", click);
-  document.removeEventListener("keydown", esc);
-  document.addEventListener("keydown", esc);
-}
 function removeAllChildren(node) {
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
+}
+
+// quartz/components/scripts/zoom.ts
+var BOUND_FLAG = "zoomBound";
+function setupZoomOverlay(opts) {
+  const overlay = document.getElementById(opts.overlayId);
+  const body = document.getElementById(opts.bodyId);
+  const button = document.getElementById(opts.buttonId);
+  if (!overlay || !body || !button)
+    return false;
+  if (button.dataset[BOUND_FLAG] === "1")
+    return true;
+  button.dataset[BOUND_FLAG] = "1";
+  let isOpen = false;
+  let cleanup = null;
+  const sidebar = overlay.closest(".sidebar");
+  function close() {
+    if (!isOpen)
+      return;
+    isOpen = false;
+    overlay.classList.remove("active");
+    if (sidebar)
+      sidebar.style.zIndex = "";
+    if (cleanup) {
+      cleanup();
+      cleanup = null;
+    }
+    body.innerHTML = "";
+  }
+  function open() {
+    if (isOpen) {
+      close();
+      return;
+    }
+    isOpen = true;
+    overlay.classList.add("active");
+    if (sidebar)
+      sidebar.style.zIndex = "1";
+    requestAnimationFrame(() => {
+      if (!isOpen)
+        return;
+      const result = opts.build(body);
+      cleanup = typeof result === "function" ? result : null;
+    });
+  }
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    open();
+  });
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay)
+      close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen)
+      close();
+  });
+  return true;
 }
 
 // node_modules/github-slugger/index.js
@@ -5795,46 +5960,29 @@ async function renderGraph(container, fullSlug) {
     labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
   });
 }
-function renderGlobalGraph() {
+function buildGlobalGraph(body) {
   const slug2 = getFullSlug(window);
-  const container = document.getElementById("global-graph-outer");
-  const sidebar = container?.closest(".sidebar");
-  container?.classList.add("active");
-  if (sidebar) {
-    sidebar.style.zIndex = "1";
-  }
   renderGraph("global-graph-container", slug2);
-  function hideGlobalGraph() {
-    container?.classList.remove("active");
-    const graph = document.getElementById("global-graph-container");
-    if (sidebar) {
-      sidebar.style.zIndex = "unset";
-    }
-    if (!graph)
-      return;
-    removeAllChildren(graph);
-  }
-  registerEscapeHandler(container, hideGlobalGraph);
+  return () => {
+    removeAllChildren(body);
+  };
 }
 document.addEventListener("nav", async (e) => {
   const event = e;
-  const slug2 = event?.detail?.url;
+  const detail = event?.detail ?? {} ?? {};
+  const slug2 = detail.url ?? detail.slug ?? document.body.dataset.slug;
   if (!slug2) {
-    console.warn("Graph: slug not found in nav event, using fallback");
-    const fallbackSlug = document.body.dataset.slug;
-    if (!fallbackSlug) {
-      console.error("Graph: no slug available, skipping render");
-      return;
-    }
-    addToVisited(simplifySlug(fallbackSlug));
-    await renderGraph("graph-container", fallbackSlug);
+    console.warn("Graph: no slug available, skipping render");
     return;
   }
-  addToVisited(slug2);
+  addToVisited(simplifySlug(slug2));
   await renderGraph("graph-container", slug2);
-  const containerIcon = document.getElementById("global-graph-icon");
-  containerIcon?.removeEventListener("click", renderGlobalGraph);
-  containerIcon?.addEventListener("click", renderGlobalGraph);
+  setupZoomOverlay({
+    buttonId: "global-graph-icon",
+    overlayId: "global-graph-outer",
+    bodyId: "global-graph-container",
+    build: buildGlobalGraph
+  });
 });
 })();
 (function () {var __create = Object.create;
@@ -38785,9 +38933,9 @@ function initializeMarkdownIt() {
   md.use(ins_plugin).use(ins_plugin2).use(sub_plugin).use(sup_plugin);
   return md;
 }
-function createTransformHooks(transformer) {
+function createTransformHooks(transformer2) {
   return {
-    transformer,
+    transformer: transformer2,
     parser: new Hook(),
     beforeParse: new Hook(),
     afterParse: new Hook(),
@@ -43420,8 +43568,72 @@ var it = class _it {
   }
 };
 
+// quartz/components/scripts/zoom.ts
+var BOUND_FLAG = "zoomBound";
+function setupZoomOverlay(opts) {
+  const overlay = document.getElementById(opts.overlayId);
+  const body = document.getElementById(opts.bodyId);
+  const button = document.getElementById(opts.buttonId);
+  if (!overlay || !body || !button)
+    return false;
+  if (button.dataset[BOUND_FLAG] === "1")
+    return true;
+  button.dataset[BOUND_FLAG] = "1";
+  let isOpen = false;
+  let cleanup = null;
+  const sidebar = overlay.closest(".sidebar");
+  function close() {
+    if (!isOpen)
+      return;
+    isOpen = false;
+    overlay.classList.remove("active");
+    if (sidebar)
+      sidebar.style.zIndex = "";
+    if (cleanup) {
+      cleanup();
+      cleanup = null;
+    }
+    body.innerHTML = "";
+  }
+  function open() {
+    if (isOpen) {
+      close();
+      return;
+    }
+    isOpen = true;
+    overlay.classList.add("active");
+    if (sidebar)
+      sidebar.style.zIndex = "1";
+    requestAnimationFrame(() => {
+      if (!isOpen)
+        return;
+      const result = opts.build(body);
+      cleanup = typeof result === "function" ? result : null;
+    });
+  }
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    open();
+  });
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay)
+      close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen)
+      close();
+  });
+  return true;
+}
+function isZoomOverlayOpen(overlayId) {
+  return document.getElementById(overlayId)?.classList.contains("active") ?? false;
+}
+
 // quartz/components/scripts/quartz/components/scripts/markmap.inline.ts
+var SVG_NS2 = "http://www.w3.org/2000/svg";
 var markmapInstance = null;
+var zoomMarkmapInstance = null;
+var transformer = new Transformer();
 function isDarkTheme() {
   const saved = document.documentElement.getAttribute("saved-theme");
   if (saved === "dark")
@@ -43429,6 +43641,9 @@ function isDarkTheme() {
   if (saved === "light")
     return false;
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+function textColor() {
+  return isDarkTheme() ? "#e0e0e0" : "#333";
 }
 function buildMarkmapContent() {
   const article = document.querySelector("article");
@@ -43450,33 +43665,9 @@ function buildMarkmapContent() {
   });
   return lines.join("\n");
 }
-function renderMarkmap() {
-  const container = document.getElementById("markmap-container");
-  if (!container)
-    return;
-  const content = buildMarkmapContent();
-  if (!content) {
-    const wrapper = document.querySelector(".markmap-wrapper");
-    if (wrapper)
-      wrapper.remove();
-    return;
-  }
-  if (markmapInstance) {
-    markmapInstance.destroy();
-    markmapInstance = null;
-  }
-  container.innerHTML = "";
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("width", "100%");
-  svg.setAttribute("height", "680");
-  svg.style.width = "100%";
-  svg.style.height = "680px";
-  container.appendChild(svg);
-  const transformer = new Transformer();
-  const { root: root3 } = transformer.transform(content);
+function markmapOptions(maxWidth) {
   const isDark = isDarkTheme();
-  const textColor = isDark ? "#e0e0e0" : "#333";
-  markmapInstance = it.create(svg, {
+  return {
     theme: {
       color: {
         // bg0/bg1/bg2 全透明 —— 节点不画卡片底色，只留文字和连线，
@@ -43487,7 +43678,7 @@ function renderMarkmap() {
         bg1: "transparent",
         bg2: "transparent",
         border: isDark ? "#444" : "#ddd",
-        text: textColor,
+        text: textColor(),
         textSecondary: isDark ? "#a0a0a0" : "#666",
         highlight: "#667eea",
         link: "#667eea"
@@ -43506,32 +43697,90 @@ function renderMarkmap() {
     duration: 300,
     jsonOptions: {
       initialExpandLevel: -1,
-      maxWidth: 280
+      maxWidth
     }
-  }, root3);
-  const applyTextColor = () => {
-    const textElements = svg.querySelectorAll("text");
-    textElements.forEach((textEl) => {
-      textEl.setAttribute("fill", textColor);
-    });
-    const foreignObjects = svg.querySelectorAll("foreignObject");
-    foreignObjects.forEach((fo) => {
-      const contentDoc = fo.querySelector("div");
-      if (contentDoc) {
-        contentDoc.style.color = textColor;
-        contentDoc.style.fill = textColor;
-        const spans = contentDoc.querySelectorAll("span");
-        spans.forEach((span) => {
-          span.style.color = textColor;
-        });
-      }
-    });
   };
-  setTimeout(applyTextColor, 100);
-  setTimeout(applyTextColor, 500);
+}
+function applyTextColor(svg) {
+  const color2 = textColor();
+  svg.querySelectorAll("text").forEach((textEl) => {
+    textEl.setAttribute("fill", color2);
+  });
+  svg.querySelectorAll("foreignObject").forEach((fo) => {
+    const contentDoc = fo.querySelector("div");
+    if (!contentDoc)
+      return;
+    contentDoc.style.color = color2;
+    contentDoc.style.fill = color2;
+    contentDoc.querySelectorAll("span").forEach((span) => {
+      span.style.color = color2;
+    });
+  });
+}
+function createMarkmap(svg, width, height, maxWidth) {
+  const { root: root3 } = transformer.transform(buildMarkmapContent());
+  svg.setAttribute("width", width);
+  svg.setAttribute("height", String(height));
+  svg.style.width = width;
+  svg.style.height = height + "px";
+  const mm = it.create(svg, markmapOptions(maxWidth), root3);
+  setTimeout(() => applyTextColor(svg), 100);
+  setTimeout(() => applyTextColor(svg), 500);
+  return mm;
+}
+function renderMarkmap() {
+  const container = document.getElementById("markmap-container");
+  if (!container)
+    return;
+  const content = buildMarkmapContent();
+  if (!content) {
+    const wrapper = document.querySelector(".markmap-wrapper");
+    if (wrapper)
+      wrapper.remove();
+    return;
+  }
+  if (markmapInstance) {
+    markmapInstance.destroy();
+    markmapInstance = null;
+  }
+  container.innerHTML = "";
+  const svg = document.createElementNS(SVG_NS2, "svg");
+  container.appendChild(svg);
+  markmapInstance = createMarkmap(svg, "100%", 680, 280);
+}
+function destroyZoomMarkmap() {
+  if (zoomMarkmapInstance) {
+    zoomMarkmapInstance.destroy();
+    zoomMarkmapInstance = null;
+  }
+}
+function buildZoomMarkmap(body) {
+  destroyZoomMarkmap();
+  if (!buildMarkmapContent())
+    return destroyZoomMarkmap;
+  const width = body.clientWidth || Math.round(window.innerWidth * 0.86);
+  const height = body.clientHeight || Math.round(window.innerHeight * 0.78);
+  const svg = document.createElementNS(SVG_NS2, "svg");
+  body.appendChild(svg);
+  zoomMarkmapInstance = createMarkmap(svg, `${width}px`, height, 420);
+  return destroyZoomMarkmap;
+}
+var zoomBound = false;
+function ensureZoomOverlay() {
+  if (zoomBound)
+    return;
+  zoomBound = setupZoomOverlay({
+    buttonId: "markmap-zoom-icon",
+    overlayId: "markmap-zoom-outer",
+    bodyId: "markmap-zoom-body",
+    build: buildZoomMarkmap
+  });
 }
 document.addEventListener("nav", () => {
-  setTimeout(renderMarkmap, 300);
+  setTimeout(() => {
+    renderMarkmap();
+    ensureZoomOverlay();
+  }, 300);
 });
 var themeObserverTimer = null;
 var themeObserver = new MutationObserver(() => {
@@ -43540,6 +43789,14 @@ var themeObserver = new MutationObserver(() => {
   }
   themeObserverTimer = window.setTimeout(() => {
     renderMarkmap();
+    if (isZoomOverlayOpen("markmap-zoom-outer")) {
+      const body = document.getElementById("markmap-zoom-body");
+      if (body) {
+        destroyZoomMarkmap();
+        body.innerHTML = "";
+        buildZoomMarkmap(body);
+      }
+    }
     themeObserverTimer = null;
   }, 150);
 });
@@ -43547,10 +43804,14 @@ themeObserver.observe(document.documentElement, {
   attributes: true,
   attributeFilter: ["saved-theme"]
 });
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", renderMarkmap);
-} else {
+function boot() {
   renderMarkmap();
+  ensureZoomOverlay();
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", boot);
+} else {
+  boot();
 }
 /*! Bundled license information:
 
@@ -44622,5 +44883,5 @@ document.addEventListener("nav", () => trackPageview());
 })();
 (function () {
         window.spaNavigate = (url, _) => window.location.assign(url)
-        const event = new CustomEvent("nav", { detail: { slug: document.body.dataset.slug } })
+        const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug, slug: document.body.dataset.slug } })
         document.dispatchEvent(event)})();
