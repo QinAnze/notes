@@ -53,7 +53,7 @@ content/
 ## 写笔记前先看这里
 
 完整流程（导入 → 排查 → 拓展 → 配图 → 跨学科）都在
-**`.workbuddy/skills/import-notes/`**，导入新笔记时照它走。
+**`skills/import-notes/`**，导入新笔记时照它走。
 
 最常用的几条约定：
 
