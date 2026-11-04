@@ -78,7 +78,17 @@ content/
 
 ## 本地开发
 
-环境要求：Node.js ≥ 18.14
+环境要求：Node.js ≥ 18.14，另外**必须装 git-lfs**（PDF 与图片存在 Git LFS 里）。
+
+> ⚠️ **没装 git-lfs 时，clone 下来的 PDF / 图片只是 130 字节的 pointer 文本**，
+> 构建出的站点上 PDF 下载下来会是一段 `version https://git-lfs.github.com/spec/v1`。
+> 一次性处理：
+>
+> ```bash
+> git lfs install     # 装完 git-lfs 后跑一次，注册 filter / hooks
+> git lfs pull        # 已经 clone 过仓库时补拉真实文件（clone 时自动拉）
+> git lfs ls-files | wc -l   # 正常约 133
+> ```
 
 ```bash
 npm install                # 安装依赖
@@ -105,6 +115,12 @@ npm run format             # Prettier 格式化
 
 推送到 `master` 分支会触发 `.github/workflows/deploy.yml`，
 自动构建并发布到 GitHub Pages 的 `gh-pages` 分支。
+
+> ⚠️ **PDF / 图片走 Git LFS，两处配置不能删：**
+> ① `.gitattributes` 里 `*.pdf` `*.png` `*.jpg` 等规则的 `filter=lfs`；
+> ② `deploy.yml` 里 `actions/checkout` 的 `with: lfs: true`。
+> 少了 ②，Actions 检出的是 pointer，`npx quartz build` 会把 pointer 复制进 `public/`，
+> 线上 PDF 变文本、图片全裂。`gh-pages` 里始终是构建出的**真文件**，Pages 不解析 LFS。
 
 > ⚠️ **仓库名一变，站点路径就变。** 仓库 `QinAnze/notes` → `qinanze.github.io/notes`。
 > 站点路径在四个地方硬编码，改仓库名或搬家时要同步：
