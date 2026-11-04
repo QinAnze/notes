@@ -13,6 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 不拉 LFS 对象的话，content/ 里的 PDF/图片只是 pointer，
+          # npx quartz build 会把 pointer 复制进 public/，线上链接全坏。
+          lfs: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
