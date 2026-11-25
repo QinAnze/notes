@@ -18,12 +18,15 @@ import path from "path"
 
 const MAX_SVG_BYTES = 200 * 1024
 
-// Obsidian 主题变量 → Quartz 主题变量（fallback 保留，非 Quartz 环境也能看）
+// Obsidian 主题变量 → 固定深色墨水色。
+// ⚠️ 不要把文字映射到 var(--dark)：这些图里有大量固定的浅色填充块，
+// 暗色模式下文字变白会直接压在白块上看不见。统一用白底黑字（用户 2026-11-25 的备选方案），
+// 两块主题下表现一致。currentColor 由 .svg-figure 的 color 提供。
 const VAR_REPLACEMENTS: [RegExp, string][] = [
-  [/var\(--color-text-primary,[^)]*\)/g, "var(--dark, #1a1a1a)"],
-  [/var\(--color-text-secondary,[^)]*\)/g, "var(--darkgray, #4b5563)"],
-  [/var\(--color-text-tertiary,[^)]*\)/g, "var(--gray, #6b7280)"],
-  [/var\(--color-border-tertiary,[^)]*\)/g, "var(--lightgray, #e5e7eb)"],
+  [/var\(--color-text-primary,[^)]*\)/g, "#1f2937"],
+  [/var\(--color-text-secondary,[^)]*\)/g, "#4b5563"],
+  [/var\(--color-text-tertiary,[^)]*\)/g, "#6b7280"],
+  [/var\(--color-border-tertiary,[^)]*\)/g, "#e5e7eb"],
   [/var\(--background-primary,[^)]*\)/g, "transparent"],
   [/var\(--font-sans,[^)]*\)/g, "var(--bodyFont, sans-serif)"],
 ]

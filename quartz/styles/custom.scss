@@ -290,10 +290,15 @@ code.mermaid {
   color: inherit;
   padding: 0;
   display: block;
+  width: 100%;
+  cursor: zoom-in;
 
   > svg {
-    max-width: 100%;
-    height: auto;
+    // mermaid 会在 svg 上写 inline style="max-width: 276px"，
+    // 不加 !important 就永远只有原始尺寸（用户 2026-11-25 反馈“太小”）。
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
 
@@ -360,18 +365,78 @@ code.mermaid.diagram-failed {
 }
 
 // `![[x.svg]]` 由 localSvg.ts 内联后的容器：
-// 宽度交给 CSS，高度按 viewBox 等比缩放；颜色走 SVG 里的 var(--dark) 等站点变量。
+// 统一白底黑字（图里有大量固定浅色填充块，透明底在暗色模式下会白字压白块）。
+// 高度限制在 70vh，超出不压缩变形，而是等比缩小；点击可进全屏浮层看细节。
 .svg-figure {
   margin: 1.5rem auto;
+  padding: 0.75rem;
   text-align: center;
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
 
   .inlined-svg {
     display: block;
-    width: 100%;
-    max-width: 680px;
+    width: auto;
+    max-width: 100%;
+    max-height: 70vh;
     height: auto;
     margin: 0 auto;
+    cursor: zoom-in;
   }
+}
+
+// 点击放大浮层（Mermaid + 内联 SVG 共用；逻辑在 scienceDiagrams.ts）
+.diagram-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 3vw;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.diagram-zoom-overlay.is-open {
+  display: flex;
+}
+
+.diagram-zoom-body {
+  width: 94vw;
+  height: 88vh;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: var(--light);
+  border-radius: 10px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.diagram-zoom-close {
+  position: fixed;
+  top: 2vh;
+  right: 2.2vw;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--dark);
+  background: var(--light);
+  cursor: pointer;
+}
+
+body.diagram-zoom-lock {
+  overflow: hidden;
 }
 
 // Inline code styling

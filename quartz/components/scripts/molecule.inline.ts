@@ -525,6 +525,7 @@ async function render3D(mol: Molecule, host: HTMLElement) {
   const w = window as unknown as { $3Dmol?: any }
   if (!w.$3Dmol) {
     const ok = await loadScript([
+      "https://cdn.jsdelivr.net/npm/3dmol@2.0.1/build/3Dmol-min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js",
       "https://3Dmol.org/build/3Dmol-min.js",
     ])
@@ -580,7 +581,24 @@ async function render3D(mol: Molecule, host: HTMLElement) {
     return
   }
 
-  D.download(`pdb:${mol.pdb}`, viewer, { multimodel: false }, styleAndZoom)
+  // 实验结构：直接 fetch RCSB 的 PDB 文本，再交给 3Dmol。
+  // ⚠️ 不用 D.download('pdb:…')：它在网络失败时不报错、也不回调，
+  // 界面就一直停在“正在加载”，看起来像 3D 根本打不开。
+  // 自己 fetch 才能拿到状态码并给出可读的失败提示。
+  const url = `https://files.rcsb.org/download/${mol.pdb}.pdb`
+  fetch(url)
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      return res.text()
+    })
+    .then((text) => {
+      viewer.addModel(text, "pdb")
+      styleAndZoom()
+    })
+    .catch((err) => {
+      console.warn("[molecule] PDB 加载失败", mol.pdb, err)
+      setHint(`PDB 结构 ${mol.pdb} 加载失败：${err instanceof Error ? err.message : String(err)}`)
+    })
 }
 
 // ---------------------------------------------------------------------------
