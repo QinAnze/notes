@@ -1,0 +1,88 @@
+<svg viewBox="0 0 680 400" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>BiP 的结构域组成与 lid 构象循环</title>
+<desc>BiP 由NBD、linker、SBD 和 lid 四个部分组成。ATP 结合时 lid 呈α 螺旋构象口袋开放，水解后跌落为 β 构象口袋闭合并夹紧底物，构成抓—挤—放的分子伴侣循环。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">BiP 的结构域组成与 lid 开合循环</text>
+<text class="hint" x="300" y="24">非酶类伴侣　用 ATP 反复抓挤放</text>
+
+<!-- 结构域条形图 -->
+<text class="lbl" x="40" y="58">结构域线性排布　N 端 → C 端</text>
+
+<rect x="40" y="68" width="600" height="30" rx="6" fill="none" stroke="var(--color-border-tertiary, #B4B2A9)" stroke-width="0.5"/>
+
+<rect x="48" y="74" width="46" height="18" rx="4" fill="#B4B2A9"/>
+<text class="sm" x="71" y="87" fill="#412402" text-anchor="middle">信号肽</text>
+
+<rect x="100" y="72" width="250" height="22" rx="4" fill="#185FA5"/>
+<text class="sm" x="225" y="87" fill="#E6F1FB" text-anchor="middle">NBD　核苷酸结合域　结合并水解 ATP</text>
+
+<rect x="354" y="74" width="40" height="18" rx="3" fill="#8A8A85"/>
+<text class="sm" x="374" y="87" fill="#FFFFFF" text-anchor="middle">linker</text>
+
+<rect x="398" y="72" width="150" height="22" rx="4" fill="#0F6E56"/>
+<text class="sm" x="473" y="87" fill="#E1F5EE" text-anchor="middle">SBD　底物结合域</text>
+
+<rect x="552" y="72" width="80" height="22" rx="4" fill="#BA7517"/>
+<text class="sm" x="592" y="87" fill="#FFFFFF" text-anchor="middle">lid 螺旋盖</text>
+
+<text class="sm" x="225" y="112" fill="#0C447C" text-anchor="middle">1–380 aa　提供重折叠能量</text>
+<text class="sm" x="473" y="112" fill="#085041" text-anchor="middle">400–590 aa　结合未折叠疏水片段</text>
+<text class="sm" x="592" y="112" fill="#633806" text-anchor="middle">590–637 aa</text>
+
+<!-- 循环三态 -->
+<text class="lbl" x="40" y="148">lid 构象决定口袋开关</text>
+
+<!-- 态1 -->
+<rect x="40" y="158" width="186" height="150" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="60" y="182" fill="#042C53">① ATP 结合</text>
+<text class="sm" x="60" y="204" fill="#0C447C">lid 呈 α 螺旋构象</text>
+<text class="sm" x="60" y="224" fill="#0C447C">底物口袋开放</text>
+<!-- 开口示意 -->
+<path d="M110 258 L 156 258" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M110 274 L 156 274" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M126 288 L126 246" stroke="#185FA5" stroke-width="2" stroke-dasharray="3 3"/>
+<text class="sm" x="133" y="270" fill="#042C53">底物进入</text>
+
+<!-- 态2 -->
+<rect x="247" y="158" width="186" height="150" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="267" y="182" fill="#412402">② ATP 水解</text>
+<text class="sm" x="267" y="204" fill="#633806">lid 跌落为 β 构象</text>
+<text class="sm" x="267" y="224" fill="#633806">口袋闭合　夹紧底物</text>
+<path d="M317 250 L317 282" stroke="#854F0B" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M363 250 L363 282" stroke="#854F0B" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M340 266 L340 266" stroke="#185FA5" stroke-width="3" stroke-linecap="round"/>
+<text class="sm" x="373" y="270" fill="#412402">提供重折叠力</text>
+
+<!-- 态3 -->
+<rect x="454" y="158" width="186" height="150" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="474" y="182" fill="#04342C">③ ADP 换 ATP</text>
+<text class="sm" x="474" y="204" fill="#085041">lid 重新打开</text>
+<text class="sm" x="474" y="224" fill="#085041">天然态底物释放</text>
+<path d="M524 258 L 570 258" stroke="#0F6E56" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M524 274 L 570 274" stroke="#0F6E56" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M540 244 L 540 288" stroke="#0F6E56" stroke-width="2" stroke-dasharray="3 3"/>
+<text class="sm" x="547" y="270" fill="#04342C">释放</text>
+
+<!-- 循环箭头 -->
+<path d="M226 233 L245 233" stroke="#8A8A85" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M433 233 L452 233" stroke="#8A8A85" stroke-width="1.2" marker-end="url(#a)"/>
+<path d="M547 308 L547 322 L133 322 L133 310" fill="none" stroke="#8A8A85" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#a)"/>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"/>
+  </marker>
+</defs>
+<text class="sm" x="340" y="338" fill="#5c5c5a" text-anchor="middle">循环进行数十至数百次　每次消耗一个 ATP</text>
+
+<!-- 底栏 -->
+<rect class="frame" x="40" y="348" width="600" height="34" rx="10"/>
+<text class="sm" x="60" y="370" fill="#5c5c5a">局部去折叠是核心原理：拔出一小段疏水片段 ΔS 为正，把整体折叠的熵障碍拆成多个小步骤</text>
+</svg>

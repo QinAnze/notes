@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html><head><title>动态方法（细胞生物学动态研究技术）</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="动态方法（细胞生物学动态研究技术）"/><meta property="og:description" content="动态方法（细胞生物学动态研究技术） “动态方法”的核心特征是：在活细胞（live-cell）条件下实时观测分子事件的时间进程，而非固定时间点的静态快照（static method，如固定免疫荧光、组化）。 本文档涵盖四大经典动态技术： #技术观测对象能回答的核心问题1荧光漂白恢复技术（FRAP）荧光标记分子这个分子能不能动？移动速率多少？2酵母双杂交技术（Y2H）蛋白质–蛋白质这两个蛋白在不在同一空间相遇？3荧光共振能量转移技术（FRET）分子内/分子间距离两个分子距离多近？（Å 级）4放射自显影技术（Autoradiography）放射性标记物这个分子在哪、在哪一层？ 一、荧光漂白恢复技术（FRAP, Fluorescence Recovery After Photobleaching） 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="动态方法（细胞生物学动态研究技术） “动态方法”的核心特征是：在活细胞（live-cell）条件下实时观测分子事件的时间进程，而非固定时间点的静态快照（static method，如固定免疫荧光、组化）。 本文档涵盖四大经典动态技术： #技术观测对象能回答的核心问题1荧光漂白恢复技术（FRAP）荧光标记分子这个分子能不能动？移动速率多少？2酵母双杂交技术（Y2H）蛋白质–蛋白质这两个蛋白在不在同一空间相遇？3荧光共振能量转移技术（FRET）分子内/分子间距离两个分子距离多近？（Å 级）4放射自显影技术（Autoradiography）放射性标记物这个分子在哪、在哪一层？ 一、荧光漂白恢复技术（FRAP, Fluorescence Recovery After Photobleaching） 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/动态方法"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#动态方法细胞生物学动态研究技术" data-for="动态方法细胞生物学动态研究技术">动态方法（细胞生物学动态研究技术）</a></li><li class="depth-1"><a href="#一荧光漂白恢复技术frap-fluorescence-recovery-after-photobleaching" data-for="一荧光漂白恢复技术frap-fluorescence-recovery-after-photobleaching">一、荧光漂白恢复技术（FRAP, Fluorescence Recovery After Photobleaching）</a></li><li class="depth-2"><a href="#1-原理" data-for="1-原理">1. 原理</a></li><li class="depth-2"><a href="#2-实验流程" data-for="2-实验流程">2. 实验流程</a></li><li class="depth-2"><a href="#3-应用" data-for="3-应用">3. 应用</a></li><li class="depth-2"><a href="#4-变体" data-for="4-变体">4. 变体</a></li><li class="depth-2"><a href="#5-局限" data-for="5-局限">5. 局限</a></li><li class="depth-1"><a href="#二酵母双杂交技术y2h-yeast-two-hybrid" data-for="二酵母双杂交技术y2h-yeast-two-hybrid">二、酵母双杂交技术（Y2H, Yeast Two-Hybrid）</a></li><li class="depth-2"><a href="#1-原理" data-for="1-原理">1. 原理</a></li><li class="depth-2"><a href="#2-实验流程" data-for="2-实验流程">2. 实验流程</a></li><li class="depth-2"><a href="#3-应用" data-for="3-应用">3. 应用</a></li><li class="depth-2"><a href="#4-局限" data-for="4-局限">4. 局限</a></li><li class="depth-1"><a href="#三荧光共振能量转移技术fret-förster-resonance-energy-transfer" data-for="三荧光共振能量转移技术fret-förster-resonance-energy-transfer">三、荧光共振能量转移技术（FRET, Förster Resonance Energy Transfer）</a></li><li class="depth-2"><a href="#1-原理" data-for="1-原理">1. 原理</a></li><li class="depth-2"><a href="#2-检测方法" data-for="2-检测方法">2. 检测方法</a></li><li class="depth-2"><a href="#3-应用" data-for="3-应用">3. 应用</a></li><li class="depth-2"><a href="#4-局限" data-for="4-局限">4. 局限</a></li><li class="depth-1"><a href="#四放射自显影技术autoradiography" data-for="四放射自显影技术autoradiography">四、放射自显影技术（Autoradiography）</a></li><li class="depth-2"><a href="#1-原理" data-for="1-原理">1. 原理</a></li><li class="depth-2"><a href="#2-同位素选择" data-for="2-同位素选择">2. 同位素选择</a></li><li class="depth-2"><a href="#3-技术类型" data-for="3-技术类型">3. 技术类型</a></li><li class="depth-2"><a href="#4-应用" data-for="4-应用">4. 应用</a></li><li class="depth-2"><a href="#5-局限" data-for="5-局限">5. 局限</a></li><li class="depth-1"><a href="#五技术横向对比" data-for="五技术横向对比">五、技术横向对比</a></li><li class="depth-1"><a href="#六选择建议实操决策" data-for="六选择建议实操决策">六、选择建议（实操决策）</a></li><li class="depth-1"><a href="#七延伸相关现代技术补充视野" data-for="七延伸相关现代技术补充视野">七、延伸：相关现代技术（补充视野）</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">动态方法（细胞生物学动态研究技术）</h1><p class="content-meta">Nov 25, 2026, 29 min read</p></div></div><article class="popover-hint"><h1 id="动态方法细胞生物学动态研究技术">动态方法（细胞生物学动态研究技术）<a aria-hidden="true" tabindex="-1" href="#动态方法细胞生物学动态研究技术" class="internal"></a></h1>
+<p>“动态方法”的核心特征是：<strong>在活细胞（live-cell）条件下实时观测分子事件的时间进程</strong>，而非固定时间点的静态快照（static method，如固定免疫荧光、组化）。</p>
+<p>本文档涵盖四大经典动态技术：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>#</th><th>技术</th><th>观测对象</th><th>能回答的核心问题</th></tr></thead><tbody><tr><td>1</td><td><strong>荧光漂白恢复技术（FRAP）</strong></td><td>荧光标记分子</td><td>这个分子<strong>能不能动</strong>？移动速率多少？</td></tr><tr><td>2</td><td><strong>酵母双杂交技术（Y2H）</strong></td><td>蛋白质–蛋白质</td><td>这两个蛋白<strong>在不在同一空间相遇</strong>？</td></tr><tr><td>3</td><td><strong>荧光共振能量转移技术（FRET）</strong></td><td>分子内/分子间距离</td><td>两个分子<strong>距离多近</strong>？（Å 级）</td></tr><tr><td>4</td><td><strong>放射自显影技术（Autoradiography）</strong></td><td>放射性标记物</td><td>这个分子<strong>在哪、在哪一层</strong>？</td></tr></tbody></table>
+<hr/>
+<h2 id="一荧光漂白恢复技术frap-fluorescence-recovery-after-photobleaching">一、荧光漂白恢复技术（FRAP, Fluorescence Recovery After Photobleaching）<a aria-hidden="true" tabindex="-1" href="#一荧光漂白恢复技术frap-fluorescence-recovery-after-photobleaching" class="internal"></a></h2>
+<h3 id="1-原理">1. 原理<a aria-hidden="true" tabindex="-1" href="#1-原理" class="internal"></a></h3>
+<p>1979 年由 <strong>Axelrod、施耐德（Schneider）</strong> 等人建立。</p>
+<p>荧光标记的分子被<strong>定点高强度激光漂白（Photobleaching）<strong>后，该区域荧光强度骤降至背景。随后观察荧光强度能否</strong>随时间自行恢复</strong>。</p>
+<p>恢复的动力学来源于：<strong>未被漂白的标记分子从周围区域通过扩散或主动运输进入漂白区</strong>。</p>
+<svg viewBox="0 0 700 330" width="100%" style="max-width:700px;height:auto;display:block;margin:1rem auto;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FRAP 荧光恢复曲线">
+<line x1="80" y1="270" x2="660" y2="270" stroke="currentColor" stroke-width="1.2"></line>
+  <line x1="80" y1="270" x2="80" y2="40" stroke="currentColor" stroke-width="1.2"></line>
+  <text x="620" y="290" font-size="12" text-anchor="middle" stroke="none">时间</text>
+  <text x="30" y="160" font-size="12" text-anchor="middle" stroke="none" transform="rotate(-90 30 160)">荧光强度</text>
+  <line x1="80" y1="90" x2="650" y2="90" stroke="currentColor" stroke-width="1" stroke-dasharray="5 4" opacity="0.45"></line>
+  <line x1="300" y1="70" x2="300" y2="270" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"></line>
+  <path d="M100,90 H300 L300,235 C345,232 365,150 405,125 C450,105 500,102 650,100" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path>
+  <g font-size="11.5" stroke="none">
+    <text x="470" y="84">平台（完全恢复）</text>
+    <text x="300" y="292" text-anchor="middle">漂白瞬间</text>
+    <text x="420" y="182">← 恢复速率决定于分子移动性</text>
+    <text x="306" y="252" font-size="10.5">I₀</text>
+    <text x="96" y="84" font-size="10.5">I_pre</text>
+  </g></svg>
+<p><em>上图：FRAP 的典型恢复曲线。移动分数（Mobile Fraction）=（I∞ − I₀）/（I_pre − I₀）。</em></p>
+<p><strong>两个核心参数</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>参数</th><th>计算方式</th><th>生物学意义</th></tr></thead><tbody><tr><td><strong>移动分数</strong><br/>Mobile Fraction (Mf)</td><td>Mf = (I_∞ − I₀) / (I_pre − I₀)</td><td>能自由扩散的比例。<br/><strong>Mf = 1.0</strong> → 全部自由扩散（膜内在蛋白、细胞质蛋白）<br/><strong>Mf &lt; 1.0 且平台不再上升</strong> → 存在** immobile fraction**（结合于细胞骨架/膜锚定的部分），如网格蛋白包裹的膜蛋白、连接蛋白锚定的受体</td></tr><tr><td><strong>半恢复时间</strong> t₁/₂</td><td>达到总恢复量一半所需时间</td><td>反映<strong>移动速度</strong>。<br/>理论公式（圆形漂白区）：D = 0.2249 × w₀² / t₁/₂（w₀ 为漂白区半径，μm）<br/>扩散系数越小 → t₁/₂ 越长 → 移动越慢</td></tr></tbody></table>
+<blockquote>
+<p><strong>扩散系数 D 参考值</strong>：小分子在细胞质 ~10⁻⁹ m²/s；膜蛋白在膜上侧向扩散 ~10⁻¹² ~ 10⁻⁹ m²/s；核内蛋白 ~10⁻¹⁴ m²/s（受核骨架限制）</p>
+</blockquote>
+<h3 id="2-实验流程">2. 实验流程<a aria-hidden="true" tabindex="-1" href="#2-实验流程" class="internal"></a></h3>
+<ol>
+<li><strong>标记</strong>：转染荧光融合蛋白（GFP/RFP/mCherry），或用荧光抗体、脂质体染料标记</li>
+<li><strong>定位</strong>：共聚焦显微镜下找到目标区域（细胞膜、细胞质、核内）</li>
+<li><strong>漂白</strong>：
+<ul>
+<li><strong>点漂白（Point Bleaching）</strong>：用最小激光功率、最短驻留时间（&lt;1 ms）打成一个小点</li>
+<li><strong>线漂白（Line Bleaching）</strong>：划一条直线，测<strong>垂直方向</strong>扩散系数</li>
+<li><strong>区域漂白（Spot Bleaching）</strong>：漂白整个细胞或某个胞器</li>
+</ul>
+</li>
+<li><strong>采集</strong>：以 <strong>1–10 帧/秒</strong> 连续扫描（时间分辨的关键），采集 50–100 帧</li>
+<li><strong>拟合</strong>：用指数衰减模型（如 single exponential）拟合恢复曲线，得 t₁/₂</li>
+<li><strong>对照</strong>：
+<ul>
+<li>4°C 冷却（抑制代谢）→ 若恢复停止，说明依赖能量</li>
+<li>ATP 耗竭（叠氮化钠 + 无糖培养基）→ 区分被动扩散 vs 主动运输</li>
+<li>施加<strong>赤藜糖醇</strong>（erythritol，高渗）→ 造成可逆渗透休克，细胞内液流失，区分膜流动与胞内流动</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-应用">3. 应用<a aria-hidden="true" tabindex="-1" href="#3-应用" class="internal"></a></h3>
+<ul>
+<li><strong>膜流动性研究</strong>：Byington、Edidin（1970）用 FRAP 证明<strong>细胞膜侧向流动</strong>（细胞融合实验）</li>
+<li><strong>膜蛋白锚定性质</strong>：鉴定跨膜 vs 脂锚定（ GPI 锚定蛋白可被磷脂酶处理清除）</li>
+<li><strong>细胞骨架依赖性运动</strong>：轴突中颗粒的<strong>微管依赖</strong>长距离运输；黏附斑蛋白、半桥粒蛋白的 immobile fraction</li>
+<li><strong>核内蛋白定位</strong>：核孔复合体介导的扩散</li>
+<li><strong>细胞极性建立</strong>：黏附蛋白向侧膜定向运输</li>
+<li><strong>胞吐/内吞动力学</strong>：囊泡与质膜的融合回收</li>
+</ul>
+<h3 id="4-变体">4. 变体<a aria-hidden="true" tabindex="-1" href="#4-变体" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>技术</th><th>特点</th></tr></thead><tbody><tr><td><strong>FRAP（点漂白）</strong></td><td>最经典，测扩散系数</td></tr><tr><td><strong>FRAPM（FRAP Monitor，扫描漂白）</strong></td><td>漂白区域随时间移动，反映<strong>定向运输</strong></td></tr><tr><td><strong>RICS（Raft Imaging with Correlation Spectroscopy）</strong></td><td>点扩散函数拟合，得运动矢量</td></tr><tr><td><strong>FRAP on inverse FRAP</strong></td><td>漂白区外标记后测”回流”</td></tr><tr><td><strong>SPT（单分子颗粒追踪）</strong></td><td>与 FRAP 互补，直接追踪单个分子轨迹</td></tr><tr><td><strong>流式细胞术 FRAP（FCFRAP）</strong></td><td>细胞群整体膜脂质流动性的快速测量</td></tr></tbody></table>
+<h3 id="5-局限">5. 局限<a aria-hidden="true" tabindex="-1" href="#5-局限" class="internal"></a></h3>
+<ul>
+<li>❌ 时间分辨率有限（<strong>毫秒–秒</strong>），无法捕捉快速事件</li>
+<li>❌ <strong>光毒性</strong>：强激光导致细胞损伤、蛋白交联</li>
+<li>❌ <strong>漂白区大小受光学衍射极限约束</strong>（~200 nm）</li>
+<li>❌ 需区分”扩散进入”与”被绑定后释放”——同一曲线两种机制可能拟合相似</li>
+<li>❌ 无法判断<strong>分子是否真正自由</strong>（immobile fraction 解释有歧义）</li>
+</ul>
+<hr/>
+<h2 id="二酵母双杂交技术y2h-yeast-two-hybrid">二、酵母双杂交技术（Y2H, Yeast Two-Hybrid）<a aria-hidden="true" tabindex="-1" href="#二酵母双杂交技术y2h-yeast-two-hybrid" class="internal"></a></h2>
+<h3 id="1-原理-1">1. 原理<a aria-hidden="true" tabindex="-1" href="#1-原理-1" class="internal"></a></h3>
+<p>1989–1991 年由 <strong>Stanley Fields</strong> 和 <strong>Marc Vidal</strong> 建立。</p>
+<p><strong>转录因子的结构模块化原理</strong>（酵母 <strong>GAL4</strong> 系统）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模块</th><th>功能</th><th>单独是否有效</th></tr></thead><tbody><tr><td><strong>DNA 结合结构域（BD / GAL4-DBD）</strong></td><td>识别 <strong>GAL1 启动子</strong>上游的 <strong>UAS</strong> 序列</td><td>❌ 单独无法激活报告基因</td></tr><tr><td><strong>转录激活结构域（AD / GAL4-AD）</strong></td><td>招募转录机器，启动下游基因转录</td><td>❌ 单独无法定位到启动子</td></tr></tbody></table>
+<p><strong>核心设计</strong>：把一个已知蛋白（诱饵，bait）融合到 <strong>BD</strong>，把待测蛋白（猎物，prey）融合到 <strong>AD</strong>。若两者<strong>相互作用</strong>，就能把 BD 与 AD 拉到一起，形成完整转录因子 → 激活报告基因。</p>
+<pre><code class="mermaid">flowchart LR
+    DNA[&quot;DNA · UAS（GAL1）&quot;] --> BD[&quot;BD · 诱饵蛋白 Bait&quot;]
+    PREY[&quot;猎物蛋白 Prey · AD&quot;] --> TF[&quot;BD–AD 靠拢 → 组装成完整转录因子&quot;]
+    BD --> TF
+    TF --> REP[&quot;激活下游报告基因&quot;]
+    REP --> R1[&quot;HIS3 · 组氨酸合成（营养缺陷筛选）&quot;]
+    REP --> R2[&quot;lacZ · β-半乳糖苷酶（X-gal 显色，蓝色）&quot;]
+    REP --> R3[&quot;MEL1 · α-因子（报告，可选）&quot;]
+</code></pre>
+<p><strong>酵母遗传背景选择</strong></p>
+<ul>
+<li>宿主：<strong>Saccharomyces cerevisiae AH109</strong>（或 <strong>Y187</strong>）</li>
+<li>报告基因：
+<ul>
+<li><strong>HIS3</strong> → 在 <strong>SD/-His/-Trp/-Leu/-Ade</strong> 缺乏培养基上生长</li>
+<li><strong>lacZ</strong> → <strong>X-gal + IPTG</strong> 显色（蓝色）</li>
+<li><strong>MEL1</strong> → 检测单杂交（DNA–蛋白相互作用），可与 β-半乳糖苷酶检测联用</li>
+</ul>
+</li>
+<li><strong>载体</strong>：pGBKT7（BD）、pGADT7（AD），<strong>多克隆位点（MCS）+ 诱饵蛋白需单独克隆，猎物蛋白保持原始开放阅读框</strong></li>
+</ul>
+<h3 id="2-实验流程-1">2. 实验流程<a aria-hidden="true" tabindex="-1" href="#2-实验流程-1" class="internal"></a></h3>
+<ol>
+<li><strong>诱饵蛋白克隆</strong>到 BD 载体 → Western blot 确认<strong>正常表达</strong>
+<ul>
+<li>⚠️ 若诱饵本身自激活（autoactivate），需删去转录激活域或降低水平</li>
+</ul>
+</li>
+<li><strong>猎物库构建</strong>：
+<ul>
+<li>传统：cDNA 融合表达文库（随机片段，<strong>筛到的是片段而非全长</strong>）</li>
+<li>现代：<strong>基因组文库 / 蛋白互作组（Interactome）文库</strong></li>
+</ul>
+</li>
+<li><strong>共转化</strong>（顺序转化）：
+<ul>
+<li>先转 BD 载体到 AH109（<strong>先转 Bait 更安全</strong>）→ 铺 SD/-Trp 平板</li>
+<li>再转猎物文库 → <strong>缺口修复（gap repair）</strong> 或 酵母直接转染</li>
+</ul>
+</li>
+<li><strong>选择</strong>：铺 <strong>SD/-His/-Trp/-Ade/-Leu + X-gal + IPTG</strong></li>
+<li><strong>筛选阳性克隆</strong>：
+<ul>
+<li>挑选蓝色、生长良好的克隆，<strong>液体培养诱导（加 <strong>3′-AT</strong> 或 <strong>his3 抑制</strong>）</strong></li>
+<li><strong>PCR 鉴定插入片段</strong>（载体通用引子）</li>
+<li><strong>测序</strong>确认猎物身份</li>
+</ul>
+</li>
+<li><strong>验证</strong>（关键一步，不可省略）：
+<ul>
+<li><strong>反向验证</strong>：Bait ⇄ Prey 互换位置再筛一次</li>
+<li><strong>对照设置</strong>：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>对照</th><th>目的</th></tr></thead><tbody><tr><td>空载体（Empty vector）</td><td>阴性对照，检测自激活</td></tr><tr><td><strong>Known positive pair</strong></td><td>阳性对照，确认系统工作</td></tr><tr><td><strong>LAM/CIP（自激活检查）</strong></td><td>排除诱饵自激活</td></tr></tbody></table>
+</li>
+<li><strong>进一步验证</strong>：GST pull-down（体外）、Co-IP（体内）、BiFC/FRET（活细胞定位）、酵母三杂交（Y3H）</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-应用-1">3. 应用<a aria-hidden="true" tabindex="-1" href="#3-应用-1" class="internal"></a></h3>
+<ul>
+<li><strong>构建蛋白互作网络（Interactome）</strong>：已知诱饵钓出未知猎物 → 系统绘制功能模块</li>
+<li><strong>验证蛋白相互作用</strong>：功能互补、疾病突变体与野生型的相互作用差异</li>
+<li><strong>筛选药物靶点</strong>：找能阻断某相互作用的小分子</li>
+<li><strong>验证蛋白功能假说</strong>：若 A–B 已知相互作用，用 Y2H 找 A–C，推测 C 与 B 同通路</li>
+<li><strong>研究复合体组装</strong>：核孔复合体、COPII 囊泡转运、RNA 剪切复合体</li>
+<li><strong>筛抗肿瘤抗体靶点</strong>：病毒蛋白–宿主蛋白互作图谱（HPV、HIV）</li>
+</ul>
+<h3 id="4-局限">4. 局限<a aria-hidden="true" tabindex="-1" href="#4-局限" class="internal"></a></h3>
+<ul>
+<li>❌ <strong>假阴性率高</strong>（最常见问题）：
+<ul>
+<li>诱饵蛋白折叠不良（融合标签位置不当）</li>
+<li>猎物在酵母中<strong>表达量低或不正确折叠</strong></li>
+<li>融合标签<strong>遮挡了相互作用位点</strong></li>
+<li>相互作用<strong>依赖翻译后修饰</strong>（酵母缺乏哺乳动物 PTM）</li>
+<li>相互作用需要<strong>第三蛋白</strong>存在</li>
+<li><strong>核定位问题</strong>：许多哺乳动物核蛋白在酵母核中无法正确定位</li>
+</ul>
+</li>
+<li>❌ <strong>假阳性</strong>：
+<ul>
+<li>”<strong>rubber-hands effect</strong>“（橡皮手效应）：自激活的诱饵经多次传代后随机突变获得激活能力</li>
+<li>猎物蛋白自身激活报告基因</li>
+<li>文库中混入的转录因子片段</li>
+</ul>
+</li>
+<li>⚠️ <strong>酵母是单细胞生物</strong>，无法反映哺乳动物细胞中的<strong>时空特异性</strong>（如细胞周期依赖、细胞类型依赖的相互作用）</li>
+</ul>
+<hr/>
+<h2 id="三荧光共振能量转移技术fret-förster-resonance-energy-transfer">三、荧光共振能量转移技术（FRET, Förster Resonance Energy Transfer）<a aria-hidden="true" tabindex="-1" href="#三荧光共振能量转移技术fret-förster-resonance-energy-transfer" class="internal"></a></h2>
+<h3 id="1-原理-2">1. 原理<a aria-hidden="true" tabindex="-1" href="#1-原理-2" class="internal"></a></h3>
+<p>理论由 <strong>Gerhard Förster</strong> 于 1947 年提出，1974 年首次在生物体系中实现。</p>
+<p><strong>两种荧光染料（<strong>Donor 供体 / Acceptor 受体</strong>）距离足够近（<strong>1–10 nm</strong>，即 0.01–0.100 μm）时，激发供体的能量可</strong>无光子交换**地转移给受体。</p>
+<p><strong>三个必要条件</strong></p>
+<ol>
+<li><strong>光谱重叠</strong>：供体发射光谱与受体激发光谱<strong>有重叠</strong></li>
+<li><strong>偶极取向</strong>：供体与受体<strong>过渡偶极</strong>需相对平行（κ² = 2/5 ~ 6/5，液体中取 <strong>κ² = 2/5</strong>）</li>
+<li><strong>距离 &lt; 10 nm</strong>：F 效率与距离的六次方成反比</li>
+</ol>
+<pre><code class="mermaid">flowchart LR
+    EX[&quot;供体激发：Ex_D&quot;] --> D[&quot;D*（供体激发态）&quot;]
+    D -->|&quot;能量转移（无光子、无碰撞）&quot;| A[&quot;A*（受体激发态）&quot;]
+    A --> EM[&quot;荧光发射 Em_A（绿色，右移）&quot;]
+    D -.->|&quot;竞争路径&quot;| Q[&quot;供体荧光下降&quot;]
+</code></pre>
+<p><strong>FRET 效率</strong> <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 为供受体共表达时供体的荧光强度，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 为只有供体时的强度。</p>
+<p><strong>Perrin–Forster 公式</strong></p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">RET</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3651em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">+</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mtight">/</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:-0.0077em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5935em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">6</span></span></span></span></span></p>
+<p>其中 <strong>R₀（Forster 半径）</strong> = 供受体处于 50% 转移效率时的距离，典型值 <strong>2–8 nm</strong>。</p>
+<p><strong>R₀ 六大影响因素</strong></p>
+<ol>
+<li><strong>供体量子产率 Φ_D</strong>（越高越好）</li>
+<li><strong>光谱重叠积分 J</strong>（越大越好）</li>
+<li><strong>受体消光系数 ε_A</strong>（越大越好）</li>
+<li><strong>供受体距离 r</strong></li>
+<li><strong>介质折射率 n</strong>（细胞质 ~1.36）</li>
+<li><strong>偶极取向因子 κ²</strong></li>
+</ol>
+<p><strong>常用 FRET 对（青色对青色变体）</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>供体</th><th>发射</th><th>受体</th><th>激发</th><th>R₀</th><th>特点</th></tr></thead><tbody><tr><td><strong>CFP</strong></td><td>475 nm</td><td><strong>YFP</strong></td><td>458 nm</td><td>4.9 nm</td><td>最经典对，光漂白强</td></tr><tr><td><strong>ECFP / EYFP</strong></td><td>475 nm</td><td><strong>EYFP</strong></td><td>458 nm</td><td>~5.5 nm</td><td>增强型，抗漂白好</td></tr><tr><td><strong>Clover</strong></td><td>505 nm</td><td><strong>mRuby3</strong></td><td>505 nm</td><td>~6.1 nm</td><td>亮度高，光稳定</td></tr><tr><td><strong>mClover3</strong></td><td>518 nm</td><td><strong>mRuby3</strong></td><td>506 nm</td><td>7.2 nm</td><td><strong>目前最优对之一</strong></td></tr><tr><td><strong>mNeonGreen</strong></td><td>517 nm</td><td><strong>mRuby3</strong></td><td>506 nm</td><td>~6.8 nm</td><td>亮度最高</td></tr><tr><td><strong>GFP（Donor）</strong></td><td>509 nm</td><td><strong>mCherry</strong></td><td>488 nm</td><td>~5.1 nm</td><td>可与流式、显微兼容</td></tr><tr><td><strong>BFP → GFP</strong></td><td>—</td><td>—</td><td>—</td><td>~3.3 nm</td><td>短距离（钙调蛋白 Ca²⁺ 指示常用）</td></tr></tbody></table>
+<blockquote>
+<p>⚠️ 关键点：<strong>供体和受体的激发光谱必须高度分离</strong>，否则<strong>直接激发泄漏</strong>和<strong>串联激发（crosstalk）</strong> 造成假阳性。</p>
+</blockquote>
+<h3 id="2-检测方法">2. 检测方法<a aria-hidden="true" tabindex="-1" href="#2-检测方法" class="internal"></a></h3>
+<h4 id="1共聚焦显微镜-fretsensitized-emission--flim">（1）共聚焦显微镜 FRET（sensitized emission / FLIM）<a aria-hidden="true" tabindex="-1" href="#1共聚焦显微镜-fretsensitized-emission--flim" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>原理</th><th>优点</th><th>局限</th></tr></thead><tbody><tr><td><strong>敏化发射（Sensitized Emission）</strong></td><td>测受体的 FLER（荧光-红-绿发射比）随距离变化</td><td>快速、成像</td><td>需严格扣除<strong>直接激发</strong>与<strong>串联激发</strong></td></tr><tr><td><strong>FLIM</strong>（Fluorescence Lifetime Imaging）</td><td>测供体<strong>荧光寿命 τ_D</strong>，FRET 使 τ_D 缩短</td><td><strong>不受浓度/漂白/背景光影响</strong>，最可靠</td><td>需脉冲激发（TCSPC）</td></tr><tr><td>** acceptor photobleaching**</td><td>强激发漂白受体，若供体荧光升高 → 存在 FRET</td><td>简单、绝对定量</td><td>破坏样品，仅单点</td></tr><tr><td><strong>STED-FRET / SIM-FRET / PALM-STORM</strong></td><td>超分辨 + FRET</td><td><strong>纳米尺度分子计数/定位</strong></td><td>设备昂贵、技术复杂</td></tr></tbody></table>
+<p><strong>FLIM-FRET 判据</strong></p>
+<ul>
+<li><strong>E = 1 − τ_DA/τ_D</strong>（τ_D 为无受体时的供体寿命）</li>
+<li>效率提高时，受体上升的 <strong>FLER（依赖供体激发）</strong> > 1.05，而<strong>直接激发受体</strong>（依赖受体激发）&lt; 1.05，且<strong>去敏化光漂白</strong>显著减少 → 确证 FRET</li>
+</ul>
+<h4 id="2流式细胞术-fret">（2）流式细胞术 FRET<a aria-hidden="true" tabindex="-1" href="#2流式细胞术-fret" class="internal"></a></h4>
+<ul>
+<li>用 <strong>488 nm</strong> 激发供体，测 FLER</li>
+<li><strong>高速度</strong>（每秒数千细胞），适合<strong>筛选</strong>和<strong>群体分析</strong></li>
+<li>常用于 <strong>Homo-FRET（同一分子内两相同荧光团）</strong> 和蛋白聚集检测</li>
+</ul>
+<h4 id="3fret-光谱-时间flim-细胞内浓度测定">（3）FRET 光谱-时间（FLIM）— 细胞内浓度测定<a aria-hidden="true" tabindex="-1" href="#3fret-光谱-时间flim-细胞内浓度测定" class="internal"></a></h4>
+<p>利用 <strong>FRET 供受体能量比</strong> 与<strong>供体/受体总浓度</strong>的二维关系，做<strong>双重归一化处理</strong>，可实现<strong>细胞内单个蛋白分子的绝对定量</strong>（尤其配合 <strong>Spectral FRET</strong>）</p>
+<h3 id="3-应用-2">3. 应用<a aria-hidden="true" tabindex="-1" href="#3-应用-2" class="internal"></a></h3>
+<ul>
+<li><strong>蛋白质相互作用活细胞验证</strong>（与 Y2H 互补）</li>
+<li><strong>构象变化与开关机制</strong>：
+<ul>
+<li><strong>钙调蛋白 Ca²⁺ 感应</strong>：Cameleon 传感器</li>
+<li><strong>蛋白激酶活性</strong>：PKA 的 <strong>AKAR 底物</strong>，磷酸化使底物展开、FRET 改变（<strong>越来越多……</strong>）</li>
+<li><strong>鸟嘌呤核苷酸交换因子</strong>（Ras 开关）</li>
+</ul>
+</li>
+<li><strong>受体二聚化</strong>：<strong>BRET</strong>（生物发光共振能量转移，供体为荧光素酶，受体为荧光蛋白）</li>
+<li><strong>锌传感器</strong>：调色蛋白类传感器</li>
+<li><strong>膜融合/病毒入侵</strong>：GP41 与细胞受体距离变化</li>
+<li><strong>单分子构象动力学</strong>：smFRET 追踪单个分子构象变化速率</li>
+</ul>
+<h3 id="4-局限-1">4. 局限<a aria-hidden="true" tabindex="-1" href="#4-局限-1" class="internal"></a></h3>
+<ul>
+<li>❌ <strong>距离窗口窄</strong>：只报告 1–10 nm，更远的相互作用无法检出</li>
+<li>❌ <strong>标记干扰</strong>：荧光蛋白（~27 kDa）体积大，可能<strong>遮挡相互作用位点</strong>或改变蛋白折叠/定位</li>
+<li>❌ <strong>串联激发（crosstalk）</strong>：供体激发光也会激发受体，产生假阳性</li>
+<li>❌ <strong>光漂白与过表达</strong>：强激光损伤细胞，高表达量改变互作平衡</li>
+<li>❌ <strong>取向因子 κ² 未知</strong>：分子在细胞内<strong>取向随机分布</strong>，导致 FRET 效率解释存在 ±30% 误差</li>
+<li>❌ <strong>背景</strong>：细胞内<strong>自发荧光</strong>、<strong>内源 NADH/FAD</strong>（细胞内荧光背景极高）</li>
+</ul>
+<hr/>
+<h2 id="四放射自显影技术autoradiography">四、放射自显影技术（Autoradiography）<a aria-hidden="true" tabindex="-1" href="#四放射自显影技术autoradiography" class="internal"></a></h2>
+<h3 id="1-原理-3">1. 原理<a aria-hidden="true" tabindex="-1" href="#1-原理-3" class="internal"></a></h3>
+<p>把<strong>放射性同位素标记的物质</strong>引入细胞或生物样品中，利用其<strong>衰变发射的射线/粒子</strong>使<strong>感光乳剂（photographic emulsion）<strong>上的</strong>卤化银晶体（AgBr / AgCl）<strong>发生</strong>潜影（latent image）</strong>，经显影定影后在显微镜下观察。</p>
+<pre><code class="mermaid">flowchart TD
+    ISO[&quot;放射性同位素（³H、¹⁴C、³⁵S、¹²⁵I、³²P）&quot;] -->|&quot;衰变（β 粒子 / γ 射线）&quot;| CRY[&quot;感光乳剂中的 AgBr 晶体&quot;]
+    CRY --> LAT[&quot;潜影（潜像中心）&quot;]
+    LAT -->|&quot;显影液（还原剂）&quot;| AG[&quot;金属银颗粒（黑色沉淀）&quot;]
+    AG --> OBS[&quot;光学显微镜 / 电子显微镜下可见&quot;]
+</code></pre>
+<h3 id="2-同位素选择">2. 同位素选择<a aria-hidden="true" tabindex="-1" href="#2-同位素选择" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>同位素</th><th>半衰期</th><th>衰变类型</th><th>射程</th><th>能量</th><th>特点与用途</th></tr></thead><tbody><tr><td><strong>³H（氚）</strong></td><td><strong>12.3 年</strong></td><td>β⁻（低能）</td><td><strong>极短（~1 μm）</strong></td><td>最低（0.018 MeV）</td><td>🏆 <strong>分辨率最高</strong>；定位精确至亚细胞器；需<strong>数周至数月</strong>曝光</td></tr><tr><td><strong>¹⁴C</strong></td><td>5730 年</td><td>β⁻</td><td>短</td><td>中（0.156 MeV）</td><td>半衰期长、辐射强，适合<strong>长时间</strong>追踪（如代谢稳定性）</td></tr><tr><td><strong>³⁵S</strong></td><td>87.5 天</td><td>β⁻</td><td>短</td><td>中（0.167 MeV）</td><td>**含硫氨基酸（Met/Cys）**代谢标记常用，<strong>放射性活度高</strong>、曝光时间短</td></tr><tr><td><strong>³H-亮氨酸/苯丙氨酸</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>蛋白质合成</strong>的经典标记（脉冲-追踪实验）</td></tr><tr><td><strong>¹²⁵I</strong></td><td>59.4 天</td><td>γ + β</td><td>中</td><td>中</td><td><strong>放射免疫分析（RIA）</strong>；碘化酪氨酸/甲状腺素；易造成样品辐射损伤</td></tr><tr><td><strong>³²P</strong></td><td><strong>14.3 天</strong></td><td>β⁻</td><td><strong>较长（~3 mm）</strong></td><td>高（1.71 MeV）</td><td>活度高、<strong>曝光时间极短（数天）</strong>；<strong>DNA 复制实验</strong>；但分辨率差、易污染</td></tr><tr><td><strong>³³P</strong></td><td>25.3 天</td><td>β⁻</td><td>中</td><td>中</td><td><strong>分子生物学首选</strong>——活度介于 ³H 与 ³²P 之间，射程短</td></tr><tr><td><strong>⁵⁹Fe</strong></td><td>44.5 天</td><td>β⁻ / γ</td><td>—</td><td>—</td><td>铁代谢、血红蛋白合成</td></tr><tr><td><strong>¹⁴C-碳酸氢盐</strong></td><td>5730 年</td><td>β⁻</td><td>—</td><td>—</td><td><strong>糖、脂质、氨基酸</strong>代谢通量</td></tr></tbody></table>
+<blockquote>
+<p><strong>选择原则</strong>：要<strong>高分辨率</strong> → ³H；要<strong>短曝光</strong> → ³²P/³⁵S；要<strong>测 DNA/RNA</strong> → ³²P/³³P。</p>
+</blockquote>
+<h3 id="3-技术类型">3. 技术类型<a aria-hidden="true" tabindex="-1" href="#3-技术类型" class="internal"></a></h3>
+<h4 id="1宏观自显影macroautoradiography-组织水平">（1）宏观自显影（Macroautoradiography）— 组织水平<a aria-hidden="true" tabindex="-1" href="#1宏观自显影macroautoradiography-组织水平" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>用途</th></tr></thead><tbody><tr><td><strong>整体自显影（Whole-body）</strong></td><td>放射性药物的<strong>体内分布</strong>（如 ³⁵S-蛋氨酸、¹⁴⁶1 标记白蛋白）</td></tr><tr><td><strong>接触自显影（Contact）</strong></td><td>把组织/切片紧贴 X 光胶片，曝光后显影</td></tr><tr><td><strong>间接（投射）自显影</strong></td><td>用厚切片，靠射线穿透后成像</td></tr></tbody></table>
+<h4 id="2微观自显影microautoradiography-细胞水平">（2）微观自显影（Microautoradiography）— 细胞水平<a aria-hidden="true" tabindex="-1" href="#2微观自显影microautoradiography-细胞水平" class="internal"></a></h4>
+<ul>
+<li>涂片或切片浸渍<strong>核乳剂</strong>，曝光后显影 → 银粒分布</li>
+<li><strong>细胞水平</strong>：哪种细胞掺入了标记物</li>
+<li><strong>亚细胞水平</strong>：标记物在细胞内的<strong>分布</strong>（核 vs 胞质 vs 膜）</li>
+</ul>
+<h4 id="3超微自显影ultrastructural-autoradiography-uememar-亚细胞器水平">（3）超微自显影（Ultrastructural autoradiography, UEM/EMAR）— <strong>亚细胞器水平</strong><a aria-hidden="true" tabindex="-1" href="#3超微自显影ultrastructural-autoradiography-uememar-亚细胞器水平" class="internal"></a></h4>
+<ul>
+<li>电镜切片（50–80 nm）涂核乳剂 → 曝光数周至数月 → TEM 观察</li>
+<li>🏆 <strong>唯一的”活细胞时序”亚细胞定位技术</strong>——可以把<strong>放射性标记物追踪到细胞器层面</strong></li>
+<li>代表性应用：<strong>Palay &amp; Chao（1962）神经元内蛋白质运输的核糖体颗粒追踪</strong></li>
+</ul>
+<h4 id="4放射免疫分析ria">（4）放射免疫分析（RIA）<a aria-hidden="true" tabindex="-1" href="#4放射免疫分析ria" class="internal"></a></h4>
+<ul>
+<li>用<strong>放射性标记的已知物质</strong>（如 ¹²⁵I 标记胰岛素）与待测<strong>未标记物</strong>竞争结合抗体</li>
+<li>依据<strong>标准曲线</strong>定量（放射活度与待测物浓度<strong>反比</strong>）</li>
+<li>现代已被 <strong>ELISA / 化学发光免疫分析（CLIA）</strong> 取代</li>
+</ul>
+<h3 id="4-应用">4. 应用<a aria-hidden="true" tabindex="-1" href="#4-应用" class="internal"></a></h3>
+<ul>
+<li><strong>DNA 复制实验（Meselson-Stahl 1958）</strong>：
+<ol>
+<li>大肠杆菌在 <strong>¹⁵NH₄Cl</strong> 培养基中培养多代 → DNA 全部为”重”（¹⁵N + H）</li>
+<li>转至 <strong>¹⁴NH₄Cl</strong> 培养基 → 每隔数分钟取样</li>
+<li><strong>CsCl 密度梯度离心 + 放射自显影</strong></li>
+<li>结果：<strong>一代后全为杂合带（¹⁵N/¹⁴N）</strong>；<strong>二代后出现轻带（¹⁴N/¹⁴N）</strong> → 证明 DNA 为<strong>半保留复制</strong></li>
+</ol>
+</li>
+<li><strong>脉冲-追踪实验（Pulse-Chase）</strong>：追踪蛋白质从粗面内质网 → 高尔基体 → 分泌的路径</li>
+<li><strong>细胞内物质分布与转运</strong>：分泌蛋白、脂蛋白的合成与转运</li>
+<li><strong>代谢研究</strong>：糖酵解、脂肪酸合成通路</li>
+<li><strong>细胞动力学（细胞增殖周期）</strong>：<strong>³H-胸腺嘧啶核苷（TdR）</strong> 标记 S 期细胞，<strong>标记有丝分裂分数（Labeled Mitosis Index）</strong> 测定细胞周期时长</li>
+<li><strong>DNA 损伤修复</strong>：<strong>彗星试验（Comet Assay）</strong> 用 ³H/32P 标记 DNA，检测迁移程度</li>
+<li><strong>药代动力学与示踪研究</strong>：放射性标记药物的体内分布</li>
+</ul>
+<h3 id="5-局限-1">5. 局限<a aria-hidden="true" tabindex="-1" href="#5-局限-1" class="internal"></a></h3>
+<ul>
+<li>❌ <strong>分辨率差</strong>（除 ³H 外）：³²P 射程可达数毫米，<strong>几乎无亚细胞定位能力</strong></li>
+<li>❌ <strong>曝光时间长</strong>：³H 需数周–数月；期间<strong>样品可能降解、污染银粒</strong></li>
+<li>❌ <strong>辐射损伤</strong>：高活度同位素（尤其 ³²P、¹²⁵I）对细胞造成** DNA 链断裂**，影响实验结果</li>
+<li>❌ <strong>安全与法规</strong>：需要<strong>放射防护资质</strong>、专用屏蔽设施；废物处理成本高</li>
+<li>❌ <strong>定量困难</strong>：银粒密度与放射性活度的关系需<strong>自显影定量（grain counting）</strong> 校准</li>
+<li>❌ <strong>被现代技术取代</strong>：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>传统放射自显影</th><th>现代替代</th></tr></thead><tbody><tr><td>³H-TdR</td><td><strong>BrdU/EdU + Click 化学 + 免疫荧光</strong>（EdU Click-iT™）</td></tr><tr><td>³⁵S-Met 标记蛋白</td><td><strong>SILAC</strong>（稳定同位素标记氨基酸）、荧光蛋白、<strong>TMT 质谱</strong></td></tr><tr><td>³²P 标记核酸</td><td><strong>荧光标记核酸</strong>、<strong>Nanopore 测序</strong></td></tr><tr><td>银粒计数</td><td><strong>共聚焦定量成像</strong>、<strong>电子显微镜同位素成像</strong></td></tr></tbody></table>
+</li>
+</ul>
+<hr/>
+<h2 id="五技术横向对比">五、技术横向对比<a aria-hidden="true" tabindex="-1" href="#五技术横向对比" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>FRAP</th><th>Y2H</th><th>FRET</th><th>放射自显影</th></tr></thead><tbody><tr><td><strong>对象</strong></td><td>荧光标记分子</td><td>蛋白–蛋白互作</td><td>分子间距离/构象</td><td>放射性标记物分布</td></tr><tr><td><strong>活细胞？</strong></td><td>✅ 是</td><td>❌ 酵母（活，但非原生）</td><td>✅ 是</td><td>⚠️ 需固定（超微）</td></tr><tr><td><strong>时间分辨</strong></td><td>ms–s</td><td>天–周</td><td>ns（寿命）/ms</td><td>小时–月</td></tr><tr><td><strong>空间分辨</strong></td><td>~200 nm</td><td>细胞水平</td><td><strong>Å–10 nm</strong></td><td>³H 亚微米；其他 μm</td></tr><tr><td><strong>可定量？</strong></td><td>✅ Mf、D</td><td>半定量（半定量比色）</td><td>✅ FRET 效率</td><td>银粒计数</td></tr><tr><td><strong>通量</strong></td><td>中</td><td><strong>高</strong>（文库筛选）</td><td>低–中</td><td>低</td></tr><tr><td><strong>假阳性风险</strong></td><td>低</td><td><strong>高</strong>（自激活）</td><td><strong>高</strong>（crosstalk）</td><td>低</td></tr><tr><td><strong>假阴性风险</strong></td><td>中</td><td><strong>很高</strong>（折叠/修饰）</td><td>高（>10 nm 检不出）</td><td>中</td></tr><tr><td><strong>活细胞必需？</strong></td><td>✅ 必须</td><td>✅ 需活酵母</td><td>✅ 必须</td><td>⚠️ 常规需固定</td></tr></tbody></table>
+<hr/>
+<h2 id="六选择建议实操决策">六、选择建议（实操决策）<a aria-hidden="true" tabindex="-1" href="#六选择建议实操决策" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>你的问题</th><th>首选技术</th><th>理由</th></tr></thead><tbody><tr><td>这个膜蛋白<strong>能不能自由侧向扩散</strong>？</td><td><strong>FRAP</strong></td><td>直接测 Mf，定量</td></tr><tr><td>蛋白 A 和蛋白 B <strong>是否相互作用</strong>？</td><td><strong>Y2H 初筛</strong> + <strong>Co-IP / Pull-down 验证</strong></td><td>Y2H 快，但假阳性/假阴性多，<strong>必须验证</strong></td></tr><tr><td>蛋白 A 和 B <strong>相距多远</strong>（&lt;10 nm）？</td><td><strong>FRET</strong></td><td>唯一能测 Å–10 nm 距离</td></tr><tr><td>蛋白构象在<strong>刺激后是否改变</strong>？</td><td><strong>FLIM-FRET / smFRET</strong></td><td>活细胞实时</td></tr><tr><td>这个蛋白<strong>在细胞的哪个部位</strong>？</td><td><strong>免疫荧光 / 活细胞成像</strong></td><td>更快更简单</td></tr><tr><td>这个蛋白<strong>在细胞器哪一层</strong>？</td><td><strong>超微自显影（EMAR）</strong></td><td>唯一亚细胞器级活细胞定位</td></tr><tr><td>我要做<strong>全基因组蛋白互作筛选</strong>？</td><td><strong>Y2H / 亲和纯化-MS / BioID / AP-MS</strong></td><td>Y2H 传统但规模大</td></tr><tr><td>我要找<strong>近 200 nm 内</strong>的分子邻居？</td><td><strong>BioID / TurboID</strong>（20 nm 内）、** proximity labeling**</td><td>比 FRAP/FRET 覆盖更宽</td></tr></tbody></table>
+<hr/>
+<h2 id="七延伸相关现代技术补充视野">七、延伸：相关现代技术（补充视野）<a aria-hidden="true" tabindex="-1" href="#七延伸相关现代技术补充视野" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>技术</th><th>能做什么</th><th>与传统方法关系</th></tr></thead><tbody><tr><td><strong>超分辨显微镜</strong><br/>(STED/PALM/STORM/SIM)</td><td>突破衍射极限（~20 nm）</td><td><strong>突破 FRET 的”只能看贴在一起”的局限</strong></td></tr><tr><td><strong>单分子追踪 SPT</strong></td><td>逐个分子轨迹、跳跃扩散</td><td>取代 FRAP，能区分<strong>diffusion / confined / directed</strong> 三种运动</td></tr><tr><td><strong>BioID / TurboID</strong></td><td>生物素标记邻近蛋白（20 nm）</td><td>FRET 距离上限的替代方案</td></tr><tr><td><strong>AP-MS / 交联质谱</strong></td><td>大规模互作组</td><td>Y2H 的”质谱版”</td></tr><tr><td><strong>LIGER / MULTI-seq</strong></td><td><strong>单细胞多组学联合定位</strong></td><td>蛋白 + 代谢 + 基因组在同一细胞中</td></tr><tr><td><strong>CRISPR 敲除 + 光漂白恢复</strong></td><td>蛋白缺失后定位变化</td><td>FRAP 的”因果版”</td></tr><tr><td><strong>遗传编码的荧光团</strong></td><td>标记线粒体、突触、特定细胞器</td><td>活细胞不需抗体</td></tr><tr><td><strong>活细胞代谢标记</strong>（Nascent RNA/SCAN-seq）</td><td>单细胞分辨翻译</td><td>传统放射标记的现代替代</td></tr></tbody></table>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>中文</th></tr></thead><tbody><tr><td><strong>FRAP</strong></td><td>Fluorescence Recovery After Photobleaching</td><td>荧光漂白恢复技术</td></tr><tr><td><strong>Mf</strong></td><td>Mobile Fraction</td><td>移动分数</td></tr><tr><td><strong>D</strong></td><td>Diffusion Coefficient</td><td>扩散系数</td></tr><tr><td><strong>Y2H</strong></td><td>Yeast Two-Hybrid</td><td>酵母双杂交</td></tr><tr><td><strong>BD / AD</strong></td><td>Binding Domain / Activation Domain</td><td>DNA 结合域 / 转录激活域</td></tr><tr><td><strong>UAS</strong></td><td>Upstream Activating Sequence</td><td>上游激活序列</td></tr><tr><td><strong>GAL4</strong></td><td>—</td><td>酵母金蛋白转录因子</td></tr><tr><td><strong>His3 / lacZ / MEL1</strong></td><td>—</td><td>报告基因（营养缺陷 / 显色 / α-因子）</td></tr><tr><td><strong>RIP / coIP</strong></td><td>—</td><td>免疫共沉淀</td></tr><tr><td><strong>GST pull-down</strong></td><td>—</td><td>体外亲和层析验证</td></tr><tr><td><strong>FRET</strong></td><td>Förster Resonance Energy Transfer</td><td>荧光共振能量转移</td></tr><tr><td><strong>R₀</strong></td><td>Förster Radius</td><td>Forster 半径（50% 效率距离）</td></tr><tr><td><strong>FLER</strong></td><td>FRET Light Emission Ratio</td><td>荧光-红/绿发射比</td></tr><tr><td><strong>FLIM</strong></td><td>Fluorescence Lifetime Imaging Microscopy</td><td>荧光寿命成像</td></tr><tr><td><strong>TCSPC</strong></td><td>Time-Correlated Single Photon Counting</td><td>时间相关单光子计数</td></tr><tr><td><strong>BRET</strong></td><td>Bioluminescence Resonance Energy Transfer</td><td>生物发光共振能量转移</td></tr><tr><td><strong>smFRET</strong></td><td>single-molecule FRET</td><td>单分子 FRET</td></tr><tr><td><strong>κ²</strong></td><td>—</td><td>偶极取向因子</td></tr><tr><td><strong>RIA</strong></td><td>Radioimmunoassay</td><td>放射免疫分析</td></tr><tr><td><strong>EMAR / UEM</strong></td><td>Electron Microscopic Autoradiography</td><td>电镜自显影</td></tr><tr><td><strong>U → W → A</strong></td><td>³⁵S-Met → pulse → autoradiograph</td><td>脉冲-追踪实验</td></tr><tr><td><strong>PULSE → CHASE</strong></td><td>短时标记 → 追踪</td><td>放射性脉冲追踪</td></tr><tr><td><strong>X-gal / IPTG</strong></td><td>—</td><td>显色底物 / 诱导剂</td></tr><tr><td><strong>5-AT / 3-AT</strong></td><td>—</td><td>抗筛选（his3）</td></tr><tr><td><strong>GFP / CFP / YFP / RFP</strong></td><td>绿/青/黄/红荧光蛋白</td><td>不同波长荧光报告蛋白</td></tr><tr><td><strong>mClover3 / mRuby3</strong></td><td>—</td><td>先进的 FRET 荧光对</td></tr></tbody></table>
+<hr/>
+<blockquote>
+<p><strong>一句话总结</strong>：</p>
+<ul>
+<li><strong>FRAP</strong> 告诉你分子<strong>能不能跑、跑多快</strong>（动态性）</li>
+<li><strong>Y2H</strong> 告诉你蛋白<strong>认不认识对方</strong>（相互作用，体外）</li>
+<li><strong>FRET</strong> 告诉你蛋白<strong>贴得有多近</strong>（活细胞纳米尺度）</li>
+<li><strong>放射自显影</strong> 告诉你<strong>分子被送到了哪一层</strong>（时空追踪）</li>
+</ul>
+<p>四者不是竞争关系，而是<strong>从不同尺度回答同一个生物学问题：分子在细胞里如何协作</strong>。现代趋势是<strong>活细胞 + 纳米尺度 + 高通量</strong>，即 FRET + 超分辨 + BioID + 单细胞组学的组合。</p>
+</blockquote></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

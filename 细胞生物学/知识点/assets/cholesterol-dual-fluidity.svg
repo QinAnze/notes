@@ -1,0 +1,111 @@
+<svg viewBox="0 0 680 440" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>胆固醇对脂膜流动性的双向调节</title>
+<desc>上方为高于相变温度时，胆固醇刚性甾核卡住脂肪酸链使流动性下降；下方为低于相变温度时，胆固醇体积过大塞不进磷脂头部间隙，阻止凝胶相形成从而维持流动性。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl  { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .hint { font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .bod  { font-size: 13px; fill: var(--color-text-primary, #1a1a1a); }
+  .co   { font-size: 13px; font-weight: 500; }
+  .frame{ fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+  .leader { fill: none; stroke: var(--color-text-tertiary, #8a8a8a); stroke-width: 0.5; }
+  .pl    { fill: #0C447C; stroke: #85B7EB; stroke-width: 0.5; }
+  .pltl  { fill: none; stroke: #85B7EB; stroke-width: 1.2; }
+  .ch    { fill: #854F0B; stroke: #FAC775; stroke-width: 0.5; }
+  .chl   { fill: none; stroke: #FAC775; stroke-width: 2; }
+  .cho   { fill: #EF9F27; stroke: #FAC775; stroke-width: 0.5; }
+</style>
+
+<rect class="frame" x="40" y="60" width="600" height="160" rx="12"/>
+<text class="ttl" x="60" y="82">高温相　T &gt; Tm　液晶态</text>
+<text class="lbl" x="245" y="82">胆固醇充当分子刹车</text>
+
+<circle class="pl" cx="90" cy="110" r="7"/>
+<circle class="pl" cx="140" cy="110" r="7"/>
+<circle class="pl" cx="240" cy="110" r="7"/>
+<circle class="pl" cx="290" cy="110" r="7"/>
+<circle class="pl" cx="390" cy="110" r="7"/>
+<circle class="pl" cx="440" cy="110" r="7"/>
+
+<path class="pltl" d="M90 118 q4 10 0 18 q-4 10 0 18"/>
+<path class="pltl" d="M140 118 q-4 9 0 18 q4 10 0 18"/>
+<path class="pltl" d="M240 118 q4 11 0 18 q-4 9 0 18"/>
+<path class="pltl" d="M290 118 q-4 8 0 18 q4 11 0 18"/>
+<path class="pltl" d="M390 118 q4 9 0 18 q-4 11 0 18"/>
+<path class="pltl" d="M440 118 q-4 10 0 18 q4 9 0 18"/>
+
+<circle class="cho" cx="190" cy="109" r="5"/>
+<rect class="ch" x="170" y="116" width="40" height="22" rx="4"/>
+<path class="chl" d="M190 138 L190 156"/>
+<circle class="cho" cx="340" cy="109" r="5"/>
+<rect class="ch" x="320" y="116" width="40" height="22" rx="4"/>
+<path class="chl" d="M340 138 L340 156"/>
+
+<path class="pltl" d="M90 162 q4 10 0 18 q-4 10 0 18"/>
+<path class="pltl" d="M140 162 q-4 9 0 18 q4 10 0 18"/>
+<path class="pltl" d="M240 162 q-4 10 0 18 q4 9 0 18"/>
+<path class="pltl" d="M290 162 q4 9 0 18 q-4 10 0 18"/>
+<path class="pltl" d="M390 162 q-4 11 0 18 q4 8 0 18"/>
+<path class="pltl" d="M440 162 q4 9 0 18 q-4 10 0 18"/>
+
+<circle class="pl" cx="90" cy="205" r="7"/>
+<circle class="pl" cx="140" cy="205" r="7"/>
+<circle class="pl" cx="240" cy="205" r="7"/>
+<circle class="pl" cx="290" cy="205" r="7"/>
+<circle class="pl" cx="390" cy="205" r="7"/>
+<circle class="pl" cx="440" cy="205" r="7"/>
+
+<path class="leader" d="M500 112 L470 112"/>
+<text class="bod" x="500" y="108">刚性甾核卡在链之间</text>
+<text class="lbl" x="500" y="128">链的摆动与旋转被限制</text>
+<text class="co" x="500" y="152" fill="#F09595">流动性下降</text>
+<text class="lbl" x="500" y="172">构象熵下降，序参量升高</text>
+
+<rect class="frame" x="40" y="260" width="600" height="160" rx="12"/>
+<text class="ttl" x="60" y="282">低温相　T &lt; Tm　凝胶倾向</text>
+<text class="lbl" x="245" y="282">胆固醇充当体积楔子</text>
+
+<circle class="pl" cx="90" cy="310" r="7"/>
+<circle class="pl" cx="140" cy="310" r="7"/>
+<circle class="pl" cx="240" cy="310" r="7"/>
+<circle class="pl" cx="290" cy="310" r="7"/>
+<circle class="pl" cx="390" cy="310" r="7"/>
+<circle class="pl" cx="440" cy="310" r="7"/>
+
+<path class="pltl" d="M90 318 q5 10 0 18 q-5 10 0 18"/>
+<path class="pltl" d="M140 318 q-5 9 0 18 q5 10 0 18"/>
+<path class="pltl" d="M240 318 q5 9 0 18 q-5 10 0 18"/>
+<path class="pltl" d="M290 318 q-5 10 0 18 q5 9 0 18"/>
+<path class="pltl" d="M390 318 q5 10 0 18 q-5 9 0 18"/>
+<path class="pltl" d="M440 318 q-5 9 0 18 q5 10 0 18"/>
+
+<circle class="cho" cx="190" cy="309" r="5"/>
+<rect class="ch" x="168" y="296" width="44" height="26" rx="4"/>
+<path class="chl" d="M190 322 L190 356"/>
+<circle class="cho" cx="340" cy="309" r="5"/>
+<rect class="ch" x="318" y="296" width="44" height="26" rx="4"/>
+<path class="chl" d="M340 322 L340 356"/>
+
+<path class="pltl" d="M90 362 q5 10 0 18 q-5 10 0 18"/>
+<path class="pltl" d="M140 362 q-5 9 0 18 q5 10 0 18"/>
+<path class="pltl" d="M240 362 q-5 10 0 18 q5 9 0 18"/>
+<path class="pltl" d="M290 362 q5 9 0 18 q-5 10 0 18"/>
+<path class="pltl" d="M390 362 q-5 10 0 18 q5 9 0 18"/>
+<path class="pltl" d="M440 362 q5 9 0 18 q-5 10 0 18"/>
+
+<circle class="pl" cx="90" cy="405" r="7"/>
+<circle class="pl" cx="140" cy="405" r="7"/>
+<circle class="pl" cx="240" cy="405" r="7"/>
+<circle class="pl" cx="290" cy="405" r="7"/>
+<circle class="pl" cx="390" cy="405" r="7"/>
+<circle class="pl" cx="440" cy="405" r="7"/>
+
+<path class="leader" d="M500 312 L470 312"/>
+<text class="bod" x="500" y="308">甾核体积超过头部间隙</text>
+<text class="lbl" x="500" y="328">头基氢键晶格无法形成</text>
+<text class="co" x="500" y="352" fill="#4A9EDA">凝固受阻，流动性维持</text>
+<text class="lbl" x="500" y="372">相变温度被拉低并可消失</text>
+
+<text class="hint" x="340" y="432" text-anchor="middle">蓝色为磷脂分子　橙色为胆固醇　刚性甾核的体积既卡得住链、也塞不进头间隙</text>
+</svg>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html><head><title>细菌的生长、复制、分裂：快生长与慢生长</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="细菌的生长、复制、分裂：快生长与慢生长"/><meta property="og:description" content="细菌的生长、复制、分裂：快生长与慢生长 一句话：生长是”变长”、复制是”抄 DNA”、分裂是”切一刀” —— 三件事由三套分子机器执行，时间尺度彼此独立。慢生长时它们顺序排队（一轮复制 → 一次分裂）；快生长时倍增时间 τ 短于复制加分裂所需的 C+D（约 60 min），细胞只能在前一轮复制还没结束时就启动下一轮，形成嵌套的多叉复制（multifork replication），于是子细胞一出生，染色体就已经带着正在跑的复制叉。 判据只有一条：τ ≥ C+D 是慢生长；τ &amp;lt; C+D 是快生长。 一、先把三个过程拆开（最常混的地方） 过程到底在做什么执行机器耗时（E."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="细菌的生长、复制、分裂：快生长与慢生长 一句话：生长是”变长”、复制是”抄 DNA”、分裂是”切一刀” —— 三件事由三套分子机器执行，时间尺度彼此独立。慢生长时它们顺序排队（一轮复制 → 一次分裂）；快生长时倍增时间 τ 短于复制加分裂所需的 C+D（约 60 min），细胞只能在前一轮复制还没结束时就启动下一轮，形成嵌套的多叉复制（multifork replication），于是子细胞一出生，染色体就已经带着正在跑的复制叉。 判据只有一条：τ ≥ C+D 是慢生长；τ &amp;lt; C+D 是快生长。 一、先把三个过程拆开（最常混的地方） 过程到底在做什么执行机器耗时（E."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/快生长和慢生长"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#细菌的生长复制分裂快生长与慢生长" data-for="细菌的生长复制分裂快生长与慢生长">细菌的生长、复制、分裂：快生长与慢生长</a></li><li class="depth-1"><a href="#一先把三个过程拆开最常混的地方" data-for="一先把三个过程拆开最常混的地方">一、先把三个过程拆开（最常混的地方）</a></li><li class="depth-1"><a href="#二复制c-期与起始质量阈值" data-for="二复制c-期与起始质量阈值">二、复制：C 期与&quot;起始质量&quot;阈值</a></li><li class="depth-2"><a href="#21-一轮复制的分子事件" data-for="21-一轮复制的分子事件">2.1 一轮复制的分子事件</a></li><li class="depth-2"><a href="#22-起始是唯一的调控关卡" data-for="22-起始是唯一的调控关卡">2.2 起始是唯一的调控关卡</a></li><li class="depth-2"><a href="#23--起始质量恒定donachie-1968" data-for="23--起始质量恒定donachie-1968">2.3 ★ 起始质量恒定（Donachie, 1968）</a></li><li class="depth-1"><a href="#三分裂d-期与不能切到染色体" data-for="三分裂d-期与不能切到染色体">三、分裂：D 期与&quot;不能切到染色体&quot;</a></li><li class="depth-1"><a href="#四时间参数cdb-与-τ" data-for="四时间参数cdb-与-τ">四、时间参数：C、D、B 与 τ</a></li><li class="depth-1"><a href="#五慢生长-vs-快生长核心" data-for="五慢生长-vs-快生长核心">五、慢生长 vs 快生长（核心）</a></li><li class="depth-2"><a href="#51-慢生长τ--cd顺序模式" data-for="51-慢生长τ--cd顺序模式">5.1 慢生长：τ ≥ C+D（顺序模式）</a></li><li class="depth-2"><a href="#52-快生长τ--cd重叠--多叉模式" data-for="52-快生长τ--cd重叠--多叉模式">5.2 快生长：τ &lt; C+D（重叠 / 多叉模式）</a></li><li class="depth-2"><a href="#53-完整对照表" data-for="53-完整对照表">5.3 完整对照表</a></li><li class="depth-2"><a href="#54-一个漂亮的推论基因剂量与基因组布局" data-for="54-一个漂亮的推论基因剂量与基因组布局">5.4 一个漂亮的推论：基因剂量与基因组布局</a></li><li class="depth-1"><a href="#六cooperhelmstetter-模型" data-for="六cooperhelmstetter-模型">六、Cooper–Helmstetter 模型</a></li><li class="depth-2"><a href="#run-out-实验cd-期是怎么测出来的" data-for="run-out-实验cd-期是怎么测出来的">run-out 实验：C、D 期是怎么测出来的</a></li><li class="depth-1"><a href="#七营养转换从慢到快不是瞬间完成的" data-for="七营养转换从慢到快不是瞬间完成的">七、营养转换：从慢到快不是瞬间完成的</a></li><li class="depth-1"><a href="#八与真核细胞周期的根本差异" data-for="八与真核细胞周期的根本差异">八、与真核细胞周期的根本差异</a></li><li class="depth-1"><a href="#九常见误区澄清" data-for="九常见误区澄清">九、常见误区澄清</a></li><li class="depth-1"><a href="#十要点速记" data-for="十要点速记">十、要点速记</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">细菌的生长、复制、分裂：快生长与慢生长</h1><p class="content-meta">Nov 25, 2026, 25 min read</p></div></div><article class="popover-hint"><h1 id="细菌的生长复制分裂快生长与慢生长">细菌的生长、复制、分裂：快生长与慢生长<a aria-hidden="true" tabindex="-1" href="#细菌的生长复制分裂快生长与慢生长" class="internal"></a></h1>
+<blockquote>
+<p><strong>一句话</strong>：<strong>生长是”变长”、复制是”抄 DNA”、分裂是”切一刀”</strong> —— 三件事由三套分子机器执行，时间尺度彼此独立。慢生长时它们顺序排队（一轮复制 → 一次分裂）；快生长时<strong>倍增时间 τ 短于复制加分裂所需的 C+D（约 60 min）</strong>，细胞只能在前一轮复制还没结束时就启动下一轮，形成<strong>嵌套的多叉复制（multifork replication）</strong>，于是子细胞一出生，染色体就已经带着正在跑的复制叉。</p>
+<p><strong>判据只有一条</strong>：<strong>τ ≥ C+D 是慢生长；τ &lt; C+D 是快生长。</strong></p>
+</blockquote>
+<hr/>
+<h2 id="一先把三个过程拆开最常混的地方">一、先把三个过程拆开（最常混的地方）<a aria-hidden="true" tabindex="-1" href="#一先把三个过程拆开最常混的地方" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>过程</th><th>到底在做什么</th><th>执行机器</th><th>耗时（<em>E. coli</em>, 37 ℃ 富营养）</th><th>典型观测指标</th></tr></thead><tbody><tr><td><strong>生长</strong>（growth）</td><td>生物量增加、细胞<strong>纵向伸长</strong>（不是变胖）</td><td>核糖体合成蛋白；<strong>elongasome</strong>（MreB、RodA、PBP2）定向插入肽聚糖</td><td>连续进行，指数式</td><td>OD₆₀₀、细胞长度、蛋白/质量</td></tr><tr><td><strong>复制</strong>（replication）</td><td>染色体 DNA 从 oriC 双向复制到 terC</td><td><strong>replisome</strong>（DnaA、DnaB、DnaG、Pol III 全酶、β clamp）</td><td><strong>C 期 ≈ 40 min</strong></td><td>³H-胸苷掺入、DNA/质量比、流式 DNA 含量</td></tr><tr><td><strong>分裂</strong>（division）</td><td>中部形成隔膜，一分为二</td><td><strong>divisome</strong>（FtsZ 的 Z 环、FtsA/ZipA、FtsI/PBP3）</td><td><strong>D 期 ≈ 20 min</strong>（复制终止→分裂完成）</td><td>细胞数、隔膜形态</td></tr></tbody></table>
+<blockquote>
+<p><strong>三者可以解耦，这是全篇的前提</strong>。抑制分裂（头孢氨苄、SOS 的 SulA）→ 细胞继续伸长、继续复制，变成<strong>多核丝状体</strong>；抑制复制（羟基脲）→ 细胞仍可伸长一段时间；抑制蛋白合成（氯霉素）→ 已起始的复制能跑完，但不再新起始、也不分裂。</p>
+</blockquote>
+<p></p><figure class="svg-figure" data-svg="bacterial-three-machines.svg"><svg viewBox="0 0 680 450" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>细菌的生长、复制、分裂三套机器及其耦合调控</title>
+<desc>生长由 elongasome 驱动细胞伸长，复制由 replisome 在 C 期完成 oriC 到 terC 的双向合成，分裂由 FtsZ 的 Z 环与 divisome 在 D 期末完成。三者可解耦，靠起始质量阈值、RIDA 与 SeqA 防再起始、核区闭塞与 SOS 反应协调。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">三件事　三套机器　三个时间尺度</text>
+<text class="hint" x="268" y="24">生长 ≠ 复制 ≠ 分裂　彼此可解耦</text>
+
+
+<rect x="40" y="40" width="192" height="196" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="64" fill="#04342C">① 生长</text>
+<text class="sm" x="56" y="84" fill="#085041">生物量增加　细胞纵向伸长</text>
+<text class="sm" x="56" y="106" fill="#085041">机器　核糖体 + elongasome</text>
+<text class="sm" x="56" y="124" fill="#085041">MreB　RodA　PBP2</text>
+<text class="sm" x="56" y="142" fill="#085041">时间　连续、指数式</text>
+<text class="sm" x="56" y="160" fill="#085041">指标　OD₆₀₀　细胞长度</text>
+
+
+<rect x="70" y="180" width="52" height="20" rx="10" fill="#0F6E56"></rect>
+<text class="sm" x="132" y="195" fill="#04342C">→</text>
+<rect x="148" y="178" width="70" height="24" rx="12" fill="#0F6E56" opacity="0.75"></rect>
+<text class="sm" x="116" y="222" fill="#04342C" text-anchor="middle">只变长　不变胖</text>
+
+
+<rect x="244" y="40" width="192" height="196" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="260" y="64" fill="#042C53">② 复制</text>
+<text class="sm" x="260" y="84" fill="#0C447C">染色体 DNA 从 oriC 到 terC</text>
+<text class="sm" x="260" y="106" fill="#0C447C">机器　replisome</text>
+<text class="sm" x="260" y="124" fill="#0C447C">DnaA　DnaB　DnaG　Pol III</text>
+<text class="sm" x="260" y="142" fill="#0C447C">时间　C 期 ≈ 40 min</text>
+<text class="sm" x="260" y="160" fill="#0C447C">指标　DNA 含量　叉数</text>
+
+
+<circle cx="340" cy="194" r="18" fill="none" stroke="#185FA5" stroke-width="2"></circle>
+<circle cx="340" cy="176" r="3.5" fill="#185FA5"></circle>
+<circle cx="340" cy="212" r="3.5" fill="#BA7517"></circle>
+<path d="M340 176 Q 364 178 360 194" fill="none" stroke="#185FA5" stroke-width="1.8"></path>
+<path d="M340 176 Q 316 178 320 194" fill="none" stroke="#185FA5" stroke-width="1.8"></path>
+<path d="M340 212 Q 364 210 360 194" fill="none" stroke="#185FA5" stroke-width="1.8"></path>
+<path d="M340 212 Q 316 210 320 194" fill="none" stroke="#185FA5" stroke-width="1.8"></path>
+<text class="sm" x="292" y="198" fill="#042C53">ori</text>
+<text class="sm" x="292" y="216" fill="#412402">ter</text>
+<text class="sm" x="340" y="232" fill="#042C53" text-anchor="middle">θ 型双向复制　两个叉</text>
+
+
+<rect x="448" y="40" width="192" height="196" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="464" y="64" fill="#412402">③ 分裂</text>
+<text class="sm" x="464" y="84" fill="#633806">中部形成隔膜　一分为二</text>
+<text class="sm" x="464" y="106" fill="#633806">机器　divisome（Z 环）</text>
+<text class="sm" x="464" y="124" fill="#633806">FtsZ　FtsA　ZipA　PBP3</text>
+<text class="sm" x="464" y="142" fill="#633806">时间　D 期 ≈ 20 min</text>
+<text class="sm" x="464" y="160" fill="#633806">指标　细胞数　隔膜</text>
+
+
+<rect x="476" y="180" width="136" height="24" rx="12" fill="#BA7517" opacity="0.7"></rect>
+<line x1="544" y1="178" x2="544" y2="206" stroke="#854F0B" stroke-width="2.5"></line>
+<text class="sm" x="544" y="222" fill="#412402" text-anchor="middle">Z 环在中部</text>
+
+
+<rect class="frame" x="40" y="250" width="600" height="104" rx="10"></rect>
+<text class="ttl" x="60" y="272">把三件事协调起来的四道关卡</text>
+
+<rect x="60" y="284" width="138" height="52" rx="7" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="129" y="304" fill="#04342C" text-anchor="middle">起始质量 Mᵢ 恒定</text>
+<text class="sm" x="129" y="322" fill="#085041" text-anchor="middle">长到阈值才点火</text>
+
+<rect x="208" y="284" width="138" height="52" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="277" y="304" fill="#042C53" text-anchor="middle">RIDA + SeqA</text>
+<text class="sm" x="277" y="322" fill="#0C447C" text-anchor="middle">一周期只起始一次</text>
+
+<rect x="356" y="284" width="138" height="52" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="425" y="304" fill="#412402" text-anchor="middle">MinCDE + SlmA</text>
+<text class="sm" x="425" y="322" fill="#633806" text-anchor="middle">染色体上方不许切</text>
+
+<rect x="504" y="284" width="116" height="52" rx="7" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="562" y="304" fill="#8C1D18" text-anchor="middle">SOS → SulA</text>
+<text class="sm" x="562" y="322" fill="#8C1D18" text-anchor="middle">损伤时延迟分裂</text>
+
+
+<rect class="frame" x="40" y="366" width="600" height="70" rx="10"></rect>
+<text class="ttl" x="60" y="388">解耦的证据　抑制一个，另两个照跑</text>
+<text class="sm" x="60" y="410" fill="#5c5c5a">抑制 FtsZ（SulA / 头孢氨苄）→ 继续伸长与复制 → 多核丝状体</text>
+<text class="sm" x="60" y="428" fill="#5c5c5a">抑制复制 → 仍可伸长；抑制翻译 → 已启动的复制跑完，但不再新起始、不分裂</text>
+
+<text class="hint" x="40" y="446">C 与 D 对生长速率相对不敏感　τ 变化时改的是起始频率与重叠轮数</text>
+</svg>
+</figure><p></p>
+<hr/>
+<h2 id="二复制c-期与起始质量阈值">二、复制：C 期与”起始质量”阈值<a aria-hidden="true" tabindex="-1" href="#二复制c-期与起始质量阈值" class="internal"></a></h2>
+<h3 id="21-一轮复制的分子事件">2.1 一轮复制的分子事件<a aria-hidden="true" tabindex="-1" href="#21-一轮复制的分子事件" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;oriC（单复制起点，约 245 bp）&quot;] -->|&quot;DnaA-ATP 结合 DnaA boxes → 局部解链（AT-rich 13-mer）&quot;| B[&quot;DnaB 解旋酶装载（DnaC 辅助）→ DnaG 引物酶 → Pol III 全酶 + β clamp&quot;]
+    B -->|&quot;两个复制叉双向推进（θ 型复制）&quot;| C[&quot;领先链连续合成 / 滞后链冈崎片段 · 叉速相对恒定（约 500–1000 nt/s），不随生长速率大幅改变&quot;]
+    C -->|&quot;terC 区相遇（Tus–ter 复合体构成“复制叉陷阱”，只允许单向通过）&quot;| D[&quot;Topo IV 解连环 → XerCD/dif 解决染色体二聚体 → MukBEF 凝缩分离&quot;]
+    D -->|&quot;终止（C 期结束）→ 再经 D 期 → 细胞分裂&quot;| E[&quot;细胞分裂&quot;]
+</code></pre>
+<h3 id="22-起始是唯一的调控关卡">2.2 起始是唯一的调控关卡<a aria-hidden="true" tabindex="-1" href="#22-起始是唯一的调控关卡" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>机制</th><th>作用</th></tr></thead><tbody><tr><td><strong>DnaA-ATP 积累</strong></td><td>活性形式达阈值才起始；ATP 型 DnaA 与 ADP 型比例是核心开关</td></tr><tr><td><strong>RIDA</strong>（Hda + β clamp）</td><td>复制开始后把 DnaA-ATP 水解成 DnaA-ADP，<strong>防止同一周期内再起始</strong></td></tr><tr><td><strong>SeqA / Dam 甲基化</strong></td><td>新复制的 oriC 处于半甲基化状态，被 SeqA 隔离（sequestration）一段时间</td></tr><tr><td><strong>datA / DARS</strong></td><td>分别滴定 DnaA、促进 ADP→ATP 再生，精细调节可用 DnaA 池</td></tr><tr><td><strong>同步起始</strong></td><td>一个细胞内所有 oriC <strong>在同一时刻一起起始</strong>，保证子细胞染色体拷贝数一致</td></tr></tbody></table>
+<h3 id="23--起始质量恒定donachie-1968">2.3 ★ 起始质量恒定（Donachie, 1968）<a aria-hidden="true" tabindex="-1" href="#23--起始质量恒定donachie-1968" class="internal"></a></h3>
+<blockquote>
+<p>细胞不是”按时间表”起始复制，而是<strong>按体积/质量</strong>起始：<strong>每个 oriC 对应一个恒定的起始质量 Mᵢ</strong>，且 Mᵢ 基本<strong>不随生长速率改变</strong>。</p>
+</blockquote>
+<ul>
+<li>细胞指数长大，当 质量 / oriC 数 达到 Mᵢ 时，所有 oriC 同步点火。</li>
+<li>推论 1：τ 越短 → 细胞越大、oriC 越多、单位质量的 DNA 起始事件越频繁。</li>
+<li>推论 2：细胞体积近似满足 <strong>V ∝ 2^((C+D)/τ)</strong> —— 快生长细胞明显更大。</li>
+<li>推论 3：<strong>生长定律</strong>：核糖体占蛋白的质量分数与生长速率近似线性正相关；快生长菌把大量资源投给 rRNA/核糖体。</li>
+</ul>
+<hr/>
+<h2 id="三分裂d-期与不能切到染色体">三、分裂：D 期与”不能切到染色体”<a aria-hidden="true" tabindex="-1" href="#三分裂d-期与不能切到染色体" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>环节</th><th>分子机制</th></tr></thead><tbody><tr><td><strong>Z 环形成</strong></td><td>FtsZ（微管蛋白同源 GTP 酶）在中部聚合成环，招募 FtsA、ZipA 及下游 divisome</td></tr><tr><td><strong>位置选择①：Min 系统</strong></td><td>MinC/MinD/MinE 在两极间振荡，使 MinC（FtsZ 抑制因子）<strong>平均浓度在细胞中部最低</strong> → 抑制两极分裂</td></tr><tr><td><strong>位置选择②：核区闭塞</strong></td><td>SlmA（<em>E. coli</em>）/ Noc（<em>B. subtilis</em>）结合染色体 DNA 并抑制 FtsZ 聚合 → <strong>染色体没搬走就不许在其上方切</strong></td></tr><tr><td><strong>隔膜合成</strong></td><td>FtsI（PBP3）等合成 septal 肽聚糖，内陷并收缩</td></tr><tr><td><strong>染色体最后清理</strong></td><td>Topo IV 解连环、XerCD/dif 解二聚体；<strong>FtsK</strong> 作为 DNA 转位酶把残留 DNA 泵出闭合中的隔膜</td></tr><tr><td><strong>损伤时刹车</strong></td><td>DNA 损伤 → SOS 反应 → <strong>SulA 抑制 FtsZ</strong> → 细胞丝状化，延迟分裂等修复完成</td></tr></tbody></table>
+<blockquote>
+<p><strong>分裂与复制的协调点是”终止 + 分离”</strong>：不要求复制全部结束后才开始长隔膜，但<strong>必须有不含染色体的中部区域</strong>才能让 Z 环收缩。复制与分离越快完成，D 期越短。</p>
+</blockquote>
+<hr/>
+<h2 id="四时间参数cdb-与-τ">四、时间参数：C、D、B 与 τ<a aria-hidden="true" tabindex="-1" href="#四时间参数cdb-与-τ" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>参数</th><th>定义</th><th>典型值</th></tr></thead><tbody><tr><td><strong>C 期</strong></td><td>一轮染色体复制所需时间</td><td>≈ 40 min</td></tr><tr><td><strong>D 期</strong></td><td>复制终止 → 细胞分裂完成</td><td>≈ 20 min</td></tr><tr><td><strong>C + D</strong></td><td><strong>一次起始到”由它导致的那次分裂”的固定延迟</strong></td><td>≈ 60 min</td></tr><tr><td><strong>τ</strong></td><td>倍增时间（世代时间）</td><td>富营养 20–30 min；贫营养 ≥ 60 min 至数小时</td></tr><tr><td><strong>B 期</strong></td><td>分裂 → 下一次起始的间隔（类似真核 G1）</td><td>慢生长为正；<strong>快生长消失（起始提前到上一代）</strong></td></tr></tbody></table>
+<blockquote>
+<p><strong>C 和 D 对生长速率相对不敏感</strong>，τ 却可以差 10 倍以上。<strong>变化的是起始频率与重叠轮数，不是把复制本身变快</strong> —— 这是理解快慢生长最关键的一句。</p>
+</blockquote>
+<hr/>
+<h2 id="五慢生长-vs-快生长核心">五、慢生长 vs 快生长（核心）<a aria-hidden="true" tabindex="-1" href="#五慢生长-vs-快生长核心" class="internal"></a></h2>
+<p></p><figure class="svg-figure" data-svg="bacterial-c-d-slow-fast.svg"><svg viewBox="0 0 680 470" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>C 期 D 期与倍增时间：慢生长顺序模式与快生长多叉重叠</title>
+<desc>C 期约四十分钟、D 期约二十分钟，C 加 D 约六十分钟是起始到对应分裂的固定延迟。慢生长倍增时间大于六十分钟，一轮复制接一次分裂并有 B 期；快生长倍增时间二十分钟，多轮复制周期在母代提前起始并彼此重叠，形成多叉复制，起始比分裂早约三代。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">C + D 是固定延迟　τ 决定要不要多叉</text>
+<text class="hint" x="296" y="24">C≈40 min　D≈20 min　C+D≈60 min</text>
+
+
+<rect x="40" y="40" width="600" height="146" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="62" fill="#042C53">慢生长　τ = 70 min ≥ C+D　顺序排队</text>
+<text class="sm" x="400" y="62" fill="#0C447C">一轮复制 → 一次分裂 → B 期等待</text>
+
+
+<rect x="40" y="84" width="171" height="22" rx="4" fill="#0F6E56"></rect>
+<text class="sm" x="125" y="99" fill="#FFFFFF" text-anchor="middle">C 期　复制 40 min</text>
+<rect x="211" y="84" width="86" height="22" rx="4" fill="#BA7517"></rect>
+<text class="sm" x="254" y="99" fill="#FFFFFF" text-anchor="middle">D 期 20</text>
+<rect x="297" y="84" width="43" height="22" rx="4" fill="#B4B2A9"></rect>
+<text class="sm" x="318" y="99" fill="#412402" text-anchor="middle">B</text>
+<rect x="340" y="84" width="171" height="22" rx="4" fill="#0F6E56"></rect>
+<text class="sm" x="425" y="99" fill="#FFFFFF" text-anchor="middle">C 期　第二轮</text>
+<rect x="511" y="84" width="86" height="22" rx="4" fill="#BA7517"></rect>
+<text class="sm" x="554" y="99" fill="#FFFFFF" text-anchor="middle">D 期</text>
+
+<circle cx="40" cy="95" r="5" fill="#185FA5"></circle>
+<text class="sm" x="40" y="126" fill="#0C447C" text-anchor="middle">起始 I₁</text>
+<circle cx="340" cy="95" r="5" fill="#185FA5"></circle>
+<text class="sm" x="340" y="126" fill="#0C447C" text-anchor="middle">起始 I₂</text>
+
+<line x1="297" y1="76" x2="297" y2="146" stroke="#B3261E" stroke-width="1.2" stroke-dasharray="3 3"></line>
+<text class="sm" x="297" y="140" fill="#8C1D18" text-anchor="middle">分裂</text>
+<line x1="597" y1="76" x2="597" y2="146" stroke="#B3261E" stroke-width="1.2" stroke-dasharray="3 3"></line>
+<text class="sm" x="597" y="140" fill="#8C1D18" text-anchor="middle">分裂</text>
+
+<text class="sm" x="56" y="166" fill="#042C53">B 期 = τ − (C+D) = 10 min　出生时 1 份未复制染色体　同时只有 2 个复制叉</text>
+
+
+<rect x="40" y="196" width="600" height="212" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="218" fill="#8C1D18">快生长　τ = 20 min &lt; C+D　多轮复制重叠</text>
+<text class="sm" x="404" y="218" fill="#8C1D18">起始比分裂早约 3 代</text>
+
+
+<rect x="40" y="232" width="171" height="18" rx="3" fill="#0F6E56"></rect>
+<rect x="211" y="232" width="86" height="18" rx="3" fill="#BA7517"></rect>
+<text class="sm" x="125" y="245" fill="#FFFFFF" text-anchor="middle">C①</text>
+<text class="sm" x="254" y="245" fill="#FFFFFF" text-anchor="middle">D①</text>
+
+<rect x="126" y="256" width="171" height="18" rx="3" fill="#0F6E56"></rect>
+<rect x="297" y="256" width="86" height="18" rx="3" fill="#BA7517"></rect>
+<text class="sm" x="211" y="269" fill="#FFFFFF" text-anchor="middle">C②</text>
+<text class="sm" x="340" y="269" fill="#FFFFFF" text-anchor="middle">D②</text>
+
+<rect x="211" y="280" width="171" height="18" rx="3" fill="#0F6E56"></rect>
+<rect x="383" y="280" width="86" height="18" rx="3" fill="#BA7517"></rect>
+<text class="sm" x="297" y="293" fill="#FFFFFF" text-anchor="middle">C③</text>
+<text class="sm" x="426" y="293" fill="#FFFFFF" text-anchor="middle">D③</text>
+
+<rect x="297" y="304" width="171" height="18" rx="3" fill="#0F6E56"></rect>
+<rect x="469" y="304" width="86" height="18" rx="3" fill="#BA7517"></rect>
+<text class="sm" x="383" y="317" fill="#FFFFFF" text-anchor="middle">C④</text>
+<text class="sm" x="512" y="317" fill="#FFFFFF" text-anchor="middle">D④</text>
+
+<rect x="383" y="328" width="171" height="18" rx="3" fill="#0F6E56"></rect>
+<rect x="554" y="328" width="86" height="18" rx="3" fill="#BA7517"></rect>
+<text class="sm" x="469" y="341" fill="#FFFFFF" text-anchor="middle">C⑤</text>
+<text class="sm" x="597" y="341" fill="#FFFFFF" text-anchor="middle">D⑤</text>
+
+
+<circle cx="40" cy="241" r="4" fill="#185FA5"></circle>
+<circle cx="126" cy="265" r="4" fill="#185FA5"></circle>
+<circle cx="211" cy="289" r="4" fill="#185FA5"></circle>
+<circle cx="297" cy="313" r="4" fill="#185FA5"></circle>
+<circle cx="383" cy="337" r="4" fill="#185FA5"></circle>
+
+
+<line x1="297" y1="226" x2="297" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"></line>
+<line x1="383" y1="226" x2="383" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"></line>
+<line x1="469" y1="226" x2="469" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"></line>
+<line x1="554" y1="226" x2="554" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"></line>
+
+<text class="sm" x="297" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+<text class="sm" x="383" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+<text class="sm" x="469" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+<text class="sm" x="554" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+
+<text class="sm" x="56" y="396" fill="#8C1D18">同一时刻有多条 C 段在跑 → 4–8 个复制叉　B 期消失　ori : ter ≈ 4 : 1</text>
+
+
+<line x1="40" y1="414" x2="640" y2="414" stroke="#B4B2A9" stroke-width="1"></line>
+<text class="sm" x="40" y="430" fill="#5c5c5a" text-anchor="middle">0</text>
+<text class="sm" x="126" y="430" fill="#5c5c5a" text-anchor="middle">20</text>
+<text class="sm" x="211" y="430" fill="#5c5c5a" text-anchor="middle">40</text>
+<text class="sm" x="297" y="430" fill="#5c5c5a" text-anchor="middle">60</text>
+<text class="sm" x="383" y="430" fill="#5c5c5a" text-anchor="middle">80</text>
+<text class="sm" x="469" y="430" fill="#5c5c5a" text-anchor="middle">100</text>
+<text class="sm" x="554" y="430" fill="#5c5c5a" text-anchor="middle">120</text>
+<text class="sm" x="620" y="430" fill="#5c5c5a" text-anchor="end">min</text>
+
+<text class="hint" x="40" y="454">快生长不是复制叉跑得更快　C 与 D 基本不变　变的是起始频率与重叠轮数</text>
+</svg>
+</figure><p></p>
+<h3 id="51-慢生长τ--cd顺序模式">5.1 慢生长：τ ≥ C+D（顺序模式）<a aria-hidden="true" tabindex="-1" href="#51-慢生长τ--cd顺序模式" class="internal"></a></h3>
+<ul>
+<li>一轮起始 → C 期复制 → 终止 → D 期 → 分裂 → <strong>B 期等待</strong> → 下一轮起始。</li>
+<li><strong>无重叠</strong>：一个细胞里最多一对复制叉（2 个 forks）。</li>
+<li>出生时染色体基本是<strong>未复制的 1 份</strong>（ori 1 个、ter 1 个）。</li>
+<li>每次分裂染色体数 1 → 2，逻辑上与真核细胞周期”顺序推进”很像。</li>
+<li>细胞<strong>小</strong>、核糖体少、DNA/质量比低、ppGpp 偏高（严格反应）。</li>
+<li>典型条件：贫碳源（乙酸、甘油）、低温、营养限制、稳定期前。</li>
+</ul>
+<h3 id="52-快生长τ--cd重叠--多叉模式">5.2 快生长：τ &lt; C+D（重叠 / 多叉模式）<a aria-hidden="true" tabindex="-1" href="#52-快生长τ--cd重叠--多叉模式" class="internal"></a></h3>
+<p><strong>矛盾</strong>：细胞每 20 min 就要分裂一次，但一次复制加分裂要 60 min。若等复制完再分裂，最快也只能 60 min 一代。</p>
+<p><strong>解法</strong>：<strong>提前起始、并行跑</strong>。这一次分裂所需要的染色体，其复制早在<strong>上一代甚至上两代</strong>就开始了。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特征</th><th>说明</th></tr></thead><tbody><tr><td><strong>多叉复制</strong>（multifork / nested replication）</td><td>多个复制周期在时间上重叠，同一细胞内同时运行 4–8 个复制叉</td></tr><tr><td><strong>起始提前的代数</strong></td><td>n ≈ (C+D)/τ；τ=20 min 时 n ≈ 3，即<strong>起始比分裂早 3 代</strong></td></tr><tr><td><strong>起始与分裂都每 τ 一次</strong></td><td>只是彼此错开 (C+D)，形成稳定的错位流水线</td></tr><tr><td><strong>出生时染色体已部分复制</strong></td><td>子细胞一出生就带有正在运行的复制叉和多份 ori，<strong>没有”G1 期”</strong></td></tr><tr><td><strong>ori : ter 拷贝比</strong></td><td>≈ 2^(C/τ)；τ=20、C=40 时约 <strong>4 : 1</strong>（ori  proximal 区域剂量高）</td></tr><tr><td><strong>复制叉速度不变</strong></td><td>快生长不是”叉跑得更快”，是<strong>同时开更多叉</strong></td></tr><tr><td>细胞形态</td><td><strong>更大</strong>、更长，DNA 含量高，核糖体占比高，ppGpp 低</td></tr></tbody></table>
+<blockquote>
+<p>精确数值随菌株、温度、培养基而变，重点是<strong>数量级与逻辑</strong>：τ 每缩短一半，重叠轮数与 ori 剂量大致翻倍。</p>
+</blockquote>
+<h3 id="53-完整对照表">5.3 完整对照表<a aria-hidden="true" tabindex="-1" href="#53-完整对照表" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th><strong>慢生长</strong></th><th><strong>快生长</strong></th></tr></thead><tbody><tr><td>倍增时间 τ</td><td>≥ C+D（≥ ~60 min）</td><td>&lt; C+D（20–40 min 常见）</td></tr><tr><td>C 期长度</td><td>~40 min</td><td>~40 min（<strong>基本不变</strong>）</td></tr><tr><td>D 期长度</td><td>~20 min</td><td>~20 min（<strong>基本不变</strong>）</td></tr><tr><td><strong>B 期</strong></td><td><strong>存在</strong>（分裂后等一段时间才起始）</td><td><strong>消失</strong>（起始提前到母代/祖母代）</td></tr><tr><td>复制周期</td><td>一轮接一轮，顺序</td><td><strong>多轮重叠、嵌套</strong></td></tr><tr><td>同时运行的复制叉</td><td>2 个</td><td>4–8 个或更多</td></tr><tr><td>ori : ter 拷贝比</td><td>≈ 1 : 1</td><td>可达 <strong>4 : 1</strong> 甚至更高</td></tr><tr><td>出生时染色体</td><td>未复制的 1 份</td><td><strong>已部分复制、带活跃复制叉</strong></td></tr><tr><td>起始发生在</td><td>当代</td><td><strong>上一代 / 上两代</strong></td></tr><tr><td>细胞体积</td><td>小</td><td><strong>大</strong>（V 随 (C+D)/τ 指数增大）</td></tr><tr><td>核糖体 / rRNA</td><td>少，rRNA 转录低</td><td><strong>多</strong>，生长定律线性相关</td></tr><tr><td>(p)ppGpp</td><td>偏高（严格反应）</td><td>低</td></tr><tr><td>基因剂量效应</td><td>几乎无</td><td><strong>ori 近端基因剂量显著升高</strong></td></tr><tr><td>对抗复制/分裂药物</td><td>相对不敏感</td><td>更敏感（复制叉多、分裂频繁）</td></tr><tr><td>典型培养</td><td>贫碳源、低温、限制培养</td><td>LB、丰富培养基、最适温度</td></tr></tbody></table>
+<h3 id="54-一个漂亮的推论基因剂量与基因组布局">5.4 一个漂亮的推论：基因剂量与基因组布局<a aria-hidden="true" tabindex="-1" href="#54-一个漂亮的推论基因剂量与基因组布局" class="internal"></a></h3>
+<ul>
+<li>快生长时 oriC 附近区域的拷贝数是 terC 附近的数倍 → <strong>ori 近端基因天然高表达</strong>。</li>
+<li>进化因此把** rRNA 操纵子（<em>E. coli</em> 有 7 个 rrn）与核糖体蛋白基因集中在 oriC 附近**，正好服务快生长对核糖体的巨大需求。</li>
+<li>实验判据：把同一报告基因分别插入 ori 近端与 ter 近端，<strong>快生长时两者表达差可达数倍，慢生长时接近 1:1</strong>。</li>
+<li>这解释了为什么细菌基因组上基因的位置不是随机的。</li>
+</ul>
+<hr/>
+<h2 id="六cooperhelmstetter-模型">六、Cooper–Helmstetter 模型<a aria-hidden="true" tabindex="-1" href="#六cooperhelmstetter-模型" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>关系</th><th>含义</th></tr></thead><tbody><tr><td>分裂时刻 = 起始时刻 + (C+D)</td><td><strong>固定延迟</strong>，与 τ 无关</td></tr><tr><td>起始间隔 = 分裂间隔 = τ</td><td>稳态下两条流水线同频、错位运行</td></tr><tr><td>重叠轮数 n ≈ (C+D)/τ</td><td>决定一个细胞内同时跑几轮复制</td></tr><tr><td>ori : ter ≈ 2^(C/τ)</td><td>基因剂量效应</td></tr><tr><td>平均 DNA 含量 ∝ 2^((C+D)/τ)</td><td>快生长细胞 DNA 多</td></tr><tr><td>起始质量 Mᵢ 恒定</td><td>把”时间控制”转化为”体积控制”</td></tr></tbody></table>
+<h3 id="run-out-实验cd-期是怎么测出来的">run-out 实验：C、D 期是怎么测出来的<a aria-hidden="true" tabindex="-1" href="#run-out-实验cd-期是怎么测出来的" class="internal"></a></h3>
+<ol>
+<li>取<strong>稳态培养</strong>的细胞。</li>
+<li>加<strong>利福平</strong>（rifampicin）：阻断转录，不允许新的复制起始。</li>
+<li>加<strong>头孢氨苄</strong>（cephalexin）：阻断分裂，细胞不裂、不稀释结果。</li>
+<li>继续孵育：已经启动的复制叉把各自那轮复制跑完，然后全停。</li>
+<li><strong>流式细胞术</strong>测单细胞 DNA 含量。</li>
+</ol>
+<ul>
+<li>结果呈<strong>离散峰</strong>（如 2C、4C、8C…），峰的数目 = 起始时 oriC 的拷贝数。</li>
+<li>由此反推每个细胞有多少个正在运行的复制叉、C 期多长；配合细胞数变化可求 D 期。</li>
+<li><strong>设计精髓</strong>：用”只让存量跑完、禁止新增”把动态过程冻结成静态分布，是细菌细胞周期研究的经典范式。</li>
+</ul>
+<hr/>
+<h2 id="七营养转换从慢到快不是瞬间完成的">七、营养转换：从慢到快不是瞬间完成的<a aria-hidden="true" tabindex="-1" href="#七营养转换从慢到快不是瞬间完成的" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>转换</th><th>立即发生</th><th>滞后发生</th><th>过渡期表型</th></tr></thead><tbody><tr><td><strong>Shift-up</strong>（加富营养）</td><td>rRNA/核糖体合成迅速上调、起始质量更快达到</td><td>分裂速率约滞后 <strong>C+D</strong> 才跟上</td><td>细胞先变<strong>长变大</strong>，几代后才按新 τ 缩短周期</td></tr><tr><td><strong>Shift-down</strong>（减贫）</td><td>严格反应：(p)ppGpp 骤升 → 抑制 rRNA 转录与复制起始</td><td>已启动的复制与分裂仍会继续几代</td><td>细胞逐代变<strong>小</strong>，DNA/质量比下降</td></tr></tbody></table>
+<blockquote>
+<p><strong>稳态生长（balanced growth）</strong>：所有组分（蛋白、RNA、DNA、细胞数）以同一比速率指数增长，此时 τ 才有明确意义。营养转换期间处于<strong>非稳态</strong>，直接用 τ 套公式会出错。</p>
+</blockquote>
+<hr/>
+<h2 id="八与真核细胞周期的根本差异">八、与真核细胞周期的根本差异<a aria-hidden="true" tabindex="-1" href="#八与真核细胞周期的根本差异" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>细菌</th><th>真核</th></tr></thead><tbody><tr><td>复制起点</td><td>通常<strong>单 ori</strong>（单 replicon）</td><td>成千上万个起点，成簇按时序激活</td></tr><tr><td>复制时段</td><td>无专门”S 期”，可与分裂/生长重叠</td><td>严格限定在 <strong>S 期</strong></td></tr><tr><td>“一次且仅一次”</td><td>DnaA-ATP 阈值 + RIDA + SeqA 隔离</td><td><strong>licensing</strong>（ORC/Cdc6/Cdt1/MCM）+ CDK 周期</td></tr><tr><td>复制比周期长时</td><td><strong>多叉重叠、提前起始</strong></td><td>不允许；S 期必须短于细胞周期</td></tr><tr><td>周期划分</td><td>无 G1/S/G2/M；用 C、D、B 期描述</td><td>G1 → S → G2 → M，检查点分明</td></tr><tr><td>驱动逻辑</td><td><strong>体积/起始质量</strong>（生长驱动）</td><td><strong>CDK 振荡 + 检查点</strong>（时钟驱动）</td></tr><tr><td>区室</td><td>无核膜，复制/转录/翻译同区室偶联</td><td>核内复制、胞质翻译，时空分离</td></tr></tbody></table>
+<blockquote>
+<p><strong>一句话对比</strong>：真核用”周期时钟”保证复制只做一次；细菌用”长到某个体积就点火”来协调，代价是快生长时必须容忍多个复制叉同时跑。</p>
+</blockquote>
+<hr/>
+<h2 id="九常见误区澄清">九、常见误区澄清<a aria-hidden="true" tabindex="-1" href="#九常见误区澄清" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>误区</th><th>纠正</th></tr></thead><tbody><tr><td>❌ “生长就是分裂”</td><td>✅ <strong>生长（伸长/增重）、复制（抄 DNA）、分裂（切隔膜）是三套机器、三个时间尺度</strong>，可各自被抑制而互不影响</td></tr><tr><td>❌ ”<em>E. coli</em> 20 min 分裂一次，所以 DNA 复制只要 20 min”</td><td>✅ 复制仍需 <strong>C ≈ 40 min</strong>；靠<strong>多叉重叠、提前 3 代起始</strong>实现，不是复制变快</td></tr><tr><td>❌ “快生长时 C 期缩短了”</td><td>✅ C、D 对生长速率<strong>相对不敏感</strong>；变的是<strong>起始频率与重叠轮数</strong></td></tr><tr><td>❌ “一个细菌细胞只有一条染色体”</td><td>✅ 快生长时含多份部分复制的染色体等价物、多个 ori 与 4–8 个复制叉</td></tr><tr><td>❌ “子细胞出生时染色体是未复制的 1C”</td><td>✅ 仅慢生长如此；<strong>快生长出生即带活跃复制叉</strong></td></tr><tr><td>❌ “多叉复制是让复制叉跑得更快”</td><td>✅ 叉速基本恒定，<strong>是并行开了更多叉</strong></td></tr><tr><td>❌ “慢生长没有复制起始调控”</td><td>✅ 慢生长有明确的 <strong>B 期</strong>，靠起始质量阈值控制何时点火</td></tr><tr><td>❌ “抑制分裂会抑制生长”</td><td>✅ 抑制 FtsZ（SulA、头孢氨苄）→ 细胞继续伸长与复制，形成<strong>多核丝状体</strong></td></tr><tr><td>❌ “ori 与 ter 拷贝数总是 1:1”</td><td>✅ 快生长时 <strong>ori:ter ≈ 2^(C/τ)</strong>，可达 4:1，产生基因剂量效应</td></tr><tr><td>❌ “营养一加富，分裂立刻变快”</td><td>✅ 核糖体先上调、细胞先变大，分裂速率滞后约 <strong>C+D</strong> 才跟上</td></tr></tbody></table>
+<hr/>
+<h2 id="十要点速记">十、要点速记<a aria-hidden="true" tabindex="-1" href="#十要点速记" class="internal"></a></h2>
+<blockquote>
+<p><strong>判据只有一条：τ 与 C+D 比大小</strong></p>
+<ol>
+<li><strong>三件事解耦</strong>：生长＝伸长（elongasome）／复制＝C 期（replisome）／分裂＝D 期末（divisome，FtsZ）</li>
+<li><strong>C ≈ 40 min，D ≈ 20 min，C+D ≈ 60 min</strong> —— 起始到对应分裂的<strong>固定延迟</strong></li>
+<li><strong>慢生长 τ ≥ C+D</strong>：顺序模式、有 B 期、2 个复制叉、出生时 1 份未复制染色体、细胞小</li>
+<li><strong>快生长 τ &lt; C+D</strong>：<strong>多叉重叠</strong>、起始提前 (C+D)/τ ≈ 3 代、B 期消失、ori:ter ≈ 4:1、出生即带复制叉、细胞大</li>
+<li><strong>起始质量 Mᵢ 恒定</strong>（Donachie）：按体积点火，不是按时间表；体积 ∝ 2^((C+D)/τ)</li>
+<li><strong>快生长不是复制变快，是同时开更多叉</strong></li>
+<li><strong>推论</strong>：ori 近端基因剂量高 → rRNA/核糖体蛋白基因集中在 oriC 附近</li>
+<li><strong>真核用时钟（CDK + licensing），细菌用体积（起始质量 + 多叉）</strong></li>
+</ol>
+</blockquote>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>说明</th></tr></thead><tbody><tr><td><strong>τ</strong></td><td>Doubling / generation time</td><td>倍增时间</td></tr><tr><td><strong>C 期</strong></td><td>Chromosome replication period</td><td>一轮复制所需时间，≈ 40 min</td></tr><tr><td><strong>D 期</strong></td><td>Division period</td><td>复制终止到分裂完成，≈ 20 min</td></tr><tr><td><strong>B 期</strong></td><td>Between division and initiation</td><td>分裂到下一轮起始的间隔（类 G1）</td></tr><tr><td><strong>oriC / terC</strong></td><td>Origin / terminus of chromosome</td><td>复制起点 / 终止区</td></tr><tr><td><strong>DnaA / DnaB / DnaG</strong></td><td>—</td><td>起始蛋白 / 解旋酶 / 引物酶</td></tr><tr><td><strong>Pol III</strong></td><td>DNA polymerase III holoenzyme</td><td>主复制聚合酶；β clamp 为滑动钳</td></tr><tr><td><strong>RIDA</strong></td><td>Regulatory inactivation of DnaA</td><td>Hda + β clamp 水解 DnaA-ATP，防再起始</td></tr><tr><td><strong>SeqA</strong></td><td>Sequestration A</td><td>结合半甲基化 oriC，隔离新起点</td></tr><tr><td><strong>Dam</strong></td><td>DNA adenine methylase</td><td>提供甲基化状态以供 SeqA 识别</td></tr><tr><td><strong>Tus–ter</strong></td><td>Terminus utilization substance</td><td>复制叉陷阱，限定终止区</td></tr><tr><td><strong>Topo IV</strong></td><td>Topoisomerase IV</td><td>解连环（decatenation）</td></tr><tr><td><strong>XerCD / dif</strong></td><td>—</td><td>位点特异重组，解决染色体二聚体</td></tr><tr><td><strong>MukBEF</strong></td><td>—</td><td>SMC 类凝缩复合体，帮助染色体分离</td></tr><tr><td><strong>FtsZ / Z-ring</strong></td><td>Filamenting temperature-sensitive Z</td><td>微管蛋白同源 GTP 酶，分裂环骨架</td></tr><tr><td><strong>divisome / elongasome</strong></td><td>—</td><td>分裂机器 / 伸长机器</td></tr><tr><td><strong>MreB</strong></td><td>—</td><td>肌动蛋白同源物，指导侧壁肽聚糖插入</td></tr><tr><td><strong>MinCDE</strong></td><td>Min system</td><td>振荡定位，抑制两极形成 Z 环</td></tr><tr><td><strong>SlmA / Noc</strong></td><td>Nucleoid occlusion factors</td><td>核区闭塞，染色体上方不许分裂</td></tr><tr><td><strong>SulA</strong></td><td>SOS-inducible FtsZ inhibitor</td><td>DNA 损伤时延迟分裂，造成丝状化</td></tr><tr><td><strong>Mᵢ</strong></td><td>Initiation mass</td><td>每个 oriC 对应的恒定起始质量</td></tr><tr><td><strong>(p)ppGpp</strong></td><td>Guanosine tetra/pentaphosphate</td><td>严格反应信号分子</td></tr><tr><td><strong>multifork</strong></td><td>Multifork replication</td><td>多叉／嵌套重叠复制</td></tr><tr><td><strong>C–H 模型</strong></td><td>Cooper–Helmstetter model</td><td>描述 C、D、τ 与起始/分裂时序的经典模型</td></tr><tr><td><strong>run-out</strong></td><td>Replication run-out experiment</td><td>利福平 + 头孢氨苄，测复制叉数与 C/D 期</td></tr></tbody></table>
+<hr/>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li><a href="../../细胞生物学/知识点/分裂方式" class="internal">分裂方式</a> —— 原核二分裂与真核有丝/减数分裂对比</li>
+<li><a href="../../细胞生物学/知识点/阻断" class="internal">阻断</a> —— 分裂与复制的抑制剂（含 FtsZ、微管靶点）</li>
+<li><a href="../../细胞生物学/知识点/动态方法" class="internal">动态方法</a> —— 活细胞成像追踪复制叉与 Z 环动态</li>
+<li><a href="../../细胞生物学/知识点/翻译" class="internal">翻译</a> —— 细菌转录翻译偶联与核糖体（生长定律的分子基础）</li>
+<li><a href="../../细胞生物学/知识点/表达类型" class="internal">表达类型</a> —— 基因表达调控与严格反应</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

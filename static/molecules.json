@@ -313,8 +313,7 @@
       "note": "醇酚醚",
       "group": "有机",
       "tip": "无 O–H，中性、低极性；久置会生成爆炸性过氧化物。"
-    }
-    ,
+    },
     {
       "name": "甲醛",
       "smiles": "C=O",
@@ -659,8 +658,7 @@
       "note": "羧酸及其衍生物",
       "group": "有机",
       "tip": "pKa ≈ 13，烷基化后水解脱羧可一次引入两个不同烷基。"
-    }
-    ,
+    },
     {
       "name": "吡啶",
       "smiles": "c1ccncc1",
@@ -932,8 +930,7 @@
       "note": "立体化学",
       "group": "生物",
       "tip": "[α]D = +52.7°：它是 D 型，但 D 型 ≠ 右旋 —— 这是最常被误解的一点。"
-    }
-    ,
+    },
     {
       "name": "HEPES",
       "smiles": "OCCN1CCN(CCS(O)(=O)=O)CC1",
@@ -3587,6 +3584,429 @@
       "note": "拓展-氧化还原与细胞信号转导",
       "group": "生化",
       "tip": "维生素 C：烯二醇结构让它既能给出两个电子，又能把 Fe³⁺ 还原回 Fe²⁺ —— 抗氧化和促吸收是同一件事。",
+      "src": "manual"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "线粒体和叶绿体",
+      "group": "生物",
+      "tip": "线粒体内膜上合成后交给腺苷酸转位体运出；叶绿体光反应生成的 ATP 只供暗反应。"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "ATP合酶",
+      "group": "生物",
+      "tip": "底物本身：结合槽里 ATP/ADP 的构象变化，就是旋转催化的最后一环。"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "氧化磷酸化",
+      "group": "生物",
+      "tip": "化学渗透的「能量货币」：质子梯度越强，ATP/ADP 比值越高。"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "物质的跨膜运输",
+      "group": "生物",
+      "tip": "Na⁺/K⁺ 泵、Ca²⁺ 泵每水解 1 个 ATP 逆梯度转运离子 —— 主动运输的直接能源。"
+    },
+    {
+      "name": "胆固醇",
+      "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+      "formula": "C₂₇H₄₆O",
+      "note": "细胞质膜",
+      "group": "生物",
+      "tip": "膜流动性的双向调节器：高温「刹车」、低温「抗间隙填充」，还参与脂筏形成。"
+    },
+    {
+      "name": "胆固醇",
+      "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+      "formula": "C₂₇H₄₆O",
+      "note": "胆固醇对脂膜的调节",
+      "group": "生物",
+      "tip": "主角分子：甾核体积「尴尬」是它能双向调节流动性的结构根源。"
+    },
+    {
+      "name": "D-葡萄糖",
+      "smiles": "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C=O",
+      "formula": "C₆H₁₂O₆",
+      "note": "物质的跨膜运输",
+      "group": "生物",
+      "tip": "与 SGLT 对照看：GLUT 走易化扩散，只能顺浓度梯度，不耗 ATP。"
+    },
+    {
+      "name": "D-葡萄糖",
+      "smiles": "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C=O",
+      "formula": "C₆H₁₂O₆",
+      "note": "GLUT",
+      "group": "生物",
+      "tip": "底物：GLUT1 的交替进入机制就是为它设计的；D 型才是天然构型。"
+    },
+    {
+      "name": "丙酮酸",
+      "smiles": "CC(=O)C(O)=O",
+      "formula": "C₃H₄O₃",
+      "note": "氧化磷酸化",
+      "group": "生物",
+      "tip": "糖酵解终产物：进入线粒体后由 PDH 脱羧为乙酰 CoA，进入 TCA 循环供电子。"
+    },
+    {
+      "name": "2,4-二硝基苯酚",
+      "smiles": "Oc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]",
+      "formula": "C₆H₄N₂O₅",
+      "note": "氧化磷酸化",
+      "group": "生物",
+      "tip": "经典解偶联剂：携 H⁺ 穿过内膜，把质子梯度短路成热，ATP 合成下降而耗氧上升。",
+      "src": "manual"
+    },
+    {
+      "name": "水通道蛋白 AQP1",
+      "pdb": "1FQY",
+      "formula": "同源四聚体 · 每亚基 6 次跨膜",
+      "note": "AQP",
+      "group": "蛋白",
+      "tip": "点「3D」。四聚体里每个亚基都是独立水孔；NPA 基序与 ar/R 滤器决定只让水过。",
+      "src": "manual"
+    },
+    {
+      "name": "葡萄糖转运蛋白 GLUT1",
+      "pdb": "4PYP",
+      "formula": "12 次跨膜单链",
+      "note": "GLUT",
+      "group": "蛋白",
+      "tip": "点「3D」。交替进入（alternating access）机制：结合葡萄糖后构象翻转，把底物放进门内。",
+      "src": "manual"
+    },
+    {
+      "name": "ATP 合酶 F1 头部",
+      "pdb": "1BMF",
+      "formula": "α₃β₃γδε",
+      "note": "ATP合酶",
+      "group": "蛋白",
+      "tip": "点「3D」。这是牛心线粒体 F1-ATPase：看 α/β 六聚体中间的 γ 轴，旋转催化的核心。",
+      "src": "manual"
+    },
+    {
+      "name": "微管蛋白 α/β 二聚体",
+      "pdb": "1JFF",
+      "formula": "α-微管蛋白 + β-微管蛋白",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点「3D」。紫杉醇结合位点在 β 亚基；微管动态不稳定性就来自 GTP 水解后的构象差异。",
+      "src": "manual"
+    },
+    {
+      "name": "肌动蛋白 actin",
+      "pdb": "1ATN",
+      "formula": "actin–DNase I 复合物",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点「3D」。ATP 结合口袋在裂缝底部；ATP 水解 → ADP 使解聚概率上升。",
+      "src": "manual"
+    },
+    {
+      "name": "核小体核心颗粒",
+      "pdb": "1AOI",
+      "formula": "146 bp DNA + 组蛋白八聚体",
+      "note": "细胞核和核糖体",
+      "group": "蛋白",
+      "tip": "点「3D」。DNA 绕八聚体 1.65 圈；组蛋白尾部伸出，是表观修饰的位点。",
+      "src": "manual"
+    },
+    {
+      "name": "驱动蛋白 kinesin",
+      "pdb": "1BG2",
+      "formula": "马达结构域二聚体",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点「3D」。两个马达头交替结合微管，沿「微管轨道」向正端行走。",
+      "src": "manual"
+    },
+    {
+      "name": "绿色荧光蛋白 GFP",
+      "pdb": "1GFL",
+      "formula": "238 aa · β 桶 + 发色团",
+      "note": "研究方法",
+      "group": "蛋白",
+      "tip": "点 3D。荧光来自 β 桶中央的三肽发色团，桶状结构把它保护起来、避免被水淬灭。",
+      "src": "manual"
+    },
+    {
+      "name": "泛素",
+      "pdb": "1UBQ",
+      "formula": "76 aa",
+      "note": "细胞质基质与内膜系统",
+      "group": "蛋白",
+      "tip": "点 3D。K48 连接的多聚泛素链是送进 26S 蛋白酶体的“标签”；K63 链则多参与信号。",
+      "src": "manual"
+    },
+    {
+      "name": "BiP（GRP78）",
+      "pdb": "5E84",
+      "formula": "NBD + SBD + lid",
+      "note": "Bip",
+      "group": "蛋白",
+      "tip": "点 3D。看 NBD 与 SBD 的相对位置：ATP 结合后 lid 打开、疏水底物释放。",
+      "src": "manual"
+    },
+    {
+      "name": "KcsA 钾通道",
+      "pdb": "1BL8",
+      "formula": "四聚体 · 选择性滤器",
+      "note": "膜电位",
+      "group": "蛋白",
+      "tip": "点 3D。四个亚基围成中央孔；选择性滤器的羰基氧模拟水合壳，只让 K⁺ 脱水通过。",
+      "src": "manual"
+    },
+    {
+      "name": "KcsA 钾通道",
+      "pdb": "1BL8",
+      "formula": "四聚体 · 选择性滤器",
+      "note": "物质的跨膜运输",
+      "group": "蛋白",
+      "tip": "点 3D。通道 vs 泵的差别就在这：K⁺ 顺梯度通过，不耗 ATP。",
+      "src": "manual"
+    },
+    {
+      "name": "细胞色素 c",
+      "pdb": "1HRC",
+      "formula": "104 aa · 血红素",
+      "note": "电子传递链",
+      "group": "蛋白",
+      "tip": "点 3D。血红素 Fe²⁺/Fe³⁺ 的可逆变化是单电子传递的核心。",
+      "src": "manual"
+    },
+    {
+      "name": "细胞色素 c",
+      "pdb": "1HRC",
+      "formula": "104 aa · 血红素",
+      "note": "线粒体和叶绿体",
+      "group": "蛋白",
+      "tip": "点 3D。它停在内膜外侧，把电子从复合体 III 交给复合体 IV。",
+      "src": "manual"
+    },
+    {
+      "name": "Rubisco",
+      "pdb": "1RCX",
+      "formula": "八聚体 · 光合固碳",
+      "note": "线粒体和叶绿体",
+      "group": "蛋白",
+      "tip": "点 3D。活性中心的 Mg²⁺ 与 RuBP 位点同时容纳 CO₂ 与 O₂——加氧/羧化两种活性都在这里。",
+      "src": "manual"
+    },
+    {
+      "name": "肌球蛋白 II 马达域",
+      "pdb": "2MYS",
+      "formula": "马达域 + 杠杆臂",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点 3D。ATP 结合/水解驱动杠杆臂摆动，沿 actin 向正端行走。",
+      "src": "manual"
+    },
+    {
+      "name": "肌球蛋白 II 马达域",
+      "pdb": "2MYS",
+      "formula": "马达域 + 杠杆臂",
+      "note": "细胞运动",
+      "group": "蛋白",
+      "tip": "点 3D。皮层 actomyosin 收缩是胞质环流与变皱膜运动的动力来源。",
+      "src": "manual"
+    },
+    {
+      "name": "p53 DNA 结合域",
+      "pdb": "1TUP",
+      "formula": "四聚体 · 锌指",
+      "note": "Ca",
+      "group": "蛋白",
+      "tip": "点 3D。DNA 结合域上的热点突变会直接破坏与 DNA 的接触，是抑癌基因失活的典型。",
+      "src": "manual"
+    },
+    {
+      "name": "p53 DNA 结合域",
+      "pdb": "1TUP",
+      "formula": "四聚体 · 锌指",
+      "note": "细胞周期",
+      "group": "蛋白",
+      "tip": "点 3D。p53 作为转录因子上调 p21，把细胞拦在 G1/S 之前。",
+      "src": "manual"
+    },
+    {
+      "name": "IgG 抗体",
+      "pdb": "1IGT",
+      "formula": "Y 形 · 2 重链 + 2 轻链",
+      "note": "单抗",
+      "group": "蛋白",
+      "tip": "点 3D。Fab 臂端的 CDR 决定抗原特异性；Fc 段负责效应功能与 Protein A 结合。",
+      "src": "manual"
+    },
+    {
+      "name": "tRNA(Phe)",
+      "pdb": "1EHZ",
+      "formula": "76 nt · L 形",
+      "note": "翻译",
+      "group": "蛋白",
+      "tip": "点 3D。三叶草折叠成 L 形：反密码子环与氨基酸臂分居两端。",
+      "src": "manual"
+    },
+    {
+      "name": "50S 核糖体亚基",
+      "pdb": "1FFK",
+      "formula": "23S rRNA + 5S rRNA + 蛋白",
+      "note": "翻译",
+      "group": "蛋白",
+      "tip": "点 3D。肽基转移酶中心由 rRNA 构成——它是核酶，不是蛋白。",
+      "src": "manual"
+    },
+    {
+      "name": "50S 核糖体亚基",
+      "pdb": "1FFK",
+      "formula": "23S rRNA + 5S rRNA + 蛋白",
+      "note": "细胞核和核糖体",
+      "group": "蛋白",
+      "tip": "点 3D。大亚基负责成肽，小亚基负责解码。",
+      "src": "manual"
+    },
+    {
+      "name": "FtsZ",
+      "pdb": "1FSZ",
+      "formula": "细菌微管蛋白同源物",
+      "note": "快生长和慢生长",
+      "group": "蛋白",
+      "tip": "点 3D。FtsZ 在分裂位点聚合成 Z 环；与 tubulin 同源，但形成环而不是管。",
+      "src": "manual"
+    },
+    {
+      "name": "FtsZ",
+      "pdb": "1FSZ",
+      "formula": "细菌微管蛋白同源物",
+      "note": "分裂方式",
+      "group": "蛋白",
+      "tip": "点 3D。Z 环收缩 + 隔膜合成完成二分裂。",
+      "src": "manual"
+    },
+    {
+      "name": "胰岛素",
+      "pdb": "4INS",
+      "formula": "A/B 链 · 3 对二硫键",
+      "note": "动物细胞培养",
+      "group": "蛋白",
+      "tip": "点 3D。A、B 链靠二硫键相连；B 链 C 端是受体结合的关键。",
+      "src": "manual"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "电子传递链",
+      "group": "生物",
+      "tip": "电子传递的最终产出之一；ATP 合酶把 Δp 换成 ATP。",
+      "src": null
+    },
+    {
+      "name": "丙酮酸",
+      "smiles": "CC(=O)C(O)=O",
+      "formula": "C₃H₄O₃",
+      "note": "细胞质基质与内膜系统",
+      "group": "有机",
+      "tip": "糖酵解在胞质完成，终产物丙酮酸再进线粒体。",
+      "src": null
+    },
+    {
+      "name": "2,4-二硝基苯酚",
+      "smiles": "Oc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]",
+      "formula": "C₆H₄N₂O₅",
+      "note": "电子传递链",
+      "group": "生物",
+      "tip": "解偶联剂：把质子梯度短路成热，电子照传、ATP 不合成。",
+      "src": "manual"
+    },
+    {
+      "name": "乳酸",
+      "smiles": "CC(O)C(=O)O",
+      "formula": "C₃H₆O₃",
+      "note": "细胞质基质与内膜系统",
+      "group": "生物",
+      "tip": "缺氧时丙酮酸的归宿；LDH 催化丙酮酸↔乳酸，同时再生 NAD⁺。",
+      "src": "manual"
+    },
+    {
+      "name": "水通道蛋白 AQP1",
+      "smiles": null,
+      "formula": "同源四聚体 · 每亚基 6 次跨膜",
+      "note": "物质的跨膜运输",
+      "group": "蛋白",
+      "tip": "水顺渗透压梯度通过，不耗能——通道介导的被动运输。",
+      "src": "manual"
+    },
+    {
+      "name": "葡萄糖转运蛋白 GLUT1",
+      "smiles": null,
+      "formula": "12 次跨膜单链",
+      "note": "物质的跨膜运输",
+      "group": "蛋白",
+      "tip": "易化扩散：顺浓度梯度，不耗 ATP，饱和动力学。",
+      "src": "manual"
+    },
+    {
+      "name": "ATP 合酶 F1 头部",
+      "smiles": null,
+      "formula": "α₃β₃γδε",
+      "note": "氧化磷酸化",
+      "group": "蛋白",
+      "tip": "看 α₃β₃ 六聚体与中央 γ 轴：旋转催化的核心。",
+      "src": "manual"
+    },
+    {
+      "name": "ATP 合酶 F1 头部",
+      "smiles": null,
+      "formula": "α₃β₃γδε",
+      "note": "电子传递链",
+      "group": "蛋白",
+      "tip": "电子传递建立的 Δp 最终在这里换成 ATP。",
+      "src": "manual"
+    },
+    {
+      "name": "肌动蛋白 actin",
+      "smiles": null,
+      "formula": "actin–DNase I 复合物",
+      "note": "踏车行为",
+      "group": "蛋白",
+      "tip": "踏车行为的主角：正端加、负端掉，净结果依赖 ATP-actin 水解。",
+      "src": "manual"
+    },
+    {
+      "name": "肌动蛋白 actin",
+      "smiles": null,
+      "formula": "actin–DNase I 复合物",
+      "note": "细胞运动",
+      "group": "蛋白",
+      "tip": "聚合推膜 + myosin 收缩，是细胞爬行与胞质环流的两个引擎。",
+      "src": "manual"
+    },
+    {
+      "name": "微管蛋白 α/β 二聚体",
+      "smiles": null,
+      "formula": "α-微管蛋白 + β-微管蛋白",
+      "note": "踏车行为",
+      "group": "蛋白",
+      "tip": "微管也能踏车：GTP 帽在则长，帽丢则灾变。",
+      "src": "manual"
+    },
+    {
+      "name": "微管蛋白 α/β 二聚体",
+      "smiles": null,
+      "formula": "α-微管蛋白 + β-微管蛋白",
+      "note": "阻断",
+      "group": "蛋白",
+      "tip": "秋水仙素/长春碱/紫杉醇都作用在这条动态不稳定性上。",
       "src": "manual"
     }
   ]

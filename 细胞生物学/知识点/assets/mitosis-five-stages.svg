@@ -1,0 +1,136 @@
+<svg viewBox="0 0 680 420" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>M 期五个阶段的形态与分子事件</title>
+<desc>前期染色体凝缩但核膜完整、染色体臂 cohesin 被移除；前中期核膜解体、动粒被微管捕获并激活 SAC；中期染色体排列在赤道板、双向附着产生张力后 SAC 沉默、APC/C 活化；后期 separase 切割 cohesin，后期 A 染色体向极移动、后期 B 两极分开，染色体数暂时加倍；末期核膜重建、染色体去凝缩，同时收缩环完成胞质分裂。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">M 期五阶段　形态变化最剧烈的 1 小时</text>
+<text class="hint" x="310" y="24">进入靠 CDK1 爆发　退出靠 cyclin B 降解</text>
+
+<!-- 面板 1 前期 -->
+<rect x="40" y="40" width="104" height="222" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<circle cx="92" cy="112" r="42" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<circle cx="92" cy="112" r="26" fill="none" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="82" y1="100" x2="82" y2="122" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="87" y1="100" x2="87" y2="122" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="98" y1="102" x2="98" y2="124" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="103" y1="102" x2="103" y2="124" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="56" cy="112" r="3" fill="#854F0B"/>
+<circle cx="128" cy="112" r="3" fill="#854F0B"/>
+<text class="sm" x="92" y="170" fill="#042C53" text-anchor="middle">核膜仍完整</text>
+<text class="ttl" x="48" y="192" fill="#042C53">前期</text>
+<text class="sm" x="48" y="210" fill="#0C447C">凝缩 condensin</text>
+<text class="sm" x="48" y="226" fill="#0C447C">H3 Ser10 磷酸化</text>
+<text class="sm" x="48" y="242" fill="#0C447C">中心体向两极</text>
+<text class="sm" x="48" y="256" fill="#0C447C">臂 cohesin 移除</text>
+
+<!-- 面板 2 前中期 -->
+<rect x="164" y="40" width="104" height="222" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<circle cx="216" cy="112" r="42" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+<circle cx="180" cy="112" r="3" fill="#854F0B"/>
+<circle cx="252" cy="112" r="3" fill="#854F0B"/>
+<line x1="180" y1="112" x2="199" y2="98" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="180" y1="112" x2="211" y2="124" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="252" y1="112" x2="233" y2="94" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="252" y1="112" x2="228" y2="128" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="196" y1="92" x2="196" y2="106" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="200" y1="92" x2="200" y2="106" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="208" y1="118" x2="208" y2="132" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="212" y1="118" x2="212" y2="132" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="230" y1="88" x2="230" y2="102" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="234" y1="88" x2="234" y2="102" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<text class="sm" x="216" y="170" fill="#412402" text-anchor="middle">核膜已解体</text>
+<text class="ttl" x="172" y="192" fill="#412402">前中期</text>
+<text class="sm" x="172" y="210" fill="#633806">NEBD　动粒捕获</text>
+<text class="sm" x="172" y="226" fill="#633806">Aurora B 纠错</text>
+<text class="sm" x="172" y="242" fill="#633806">染色体 congression</text>
+<text class="sm" x="172" y="256" fill="#633806">★ SAC 激活</text>
+
+<!-- 面板 3 中期 -->
+<rect x="288" y="40" width="104" height="222" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<circle cx="340" cy="112" r="42" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+<circle cx="304" cy="112" r="3" fill="#854F0B"/>
+<circle cx="376" cy="112" r="3" fill="#854F0B"/>
+<line x1="304" y1="112" x2="328" y2="98" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="304" y1="112" x2="328" y2="112" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="304" y1="112" x2="328" y2="126" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="376" y1="112" x2="352" y2="98" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="376" y1="112" x2="352" y2="112" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="376" y1="112" x2="352" y2="126" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="328" y1="98" x2="328" y2="126" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="336" y1="98" x2="336" y2="126" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="344" y1="98" x2="344" y2="126" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="352" y1="98" x2="352" y2="126" stroke="#B3261E" stroke-width="3.5" stroke-linecap="round"/>
+<text class="sm" x="340" y="170" fill="#04342C" text-anchor="middle">赤道板　双向附着</text>
+<text class="ttl" x="296" y="192" fill="#04342C">中期</text>
+<text class="sm" x="296" y="210" fill="#085041">染色体最短最粗</text>
+<text class="sm" x="296" y="226" fill="#085041">张力建立</text>
+<text class="sm" x="296" y="242" fill="#085041">SAC 沉默</text>
+<text class="sm" x="296" y="256" fill="#085041">★ APC/C^Cdc20 活化</text>
+
+<!-- 面板 4 后期 -->
+<rect x="412" y="40" width="104" height="222" rx="8" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<circle cx="464" cy="112" r="42" fill="#FBE9E7" stroke="#B3261E" stroke-width="1"/>
+<circle cx="428" cy="112" r="3" fill="#854F0B"/>
+<circle cx="500" cy="112" r="3" fill="#854F0B"/>
+<line x1="428" y1="112" x2="446" y2="100" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="428" y1="112" x2="446" y2="124" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="500" y1="112" x2="482" y2="100" stroke="#185FA5" stroke-width="0.9"/>
+<line x1="500" y1="112" x2="482" y2="124" stroke="#185FA5" stroke-width="0.9"/>
+<path d="M442 98 L450 104 L442 110" fill="none" stroke="#B3261E" stroke-width="3" stroke-linecap="round"/>
+<path d="M442 114 L450 120 L442 126" fill="none" stroke="#B3261E" stroke-width="3" stroke-linecap="round"/>
+<path d="M486 98 L478 104 L486 110" fill="none" stroke="#B3261E" stroke-width="3" stroke-linecap="round"/>
+<path d="M486 114 L478 120 L486 126" fill="none" stroke="#B3261E" stroke-width="3" stroke-linecap="round"/>
+<line x1="452" y1="112" x2="476" y2="112" stroke="#185FA5" stroke-width="0.8" stroke-dasharray="2 2"/>
+<text class="sm" x="464" y="170" fill="#8C1D18" text-anchor="middle">暂时 4N　总 DNA 仍 4C</text>
+<text class="ttl" x="420" y="192" fill="#8C1D18">后期</text>
+<text class="sm" x="420" y="210" fill="#8C1D18">separase 切 cohesin</text>
+<text class="sm" x="420" y="226" fill="#8C1D18">后期 A　向极移动</text>
+<text class="sm" x="420" y="242" fill="#8C1D18">后期 B　两极分开</text>
+<text class="sm" x="420" y="256" fill="#8C1D18">姐妹单体各自成染色体</text>
+
+<!-- 面板 5 末期 -->
+<rect x="536" y="40" width="104" height="222" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<circle cx="566" cy="112" r="28" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<circle cx="610" cy="112" r="28" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<circle cx="566" cy="112" r="15" fill="none" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="610" cy="112" r="15" fill="none" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="560" y1="106" x2="560" y2="118" stroke="#B3261E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<line x1="572" y1="106" x2="572" y2="118" stroke="#B3261E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<line x1="604" y1="106" x2="604" y2="118" stroke="#B3261E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<line x1="616" y1="106" x2="616" y2="118" stroke="#B3261E" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<circle cx="588" cy="112" r="3" fill="#854F0B"/>
+<text class="sm" x="588" y="170" fill="#042C53" text-anchor="middle">中体脱离</text>
+<text class="ttl" x="544" y="192" fill="#042C53">末期</text>
+<text class="sm" x="544" y="210" fill="#0C447C">去凝缩　核膜重建</text>
+<text class="sm" x="544" y="226" fill="#0C447C">CDK1 活性骤降</text>
+<text class="sm" x="544" y="242" fill="#0C447C">收缩环 → 分裂沟</text>
+<text class="sm" x="544" y="256" fill="#0C447C">APC/C^Cdh1 接管</text>
+
+<!-- 底部 -->
+<rect class="frame" x="40" y="276" width="600" height="120" rx="9"/>
+<text class="ttl" x="56" y="298">时长分配（哺乳动物培养细胞，参考值）</text>
+
+<rect x="56" y="308" width="104" height="16" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="108" y="320" fill="#042C53" text-anchor="middle">15–20 min</text>
+<rect x="166" y="308" width="104" height="16" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="218" y="320" fill="#412402" text-anchor="middle">10–15 min</text>
+<rect x="276" y="308" width="104" height="16" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="328" y="320" fill="#04342C" text-anchor="middle">10–20 min</text>
+<rect x="386" y="308" width="104" height="16" rx="4" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="438" y="320" fill="#8C1D18" text-anchor="middle">约 5 min</text>
+<rect x="496" y="308" width="128" height="16" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="560" y="320" fill="#042C53" text-anchor="middle">20–30 min</text>
+
+<text class="sm" x="56" y="346" fill="#5c5c5a">前期　凝缩　／　前中期　核膜解体与捕获　／　中期　排列（变异最大，由 SAC 何时满足决定）</text>
+<text class="sm" x="56" y="364" fill="#5c5c5a">后期　分离（相对恒定）　／　末期与胞质分裂　重建与脱离　／　全程约 1 h</text>
+<text class="sm" x="56" y="386" fill="#412402">★ 方向性　进入 M 期靠可逆的 Cdc25 去磷酸化　退出靠不可逆的 cyclin B 泛素化降解</text>
+
+<text class="hint" x="40" y="412">胞质分裂始于后期末、与末期重叠，并非末期的一部分；植物用成膜体与细胞板，无收缩环</text>
+</svg>

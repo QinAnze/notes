@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html><head><title>特殊的减数分裂</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="特殊的减数分裂"/><meta property="og:description" content="特殊的减数分裂 相关笔记：减数、有丝、Ca 0. 一句话概括 教科书上的减数分裂是一套”默认配置”：一次复制、两次分裂、同源染色体联会并交叉互换、MI 分同源染色体、MII 分姐妹染色单体、产生四个单倍体产物。但自然界里这套配置被反复改写——有的类群完全放弃交叉，有的把两次分裂的分工对调，有的根本不做减数分裂，有的把产物从”配子”改成”孢子”。这些变体统称特殊的减数分裂，它们不是”错误”，而是各自稳定的繁殖策略。 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="特殊的减数分裂 相关笔记：减数、有丝、Ca 0. 一句话概括 教科书上的减数分裂是一套”默认配置”：一次复制、两次分裂、同源染色体联会并交叉互换、MI 分同源染色体、MII 分姐妹染色单体、产生四个单倍体产物。但自然界里这套配置被反复改写——有的类群完全放弃交叉，有的把两次分裂的分工对调，有的根本不做减数分裂，有的把产物从”配子”改成”孢子”。这些变体统称特殊的减数分裂，它们不是”错误”，而是各自稳定的繁殖策略。 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/特殊Meiosis"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#特殊的减数分裂" data-for="特殊的减数分裂">特殊的减数分裂</a></li><li class="depth-1"><a href="#0-一句话概括" data-for="0-一句话概括">0. 一句话概括</a></li><li class="depth-1"><a href="#1-先立模板什么叫标准" data-for="1-先立模板什么叫标准">1. 先立模板：什么叫&quot;标准&quot;</a></li><li class="depth-1"><a href="#2-总览特殊减数分裂的六大类" data-for="2-总览特殊减数分裂的六大类">2. 总览：特殊减数分裂的六大类</a></li><li class="depth-1"><a href="#3-无交叉减数分裂achiasmate-meiosis" data-for="3-无交叉减数分裂achiasmate-meiosis">3. 无交叉减数分裂（achiasmate meiosis）</a></li><li class="depth-2"><a href="#31-现象" data-for="31-现象">3.1 现象</a></li><li class="depth-2"><a href="#32-没有交叉靠什么连住同源染色体" data-for="32-没有交叉靠什么连住同源染色体">3.2 没有交叉，靠什么连住同源染色体</a></li><li class="depth-2"><a href="#33-为什么值得注意" data-for="33-为什么值得注意">3.3 为什么值得注意</a></li><li class="depth-1"><a href="#4-倒置减数分裂inverted-meiosis" data-for="4-倒置减数分裂inverted-meiosis">4. 倒置减数分裂（inverted meiosis）</a></li><li class="depth-2"><a href="#41-触发条件全着丝粒染色体" data-for="41-触发条件全着丝粒染色体">4.1 触发条件：全着丝粒染色体</a></li><li class="depth-2"><a href="#42-分工对调" data-for="42-分工对调">4.2 分工对调</a></li><li class="depth-2"><a href="#43-代表类群与研究意义" data-for="43-代表类群与研究意义">4.3 代表类群与研究意义</a></li><li class="depth-1"><a href="#5-局部联会与性染色体特殊行为" data-for="5-局部联会与性染色体特殊行为">5. 局部联会与性染色体特殊行为</a></li><li class="depth-2"><a href="#51-哺乳动物的-xy-性泡" data-for="51-哺乳动物的-xy-性泡">5.1 哺乳动物的 XY 性泡</a></li><li class="depth-2"><a href="#52-单价体问题" data-for="52-单价体问题">5.2 单价体问题</a></li><li class="depth-2"><a href="#53-鸟类-zw" data-for="53-鸟类-zw">5.3 鸟类 ZW</a></li><li class="depth-1"><a href="#6-多倍体与结构杂合时的减数分裂" data-for="6-多倍体与结构杂合时的减数分裂">6. 多倍体与结构杂合时的减数分裂</a></li><li class="depth-2"><a href="#61-同源多倍体多价体" data-for="61-同源多倍体多价体">6.1 同源多倍体：多价体</a></li><li class="depth-2"><a href="#62-异源多倍体强制二价体" data-for="62-异源多倍体强制二价体">6.2 异源多倍体：强制二价体</a></li><li class="depth-2"><a href="#63-结构杂合倒位环与易位十字" data-for="63-结构杂合倒位环与易位十字">6.3 结构杂合：倒位环与易位十字</a></li><li class="depth-1"><a href="#7-减数分裂驱动meiotic-drive" data-for="7-减数分裂驱动meiotic-drive">7. 减数分裂驱动（meiotic drive）</a></li><li class="depth-1"><a href="#8-无减数分裂与替代繁殖" data-for="8-无减数分裂与替代繁殖">8. 无减数分裂与替代繁殖</a></li><li class="depth-2"><a href="#81-完全不减数无融合生殖与孤雌生殖" data-for="81-完全不减数无融合生殖与孤雌生殖">8.1 完全不减数：无融合生殖与孤雌生殖</a></li><li class="depth-2"><a href="#82-单倍二倍性与无减数分裂的精子" data-for="82-单倍二倍性与无减数分裂的精子">8.2 单倍二倍性与&quot;无减数分裂的精子&quot;</a></li><li class="depth-2"><a href="#83-减数分裂的半套与自体融合" data-for="83-减数分裂的半套与自体融合">8.3 减数分裂的&quot;半套&quot;与自体融合</a></li><li class="depth-2"><a href="#84-减数分裂产物不是配子植物与真菌" data-for="84-减数分裂产物不是配子植物与真菌">8.4 减数分裂产物不是配子：植物与真菌</a></li><li class="depth-1"><a href="#9-胞质与产物命运的特殊安排" data-for="9-胞质与产物命运的特殊安排">9. 胞质与产物命运的特殊安排</a></li><li class="depth-1"><a href="#10-四种模式的横向对照" data-for="10-四种模式的横向对照">10. 四种模式的横向对照</a></li><li class="depth-1"><a href="#11-为什么这些特例重要" data-for="11-为什么这些特例重要">11. 为什么这些特例重要</a></li><li class="depth-1"><a href="#12-常见误区" data-for="12-常见误区">12. 常见误区</a></li><li class="depth-1"><a href="#13-一页速记" data-for="13-一页速记">13. 一页速记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">特殊的减数分裂</h1><p class="content-meta">Nov 25, 2026, 23 min read</p></div></div><article class="popover-hint"><h1 id="特殊的减数分裂">特殊的减数分裂<a aria-hidden="true" tabindex="-1" href="#特殊的减数分裂" class="internal"></a></h1>
+<blockquote>
+<p>相关笔记：<a href="../../细胞生物学/知识点/减数" class="internal">减数</a>、<a href="../../细胞生物学/知识点/有丝" class="internal">有丝</a>、<a href="../../细胞生物学/知识点/Ca" class="internal">Ca</a></p>
+</blockquote>
+<h2 id="0-一句话概括">0. 一句话概括<a aria-hidden="true" tabindex="-1" href="#0-一句话概括" class="internal"></a></h2>
+<p>教科书上的减数分裂是一套”默认配置”：<strong>一次复制、两次分裂、同源染色体联会并交叉互换、MI 分同源染色体、MII 分姐妹染色单体、产生四个单倍体产物</strong>。但自然界里这套配置被反复改写——有的类群<strong>完全放弃交叉</strong>，有的把<strong>两次分裂的分工对调</strong>，有的<strong>根本不做减数分裂</strong>，有的把产物从”配子”改成”孢子”。这些变体统称特殊的减数分裂，它们不是”错误”，而是各自稳定的繁殖策略。</p>
+<hr/>
+<h2 id="1-先立模板什么叫标准">1. 先立模板：什么叫”标准”<a aria-hidden="true" tabindex="-1" href="#1-先立模板什么叫标准" class="internal"></a></h2>
+<p>判断一个减数分裂是否特殊，看五个环节有没有被改动：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>环节</th><th>标准做法</th><th>被改写时会发生什么</th></tr></thead><tbody><tr><td>复制次数</td><td>减数分裂前复制一次</td><td>复制零次（无减数分裂）或分裂前再复制</td></tr><tr><td>交叉互换</td><td>程序性、每个二价体至少一个交叉</td><td>完全无交叉，靠别的机制维持同源连接</td></tr><tr><td>联会</td><td>同源染色体全长联会，形成联会复合体</td><td>只局部联会（性染色体）、多价体、不联会</td></tr><tr><td>两次分裂的分工</td><td>MI 分同源染色体，MII 分姐妹染色单体</td><td>倒置：MI 分姐妹，MII 分同源</td></tr><tr><td>产物</td><td>4 个单倍体细胞，胞质大致均等</td><td>1 个功能卵 + 极体；4 个孢子；2 个精子（无减数分裂）</td></tr></tbody></table>
+<blockquote>
+<p>只要有一条明显偏离，就可归入”特殊”。下面按偏离的类型依次展开。</p>
+</blockquote>
+<hr/>
+<h2 id="2-总览特殊减数分裂的六大类">2. 总览：特殊减数分裂的六大类<a aria-hidden="true" tabindex="-1" href="#2-总览特殊减数分裂的六大类" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>代表类群</th><th>核心偏离</th></tr></thead><tbody><tr><td>无交叉减数分裂</td><td>雄性黑腹果蝇、雌性家蚕（鳞翅目）</td><td>完全或几乎不发生交叉互换</td></tr><tr><td>倒置减数分裂</td><td>线虫、蚜虫、介壳虫、部分蝴蝶与蛾</td><td>MI 分姐妹染色单体，MII 分同源染色体</td></tr><tr><td>局部联会与性染色体特殊行为</td><td>哺乳动物 XY、蝗虫 XO、鸟类 ZW</td><td>只有 PAR 联会，形成性泡并转录沉默</td></tr><tr><td>多倍体与结构杂合</td><td>小麦等多倍体、易位/倒位携带者</td><td>多价体、倒位环、十字形配对</td></tr><tr><td>减数分裂驱动</td><td>小鼠 t 单倍型、玉米 Ab10、果蝇 SD</td><td>自私元件使传递率超过 50%</td></tr><tr><td>无减数分裂与替代繁殖</td><td>蒲公英、雄蜂、蚜虫、轮虫</td><td>无融合生殖、孤雌生殖、有丝分裂产精子</td></tr></tbody></table>
+<hr/>
+<h2 id="3-无交叉减数分裂achiasmate-meiosis">3. 无交叉减数分裂（achiasmate meiosis）<a aria-hidden="true" tabindex="-1" href="#3-无交叉减数分裂achiasmate-meiosis" class="internal"></a></h2>
+<h3 id="31-现象">3.1 现象<a aria-hidden="true" tabindex="-1" href="#31-现象" class="internal"></a></h3>
+<ul>
+<li><strong>雄性黑腹果蝇</strong>：减数分裂中<strong>完全没有交叉互换</strong>，但同源染色体仍能准确分离，生育力正常。</li>
+<li><strong>鳞翅目（蝴蝶、蛾）</strong>：重组只发生在雄性，<strong>雌性无交叉</strong>；家蚕是经典例子。</li>
+<li><strong>雌性果蝇的第 4 染色体</strong>：太小，几乎不发生交叉，靠”非交叉分离”机制传递。</li>
+</ul>
+<h3 id="32-没有交叉靠什么连住同源染色体">3.2 没有交叉，靠什么连住同源染色体<a aria-hidden="true" tabindex="-1" href="#32-没有交叉靠什么连住同源染色体" class="internal"></a></h3>
+<p>交叉在标准减数分裂中承担两个功能：<strong>交换遗传信息</strong>与<strong>提供 MI 的物理连接（张力来源）</strong>。无交叉类群必须解决第二个问题：</p>
+<ol>
+<li><strong>异染色质介导的同源并置（conjunction）</strong>：同源染色体在异染色质区域（如着丝粒周围卫星 DNA）彼此平行靠拢，形成足够稳定的”并置”，替代交叉的连接作用。</li>
+<li><strong>特殊的黏连保护</strong>：MI 时姐妹着丝粒的黏连必须被保护，否则姐妹染色单体提前分开。果蝇中 SNM 等蛋白参与维持这一黏连；MEI-S332（shugoshin 同源物）负责着丝粒黏连保护。</li>
+<li><strong>专用蛋白</strong>：Teflon、Strom 等参与 X-Y 与第四染色体的配对与分离；这些因子在减数分裂中特异表达。</li>
+<li><strong>纺锤体的”分布式分离”</strong>：多个单价体（没有交叉连接的染色体）在同一纺锤体中按大小/异染色质特征分配，确保每个子细胞至少拿到一条。</li>
+</ol>
+<h3 id="33-为什么值得注意">3.3 为什么值得注意<a aria-hidden="true" tabindex="-1" href="#33-为什么值得注意" class="internal"></a></h3>
+<ul>
+<li>它证明<strong>交叉不是染色体分离的必要条件</strong>，“重组”与”分离”在演化上可以解耦。</li>
+<li>它是”重组率性别差异”的极端版本：多数物种雌雄重组率不同，而鳞翅目直接把雌性重组率降到零。</li>
+<li>在果蝇遗传学中，雄性无重组意味着<strong>雄性果蝇的连锁图完全连锁</strong>，做杂交实验时必须用雌蝇测重组。</li>
+</ul>
+<hr/>
+<h2 id="4-倒置减数分裂inverted-meiosis">4. 倒置减数分裂（inverted meiosis）<a aria-hidden="true" tabindex="-1" href="#4-倒置减数分裂inverted-meiosis" class="internal"></a></h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="630" viewBox="0 0 1160 630">
+<rect width="1160" height="630" fill="#ffffff"></rect>
+<text x="580.0" y="38" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="bold" fill="#1F2937">同一件事，两种分工：标准减数分裂 vs 倒置减数分裂</text>
+<text x="215" y="80" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#374151">起始：2n，4C</text>
+<text x="430" y="80" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#374151">MI 之后</text>
+<text x="665" y="80" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#374151">MII 之后：n，1C</text>
+<text x="36" y="204" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="bold" fill="#1F2937">标准</text>
+<text x="36" y="224" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">monocentric</text>
+<text x="36" y="464" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="15" font-weight="bold" fill="#1F2937">倒置</text>
+<text x="36" y="484" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">inverted</text>
+<circle cx="215" cy="210" r="27" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="203.8" y1="195.0" x2="203.8" y2="225.0" stroke="#2F6FBF" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<line x1="208.2" y1="195.0" x2="208.2" y2="225.0" stroke="#2F6FBF" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="206" cy="210" rx="3.7" ry="1.8" fill="#1B2631"></ellipse>
+<line x1="221.8" y1="195.0" x2="221.8" y2="225.0" stroke="#C0392B" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<line x1="226.2" y1="195.0" x2="226.2" y2="225.0" stroke="#C0392B" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="224" cy="210" rx="3.7" ry="1.8" fill="#1B2631"></ellipse>
+<circle cx="430" cy="158" r="27" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="427.8" y1="143.0" x2="427.8" y2="173.0" stroke="#2F6FBF" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<line x1="432.2" y1="143.0" x2="432.2" y2="173.0" stroke="#2F6FBF" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="430" cy="158" rx="3.7" ry="1.8" fill="#1B2631"></ellipse>
+<circle cx="430" cy="262" r="27" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="427.8" y1="247.0" x2="427.8" y2="277.0" stroke="#C0392B" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<line x1="432.2" y1="247.0" x2="432.2" y2="277.0" stroke="#C0392B" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="430" cy="262" rx="3.7" ry="1.8" fill="#1B2631"></ellipse>
+<circle cx="665" cy="126" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="111.0" x2="665.0" y2="141.0" stroke="#2F6FBF" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="126" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="182" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="167.0" x2="665.0" y2="197.0" stroke="#2F6FBF" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="182" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="238" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="223.0" x2="665.0" y2="253.0" stroke="#C0392B" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="238" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="294" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="279.0" x2="665.0" y2="309.0" stroke="#C0392B" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="294" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<line x1="243.0" y1="200.0" x2="399.8" y2="164.8" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="243.0" y1="220.0" x2="399.8" y2="255.2" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="148.0" x2="634.2" y2="129.3" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="168.0" x2="634.1" y2="179.9" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="252.0" x2="634.1" y2="240.1" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="272.0" x2="634.2" y2="290.7" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<text x="322" y="204" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">同源染色体分开</text>
+<text x="548" y="204" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">姐妹染色单体分开</text>
+<circle cx="215" cy="470" r="27" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="203.8" y1="455.0" x2="203.8" y2="485.0" stroke="#2F6FBF" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<line x1="208.2" y1="455.0" x2="208.2" y2="485.0" stroke="#2F6FBF" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="206" cy="470" rx="3.7" ry="1.8" fill="#1B2631"></ellipse>
+<line x1="221.8" y1="455.0" x2="221.8" y2="485.0" stroke="#C0392B" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<line x1="226.2" y1="455.0" x2="226.2" y2="485.0" stroke="#C0392B" stroke-width="3.4" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="224" cy="470" rx="3.7" ry="1.8" fill="#1B2631"></ellipse>
+<circle cx="430" cy="418" r="27" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="423.0" y1="403.0" x2="423.0" y2="433.0" stroke="#2F6FBF" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="423" cy="418" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<line x1="437.0" y1="403.0" x2="437.0" y2="433.0" stroke="#C0392B" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="437" cy="418" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="430" cy="522" r="27" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="423.0" y1="507.0" x2="423.0" y2="537.0" stroke="#2F6FBF" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="423" cy="522" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<line x1="437.0" y1="507.0" x2="437.0" y2="537.0" stroke="#C0392B" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="437" cy="522" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="386" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="371.0" x2="665.0" y2="401.0" stroke="#2F6FBF" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="386" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="442" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="427.0" x2="665.0" y2="457.0" stroke="#C0392B" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="442" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="498" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="483.0" x2="665.0" y2="513.0" stroke="#2F6FBF" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="498" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<circle cx="665" cy="554" r="26" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.3"></circle>
+<line x1="665.0" y1="539.0" x2="665.0" y2="569.0" stroke="#C0392B" stroke-width="3.6" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="665" cy="554" rx="3.2" ry="1.9" fill="#1B2631"></ellipse>
+<line x1="243.0" y1="460.0" x2="399.8" y2="424.8" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="243.0" y1="480.0" x2="399.8" y2="515.2" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="408.0" x2="634.2" y2="389.3" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="428.0" x2="634.1" y2="439.9" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="512.0" x2="634.1" y2="500.1" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<line x1="458.0" y1="532.0" x2="634.2" y2="550.7" stroke="#6B7280" stroke-width="1.6" marker-end="url(#ar)"></line>
+<text x="322" y="464" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">姐妹染色单体先分开</text>
+<text x="548" y="464" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">同源染色体后分开</text>
+<rect x="790" y="104" width="342" height="316" rx="10" fill="#FFFDF8" stroke="#E5D6B8" stroke-width="1.3"></rect>
+<text x="961" y="130" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="13.5" font-weight="bold" fill="#4B3A24">关键：着丝粒的类型</text>
+<line x1="872.0" y1="156.0" x2="872.0" y2="268.0" stroke="#2F6FBF" stroke-width="7" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="872" cy="212" rx="7.5" ry="4.2" fill="#1B2631"></ellipse>
+<text x="872" y="292" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#4B3A24">单着丝粒 monocentric</text>
+<text x="872" y="311" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">动粒只有一个</text>
+<text x="872" y="329" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">姐妹动粒可分向两极</text>
+<line x1="1050.0" y1="156.0" x2="1050.0" y2="268.0" stroke="#C0392B" stroke-width="7" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="1050" cy="168" rx="7.5" ry="3.2" fill="#1B2631"></ellipse>
+<ellipse cx="1050" cy="200" rx="7.5" ry="3.2" fill="#1B2631"></ellipse>
+<ellipse cx="1050" cy="232" rx="7.5" ry="3.2" fill="#1B2631"></ellipse>
+<ellipse cx="1050" cy="262" rx="7.5" ry="3.2" fill="#1B2631"></ellipse>
+<text x="1050" y="292" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#4B3A24">全着丝粒 holocentric</text>
+<text x="1050" y="311" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">动粒遍布全长</text>
+<text x="1050" y="329" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">姐妹动粒难以分开定向</text>
+<line x1="818" y1="348" x2="1104" y2="348" stroke="#E5D6B8" stroke-width="1"></line>
+<text x="961" y="372" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#4B3A24">于是两次分裂的分工对调：</text>
+<text x="961" y="392" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#4B3A24">MI 分姐妹染色单体，MII 分同源染色体。</text>
+<text x="30" y="600" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#6B7280">注：倒置减数分裂见于线虫、蚜虫、介壳虫、蝴蝶等全着丝粒类群；这些类群的交叉互换仍可正常发生。</text>
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"></path></marker></defs></svg>
+<h3 id="41-触发条件全着丝粒染色体">4.1 触发条件：全着丝粒染色体<a aria-hidden="true" tabindex="-1" href="#41-触发条件全着丝粒染色体" class="internal"></a></h3>
+<ul>
+<li>大多数动植物是<strong>单着丝粒（monocentric）</strong>：动粒集中在一个初级缢痕处。MI 时一对姐妹动粒可以被”背靠背”地单极定向，朝向同一极。</li>
+<li>线虫、蚜虫、介壳虫、蝴蝶与蛾、灯心草等类群是<strong>全着丝粒（holocentric）</strong>：动粒蛋白沿染色体全长分布，没有单一的着丝粒位置。</li>
+<li>全着丝粒染色体上，姐妹动粒沿全长交错分布，<strong>无法像单着丝粒那样把一对姐妹动粒整体朝向同一极</strong>。于是 MI 只能退而求其次：先分姐妹染色单体。</li>
+</ul>
+<h3 id="42-分工对调">4.2 分工对调<a aria-hidden="true" tabindex="-1" href="#42-分工对调" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>标准减数分裂</th><th>倒置减数分裂</th></tr></thead><tbody><tr><td>MI</td><td>同源染色体分开</td><td><strong>姐妹染色单体分开</strong></td></tr><tr><td>MI 后每个细胞</td><td>每条染色体仍含 2 条姐妹染色单体</td><td>每条同源染色体只剩 1 条染色单体</td></tr><tr><td>MII</td><td>姐妹染色单体分开</td><td><strong>同源染色体分开</strong></td></tr><tr><td>最终产物</td><td>4 个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 配子</td><td>4 个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 配子（染色体组合方式不同）</td></tr></tbody></table>
+<p>两种路线最终都产生单倍体，但<strong>遗传学后果不同</strong>：倒置减数分裂中，同源染色体直到 MII 才分离，因此 MI 之后每个细胞同时含有来自双亲的同源染色体拷贝，交叉的”远端互换”在产物中的分布方式也随之改变。</p>
+<h3 id="43-代表类群与研究意义">4.3 代表类群与研究意义<a aria-hidden="true" tabindex="-1" href="#43-代表类群与研究意义" class="internal"></a></h3>
+<ul>
+<li><strong>秀丽隐杆线虫</strong>：全着丝粒染色体，MI 即分离姐妹染色单体，是研究倒置减数分裂的遗传学模型。</li>
+<li><strong>蚜虫、介壳虫</strong>：全着丝粒 + 倒置减数分裂，且常伴随父源基因组消除等特殊现象。</li>
+<li><strong>蝴蝶与蛾</strong>：全着丝粒染色体广泛存在，部分类群采用倒置减数分裂。</li>
+<li>倒置减数分裂提示：<strong>“MI 分同源”不是减数分裂的定义性特征</strong>，而是单着丝粒染色体带来的一种实现方式。</li>
+</ul>
+<hr/>
+<h2 id="5-局部联会与性染色体特殊行为">5. 局部联会与性染色体特殊行为<a aria-hidden="true" tabindex="-1" href="#5-局部联会与性染色体特殊行为" class="internal"></a></h2>
+<h3 id="51-哺乳动物的-xy-性泡">5.1 哺乳动物的 XY 性泡<a aria-hidden="true" tabindex="-1" href="#51-哺乳动物的-xy-性泡" class="internal"></a></h3>
+<ul>
+<li>X 与 Y 只在**假常染色体区（PAR）**发生联会与交叉，其余大部分区域不配对。</li>
+<li>未联会的 X/Y 轴形成<strong>性泡（XY body）</strong>：染色质高度浓缩，贴附核膜，转录整体沉默，称为<strong>减数分裂性染色体失活（MSCI）</strong>。</li>
+<li>MSCI 由 DNA 损伤应答驱动：SPO11 造成的 DSB 在 XY 上无法找到同源模板修复，于是 γH2AX、BRCA1、ATR 等信号持续存在，把性染色体”标记”为沉默区。</li>
+<li>后果：性染色体上的基因在减数分裂期间不表达；若 MSCI 失败，精子发生停滞。</li>
+</ul>
+<h3 id="52-单价体问题">5.2 单价体问题<a aria-hidden="true" tabindex="-1" href="#52-单价体问题" class="internal"></a></h3>
+<ul>
+<li><strong>蝗虫 XO 雄性</strong>只有一条 X，MI 时 X 是”单价体”，没有同源伙伴，必须靠特殊机制避免丢失。</li>
+<li>性染色体数目异常（如 XXY、XYY）在减数分裂中形成三价体或单价体，是非整倍体配子的重要来源。</li>
+</ul>
+<h3 id="53-鸟类-zw">5.3 鸟类 ZW<a aria-hidden="true" tabindex="-1" href="#53-鸟类-zw" class="internal"></a></h3>
+<ul>
+<li>鸟类雌性为 ZW 异配性别，减数分裂发生在卵巢；Z 与 W 的配对局限于小片同源区，其余区域不联会，机制与哺乳动物 XY 类似但独立演化。</li>
+</ul>
+<hr/>
+<h2 id="6-多倍体与结构杂合时的减数分裂">6. 多倍体与结构杂合时的减数分裂<a aria-hidden="true" tabindex="-1" href="#6-多倍体与结构杂合时的减数分裂" class="internal"></a></h2>
+<h3 id="61-同源多倍体多价体">6.1 同源多倍体：多价体<a aria-hidden="true" tabindex="-1" href="#61-同源多倍体多价体" class="internal"></a></h3>
+<ul>
+<li>四倍体（AAAA）中，每条染色体都有三个同源伙伴，容易形成<strong>四价体</strong>或各种多价体，分离不规则，育性下降。</li>
+<li>三倍体（AAA）几乎无法均等分离，高度不育——这正是无籽西瓜、三倍体牡蛎的原理。</li>
+</ul>
+<h3 id="62-异源多倍体强制二价体">6.2 异源多倍体：强制二价体<a aria-hidden="true" tabindex="-1" href="#62-异源多倍体强制二价体" class="internal"></a></h3>
+<ul>
+<li>异源六倍体小麦（AABBDD）有三套亚基因组，若随意配对会形成多价体、导致不育。</li>
+<li><strong>Ph1 位点</strong>（5B 染色体上，含 ZIP4 基因重复）抑制部分同源染色体（homoeologs）之间的配对，保证每个染色体只与真正的同源伙伴形成二价体。</li>
+<li>这是”<strong>把多倍体改造成二倍体式减数分裂</strong>“的经典案例，也是小麦稳定的遗传基础。</li>
+</ul>
+<h3 id="63-结构杂合倒位环与易位十字">6.3 结构杂合：倒位环与易位十字<a aria-hidden="true" tabindex="-1" href="#63-结构杂合倒位环与易位十字" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>结构变异</th><th>减数分裂表现</th><th>后果</th></tr></thead><tbody><tr><td>倒位杂合</td><td>同源片段配对时形成<strong>倒位环</strong></td><td>环内交叉产生双着丝粒/无着丝粒片段，重组被抑制</td></tr><tr><td>相互易位杂合</td><td>四条染色体重排成<strong>十字形/四价体</strong></td><td>交替分离可产生平衡配子，邻近分离产生不平衡配子</td></tr><tr><td>罗氏易位</td><td>两条近端着丝粒染色体融合，形成<strong>三价体</strong></td><td>不平衡配子 → 反复流产、先天性异常</td></tr><tr><td>B 染色体</td><td>额外小染色体，常不配对</td><td>通过驱动机制优先传递，或随机丢失</td></tr></tbody></table>
+<blockquote>
+<p>临床上的 PGT-SR 检测，本质就是在胚胎层面筛查这类”特殊减数分裂”造成的不平衡。</p>
+</blockquote>
+<hr/>
+<h2 id="7-减数分裂驱动meiotic-drive">7. 减数分裂驱动（meiotic drive）<a aria-hidden="true" tabindex="-1" href="#7-减数分裂驱动meiotic-drive" class="internal"></a></h2>
+<p>定义：某些遗传元件让自身进入<strong>超过 50%</strong> 的功能配子，违背孟德尔分离比。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>系统</th><th>机制</th></tr></thead><tbody><tr><td>小鼠 t 单倍型</td><td>携带 t 的单倍型精子在受精竞争中占优（Smok1/Tcr 等位点参与），可扭曲后代基因型比例</td></tr><tr><td>玉米 Ab10</td><td>染色体上形成<strong>新着丝粒（neocentromere）</strong>，在减数分裂中优先拉向功能大孢子</td></tr><tr><td>果蝇 SD 系统</td><td>Sd 元件使携带 Rsp 敏感等位基因的精子发育异常，自身得以超比例传递</td></tr><tr><td>酵母 spore killer</td><td>杀死不携带该元件的孢子，保证自身存活</td></tr></tbody></table>
+<p>驱动系统的共同点：<strong>利用减数分裂的机械不对称（着丝粒强弱、纺锤体朝向、配子命运差异）实现”作弊”</strong>。它们通常伴随抑制基因的共同演化，形成基因组内部的”军备竞赛”。</p>
+<hr/>
+<h2 id="8-无减数分裂与替代繁殖">8. 无减数分裂与替代繁殖<a aria-hidden="true" tabindex="-1" href="#8-无减数分裂与替代繁殖" class="internal"></a></h2>
+<h3 id="81-完全不减数无融合生殖与孤雌生殖">8.1 完全不减数：无融合生殖与孤雌生殖<a aria-hidden="true" tabindex="-1" href="#81-完全不减数无融合生殖与孤雌生殖" class="internal"></a></h3>
+<ul>
+<li><strong>无融合生殖（apomixis）</strong>：植物绕过减数分裂直接产生胚。蒲公英（二倍体孢子生殖）与山柳菊（无孢子生殖）是经典例子。农业上若能把该性状引入作物，可永久固定杂种优势。</li>
+<li><strong>孤雌生殖</strong>：卵不经受精直接发育。轮虫、枝角类、蚜虫在环境良好时行孤雌生殖，环境恶化时再回到有性生殖。</li>
+<li><strong>无性生殖的代价</strong>：缺乏重组，有害突变容易累积（Muller 棘轮），因此大多数专性无性谱系寿命有限。</li>
+</ul>
+<h3 id="82-单倍二倍性与无减数分裂的精子">8.2 单倍二倍性与”无减数分裂的精子”<a aria-hidden="true" tabindex="-1" href="#82-单倍二倍性与无减数分裂的精子" class="internal"></a></h3>
+<ul>
+<li>蜜蜂、蚂蚁、胡蜂：雌性二倍体，雄性（蜂王产下的未受精卵）单倍体。</li>
+<li><strong>雄蜂是单倍体，其精子发生靠有丝分裂</strong>：不需要减数分裂，因为没有”减半”的必要。</li>
+<li>这是”单倍二倍性（haplodiploidy）“性别决定系统的必然结果。</li>
+</ul>
+<h3 id="83-减数分裂的半套与自体融合">8.3 减数分裂的”半套”与自体融合<a aria-hidden="true" tabindex="-1" href="#83-减数分裂的半套与自体融合" class="internal"></a></h3>
+<ul>
+<li><strong>自体融合（automixis）</strong>：仍进行减数分裂，但两个产物核在后代中融合，恢复二倍性。</li>
+<li><strong>末端融合</strong>：卵核与第二极体融合 → 后代高度纯合。</li>
+<li><strong>中央融合</strong>：卵核与中央细胞核融合 → 保留较多杂合性。</li>
+<li><strong>配子复制</strong>：减数分裂后染色体直接加倍 → 完全纯合。</li>
+<li>这些机制解释了为什么”孤雌生殖”的后代有时高度纯合、有时几乎与母体相同。</li>
+</ul>
+<h3 id="84-减数分裂产物不是配子植物与真菌">8.4 减数分裂产物不是配子：植物与真菌<a aria-hidden="true" tabindex="-1" href="#84-减数分裂产物不是配子植物与真菌" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>生活史类型</th><th>减数分裂位置</th><th>产物</th></tr></thead><tbody><tr><td>配子减数分裂（动物）</td><td>配子形成前</td><td>直接是配子</td></tr><tr><td>孢子减数分裂（植物）</td><td>孢子体 → 孢子</td><td>孢子，经有丝分裂形成配子体，再产生配子</td></tr><tr><td>合子减数分裂（真菌、部分藻类）</td><td>合子萌发时</td><td>单倍体营养体</td></tr></tbody></table>
+<ul>
+<li>被子植物：小孢子母细胞减数产生 <strong>4 个小孢子</strong>（后被绒毡层供养，形成花粉）；大孢子母细胞减数产生 <strong>4 个大孢子，其中 3 个退化</strong>，只剩 1 个发育为胚囊——“四去三”。</li>
+</ul>
+<hr/>
+<h2 id="9-胞质与产物命运的特殊安排">9. 胞质与产物命运的特殊安排<a aria-hidden="true" tabindex="-1" href="#9-胞质与产物命运的特殊安排" class="internal"></a></h2>
+<ul>
+<li><strong>卵子发生</strong>：两次分裂都极度不均等，胞质几乎全部留给卵子，极体退化。核心逻辑是”把资源集中到一个配子”。</li>
+<li><strong>精子发生</strong>：细胞间桥（intercellular bridge）把同源精母细胞连成合胞体，共享胞质；单倍体基因是否”为自己”表达仍有争议（单倍体基因表达假说）。</li>
+<li><strong>植物花粉</strong>：四个小孢子被共同的胼胝质壁包裹，释放后各自发育；绒毡层为其提供营养。</li>
+<li><strong>寄生虫与共生体</strong>：部分类群的减数分裂与宿主周期同步，时间尺度差异极大。</li>
+</ul>
+<hr/>
+<h2 id="10-四种模式的横向对照">10. 四种模式的横向对照<a aria-hidden="true" tabindex="-1" href="#10-四种模式的横向对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>标准</th><th>无交叉</th><th>倒置</th><th>无减数分裂</th></tr></thead><tbody><tr><td>交叉</td><td>必需</td><td>无</td><td>有</td><td>无</td></tr><tr><td>MI 分离对象</td><td>同源染色体</td><td>同源染色体</td><td>姐妹染色单体</td><td>—</td></tr><tr><td>MII 分离对象</td><td>姐妹染色单体</td><td>姐妹染色单体</td><td>同源染色体</td><td>—</td></tr><tr><td>同源连接的替代机制</td><td>交叉</td><td>异染色质并置 + 专用蛋白</td><td>交叉（仍存在）</td><td>不适用</td></tr><tr><td>产物</td><td>4 个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span></td><td>4 个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span></td><td>4 个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span></td><td>二倍体克隆/单倍体</td></tr><tr><td>代表</td><td>人、小鼠、酵母</td><td>雄性果蝇、雌性家蚕</td><td>线虫、蚜虫、蝴蝶</td><td>蒲公英、雄蜂</td></tr></tbody></table>
+<hr/>
+<h2 id="11-为什么这些特例重要">11. 为什么这些特例重要<a aria-hidden="true" tabindex="-1" href="#11-为什么这些特例重要" class="internal"></a></h2>
+<ul>
+<li><strong>演化</strong>：重组率是可演化的性状，受种群结构、性别选择、驱动元件共同塑造；无交叉与倒置减数分裂说明”减数分裂”是一套模块化机器，可以被局部替换。</li>
+<li><strong>农业</strong>：无融合生殖可固定杂合优势；Ph1 位点决定小麦能否稳定遗传；三倍体不育被用于无籽果实。</li>
+<li><strong>医学</strong>：XY 性泡与 MSCI 关系男性不育；易位/倒位杂合子的减数分裂行为是遗传咨询与 PGT-SR 的基础；母亲年龄相关的黏连消耗是 21 三体的核心解释。</li>
+<li><strong>基础细胞生物学</strong>：倒置减数分裂迫使研究者区分”减数分裂的定义”与”单着丝粒染色体的实现方式”；无交叉果蝇则提供了研究”分离不依赖重组”的天然实验系统。</li>
+</ul>
+<hr/>
+<h2 id="12-常见误区">12. 常见误区<a aria-hidden="true" tabindex="-1" href="#12-常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“所有减数分裂都必须有交叉”</strong>：雄性果蝇、雌性家蚕都没有，靠异染色质并置与专用蛋白完成分离。</li>
+<li><strong>“MI 一定分离同源染色体”</strong>：全着丝粒类群的倒置减数分裂中，MI 先分离姐妹染色单体。</li>
+<li><strong>“减数分裂一定产生四个配子”</strong>：植物产生孢子；卵母细胞只产生一个功能卵子；雄蜂的精子靠有丝分裂产生。</li>
+<li><strong>“全着丝粒就是没有着丝粒”</strong>：动粒遍布全长，仍然承担纺锤体连接功能，只是无法单极定向。</li>
+<li><strong>“没有交叉就没有重组”</strong>：对雄性果蝇基本成立，但其他”低重组”类群仍可能有少量非交叉重组；不要把两者简单等同。</li>
+<li><strong>“多倍体一定形成多价体”</strong>：异源多倍体可通过 Ph1 类机制强制二价体配对。</li>
+<li><strong>“孤雌生殖就是不做减数分裂”</strong>：自体融合型仍进行减数分裂，只是产物核随后融合。</li>
+<li><strong>“雄蜂也做减数分裂”</strong>：雄蜂是单倍体，精子发生为有丝分裂。</li>
+<li><strong>“倒置减数分裂是异常”</strong>：它是全着丝粒类群稳定演化的正常策略。</li>
+<li><strong>“无融合生殖等于完全克隆”</strong>：部分无融合生殖仍保留减数分裂的早期步骤或偶发重组。</li>
+</ol>
+<hr/>
+<h2 id="13-一页速记">13. 一页速记<a aria-hidden="true" tabindex="-1" href="#13-一页速记" class="internal"></a></h2>
+<ul>
+<li><strong>模板五要素</strong>：复制一次、两次分裂、同源联会并交叉、MI 分同源、MII 分姐妹。</li>
+<li><strong>无交叉</strong>：雄性果蝇、雌性鳞翅目；靠异染色质并置 + SNM/MEI-S332 等维持连接。</li>
+<li><strong>倒置</strong>：全着丝粒类群（线虫、蚜虫、蝴蝶）；MI 分姐妹、MII 分同源。</li>
+<li><strong>性染色体</strong>：XY 仅 PAR 联会 → 性泡 → MSCI；XO、ZW 各有单价体问题。</li>
+<li><strong>多倍体</strong>：同源多倍体多价体、异源多倍体靠 Ph1 强制二价体。</li>
+<li><strong>驱动</strong>：t 单倍型、Ab10 新着丝粒、果蝇 SD——传递率 > 50%。</li>
+<li><strong>无减数分裂</strong>：无融合生殖（蒲公英）、雄蜂有丝分裂产精、自体融合三型。</li>
+<li><strong>产物改写</strong>：植物产孢子（大孢子”四去三”）、卵母细胞产 1 卵 + 极体。</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

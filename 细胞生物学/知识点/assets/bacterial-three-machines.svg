@@ -1,0 +1,93 @@
+<svg viewBox="0 0 680 450" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>细菌的生长、复制、分裂三套机器及其耦合调控</title>
+<desc>生长由 elongasome 驱动细胞伸长，复制由 replisome 在 C 期完成 oriC 到 terC 的双向合成，分裂由 FtsZ 的 Z 环与 divisome 在 D 期末完成。三者可解耦，靠起始质量阈值、RIDA 与 SeqA 防再起始、核区闭塞与 SOS 反应协调。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">三件事　三套机器　三个时间尺度</text>
+<text class="hint" x="268" y="24">生长 ≠ 复制 ≠ 分裂　彼此可解耦</text>
+
+<!-- 生长 -->
+<rect x="40" y="40" width="192" height="196" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="56" y="64" fill="#04342C">① 生长</text>
+<text class="sm" x="56" y="84" fill="#085041">生物量增加　细胞纵向伸长</text>
+<text class="sm" x="56" y="106" fill="#085041">机器　核糖体 + elongasome</text>
+<text class="sm" x="56" y="124" fill="#085041">MreB　RodA　PBP2</text>
+<text class="sm" x="56" y="142" fill="#085041">时间　连续、指数式</text>
+<text class="sm" x="56" y="160" fill="#085041">指标　OD₆₀₀　细胞长度</text>
+
+<!-- 伸长示意 -->
+<rect x="70" y="180" width="52" height="20" rx="10" fill="#0F6E56"/>
+<text class="sm" x="132" y="195" fill="#04342C">→</text>
+<rect x="148" y="178" width="70" height="24" rx="12" fill="#0F6E56" opacity="0.75"/>
+<text class="sm" x="116" y="222" fill="#04342C" text-anchor="middle">只变长　不变胖</text>
+
+<!-- 复制 -->
+<rect x="244" y="40" width="192" height="196" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="260" y="64" fill="#042C53">② 复制</text>
+<text class="sm" x="260" y="84" fill="#0C447C">染色体 DNA 从 oriC 到 terC</text>
+<text class="sm" x="260" y="106" fill="#0C447C">机器　replisome</text>
+<text class="sm" x="260" y="124" fill="#0C447C">DnaA　DnaB　DnaG　Pol III</text>
+<text class="sm" x="260" y="142" fill="#0C447C">时间　C 期 ≈ 40 min</text>
+<text class="sm" x="260" y="160" fill="#0C447C">指标　DNA 含量　叉数</text>
+
+<!-- θ 复制示意 -->
+<circle cx="340" cy="194" r="18" fill="none" stroke="#185FA5" stroke-width="2"/>
+<circle cx="340" cy="176" r="3.5" fill="#185FA5"/>
+<circle cx="340" cy="212" r="3.5" fill="#BA7517"/>
+<path d="M340 176 Q 364 178 360 194" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<path d="M340 176 Q 316 178 320 194" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<path d="M340 212 Q 364 210 360 194" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<path d="M340 212 Q 316 210 320 194" fill="none" stroke="#185FA5" stroke-width="1.8"/>
+<text class="sm" x="292" y="198" fill="#042C53">ori</text>
+<text class="sm" x="292" y="216" fill="#412402">ter</text>
+<text class="sm" x="340" y="232" fill="#042C53" text-anchor="middle">θ 型双向复制　两个叉</text>
+
+<!-- 分裂 -->
+<rect x="448" y="40" width="192" height="196" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="464" y="64" fill="#412402">③ 分裂</text>
+<text class="sm" x="464" y="84" fill="#633806">中部形成隔膜　一分为二</text>
+<text class="sm" x="464" y="106" fill="#633806">机器　divisome（Z 环）</text>
+<text class="sm" x="464" y="124" fill="#633806">FtsZ　FtsA　ZipA　PBP3</text>
+<text class="sm" x="464" y="142" fill="#633806">时间　D 期 ≈ 20 min</text>
+<text class="sm" x="464" y="160" fill="#633806">指标　细胞数　隔膜</text>
+
+<!-- 分裂示意 -->
+<rect x="476" y="180" width="136" height="24" rx="12" fill="#BA7517" opacity="0.7"/>
+<line x1="544" y1="178" x2="544" y2="206" stroke="#854F0B" stroke-width="2.5"/>
+<text class="sm" x="544" y="222" fill="#412402" text-anchor="middle">Z 环在中部</text>
+
+<!-- 耦合调控 -->
+<rect class="frame" x="40" y="250" width="600" height="104" rx="10"/>
+<text class="ttl" x="60" y="272">把三件事协调起来的四道关卡</text>
+
+<rect x="60" y="284" width="138" height="52" rx="7" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="129" y="304" fill="#04342C" text-anchor="middle">起始质量 Mᵢ 恒定</text>
+<text class="sm" x="129" y="322" fill="#085041" text-anchor="middle">长到阈值才点火</text>
+
+<rect x="208" y="284" width="138" height="52" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="277" y="304" fill="#042C53" text-anchor="middle">RIDA + SeqA</text>
+<text class="sm" x="277" y="322" fill="#0C447C" text-anchor="middle">一周期只起始一次</text>
+
+<rect x="356" y="284" width="138" height="52" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="425" y="304" fill="#412402" text-anchor="middle">MinCDE + SlmA</text>
+<text class="sm" x="425" y="322" fill="#633806" text-anchor="middle">染色体上方不许切</text>
+
+<rect x="504" y="284" width="116" height="52" rx="7" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="562" y="304" fill="#8C1D18" text-anchor="middle">SOS → SulA</text>
+<text class="sm" x="562" y="322" fill="#8C1D18" text-anchor="middle">损伤时延迟分裂</text>
+
+<!-- 解耦证据 -->
+<rect class="frame" x="40" y="366" width="600" height="70" rx="10"/>
+<text class="ttl" x="60" y="388">解耦的证据　抑制一个，另两个照跑</text>
+<text class="sm" x="60" y="410" fill="#5c5c5a">抑制 FtsZ（SulA / 头孢氨苄）→ 继续伸长与复制 → 多核丝状体</text>
+<text class="sm" x="60" y="428" fill="#5c5c5a">抑制复制 → 仍可伸长；抑制翻译 → 已启动的复制跑完，但不再新起始、不分裂</text>
+
+<text class="hint" x="40" y="446">C 与 D 对生长速率相对不敏感　τ 变化时改的是起始频率与重叠轮数</text>
+</svg>

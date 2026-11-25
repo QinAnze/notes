@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html><head><title>GLUT 家族（葡萄糖转运蛋白家族）</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="GLUT 家族（葡萄糖转运蛋白家族）"/><meta property="og:description" content="GLUT 家族（葡萄糖转运蛋白家族） 核心命题：GLUT（Glucose Transporter，SLC2A 家族）是哺乳动物细胞膜上的钠不依赖性葡萄糖转运体，采用易化扩散（facilitated diffusion）机制。共有 13 个功能亚型（GLUT1–GLUT14），序列相似但组织分布、底物特异性和调控方式截然不同。 三条主线： 结构上高度保守：均为 12 次跨膜螺旋（12-TM），折叠成同一个基本构象 功能上分工明确：分别负责葡萄糖、果糖、UDP-葡萄糖、尿酸等不同底物的跨膜转运 调控上分层级：只有 GLUT4 是胰岛素应答性的（唯一可被激素急性调控），其余为”基础型”转运体 一、家族概览 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="GLUT 家族（葡萄糖转运蛋白家族） 核心命题：GLUT（Glucose Transporter，SLC2A 家族）是哺乳动物细胞膜上的钠不依赖性葡萄糖转运体，采用易化扩散（facilitated diffusion）机制。共有 13 个功能亚型（GLUT1–GLUT14），序列相似但组织分布、底物特异性和调控方式截然不同。 三条主线： 结构上高度保守：均为 12 次跨膜螺旋（12-TM），折叠成同一个基本构象 功能上分工明确：分别负责葡萄糖、果糖、UDP-葡萄糖、尿酸等不同底物的跨膜转运 调控上分层级：只有 GLUT4 是胰岛素应答性的（唯一可被激素急性调控），其余为”基础型”转运体 一、家族概览 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/GLUT"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#glut-家族葡萄糖转运蛋白家族" data-for="glut-家族葡萄糖转运蛋白家族">GLUT 家族（葡萄糖转运蛋白家族）</a></li><li class="depth-1"><a href="#一家族概览" data-for="一家族概览">一、家族概览</a></li><li class="depth-2"><a href="#11-基本特征" data-for="11-基本特征">1.1 基本特征</a></li><li class="depth-2"><a href="#12-三个亚类基于序列同源性" data-for="12-三个亚类基于序列同源性">1.2 三个亚类（基于序列同源性）</a></li><li class="depth-1"><a href="#二结构12-次跨膜螺旋" data-for="二结构12-次跨膜螺旋">二、结构：12 次跨膜螺旋</a></li><li class="depth-2"><a href="#21-拓扑模型的确立" data-for="21-拓扑模型的确立">2.1 拓扑模型的确立</a></li><li class="depth-2"><a href="#22-跨膜螺旋的分组" data-for="22-跨膜螺旋的分组">2.2 跨膜螺旋的分组</a></li><li class="depth-2"><a href="#23-保守性最强的三个位点家族特征序列" data-for="23-保守性最强的三个位点家族特征序列">2.3 保守性最强的三个位点：家族特征序列</a></li><li class="depth-2"><a href="#24-三维结构" data-for="24-三维结构">2.4 三维结构</a></li><li class="depth-2"><a href="#25-转运机制交替进入模型" data-for="25-转运机制交替进入模型">2.5 转运机制：交替进入模型</a></li><li class="depth-1"><a href="#三13-个亚型逐一详解" data-for="三13-个亚型逐一详解">三、13 个亚型逐一详解</a></li><li class="depth-2"><a href="#31-总览对照表" data-for="31-总览对照表">3.1 总览对照表</a></li><li class="depth-2"><a href="#32-glut1slc2a1通用供能者" data-for="32-glut1slc2a1通用供能者">3.2 GLUT1（SLC2A1）——&quot;通用供能者&quot;</a></li><li class="depth-2"><a href="#33-glut2slc2a2葡萄糖感受器" data-for="33-glut2slc2a2葡萄糖感受器">3.3 GLUT2（SLC2A2）——&quot;葡萄糖感受器&quot;</a></li><li class="depth-2"><a href="#34-glut3slc2a3神经专用" data-for="34-glut3slc2a3神经专用">3.4 GLUT3（SLC2A3）——&quot;神经专用&quot;</a></li><li class="depth-2"><a href="#35-glut4slc2a4-唯一胰岛素应答的转运体" data-for="35-glut4slc2a4-唯一胰岛素应答的转运体">3.5 GLUT4（SLC2A4）——⭐ 唯一胰岛素应答的转运体</a></li><li class="depth-2"><a href="#36-glut5slc2a5果糖专属通道" data-for="36-glut5slc2a5果糖专属通道">3.6 GLUT5（SLC2A5）——&quot;果糖专属通道&quot;</a></li><li class="depth-2"><a href="#37-glut8slc2a8核内的果糖通道" data-for="37-glut8slc2a8核内的果糖通道">3.7 GLUT8（SLC2A8）——&quot;核内的果糖通道&quot;</a></li><li class="depth-2"><a href="#38-glut9slc2a9尿酸转运体urat1" data-for="38-glut9slc2a9尿酸转运体urat1">3.8 GLUT9（SLC2A9）——&quot;尿酸转运体（URAT1）&quot;</a></li><li class="depth-2"><a href="#39-其他亚型要点" data-for="39-其他亚型要点">3.9 其他亚型要点</a></li><li class="depth-1"><a href="#四glut-与疾病" data-for="四glut-与疾病">四、GLUT 与疾病</a></li><li class="depth-2"><a href="#41-遗传病" data-for="41-遗传病">4.1 遗传病</a></li><li class="depth-2"><a href="#42-肿瘤生物学fdg-pet-的分子基础" data-for="42-肿瘤生物学fdg-pet-的分子基础">4.2 肿瘤生物学：FDG-PET 的分子基础</a></li><li class="depth-2"><a href="#43-其他病理关联" data-for="43-其他病理关联">4.3 其他病理关联</a></li><li class="depth-1"><a href="#五研究方法" data-for="五研究方法">五、研究方法</a></li><li class="depth-2"><a href="#51-表达与定位" data-for="51-表达与定位">5.1 表达与定位</a></li><li class="depth-2"><a href="#52-葡萄糖摄取功能测定" data-for="52-葡萄糖摄取功能测定">5.2 葡萄糖摄取功能测定</a></li><li class="depth-2"><a href="#53-药理学工具" data-for="53-药理学工具">5.3 药理学工具</a></li><li class="depth-1"><a href="#六要点速记" data-for="六要点速记">六、要点速记</a></li><li class="depth-1"><a href="#七常见误区澄清" data-for="七常见误区澄清">七、常见误区澄清</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">GLUT 家族（葡萄糖转运蛋白家族）</h1><p class="content-meta">Nov 25, 2026, 37 min read</p></div></div><article class="popover-hint"><h1 id="glut-家族葡萄糖转运蛋白家族">GLUT 家族（葡萄糖转运蛋白家族）<a aria-hidden="true" tabindex="-1" href="#glut-家族葡萄糖转运蛋白家族" class="internal"></a></h1>
+<blockquote>
+<p><strong>核心命题</strong>：GLUT（Glucose Transporter，<strong>SLC2A 家族</strong>）是哺乳动物细胞膜上的<strong>钠不依赖性葡萄糖转运体</strong>，采用<strong>易化扩散（facilitated diffusion）<strong>机制。共有 <strong>13 个功能亚型（GLUT1–GLUT14）</strong>，序列相似但</strong>组织分布、底物特异性和调控方式截然不同</strong>。</p>
+<p>三条主线：</p>
+<ul>
+<li><strong>结构上高度保守</strong>：均为 <strong>12 次跨膜螺旋（12-TM）</strong>，折叠成同一个基本构象</li>
+<li><strong>功能上分工明确</strong>：分别负责葡萄糖、果糖、UDP-葡萄糖、尿酸等不同底物的跨膜转运</li>
+<li><strong>调控上分层级</strong>：只有 <strong>GLUT4</strong> 是<strong>胰岛素应答性</strong>的（唯一可被激素急性调控），其余为”基础型”转运体</li>
+</ul>
+</blockquote>
+<hr/>
+<h2 id="一家族概览">一、家族概览<a aria-hidden="true" tabindex="-1" href="#一家族概览" class="internal"></a></h2>
+<h3 id="11-基本特征">1.1 基本特征<a aria-hidden="true" tabindex="-1" href="#11-基本特征" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td><strong>家族命名</strong></td><td><strong>SGLT</strong>（Sodium-Glucose Linked Transporter，钠-糖协同转运体）<br/><strong>GLUT</strong>（Glucose Transporter，易化扩散型）</td></tr><tr><td><strong>基因家族</strong></td><td><strong>SLC2A</strong>（Solute Carrier family 2A）</td></tr><tr><td><strong>亚型数量</strong></td><td>哺乳动物 <strong>13 个功能亚型</strong>（GLUT1–GLUT12 + GLUT13）；另有 <strong>GLUT4 假基因</strong></td></tr><tr><td><strong>蛋白大小</strong></td><td><strong>45–55 kDa</strong>（约 500 个氨基酸）</td></tr><tr><td><strong>跨膜结构</strong></td><td><strong>12 次跨膜 α-螺旋（TM1–TM12）</strong>；N 端和 C 端均在<strong>胞质侧</strong></td></tr><tr><td><strong>转运方式</strong></td><td><strong>易化扩散</strong>（顺浓度梯度，<strong>不耗 ATP、不耦合 Na⁺</strong>），<strong>可逆</strong></td></tr><tr><td><strong>特异性</strong></td><td>底物之间可区分但<strong>不完全</strong>（多数亚型也能转运其他己糖）</td></tr></tbody></table>
+<blockquote>
+<p>⚠️ <strong>最关键的区分</strong>：<strong>GLUT vs SGLT</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th><strong>GLUT</strong></th><th><strong>SGLT</strong></th></tr></thead><tbody><tr><td>基因</td><td><strong>SLC2A</strong></td><td><strong>SLC5A</strong>（含 SGLT1/SGLT2）</td></tr><tr><td>机制</td><td><strong>易化扩散</strong>（被动、<strong>不耗能</strong>）</td><td><strong>Na⁺-葡萄糖协同转运</strong>（<strong>主动</strong>，耗能）</td></tr><tr><td>方向</td><td>顺浓度梯度，<strong>双向</strong></td><td>逆梯度，<strong>单向</strong></td></tr><tr><td>部位</td><td><strong>细胞膜</strong></td><td><strong>小肠上皮刷状缘</strong>、<strong>肾小管近曲小管</strong></td></tr><tr><td>代表</td><td><strong>GLUT4</strong>（肌肉/脂肪）</td><td><strong>SGLT1</strong>（肠道）、<strong>SGLT2</strong>（肾，<strong>SGLT2 抑制剂是重要降糖药</strong>）</td></tr></tbody></table>
+</blockquote>
+<h3 id="12-三个亚类基于序列同源性">1.2 三个亚类（基于序列同源性）<a aria-hidden="true" tabindex="-1" href="#12-三个亚类基于序列同源性" class="internal"></a></h3>
+<p>现代分类不再简单按编号，而是按<strong>序列同源性 + 顶膜定位</strong>分为三亚类：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>亚类</th><th>成员</th><th>结构特征</th><th>共同功能</th></tr></thead><tbody><tr><td><strong>Class I（经典型）</strong></td><td><strong>GLUT1、GLUT2、GLUT3、GLUT4</strong></td><td><strong>顶膜型</strong>（basolateral-type），有<strong>糖基化位点</strong>位于细胞外环</td><td><strong>葡萄糖</strong>转运；参与<strong>代谢稳态与神经功能</strong></td></tr><tr><td><strong>Class II</strong></td><td><strong>GLUT5、GLUT7、GLUT9、GLUT11</strong></td><td>顶膜型，但部分为<strong>酸性的胞内转运体</strong></td><td><strong>果糖</strong>（GLUT5/7/11）、<strong>尿酸</strong>（GLUT9）</td></tr><tr><td><strong>Class III</strong></td><td><strong>GLUT6、GLUT8、GLUT10、GLUT12</strong></td><td>含<strong>糖基化序列或溶酶体定位</strong>信号；GLUT8 有<strong>核定位信号（NLS）</strong></td><td><strong>核内/细胞器内</strong>代谢，UDP-糖转运等</td></tr></tbody></table>
+<blockquote>
+<p>📌 <strong>历史沿革</strong>：早期按编号 GLUT1–GLUT5；1990 年代 Glaser 实验室通过系统发育分析发现分成三亚类，这套分类沿用至今。</p>
+</blockquote>
+<hr/>
+<h2 id="二结构12-次跨膜螺旋">二、结构：12 次跨膜螺旋<a aria-hidden="true" tabindex="-1" href="#二结构12-次跨膜螺旋" class="internal"></a></h2>
+<p></p><figure class="svg-figure" data-svg="glut-topology-transport.svg"><svg viewBox="0 0 680 430" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>GLUT 十二次跨膜结构与交替进入机制</title>
+<desc>GLUT 蛋白为 12 次跨膜螺旋，含胞外糖基化环与胞内连接环，TM7、TM8、TM11 组成底物结合三联体；转运通过外向开放与内向开放构象交替实现易化扩散。</desc>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl  { font-size: 12px; fill: #4b5563; }
+  .sm   { font-size: 11px; }
+  .frame{ fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="26">十二次跨膜拓扑　12-TM</text>
+<text class="lbl" x="240" y="26">保守底物结合三联体：TM7 的 Q、TM8 的 GL/GE、TM11 的 N-I</text>
+
+<rect class="frame" x="40" y="40" width="420" height="230" rx="14"></rect>
+<text class="lbl" x="56" y="62">胞外　含 N-糖基化位点，形成糖萼</text>
+
+<line x1="60" y1="112" x2="60" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="96" y1="112" x2="96" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="132" y1="112" x2="132" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="168" y1="112" x2="168" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="204" y1="112" x2="204" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="240" y1="112" x2="240" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="276" y1="112" x2="276" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="312" y1="112" x2="312" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="348" y1="112" x2="348" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="384" y1="112" x2="384" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+<line x1="420" y1="112" x2="420" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"></line>
+
+<rect x="256" y="146" width="176" height="16" rx="8" fill="#534AB7" stroke="#AFA9EC" stroke-width="0.5"></rect>
+<text x="344" y="154" font-size="11" fill="#EEEDFE" text-anchor="middle" dominant-baseline="central">中央四螺旋束　底物通道</text>
+
+<circle cx="276" cy="212" r="7" fill="#EF9F27" stroke="#FAC775" stroke-width="0.5"></circle>
+<circle cx="348" cy="212" r="7" fill="#EF9F27" stroke="#FAC775" stroke-width="0.5"></circle>
+
+<text class="lbl" x="56" y="240">胞质　长连接环，含核定位信号（GLUT8）</text>
+
+<text class="lbl" x="480" y="112">TM1–TM6　第一结构域</text>
+<text class="lbl" x="480" y="180">TM7–TM12　第二结构域</text>
+<text x="480" y="212" font-size="13" font-weight="500" fill="#EF9F27">两个单元相对滑动</text>
+<text class="lbl" x="480" y="234">电梯机制 elevator</text>
+
+<rect class="frame" x="40" y="292" width="600" height="118" rx="12"></rect>
+<text class="ttl" x="60" y="316">交替进入机制　不同时开放两侧</text>
+
+<rect x="64" y="332" width="170" height="60" rx="8" fill="#0C447C" stroke="#85B7EB" stroke-width="0.5"></rect>
+<text x="149" y="352" font-size="13" fill="#B5D4F4" text-anchor="middle">外向开放　Of</text>
+<text class="sm" x="149" y="372" fill="#85B7EB" text-anchor="middle">胞质环闭合</text>
+<text class="sm" x="149" y="386" fill="#85B7EB" text-anchor="middle">底物从胞质侧进入</text>
+
+<path d="M244 362 L292 362" stroke="#5DCAA5" stroke-width="1" fill="none" marker-end="url(#ar)"></path>
+<text class="lbl" x="268" y="348" text-anchor="middle">滑动</text>
+
+<rect x="302" y="332" width="170" height="60" rx="8" fill="#085041" stroke="#5DCAA5" stroke-width="0.5"></rect>
+<text x="387" y="352" font-size="13" fill="#9FE1CB" text-anchor="middle">内向开放　If</text>
+<text class="sm" x="387" y="372" fill="#5DCAA5" text-anchor="middle">外侧环闭合</text>
+<text class="sm" x="387" y="386" fill="#5DCAA5" text-anchor="middle">底物向胞外释放</text>
+
+<path d="M482 362 L530 362" stroke="#5DCAA5" stroke-width="1" fill="none" marker-end="url(#ar)"></path>
+
+<text class="lbl" x="546" y="348">易化扩散</text>
+<text class="lbl" x="546" y="368">不耗 ATP</text>
+<text class="lbl" x="546" y="386">可逆　不浓缩</text>
+</svg></figure><p></p>
+<blockquote>
+<p><strong>上半部分</strong>：GLUT 的 12-TM 拓扑。紫色为 12 条跨膜螺旋，深紫横带为<strong>中央四螺旋束（底物通道）</strong>，橙色圆点标记 <strong>TM11 的 N-I 位点</strong>与 <strong>TM7 的 Q 位点</strong>——它们与 TM8 的 GL/GE 共同组成<strong>家族保守三联体</strong>。上方为含糖基化位点的胞外环（形成糖萼），下方为含核定位信号的长胞质环。</p>
+<p><strong>下半部分</strong>：<strong>交替进入机制</strong>。外向开放（Of，胞质环闭合）与内向开放（If，外侧环闭合）交替出现，两个 6-TM 单元相对滑动（电梯机制）。<strong>绝不让两侧同时开放</strong>——防止质子/水短路。这决定了 GLUT 只能做<strong>易化扩散</strong>：不耗 ATP、可逆、不浓缩。</p>
+</blockquote>
+<h3 id="21-拓扑模型的确立">2.1 拓扑模型的确立<a aria-hidden="true" tabindex="-1" href="#21-拓扑模型的确立" class="internal"></a></h3>
+<p><strong>Mueckler 等（1994, Neuron）</strong> 用<strong>水合性分析（hydropathy analysis）+ 表位定位实验（epitope mapping）</strong> 证明：GLUT1 为 <strong>12-TM 拓扑</strong>，N/C 端均在胞质。</p>
+<blockquote>
+<p>这是一个<strong>方法论经典</strong>：当时无法确定膜蛋白三维结构，只能靠”疏水性轮廓 + 抗体 epitope 定位 + 蛋白酶保护实验”组合推断拓扑。现代可以直接用冷冻电镜验证。</p>
+</blockquote>
+<h3 id="22-跨膜螺旋的分组">2.2 跨膜螺旋的分组<a aria-hidden="true" tabindex="-1" href="#22-跨膜螺旋的分组" class="internal"></a></h3>
+<svg viewBox="0 0 700 312" width="100%" style="max-width:700px;height:auto;display:block;margin:1rem auto;" xmlns="http://www.w3.org/2000/svg">
+<text x="350" y="22" text-anchor="middle" font-size="13" stroke="none">胞外（Extracellular）</text>
+  <text x="350" y="46" text-anchor="middle" font-size="10" stroke="none">胞外环 E1 · 糖基化位点 N-X-S/T（形成糖萼）</text>
+  <rect x="24" y="68" width="652" height="150" fill="var(--lightgray)" opacity="0.16"></rect>
+  <line x1="24" y1="68" x2="676" y2="68" stroke="currentColor" stroke-width="1" opacity="0.55"></line>
+  <line x1="24" y1="218" x2="676" y2="218" stroke="currentColor" stroke-width="1" opacity="0.55"></line>
+  <g stroke="currentColor" stroke-width="1.6" fill="none">
+    <ellipse cx="52" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="100" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="148" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="196" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="244" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="292" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="408" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="456" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="504" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="552" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="600" cy="143" rx="10" ry="62"></ellipse>
+    <ellipse cx="648" cy="143" rx="10" ry="62"></ellipse>
+    <path d="M292,81 Q350,52 408,81"></path>
+    <path d="M456,218 Q480,244 504,218"></path>
+  </g>
+  <g fill="currentColor" stroke="none">
+    <circle cx="408" cy="143" r="4"></circle>
+    <circle cx="456" cy="143" r="4"></circle>
+    <circle cx="600" cy="143" r="4"></circle>
+  </g>
+  <g font-size="8.5" text-anchor="middle" stroke="none">
+    <text x="52" y="232">TM1</text>
+    <text x="100" y="232">TM2</text>
+    <text x="148" y="232">TM3</text>
+    <text x="196" y="232">TM4</text>
+    <text x="244" y="232">TM5</text>
+    <text x="292" y="232">TM6</text>
+    <text x="408" y="232">TM7</text>
+    <text x="456" y="232">TM8</text>
+    <text x="504" y="232">TM9</text>
+    <text x="552" y="232">TM10</text>
+    <text x="600" y="232">TM11</text>
+    <text x="648" y="232">TM12</text>
+  </g>
+  <text x="480" y="266" text-anchor="middle" font-size="10" stroke="none">胞内长连接环 I1 · 含 NLS（GLUT8）</text>
+  <text x="24" y="286" font-size="9" stroke="none">⊙ 关键底物结合残基：Q（TM7）、GL+GE（TM8）、N-I（TM11），共同组成家族保守三联体</text>
+  <text x="350" y="306" text-anchor="middle" font-size="13" stroke="none">胞质（Cytoplasm）</text></svg>
+<p><em>上图：12-TM 拓扑——中央结合区由 TM7（Q）、TM8（GL/GE）、TM11（N-I）组成；TM6–TM7 的胞外环带糖基化位点，TM8–TM9 的胞内环最长并含 NLS。</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>结构域</th><th>跨膜区段</th><th>关键残基 / 功能</th></tr></thead><tbody><tr><td><strong>N 端</strong></td><td>胞质</td><td>短，糖基化位点（部分亚型）；GLUT4 的 N 端含<strong>胰岛素调节序列</strong>相关区域</td></tr><tr><td><strong>胞外连接环 E1</strong></td><td>TM6–TM7 之间</td><td><strong>含 N-糖基化位点</strong>（N-X-S/T），形成<strong>糖萼</strong>（glycocalyx），决定与血脑屏障/转运体相互作用</td></tr><tr><td><strong>中央结合区</strong></td><td><strong>TM7（Q）–TM8（GL/GE）–TM11（N-I）</strong></td><td>⭐ <strong>底物结合的核心三联体</strong></td></tr><tr><td><strong>胞内连接环 I1</strong></td><td>TM8–TM9 之间</td><td>长；含 <strong>N 端 NLS</strong>（GLUT8）；决定<strong>亚细胞定位</strong></td></tr><tr><td><strong>C 端</strong></td><td>胞质</td><td>短；可能含糖基化位点（GLUT4 除外）</td></tr></tbody></table>
+<h3 id="23-保守性最强的三个位点家族特征序列">2.3 保守性最强的三个位点：家族特征序列<a aria-hidden="true" tabindex="-1" href="#23-保守性最强的三个位点家族特征序列" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>位点</th><th>位置</th><th>残基</th><th>作用</th><th>突变后果</th></tr></thead><tbody><tr><td><strong>Q 位点</strong></td><td><strong>TM7</strong></td><td><strong>谷氨酰胺（Q）</strong></td><td>直接参与底物氢键；是<strong>质子/水耦合</strong>的关键</td><td>Q 突变（GLUT1 Q282）→ <strong>完全丧失转运活性</strong></td></tr><tr><td><strong>GL/GE 位点</strong></td><td><strong>TM8</strong></td><td>甘氨酸-亮氨酸 / 谷氨酸</td><td>结合底物</td><td>突变 → Km 大幅上升</td></tr><tr><td><strong>N-I 位点</strong></td><td><strong>TM11</strong></td><td><strong>天冬酰胺（N）-异亮氨酸（I）</strong></td><td>糖基化位点相邻；<strong>家族特征基序（signature motif）</strong>，用于序列分类</td><td>突变 → 破坏折叠与转运</td></tr></tbody></table>
+<blockquote>
+<p>🔑 <strong>家族分类学依据</strong>：这三个保守位点（尤其 <strong>TM11 的 N-I 基序</strong>）是划分 Class I/II/III 的序列依据。<strong>人 GLUT 的功能亚型在进化上高度保守，但组织分布与调控是各亚型的分化点。</strong></p>
+</blockquote>
+<h3 id="24-三维结构">2.4 三维结构<a aria-hidden="true" tabindex="-1" href="#24-三维结构" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>研究</th><th>年份</th><th>贡献</th></tr></thead><tbody><tr><td><strong>GLUT1-1 与 BODIPY-精氨酸复合物</strong> X 射线晶体结构（<strong>Kaplan / Xue / Oguno 等，Nature</strong>）</td><td><strong>2015</strong></td><td>首个 GLUT 高分辨率结构；<strong>外向开放构象（outward-facing, Of）</strong>，分辨率约 3 Å；揭示底物从胞质侧进入的通路</td></tr><tr><td><strong>apo GLUT1-1 结构</strong>（Chacan 等 / Hearne 等）</td><td>2015–2017</td><td><strong>内向开放构象（inward-facing, If）</strong>；确认为 <strong>“elevator（电梯）/ 对称性交替”</strong> 机制</td></tr><tr><td><strong>冷冻电镜（cryo-EM）</strong></td><td>2017 至今</td><td>多个亚型与底物/抑制剂复合物的高分辨率结构；<strong>分子动力学（MD）模拟</strong>揭示转运循环</td></tr></tbody></table>
+<p><strong>结构要点</strong></p>
+<ul>
+<li>12 条 TM 组成<strong>两个结构域</strong>：TM1–TM6 为一个 6-TM 单元，TM7–TM12 为另一个，二者通过转运循环<strong>相对滑动</strong></li>
+<li><strong>中央 4 螺旋束（TM4、TM5、TM7、TM11）</strong> 围成底物通道；TM11 的 N 侧链与 Q 共同”夹住”葡萄糖</li>
+<li><strong>外侧连接环 E1</strong> 折叠覆盖在转运体顶部，是糖萼与细胞外环境（糖基化）的接触面</li>
+</ul>
+<h3 id="25-转运机制交替进入模型">2.5 转运机制：交替进入模型<a aria-hidden="true" tabindex="-1" href="#25-转运机制交替进入模型" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart LR
+    A[&quot;外向开放构象（Outward-facing·Of）&quot;] -->|&quot;与胞质溶液接触&quot;| B[&quot;底物从胞质侧结合&quot;]
+    B -->|&quot;胞质环闭合&quot;| C[&quot;C1 态（胞质环闭合）&quot;]
+    C -->|&quot;两个 6-TM 单元相对滑动&quot;| D[&quot;内向开放构象（Inward-facing·If）&quot;]
+    D -->|&quot;与胞外溶液接触，释放底物&quot;| E[&quot;C3 态（胞外环闭合）&quot;]
+    E -->|&quot;外侧环打开，回到外向开放&quot;| A
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>概念</th><th>含义</th></tr></thead><tbody><tr><td><strong>交替进入（alternating access）</strong></td><td>转运体<strong>绝不让底物两侧同时开放</strong>——防止质子/水短路</td></tr><tr><td><strong>C1 / C3 构象</strong></td><td>C1：胞质环闭合、外侧开放；C3：外侧环闭合、胞质开放</td></tr><tr><td><strong>“电梯”机制（elevator mechanism）</strong></td><td>两个 6-TM 单元像电梯一样<strong>相对滑动</strong>，中央 4-螺旋束保持相对固定</td></tr><tr><td><strong>可逆性</strong></td><td>浓度梯度反向时，转运方向反转——<strong>不消耗能量</strong></td></tr><tr><td><strong>净效应</strong></td><td>只是<strong>加快扩散</strong>，不改变<strong>稳态浓度分布</strong></td></tr></tbody></table>
+<blockquote>
+<p>💡 <strong>易化扩散的本质</strong>：GLUT 只能<strong>加快</strong>葡萄糖跨膜的速率，<strong>不能逆梯度浓缩</strong>。这解释了为什么<strong>GLUT 的作用不能被 SGLT 替代</strong>——后者能逆梯度主动转运。</p>
+</blockquote>
+<hr/>
+<h2 id="三13-个亚型逐一详解">三、13 个亚型逐一详解<a aria-hidden="true" tabindex="-1" href="#三13-个亚型逐一详解" class="internal"></a></h2>
+<h3 id="31-总览对照表">3.1 总览对照表<a aria-hidden="true" tabindex="-1" href="#31-总览对照表" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>亚型</th><th>基因</th><th>组织分布</th><th>主要底物</th><th>Km（葡萄糖）</th><th>特征</th><th>疾病关联</th></tr></thead><tbody><tr><td><strong>GLUT1</strong></td><td><strong>SLC2A1</strong></td><td>红细胞、血脑屏障、胎盘、多数组织</td><td>葡萄糖</td><td><strong>1.5–2.6 mM</strong></td><td>基础型；<strong>肿瘤高表达</strong>；<strong>糖酵解标志物</strong></td><td><strong>GLUT1 缺陷综合征</strong>、癫痫、肿瘤</td></tr><tr><td><strong>GLUT2</strong></td><td><strong>SLC2A2</strong></td><td>肝、<strong>胰岛β细胞</strong>、肾小管、肠上皮基底外侧</td><td>葡萄糖</td><td><strong>~17 mM</strong>（<strong>高 Km</strong>，低亲和力）</td><td><strong>“葡萄糖感受器”</strong>；<strong>高容量</strong></td><td><strong>Fanconi-Bickel 综合征</strong></td></tr><tr><td><strong>GLUT3</strong></td><td><strong>SLC2A3</strong></td><td><strong>神经元</strong>、胎盘、小脑</td><td>葡萄糖</td><td><strong>1.4–1.6 mM</strong>（<strong>高亲和力</strong>）</td><td>脑葡萄糖转运主力；<strong>2-DG 高摄取</strong></td><td><strong>GLUT3 缺陷综合征</strong>、发育迟缓</td></tr><tr><td><strong>GLUT4</strong></td><td><strong>SLC2A4</strong></td><td><strong>骨骼肌</strong>、<strong>脂肪</strong>、心肌</td><td>葡萄糖</td><td><strong>~5 mM</strong></td><td>⭐ <strong>唯一胰岛素应答性</strong>；<strong>胰岛素调节型储存囊泡</strong></td><td><strong>2 型糖尿病</strong>、胰岛素抵抗</td></tr><tr><td><strong>GLUT5</strong></td><td><strong>SLC2A5</strong></td><td><strong>小肠刷状缘</strong>、<strong>精子</strong></td><td><strong>果糖</strong></td><td>葡萄糖不转运</td><td>果糖专属；<strong>精子获能</strong></td><td>果糖不耐受</td></tr><tr><td><strong>GLUT6</strong></td><td><strong>SLC2A6</strong></td><td>脑（曾标注为假基因）</td><td>己糖</td><td>—</td><td>近年发现为<strong>功能糖基化转运体</strong>；与 <strong>HK3</strong>、<strong>GUT1</strong> 偶联</td><td>神经功能</td></tr><tr><td><strong>GLUT7</strong></td><td><strong>SLC2A7</strong></td><td><strong>内质网、线粒体</strong>、肝</td><td><strong>果糖-2-磷酸</strong></td><td>—</td><td><strong>细胞器内</strong>糖代谢；<strong>酸度依赖</strong></td><td>糖代谢紊乱</td></tr><tr><td><strong>GLUT8</strong></td><td><strong>SLC2A8</strong></td><td>脂肪、肝、肾、<strong>细胞核</strong></td><td><strong>果糖</strong></td><td>—</td><td>⭐ <strong>含核定位信号（NLS）</strong>；<strong>核果糖代谢</strong>；与<strong>应激颗粒</strong>相关</td><td>代谢紊乱、应激</td></tr><tr><td><strong>GLUT9</strong></td><td><strong>SLC2A9</strong></td><td><strong>肾小管</strong>、肝、肠</td><td><strong>尿酸（urate）</strong></td><td>—</td><td>⭐ <strong>URAT1</strong>；<strong>尿酸转运体（阴离子交换）</strong>；<strong>与痛风直接相关</strong></td><td><strong>痛风</strong>、尿酸肾结石、<strong>低尿酸血症</strong></td></tr><tr><td><strong>GLUT10</strong></td><td><strong>SLC2A10</strong></td><td>骨骼、软骨、结缔组织</td><td><strong>UDP-葡萄糖</strong></td><td>—</td><td>为<strong>糖基化反应供底物</strong>（糖基化原料通道）</td><td>2 型糖尿病关联</td></tr><tr><td><strong>GLUT11</strong></td><td><strong>SLC2A11</strong></td><td><strong>心肌</strong>、骨骼肌、肾</td><td><strong>果糖-3-磷酸</strong></td><td>—</td><td>肌肉能量代谢；<strong>溶酶体靶向</strong></td><td><strong>扩张型心肌病</strong></td></tr><tr><td><strong>GLUT12</strong></td><td><strong>SLC2A12</strong></td><td>脂肪、心、结肠</td><td>己糖</td><td>较高</td><td>替代型 GLUT1；<strong>胰岛素应答性（类似 GLUT4）</strong></td><td>压力性青光眼可能相关</td></tr><tr><td><strong>GLUT13</strong></td><td><strong>SLC2A13</strong></td><td>脑</td><td>—</td><td>—</td><td>长期标注为<strong>假基因</strong>，现发现有表达</td><td>神经功能</td></tr></tbody></table>
+<hr/>
+<h3 id="32-glut1slc2a1通用供能者">3.2 GLUT1（SLC2A1）——“通用供能者”<a aria-hidden="true" tabindex="-1" href="#32-glut1slc2a1通用供能者" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>组织分布</strong></td><td><strong>红细胞</strong>（成熟红细胞唯一的糖来源）、<strong>血脑屏障</strong>（脑毛细血管内皮基底外侧）、<strong>胎盘</strong>、脂肪、肌肉、肾；<strong>几乎所有组织</strong></td></tr><tr><td><strong>底物</strong></td><td>葡萄糖（高亲和力，Km 1.5–2.6 mM）；也能转运 <strong>2-脱氧葡萄糖（2-DG）</strong>、<strong>脱氧胆酸</strong>等</td></tr><tr><td><strong>关键特性</strong></td><td>基础型表达，<strong>不受胰岛素调控</strong>；<strong>膜上常驻</strong>，半衰期长</td></tr><tr><td><strong>生理作用</strong></td><td>① 保证红细胞 ATP（红细胞无线粒体，<strong>只能靠糖酵解</strong>）<br/>② 为脑提供葡萄糖（<strong>血脑屏障的”门控”</strong>）<br/>③ 多数细胞的<strong>基础糖摄取</strong></td></tr><tr><td><strong>病理意义</strong></td><td>🟢 <strong>肿瘤标志物</strong>：多数实体瘤（<strong>Warburg 效应</strong>）高表达 GLUT1 → <strong>FDG-PET</strong> 显像的分子基础<br/>🔴 <strong>GLUT1 缺陷综合征（GLUT1DS1 / De Vivo 病）</strong>：SLC2A1 杂合突变，轻度高血糖 + 癫痫 + 运动发育迟缓 + 低 CSF 葡萄糖<br/>🔴 表达升高与<strong>癫痫</strong>（尤其婴儿期）、<strong>肿瘤预后不良</strong>相关</td></tr></tbody></table>
+<blockquote>
+<p>🧠 <strong>记忆点</strong>：<strong>红细胞 + 脑</strong> 是 GLUT1 的两个标志性岗位。
+<strong>FDG-PET 显像能看肿瘤，就是因为肿瘤细胞像红细胞一样”贪吃糖”——高表达 GLUT1（+ HK2）</strong>。</p>
+</blockquote>
+<hr/>
+<h3 id="33-glut2slc2a2葡萄糖感受器">3.3 GLUT2（SLC2A2）——“葡萄糖感受器”<a aria-hidden="true" tabindex="-1" href="#33-glut2slc2a2葡萄糖感受器" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>组织分布</strong></td><td><strong>肝细胞</strong>、<strong>胰岛 β 细胞</strong>、肾小管上皮、<strong>肠上皮基底外侧</strong></td></tr><tr><td><strong>底物</strong></td><td>葡萄糖（<strong>高 Km，~17 mM——低亲和力、高容量</strong>）</td></tr><tr><td><strong>关键特性</strong></td><td><strong>Km 极高</strong> →只有当血糖<strong>大幅升高</strong>时才开始大量转运 → 使 β 细胞能<strong>感知血糖浓度</strong></td></tr><tr><td><strong>生理作用（核心）</strong></td><td>⭐ <strong>胰岛 β 细胞的”葡萄糖感受器”</strong>：<br/>低血糖时血糖 &lt; 5 mM → GLUT2 转运少，<strong>葡萄糖激酶（sensor）活性低</strong> → 不分泌胰岛素<br/>高血糖时血糖 > 10 mM → GLUT2 转运多 → <strong>代谢流增大</strong> → ATP/ADP 比值升高 → <strong>K_ATP 通道关闭</strong> → <strong>Ca²⁺ 内流</strong> → <strong>胰岛素分泌</strong></td></tr><tr><td><strong>病理意义</strong></td><td>🔴 <strong>Fanconi-Bickel 综合征</strong>（SLC2A2 突变）：肝肾糖原贮积病 + <strong>肾性 Fanconi 综合征</strong> + 低血糖<br/>🔴 肝细胞 GLUT2 表达下调 → <strong>胰岛素抵抗</strong></td></tr></tbody></table>
+<blockquote>
+<p>🧠 <strong>记忆点</strong>：<strong>GLUT2 的高 Km 是”设计出来的”</strong>——它让 β 细胞只在高血糖时满负荷工作，实现**“血糖阈值式”的胰岛素分泌开关**。这是理解 <strong>SGLT2 抑制剂</strong>（达格列净等）药理的钥匙：<strong>它们专攻肾小管的 SGLT2</strong>，而非 GLUT2。</p>
+</blockquote>
+<hr/>
+<h3 id="34-glut3slc2a3神经专用">3.4 GLUT3（SLC2A3）——“神经专用”<a aria-hidden="true" tabindex="-1" href="#34-glut3slc2a3神经专用" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>组织分布</strong></td><td><strong>神经元（尤其小脑）</strong>、<strong>血脑屏障内皮</strong>、胎盘；<strong>脑内表达最高的 GLUT</strong></td></tr><tr><td><strong>底物</strong></td><td>葡萄糖（<strong>Km 1.4–1.6 mM，高亲和力</strong>）；<strong>2-DG 摄取能力极强</strong></td></tr><tr><td><strong>关键特性</strong></td><td>对葡萄糖亲和力高于 GLUT1，在<strong>低血糖</strong>时仍能高效摄取</td></tr><tr><td><strong>生理作用</strong></td><td><strong>脑神经元的主要葡萄糖转运体</strong>；保证大脑在血糖波动时优先获得葡萄糖</td></tr><tr><td><strong>病理意义</strong></td><td>🔴 <strong>GLUT3 缺陷综合征（GLUT3DS1）</strong>：SLC2A3 突变 → 发育迟缓、<strong>难治性癫痫</strong>、小脑萎缩<br/>🟢 <strong>肿瘤</strong>：GLUT3 高表达与<strong>肺癌、乳腺癌预后</strong>相关<br/>🟢 <strong>FDG-PET 的第二靶点</strong>（GLUT3 对 2-DG 亲和力高，脑显像基础）</td></tr></tbody></table>
+<blockquote>
+<p>🧠 <strong>记忆点</strong>：<strong>脑 = GLUT3</strong>，<strong>红细胞/脑屏障 = GLUT1</strong>。两者分工明确。</p>
+</blockquote>
+<hr/>
+<h3 id="35-glut4slc2a4-唯一胰岛素应答的转运体">3.5 GLUT4（SLC2A4）——⭐ 唯一胰岛素应答的转运体<a aria-hidden="true" tabindex="-1" href="#35-glut4slc2a4-唯一胰岛素应答的转运体" class="internal"></a></h3>
+<p>这是整个家族<strong>调控机制最复杂、研究最深入</strong>的亚型。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>组织分布</strong></td><td><strong>骨骼肌</strong>、<strong>脂肪组织</strong>、心肌（<strong>胰岛素敏感组织</strong>）</td></tr><tr><td><strong>底物</strong></td><td>葡萄糖（Km ~5 mM）</td></tr><tr><td><strong>关键特性</strong></td><td>⭐ <strong>胰岛素应答性（insulin-responsive）</strong>：静息时主要在<strong>细胞内囊泡</strong>中，胰岛素刺激后<strong>转位到细胞膜</strong></td></tr><tr><td><strong>半衰期</strong></td><td>膜上 GLUT4半衰期仅 <strong>~30 min</strong>（迅速被内吞回收）</td></tr></tbody></table>
+<h4 id="胰岛素调控的分子级联">胰岛素调控的分子级联<a aria-hidden="true" tabindex="-1" href="#胰岛素调控的分子级联" class="internal"></a></h4>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;胰岛素（Insulin）&quot;] -->|&quot;结合胰岛素受体（RTK，自身酪氨酸激酶）&quot;| B[&quot;受体自磷酸化 → 磷酸化 IRS-1&quot;]
+    B --> C[&quot;PI3K（磷脂酰肌醇-3-激酶）&quot;]
+    C -->|&quot;生成 PIP3&quot;| D[&quot;AKT / PKB 激活&quot;]
+    D -->|&quot;磷酸化&quot;| E[&quot;TBC1D4（AS160，GTP 酶激活蛋白）&quot;]
+    E -->|&quot;抑制 Rab-GTPase → 解除囊泡锚定&quot;| F[&quot;GSV（GLUT4 储存囊泡）与 TGN 转位到肌膜&quot;]
+    F -->|&quot;需要 SNARE：VAMP2 / syntaxin-4 / SNAP25&quot;| G[&quot;肌膜 / 脂肪细胞膜 ← GLUT4 大量插入&quot;]
+    G --> H[&quot;葡萄糖大量摄取&quot;]
+    H --> I[&quot;糖原合成 ↑ / 糖酵解 ↑ / 脂肪合成 ↑&quot;]
+</code></pre>
+<h4 id="两种互相独立的调控途径">两种互相独立的调控途径<a aria-hidden="true" tabindex="-1" href="#两种互相独立的调控途径" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>途径</th><th>触发</th><th>信号通路</th><th>意义</th></tr></thead><tbody><tr><td><strong>胰岛素途径</strong></td><td>胰岛素 → 胰岛素受体</td><td>IRS-1 → PI3K → AKT → TBC1D4</td><td>餐后血糖摄取</td></tr><tr><td><strong>运动/收缩途径</strong></td><td><strong>肌收缩</strong></td><td><strong>AMPK</strong>、<strong>CaMK</strong>、<strong>NO/cGMP</strong>、<strong>Rac1</strong></td><td>⚠️ <strong>不依赖胰岛素受体</strong>！运动时血糖摄取<strong>独立</strong>于胰岛素</td></tr><tr><td><strong>温度/应激</strong></td><td>热休克</td><td>急性可独立于胰岛素</td><td>烧伤/危重症时血糖耐受</td></tr></tbody></table>
+<blockquote>
+<p>💡 <strong>运动与胰岛素”协同但不依赖”</strong>——这解释了为什么 <strong>2 型糖尿病患者运动仍能降血糖</strong>，即使胰岛素信号受损。</p>
+</blockquote>
+<h4 id="囊泡组装的分子部件">囊泡组装的分子部件<a aria-hidden="true" tabindex="-1" href="#囊泡组装的分子部件" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>部件</th><th>作用</th></tr></thead><tbody><tr><td><strong>GSV（GLUT4 Storage Vesicle）</strong></td><td>储存 GLUT4 的专用囊泡；<strong>表达 sortilin</strong>，与 dystrophin 相关</td></tr><tr><td><strong>IRAP（胰岛素调节氨基肽酶）</strong></td><td>GSV 上的<strong>支架蛋白</strong>，识别胰岛素调节序列（IRS）；pH 依赖（pH 6.5）</td></tr><tr><td><strong>TUG（tethering factor for UNC-93-like protein, TUG）</strong></td><td>连接 GSV 到 <strong>syntaxin-4</strong>；<strong>TUG 蛋白本身是脂肪中 GLUT4 转位所必需</strong></td></tr><tr><td><strong>HOPS / FHOPS 复合体</strong></td><td>靶向 SNARE，介导 GSV 停泊</td></tr><tr><td><strong>DMT/IRAP 相关蛋白</strong></td><td>定位与分选</td></tr></tbody></table>
+<h4 id="病理意义">病理意义<a aria-hidden="true" tabindex="-1" href="#病理意义" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>疾病</th><th>GLUT4 相关机制</th></tr></thead><tbody><tr><td><strong>2 型糖尿病</strong></td><td>GLUT4 转位<strong>受损</strong> → 骨骼肌与脂肪<strong>胰岛素抵抗</strong>（不是”受体缺陷”）</td></tr><tr><td><strong>特发性胰岛素抵抗综合征</strong></td><td>GLUT4（或其他胰岛素作用环节）基因突变</td></tr><tr><td><strong>TUG 敲除小鼠</strong></td><td>脂肪细胞 GLUT4 转位缺陷 → <strong>瘦素抵抗</strong></td></tr><tr><td><strong>运动性胰岛素抵抗</strong></td><td>长期高脂饮食后 GLUT4 表达下降</td></tr></tbody></table>
+<blockquote>
+<p>🧠 <strong>记忆点</strong>：<strong>GLUT4 是唯一”由激素控制”的糖转运体</strong>。它是理解<strong>胰岛素抵抗</strong>这一核心病理概念的最直接模型。</p>
+</blockquote>
+<hr/>
+<h3 id="36-glut5slc2a5果糖专属通道">3.6 GLUT5（SLC2A5）——“果糖专属通道”<a aria-hidden="true" tabindex="-1" href="#36-glut5slc2a5果糖专属通道" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>组织分布</strong></td><td>⭐ <strong>小肠上皮刷状缘（apical）</strong>；<strong>精子尾部</strong>；乳腺</td></tr><tr><td><strong>底物</strong></td><td><strong>果糖（fructose）</strong>——<strong>几乎不转运葡萄糖</strong></td></tr><tr><td><strong>关键特性</strong></td><td><strong>底物专一性极高</strong>；不参与葡萄糖转运；<strong>独立于 GLUT2</strong></td></tr><tr><td><strong>生理作用（1）</strong></td><td><strong>膳食果糖吸收</strong>：果糖 → <strong>GLUT5</strong> → 肠上皮 → 底侧 → <strong>GLUT2</strong> → 血液（<strong>底侧膜才有 GLUT2</strong>）<br/>→ 解释”果糖吸收通路与葡萄糖不同”</td></tr><tr><td><strong>生理作用（2）</strong></td><td>⭐ <strong>精子获能（capacitation）</strong>：精子获能过程中 <strong>GLUT5 上调</strong>，为精子提供能量以完成受精</td></tr><tr><td><strong>临床意义</strong></td><td>果糖不耐受（遗传性果糖不耐受：ALDOB 缺陷，与 GLUT5 无关）<br/><strong>GLUT5 高表达与肿瘤</strong>（部分肿瘤以果糖为燃料）相关</td></tr></tbody></table>
+<blockquote>
+<p>⚠️ <strong>注意区分</strong>：</p>
+<ul>
+<li><strong>果糖不耐受</strong>（ALDOB 醛缩酶 B 缺陷）——是<strong>代谢酶</strong>病，不是 GLUT5 病</li>
+<li><strong>GLUT5</strong> 是<strong>转运体</strong>，只负责把果糖送进细胞</li>
+</ul>
+</blockquote>
+<hr/>
+<h3 id="37-glut8slc2a8核内的果糖通道">3.7 GLUT8（SLC2A8）——“核内的果糖通道”<a aria-hidden="true" tabindex="-1" href="#37-glut8slc2a8核内的果糖通道" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>组织分布</strong></td><td>脂肪、<strong>肝细胞核</strong>、肾、肠、<strong>细胞核</strong>；多个亚型（GLUT8a1/a2/a3）</td></tr><tr><td><strong>底物</strong></td><td><strong>果糖</strong>；也转运葡萄糖</td></tr><tr><td><strong>关键特性</strong></td><td>⭐ <strong>含有两个核定位信号（NLS）</strong>——在<strong>第 1102–1117 位氨基酸</strong>（另有报道的 N 端区域）</td></tr><tr><td><strong>生理作用</strong></td><td><strong>核内果糖代谢</strong>：核内有独立于胞质的糖代谢；GLUT8 把果糖送入细胞核，为核内反应供能</td></tr><tr><td><strong>病理意义</strong></td><td>与**应激颗粒（stress granules）**相关；GLUT8 在应激状态下从胞质转位到核内；代谢紊乱相关研究正在积累</td></tr></tbody></table>
+<blockquote>
+<p>💡 <strong>GLUT8 的意义</strong>：它是唯一被证实<strong>功能性地进入细胞核</strong>的 GLUT，把”膜转运体”的经典模型推向新层次。</p>
+</blockquote>
+<hr/>
+<h3 id="38-glut9slc2a9尿酸转运体urat1">3.8 GLUT9（SLC2A9）——“尿酸转运体（URAT1）”<a aria-hidden="true" tabindex="-1" href="#38-glut9slc2a9尿酸转运体urat1" class="internal"></a></h3>
+<p>这是与<strong>痛风</strong>直接相关的亚型，临床意义极强。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>内容</th></tr></thead><tbody><tr><td><strong>别名</strong></td><td><strong>URAT1（Urate Reabsorption Transporter 1）</strong></td></tr><tr><td><strong>组织分布</strong></td><td><strong>肾近曲小管</strong>（主要）、肝、肠上皮基底外侧、关节、滑膜</td></tr><tr><td><strong>底物</strong></td><td>⭐ <strong>尿酸（urate，单价阴离子）</strong>——不是葡萄糖！</td></tr><tr><td><strong>机制</strong></td><td><strong>阴离子交换</strong>（urate/anion exchanger）：重吸收<strong>尿酸阴离子</strong>，同时排出其他单价阴离子（如 Cl⁻、HCO₃⁻）；<strong>依赖胞外 Na⁺ 梯度</strong></td></tr><tr><td><strong>生理作用</strong></td><td>肾脏<strong>重吸收约 90% 的尿酸</strong>——由 <strong>URAT1（近曲小管重吸收）</strong> + <strong>GLUT（基底外侧外排）</strong> 完成</td></tr><tr><td><strong>病理意义</strong></td><td>🔴 <strong>SLC2A9 失功能变异 → 低尿酸血症（hypouricemia）</strong>：尿酸排泄增加，血尿酸低<br/>🔴 <strong>SLC2A9 表达升高 → 高尿酸血症与痛风</strong>：肾小管重吸收过多尿酸</td></tr></tbody></table>
+<h4 id="降尿酸药物的三条作用靶点">降尿酸药物的三条作用靶点<a aria-hidden="true" tabindex="-1" href="#降尿酸药物的三条作用靶点" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>药物类别</th><th>靶点</th><th>机制</th><th>代表药</th></tr></thead><tbody><tr><td><strong>抑制生成</strong></td><td><strong>黄嘌呤氧化酶（XO）</strong></td><td>抑制尿酸<strong>合成</strong></td><td>别嘌醇、非布司他</td></tr><tr><td><strong>抑制重吸收</strong></td><td>⭐ <strong>URAT1 = GLUT9</strong></td><td>阻断肾小管重吸收尿酸 → 增加排泄</td><td><strong>苯溴马隆</strong>、<strong>拉布立芬</strong></td></tr><tr><td><strong>促进排泄</strong></td><td><strong>ABCG2</strong></td><td>促进尿酸分泌</td><td>丙磺舒</td></tr></tbody></table>
+<blockquote>
+<p>🧠 <strong>记忆点</strong>：<strong>GLUT9 = 痛风的转运体靶点</strong>。降尿酸药有一类正是<strong>直接抑制 GLUT9/URAT1</strong>。
+<strong>临床交叉</strong>：<strong>SGLT2 抑制剂（降糖药）也有轻度降尿酸作用</strong>——因为肾小管中 SGLT2 与 URAT1 的<strong>转运耦合</strong>。</p>
+</blockquote>
+<hr/>
+<h3 id="39-其他亚型要点">3.9 其他亚型要点<a aria-hidden="true" tabindex="-1" href="#39-其他亚型要点" class="internal"></a></h3>
+<h4 id="glut7slc2a7">GLUT7（SLC2A7）<a aria-hidden="true" tabindex="-1" href="#glut7slc2a7" class="internal"></a></h4>
+<ul>
+<li><strong>底物：果糖-2-磷酸（F2P）</strong></li>
+<li><strong>定位：内质网、线粒体</strong>（在<strong>细胞器腔内</strong>转运己糖）</li>
+<li><strong>pH/酸度依赖</strong>：功能受腔内酸性环境影响</li>
+<li>意义：细胞器内的<strong>糖代谢稳态</strong>，非膜表面转运</li>
+</ul>
+<h4 id="glut6slc2a6">GLUT6（SLC2A6）<a aria-hidden="true" tabindex="-1" href="#glut6slc2a6" class="internal"></a></h4>
+<ul>
+<li>长期被标注为<strong>假基因</strong>，<strong>近年研究发现是有功能的转运体</strong></li>
+<li>可被<strong>糖基化修饰</strong>（运输中会被送达细胞膜）</li>
+<li>与**己糖激酶 3（HK3）**及 <strong>GUT1</strong> 相互作用参与糖代谢</li>
+<li>主要在<strong>脑</strong>中表达</li>
+</ul>
+<h4 id="glut10slc2a10">GLUT10（SLC2A10）<a aria-hidden="true" tabindex="-1" href="#glut10slc2a10" class="internal"></a></h4>
+<ul>
+<li>⭐ <strong>底物：UDP-葡萄糖</strong>（不是游离葡萄糖！）</li>
+<li><strong>组织：骨骼、软骨、结缔组织</strong></li>
+<li><strong>功能：把 UDP-葡萄糖输出到细胞外</strong>，为细胞外<strong>糖基化反应</strong>（合成蛋白聚糖、胶原）提供底物</li>
+<li>独特性：<strong>转运核苷酸糖</strong>，是”糖基化原料通道”</li>
+<li>与 <strong>2 型糖尿病、结缔组织代谢</strong>相关</li>
+</ul>
+<h4 id="glut11slc2a11">GLUT11（SLC2A11）<a aria-hidden="true" tabindex="-1" href="#glut11slc2a11" class="internal"></a></h4>
+<ul>
+<li><strong>底物：果糖-3-磷酸</strong>（不是葡萄糖！）</li>
+<li><strong>组织：心肌、骨骼肌、肾</strong></li>
+<li>意义：肌肉中<strong>果糖代谢</strong>通路；<strong>溶酶体靶向</strong>（可被溶酶体降解，调节自身水平）</li>
+<li><strong>敲除小鼠</strong>出现<strong>扩张型心肌病（DCM）</strong>、线粒体功能障碍</li>
+<li>🔴 <strong>与心肌病直接相关</strong></li>
+</ul>
+<h4 id="glut12slc2a12">GLUT12（SLC2A12）<a aria-hidden="true" tabindex="-1" href="#glut12slc2a12" class="internal"></a></h4>
+<ul>
+<li><strong>转运己糖，Km 较高</strong></li>
+<li><strong>组织：脂肪、心肌、结肠</strong></li>
+<li>⭐ <strong>类似 GLUT4 的胰岛素应答性</strong>——是第二个受胰岛素调控的 GLUT！</li>
+<li>可能与<strong>压力性青光眼</strong>、结肠代谢相关</li>
+</ul>
+<h4 id="glut13slc2a13">GLUT13（SLC2A13）<a aria-hidden="true" tabindex="-1" href="#glut13slc2a13" class="internal"></a></h4>
+<ul>
+<li>长期标注为<strong>假基因</strong></li>
+<li>现有研究显示<strong>在脑中有表达</strong>，功能待阐明</li>
+</ul>
+<hr/>
+<h2 id="四glut-与疾病">四、GLUT 与疾病<a aria-hidden="true" tabindex="-1" href="#四glut-与疾病" class="internal"></a></h2>
+<h3 id="41-遗传病">4.1 遗传病<a aria-hidden="true" tabindex="-1" href="#41-遗传病" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>疾病</th><th>基因</th><th>表型</th><th>机制</th></tr></thead><tbody><tr><td><strong>GLUT1 缺陷综合征</strong><br/>（GLUT1DS1 / <strong>De Vivo 病</strong>）</td><td><strong>SLC2A1</strong>（杂合）</td><td>轻型低血糖、<strong>癫痫</strong>（婴儿/儿童）、运动发育迟缓、语言障碍、低 CSF 葡萄糖</td><td>血脑屏障葡萄糖转运↓</td></tr><tr><td><strong>Fanconi-Bickel 综合征</strong></td><td><strong>SLC2A2</strong></td><td><strong>肝肾糖原贮积病</strong> + <strong>肾性Fanconi 综合征</strong> + 低血糖</td><td>肝/肾 GLUT2 缺陷</td></tr><tr><td><strong>GLUT3 缺陷综合征</strong></td><td><strong>SLC2A3</strong></td><td>发育迟缓、<strong>难治性癫痫</strong>、小脑萎缩</td><td>脑葡萄糖转运↓</td></tr><tr><td><strong>低尿酸血症1 型</strong></td><td><strong>SLC2A9</strong></td><td>尿酸排泄↑、<strong>低尿酸血症</strong>、可能肾结石风险</td><td>URAT1 失功能</td></tr><tr><td><strong>高尿酸血症/痛风易感</strong></td><td><strong>SLC2A9</strong> 多态性</td><td>血尿酸↑、<strong>痛风</strong></td><td>URAT1 表达↑</td></tr><tr><td><strong>扩张型心肌病</strong></td><td><strong>SLC2A11</strong></td><td>心肌功能障碍</td><td>心肌果糖代谢受损</td></tr><tr><td><strong>压力性青光眼易感</strong></td><td><strong>SLC2A12</strong></td><td>—</td><td>GLUT12 功能异常</td></tr></tbody></table>
+<h3 id="42-肿瘤生物学fdg-pet-的分子基础">4.2 肿瘤生物学：FDG-PET 的分子基础<a aria-hidden="true" tabindex="-1" href="#42-肿瘤生物学fdg-pet-的分子基础" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;肿瘤细胞（Warburg 效应）&quot;] -->|&quot;葡萄糖需求剧增（快速增殖）&quot;| B[&quot;上调 GLUT1（膜转运）&quot;]
+    A --> C[&quot;上调 HK2（己糖激酶）· 磷酸化“困住”葡萄糖&quot;]
+    B --> D[&quot;葡萄糖大量进入并被磷酸化为 G6P&quot;]
+    C --> D
+    D --> E[&quot;糖酵解 / 乳酸生成（即使有氧也如此）&quot;]
+    E --> F[&quot;18F-FDG（氟代脱氧葡萄糖）在细胞内滞留&quot;]
+    F --> G[&quot;18F-FDG-PET 显像 → 肿瘤显影&quot;]
+</code></pre>
+<blockquote>
+<p>🔑 <strong>GLUT1 是肿瘤的”糖摄取入口”，FDG-PET 的分子基础就是”肿瘤高表达 GLUT1 + HK2”</strong>。这也解释了为何炎症组织（TBI 后的脑、肌肉拉伤）也会 FDG 高摄取——GLUT1 表达同样上调。</p>
+</blockquote>
+<h3 id="43-其他病理关联">4.3 其他病理关联<a aria-hidden="true" tabindex="-1" href="#43-其他病理关联" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>病理</th><th>GLUT 关联</th><th>说明</th></tr></thead><tbody><tr><td><strong>糖尿病</strong></td><td>GLUT4↓、GLUT2 表达改变</td><td><strong>胰岛素抵抗的核心是 GLUT4 转位障碍</strong></td></tr><tr><td><strong>心血管疾病</strong></td><td>GLUT4↓（心肌）、GLUT11↓</td><td>心肌能量利用障碍</td></tr><tr><td><strong>神经退行</strong></td><td>GLUT1/3↓</td><td>脑葡萄糖供应↓ → ATP 不足</td></tr><tr><td><strong>肿瘤</strong></td><td>GLUT1/3↑</td><td>糖摄取↑，FDG-PET 显影</td></tr><tr><td><strong>感染</strong></td><td>GLUT1 表达改变</td><td>病原体劫持宿主糖摄取</td></tr><tr><td><strong>妊娠糖尿病</strong></td><td>GLUT2/4 变化</td><td>胎盘葡萄糖转运异常</td></tr></tbody></table>
+<hr/>
+<h2 id="五研究方法">五、研究方法<a aria-hidden="true" tabindex="-1" href="#五研究方法" class="internal"></a></h2>
+<h3 id="51-表达与定位">5.1 表达与定位<a aria-hidden="true" tabindex="-1" href="#51-表达与定位" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>用途</th></tr></thead><tbody><tr><td><strong>Western blot / qPCR</strong></td><td>GLUT 表达水平</td></tr><tr><td><strong>免疫荧光 / 共聚焦</strong></td><td>亚细胞定位（GLUT4 囊泡 vs 膜）</td></tr><tr><td><strong>生物素化表面标记 + 免疫沉淀</strong></td><td>区分<strong>膜上</strong> vs <strong>胞内</strong> GLUT4（关键！）</td></tr><tr><td><strong>超分辨显微镜（STORM/PALM）</strong></td><td>单分子定位与计数</td></tr><tr><td><strong>FRAP</strong></td><td>GLUT4 在膜上的侧向扩散动力学</td></tr></tbody></table>
+<h3 id="52-葡萄糖摄取功能测定">5.2 葡萄糖摄取功能测定<a aria-hidden="true" tabindex="-1" href="#52-葡萄糖摄取功能测定" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>原理</th><th>应用</th></tr></thead><tbody><tr><td><strong>2-NBDG 摄取</strong></td><td>荧光类似物 2-脱氧-7-硝基苯并吡喃-2-去氧葡萄糖，经 GLUT 进入后发出绿色荧光</td><td><strong>流式细胞术</strong> / <strong>活细胞成像</strong>；<strong>最常用的功能检测</strong></td></tr><tr><td><strong>放射性3H-2-DG / 14C-葡萄糖摄取</strong></td><td>放射性示踪，液体闪烁计数</td><td>金标准定量</td></tr><tr><td><strong>PET / PET-CT（18F-FDG）</strong></td><td>活体葡萄糖代谢成像</td><td>临床肿瘤诊断</td></tr><tr><td><strong>13C 或18O 磁共振波谱（MRS）</strong></td><td>体内糖代谢速率</td><td>临床/转化研究</td></tr><tr><td><strong>微流控-荧光寿命成像（FLIM）</strong></td><td>活细胞 GLUT 转运动态</td><td>高端研究</td></tr><tr><td><strong>膜泡化实验（vesiculation）</strong></td><td>分离纯化含 GLUT4 的囊泡，体外验证</td><td>机制研究</td></tr></tbody></table>
+<h3 id="53-药理学工具">5.3 药理学工具<a aria-hidden="true" tabindex="-1" href="#53-药理学工具" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工具</th><th>靶点</th><th>说明</th></tr></thead><tbody><tr><td><strong>2-NBDG</strong></td><td>GLUT 底物（荧光）</td><td>功能检测 + 流式</td></tr><tr><td><strong>WZB117</strong></td><td><strong>GLUT1</strong></td><td><strong>选择性 GLUT1 抑制剂</strong></td></tr><tr><td><strong>STF-31</strong></td><td><strong>GLUT1</strong></td><td>阻断葡萄糖摄取；抗肿瘤研究工具</td></tr><tr><td><strong>BAY-876</strong></td><td><strong>GLUT1</strong></td><td>高效临床前抑制剂</td></tr><tr><td><strong>Cytochalasin B</strong></td><td>GLUT（多亚型）</td><td>阻断 GLUT 与肌动蛋白结合</td></tr><tr><td><strong>根皮苷（Phlorizin）</strong></td><td><strong>SGLT1/SGLT2</strong></td><td>经典 SGLT 抑制剂（研究用）</td></tr><tr><td><strong>2-脱氧葡萄糖（2-DG）</strong></td><td>GLUT 底物 + HK</td><td>糖酵解抑制剂；GLUT3 高亲和 → 脑选择性毒性</td></tr></tbody></table>
+<hr/>
+<h2 id="六要点速记">六、要点速记<a aria-hidden="true" tabindex="-1" href="#六要点速记" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>要点</th><th>内容</th></tr></thead><tbody><tr><td><strong>家族</strong></td><td><strong>SLC2A</strong>，13 个亚型，<strong>45–55 kDa</strong></td></tr><tr><td><strong>结构</strong></td><td>⭐ <strong>12 次跨膜</strong>，N/C 端在胞质；保守 <strong>Q（TM7）、GL/GE（TM8）、N-I（TM11）</strong></td></tr><tr><td><strong>机制</strong></td><td><strong>易化扩散</strong>（不耗 ATP、不耦合 Na⁺、可逆）；<strong>交替进入</strong>+<strong>电梯机制</strong></td></tr><tr><td><strong>与 SGLT 区别</strong></td><td>GLUT = SLC2A，<strong>被动</strong>；SGLT = SLC5A，<strong>Na⁺ 协同主动</strong></td></tr><tr><td><strong>分类</strong></td><td>Class I（GLUT1-4，糖）/ Class II（GLUT5/7/9/11，果糖+尿酸）/ Class III（GLUT6/8/10/12，核内+UDP-糖）</td></tr><tr><td><strong>GLUT1</strong></td><td><strong>红细胞 + 血脑屏障</strong>；<strong>肿瘤标志物</strong>；<strong>FDG-PET 基础</strong>；缺陷→GLUT1 缺陷综合征</td></tr><tr><td><strong>GLUT2</strong></td><td><strong>胰岛 β 细胞 + 肝</strong>；<strong>高 Km（17 mM）→ 葡萄糖感受器</strong>；缺陷→Fanconi-Bickel</td></tr><tr><td><strong>GLUT3</strong></td><td><strong>神经元</strong>；高亲和力；缺陷→难治性癫痫</td></tr><tr><td><strong>GLUT4</strong></td><td>⭐ <strong>唯一胰岛素应答性</strong>；<strong>骨骼肌 + 脂肪</strong>；IRS-1→PI3K→AKT→TBC1D4→GSV 转位；<strong>2 型糖尿病核心</strong></td></tr><tr><td><strong>GLUT5</strong></td><td><strong>果糖专属</strong>；小肠刷状缘 + <strong>精子获能</strong></td></tr><tr><td><strong>GLUT8</strong></td><td>含 <strong>NLS</strong>，核内果糖代谢</td></tr><tr><td><strong>GLUT9</strong></td><td>⭐ <strong>URAT1 尿酸转运体</strong>；<strong>痛风/低尿酸血症</strong>；苯溴马隆靶点</td></tr><tr><td><strong>GLUT10</strong></td><td><strong>UDP-葡萄糖</strong>转运，供糖基化；骨骼/软骨</td></tr><tr><td><strong>GLUT11</strong></td><td>果糖-3-磷酸；<strong>心肌</strong>；敲除→扩张型心肌病</td></tr><tr><td><strong>检测方法</strong></td><td><strong>2-NBDG 摄取</strong>（流式/成像）、放射性 3H-2DG、<strong>18F-FDG PET</strong></td></tr><tr><td><strong>抑制剂</strong></td><td>WZB117 / STF-31 / BAY-876（GLUT1）；Cytochalasin B（多亚型）；2-DG（GLUT3 高亲和）</td></tr></tbody></table>
+<hr/>
+<h2 id="七常见误区澄清">七、常见误区澄清<a aria-hidden="true" tabindex="-1" href="#七常见误区澄清" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>误区</th><th>正确认识</th></tr></thead><tbody><tr><td>❌ “GLUT 是耗能的主动转运”</td><td>✅ <strong>GLUT 是易化扩散，被动、不耗 ATP</strong>。耗能的糖转运是 <strong>SGLT（Na⁺ 协同）</strong></td></tr><tr><td>❌ “GLUT 能把葡萄糖浓缩到细胞内”</td><td>❌ 不能。<strong>只能加快顺梯度扩散</strong>，不改变稳态分布</td></tr><tr><td>❌ “所有 GLUT 都转运葡萄糖”</td><td>❌ <strong>GLUT5/7/11 转果糖类</strong>，<strong>GLUT9 转尿酸</strong>，<strong>GLUT10 转 UDP-葡萄糖</strong></td></tr><tr><td>❌ “所有 GLUT 都受胰岛素调控”</td><td>❌ ⭐ <strong>只有 GLUT4（和 GLUT12）是胰岛素应答性</strong>。其余是基础型</td></tr><tr><td>❌ “GLUT2 高亲和力高所以重要”</td><td>❌ <strong>GLUT2 是高 Km（低亲和力）、高容量</strong>。这个特性让它成为<strong>葡萄糖感受器</strong></td></tr><tr><td>❌ “果糖不耐受是 GLUT5 缺陷”</td><td>❌ 遗传性果糖不耐受是 <strong>ALDOB（醛缩酶 B）</strong> 缺陷。GLUT5 只是<strong>转运果糖</strong>的通道</td></tr><tr><td>❌ “GLUT 与肿瘤无关，只是代谢问题”</td><td>✅ <strong>GLUT1 是肿瘤核心标志物</strong>，临床 FDG-PET 就是测它</td></tr><tr><td>❌ “高血糖是因为 GLUT 太多”</td><td>⚠️ 更常见的是<strong>受体后信号缺陷</strong>（GLUT4 转位障碍）；单纯增加 GLUT 不一定能降血糖</td></tr><tr><td>❌ “GLUT9 也转运葡萄糖”</td><td>❌ <strong>GLUT9（URAT1）主要转运尿酸阴离子</strong>，与葡萄糖转运无关</td></tr><tr><td>❌ “GLUT 只在细胞膜上”</td><td>❌ 部分亚型在<strong>细胞器膜</strong>（GLUT7 内质网/线粒体）、<strong>细胞核</strong>（GLUT8）或<strong>溶酶体</strong>（GLUT11）</td></tr></tbody></table>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>中文</th></tr></thead><tbody><tr><td><strong>GLUT</strong></td><td>Glucose Transporter</td><td>葡萄糖转运蛋白</td></tr><tr><td><strong>SLC2A</strong></td><td>Solute Carrier family 2A</td><td>溶质载体家族 2A</td></tr><tr><td><strong>SGLT</strong></td><td>Sodium-Glucose Linked Transporter</td><td>钠-葡萄糖协同转运体</td></tr><tr><td><strong>SLC5A</strong></td><td>Solute Carrier family 5A</td><td>SGLT 的基因家族</td></tr><tr><td><strong>GSV</strong></td><td>GLUT4 Storage Vesicle</td><td><strong>GLUT4 储存囊泡</strong></td></tr><tr><td><strong>IRAP</strong></td><td>Insulin-Regulated Aminopeptidase</td><td><strong>胰岛素调节氨基肽酶</strong>（GSV 支架）</td></tr><tr><td><strong>TUG</strong></td><td>tethering factor for UNC-93-like protein</td><td>GLUT4 转位系链因子</td></tr><tr><td><strong>TGN</strong></td><td>Trans-Golgi Network</td><td><strong>反式高尔基网络</strong></td></tr><tr><td><strong>TBC1D4 / AS160</strong></td><td>—</td><td>Akt 底物，GTP 酶激活蛋白</td></tr><tr><td><strong>SNARE</strong></td><td>SNARE protein</td><td>膜融合机器（VAMP2/syntaxin-4/SNAP25）</td></tr><tr><td><strong>HOPS / FHOPS</strong></td><td>Huntingin-interacting protein complex</td><td>靶向 SNARE 复合体</td></tr><tr><td><strong>PI3K / AKT / PKB</strong></td><td>Phosphoinositide 3-kinase / Protein kinase B</td><td>胰岛素下游激酶</td></tr><tr><td><strong>IRS-1</strong></td><td>Insulin Receptor Substrate-1</td><td>胰岛素受体底物</td></tr><tr><td><strong>PIP3</strong></td><td>Phosphatidylinositol-(3,4,5)-trisphosphate</td><td>第二信使</td></tr><tr><td><strong>HK2</strong></td><td>Hexokinase 2</td><td><strong>己糖激酶 2</strong>（“困住”葡萄糖）</td></tr><tr><td><strong>2-DG</strong></td><td>2-Deoxyglucose</td><td><strong>2-脱氧葡萄糖</strong>（GLUT 底物 + HK 抑制剂）</td></tr><tr><td><strong>2-NBDG</strong></td><td>2-Nitro-7-benzofurazan-4-yl-2-deoxy-D-glucose</td><td>荧光葡萄糖类似物</td></tr><tr><td><strong>FDG</strong></td><td>18F-Fluorodeoxyglucose</td><td><strong>¹⁸F 标记脱氧葡萄糖</strong>（PET 示踪剂）</td></tr><tr><td><strong>Of / If</strong></td><td>Outward-facing / Inward-facing</td><td><strong>外向开放 / 内向开放构象</strong></td></tr><tr><td><strong>elevator model</strong></td><td>—</td><td><strong>电梯机制</strong>（两 6-TM 单元相对滑动）</td></tr><tr><td><strong>NLS</strong></td><td>Nuclear Localization Signal</td><td><strong>核定位信号</strong>（GLUT8）</td></tr><tr><td><strong>URAT1</strong></td><td>Urate Reabsorption Transporter 1</td><td><strong>尿酸重吸收转运体 1</strong>（= GLUT9）</td></tr><tr><td><strong>F2P / F3P</strong></td><td>Fructose-2-phosphate / -3-phosphate</td><td><strong>果糖-2/3-磷酸</strong></td></tr><tr><td><strong>ALDOB</strong></td><td>Fructose-bisphosphate aldolase</td><td><strong>果糖二磷酸醛缩酶</strong>（果糖不耐受相关）</td></tr><tr><td><strong>XO</strong></td><td>Xanthine Oxidase</td><td><strong>黄嘌呤氧化酶</strong>（降尿酸药靶点）</td></tr><tr><td><strong>ABCG2</strong></td><td>ATP-binding cassette subfamily G member 2</td><td>尿酸分泌转运体</td></tr><tr><td><strong>Warburg effect</strong></td><td>—</td><td><strong>瓦尔堡效应</strong>（肿瘤有氧糖酵解）</td></tr><tr><td><strong>MD simulation</strong></td><td>Molecular Dynamics</td><td>分子动力学模拟</td></tr></tbody></table>
+<hr/>
+<blockquote>
+<p><strong>总结</strong>
+<strong>GLUT 家族的核心逻辑是”结构保守、功能分化、调控分层”</strong>。</p>
+<ul>
+<li><strong>结构上</strong>：全部 12-TM，保守的 <strong>Q / GL-GE / N-I</strong> 三联体构成底物通道，“电梯式”交替进入实现易化扩散——<strong>一次被动但高效的设计</strong>。</li>
+<li><strong>功能上</strong>：GLUT1-4 转葡萄糖、GLUT5/7/11 转果糖类、<strong>GLUT9 转尿酸（痛风靶点）</strong>、<strong>GLUT10 转 UDP-葡萄糖（糖基化原料）</strong>——<strong>同一骨架，不同口袋</strong>。</li>
+<li><strong>调控上</strong>：⭐ <strong>只有 GLUT4 是胰岛素应答的</strong>——它通过 <strong>GSV 囊泡在胞质与膜之间转运</strong>，构成”胰岛素→PI3K→AKT→TBC1D4→SNARE”的完整信号链，也是 <strong>2 型糖尿病胰岛素抵抗</strong>的核心环节。</li>
+</ul>
+<p>临床上，<strong>GLUT1 是 FDG-PET显像的分子基础</strong>，<strong>GLUT9 是降尿酸药的直接靶点</strong>，<strong>SGLT2 抑制剂</strong>（不同基因家族）通过肾小管糖钠共转运发挥降糖+降尿酸双重作用。</p>
+</blockquote></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html><head><title>有丝分裂（mitosis）</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="有丝分裂（mitosis）"/><meta property="og:description" content="有丝分裂（mitosis） 相关笔记：Ca（非整倍体与染色体不稳定）、染色体带（核型与显带）、端粒与端粒酶（每次复制端粒缩短）、翻译（M 期整体翻译下调） 0. 一句话概括 有丝分裂是细胞周期 M 期的核分裂部分（与胞质分裂合称 M 期）。它要完成三件事： 把复制好的染色体精确二分——靠纺锤体产生力、动粒建立连接、纺锤体组装检查点（SAC）把关。 把细胞质与细胞器大致均分——靠 RhoA–肌动球蛋白收缩环与中体。 重建两个完整的细胞核——核膜、核孔、核仁都要重新装配。 它的本质是一次**“力学 + 时序”的工程**：微管提供力和轨道，激酶与磷酸酶构成时钟，泛素连接酶负责不可逆的”点火”，检查点负责质量门。没有新的 DNA 合成（DNA 在 S 期已复制），只有分配与重建。 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="有丝分裂（mitosis） 相关笔记：Ca（非整倍体与染色体不稳定）、染色体带（核型与显带）、端粒与端粒酶（每次复制端粒缩短）、翻译（M 期整体翻译下调） 0. 一句话概括 有丝分裂是细胞周期 M 期的核分裂部分（与胞质分裂合称 M 期）。它要完成三件事： 把复制好的染色体精确二分——靠纺锤体产生力、动粒建立连接、纺锤体组装检查点（SAC）把关。 把细胞质与细胞器大致均分——靠 RhoA–肌动球蛋白收缩环与中体。 重建两个完整的细胞核——核膜、核孔、核仁都要重新装配。 它的本质是一次**“力学 + 时序”的工程**：微管提供力和轨道，激酶与磷酸酶构成时钟，泛素连接酶负责不可逆的”点火”，检查点负责质量门。没有新的 DNA 合成（DNA 在 S 期已复制），只有分配与重建。 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/有丝"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#有丝分裂mitosis" data-for="有丝分裂mitosis">有丝分裂（mitosis）</a></li><li class="depth-1"><a href="#0-一句话概括" data-for="0-一句话概括">0. 一句话概括</a></li><li class="depth-1"><a href="#1-在细胞周期中的位置与时长" data-for="1-在细胞周期中的位置与时长">1. 在细胞周期中的位置与时长</a></li><li class="depth-1"><a href="#2-参与的物质先把零件清单摆全" data-for="2-参与的物质先把零件清单摆全">2. 参与的物质：先把&quot;零件清单&quot;摆全</a></li><li class="depth-2"><a href="#21-微管系统与马达蛋白" data-for="21-微管系统与马达蛋白">2.1 微管系统与马达蛋白</a></li><li class="depth-2"><a href="#22-动粒与着丝粒" data-for="22-动粒与着丝粒">2.2 动粒与着丝粒</a></li><li class="depth-2"><a href="#23-染色体结构与姐妹黏连" data-for="23-染色体结构与姐妹黏连">2.3 染色体结构与姐妹黏连</a></li><li class="depth-2"><a href="#24-激酶磷酸酶时钟" data-for="24-激酶磷酸酶时钟">2.4 激酶–磷酸酶时钟</a></li><li class="depth-2"><a href="#25-泛素蛋白酶体系统" data-for="25-泛素蛋白酶体系统">2.5 泛素–蛋白酶体系统</a></li><li class="depth-2"><a href="#26-核膜核孔与核仁" data-for="26-核膜核孔与核仁">2.6 核膜、核孔与核仁</a></li><li class="depth-2"><a href="#27-胞质分裂装置" data-for="27-胞质分裂装置">2.7 胞质分裂装置</a></li><li class="depth-2"><a href="#28-离子能量与细胞器" data-for="28-离子能量与细胞器">2.8 离子、能量与细胞器</a></li><li class="depth-1"><a href="#3-g2m-转换cdk1-这个总开关" data-for="3-g2m-转换cdk1-这个总开关">3. G2/M 转换：CDK1 这个&quot;总开关&quot;</a></li><li class="depth-1"><a href="#4-前期凝缩分离准备" data-for="4-前期凝缩分离准备">4. 前期：凝缩、分离、准备</a></li><li class="depth-2"><a href="#41-染色体凝缩" data-for="41-染色体凝缩">4.1 染色体凝缩</a></li><li class="depth-2"><a href="#42-中心体分离与成熟" data-for="42-中心体分离与成熟">4.2 中心体分离与成熟</a></li><li class="depth-2"><a href="#43-纺锤体的起始" data-for="43-纺锤体的起始">4.3 纺锤体的起始</a></li><li class="depth-2"><a href="#44-核仁解体" data-for="44-核仁解体">4.4 核仁解体</a></li><li class="depth-2"><a href="#45-核膜此时仍完整" data-for="45-核膜此时仍完整">4.5 核膜此时仍完整</a></li><li class="depth-1"><a href="#5-前中期破膜抓取纠错" data-for="5-前中期破膜抓取纠错">5. 前中期：破膜、抓取、纠错</a></li><li class="depth-2"><a href="#51-核膜破裂nebd" data-for="51-核膜破裂nebd">5.1 核膜破裂（NEBD）</a></li><li class="depth-2"><a href="#52-动粒如何抓住微管" data-for="52-动粒如何抓住微管">5.2 动粒如何抓住微管</a></li><li class="depth-2"><a href="#53-四种连接与纠错" data-for="53-四种连接与纠错">5.3 四种连接与&quot;纠错&quot;</a></li><li class="depth-2"><a href="#54-染色体整队congression" data-for="54-染色体整队congression">5.4 染色体整队（congression）</a></li><li class="depth-2"><a href="#55-纺锤体组装检查点sac" data-for="55-纺锤体组装检查点sac">5.5 纺锤体组装检查点（SAC）</a></li><li class="depth-1"><a href="#6-中期排列张力放行" data-for="6-中期排列张力放行">6. 中期：排列、张力、放行</a></li><li class="depth-1"><a href="#7-后期切断黏连拉开两极" data-for="7-后期切断黏连拉开两极">7. 后期：切断黏连，拉开两极</a></li><li class="depth-2"><a href="#71-触发链条不可逆的点火" data-for="71-触发链条不可逆的点火">7.1 触发链条（不可逆的&quot;点火&quot;）</a></li><li class="depth-2"><a href="#72-后期-a动粒微管缩短" data-for="72-后期-a动粒微管缩短">7.2 后期 A：动粒微管缩短</a></li><li class="depth-2"><a href="#73-后期-b两极推开" data-for="73-后期-b两极推开">7.3 后期 B：两极推开</a></li><li class="depth-2"><a href="#74-分离出错的后果" data-for="74-分离出错的后果">7.4 分离出错的后果</a></li><li class="depth-1"><a href="#8-末期重建两个家" data-for="8-末期重建两个家">8. 末期：重建两个&quot;家&quot;</a></li><li class="depth-2"><a href="#81-染色体去凝缩" data-for="81-染色体去凝缩">8.1 染色体去凝缩</a></li><li class="depth-2"><a href="#82-核膜重建" data-for="82-核膜重建">8.2 核膜重建</a></li><li class="depth-2"><a href="#83-核仁重建" data-for="83-核仁重建">8.3 核仁重建</a></li><li class="depth-2"><a href="#84-细胞器分配" data-for="84-细胞器分配">8.4 细胞器分配</a></li><li class="depth-1"><a href="#9-胞质分裂把细胞掐断" data-for="9-胞质分裂把细胞掐断">9. 胞质分裂：把细胞&quot;掐断&quot;</a></li><li class="depth-2"><a href="#91-分裂沟的定位" data-for="91-分裂沟的定位">9.1 分裂沟的定位</a></li><li class="depth-2"><a href="#92-收缩环" data-for="92-收缩环">9.2 收缩环</a></li><li class="depth-2"><a href="#93-中体与-abscission" data-for="93-中体与-abscission">9.3 中体与 abscission</a></li><li class="depth-2"><a href="#94-特殊情况" data-for="94-特殊情况">9.4 特殊情况</a></li><li class="depth-1"><a href="#10-保真性从哪来三层保障" data-for="10-保真性从哪来三层保障">10. 保真性从哪来：三层保障</a></li><li class="depth-1"><a href="#11-有丝分裂-vs-减数分裂" data-for="11-有丝分裂-vs-减数分裂">11. 有丝分裂 vs 减数分裂</a></li><li class="depth-1"><a href="#12-研究工具与药物怎么卡住有丝分裂" data-for="12-研究工具与药物怎么卡住有丝分裂">12. 研究工具与药物：怎么&quot;卡住&quot;有丝分裂</a></li><li class="depth-1"><a href="#13-常见误区" data-for="13-常见误区">13. 常见误区</a></li><li class="depth-1"><a href="#14-一页速记" data-for="14-一页速记">14. 一页速记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">有丝分裂（mitosis）</h1><p class="content-meta">Nov 25, 2026, 36 min read</p></div></div><article class="popover-hint"><h1 id="有丝分裂mitosis">有丝分裂（mitosis）<a aria-hidden="true" tabindex="-1" href="#有丝分裂mitosis" class="internal"></a></h1>
+<blockquote>
+<p>相关笔记：<a href="../../细胞生物学/知识点/Ca" class="internal">Ca</a>（非整倍体与染色体不稳定）、<a href="../../细胞生物学/知识点/染色体带" class="internal">染色体带</a>（核型与显带）、<a href="../../细胞生物学/知识点/端粒与端粒酶" class="internal">端粒与端粒酶</a>（每次复制端粒缩短）、<a href="../../细胞生物学/知识点/翻译" class="internal">翻译</a>（M 期整体翻译下调）</p>
+</blockquote>
+<h2 id="0-一句话概括">0. 一句话概括<a aria-hidden="true" tabindex="-1" href="#0-一句话概括" class="internal"></a></h2>
+<p>有丝分裂是细胞周期 M 期的<strong>核分裂</strong>部分（与<strong>胞质分裂</strong>合称 M 期）。它要完成三件事：</p>
+<ol>
+<li><strong>把复制好的染色体精确二分</strong>——靠纺锤体产生力、动粒建立连接、纺锤体组装检查点（SAC）把关。</li>
+<li><strong>把细胞质与细胞器大致均分</strong>——靠 RhoA–肌动球蛋白收缩环与中体。</li>
+<li><strong>重建两个完整的细胞核</strong>——核膜、核孔、核仁都要重新装配。</li>
+</ol>
+<p>它的本质是一次**“力学 + 时序”的工程**：微管提供力和轨道，激酶与磷酸酶构成时钟，泛素连接酶负责不可逆的”点火”，检查点负责质量门。<strong>没有新的 DNA 合成</strong>（DNA 在 S 期已复制），只有分配与重建。</p>
+<hr/>
+<h2 id="1-在细胞周期中的位置与时长">1. 在细胞周期中的位置与时长<a aria-hidden="true" tabindex="-1" href="#1-在细胞周期中的位置与时长" class="internal"></a></h2>
+<p>M 期紧接 G2 期，结束后进入 G1（或 G0）。经典分期按<strong>染色体行为</strong>划分，不是按时间均匀划分：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分期</th><th>主要事件</th><th>哺乳动物细胞参考时长</th></tr></thead><tbody><tr><td><strong>前期（prophase）</strong></td><td>染色体凝缩、中心体分离、核仁消失</td><td>15–30 min</td></tr><tr><td><strong>前中期（prometaphase）</strong></td><td>核膜破裂、动粒捕获微管、SAC 激活</td><td>10–20 min</td></tr><tr><td><strong>中期（metaphase）</strong></td><td>染色体排列于赤道板、张力平衡、SAC 满足</td><td>5–10 min</td></tr><tr><td><strong>后期（anaphase）</strong></td><td>姐妹染色单体分离、两极推开</td><td>2–5 min</td></tr><tr><td><strong>末期（telophase）</strong></td><td>核膜核仁重建、染色体去凝缩</td><td>10–20 min（与胞质分裂重叠）</td></tr></tbody></table>
+<ul>
+<li>M 期总时长在典型哺乳动物培养细胞中约 <strong>30–60 min</strong>，只占整个细胞周期的 5% 左右。</li>
+<li>早期胚胎卵裂可短至十几分钟（几乎无 G1/G2）；酵母的核分裂是”封闭式”（核膜不破裂），与动物的”开放式”不同。</li>
+<li>严格说，“前中期”是形态学上人为切出的一段，分子事件是连续的。</li>
+</ul>
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="700" viewBox="0 0 1260 700">
+<rect width="1260" height="700" fill="#ffffff"></rect>
+<text x="630" y="42" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="bold" fill="#1F2937">有丝分裂的五个阶段：染色体、纺锤体与胞质分裂</text>
+<rect x="40" y="70" width="220" height="300" rx="10" fill="#FCFCFD" stroke="#D5DBE1" stroke-width="1.2"></rect>
+<rect x="280" y="70" width="220" height="300" rx="10" fill="#FCFCFD" stroke="#D5DBE1" stroke-width="1.2"></rect>
+<rect x="520" y="70" width="220" height="300" rx="10" fill="#FCFCFD" stroke="#D5DBE1" stroke-width="1.2"></rect>
+<rect x="760" y="70" width="220" height="300" rx="10" fill="#FCFCFD" stroke="#D5DBE1" stroke-width="1.2"></rect>
+<rect x="1000" y="70" width="220" height="300" rx="10" fill="#FCFCFD" stroke="#D5DBE1" stroke-width="1.2"></rect>
+<ellipse cx="150" cy="200" rx="82" ry="90" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></ellipse>
+<ellipse cx="150" cy="200" rx="58" ry="62" fill="#EEF2F7" stroke="#8C9BB0" stroke-width="1.5" stroke-dasharray="5 4"></ellipse>
+<g transform="rotate(-25 124 174)">
+<path d="M 119.0 165.0 Q 123.2 174.0 119.0 187.0" fill="none" stroke="#34495E" stroke-width="5.6" stroke-linecap="round"></path>
+<path d="M 129.0 165.0 Q 124.8 174.0 129.0 187.0" fill="none" stroke="#5D6D7E" stroke-width="5.6" stroke-linecap="round"></path>
+<circle cx="117.6" cy="174.0" r="1.6" fill="#A93226"></circle>
+<circle cx="130.4" cy="174.0" r="1.6" fill="#A93226"></circle>
+</g>
+<g transform="rotate(15 158 166)">
+<path d="M 153.0 157.0 Q 157.2 166.0 153.0 179.0" fill="none" stroke="#34495E" stroke-width="5.6" stroke-linecap="round"></path>
+<path d="M 163.0 157.0 Q 158.8 166.0 163.0 179.0" fill="none" stroke="#5D6D7E" stroke-width="5.6" stroke-linecap="round"></path>
+<circle cx="151.6" cy="166.0" r="1.6" fill="#A93226"></circle>
+<circle cx="164.4" cy="166.0" r="1.6" fill="#A93226"></circle>
+</g>
+<g transform="rotate(65 148 204)">
+<path d="M 143.0 195.0 Q 147.2 204.0 143.0 217.0" fill="none" stroke="#34495E" stroke-width="5.6" stroke-linecap="round"></path>
+<path d="M 153.0 195.0 Q 148.8 204.0 153.0 217.0" fill="none" stroke="#5D6D7E" stroke-width="5.6" stroke-linecap="round"></path>
+<circle cx="141.6" cy="204.0" r="1.6" fill="#A93226"></circle>
+<circle cx="154.4" cy="204.0" r="1.6" fill="#A93226"></circle>
+</g>
+<g transform="rotate(-38 180 208)">
+<path d="M 175.0 199.0 Q 179.2 208.0 175.0 221.0" fill="none" stroke="#34495E" stroke-width="5.6" stroke-linecap="round"></path>
+<path d="M 185.0 199.0 Q 180.8 208.0 185.0 221.0" fill="none" stroke="#5D6D7E" stroke-width="5.6" stroke-linecap="round"></path>
+<circle cx="173.6" cy="208.0" r="1.6" fill="#A93226"></circle>
+<circle cx="186.4" cy="208.0" r="1.6" fill="#A93226"></circle>
+</g>
+<g transform="rotate(72 126 230)">
+<path d="M 121.0 221.0 Q 125.2 230.0 121.0 243.0" fill="none" stroke="#34495E" stroke-width="5.6" stroke-linecap="round"></path>
+<path d="M 131.0 221.0 Q 126.8 230.0 131.0 243.0" fill="none" stroke="#5D6D7E" stroke-width="5.6" stroke-linecap="round"></path>
+<circle cx="119.6" cy="230.0" r="1.6" fill="#A93226"></circle>
+<circle cx="132.4" cy="230.0" r="1.6" fill="#A93226"></circle>
+</g>
+<g transform="rotate(-55 164 232)">
+<path d="M 159.0 223.0 Q 163.2 232.0 159.0 245.0" fill="none" stroke="#34495E" stroke-width="5.6" stroke-linecap="round"></path>
+<path d="M 169.0 223.0 Q 164.8 232.0 169.0 245.0" fill="none" stroke="#5D6D7E" stroke-width="5.6" stroke-linecap="round"></path>
+<circle cx="157.6" cy="232.0" r="1.6" fill="#A93226"></circle>
+<circle cx="170.4" cy="232.0" r="1.6" fill="#A93226"></circle>
+</g>
+<circle cx="92" cy="150" r="3.6" fill="#1A73E8"></circle>
+<line x1="97.0" y1="150.0" x2="107.0" y2="150.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="95.5" y1="153.5" x2="102.6" y2="160.6" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="92.0" y1="155.0" x2="92.0" y2="165.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="88.5" y1="153.5" x2="81.4" y2="160.6" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="87.0" y1="150.0" x2="77.0" y2="150.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="88.5" y1="146.5" x2="81.4" y2="139.4" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="92.0" y1="145.0" x2="92.0" y2="135.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="95.5" y1="146.5" x2="102.6" y2="139.4" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="92.0" y1="150.0" x2="118.1" y2="122.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.6"></line>
+<circle cx="208" cy="150" r="3.6" fill="#1A73E8"></circle>
+<line x1="213.0" y1="150.0" x2="223.0" y2="150.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="211.5" y1="153.5" x2="218.6" y2="160.6" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="208.0" y1="155.0" x2="208.0" y2="165.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="204.5" y1="153.5" x2="197.4" y2="160.6" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="203.0" y1="150.0" x2="193.0" y2="150.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="204.5" y1="146.5" x2="197.4" y2="139.4" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="208.0" y1="145.0" x2="208.0" y2="135.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="211.5" y1="146.5" x2="218.6" y2="139.4" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="208.0" y1="150.0" x2="181.9" y2="122.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.6"></line>
+<text x="150" y="396" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">① 前期（prophase）</text>
+<text x="150" y="420" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">染色体凝缩：condensin II 轴向压缩</text>
+<text x="150" y="439" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">中心体分离，星体微管开始生长</text>
+<text x="150" y="458" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">核仁消失，核膜仍完整</text>
+<ellipse cx="390" cy="200" rx="88" ry="82" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></ellipse>
+<circle cx="328" cy="200" r="3.6" fill="#1A73E8"></circle>
+<line x1="333.0" y1="200.0" x2="341.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="331.5" y1="203.5" x2="337.2" y2="209.2" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="328.0" y1="205.0" x2="328.0" y2="213.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="324.5" y1="203.5" x2="318.8" y2="209.2" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="323.0" y1="200.0" x2="315.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="324.5" y1="196.5" x2="318.8" y2="190.8" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="328.0" y1="195.0" x2="328.0" y2="187.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="331.5" y1="196.5" x2="337.2" y2="190.8" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<circle cx="452" cy="200" r="3.6" fill="#1A73E8"></circle>
+<line x1="457.0" y1="200.0" x2="465.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="455.5" y1="203.5" x2="461.2" y2="209.2" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="452.0" y1="205.0" x2="452.0" y2="213.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="448.5" y1="203.5" x2="442.8" y2="209.2" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="447.0" y1="200.0" x2="439.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="448.5" y1="196.5" x2="442.8" y2="190.8" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="452.0" y1="195.0" x2="452.0" y2="187.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="455.5" y1="196.5" x2="461.2" y2="190.8" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<g transform="rotate(20 356 166)">
+<path d="M 350.8 157.0 Q 355.2 166.0 350.8 179.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 361.2 157.0 Q 356.8 166.0 361.2 179.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="349.3" cy="166.0" r="1.6" fill="#A93226"></circle>
+<circle cx="362.7" cy="166.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="328.0" y1="200.0" x2="351.0" y2="166.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<g transform="rotate(-30 400 160)">
+<path d="M 394.8 151.0 Q 399.2 160.0 394.8 173.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 405.2 151.0 Q 400.8 160.0 405.2 173.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="393.3" cy="160.0" r="1.6" fill="#A93226"></circle>
+<circle cx="406.7" cy="160.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="452.0" y1="200.0" x2="405.0" y2="160.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<g transform="rotate(70 372 202)">
+<path d="M 366.8 193.0 Q 371.2 202.0 366.8 215.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 377.2 193.0 Q 372.8 202.0 377.2 215.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="365.3" cy="202.0" r="1.6" fill="#A93226"></circle>
+<circle cx="378.7" cy="202.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="328.0" y1="200.0" x2="367.0" y2="202.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<g transform="rotate(-50 416 194)">
+<path d="M 410.8 185.0 Q 415.2 194.0 410.8 207.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 421.2 185.0 Q 416.8 194.0 421.2 207.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="409.3" cy="194.0" r="1.6" fill="#A93226"></circle>
+<circle cx="422.7" cy="194.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="452.0" y1="200.0" x2="421.0" y2="194.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<g transform="rotate(40 394 226)">
+<path d="M 388.8 217.0 Q 393.2 226.0 388.8 239.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 399.2 217.0 Q 394.8 226.0 399.2 239.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="387.3" cy="226.0" r="1.6" fill="#A93226"></circle>
+<circle cx="400.7" cy="226.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="452.0" y1="200.0" x2="399.0" y2="226.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<g transform="rotate(-20 430 226)">
+<path d="M 424.8 217.0 Q 429.2 226.0 424.8 239.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 435.2 217.0 Q 430.8 226.0 435.2 239.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="423.3" cy="226.0" r="1.6" fill="#A93226"></circle>
+<circle cx="436.7" cy="226.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="452.0" y1="200.0" x2="435.0" y2="226.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<g transform="rotate(15 352 226)">
+<path d="M 346.8 217.0 Q 351.2 226.0 346.8 239.0" fill="none" stroke="#34495E" stroke-width="5.8" stroke-linecap="round"></path>
+<path d="M 357.2 217.0 Q 352.8 226.0 357.2 239.0" fill="none" stroke="#5D6D7E" stroke-width="5.8" stroke-linecap="round"></path>
+<circle cx="345.3" cy="226.0" r="1.6" fill="#A93226"></circle>
+<circle cx="358.7" cy="226.0" r="1.6" fill="#A93226"></circle>
+</g>
+<line x1="328.0" y1="200.0" x2="347.0" y2="226.0" stroke="#C0392B" stroke-width="1.15" opacity="0.85"></line>
+<path d="M 332 194 Q 390 178 448 194" fill="none" stroke="#C0392B" stroke-width="1" opacity="0.45"></path>
+<text x="390" y="396" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">② 前中期（prometaphase）</text>
+<text x="390" y="420" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">核膜破裂（NEBD），核质混合</text>
+<text x="390" y="439" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">动粒逐步捕获微管，建立双向连接</text>
+<text x="390" y="458" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">SAC 激活：只要有一个动粒未连接就等待</text>
+<ellipse cx="630" cy="200" rx="88" ry="82" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></ellipse>
+<circle cx="566" cy="200" r="3.6" fill="#1A73E8"></circle>
+<line x1="571.0" y1="200.0" x2="578.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="569.5" y1="203.5" x2="574.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="566.0" y1="205.0" x2="566.0" y2="212.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="562.5" y1="203.5" x2="557.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="561.0" y1="200.0" x2="554.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="562.5" y1="196.5" x2="557.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="566.0" y1="195.0" x2="566.0" y2="188.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="569.5" y1="196.5" x2="574.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<circle cx="694" cy="200" r="3.6" fill="#1A73E8"></circle>
+<line x1="699.0" y1="200.0" x2="706.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="697.5" y1="203.5" x2="702.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="694.0" y1="205.0" x2="694.0" y2="212.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="690.5" y1="203.5" x2="685.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="689.0" y1="200.0" x2="682.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="690.5" y1="196.5" x2="685.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="694.0" y1="195.0" x2="694.0" y2="188.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="697.5" y1="196.5" x2="702.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="630" y1="132" x2="630" y2="268" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="4 4"></line>
+<g transform="rotate(0 630 150)">
+<path d="M 623.8 141.0 Q 629.1 150.0 623.8 167.0" fill="none" stroke="#34495E" stroke-width="6.4" stroke-linecap="round"></path>
+<path d="M 636.2 141.0 Q 630.9 150.0 636.2 167.0" fill="none" stroke="#5D6D7E" stroke-width="6.4" stroke-linecap="round"></path>
+<circle cx="622.3" cy="150.0" r="1.9" fill="#A93226"></circle>
+<circle cx="637.7" cy="150.0" r="1.9" fill="#A93226"></circle>
+</g>
+<line x1="566.0" y1="200.0" x2="619.0" y2="150.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<line x1="694.0" y1="200.0" x2="641.0" y2="150.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<g transform="rotate(0 630 175)">
+<path d="M 623.8 163.0 Q 629.1 175.0 623.8 189.0" fill="none" stroke="#34495E" stroke-width="6.4" stroke-linecap="round"></path>
+<path d="M 636.2 163.0 Q 630.9 175.0 636.2 189.0" fill="none" stroke="#5D6D7E" stroke-width="6.4" stroke-linecap="round"></path>
+<circle cx="622.3" cy="175.0" r="1.9" fill="#A93226"></circle>
+<circle cx="637.7" cy="175.0" r="1.9" fill="#A93226"></circle>
+</g>
+<line x1="566.0" y1="200.0" x2="619.0" y2="175.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<line x1="694.0" y1="200.0" x2="641.0" y2="175.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<g transform="rotate(0 630 200)">
+<path d="M 623.8 191.0 Q 629.1 200.0 623.8 217.0" fill="none" stroke="#34495E" stroke-width="6.4" stroke-linecap="round"></path>
+<path d="M 636.2 191.0 Q 630.9 200.0 636.2 217.0" fill="none" stroke="#5D6D7E" stroke-width="6.4" stroke-linecap="round"></path>
+<circle cx="622.3" cy="200.0" r="1.9" fill="#A93226"></circle>
+<circle cx="637.7" cy="200.0" r="1.9" fill="#A93226"></circle>
+</g>
+<line x1="566.0" y1="200.0" x2="619.0" y2="200.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<line x1="694.0" y1="200.0" x2="641.0" y2="200.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<g transform="rotate(0 630 225)">
+<path d="M 623.8 213.0 Q 629.1 225.0 623.8 239.0" fill="none" stroke="#34495E" stroke-width="6.4" stroke-linecap="round"></path>
+<path d="M 636.2 213.0 Q 630.9 225.0 636.2 239.0" fill="none" stroke="#5D6D7E" stroke-width="6.4" stroke-linecap="round"></path>
+<circle cx="622.3" cy="225.0" r="1.9" fill="#A93226"></circle>
+<circle cx="637.7" cy="225.0" r="1.9" fill="#A93226"></circle>
+</g>
+<line x1="566.0" y1="200.0" x2="619.0" y2="225.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<line x1="694.0" y1="200.0" x2="641.0" y2="225.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<g transform="rotate(0 630 250)">
+<path d="M 623.8 241.0 Q 629.1 250.0 623.8 267.0" fill="none" stroke="#34495E" stroke-width="6.4" stroke-linecap="round"></path>
+<path d="M 636.2 241.0 Q 630.9 250.0 636.2 267.0" fill="none" stroke="#5D6D7E" stroke-width="6.4" stroke-linecap="round"></path>
+<circle cx="622.3" cy="250.0" r="1.9" fill="#A93226"></circle>
+<circle cx="637.7" cy="250.0" r="1.9" fill="#A93226"></circle>
+</g>
+<line x1="566.0" y1="200.0" x2="619.0" y2="250.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<line x1="694.0" y1="200.0" x2="641.0" y2="250.0" stroke="#C0392B" stroke-width="1.3" opacity="0.9"></line>
+<path d="M 570 200 Q 630 170 690 200" fill="none" stroke="#C0392B" stroke-width="1" opacity="0.38"></path>
+<path d="M 570 200 Q 630 230 690 200" fill="none" stroke="#C0392B" stroke-width="1" opacity="0.38"></path>
+<text x="630" y="396" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">③ 中期（metaphase）</text>
+<text x="630" y="420" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">染色体着丝粒排在赤道板上</text>
+<text x="630" y="439" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">姐妹动粒受相反方向张力（连接正确）</text>
+<text x="630" y="458" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">SAC 满足 → APC/C–Cdc20 启动后期</text>
+<ellipse cx="870" cy="200" rx="100" ry="72" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></ellipse>
+<circle cx="794" cy="200" r="3.6" fill="#1A73E8"></circle>
+<line x1="799.0" y1="200.0" x2="806.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="797.5" y1="203.5" x2="802.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="794.0" y1="205.0" x2="794.0" y2="212.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="790.5" y1="203.5" x2="785.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="789.0" y1="200.0" x2="782.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="790.5" y1="196.5" x2="785.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="794.0" y1="195.0" x2="794.0" y2="188.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="797.5" y1="196.5" x2="802.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<circle cx="946" cy="200" r="3.6" fill="#1A73E8"></circle>
+<line x1="951.0" y1="200.0" x2="958.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="949.5" y1="203.5" x2="954.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="946.0" y1="205.0" x2="946.0" y2="212.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="942.5" y1="203.5" x2="937.5" y2="208.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="941.0" y1="200.0" x2="934.0" y2="200.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="942.5" y1="196.5" x2="937.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="946.0" y1="195.0" x2="946.0" y2="188.0" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<line x1="949.5" y1="196.5" x2="954.5" y2="191.5" stroke="#1A73E8" stroke-width="1.0" opacity="0.75"></line>
+<path d="M 842.0 152.8 L 832.0 160.0 L 842.0 167.2" fill="none" stroke="#34495E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="830.4" cy="160" r="2.0" fill="#A93226"></circle>
+<path d="M 898.0 152.8 L 908.0 160.0 L 898.0 167.2" fill="none" stroke="#5D6D7E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="909.6" cy="160" r="2.0" fill="#A93226"></circle>
+<line x1="794.0" y1="200.0" x2="830.0" y2="160.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<line x1="946.0" y1="200.0" x2="910.0" y2="160.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<path d="M 842.0 172.8 L 832.0 180.0 L 842.0 187.2" fill="none" stroke="#34495E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="830.4" cy="180" r="2.0" fill="#A93226"></circle>
+<path d="M 898.0 172.8 L 908.0 180.0 L 898.0 187.2" fill="none" stroke="#5D6D7E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="909.6" cy="180" r="2.0" fill="#A93226"></circle>
+<line x1="794.0" y1="200.0" x2="830.0" y2="180.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<line x1="946.0" y1="200.0" x2="910.0" y2="180.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<path d="M 842.0 192.8 L 832.0 200.0 L 842.0 207.2" fill="none" stroke="#34495E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="830.4" cy="200" r="2.0" fill="#A93226"></circle>
+<path d="M 898.0 192.8 L 908.0 200.0 L 898.0 207.2" fill="none" stroke="#5D6D7E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="909.6" cy="200" r="2.0" fill="#A93226"></circle>
+<line x1="794.0" y1="200.0" x2="830.0" y2="200.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<line x1="946.0" y1="200.0" x2="910.0" y2="200.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<path d="M 842.0 212.8 L 832.0 220.0 L 842.0 227.2" fill="none" stroke="#34495E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="830.4" cy="220" r="2.0" fill="#A93226"></circle>
+<path d="M 898.0 212.8 L 908.0 220.0 L 898.0 227.2" fill="none" stroke="#5D6D7E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="909.6" cy="220" r="2.0" fill="#A93226"></circle>
+<line x1="794.0" y1="200.0" x2="830.0" y2="220.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<line x1="946.0" y1="200.0" x2="910.0" y2="220.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<path d="M 842.0 232.8 L 832.0 240.0 L 842.0 247.2" fill="none" stroke="#34495E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="830.4" cy="240" r="2.0" fill="#A93226"></circle>
+<path d="M 898.0 232.8 L 908.0 240.0 L 898.0 247.2" fill="none" stroke="#5D6D7E" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="909.6" cy="240" r="2.0" fill="#A93226"></circle>
+<line x1="794.0" y1="200.0" x2="830.0" y2="240.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<line x1="946.0" y1="200.0" x2="910.0" y2="240.0" stroke="#C0392B" stroke-width="1.2" opacity="0.85"></line>
+<path d="M 798 200 L 942 200" stroke="#C0392B" stroke-width="1" opacity="0.32"></path>
+<g stroke="#374151" stroke-width="1.4" fill="none" marker-end="url(#ar)"><line x1="850" y1="286" x2="812" y2="286"></line><line x1="890" y1="286" x2="928" y2="286"></line></g>
+<text x="870" y="396" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">④ 后期（anaphase）</text>
+<text x="870" y="420" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">separase 切割 cohesin，姐妹染色单体分开</text>
+<text x="870" y="439" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">A：动粒微管解聚，着丝粒被拉向两极</text>
+<text x="870" y="458" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">B：极微管滑动、两极推开</text>
+<path d="M 1024 200 C 1024 140 1062 130 1076 154 C 1094 168 1126 168 1144 154 C 1158 130 1196 140 1196 200 C 1196 260 1158 270 1144 246 C 1126 232 1094 232 1076 246 C 1062 270 1024 260 1024 200 Z" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></path>
+<ellipse cx="1066" cy="200" rx="25" ry="31" fill="#EEF2F7" stroke="#8C9BB0" stroke-width="1.4" stroke-dasharray="4 3"></ellipse>
+<g transform="rotate(40 1057 188)">
+<path d="M 1054.4 183.0 Q 1056.6 188.0 1054.4 195.0" fill="none" stroke="#34495E" stroke-width="3.4" stroke-linecap="round"></path>
+<path d="M 1059.6 183.0 Q 1057.4 188.0 1059.6 195.0" fill="none" stroke="#5D6D7E" stroke-width="3.4" stroke-linecap="round"></path>
+</g>
+<g transform="rotate(-30 1073 197)">
+<path d="M 1070.4 192.0 Q 1072.6 197.0 1070.4 204.0" fill="none" stroke="#34495E" stroke-width="3.4" stroke-linecap="round"></path>
+<path d="M 1075.6 192.0 Q 1073.4 197.0 1075.6 204.0" fill="none" stroke="#5D6D7E" stroke-width="3.4" stroke-linecap="round"></path>
+</g>
+<g transform="rotate(65 1062 210)">
+<path d="M 1059.4 205.0 Q 1061.6 210.0 1059.4 217.0" fill="none" stroke="#34495E" stroke-width="3.4" stroke-linecap="round"></path>
+<path d="M 1064.6 205.0 Q 1062.4 210.0 1064.6 217.0" fill="none" stroke="#5D6D7E" stroke-width="3.4" stroke-linecap="round"></path>
+</g>
+<ellipse cx="1154" cy="200" rx="25" ry="31" fill="#EEF2F7" stroke="#8C9BB0" stroke-width="1.4" stroke-dasharray="4 3"></ellipse>
+<g transform="rotate(40 1145 188)">
+<path d="M 1142.4 183.0 Q 1144.6 188.0 1142.4 195.0" fill="none" stroke="#34495E" stroke-width="3.4" stroke-linecap="round"></path>
+<path d="M 1147.6 183.0 Q 1145.4 188.0 1147.6 195.0" fill="none" stroke="#5D6D7E" stroke-width="3.4" stroke-linecap="round"></path>
+</g>
+<g transform="rotate(-30 1161 197)">
+<path d="M 1158.4 192.0 Q 1160.6 197.0 1158.4 204.0" fill="none" stroke="#34495E" stroke-width="3.4" stroke-linecap="round"></path>
+<path d="M 1163.6 192.0 Q 1161.4 197.0 1163.6 204.0" fill="none" stroke="#5D6D7E" stroke-width="3.4" stroke-linecap="round"></path>
+</g>
+<g transform="rotate(65 1150 210)">
+<path d="M 1147.4 205.0 Q 1149.6 210.0 1147.4 217.0" fill="none" stroke="#34495E" stroke-width="3.4" stroke-linecap="round"></path>
+<path d="M 1152.6 205.0 Q 1150.4 210.0 1152.6 217.0" fill="none" stroke="#5D6D7E" stroke-width="3.4" stroke-linecap="round"></path>
+</g>
+<line x1="1078.0" y1="195.8" x2="1142.0" y2="195.8" stroke="#B03A2E" stroke-width="0.9" opacity="0.55"></line>
+<line x1="1078.0" y1="197.9" x2="1142.0" y2="197.9" stroke="#B03A2E" stroke-width="0.9" opacity="0.55"></line>
+<line x1="1078.0" y1="200.0" x2="1142.0" y2="200.0" stroke="#B03A2E" stroke-width="0.9" opacity="0.55"></line>
+<line x1="1078.0" y1="202.1" x2="1142.0" y2="202.1" stroke="#B03A2E" stroke-width="0.9" opacity="0.55"></line>
+<line x1="1078.0" y1="204.2" x2="1142.0" y2="204.2" stroke="#B03A2E" stroke-width="0.9" opacity="0.55"></line>
+<rect x="1103" y="194" width="14" height="12" rx="3" fill="#E8B4B8" stroke="#B03A2E" stroke-width="1"></rect>
+<g stroke="#1A73E8" stroke-width="1.3" fill="none"><path d="M 1100 126 L 1100 138 M 1120 126 L 1120 138"></path><path d="M 1100 274 L 1100 262 M 1120 274 L 1120 262"></path></g>
+<text x="1110" y="396" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">⑤ 末期 + 胞质分裂</text>
+<text x="1110" y="420" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">核膜、核孔与核仁重建，染色体去凝缩</text>
+<text x="1110" y="439" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">RhoA–ROCK–肌球蛋白 II 环收缩</text>
+<text x="1110" y="458" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.8" fill="#4B5563">中体形成 → ESCRT-III 完成 abscission</text>
+<rect x="40" y="474" width="1180" height="146" rx="10" fill="#FFFDF8" stroke="#E5D6B8" stroke-width="1.3"></rect>
+<g transform="rotate(0 210 547)">
+<path d="M 195.0 503.0 Q 207.8 547.0 195.0 609.0" fill="none" stroke="#2C3E50" stroke-width="12.0" stroke-linecap="round"></path>
+<path d="M 225.0 503.0 Q 212.2 547.0 225.0 609.0" fill="none" stroke="#5D6D7E" stroke-width="12.0" stroke-linecap="round"></path>
+<circle cx="193.6" cy="547.0" r="3.4" fill="#A93226"></circle>
+<circle cx="226.4" cy="547.0" r="3.4" fill="#A93226"></circle>
+</g>
+<line x1="180" y1="547" x2="244" y2="547" stroke="#B5651D" stroke-width="1" stroke-dasharray="3 3"></line>
+<line x1="197.0" y1="517.0" x2="148.0" y2="517.0" stroke="#8C6D46" stroke-width="1.1" opacity="0.9"></line>
+<line x1="188.0" y1="544.0" x2="148.0" y2="544.0" stroke="#8C6D46" stroke-width="1.1" opacity="0.9"></line>
+<line x1="240.0" y1="549.0" x2="272.0" y2="549.0" stroke="#8C6D46" stroke-width="1.1" opacity="0.9"></line>
+<line x1="223.0" y1="585.0" x2="272.0" y2="585.0" stroke="#8C6D46" stroke-width="1.1" opacity="0.9"></line>
+<text x="144" y="521" text-anchor="end" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#4B3A24">短臂（p 臂）</text>
+<text x="144" y="549" text-anchor="end" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#4B3A24">着丝粒（初级缢痕）</text>
+<text x="276" y="553" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#8C1D18">动粒（kinetochore）</text>
+<text x="276" y="589" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#4B3A24">长臂（q 臂）</text>
+<text x="58" y="498" font-family="Noto Sans CJK SC, sans-serif" font-size="13" font-weight="bold" fill="#4B3A24">染色体结构</text>
+<text x="430" y="504" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">一条染色体由两条姐妹染色单体组成，在着丝粒处相连；S 期复制后形成，后期被 separase 切开。</text>
+<text x="430" y="528" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">着丝粒（centromere）是 DNA 层面的“地址”，由 CENP-A 核小体标记，可遗传但不由序列决定。</text>
+<text x="430" y="552" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">动粒（kinetochore）是组装在着丝粒两侧的蛋白机器（NDC80 复合物直接抓微管），一侧一个。</text>
+<text x="430" y="576" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">按着丝粒位置可分为中着丝粒、亚中着丝粒、近端着丝粒与端部着丝粒染色体；人类 46 条共 92 个动粒。</text>
+<text x="430" y="600" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#6B7280">动粒是 SAC 的信号发生地：未连接时招募 Mad1/Mad2，抑制 APC/C。</text>
+<text x="40" y="648" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">红色＝微管（动粒纤维/极微管）；蓝色星芒＝中心体与星体微管；深色棒状＝姐妹染色单体；暗红小点＝动粒。</text>
+<text x="40" y="670" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">哺乳动物细胞 M 期总时长约 30–60 min：前期 15–30 min，前中期 10–20 min，中期 5–10 min，后期 2–5 min，末期与胞质分裂 10–20 min。</text>
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#374151"></path></marker></defs></svg>
+<hr/>
+<h2 id="2-参与的物质先把零件清单摆全">2. 参与的物质：先把”零件清单”摆全<a aria-hidden="true" tabindex="-1" href="#2-参与的物质先把零件清单摆全" class="internal"></a></h2>
+<p>有丝分裂涉及数百种蛋白，但按功能可归为八类。<strong>下面这张清单是理解后面各期机制的地图</strong>。</p>
+<h3 id="21-微管系统与马达蛋白">2.1 微管系统与马达蛋白<a aria-hidden="true" tabindex="-1" href="#21-微管系统与马达蛋白" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>身份</th><th>在 M 期做什么</th><th>失活/缺失的后果</th></tr></thead><tbody><tr><td>α/β-微管蛋白</td><td>微管的基本单元</td><td>组装纺锤体微管；β-微管蛋白的 GTP 水解驱动动态不稳定</td><td>无纺锤体，SAC 永久激活</td></tr><tr><td>γ-微管蛋白环复合物（γ-TuRC）</td><td>成核因子</td><td>在中心体与动粒附近起始微管成核</td><td>纺锤体双极性建立失败</td></tr><tr><td>augmin（HAUS 复合物）</td><td>分支成核因子</td><td>在已有微管侧壁产生新微管，放大纺锤体</td><td>微管密度不足、染色体整队变慢</td></tr><tr><td>中心体（中心粒对 + PCM）</td><td>微管组织中心</td><td>复制、分离、成熟；招募 γ-TuRC、pericentrin</td><td>双极纺锤体缺陷、多极纺锤体</td></tr><tr><td>Eg5（KIF11，kinesin-5）</td><td>四聚体正端马达</td><td>滑动反平行微管，驱动中心体分离与后期 B</td><td>单极纺锤体（monastrol 表型）</td></tr><tr><td>CENP-E（KIF10）</td><td>动粒相关马达</td><td>沿极微管把染色体”拖”向赤道；后期协助 poleward 运动</td><td>整队延迟、染色体错配</td></tr><tr><td>MCAK（KIF2C）</td><td>动粒/着丝粒去聚合酶</td><td>剥离错误连接、纠正 attachment</td><td>错误连接增多、SAC 延迟</td></tr><tr><td>细胞质动力蛋白（dynein）</td><td>负端马达</td><td>皮质锚定拉极、动粒旁路运输、核膜破裂时撕裂膜</td><td>纺锤体定位与旋转异常</td></tr><tr><td>NuMA</td><td>核有丝分裂器蛋白</td><td>与 dynein 组成皮质复合物，拉纺锤体</td><td>纺锤体无法正确定位</td></tr><tr><td>PRC1 / KIF4A</td><td>中央纺锤体蛋白</td><td>交联并束缚反平行微管，稳定重叠区</td><td>后期 B 与胞质分裂缺陷</td></tr><tr><td>CLASP / EB1</td><td>微管正端追踪蛋白</td><td>稳定动粒纤维正端，维持连接</td><td>动粒纤维过短、分离错误</td></tr><tr><td>TPX2</td><td>微管结合蛋白</td><td>激活 Aurora A、促微管成核</td><td>纺锤体组装失败</td></tr></tbody></table>
+<blockquote>
+<p>概念区分：**动粒纤维（kinetochore MT）**连接动粒与极；**极微管（polar MT）**在中央重叠；**星体微管（astral MT）**伸向皮质，负责定位与拉力。</p>
+</blockquote>
+<h3 id="22-动粒与着丝粒">2.2 动粒与着丝粒<a aria-hidden="true" tabindex="-1" href="#22-动粒与着丝粒" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>身份</th><th>作用</th></tr></thead><tbody><tr><td><strong>CENP-A</strong></td><td>H3 变体</td><td>着丝粒的”表观标记”，决定动粒位置，可遗传</td></tr><tr><td>CENP-B / CENP-C / CENP-N / CENP-T-W</td><td>CCAN 复合物</td><td>构建动粒内板，CENP-C 结合 MIS12</td></tr><tr><td><strong>NDC80 复合物</strong>（Ndc80/Hec1/Nuf2）</td><td>外板核心</td><td>直接结合微管，是”抓手”</td></tr><tr><td>KNL1 / MIS12 复合物 / ZW10</td><td>外板支架</td><td>招募 SAC 蛋白、动力蛋白</td></tr><tr><td>Ska 复合物</td><td>外板辅助</td><td>加强 NDC80 与微管的结合（“套环”）</td></tr><tr><td><strong>Mad1 / Mad2</strong></td><td>SAC 传感器</td><td>未连接动粒上富集，催化 MCC 组装</td></tr><tr><td><strong>BubR1 / Bub1 / Bub3</strong></td><td>SAC 激酶与支架</td><td>招募 Mad2、感知张力；Bub1 还磷酸化 H2A</td></tr><tr><td><strong>Mps1</strong></td><td>SAC 上游激酶</td><td>磷酸化 KNL1，是 SAC 启动的必要条件</td></tr><tr><td><strong>Aurora B</strong>（CPC：Aurora B + INCENP + Survivin + Borealin）</td><td>染色体乘客复合物</td><td>错误连接的”纠错器”，磷酸化 NDC80 削弱低张力连接</td></tr><tr><td>PP1 / PP2A</td><td>磷酸酶</td><td>正确连接后去磷酸化，锁存稳定状态</td></tr></tbody></table>
+<h3 id="23-染色体结构与姐妹黏连">2.3 染色体结构与姐妹黏连<a aria-hidden="true" tabindex="-1" href="#23-染色体结构与姐妹黏连" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>作用</th><th>关键点</th></tr></thead><tbody><tr><td><strong>condensin I / II</strong>（SMC2–SMC4 + CAP 亚基）</td><td>环状马达，把染色质挤压成短棒</td><td>II 型在核内先启动，I 型在核膜破裂后进入</td></tr><tr><td><strong>拓扑异构酶 IIα</strong></td><td>解开姐妹染色体间的缠结（decatenation）</td><td>抑制后染色体无法分离（“连环体”）</td></tr><tr><td><strong>cohesin</strong>（SMC1–SMC3 + RAD21 + SA1/2）</td><td>把姐妹染色单体”粘”在一起</td><td>前期大部分被移除，着丝粒附近保留至后期</td></tr><tr><td><strong>shugoshin（Sgo1）+ PP2A</strong></td><td>保护着丝粒 cohesin 不被提前磷酸化</td><td>减数分裂中尤其关键</td></tr><tr><td><strong>separase</strong></td><td>半胱氨酸蛋白酶</td><td>后期切割 RAD21，是”切断黏连”的剪刀</td></tr><tr><td><strong>securin</strong></td><td>separase 的抑制蛋白</td><td>被 APC/C 降解后释放 separase</td></tr><tr><td>组蛋白 H1 / H3（S10 磷酸化）</td><td>染色质压缩与”有丝分裂标记”</td><td>H3S10ph 由 Aurora B 催化，Haspin 提供 H3T3ph 招募 CPC</td></tr><tr><td>PARP1 / 其他</td><td>参与染色体轴与 DNA 损伤响应</td><td>机制仍在研究中</td></tr></tbody></table>
+<h3 id="24-激酶磷酸酶时钟">2.4 激酶–磷酸酶时钟<a aria-hidden="true" tabindex="-1" href="#24-激酶磷酸酶时钟" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>角色</th><th>说明</th></tr></thead><tbody><tr><td><strong>CDK1–cyclin B1</strong></td><td>M 期总开关</td><td>磷酸化数十个底物：condensin、lamin、Eg5、GM130、anillin 等</td></tr><tr><td><strong>Wee1 / Myt1</strong></td><td>抑制性激酶</td><td>磷酸化 CDK1 的 T14/Y15，压制提前进入 M 期</td></tr><tr><td><strong>Cdc25A/B/C</strong></td><td>激活型磷酸酶</td><td>去除 T14/Y15 抑制磷酸，形成正反馈”全或无”开关</td></tr><tr><td><strong>Aurora A</strong></td><td>中心体成熟、纺锤体组装</td><td>与 TPX2、Bora 协作激活 PLK1</td></tr><tr><td><strong>PLK1</strong></td><td>中心体分离、NEBD、胞质分裂</td><td>底物众多，是”多面手”</td></tr><tr><td><strong>Aurora B</strong></td><td>纠错、SAC 张力感知、胞质分裂</td><td>在着丝粒与中央纺锤体间”换岗”</td></tr><tr><td><strong>Mps1</strong></td><td>SAC 与动粒纠错</td><td>抑制剂可强行越过 SAC</td></tr><tr><td><strong>Greatwall（MASTL）–ENSA–PP2A-B55</strong></td><td>抑制磷酸酶</td><td>维持 CDK1 底物的磷酸化状态，防止”提前逆转”</td></tr><tr><td><strong>PP1 / PP2A</strong></td><td>逆转磷酸化</td><td>后期–末期去磷酸化的执行者</td></tr></tbody></table>
+<h3 id="25-泛素蛋白酶体系统">2.5 泛素–蛋白酶体系统<a aria-hidden="true" tabindex="-1" href="#25-泛素蛋白酶体系统" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>作用</th></tr></thead><tbody><tr><td><strong>APC/C（后期促进复合物/cyclosome）</strong></td><td>E3 泛素连接酶，M 期的”计时炸弹”</td></tr><tr><td><strong>Cdc20</strong></td><td>APC/C 在中期–后期的激活亚基；被 SAC 直接抑制</td></tr><tr><td><strong>Cdh1</strong></td><td>APC/C 在后期–G1 的亚基，维持 cyclin B 低水平</td></tr><tr><td><strong>securin / cyclin B1</strong></td><td>APC/C 的关键底物：一个放开剪刀，一个关掉时钟</td></tr><tr><td><strong>26S 蛋白酶体</strong></td><td>执行降解</td></tr></tbody></table>
+<h3 id="26-核膜核孔与核仁">2.6 核膜、核孔与核仁<a aria-hidden="true" tabindex="-1" href="#26-核膜核孔与核仁" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>作用</th></tr></thead><tbody><tr><td><strong>lamin A/C、lamin B</strong></td><td>核纤层；CDK1 磷酸化后解聚，末期去磷酸化后重新聚合</td></tr><tr><td><strong>BAF（BANF1）</strong></td><td>结合染色质与膜，参与核膜重建；VRK1 磷酸化调节其周期行为</td></tr><tr><td><strong>emerin 等 LEM 蛋白</strong></td><td>连接核纤层与内核膜</td></tr><tr><td><strong>核孔蛋白（Nup153、POM121、Nup98 等）</strong></td><td>NEBD 时解体为亚复合物，末期重新组装</td></tr><tr><td><strong>Ran–RCC1–RanGAP</strong></td><td>RanGTP 梯度在 NEBD 后消失，末期在染色质周围重建，驱动核运输恢复</td></tr><tr><td><strong>importin β / NTF2</strong></td><td>核运输载体，随 RanGTP 梯度重新分配</td></tr><tr><td><strong>ESCRT-III（CHMP4B）、VPS4、spastin</strong></td><td>核膜封闭与后续 abscission 的膜剪切机器</td></tr><tr><td><strong>NPM1（核磷蛋白）</strong></td><td>核仁重建的核心；磷酸化状态随 M 期切换</td></tr></tbody></table>
+<h3 id="27-胞质分裂装置">2.7 胞质分裂装置<a aria-hidden="true" tabindex="-1" href="#27-胞质分裂装置" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>分子</th><th>作用</th></tr></thead><tbody><tr><td><strong>RhoA</strong></td><td>分裂沟的”分子开关”，活化后成环</td></tr><tr><td><strong>Ect2</strong></td><td>RhoGEF，被中央纺锤体招募并激活</td></tr><tr><td><strong>centralspindlin（MKLP1/KIF23 + MgcRacGAP）</strong></td><td>中央纺锤体核心，招募 Ect2</td></tr><tr><td><strong>ROCK / Citron 激酶</strong></td><td>RhoA 下游，激活肌球蛋白 II</td></tr><tr><td><strong>formin（如 DIAPH3）</strong></td><td>成核线性肌动蛋白</td></tr><tr><td><strong>肌球蛋白 II、F-肌动蛋白</strong></td><td>收缩环的动力与轨道</td></tr><tr><td><strong>anillin、septin 2/7/9</strong></td><td>支架，把收缩环与膜、微管连起来</td></tr><tr><td><strong>PIP2 等磷脂</strong></td><td>定位收缩环、参与膜形变</td></tr><tr><td><strong>ALIX / TSG101 / CHMP4B</strong></td><td>abscission 阶段的膜剪切</td></tr></tbody></table>
+<h3 id="28-离子能量与细胞器">2.8 离子、能量与细胞器<a aria-hidden="true" tabindex="-1" href="#28-离子能量与细胞器" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>在 M 期的特殊性</th></tr></thead><tbody><tr><td><strong>ATP</strong></td><td>马达蛋白、激酶、蛋白酶体、肌动球蛋白收缩都耗能；M 期能量需求高</td></tr><tr><td><strong>GTP</strong></td><td>微管蛋白聚合与动态不稳定；Ran 梯度</td></tr><tr><td><strong>Ca²⁺</strong></td><td>局部瞬变参与核膜重建、abscission 与收缩环调节</td></tr><tr><td><strong>Mg²⁺</strong></td><td>所有激酶反应与 ATP 使用的辅因子</td></tr><tr><td><strong>磷脂（PIP2、磷脂酸、神经酰胺）</strong></td><td>膜形变与分裂沟定位</td></tr><tr><td><strong>ER / 高尔基 / 线粒体</strong></td><td>高尔基体在 M 期”碎裂”（GM130、GRASP65 磷酸化），末期重装；线粒体经 Drp1 分裂后分配</td></tr><tr><td><strong>核糖体</strong></td><td>整体翻译下调（帽依赖翻译受抑），但仍有局部翻译</td></tr></tbody></table>
+<hr/>
+<h2 id="3-g2m-转换cdk1-这个总开关">3. G2/M 转换：CDK1 这个”总开关”<a aria-hidden="true" tabindex="-1" href="#3-g2m-转换cdk1-这个总开关" class="internal"></a></h2>
+<p>进入有丝分裂不是”渐变”，而是<strong>开关式</strong>的：</p>
+<ol>
+<li>G2 晚期 cyclin B1 累积，与 CDK1 结合形成无活性复合物（被 Wee1/Myt1 磷酸化压制）。</li>
+<li><strong>Aurora A–Bora–PLK1</strong> 与 <strong>Cdc25</strong> 被激活，Cdc25 去掉 CDK1 的抑制磷酸。</li>
+<li>CDK1 活化 → 进一步激活 Cdc25、抑制 Wee1 → <strong>正反馈</strong>，几十秒内完成全或无的跃迁。</li>
+<li><strong>Greatwall–ENSA</strong> 抑制 PP2A-B55，防止磷酸化被立刻”擦掉”。</li>
+<li>CDK1 磷酸化大量底物：condensin（凝缩）、lamin（核膜解体）、Eg5（纺锤体）、GM130（高尔基碎裂）、anillin（胞质分裂预备）……</li>
+</ol>
+<blockquote>
+<p>这个”双稳态开关”的意义：<strong>避免细胞停在半进入 M 期的危险中间态</strong>。一旦越过阈值，后续步骤就像多米诺骨牌，不需要 CDK1 再逐个指挥。</p>
+</blockquote>
+<pre><code class="mermaid">flowchart LR
+    CYCB[&quot;cyclin B1 累积&quot;] --> C1[&quot;CDK1–cyclin B（无活性）&quot;]
+    W[&quot;Wee1 / Myt1&quot;] -.->|抑制| C1
+    A[&quot;Aurora A–Bora–PLK1&quot;] --> CDC25[&quot;Cdc25 磷酸酶&quot;]
+    CDC25 -->|去抑制磷酸| C1
+    C1 -->|正反馈激活| CDC25
+    C1 -.->|抑制| W
+    C1 --> SUB[&quot;condensin / lamin / Eg5 / GM130 磷酸化&quot;]
+    SUB --> M[&quot;进入 M 期&quot;]
+</code></pre>
+<hr/>
+<h2 id="4-前期凝缩分离准备">4. 前期：凝缩、分离、准备<a aria-hidden="true" tabindex="-1" href="#4-前期凝缩分离准备" class="internal"></a></h2>
+<h3 id="41-染色体凝缩">4.1 染色体凝缩<a aria-hidden="true" tabindex="-1" href="#41-染色体凝缩" class="internal"></a></h3>
+<ul>
+<li><strong>condensin II</strong> 在核内先启动，做”轴向缩短”；核膜破裂后 <strong>condensin I</strong> 进入，进一步压缩并形成短棒状。</li>
+<li><strong>拓扑异构酶 IIα</strong> 负责解开姐妹染色单体之间的缠结（decatenation），否则后期会”拉不断”。</li>
+<li>组蛋白修饰同步发生：<strong>H3S10 磷酸化</strong>（Aurora B）、H3T3 磷酸化（Haspin）、H1 磷酸化，既促进凝缩，也是”这是有丝分裂染色体”的标志。</li>
+<li>结果：人类 46 条染色体，每条由两条姐妹染色单体组成，直径约 0.5–1 μm，长度数 μm；DNA 被压缩约 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></span> 倍。</li>
+</ul>
+<blockquote>
+<p>一个常见误解：凝缩不是”把 DNA 卷得更紧”这么简单，而是由 SMC 复合物（condensin、cohesin）以 ATP 驱动的**环挤压（loop extrusion）**重塑染色质拓扑。</p>
+</blockquote>
+<h3 id="42-中心体分离与成熟">4.2 中心体分离与成熟<a aria-hidden="true" tabindex="-1" href="#42-中心体分离与成熟" class="internal"></a></h3>
+<ul>
+<li>中心体在 S/G2 期完成复制（Plk4 是复制钥匙），此时两个中心粒仍连在一起。</li>
+<li>前期由 <strong>Nek2、separase</strong> 等解除连接，再由 <strong>Eg5</strong> 沿反平行微管滑动，加上<strong>皮质 dynein</strong> 拉拽，把两个中心体推向细胞两侧。</li>
+<li>同时 <strong>PCM 成熟</strong>：招募 γ-TuRC、pericentrin、TPX2，显著提高微管成核能力。</li>
+<li><strong>植物细胞与部分卵细胞没有中心体</strong>，仍能由染色质途径（RanGTP、TPX2、augmin）组装双极纺锤体——说明中心体是”加速器”而非”必需品”。</li>
+</ul>
+<h3 id="43-纺锤体的起始">4.3 纺锤体的起始<a aria-hidden="true" tabindex="-1" href="#43-纺锤体的起始" class="internal"></a></h3>
+<p>两条并行的成核途径：</p>
+<ul>
+<li><strong>中心体途径</strong>：γ-TuRC 在中心体处成核，形成星体微管。</li>
+<li><strong>染色质途径</strong>：RanGTP 在染色体周围高，释放 TPX2 等成核因子，在染色体附近产生微管；再由 <strong>augmin</strong> 在已有微管上分支，迅速放大数量。</li>
+</ul>
+<h3 id="44-核仁解体">4.4 核仁解体<a aria-hidden="true" tabindex="-1" href="#44-核仁解体" class="internal"></a></h3>
+<p>rRNA 转录停止，NPM1 等核仁蛋白被 CDK1 磷酸化，核仁结构消失。<strong>核仁的消失不是”被消化”，而是组分重新分配</strong>，末期还要靠 NOR（rDNA 位点）重建。</p>
+<h3 id="45-核膜此时仍完整">4.5 核膜此时仍完整<a aria-hidden="true" tabindex="-1" href="#45-核膜此时仍完整" class="internal"></a></h3>
+<p>前期末核膜整体还在，但<strong>核孔复合体已开始解体</strong>（部分核孔蛋白磷酸化），为即将到来的破裂做铺垫。这解释了为什么”前期末”常被描述为”核膜仍可见但已不完整”。</p>
+<hr/>
+<h2 id="5-前中期破膜抓取纠错">5. 前中期：破膜、抓取、纠错<a aria-hidden="true" tabindex="-1" href="#5-前中期破膜抓取纠错" class="internal"></a></h2>
+<h3 id="51-核膜破裂nebd">5.1 核膜破裂（NEBD）<a aria-hidden="true" tabindex="-1" href="#51-核膜破裂nebd" class="internal"></a></h3>
+<ul>
+<li>CDK1 磷酸化 <strong>lamin A/C 与 lamin B</strong> → 核纤层丝解聚。</li>
+<li><strong>微管（dynein 沿核膜拉动）机械撕裂</strong>核膜，形成膜泡与大破口。</li>
+<li>核膜残片并入内质网，核孔复合体解离成亚复合物。</li>
+<li><strong>RanGTP 梯度消失</strong>，核内外蛋白自由混合——这是”核质混合”的分子含义。</li>
+<li>BAF 去磷酸化后结合染色质，为末期重新包膜”预留接口”。</li>
+</ul>
+<h3 id="52-动粒如何抓住微管">5.2 动粒如何抓住微管<a aria-hidden="true" tabindex="-1" href="#52-动粒如何抓住微管" class="internal"></a></h3>
+<ul>
+<li>动粒是三层结构：<strong>内板</strong>（CENP-A 染色质、CCAN）、<strong>外板</strong>（NDC80、KNL1、MIS12）、<strong>冠层</strong>（SAC 蛋白、dynein）。</li>
+<li><strong>NDC80 复合物</strong>带正电的”尾”与微管负电表面结合，Ska 复合物像”套环”加固。</li>
+<li>微管以 <strong>search-and-capture</strong> 方式随机探索，抓住动粒后被稳定；未抓住的动粒持续发出等待信号。</li>
+</ul>
+<h3 id="53-四种连接与纠错">5.3 四种连接与”纠错”<a aria-hidden="true" tabindex="-1" href="#53-四种连接与纠错" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>连接类型</th><th>状态</th><th>结果</th></tr></thead><tbody><tr><td><strong>单极连接（monotelic）</strong></td><td>只有一个动粒被抓住</td><td>无法产生张力，SAC 持续激活</td></tr><tr><td><strong>同极连接（syntelic）</strong></td><td>姐妹动粒连到<strong>同一极</strong></td><td>会拉向同一侧，必须纠正</td></tr><tr><td><strong>错向连接（merotelic）</strong></td><td>一个动粒同时连到<strong>两极</strong></td><td>张力不足、易产生滞后染色体，SAC 难以察觉（最危险）</td></tr><tr><td><strong>双极连接（amphitelic）</strong></td><td>姐妹动粒分别连两极</td><td>正确，产生张力</td></tr></tbody></table>
+<p>纠错机制：</p>
+<ul>
+<li><strong>Aurora B 的”距离传感器”</strong>：位于着丝粒内侧，靠磷酸化 NDC80 削弱结合；只有<strong>产生张力</strong>把动粒拉开、使 NDC80 远离 Aurora B，磷酸化才被 PP1/PP2A 去除，连接被”锁定”。</li>
+<li><strong>MCAK</strong> 主动剥除错误连接的微管。</li>
+<li>张力还由 <strong>BubR1、Bub1</strong> 感知，参与 SAC 的”张力分支”。</li>
+</ul>
+<h3 id="54-染色体整队congression">5.4 染色体整队（congression）<a aria-hidden="true" tabindex="-1" href="#54-染色体整队congression" class="internal"></a></h3>
+<ul>
+<li><strong>CENP-E</strong> 沿极微管把染色体向赤道”拖”，<strong>dynein</strong> 也参与。</li>
+<li><strong>Kif18A</strong> 在中央区限制微管动态，防止染色体”过冲”。</li>
+<li>结果：所有染色体在赤道板附近形成宽度约 1 μm 的”赤道带”。</li>
+</ul>
+<h3 id="55-纺锤体组装检查点sac">5.5 纺锤体组装检查点（SAC）<a aria-hidden="true" tabindex="-1" href="#55-纺锤体组装检查点sac" class="internal"></a></h3>
+<p><strong>逻辑</strong>：只要还有<strong>哪怕一个</strong>动粒未正确连接，就不许进入后期。</p>
+<ol>
+<li>未连接动粒上，<strong>Mps1</strong> 磷酸化 KNL1，招募 <strong>Mad1–Mad2</strong>。</li>
+<li>Mad2 构象变化（开放→闭合），与 <strong>BubR1–Bub3–Cdc20</strong> 组装成 <strong>MCC（有丝分裂检查点复合物）</strong>。</li>
+<li>MCC 结合并抑制 <strong>APC/C</strong>，使其无法泛素化 securin 与 cyclin B。</li>
+<li>所有动粒正确连接后，MCC 停止产生、迅速解离，APC/C 被释放。</li>
+</ol>
+<p>SAC 的两个”分支”：<strong>连接分支</strong>（是否有微管）与<strong>张力分支</strong>（是否被正确拉扯），二者共同决定是否放行。SAC 的强度与未连接动粒的数量相关，但<strong>一个</strong>就足以延迟后期——这是”全或无”的经典例子。</p>
+<hr/>
+<h2 id="6-中期排列张力放行">6. 中期：排列、张力、放行<a aria-hidden="true" tabindex="-1" href="#6-中期排列张力放行" class="internal"></a></h2>
+<ul>
+<li><strong>形态标志</strong>：染色体排列在赤道板上，姐妹动粒朝向相反两极，纺锤体呈双极”桶状”。</li>
+<li><strong>力学标志</strong>：姐妹动粒受到方向相反、大小相近的拉力，着丝粒区被”撑开”（centromere stretch），这是纠错完成、连接正确的物理证据。</li>
+<li><strong>生化标志</strong>：SAC 满足 → APC/C 被 Cdc20 结合并被磷酸化激活 → 泛素化开始。</li>
+<li><strong>中期为什么短</strong>：一旦最后一条染色体就位，APC/C 在数十秒内被激活，后期几乎立即开始。</li>
+</ul>
+<blockquote>
+<p>紫杉醇、诺考达唑等药物会让细胞”卡在中期”（SAC 持续激活），长时间后细胞走向凋亡或多倍体——这正是抗肿瘤药的细胞学基础，也是”化疗为什么作用于快速分裂细胞”的核心解释。</p>
+</blockquote>
+<hr/>
+<h2 id="7-后期切断黏连拉开两极">7. 后期：切断黏连，拉开两极<a aria-hidden="true" tabindex="-1" href="#7-后期切断黏连拉开两极" class="internal"></a></h2>
+<h3 id="71-触发链条不可逆的点火">7.1 触发链条（不可逆的”点火”）<a aria-hidden="true" tabindex="-1" href="#71-触发链条不可逆的点火" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart LR
+    SAC[&quot;SAC 满足&quot;] --> APC[&quot;APC/C–Cdc20 激活&quot;]
+    APC --> SEC[&quot;泛素化 securin → 降解&quot;]
+    APC --> CYB[&quot;泛素化 cyclin B → 降解&quot;]
+    SEC --> SEP[&quot;separase 释放并活化&quot;]
+    SEP --> COH[&quot;切割 cohesin 的 RAD21&quot;]
+    COH --> SIS[&quot;姐妹染色单体分离&quot;]
+    CYB --> CDK[&quot;CDK1 活性下降&quot;]
+    CDK --> DEC[&quot;condensin 等底物去磷酸化&quot;]
+</code></pre>
+<ul>
+<li><strong>separase</strong> 切割 RAD21 后，cohesin 环打开，姐妹染色单体在着丝粒处”断开”。</li>
+<li>前期已移除染色体臂上的大部分 cohesin，只保留着丝粒附近的”最后一圈”——<strong>后期切断的正是这一圈</strong>。</li>
+<li>cyclin B 降解使 CDK1 活性骤降，为末期去凝缩与核膜重建铺路。</li>
+</ul>
+<h3 id="72-后期-a动粒微管缩短">7.2 后期 A：动粒微管缩短<a aria-hidden="true" tabindex="-1" href="#72-后期-a动粒微管缩短" class="internal"></a></h3>
+<ul>
+<li>动粒微管在<strong>正端解聚</strong>，染色体被”收线”拉向极（“吃豆人”模型）。</li>
+<li>同时存在<strong>微管流（flux）</strong>：微管整体向极移动，动粒随之下行。</li>
+<li>速度约 <strong>1–2 μm/min</strong>，是细胞内可见的最快定向运动之一。</li>
+<li>分子参与：NDC80 与微管的”滑动离合器”、MCAK、Kif2 家族的促解聚活性。</li>
+</ul>
+<h3 id="73-后期-b两极推开">7.3 后期 B：两极推开<a aria-hidden="true" tabindex="-1" href="#73-后期-b两极推开" class="internal"></a></h3>
+<ul>
+<li><strong>中央区反平行微管滑动</strong>：Eg5、KIF4A、MKLP1 与 PRC1 交联并推动。</li>
+<li><strong>皮质 dynein–NuMA</strong> 锚定星体微管并向外拉。</li>
+<li><strong>星体微管伸长</strong>，细胞随之拉长，为分裂沟定位提供几何线索。</li>
+<li>后期 A 与 B 同时进行，只是相对贡献因细胞类型而异。</li>
+</ul>
+<h3 id="74-分离出错的后果">7.4 分离出错的后果<a aria-hidden="true" tabindex="-1" href="#74-分离出错的后果" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>错误</th><th>结果</th></tr></thead><tbody><tr><td><strong>滞后染色体（lagging chromosome）</strong></td><td>未进入子核 → <strong>微核</strong> → 染色体碎裂（chromothripsis）、炎症信号</td></tr><tr><td><strong>不分离（nondisjunction）</strong></td><td>子细胞获得 47/45 条染色体 → 非整倍体（如 21 三体、Turner）</td></tr><tr><td><strong>merotelic 连接残留</strong></td><td>染色体被拉向一侧，子细胞核型异常 → 肿瘤中的 CIN</td></tr><tr><td><strong>多极纺锤体</strong></td><td>染色体分向 3 个以上极 → 子细胞染色体严重失衡</td></tr></tbody></table>
+<p>这也解释了为什么”有丝分裂的保真性”是抑癌屏障：<strong>p53 会在非整倍体出现后诱导停滞或凋亡</strong>，p53 失活的细胞才能容忍非整倍体并继续演化（参见 <a href="../../细胞生物学/知识点/Ca" class="internal">Ca</a>）。</p>
+<hr/>
+<h2 id="8-末期重建两个家">8. 末期：重建两个”家”<a aria-hidden="true" tabindex="-1" href="#8-末期重建两个家" class="internal"></a></h2>
+<h3 id="81-染色体去凝缩">8.1 染色体去凝缩<a aria-hidden="true" tabindex="-1" href="#81-染色体去凝缩" class="internal"></a></h3>
+<p>CDK1 失活 → condensin、H1 等底物被 PP1/PP2A 去磷酸化 → 染色体松散，染色质重新变成”弥散”状态。<strong>去凝缩是转录重启的前提</strong>。</p>
+<h3 id="82-核膜重建">8.2 核膜重建<a aria-hidden="true" tabindex="-1" href="#82-核膜重建" class="internal"></a></h3>
+<ol>
+<li><strong>RanGTP 梯度重建</strong>：RCC1 结合染色质，在染色体周围产生高 RanGTP；RanGAP 在胞质维持低水平。</li>
+<li><strong>膜泡与管状 ER 在染色体表面聚集融合</strong>，形成双层膜。</li>
+<li><strong>lamin 去磷酸化后聚合</strong>，在膜内侧重新组装核纤层。</li>
+<li><strong>BAF、emerin 等 LEM 蛋白</strong>把膜与染色质”钉”在一起。</li>
+<li><strong>核孔复合体重新插入</strong>（POM121、Nup153 等），核运输恢复。</li>
+<li><strong>ESCRT-III</strong> 参与膜封闭的”最后缝合”。</li>
+</ol>
+<h3 id="83-核仁重建">8.3 核仁重建<a aria-hidden="true" tabindex="-1" href="#83-核仁重建" class="internal"></a></h3>
+<p>在 <strong>NOR（rDNA 位点，人类位于 13、14、15、21、22 号染色体短臂）</strong> 周围，NPM1 等蛋白重新聚集，RNA 聚合酶 I 重启，核仁重新出现。<strong>核仁的数目与位置是病理学判断细胞恶性程度的一个线索</strong>（参见 <a href="../../细胞生物学/知识点/染色体带" class="internal">染色体带</a> 中的 N 带/NOR 银染）。</p>
+<h3 id="84-细胞器分配">8.4 细胞器分配<a aria-hidden="true" tabindex="-1" href="#84-细胞器分配" class="internal"></a></h3>
+<ul>
+<li><strong>高尔基体</strong>：M 期被 CDK1 磷酸化 GM130/GRASP65 而”碎裂”成小堆，末期去磷酸化后重新装配——这保证了两个子细胞都能得到高尔基体。</li>
+<li><strong>内质网</strong>：与核膜连续，随核膜重建而重新组织。</li>
+<li><strong>线粒体</strong>：Drp1 介导分裂，随机分配。</li>
+<li><strong>溶酶体、核糖体、中心体</strong>：随机或半随机分配；中心体在下一周期 S 期再复制一次。</li>
+</ul>
+<hr/>
+<h2 id="9-胞质分裂把细胞掐断">9. 胞质分裂：把细胞”掐断”<a aria-hidden="true" tabindex="-1" href="#9-胞质分裂把细胞掐断" class="internal"></a></h2>
+<h3 id="91-分裂沟的定位">9.1 分裂沟的定位<a aria-hidden="true" tabindex="-1" href="#91-分裂沟的定位" class="internal"></a></h3>
+<ul>
+<li><strong>中央纺锤体</strong>（反平行微管重叠区）上的 <strong>centralspindlin（MKLP1 + MgcRacGAP）</strong> 招募 <strong>Ect2</strong>。</li>
+<li>Ect2 是 RhoGEF，在赤道皮质局部激活 <strong>RhoA</strong>。</li>
+<li>RhoA 活化形成一条”赤道带”，决定<strong>在哪里</strong>收缩——所以分裂沟的位置由纺锤体”指定”，而不是随机。</li>
+</ul>
+<h3 id="92-收缩环">9.2 收缩环<a aria-hidden="true" tabindex="-1" href="#92-收缩环" class="internal"></a></h3>
+<ul>
+<li><strong>ROCK / Citron 激酶</strong>激活<strong>肌球蛋白 II</strong>；<strong>formin</strong> 成核线性肌动蛋白。</li>
+<li>肌动蛋白–肌球蛋白 II 环持续收缩，膜内陷形成分裂沟。</li>
+<li><strong>anillin</strong> 把收缩环与膜、微管、septin 连接；<strong>septin</strong> 纤维在环旁形成支架。</li>
+<li>收缩需要 ATP，也受 Ca²⁺ 与 PIP2 调节。</li>
+</ul>
+<h3 id="93-中体与-abscission">9.3 中体与 abscission<a aria-hidden="true" tabindex="-1" href="#93-中体与-abscission" class="internal"></a></h3>
+<ul>
+<li>收缩到最后，两个子细胞间只剩一束微管 + 致密基质，即<strong>中体（midbody）</strong>。</li>
+<li><strong>ESCRT-III（CHMP4B）、VPS4、ALIX、TSG101</strong> 在中体两侧组装，完成膜剪切（abscission）。</li>
+<li><strong>spastin</strong> 切断中体微管；局部 Ca²⁺ 升高、神经酰胺等脂质改变协助膜融合/断裂。</li>
+<li>abscission 失败 → 双核细胞 → 多倍体 → 基因组不稳定（肿瘤中常见）。</li>
+</ul>
+<h3 id="94-特殊情况">9.4 特殊情况<a aria-hidden="true" tabindex="-1" href="#94-特殊情况" class="internal"></a></h3>
+<ul>
+<li><strong>不对称分裂</strong>：干细胞通过纺锤体定向、极性蛋白（PAR、aPKC）分配，把”命运决定因子”只给一个子细胞。</li>
+<li><strong>合胞体</strong>：果蝇早期胚胎只做核分裂不做胞质分裂。</li>
+<li><strong>植物细胞</strong>：没有收缩环，靠<strong>成膜体（phragmoplast）<strong>运输囊泡，在中央形成</strong>细胞板</strong>，最终成为新的细胞壁。</li>
+<li><strong>封闭式有丝分裂</strong>：真菌等核膜不破裂，纺锤体在核内组装。</li>
+</ul>
+<hr/>
+<h2 id="10-保真性从哪来三层保障">10. 保真性从哪来：三层保障<a aria-hidden="true" tabindex="-1" href="#10-保真性从哪来三层保障" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>层次</th><th>机制</th><th>失效后果</th></tr></thead><tbody><tr><td><strong>复制层（S 期）</strong></td><td>复制起点 licensing、复制叉检查点、姐妹染色单体黏连建立</td><td>复制不全、姐妹染色体不对称</td></tr><tr><td><strong>连接层（前中期）</strong></td><td>search-and-capture、Aurora B 纠错、MCAK、张力感知</td><td>错误连接、滞后染色体</td></tr><tr><td><strong>时序层（中期）</strong></td><td>SAC（Mps1–Mad2–MCC–APC/C）</td><td>提前分离、非整倍体</td></tr></tbody></table>
+<p>数量级参考：正常哺乳动物细胞每次分裂每条染色体的分离错误率约 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></span>–<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></span>；46 条染色体意味着每次分裂仍有可测量的错误概率——<strong>演化正是建立在这种”不完美”之上</strong>。</p>
+<hr/>
+<h2 id="11-有丝分裂-vs-减数分裂">11. 有丝分裂 vs 减数分裂<a aria-hidden="true" tabindex="-1" href="#11-有丝分裂-vs-减数分裂" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>有丝分裂</th><th>减数分裂</th></tr></thead><tbody><tr><td>分裂次数</td><td>1 次</td><td>2 次（MI + MII）</td></tr><tr><td>子细胞</td><td>2 个，染色体数与母细胞相同（2n→2n）</td><td>4 个，单倍体（2n→n）</td></tr><tr><td>同源染色体配对（联会）</td><td>无</td><td>有（偶线期，联会复合体）</td></tr><tr><td>交叉互换</td><td>无（有丝分裂中极少）</td><td>有（粗线期，形成交叉）</td></tr><tr><td>姐妹染色单体分离时机</td><td>唯一一次后期</td><td>MII 才分离；MI 分离的是同源染色体</td></tr><tr><td>着丝粒黏连蛋白</td><td>RAD21</td><td><strong>Rec8</strong>，由 shugoshin 保护</td></tr><tr><td>中期排列</td><td>单条染色体排列</td><td>MI 为同源染色体对排列（二价体）</td></tr><tr><td>时长</td><td>约 1 小时</td><td>数天至数十年（人卵母细胞可停滞数十年）</td></tr><tr><td>目的</td><td>增殖、修复、组织更新</td><td>产生配子、产生遗传多样性</td></tr></tbody></table>
+<hr/>
+<h2 id="12-研究工具与药物怎么卡住有丝分裂">12. 研究工具与药物：怎么”卡住”有丝分裂<a aria-hidden="true" tabindex="-1" href="#12-研究工具与药物怎么卡住有丝分裂" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工具</th><th>机制</th><th>用途</th></tr></thead><tbody><tr><td><strong>诺考达唑 / 秋水仙素</strong></td><td>抑制微管聚合</td><td>中期阻滞、同步化（摇落法收集圆形有丝分裂细胞）</td></tr><tr><td><strong>紫杉醇 / 多西他赛</strong></td><td>稳定微管、抑制解聚</td><td>抗肿瘤；也用于诱导中期阻滞</td></tr><tr><td><strong>长春碱类</strong></td><td>抑制微管聚合</td><td>抗肿瘤</td></tr><tr><td><strong>monastrol</strong></td><td>Eg5 抑制剂</td><td>单极纺锤体表型，研究双极建立</td></tr><tr><td><strong>ZM447439 / 巴瑞替尼类 Aurora B 抑制剂</strong></td><td>抑制纠错</td><td>研究 SAC 与染色体分离</td></tr><tr><td><strong>BI 2536 / volasertib</strong></td><td>PLK1 抑制剂</td><td>抗肿瘤试验</td></tr><tr><td><strong>Mps1 抑制剂（reversine 等）</strong></td><td>绕过 SAC</td><td>研究”SAC 与存活”的耦联</td></tr><tr><td><strong>RO-3306</strong></td><td>CDK1 抑制剂</td><td>把细胞可逆地停在 G2/M</td></tr><tr><td><strong>胸苷双阻断</strong></td><td>阻断 DNA 合成</td><td>S 期同步化</td></tr><tr><td><strong>H2B-GFP / 微管荧光标记 / SiR-DNA</strong></td><td>活细胞成像</td><td>观察染色体与纺锤体动态</td></tr><tr><td><strong>低温或压片 + 秋水仙素</strong></td><td>制备中期染色体</td><td>核型分析、显带（见 <a href="../../细胞生物学/知识点/染色体带" class="internal">染色体带</a>）</td></tr></tbody></table>
+<hr/>
+<h2 id="13-常见误区">13. 常见误区<a aria-hidden="true" tabindex="-1" href="#13-常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“有丝分裂就是细胞分裂”</strong>——有丝分裂只是<strong>核分裂</strong>；胞质分裂是独立且可被单独阻断的过程（可产生双核细胞）。</li>
+<li><strong>“染色体在前期复制”</strong>——DNA 复制发生在 S 期；前期只是把已复制的染色质<strong>凝缩</strong>。</li>
+<li><strong>“纺锤体只由中心体发出”</strong>——染色质途径与 augmin 分支成核同样重要；植物细胞根本没有中心体。</li>
+<li><strong>“动粒＝着丝粒”</strong>——着丝粒是染色体上的 DNA/染色质区域（CENP-A 标记），动粒是组装在该区域上的蛋白机器。</li>
+<li><strong>“SAC 检查 DNA 损伤”</strong>——SAC 检查的是<strong>动粒–微管连接与张力</strong>；DNA 损伤由 G1/S、G2/M 的 ATM/ATR–p53 通路负责。</li>
+<li><strong>“SAC 满足需要所有染色体都完美对齐”</strong>——严格说是所有动粒都建立了<strong>正确的双极连接</strong>；排列是结果，不是判据。</li>
+<li><strong>“后期只靠微管缩短”</strong>——后期 A（微管解聚）与后期 B（极微管滑动、两极推开）同时存在。</li>
+<li><strong>“秋水仙素让细胞不分裂”</strong>——它让细胞<strong>卡在中期</strong>，长期处理后走向凋亡或多倍体，而非”安静地不分裂”。</li>
+<li><strong>“所有真核细胞都有中心体”</strong>——植物、部分卵细胞与某些原生生物没有，仍能形成双极纺锤体。</li>
+<li><strong>“有丝分裂一定是对称的”</strong>——干细胞与部分祖细胞通过不对称分裂实现命运分化；对称性由纺锤体方向与极性决定。</li>
+</ol>
+<hr/>
+<h2 id="14-一页速记">14. 一页速记<a aria-hidden="true" tabindex="-1" href="#14-一页速记" class="internal"></a></h2>
+<ul>
+<li><strong>三件事</strong>：分染色体（纺锤体 + 动粒 + SAC）、分细胞质（RhoA–肌动球蛋白环）、建两个核（lamin + 核孔 + 核仁）。</li>
+<li><strong>一个总开关</strong>：CDK1–cyclin B1；Wee1 压制、Cdc25 激活、正反馈形成全或无。</li>
+<li><strong>五个阶段</strong>：前期凝缩与中心体分离 → 前中期破膜抓取纠错 → 中期排列与 SAC 放行 → 后期切 cohesin 并拉开 → 末期重建 + 胞质分裂。</li>
+<li><strong>一把剪刀</strong>：APC/C^Cdc20 → 降解 securin → separase → 切 RAD21 → 姐妹分离。</li>
+<li><strong>一个传感器</strong>：Aurora B 靠”距离/张力”判断连接对错；SAC 靠 Mps1–Mad2–MCC 抑制 APC/C。</li>
+<li><strong>两个后期</strong>：A 靠动粒微管解聚（约 1–2 μm/min），B 靠极微管滑动 + 皮质 dynein。</li>
+<li><strong>最容易混淆的三对</strong>：着丝粒 vs 动粒；SAC vs DNA 损伤检查点；核分裂 vs 胞质分裂。</li>
+<li><strong>数字</strong>：M 期 30–60 min；染色体压缩约 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></span> 倍；人 46 条染色体、92 个动粒；分离错误率约 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span></span>–<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span></span>。</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

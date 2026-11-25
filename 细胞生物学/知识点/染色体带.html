@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html><head><title>染色体带与染色体显带技术</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="染色体带与染色体显带技术"/><meta property="og:description" content="染色体带与染色体显带技术 相关笔记：端粒与端粒酶 0. 一句话概括 染色体带（chromosome band）是染色体经过特定预处理与染色后，沿长轴出现的深浅交替或荧光强弱交替的区段。显带技术（chromosome banding）把这些区段变成可读的“条形码”，使每条染色体可以被唯一识别，并据此定位结构异常、基因座和疾病断点。 带不是基因，也不是一段固定的 DNA 序列，而是“染色质组成 + 处理方式 + 染料”共同造成的视觉分区。 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="染色体带与染色体显带技术 相关笔记：端粒与端粒酶 0. 一句话概括 染色体带（chromosome band）是染色体经过特定预处理与染色后，沿长轴出现的深浅交替或荧光强弱交替的区段。显带技术（chromosome banding）把这些区段变成可读的“条形码”，使每条染色体可以被唯一识别，并据此定位结构异常、基因座和疾病断点。 带不是基因，也不是一段固定的 DNA 序列，而是“染色质组成 + 处理方式 + 染料”共同造成的视觉分区。 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/染色体带"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#染色体带与染色体显带技术" data-for="染色体带与染色体显带技术">染色体带与染色体显带技术</a></li><li class="depth-1"><a href="#0-一句话概括" data-for="0-一句话概括">0. 一句话概括</a></li><li class="depth-1"><a href="#1-为什么需要显带" data-for="1-为什么需要显带">1. 为什么需要显带</a></li><li class="depth-1"><a href="#2-区带命名pq区带亚带" data-for="2-区带命名pq区带亚带">2. 区带命名：p、q、区、带、亚带</a></li><li class="depth-2"><a href="#基本规则" data-for="基本规则">基本规则</a></li><li class="depth-2"><a href="#分辨率能看多细" data-for="分辨率能看多细">分辨率：能看多细</a></li><li class="depth-1"><a href="#3-显带的共同原理" data-for="3-显带的共同原理">3. 显带的共同原理</a></li><li class="depth-1"><a href="#4-六大经典带型" data-for="4-六大经典带型">4. 六大经典带型</a></li><li class="depth-2"><a href="#41-g-带giemsa-banding" data-for="41-g-带giemsa-banding">4.1 G 带（Giemsa banding）</a></li><li class="depth-2"><a href="#42-q-带quinacrine-banding" data-for="42-q-带quinacrine-banding">4.2 Q 带（Quinacrine banding）</a></li><li class="depth-2"><a href="#43-r-带reverse-banding" data-for="43-r-带reverse-banding">4.3 R 带（Reverse banding）</a></li><li class="depth-2"><a href="#44-c-带constitutive-heterochromatin-banding" data-for="44-c-带constitutive-heterochromatin-banding">4.4 C 带（Constitutive heterochromatin banding）</a></li><li class="depth-2"><a href="#45-t-带telomere-banding" data-for="45-t-带telomere-banding">4.5 T 带（Telomere banding）</a></li><li class="depth-2"><a href="#46-n-带nor-banding" data-for="46-n-带nor-banding">4.6 N 带（NOR banding）</a></li><li class="depth-1"><a href="#5-六大带型速查表" data-for="5-六大带型速查表">5. 六大带型速查表</a></li><li class="depth-2"><a href="#51-其他常见带型与技术" data-for="51-其他常见带型与技术">5.1 其他常见带型与技术</a></li><li class="depth-1"><a href="#6-显带技术的操作流程以-g-带为例" data-for="6-显带技术的操作流程以-g-带为例">6. 显带技术的操作流程（以 G 带为例）</a></li><li class="depth-2"><a href="#61-样本与培养" data-for="61-样本与培养">6.1 样本与培养</a></li><li class="depth-2"><a href="#62-关键步骤" data-for="62-关键步骤">6.2 关键步骤</a></li><li class="depth-2"><a href="#63-影响显带质量的变量" data-for="63-影响显带质量的变量">6.3 影响显带质量的变量</a></li><li class="depth-1"><a href="#7-区带命名的实际写法iscn" data-for="7-区带命名的实际写法iscn">7. 区带命名的实际写法（ISCN）</a></li><li class="depth-1"><a href="#8-带型的生物学基础" data-for="8-带型的生物学基础">8. 带型的生物学基础</a></li><li class="depth-2"><a href="#带型与进化" data-for="带型与进化">带型与进化</a></li><li class="depth-1"><a href="#9-临床应用" data-for="9-临床应用">9. 临床应用</a></li><li class="depth-2"><a href="#91-体质性先天异常" data-for="91-体质性先天异常">9.1 体质性（先天）异常</a></li><li class="depth-2"><a href="#92-肿瘤细胞遗传学" data-for="92-肿瘤细胞遗传学">9.2 肿瘤细胞遗传学</a></li><li class="depth-2"><a href="#93-显带的局限与互补技术" data-for="93-显带的局限与互补技术">9.3 显带的局限与互补技术</a></li><li class="depth-1"><a href="#10-常见误区" data-for="10-常见误区">10. 常见误区</a></li><li class="depth-1"><a href="#11-一页速记" data-for="11-一页速记">11. 一页速记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">染色体带与染色体显带技术</h1><p class="content-meta">Nov 25, 2026, 21 min read</p></div></div><article class="popover-hint"><h1 id="染色体带与染色体显带技术">染色体带与染色体显带技术<a aria-hidden="true" tabindex="-1" href="#染色体带与染色体显带技术" class="internal"></a></h1>
+<blockquote>
+<p>相关笔记：<a href="../../细胞生物学/知识点/端粒与端粒酶" class="internal">端粒与端粒酶</a></p>
+</blockquote>
+<h2 id="0-一句话概括">0. 一句话概括<a aria-hidden="true" tabindex="-1" href="#0-一句话概括" class="internal"></a></h2>
+<p>染色体带（chromosome band）是染色体经过特定预处理与染色后，沿长轴出现的<strong>深浅交替或荧光强弱交替的区段</strong>。显带技术（chromosome banding）把这些区段变成可读的“条形码”，使每条染色体可以被唯一识别，并据此定位结构异常、基因座和疾病断点。</p>
+<p><strong>带不是基因，也不是一段固定的 DNA 序列</strong>，而是“染色质组成 + 处理方式 + 染料”共同造成的视觉分区。</p>
+<hr/>
+<h2 id="1-为什么需要显带">1. 为什么需要显带<a aria-hidden="true" tabindex="-1" href="#1-为什么需要显带" class="internal"></a></h2>
+<ul>
+<li>中期染色体如果只做均匀染色，所有染色体都是一团“毛线”，只能数数目、看大小，无法逐条配对。</li>
+<li>显带后，每条染色体都有独特的<strong>带型（banding pattern）</strong>，可以：
+<ul>
+<li>识别 24 种染色体（22 条常染色体 + X + Y）；</li>
+<li>发现缺失、重复、倒位、易位、环状染色体、等臂染色体、标记染色体；</li>
+<li>按 <strong>ISCN</strong> 国际命名系统写出核型，如 <code>46,XX,t(9;22)(q34;q11.2)</code>；</li>
+<li>为 FISH、CMA、测序提供“坐标”。</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="2-区带命名pq区带亚带">2. 区带命名：p、q、区、带、亚带<a aria-hidden="true" tabindex="-1" href="#2-区带命名pq区带亚带" class="internal"></a></h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+<rect width="1000" height="650" fill="#fbfcfd"></rect>
+  <text x="500" y="34" font-family="sans-serif" font-size="19" fill="#1a5276" text-anchor="middle">染色体区带命名与 G / Q / R 带型对照（示意图，非按比例）</text>
+  <text x="40" y="78" font-family="sans-serif" font-size="15" fill="#1a5276">A 区带命名（以 1 号染色体为例）</text>
+  <rect x="200" y="100" width="70" height="382" rx="30" fill="#eaf2f8" stroke="#4a7ba7" stroke-width="2"></rect>
+  <rect x="200" y="245" width="70" height="30" fill="#d5dbdb" stroke="#4a7ba7" stroke-width="2"></rect>
+  <g fill="#4a6b85">
+    <rect x="200" y="118" width="70" height="16"></rect>
+    <rect x="200" y="158" width="70" height="18"></rect>
+    <rect x="200" y="198" width="70" height="16"></rect>
+    <rect x="200" y="228" width="70" height="10"></rect>
+    <rect x="200" y="284" width="70" height="24"></rect>
+    <rect x="200" y="338" width="70" height="24"></rect>
+    <rect x="200" y="396" width="70" height="26"></rect>
+    <rect x="200" y="448" width="70" height="20"></rect>
+  </g>
+  <text x="150" y="175" font-family="sans-serif" font-size="13" fill="#34495e" text-anchor="end">p 臂（短臂）</text>
+  <text x="150" y="263" font-family="sans-serif" font-size="13" fill="#34495e" text-anchor="end">着丝粒</text>
+  <text x="150" y="390" font-family="sans-serif" font-size="13" fill="#34495e" text-anchor="end">q 臂（长臂）</text>
+  <g font-family="sans-serif" font-size="13" fill="#1f4e79">
+    <text x="330" y="128">1p36.33</text>
+    <text x="330" y="168">1p36.1</text>
+    <text x="330" y="210">1p22</text>
+    <text x="330" y="240">1p11</text>
+    <text x="330" y="298">1q11</text>
+    <text x="330" y="352">1q21</text>
+    <text x="330" y="412">1q32</text>
+    <text x="330" y="460">1q44</text>
+  </g>
+  <g stroke="#c9d6e2" stroke-width="1.5">
+    <line x1="270" y1="126" x2="322" y2="124"></line>
+    <line x1="270" y1="166" x2="322" y2="164"></line>
+    <line x1="270" y1="206" x2="322" y2="206"></line>
+    <line x1="270" y1="236" x2="322" y2="236"></line>
+    <line x1="270" y1="296" x2="322" y2="294"></line>
+    <line x1="270" y1="350" x2="322" y2="348"></line>
+    <line x1="270" y1="410" x2="322" y2="408"></line>
+    <line x1="270" y1="458" x2="322" y2="456"></line>
+  </g>
+  <rect x="40" y="510" width="420" height="105" rx="8" fill="#f4f6f7" stroke="#d0d7de"></rect>
+  <text x="54" y="536" font-family="sans-serif" font-size="13" fill="#34495e">编号规则：从着丝粒向端粒，依次为 区 → 带 → 亚带。</text>
+  <text x="54" y="560" font-family="sans-serif" font-size="13" fill="#34495e">1p36.33 ＝ p 臂第 3 区、第 6 带、第 33 亚带。</text>
+  <text x="54" y="584" font-family="sans-serif" font-size="13" fill="#566573">数字越大越靠近端粒；q 臂同理。带号不是物理长度。</text>
+  <text x="490" y="78" font-family="sans-serif" font-size="15" fill="#1a5276">B G / Q / R 带型对照（同一染色体片段）</text>
+  <text x="552" y="140" font-family="sans-serif" font-size="13" fill="#34495e" text-anchor="end">G 带</text>
+  <text x="552" y="222" font-family="sans-serif" font-size="13" fill="#34495e" text-anchor="end">Q 带</text>
+  <text x="552" y="304" font-family="sans-serif" font-size="13" fill="#34495e" text-anchor="end">R 带</text>
+  <rect x="560" y="118" width="330" height="38" fill="#eaf2f8" stroke="#4a7ba7" stroke-width="1.5"></rect>
+  <g fill="#4a6b85">
+    <rect x="576" y="118" width="34" height="38"></rect>
+    <rect x="656" y="118" width="34" height="38"></rect>
+    <rect x="752" y="118" width="38" height="38"></rect>
+    <rect x="832" y="118" width="32" height="38"></rect>
+  </g>
+  <text x="560" y="176" font-family="sans-serif" font-size="12" fill="#566573">深带＝AT 富集、晚复制、基因贫乏</text>
+  <rect x="560" y="200" width="330" height="38" fill="#5d6d7e" stroke="#4a7ba7" stroke-width="1.5"></rect>
+  <g fill="#f7dc6f">
+    <rect x="576" y="200" width="34" height="38"></rect>
+    <rect x="656" y="200" width="34" height="38"></rect>
+    <rect x="752" y="200" width="38" height="38"></rect>
+    <rect x="832" y="200" width="32" height="38"></rect>
+  </g>
+  <text x="560" y="258" font-family="sans-serif" font-size="12" fill="#566573">荧光亮带对应 G 深带（AT 富集）</text>
+  <rect x="560" y="282" width="330" height="38" fill="#eaf2f8" stroke="#4a7ba7" stroke-width="1.5"></rect>
+  <g fill="#4a6b85">
+    <rect x="560" y="282" width="16" height="38"></rect>
+    <rect x="610" y="282" width="46" height="38"></rect>
+    <rect x="690" y="282" width="62" height="38"></rect>
+    <rect x="790" y="282" width="42" height="38"></rect>
+    <rect x="864" y="282" width="26" height="38"></rect>
+  </g>
+  <text x="560" y="340" font-family="sans-serif" font-size="12" fill="#566573">R 深带＝GC 富集、早复制、基因丰富</text>
+  <text x="490" y="392" font-family="sans-serif" font-size="13" fill="#1f4e79">G 与 R 带型互为“反相”；Q 荧光与 G 深带基本对应。</text>
+  <text x="490" y="418" font-family="sans-serif" font-size="13" fill="#1f4e79">C 带：着丝粒异染色质；T 带：端粒；N 带：NOR（银染）。</text>
+  <line x1="560" y1="452" x2="890" y2="452" stroke="#95a5a6" stroke-width="2"></line>
+  <polygon points="890,452 878,446 878,458" fill="#95a5a6"></polygon>
+  <text x="725" y="474" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">着丝粒 → 端粒</text></svg>
+<h3 id="基本规则">基本规则<a aria-hidden="true" tabindex="-1" href="#基本规则" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>符号/概念</th><th>含义</th></tr></thead><tbody><tr><td><strong>p</strong></td><td>短臂（petit）</td></tr><tr><td><strong>q</strong></td><td>长臂</td></tr><tr><td><strong>着丝粒</strong></td><td>p 与 q 的分界；其两侧的带号从 11 开始向外递增</td></tr><tr><td><strong>区（region）</strong></td><td>着丝粒到端粒之间划分的较大段落，用数字 1、2、3…表示</td></tr><tr><td><strong>带（band）</strong></td><td>区内更细的深浅/荧光区段</td></tr><tr><td><strong>亚带（subband）</strong></td><td>高分辨下带的再细分，写法如 <code>36.1</code>、<code>36.33</code></td></tr><tr><td><strong>h</strong></td><td>异染色质区，如 <code>1qh</code>、<code>9qh</code>、<code>16qh</code>、<code>Yqh</code></td></tr><tr><td><strong>cen / ter</strong></td><td>着丝粒 / 端粒（端粒区有时写作 <code>ter</code>）</td></tr></tbody></table>
+<p><strong>读法示例</strong>：<code>1p36.33</code> ＝ 1 号染色体短臂，第 3 区、第 6 带、第 33 亚带；<code>22q11.2</code> ＝ 22 号染色体长臂，第 1 区、第 1 带、第 2 亚带。数字越大，越靠近端粒。</p>
+<h3 id="分辨率能看多细">分辨率：能看多细<a aria-hidden="true" tabindex="-1" href="#分辨率能看多细" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>显带水平</th><th>单倍体染色体组带数</th><th>大致可分辨的结构变化</th></tr></thead><tbody><tr><td>常规 G 带</td><td>400–550 条</td><td>约 5–10 Mb</td></tr><tr><td>高分辨 G 带</td><td>550–850 条</td><td>约 2–3 Mb</td></tr><tr><td>前中期/早中期</td><td>850 条以上</td><td>更细，但制备难度高</td></tr></tbody></table>
+<blockquote>
+<p>注意：这里的“带数”是<strong>单倍体组所有染色体加起来</strong>的带数，不是“一条染色体有多少带”。带数越高，染色体越长、越处于前中期，分析难度也越大。</p>
+</blockquote>
+<hr/>
+<h2 id="3-显带的共同原理">3. 显带的共同原理<a aria-hidden="true" tabindex="-1" href="#3-显带的共同原理" class="internal"></a></h2>
+<p>显带不是“给 DNA 上色”这么简单，而是三步共同作用：</p>
+<ol>
+<li><strong>预处理改变染色质/蛋白</strong>：胰酶消化蛋白、热/碱变性 DNA、盐处理、BrdU 掺入等。</li>
+<li><strong>染料或检测手段对 AT/GC、蛋白或特定结构有偏好</strong>：Giemsa、喹吖啶、银染、荧光染料。</li>
+<li><strong>染色体本身的组成差异被“放大”</strong>：AT 富集区、GC 富集区、组成型异染色质、NOR、端粒在预处理后表现不同。</li>
+</ol>
+<p>因此，<strong>同一条染色体用不同方法会得到不同名字的带型</strong>，但它们往往在讲同一件“AT/GC 分区”的事。</p>
+<hr/>
+<h2 id="4-六大经典带型">4. 六大经典带型<a aria-hidden="true" tabindex="-1" href="#4-六大经典带型" class="internal"></a></h2>
+<h3 id="41-g-带giemsa-banding">4.1 G 带（Giemsa banding）<a aria-hidden="true" tabindex="-1" href="#41-g-带giemsa-banding" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>预处理</td><td>胰蛋白酶（或尿素、EDTA）短时处理，消化染色体蛋白</td></tr><tr><td>染色</td><td>Giemsa 染液（磷酸缓冲液 pH 约 6.8）</td></tr><tr><td>深带</td><td><strong>AT 富集</strong>、晚复制、基因贫乏、LINE-1 富集、染色质较致密</td></tr><tr><td>浅带</td><td><strong>GC 富集</strong>、早复制、基因丰富、Alu 富集</td></tr><tr><td>用途</td><td>常规核型分析、结构异常定位、ISCN 命名</td></tr></tbody></table>
+<p><strong>要点</strong>：</p>
+<ul>
+<li>G 深带不是“DNA 更多”，而是 AT 富集 + 蛋白/染色质状态导致染料结合更多或吸收更强。</li>
+<li>胰酶处理过度 → 带型模糊、染色体“发毛”；处理不足 → 带型对比弱。胰酶浓度、时间、温度、片龄都要固定。</li>
+<li>G 带是最常用的“通用条形码”，400–550 条带水平即可满足常规诊断。</li>
+</ul>
+<h3 id="42-q-带quinacrine-banding">4.2 Q 带（Quinacrine banding）<a aria-hidden="true" tabindex="-1" href="#42-q-带quinacrine-banding" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>染料</td><td>喹吖啶（quinacrine）或喹吖啶芥，荧光显微镜观察</td></tr><tr><td>亮带</td><td><strong>AT 富集</strong>，与 G 深带基本对应</td></tr><tr><td>暗带</td><td>GC 富集，与 G 浅带基本对应</td></tr><tr><td>特点</td><td>荧光易淬灭、需要即时观察；对 Y 染色体长臂异染色质（Yq12）特别亮</td></tr><tr><td>用途</td><td>历史上有重要作用；现在多用于特定异染色质、Y 染色体和荧光研究</td></tr></tbody></table>
+<blockquote>
+<p>术语提醒：不同教材对 Q 带的“深/亮”称呼可能相反。<strong>记对应关系而不是记“深/亮”二字</strong>：Q 亮带 ≈ G 深带 ≈ AT 富集。</p>
+</blockquote>
+<h3 id="43-r-带reverse-banding">4.3 R 带（Reverse banding）<a aria-hidden="true" tabindex="-1" href="#43-r-带reverse-banding" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>预处理</td><td>热盐处理（RHG）、碱处理，或 BrdU 掺入后光/热预处理</td></tr><tr><td>染色</td><td>Giemsa 或吖啶橙</td></tr><tr><td>深带</td><td><strong>GC 富集</strong>、早复制、基因丰富，对应 G 浅带</td></tr><tr><td>浅带</td><td>AT 富集，对应 G 深带</td></tr><tr><td>用途</td><td>显示端粒区（G 带浅的末端在 R 带中变深）、高分辨精细定位、G 带不清晰时的补充</td></tr></tbody></table>
+<p><strong>为什么有用</strong>：G 带对端粒区常常“浅而模糊”，而 R 带把 GC 富集的末端带染深，因此<strong>末端缺失、端粒区重排</strong>常用 R 带确认。</p>
+<h3 id="44-c-带constitutive-heterochromatin-banding">4.4 C 带（Constitutive heterochromatin banding）<a aria-hidden="true" tabindex="-1" href="#44-c-带constitutive-heterochromatin-banding" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>预处理</td><td>饱和 Ba(OH)₂ 处理，再经 2×SSC（柠檬酸钠-盐）孵育</td></tr><tr><td>染色</td><td>Giemsa</td></tr><tr><td>显示</td><td><strong>组成型异染色质</strong>：着丝粒区、<code>1qh</code>、<code>9qh</code>、<code>16qh</code>、<code>Yq12</code></td></tr><tr><td>用途</td><td>识别着丝粒异染色质多态性、判断标记染色体来源、研究 Y 染色体</td></tr></tbody></table>
+<p><strong>要点</strong>：</p>
+<ul>
+<li>C 带显示的不是“所有着丝粒的均匀染色”，而是<strong>组成型异染色质</strong>（卫星 DNA、高度重复序列）。</li>
+<li>C 带深带与 G 深带不是一回事：G 深带多为 AT 富集的真染色质，C 带是高度重复的异染色质。</li>
+<li>不同个体的 C 带大小可有多态性，通常不致病，但可用于亲子鉴定/骨髓移植嵌合分析。</li>
+</ul>
+<h3 id="45-t-带telomere-banding">4.5 T 带（Telomere banding）<a aria-hidden="true" tabindex="-1" href="#45-t-带telomere-banding" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>预处理</td><td>热变性（如 87–90℃）或碱处理</td></tr><tr><td>染色</td><td>Giemsa</td></tr><tr><td>显示</td><td><strong>端粒区</strong>（染色体末端）</td></tr><tr><td>用途</td><td>观察端粒长度/端粒联合、末端重排；与 <a href="../../细胞生物学/知识点/端粒与端粒酶" class="internal">端粒与端粒酶</a> 的端粒结构相呼应</td></tr></tbody></table>
+<p><strong>要点</strong>：</p>
+<ul>
+<li>T 带不是“端粒酶染色”，它显示的是端粒 DNA/染色质的末端区段。</li>
+<li>不同染色体端粒的显色强度不一样，不能简单用 T 带长度判断端粒绝对长度。</li>
+</ul>
+<h3 id="46-n-带nor-banding">4.6 N 带（NOR banding）<a aria-hidden="true" tabindex="-1" href="#46-n-带nor-banding" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>预处理/染色</td><td>硝酸银（AgNO₃）银染</td></tr><tr><td>显示</td><td><strong>核仁组织区（NOR）</strong> 的银染蛋白（如核仁素 C23、B23/核磷蛋白、RNA 聚合酶 I 相关蛋白）</td></tr><tr><td>位置</td><td>人类位于近端着丝粒染色体 <strong>13、14、15、21、22</strong> 的短臂</td></tr><tr><td>用途</td><td>评估 NOR 活性、研究近端着丝粒染色体、辅助判断标记染色体</td></tr></tbody></table>
+<p><strong>要点</strong>：</p>
+<ul>
+<li>N 带染的是 <strong>NOR 相关蛋白</strong>，不是 rDNA 本身；银染强度反映 NOR 的转录活性。</li>
+<li>“N”来自 nucleolar organizer（核仁组织区），不要误解为“细胞核”或“核仁整体”。</li>
+</ul>
+<hr/>
+<h2 id="5-六大带型速查表">5. 六大带型速查表<a aria-hidden="true" tabindex="-1" href="#5-六大带型速查表" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>带型</th><th>预处理</th><th>染料/检测</th><th>深/亮带代表</th><th>对应关系</th><th>主要用途</th></tr></thead><tbody><tr><td><strong>G</strong></td><td>胰酶/尿素/EDTA</td><td>Giemsa</td><td>AT 富集、晚复制、基因贫乏</td><td>基准</td><td>常规核型、结构异常</td></tr><tr><td><strong>Q</strong></td><td>轻度/无</td><td>喹吖啶荧光</td><td>AT 富集（亮）</td><td>亮 ≈ G 深</td><td>Y 染色体、异染色质、荧光</td></tr><tr><td><strong>R</strong></td><td>热盐/碱/BrdU</td><td>Giemsa/吖啶橙</td><td>GC 富集、早复制、基因丰富</td><td>深 ≈ G 浅</td><td>端粒区、高分辨、补充 G</td></tr><tr><td><strong>C</strong></td><td>Ba(OH)₂ + 2×SSC</td><td>Giemsa</td><td>组成型异染色质</td><td>与 G 无关</td><td>着丝粒异染色质、多态性</td></tr><tr><td><strong>T</strong></td><td>热/碱变性</td><td>Giemsa</td><td>端粒区</td><td>末端</td><td>端粒重排、端粒联合</td></tr><tr><td><strong>N</strong></td><td>AgNO₃ 银染</td><td>银</td><td>NOR 相关蛋白</td><td>近端着丝粒短臂</td><td>NOR 活性、标记染色体</td></tr></tbody></table>
+<blockquote>
+<p>记忆：<strong>G 看全身，Q 看荧光，R 看反相，C 看着丝粒，T 看末端，N 看核仁组织区。</strong></p>
+</blockquote>
+<h3 id="51-其他常见带型与技术">5.1 其他常见带型与技术<a aria-hidden="true" tabindex="-1" href="#51-其他常见带型与技术" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>原理</th><th>用途</th></tr></thead><tbody><tr><td><strong>DAPI / DA-DAPI</strong></td><td>AT 富集的荧光染料；DA-DAPI 可突出异染色质</td><td>AT 区、着丝粒异染色质、Y 染色体</td></tr><tr><td><strong>CMA / CM1</strong></td><td>色霉素 A3（chromomycin A3）偏好 GC 富集区</td><td>GC 区，与 DAPI 互补，常用于植物/动物核型</td></tr><tr><td><strong>RE-banding</strong></td><td>限制酶消化后染色</td><td>特定重复序列、异染色质区</td></tr><tr><td><strong>mFISH / SKY / 染色体涂染</strong></td><td>多条染色体分别用不同荧光探针“涂色”</td><td>复杂易位、标记染色体、肿瘤核型</td></tr><tr><td><strong>高分辨 G 带</strong></td><td>同步化使染色体停在前中期</td><td>精细断点定位、微缺失筛查</td></tr></tbody></table>
+<blockquote>
+<p>这些技术有的仍叫“带”，有的已属于“荧光定位/涂染”，考试中通常只需知道它们与经典六大带型的区别。</p>
+</blockquote>
+<hr/>
+<h2 id="6-显带技术的操作流程以-g-带为例">6. 显带技术的操作流程（以 G 带为例）<a aria-hidden="true" tabindex="-1" href="#6-显带技术的操作流程以-g-带为例" class="internal"></a></h2>
+<h3 id="61-样本与培养">6.1 样本与培养<a aria-hidden="true" tabindex="-1" href="#61-样本与培养" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>样本</th><th>用途</th></tr></thead><tbody><tr><td>外周血（PHA 刺激的淋巴细胞）</td><td>最常用，分裂旺盛</td></tr><tr><td>骨髓</td><td>血液肿瘤核型</td></tr><tr><td>羊水细胞、绒毛</td><td>产前诊断</td></tr><tr><td>皮肤成纤维细胞</td><td>疑难病例、嵌合体</td></tr><tr><td>肿瘤组织</td><td>实体瘤细胞遗传学</td></tr></tbody></table>
+<h3 id="62-关键步骤">6.2 关键步骤<a aria-hidden="true" tabindex="-1" href="#62-关键步骤" class="internal"></a></h3>
+<ol>
+<li><strong>培养与同步化</strong>（可选）：用甲氨蝶呤/胸苷阻断，使细胞同步在 S 期，释放后收获更多前中期染色体。</li>
+<li><strong>秋水仙素阻断</strong>：抑制纺锤体，把细胞停在中期/前中期。</li>
+<li><strong>低渗处理</strong>：0.075 M KCl 使细胞膨胀、染色体分散。</li>
+<li><strong>固定</strong>：甲醇:冰醋酸 = 3:1，重复固定。</li>
+<li><strong>滴片</strong>：细胞悬液滴到预冷玻片，火焰/烤片干燥，染色体铺展。</li>
+<li><strong>老化</strong>：60–65℃ 烤片或紫外老化，增强后续显带稳定性。</li>
+<li><strong>胰酶处理</strong>：0.025%–0.05% 胰酶，时间按批次标定（常见 10–30 秒）。</li>
+<li><strong>Giemsa 染色</strong>：pH 6.8 磷酸缓冲液配染液，染色 5–10 分钟。</li>
+<li><strong>镜检与核型分析</strong>：100× 油镜，选取铺展良好的中期分裂相，按 ISCN 排布、命名。</li>
+</ol>
+<h3 id="63-影响显带质量的变量">6.3 影响显带质量的变量<a aria-hidden="true" tabindex="-1" href="#63-影响显带质量的变量" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>变量</th><th>影响</th></tr></thead><tbody><tr><td>胰酶浓度/时间</td><td>过度 → 带型模糊；不足 → 对比弱</td></tr><tr><td>片龄与烤片温度</td><td>太“新”易脱色，太“老”难消化</td></tr><tr><td>Giemsa pH</td><td>偏酸/偏碱会改变颜色与对比</td></tr><tr><td>染色体长度</td><td>越长（前中期）带越多，分辨率越高</td></tr><tr><td>细胞密度</td><td>太密导致重叠，影响分析</td></tr><tr><td>批次与试剂</td><td>胰酶、染液批次差异需用对照片校准</td></tr></tbody></table>
+<blockquote>
+<p>高分辨 G 带的关键不是“更大的放大倍数”，而是<strong>让染色体停在更早的时期</strong>（前中期/早中期），染色体更长、带更多。</p>
+</blockquote>
+<hr/>
+<h2 id="7-区带命名的实际写法iscn">7. 区带命名的实际写法（ISCN）<a aria-hidden="true" tabindex="-1" href="#7-区带命名的实际写法iscn" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>核型写法</th><th>含义</th></tr></thead><tbody><tr><td><code>46,XX</code></td><td>正常女性</td></tr><tr><td><code>46,XY</code></td><td>正常男性</td></tr><tr><td><code>47,XX,+21</code></td><td>21 三体（女性）</td></tr><tr><td><code>45,X</code></td><td>Turner 综合征</td></tr><tr><td><code>46,XX,del(5)(p15.2)</code></td><td>5 号染色体短臂 15.2 带缺失（Cri-du-chat 关键区）</td></tr><tr><td><code>46,XY,t(9;22)(q34;q11.2)</code></td><td>9 与 22 号染色体易位，形成 Ph 染色体</td></tr><tr><td><code>46,XX,inv(16)(p13.1q22)</code></td><td>16 号染色体臂间倒位</td></tr><tr><td><code>46,XY,der(22)t(9;22)</code></td><td>衍生 22 号（Ph 染色体）</td></tr></tbody></table>
+<p><strong>读法</strong>：<code>t(9;22)(q34;q11.2)</code> 中，<code>t</code> 表示易位，括号内是两条染色体，第二个括号内是断点带号；<code>der</code> 表示衍生染色体。</p>
+<hr/>
+<h2 id="8-带型的生物学基础">8. 带型的生物学基础<a aria-hidden="true" tabindex="-1" href="#8-带型的生物学基础" class="internal"></a></h2>
+<p>带型不是随机的，它对应基因组的<strong>组成结构（isochore）与染色质状态</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特征</th><th>G 深带 / R 浅带</th><th>G 浅带 / R 深带</th></tr></thead><tbody><tr><td>GC 含量</td><td>低（AT 富集）</td><td>高（GC 富集）</td></tr><tr><td>基因密度</td><td>低</td><td>高</td></tr><tr><td>复制时序</td><td>晚复制</td><td>早复制</td></tr><tr><td>重复序列</td><td>LINE-1 富集</td><td>Alu 富集</td></tr><tr><td>染色质</td><td>较致密、常靠近核膜（LAD）</td><td>较开放</td></tr><tr><td>重组</td><td>相对低</td><td>相对高</td></tr></tbody></table>
+<ul>
+<li><strong>R 深带 ≈ GC 富集 ≈ 基因密集 ≈ 早复制</strong>，所以“看基因”时常关注 R 带。</li>
+<li><strong>G 深带 ≈ AT 富集 ≈ 基因贫乏 ≈ 晚复制</strong>，所以 G 深带并不“更重要”，只是染色更深。</li>
+<li>着丝粒、端粒、NOR 属于另一类“结构性”区域，C/T/N 带分别针对它们。</li>
+</ul>
+<h3 id="带型与进化">带型与进化<a aria-hidden="true" tabindex="-1" href="#带型与进化" class="internal"></a></h3>
+<ul>
+<li>染色体带型在近缘物种间常有保守性（例如人类与灵长类的同源片段），可以用**染色体涂染（chromosome painting）**追踪演化重排。</li>
+<li>带型也是“染色体条形码”，不同物种的核型差异可以通过带型比较来研究。</li>
+</ul>
+<hr/>
+<h2 id="9-临床应用">9. 临床应用<a aria-hidden="true" tabindex="-1" href="#9-临床应用" class="internal"></a></h2>
+<h3 id="91-体质性先天异常">9.1 体质性（先天）异常<a aria-hidden="true" tabindex="-1" href="#91-体质性先天异常" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>例子</th></tr></thead><tbody><tr><td>数目异常</td><td>21 三体、18 三体、13 三体、45,X、47,XXY</td></tr><tr><td>结构异常</td><td>缺失、重复、倒位、易位、环状染色体、等臂染色体、标记染色体</td></tr><tr><td>微缺失综合征</td><td>5p15.2（Cri-du-chat）、4p16.3（Wolf-Hirschhorn）、22q11.2（DiGeorge）、15q11-q13（Prader-Willi/Angelman）、17p13.3（Miller-Dieker）、11p15.5（Beckwith-Wiedemann）、13q14（RB1）</td></tr><tr><td>产前诊断</td><td>羊水、绒毛、脐血核型；结合 FISH/CMA</td></tr></tbody></table>
+<h3 id="92-肿瘤细胞遗传学">9.2 肿瘤细胞遗传学<a aria-hidden="true" tabindex="-1" href="#92-肿瘤细胞遗传学" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>异常</th><th>疾病/意义</th></tr></thead><tbody><tr><td><code>t(9;22)(q34;q11.2)</code> / Ph 染色体</td><td>慢性髓性白血病（CML），BCR–ABL1</td></tr><tr><td><code>t(15;17)(q24.1;q21.2)</code></td><td>急性早幼粒细胞白血病（APL），PML–RARA</td></tr><tr><td><code>t(8;21)(q22;q22.1)</code></td><td>急性髓系白血病，RUNX1–RUNX1T1</td></tr><tr><td><code>inv(16)(p13.1q22)</code></td><td>急性髓系白血病，CBFB–MYH11</td></tr><tr><td><code>t(8;14)(q24.2;q32)</code></td><td>Burkitt 淋巴瘤，MYC–IGH</td></tr><tr><td><code>del(5q)</code></td><td>骨髓增生异常综合征（5q- 综合征）</td></tr><tr><td><code>del(13q14)</code></td><td>视网膜母细胞瘤（RB1）</td></tr></tbody></table>
+<h3 id="93-显带的局限与互补技术">9.3 显带的局限与互补技术<a aria-hidden="true" tabindex="-1" href="#93-显带的局限与互补技术" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>技术</th><th>分辨率</th><th>优势</th><th>局限</th></tr></thead><tbody><tr><td>G 带核型</td><td>约 5–10 Mb（400–550 带）</td><td>全局、可看平衡易位/倒位</td><td>微缺失、点突变看不到</td></tr><tr><td>高分辨 G 带</td><td>约 2–3 Mb</td><td>更细的断点定位</td><td>制备难、带型解释主观</td></tr><tr><td>FISH</td><td>kb–Mb</td><td>特定 locus、微缺失、融合基因</td><td>只能看已知探针</td></tr><tr><td>CMA（染色体微阵列）</td><td>kb 级</td><td>全基因组拷贝数、UPD</td><td>看不到平衡重排</td></tr><tr><td>外显子/基因组测序</td><td>单碱基</td><td>点突变、小 indel</td><td>结构重排解析需专门流程</td></tr><tr><td>光学基因组图谱（OGM）</td><td>kb–Mb</td><td>长片段结构重排</td><td>尚未普及</td></tr></tbody></table>
+<blockquote>
+<p>临床常用“<strong>核型 + FISH + CMA</strong>”组合：核型看“大结构 + 平衡重排”，CMA 看“小拷贝数”，测序看“点突变”。</p>
+</blockquote>
+<hr/>
+<h2 id="10-常见误区">10. 常见误区<a aria-hidden="true" tabindex="-1" href="#10-常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“G 深带＝DNA 更多”</strong>：错。深带是 AT 富集与染色质/蛋白状态导致染料结合差异，不是 DNA 量更多。</li>
+<li><strong>“G、Q、R 是三种不同的结构”</strong>：错。它们主要是在报告同一套 AT/GC 分区，只是检测方式不同；G 与 R 互为反相。</li>
+<li><strong>“Q 带亮带＝GC 富集”</strong>：错。喹吖啶亮带是 AT 富集，对应 G 深带。</li>
+<li><strong>“C 带显示所有着丝粒”</strong>：不准确。C 带显示组成型异染色质，不同着丝粒强弱不一。</li>
+<li><strong>“C 带深带与 G 深带是同一回事”</strong>：错。C 带是高度重复的异染色质，G 深带多为 AT 富集真染色质。</li>
+<li><strong>“N 带＝核仁”</strong>：错。N 带显示 NOR 相关蛋白，位于近端着丝粒染色体短臂。</li>
+<li><strong>“T 带能测端粒长度”</strong>：不准确。T 带显示端粒区染色，强度不等于绝对长度。</li>
+<li><strong>“带号越大越靠近着丝粒”</strong>：方向反了。带号从着丝粒向端粒递增。</li>
+<li><strong>“显带能看见所有微缺失”</strong>：错。常规 G 带分辨率约 5–10 Mb；22q11.2 等微缺失常需 FISH/CMA。</li>
+<li><strong>“高分辨带数越多越好”</strong>：不一定。带数高但染色体扭曲、重叠时，分析反而更困难；关键是可解释性。</li>
+</ol>
+<hr/>
+<h2 id="11-一页速记">11. 一页速记<a aria-hidden="true" tabindex="-1" href="#11-一页速记" class="internal"></a></h2>
+<ul>
+<li><strong>一条染色体</strong>：p 臂 + 着丝粒 + q 臂；区/带/亚带从着丝粒向端粒编号。</li>
+<li><strong>六大带型</strong>：G（Giemsa，常规）、Q（喹吖啶荧光）、R（反相）、C（着丝粒异染色质）、T（端粒）、N（NOR 银染）。</li>
+<li><strong>对应关系</strong>：G 深 ≈ Q 亮 ≈ AT 富集 ≈ 晚复制 ≈ 基因贫乏；R 深 ≈ G 浅 ≈ GC 富集 ≈ 早复制 ≈ 基因丰富。</li>
+<li><strong>分辨率</strong>：常规 400–550 带 ≈ 5–10 Mb；高分辨 550–850 带 ≈ 2–3 Mb。</li>
+<li><strong>临床组合</strong>：核型（大结构/平衡重排）+ FISH（已知 locus）+ CMA（拷贝数）+ 测序（点突变）。</li>
+<li><strong>一句提醒</strong>：带是“染色质组成的条形码”，不是基因坐标；带号从着丝粒向端粒递增。</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

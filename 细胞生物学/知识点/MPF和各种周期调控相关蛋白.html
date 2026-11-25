@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html><head><title>MPF 与细胞周期调控相关蛋白</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="MPF 与细胞周期调控相关蛋白"/><meta property="og:description" content="MPF 与细胞周期调控相关蛋白 一句话：细胞周期的推进靠 Cyclin–CDK 复合物的激酶活性周期性振荡。MPF = CDK1 + cyclin B，是驱动 G2→M 的核心引擎；它被 Wee1（抑制性磷酸化）/ Cdc25（去磷酸化） 做成一个全或无的开关，被 APC/C 降解 cyclin B 而关闭。其余周期蛋白、CKI、检查点激酶、泛素连接酶，都是这台引擎的档位、刹车与不可逆棘轮。 三层框架：引擎（Cyclin–CDK）→ 开关（磷酸化 / 去磷酸化，可逆）→ 销毁（泛素–蛋白酶体，不可逆）。 一、总览：谁在管什么 层次蛋白 / 复合体作用是否可逆引擎Cyclin D/E/A/B、CDK1/2/4/6、CDK7磷酸化底物，推动时相转换活性可逆激活开关CAK（CDK7–cyclin H）、Cdc25给激活磷酸、去掉抑制磷酸可逆刹车开关Wee1 / Myt1给 CDK1 加抑制性磷酸可逆CKI（抑制蛋白）INK4 家族（p16 等）、CIP/KIP 家族（p21/p27/p57）直接结合并抑制 Cyclin–CDK可逆泛素连接酶SCF、APC/C^Cdc20、APC/C^Cdh1降解 cyclin、CKI、securin 等不可逆检查点激酶ATM / ATR → Chk1 / Chk2 → p53感知损伤、压住开关可逆复制许可ORC、Cdc6、Cdt1、MCM2-7、geminin保证 DNA 每周期只复制一次—G1 闸门Rb–E2F生长因子依赖的限制点（R point）— 最核心的一句话：CDK 蛋白量在整个周期基本恒定，周期性变化的是 cyclin 的合成与降解。所以「周期引擎」不是被造出来又拆掉，而是被反复”装上配件—拆除配件”。 二、MPF 的发现（三个诺奖级实验） 年份人物实验结论1971Masui &amp;amp; Markert把孕酮刺激的蛙卵母细胞细胞质注入未成熟卵母细胞 → 诱导生发泡破裂（GVBD）胞质中存在可转移的「成熟促进因子 MPF」1970sLeland Hartwellbudding yeast cdc 突变体筛选找到一批控制细胞分裂周期的基因（CDC28 等）1982Tim Hunt海胆/蛤蜊卵中发现每周期合成后突然消失的蛋白命名为 cyclin1980sPaul Nurse裂殖酵母 cdc2 突变（wee 小细胞 / cdc2-3w 提前分裂）鉴定 CDK1（p34^cdc2），并揭示 Wee1–Cdc25 的开关1988Maller / Lohka 等纯化 MPFMPF = CDK1 + cyclin B，具组蛋白 H1 激酶活性 2001 年 Hartwell、Hunt、Nurse 共享诺贝尔生理学或医学奖。三套系统（蛙卵、酵母、海胆卵）最后指向同一台机器，是细胞生物学最漂亮的汇流之一。 两个名字都成立：MPF 既叫 Maturation-Promoting Factor（卵母细胞成熟），也叫 M-Phase Promoting Factor（体细胞 M 期进入），现在通用后者。 三、MPF 的组成与激活：一个双稳态开关 MPF 的激活开关与不可逆关闭 MPF 由恒定的 CDK1 与周期性积累的 cyclin B 组成。先经 CAK 磷酸化 Thr161，再被 Wee1 与 Myt1 加上 Thr14 和 Tyr15 抑制性磷酸形成 pre-MPF；Cdc25 去除抑制磷酸后 MPF 爆发激活，并通过激活 Cdc25、抑制 Wee1 形成双稳态正反馈。活性 MPF 磷酸化 lamin、condensin、微管相关蛋白等引发 M 期事件。最终 APC/C 降解 cyclin B 与 securin，使 MPF 不可逆关闭并退出 M 期。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="MPF 与细胞周期调控相关蛋白 一句话：细胞周期的推进靠 Cyclin–CDK 复合物的激酶活性周期性振荡。MPF = CDK1 + cyclin B，是驱动 G2→M 的核心引擎；它被 Wee1（抑制性磷酸化）/ Cdc25（去磷酸化） 做成一个全或无的开关，被 APC/C 降解 cyclin B 而关闭。其余周期蛋白、CKI、检查点激酶、泛素连接酶，都是这台引擎的档位、刹车与不可逆棘轮。 三层框架：引擎（Cyclin–CDK）→ 开关（磷酸化 / 去磷酸化，可逆）→ 销毁（泛素–蛋白酶体，不可逆）。 一、总览：谁在管什么 层次蛋白 / 复合体作用是否可逆引擎Cyclin D/E/A/B、CDK1/2/4/6、CDK7磷酸化底物，推动时相转换活性可逆激活开关CAK（CDK7–cyclin H）、Cdc25给激活磷酸、去掉抑制磷酸可逆刹车开关Wee1 / Myt1给 CDK1 加抑制性磷酸可逆CKI（抑制蛋白）INK4 家族（p16 等）、CIP/KIP 家族（p21/p27/p57）直接结合并抑制 Cyclin–CDK可逆泛素连接酶SCF、APC/C^Cdc20、APC/C^Cdh1降解 cyclin、CKI、securin 等不可逆检查点激酶ATM / ATR → Chk1 / Chk2 → p53感知损伤、压住开关可逆复制许可ORC、Cdc6、Cdt1、MCM2-7、geminin保证 DNA 每周期只复制一次—G1 闸门Rb–E2F生长因子依赖的限制点（R point）— 最核心的一句话：CDK 蛋白量在整个周期基本恒定，周期性变化的是 cyclin 的合成与降解。所以「周期引擎」不是被造出来又拆掉，而是被反复”装上配件—拆除配件”。 二、MPF 的发现（三个诺奖级实验） 年份人物实验结论1971Masui &amp;amp; Markert把孕酮刺激的蛙卵母细胞细胞质注入未成熟卵母细胞 → 诱导生发泡破裂（GVBD）胞质中存在可转移的「成熟促进因子 MPF」1970sLeland Hartwellbudding yeast cdc 突变体筛选找到一批控制细胞分裂周期的基因（CDC28 等）1982Tim Hunt海胆/蛤蜊卵中发现每周期合成后突然消失的蛋白命名为 cyclin1980sPaul Nurse裂殖酵母 cdc2 突变（wee 小细胞 / cdc2-3w 提前分裂）鉴定 CDK1（p34^cdc2），并揭示 Wee1–Cdc25 的开关1988Maller / Lohka 等纯化 MPFMPF = CDK1 + cyclin B，具组蛋白 H1 激酶活性 2001 年 Hartwell、Hunt、Nurse 共享诺贝尔生理学或医学奖。三套系统（蛙卵、酵母、海胆卵）最后指向同一台机器，是细胞生物学最漂亮的汇流之一。 两个名字都成立：MPF 既叫 Maturation-Promoting Factor（卵母细胞成熟），也叫 M-Phase Promoting Factor（体细胞 M 期进入），现在通用后者。 三、MPF 的组成与激活：一个双稳态开关 MPF 的激活开关与不可逆关闭 MPF 由恒定的 CDK1 与周期性积累的 cyclin B 组成。先经 CAK 磷酸化 Thr161，再被 Wee1 与 Myt1 加上 Thr14 和 Tyr15 抑制性磷酸形成 pre-MPF；Cdc25 去除抑制磷酸后 MPF 爆发激活，并通过激活 Cdc25、抑制 Wee1 形成双稳态正反馈。活性 MPF 磷酸化 lamin、condensin、微管相关蛋白等引发 M 期事件。最终 APC/C 降解 cyclin B 与 securin，使 MPF 不可逆关闭并退出 M 期。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/MPF和各种周期调控相关蛋白"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#mpf-与细胞周期调控相关蛋白" data-for="mpf-与细胞周期调控相关蛋白">MPF 与细胞周期调控相关蛋白</a></li><li class="depth-1"><a href="#一总览谁在管什么" data-for="一总览谁在管什么">一、总览：谁在管什么</a></li><li class="depth-1"><a href="#二mpf-的发现三个诺奖级实验" data-for="二mpf-的发现三个诺奖级实验">二、MPF 的发现（三个诺奖级实验）</a></li><li class="depth-1"><a href="#三mpf-的组成与激活一个双稳态开关" data-for="三mpf-的组成与激活一个双稳态开关">三、MPF 的组成与激活：一个双稳态开关</a></li><li class="depth-2"><a href="#31-组成" data-for="31-组成">3.1 组成</a></li><li class="depth-2"><a href="#32-激活的四步关键先蓄势再松刹车" data-for="32-激活的四步关键先蓄势再松刹车">3.2 激活的四步（关键：先&quot;蓄势&quot;，再&quot;松刹车&quot;）</a></li><li class="depth-2"><a href="#33-正反馈造就全或无" data-for="33-正反馈造就全或无">3.3 正反馈造就&quot;全或无&quot;</a></li><li class="depth-2"><a href="#34-mpf-磷酸化的底物--m-期形态变化" data-for="34-mpf-磷酸化的底物--m-期形态变化">3.4 MPF 磷酸化的底物 → M 期形态变化</a></li><li class="depth-1"><a href="#四mpf-的关闭退出-m-期靠销毁" data-for="四mpf-的关闭退出-m-期靠销毁">四、MPF 的关闭：退出 M 期靠&quot;销毁&quot;</a></li><li class="depth-1"><a href="#五cyclincdk-全景各时相的组合" data-for="五cyclincdk-全景各时相的组合">五、Cyclin–CDK 全景：各时相的组合</a></li><li class="depth-1"><a href="#六cki两大家族别混" data-for="六cki两大家族别混">六、CKI：两大家族别混</a></li><li class="depth-1"><a href="#七磷酸化开关与检查点损伤时怎么压住mpf" data-for="七磷酸化开关与检查点损伤时怎么压住mpf">七、磷酸化开关与检查点：损伤时怎么&quot;压住&quot;MPF</a></li><li class="depth-2"><a href="#71-g2m-检查点最直接管-mpf" data-for="71-g2m-检查点最直接管-mpf">7.1 G2/M 检查点（最直接管 MPF）</a></li><li class="depth-2"><a href="#72-三条检查点一览" data-for="72-三条检查点一览">7.2 三条检查点一览</a></li><li class="depth-1"><a href="#八泛素连接酶不可逆的方向性" data-for="八泛素连接酶不可逆的方向性">八、泛素连接酶：不可逆的方向性</a></li><li class="depth-1"><a href="#九rbe2fg1-的限制点r-point" data-for="九rbe2fg1-的限制点r-point">九、Rb–E2F：G1 的限制点（R point）</a></li><li class="depth-1"><a href="#十复制许可licensing每周期只复制一次" data-for="十复制许可licensing每周期只复制一次">十、复制许可（licensing）：每周期只复制一次</a></li><li class="depth-1"><a href="#十一经典实验与常用工具" data-for="十一经典实验与常用工具">十一、经典实验与常用工具</a></li><li class="depth-1"><a href="#十二常见误区澄清" data-for="十二常见误区澄清">十二、常见误区澄清</a></li><li class="depth-1"><a href="#十三要点速记" data-for="十三要点速记">十三、要点速记</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">MPF 与细胞周期调控相关蛋白</h1><p class="content-meta">Nov 25, 2026, 26 min read</p></div></div><article class="popover-hint"><h1 id="mpf-与细胞周期调控相关蛋白">MPF 与细胞周期调控相关蛋白<a aria-hidden="true" tabindex="-1" href="#mpf-与细胞周期调控相关蛋白" class="internal"></a></h1>
+<blockquote>
+<p><strong>一句话</strong>：细胞周期的推进靠 <strong>Cyclin–CDK 复合物的激酶活性周期性振荡</strong>。<strong>MPF = CDK1 + cyclin B</strong>，是驱动 G2→M 的核心引擎；它被 <strong>Wee1（抑制性磷酸化）/ Cdc25（去磷酸化）</strong> 做成一个全或无的开关，被 <strong>APC/C</strong> 降解 cyclin B 而关闭。其余周期蛋白、CKI、检查点激酶、泛素连接酶，都是这台引擎的<strong>档位、刹车与不可逆棘轮</strong>。</p>
+<p><strong>三层框架</strong>：<strong>引擎</strong>（Cyclin–CDK）→ <strong>开关</strong>（磷酸化 / 去磷酸化，可逆）→ <strong>销毁</strong>（泛素–蛋白酶体，不可逆）。</p>
+</blockquote>
+<hr/>
+<h2 id="一总览谁在管什么">一、总览：谁在管什么<a aria-hidden="true" tabindex="-1" href="#一总览谁在管什么" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>层次</th><th>蛋白 / 复合体</th><th>作用</th><th>是否可逆</th></tr></thead><tbody><tr><td><strong>引擎</strong></td><td>Cyclin D/E/A/B、CDK1/2/4/6、CDK7</td><td>磷酸化底物，推动时相转换</td><td>活性可逆</td></tr><tr><td><strong>激活开关</strong></td><td><strong>CAK</strong>（CDK7–cyclin H）、<strong>Cdc25</strong></td><td>给激活磷酸、去掉抑制磷酸</td><td>可逆</td></tr><tr><td><strong>刹车开关</strong></td><td><strong>Wee1 / Myt1</strong></td><td>给 CDK1 加抑制性磷酸</td><td>可逆</td></tr><tr><td><strong>CKI（抑制蛋白）</strong></td><td>INK4 家族（p16 等）、CIP/KIP 家族（p21/p27/p57）</td><td>直接结合并抑制 Cyclin–CDK</td><td>可逆</td></tr><tr><td><strong>泛素连接酶</strong></td><td><strong>SCF</strong>、<strong>APC/C^Cdc20</strong>、<strong>APC/C^Cdh1</strong></td><td>降解 cyclin、CKI、securin 等</td><td><strong>不可逆</strong></td></tr><tr><td><strong>检查点激酶</strong></td><td>ATM / ATR → Chk1 / Chk2 → p53</td><td>感知损伤、压住开关</td><td>可逆</td></tr><tr><td><strong>复制许可</strong></td><td>ORC、Cdc6、Cdt1、MCM2-7、geminin</td><td>保证 DNA 每周期只复制一次</td><td>—</td></tr><tr><td><strong>G1 闸门</strong></td><td><strong>Rb–E2F</strong></td><td>生长因子依赖的限制点（R point）</td><td>—</td></tr></tbody></table>
+<blockquote>
+<p><strong>最核心的一句话</strong>：<strong>CDK 蛋白量在整个周期基本恒定，周期性变化的是 cyclin 的合成与降解</strong>。所以「周期引擎」不是被造出来又拆掉，而是被反复”装上配件—拆除配件”。</p>
+</blockquote>
+<hr/>
+<h2 id="二mpf-的发现三个诺奖级实验">二、MPF 的发现（三个诺奖级实验）<a aria-hidden="true" tabindex="-1" href="#二mpf-的发现三个诺奖级实验" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>年份</th><th>人物</th><th>实验</th><th>结论</th></tr></thead><tbody><tr><td>1971</td><td>Masui &amp; Markert</td><td>把孕酮刺激的<strong>蛙卵母细胞细胞质</strong>注入未成熟卵母细胞 → 诱导生发泡破裂（GVBD）</td><td>胞质中存在可转移的「<strong>成熟促进因子 MPF</strong>」</td></tr><tr><td>1970s</td><td>Leland Hartwell</td><td>budding yeast <strong>cdc 突变体</strong>筛选</td><td>找到一批控制细胞分裂周期的基因（CDC28 等）</td></tr><tr><td>1982</td><td>Tim Hunt</td><td>海胆/蛤蜊卵中发现<strong>每周期合成后突然消失</strong>的蛋白</td><td>命名为 <strong>cyclin</strong></td></tr><tr><td>1980s</td><td>Paul Nurse</td><td>裂殖酵母 <strong>cdc2</strong> 突变（wee 小细胞 / cdc2-3w 提前分裂）</td><td>鉴定 <strong>CDK1（p34^cdc2）</strong>，并揭示 Wee1–Cdc25 的开关</td></tr><tr><td>1988</td><td>Maller / Lohka 等</td><td>纯化 MPF</td><td><strong>MPF = CDK1 + cyclin B</strong>，具组蛋白 H1 激酶活性</td></tr></tbody></table>
+<blockquote>
+<p>2001 年 <strong>Hartwell、Hunt、Nurse</strong> 共享诺贝尔生理学或医学奖。三套系统（蛙卵、酵母、海胆卵）最后指向同一台机器，是细胞生物学最漂亮的汇流之一。</p>
+</blockquote>
+<p><strong>两个名字都成立</strong>：MPF 既叫 <strong>Maturation-Promoting Factor</strong>（卵母细胞成熟），也叫 <strong>M-Phase Promoting Factor</strong>（体细胞 M 期进入），现在通用后者。</p>
+<hr/>
+<h2 id="三mpf-的组成与激活一个双稳态开关">三、MPF 的组成与激活：一个双稳态开关<a aria-hidden="true" tabindex="-1" href="#三mpf-的组成与激活一个双稳态开关" class="internal"></a></h2>
+<p></p><figure class="svg-figure" data-svg="mpf-activation-switch.svg"><svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>MPF 的激活开关与不可逆关闭</title>
+<desc>MPF 由恒定的 CDK1 与周期性积累的 cyclin B 组成。先经 CAK 磷酸化 Thr161，再被 Wee1 与 Myt1 加上 Thr14 和 Tyr15 抑制性磷酸形成 pre-MPF；Cdc25 去除抑制磷酸后 MPF 爆发激活，并通过激活 Cdc25、抑制 Wee1 形成双稳态正反馈。活性 MPF 磷酸化 lamin、condensin、微管相关蛋白等引发 M 期事件。最终 APC/C 降解 cyclin B 与 securin，使 MPF 不可逆关闭并退出 M 期。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"></path>
+  </marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"></path>
+  </marker>
+</defs>
+
+<text class="ttl" x="40" y="24">MPF　蓄势 → 松刹车 → 爆发 → 销毁</text>
+<text class="hint" x="286" y="24">CDK1 恒定　cyclin B 周期性　活性由磷酸化开关决定</text>
+
+
+<rect x="40" y="40" width="600" height="42" rx="10" fill="#F5F5F0" stroke="#e5e7eb" stroke-width="0.5"></rect>
+<text class="sm" x="56" y="66" fill="#5c5c5a">组成</text>
+<rect x="100" y="50" width="180" height="22" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="190" y="65" fill="#042C53" text-anchor="middle">CDK1（p34^cdc2）　量恒定</text>
+<text class="sm" x="288" y="66" fill="#5c5c5a">+</text>
+<rect x="302" y="50" width="180" height="22" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="392" y="65" fill="#04342C" text-anchor="middle">cyclin B　周期性合成降解</text>
+<text class="sm" x="494" y="66" fill="#412402">= MPF（H1 激酶）</text>
+
+
+<text class="ttl" x="40" y="102">激活四步　先蓄势，再松刹车</text>
+
+<rect x="56" y="110" width="270" height="38" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="70" y="134" fill="#042C53">① 结合 cyclin B → CDK1 构象改变</text>
+
+<line x1="191" y1="148" x2="191" y2="154" stroke="#8A8A85" stroke-width="1.1" marker-end="url(#a)"></line>
+
+<rect x="56" y="158" width="270" height="38" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="70" y="182" fill="#042C53">② CAK 磷酸化 Thr161（激活位）</text>
+
+<line x1="191" y1="196" x2="191" y2="202" stroke="#8A8A85" stroke-width="1.1" marker-end="url(#a)"></line>
+
+<rect x="56" y="206" width="270" height="48" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="70" y="226" fill="#412402">③ Wee1 / Myt1 加 Thr14、Tyr15 抑制磷酸</text>
+<text class="sm" x="70" y="244" fill="#633806">→ pre-MPF　蓄势但不放行 ★</text>
+
+<line x1="191" y1="254" x2="191" y2="260" stroke="#8A8A85" stroke-width="1.1" marker-end="url(#a)"></line>
+
+<rect x="56" y="264" width="270" height="48" rx="7" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="70" y="284" fill="#8C1D18">④ Cdc25 脱去 Thr14 / Tyr15 磷酸</text>
+<text class="sm" x="70" y="302" fill="#8C1D18">→ MPF 爆发激活　进入 M 期</text>
+
+
+<path d="M326 288 L338 288 L338 156 L348 156" fill="none" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#r)"></path>
+<text class="sm" x="336" y="326" fill="#8C1D18" text-anchor="end">正反馈</text>
+
+
+<rect x="350" y="110" width="290" height="94" rx="9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="366" y="132" fill="#04342C">正反馈 → 双稳态（全或无）</text>
+<text class="sm" x="366" y="152" fill="#085041">活性 MPF 磷酸化并激活 Cdc25C</text>
+<text class="sm" x="366" y="170" fill="#085041">活性 MPF 磷酸化并抑制 Wee1</text>
+<text class="sm" x="366" y="188" fill="#085041">Plk1 同向助阵　无稳定中间态</text>
+
+
+<rect x="350" y="214" width="290" height="98" rx="9" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="366" y="236" fill="#412402">MPF 底物 → M 期形态变化</text>
+<text class="sm" x="366" y="256" fill="#633806">lamin → 核纤层解聚、核膜解体</text>
+<text class="sm" x="366" y="274" fill="#633806">condensin / H3 → 染色体凝缩</text>
+<text class="sm" x="366" y="292" fill="#633806">MAP / stathmin → 纺锤体形成</text>
+<text class="sm" x="366" y="307" fill="#633806">GM130 → 高尔基体碎裂</text>
+
+
+<rect x="40" y="336" width="600" height="98" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="358" fill="#8C1D18">关闭　APC/C 把 cyclin B 销毁，不可逆</text>
+<text class="sm" x="60" y="380" fill="#8C1D18">SAC 沉默 → APC/C^Cdc20 活化 → 降解 securin（separase 切 cohesin）+ cyclin B</text>
+<text class="sm" x="60" y="398" fill="#8C1D18">CDK1 失活 → PP1 / PP2A 复位底物 → 核膜重建、去凝缩、胞质分裂、退出 M 期</text>
+<text class="sm" x="60" y="416" fill="#8C1D18">APC/C^Cdh1 在 G1 继续降解 cyclin B、Plk1、geminin，锁住低 CDK 状态</text>
+
+<text class="hint" x="40" y="452">方向性　进入 M 期靠可逆的去磷酸化　退出 M 期靠不可逆的蛋白水解</text>
+</svg>
+</figure><p></p>
+<h3 id="31-组成">3.1 组成<a aria-hidden="true" tabindex="-1" href="#31-组成" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>亚基</th><th>名称</th><th>特点</th></tr></thead><tbody><tr><td>催化亚基</td><td><strong>CDK1</strong>（p34^cdc2 / CDC2）</td><td>蛋白量<strong>恒定</strong>，单独无活性；需结合 cyclin 才有激酶构象</td></tr><tr><td>调节亚基</td><td><strong>cyclin B</strong></td><td>从 S/G2 开始积累，M 期末被<strong>骤然降解</strong>；含 <strong>D-box</strong> 降解信号</td></tr><tr><td>辅助</td><td><strong>CAK</strong> = CDK7–cyclin H–MAT1</td><td>磷酸化 CDK1 <strong>Thr161</strong>（T 环），是活性所必需</td></tr><tr><td>辅助</td><td><strong>Suc1 / Cks1</strong></td><td>磷酸化底物对接适配亚基，帮助识别多磷酸化底物</td></tr></tbody></table>
+<h3 id="32-激活的四步关键先蓄势再松刹车">3.2 激活的四步（关键：先”蓄势”，再”松刹车”）<a aria-hidden="true" tabindex="-1" href="#32-激活的四步关键先蓄势再松刹车" class="internal"></a></h3>
+<ol>
+<li><strong>CDK1 + cyclin B 结合</strong> → 构象变化，但尚被抑制</li>
+<li><strong>CAK 磷酸化 Thr161</strong>（激活位）→ 具备活性潜力</li>
+<li><strong>Wee1/Myt1 磷酸化 Thr14 / Tyr15</strong>（抑制位）→ 形成「pre-MPF」，蓄势但不放行 ★</li>
+<li><strong>Cdc25C 脱去 Thr14/Tyr15 的磷酸</strong> → MPF 瞬间爆发活化 → 进入 M 期</li>
+</ol>
+<blockquote>
+<p><strong>pre-MPF 是核心概念</strong>：cyclin B 早在 G2 就积累够了，MPF 却一直”哑火”，因为 Wee1 把 CDK1 按在抑制性磷酸化状态。<strong>进入 M 期不是靠 cyclin B 合成到位，而是靠 Cdc25 松开刹车</strong>——这解释了为什么 G2→M 是<strong>突变式开关</strong>而非渐变。</p>
+</blockquote>
+<h3 id="33-正反馈造就全或无">3.3 正反馈造就”全或无”<a aria-hidden="true" tabindex="-1" href="#33-正反馈造就全或无" class="internal"></a></h3>
+<p>活性 MPF 一旦出现，会同时：</p>
+<ul>
+<li><strong>磷酸化并激活 Cdc25C</strong> → 更多 MPF 被去磷酸化</li>
+<li><strong>磷酸化并抑制 Wee1</strong>（并促其降解）→ 更少抑制性磷酸</li>
+<li>再叠加 <strong>Plk1</strong> 同样激活 Cdc25、抑制 Wee1</li>
+</ul>
+<p>结果是一个<strong>双稳态正反馈环</strong>：要么全关（G2），要么全开（M），中间态不稳定。这让整群细胞可以<strong>同步、快速、不可逆地</strong>进入 M 期。</p>
+<blockquote>
+<p><strong>实验意味</strong>：把 MPF 活性逐步滴定，细胞不会”半进入 M 期”；越过阈值就是全有。这是系统生物学里双稳态开关的教科书案例。</p>
+</blockquote>
+<h3 id="34-mpf-磷酸化的底物--m-期形态变化">3.4 MPF 磷酸化的底物 → M 期形态变化<a aria-hidden="true" tabindex="-1" href="#34-mpf-磷酸化的底物--m-期形态变化" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>底物</th><th>磷酸化后果</th></tr></thead><tbody><tr><td><strong>核纤层蛋白 lamin A/C/B</strong></td><td>核纤层解聚 → <strong>核膜解体</strong></td></tr><tr><td><strong>凝缩素 condensin</strong>（SMC2/4）、组蛋白 H3</td><td><strong>染色体凝缩</strong></td></tr><tr><td>微管相关蛋白、MAP4、stathmin</td><td>微管动态剧增 → <strong>纺锤体形成</strong></td></tr><tr><td>GM130、GRASP65</td><td><strong>高尔基体碎裂</strong></td></tr><tr><td>核仁蛋白、核孔复合体组分</td><td>核仁消失、核孔拆解</td></tr><tr><td>Cdc20 / APC/C 亚基</td><td>为后续<strong>自身关闭</strong>埋下伏笔</td></tr></tbody></table>
+<hr/>
+<h2 id="四mpf-的关闭退出-m-期靠销毁">四、MPF 的关闭：退出 M 期靠”销毁”<a aria-hidden="true" tabindex="-1" href="#四mpf-的关闭退出-m-期靠销毁" class="internal"></a></h2>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;中期→后期：SAC 沉默 → APC/C^Cdc20 活化&quot;] --> B[&quot;泛素化 securin → 降解 → separase 释放 → 切 cohesin → 姐妹染色单体分离&quot;]
+    A --> C[&quot;泛素化 cyclin B（D-box）→ 降解 → CDK1 失活&quot;]
+    B --> D[&quot;PP1 / PP2A 等磷酸酶把 MPF 底物去磷酸化&quot;]
+    C --> D
+    D --> E[&quot;核膜重建、染色体去凝缩、高尔基体复原、胞质分裂、退出 M 期&quot;]
+</code></pre>
+<blockquote>
+<p><strong>方向性从哪来</strong>：<strong>进入 M 期靠去磷酸化（可逆），退出 M 期靠蛋白水解（不可逆）</strong>。所以周期只能往前走，不会倒回去。这是整个细胞周期设计里最精妙的一点。</p>
+<p><strong>APC/C^Cdh1</strong> 在后期末到 G1 继续降解 cyclin B、Plk1、Aurora A、Cdc20、Skp2、geminin，把细胞<strong>锁在低 CDK 活性的 G1 状态</strong>，为下一轮复制许可创造条件。</p>
+</blockquote>
+<hr/>
+<h2 id="五cyclincdk-全景各时相的组合">五、Cyclin–CDK 全景：各时相的组合<a aria-hidden="true" tabindex="-1" href="#五cyclincdk-全景各时相的组合" class="internal"></a></h2>
+<p></p><figure class="svg-figure" data-svg="cell-cycle-regulators-map.svg"><svg viewBox="0 0 680 470" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>细胞周期各时相的 Cyclin-CDK 组合、开关、泛素连接酶与检查点</title>
+<desc>按 G1、G1/S 限制点、S、G2、M 五个阶段列出主导的 Cyclin-CDK 复合物、关键分子开关、E3 泛素连接酶及其底物，以及对应的检查点。CDK 蛋白量恒定，cyclin 周期性合成与降解造成激酶活性振荡；SCF 为组成型活性靠底物磷酸化选靶，APC/C 为周期性激活靠激活子与检查点定时。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">一个周期　四层调控　按时间排布</text>
+<text class="hint" x="256" y="24">CDK 量恒定　变的是 cyclin 与磷酸化状态</text>
+
+
+<rect x="40" y="40" width="70" height="30" rx="6" fill="#F5F5F0" stroke="#e5e7eb" stroke-width="0.5"></rect>
+<text class="sm" x="75" y="59" fill="#5c5c5a" text-anchor="middle">时相</text>
+
+<rect x="118" y="40" width="98" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="167" y="59" fill="#042C53" text-anchor="middle">G1</text>
+<rect x="222" y="40" width="98" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="271" y="59" fill="#04342C" text-anchor="middle">G1/S　R 点</text>
+<rect x="326" y="40" width="98" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="375" y="59" fill="#042C53" text-anchor="middle">S</text>
+<rect x="430" y="40" width="98" height="30" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="479" y="59" fill="#412402" text-anchor="middle">G2</text>
+<rect x="534" y="40" width="98" height="30" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="583" y="59" fill="#8C1D18" text-anchor="middle">M</text>
+
+
+<rect x="40" y="76" width="70" height="62" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="75" y="102" fill="#042C53" text-anchor="middle">引擎</text>
+<text class="sm" x="75" y="120" fill="#0C447C" text-anchor="middle">Cyclin</text>
+<text class="sm" x="75" y="134" fill="#0C447C" text-anchor="middle">CDK</text>
+
+<rect x="118" y="76" width="98" height="62" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="167" y="102" fill="#042C53" text-anchor="middle">cyclin D</text>
+<text class="sm" x="167" y="120" fill="#0C447C" text-anchor="middle">CDK4/6</text>
+<text class="sm" x="167" y="134" fill="#0C447C" text-anchor="middle">单磷酸 Rb</text>
+
+<rect x="222" y="76" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="271" y="102" fill="#04342C" text-anchor="middle">cyclin E</text>
+<text class="sm" x="271" y="120" fill="#085041" text-anchor="middle">CDK2</text>
+<text class="sm" x="271" y="134" fill="#085041" text-anchor="middle">超磷酸 Rb</text>
+
+<rect x="326" y="76" width="98" height="62" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="375" y="102" fill="#042C53" text-anchor="middle">cyclin A</text>
+<text class="sm" x="375" y="120" fill="#0C447C" text-anchor="middle">CDK2</text>
+<text class="sm" x="375" y="134" fill="#0C447C" text-anchor="middle">防再复制</text>
+
+<rect x="430" y="76" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="479" y="102" fill="#412402" text-anchor="middle">cyclin A</text>
+<text class="sm" x="479" y="120" fill="#633806" text-anchor="middle">CDK1</text>
+<text class="sm" x="479" y="134" fill="#633806" text-anchor="middle">蓄势</text>
+
+<rect x="534" y="76" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="583" y="102" fill="#8C1D18" text-anchor="middle">cyclin B</text>
+<text class="sm" x="583" y="120" fill="#8C1D18" text-anchor="middle">CDK1 = MPF</text>
+<text class="sm" x="583" y="134" fill="#8C1D18" text-anchor="middle">★ 引擎全开</text>
+
+
+<rect x="40" y="144" width="70" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="75" y="170" fill="#412402" text-anchor="middle">开关</text>
+<text class="sm" x="75" y="188" fill="#633806" text-anchor="middle">磷酸化</text>
+
+<rect x="118" y="144" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="167" y="168" fill="#412402" text-anchor="middle">Rb 低磷酸</text>
+<text class="sm" x="167" y="186" fill="#633806" text-anchor="middle">E2F 被抑制</text>
+
+<rect x="222" y="144" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="271" y="168" fill="#04342C" text-anchor="middle">释放 E2F</text>
+<text class="sm" x="271" y="186" fill="#085041" text-anchor="middle">越过 R 点 ★</text>
+
+<rect x="326" y="144" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="375" y="168" fill="#412402" text-anchor="middle">pre-RC 发放</text>
+<text class="sm" x="375" y="186" fill="#633806" text-anchor="middle">CDK2 / DDK</text>
+
+<rect x="430" y="144" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="479" y="168" fill="#412402" text-anchor="middle">pre-MPF</text>
+<text class="sm" x="479" y="186" fill="#633806" text-anchor="middle">Wee1 压住</text>
+
+<rect x="534" y="144" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="583" y="168" fill="#8C1D18" text-anchor="middle">Cdc25 去磷酸</text>
+<text class="sm" x="583" y="186" fill="#8C1D18" text-anchor="middle">MPF 爆发</text>
+
+
+<rect x="40" y="212" width="70" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="75" y="238" fill="#04342C" text-anchor="middle">销毁</text>
+<text class="sm" x="75" y="256" fill="#085041" text-anchor="middle">E3</text>
+
+<rect x="118" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="167" y="236" fill="#04342C" text-anchor="middle">APC/C^Cdh1</text>
+<text class="sm" x="167" y="254" fill="#085041" text-anchor="middle">降解 geminin</text>
+
+<rect x="222" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="271" y="236" fill="#04342C" text-anchor="middle">SCF^Skp2</text>
+<text class="sm" x="271" y="254" fill="#085041" text-anchor="middle">降解 p27</text>
+
+<rect x="326" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="375" y="236" fill="#04342C" text-anchor="middle">SCF^FBW7</text>
+<text class="sm" x="375" y="254" fill="#085041" text-anchor="middle">降解 cyclin E</text>
+
+<rect x="430" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="479" y="236" fill="#04342C" text-anchor="middle">SCF^βTrCP</text>
+<text class="sm" x="479" y="254" fill="#085041" text-anchor="middle">降解 Cdc25A</text>
+
+<rect x="534" y="212" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="583" y="236" fill="#8C1D18" text-anchor="middle">APC/C^Cdc20</text>
+<text class="sm" x="583" y="254" fill="#8C1D18" text-anchor="middle">降解 cyclin B</text>
+
+
+<rect x="40" y="280" width="70" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="75" y="306" fill="#8C1D18" text-anchor="middle">检查点</text>
+<text class="sm" x="75" y="324" fill="#8C1D18" text-anchor="middle">刹车</text>
+
+<rect x="118" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="167" y="304" fill="#8C1D18" text-anchor="middle">G1/S 损伤</text>
+<text class="sm" x="167" y="322" fill="#8C1D18" text-anchor="middle">p53 → p21</text>
+
+<rect x="222" y="280" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="271" y="304" fill="#412402" text-anchor="middle">生长因子</text>
+<text class="sm" x="271" y="322" fill="#633806" text-anchor="middle">决定是否过 R</text>
+
+<rect x="326" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="375" y="304" fill="#8C1D18" text-anchor="middle">Intra-S</text>
+<text class="sm" x="375" y="322" fill="#8C1D18" text-anchor="middle">ATR → Chk1</text>
+
+<rect x="430" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="479" y="304" fill="#8C1D18" text-anchor="middle">G2/M</text>
+<text class="sm" x="479" y="322" fill="#8C1D18" text-anchor="middle">Chk1 压 Cdc25C</text>
+
+<rect x="534" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="583" y="304" fill="#8C1D18" text-anchor="middle">SAC</text>
+<text class="sm" x="583" y="322" fill="#8C1D18" text-anchor="middle">MCC 抑 APC/C</text>
+
+
+<rect x="40" y="352" width="292" height="66" rx="9" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="374" fill="#412402">CKI 两家族</text>
+<text class="sm" x="56" y="394" fill="#633806">INK4（p16）　专一抑制 CDK4/6</text>
+<text class="sm" x="56" y="410" fill="#633806">CIP/KIP（p21、p27、p57）　广谱抑制 CDK2/1</text>
+
+<rect x="348" y="352" width="284" height="66" rx="9" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="364" y="374" fill="#042C53">两种 E3 逻辑</text>
+<text class="sm" x="364" y="394" fill="#0C447C">SCF　恒定活性　靠底物磷酸化选靶</text>
+<text class="sm" x="364" y="410" fill="#0C447C">APC/C　周期激活　靠激活子与检查点定时</text>
+
+<text class="hint" x="40" y="440">方向性　进入靠可逆的去磷酸化　退出靠不可逆的泛素化降解</text>
+<text class="hint" x="40" y="458">临床　CDK4/6 抑制剂需 Rb 完整　Wee1 抑制剂与 DNA 损伤药合成致死</text>
+</svg>
+</figure><p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>时相</th><th>主导复合物</th><th>关键底物 / 事件</th><th>主要负调控</th></tr></thead><tbody><tr><td><strong>G1 早期</strong></td><td><strong>cyclin D–CDK4/6</strong></td><td>单磷酸化 <strong>Rb</strong>，感受生长因子</td><td>p16^INK4A、p15</td></tr><tr><td><strong>G1 晚期 / R 点</strong></td><td><strong>cyclin E–CDK2</strong></td><td>超磷酸化 Rb → 释放 E2F → S 期基因转录</td><td>p21、p27</td></tr><tr><td><strong>S 期</strong></td><td><strong>cyclin A–CDK2</strong></td><td>复制起点发放、磷酸化 Cdc6/Cdt1 <strong>防再复制</strong>、中心体复制</td><td>p21、p27</td></tr><tr><td><strong>G2</strong></td><td><strong>cyclin A–CDK1</strong></td><td>准备 M 期、激活 Plk1</td><td>Wee1 / Myt1</td></tr><tr><td><strong>M 期</strong></td><td><strong>cyclin B–CDK1 = MPF</strong> ★</td><td>核膜解体、凝缩、纺锤体、高尔基碎裂</td><td>Wee1（入期前）、APC/C（退出）</td></tr></tbody></table>
+<p><strong>其他 CDK（不直接驱动周期）</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>CDK</th><th>搭档</th><th>功能</th></tr></thead><tbody><tr><td><strong>CDK7</strong></td><td>cyclin H</td><td>既作 <strong>CAK</strong>（激活 CDK1/2/4/6），又是 TFIIH 亚基参与转录起始</td></tr><tr><td>CDK8 / CDK9</td><td>cyclin C / T</td><td>转录调控（Mediator、P-TEFb）</td></tr><tr><td>CDK5</td><td>p35/p39</td><td>神经元迁移、细胞骨架（非周期）</td></tr></tbody></table>
+<hr/>
+<h2 id="六cki两大家族别混">六、CKI：两大家族别混<a aria-hidden="true" tabindex="-1" href="#六cki两大家族别混" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>家族</th><th>成员</th><th>靶点特异性</th><th>上游诱导</th></tr></thead><tbody><tr><td><strong>INK4</strong></td><td>p15^INK4B、p16^INK4A、p18、p19</td><td><strong>专一抑制 CDK4/6</strong>，阻止 cyclin D 结合</td><td>p16 由衰老、癌基因应激诱导；<strong>常见抑癌基因</strong>，甲基化/缺失见于多种肿瘤</td></tr><tr><td><strong>CIP/KIP</strong></td><td><strong>p21^Cip1/Waf1</strong>、<strong>p27^Kip1</strong>、p57^Kip2</td><td><strong>广谱</strong>：cyclin E/A–CDK2、cyclin B–CDK1，也参与 CDK4/6 复合物组装</td><td>p21 由 <strong>p53</strong> 诱导（DNA 损伤）；p27 由 TGF-β、接触抑制、血清饥饿上调</td></tr></tbody></table>
+<blockquote>
+<p><strong>易错点</strong>：INK4 是”专一打 CDK4/6”，CIP/KIP 是”广谱打 CDK2/1”。很多题把 p21 说成只抑制 CDK4/6，是错的。</p>
+<p><strong>p27 的降解是进 S 期的必要步骤</strong>：SCF^Skp2 识别被 CDK2 磷酸化的 p27（phosphodegron）→ 降解 → cyclin E–CDK2 彻底释放活性 → 正反馈越过 R 点。</p>
+</blockquote>
+<hr/>
+<h2 id="七磷酸化开关与检查点损伤时怎么压住mpf">七、磷酸化开关与检查点：损伤时怎么”压住”MPF<a aria-hidden="true" tabindex="-1" href="#七磷酸化开关与检查点损伤时怎么压住mpf" class="internal"></a></h2>
+<h3 id="71-g2m-检查点最直接管-mpf">7.1 G2/M 检查点（最直接管 MPF）<a aria-hidden="true" tabindex="-1" href="#71-g2m-检查点最直接管-mpf" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;DNA 损伤 / 复制未完成&quot;] --> B[&quot;ATM（双链断裂）或 ATR（单链、复制应激）激活&quot;]
+    B --> C[&quot;Chk1 / Chk2 磷酸化&quot;]
+    C --> D[&quot;磷酸化 Cdc25C（Ser216）→ 与 14-3-3 结合 → 出核 / 失活&quot;]
+    C --> E[&quot;磷酸化并稳定 Wee1&quot;]
+    C --> F[&quot;降解 Cdc25A（经 SCF^βTrCP）&quot;]
+    D --> G[&quot;CDK1 的 Thr14/Tyr15 保持磷酸化 → MPF 无法激活 → 停在 G2&quot;]
+    E --> G
+    F --> G
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>干预</th><th>后果</th></tr></thead><tbody><tr><td><strong>咖啡因 / UCN-01（Chk1 抑制剂）</strong></td><td><strong>废除 G2/M 检查点</strong> → 带损伤强行入 M → 有丝分裂灾难</td></tr><tr><td><strong>AZD1775 / MK-1775（Wee1 抑制剂）</strong></td><td>去掉刹车 → p53 缺陷肿瘤被迫提前入 M → <strong>合成致死</strong>（临床联合吉西他滨）</td></tr><tr><td><strong>RO-3306（CDK1 抑制剂）</strong></td><td>可逆停在 <strong>G2/M 边界</strong>，洗脱后集体同步入 M（实验最干净的同步化）</td></tr></tbody></table>
+<h3 id="72-三条检查点一览">7.2 三条检查点一览<a aria-hidden="true" tabindex="-1" href="#72-三条检查点一览" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>检查点</th><th>感知信号</th><th>传感→效应链</th><th>直接结果</th></tr></thead><tbody><tr><td><strong>G1/S（DNA 损伤）</strong></td><td>DSB、UV</td><td>ATM/ATR → Chk1/2 → <strong>p53 稳定</strong> → <strong>p21</strong> ↑ → 抑制 CDK2 → Rb 保持低磷酸化</td><td>G1 阻滞；也可走 Cdc25A 降解的快速通路</td></tr><tr><td><strong>Intra-S</strong></td><td>复制叉停滞</td><td>ATR → Chk1 → 抑制晚期起点发放、稳定复制叉</td><td>减慢 S 期，防止叉坍塌</td></tr><tr><td><strong>G2/M</strong></td><td>未修复损伤 / 未复制完</td><td>Chk1/2 → Cdc25C 失活 → CDK1 保持抑制性磷酸化</td><td>不进 M 期</td></tr><tr><td><strong>SAC（中期）</strong></td><td>动粒未附着 / 无张力</td><td>Mps1 → Mad2/BubR1 → <strong>MCC 抑制 APC/C^Cdc20</strong></td><td>停中期（详见 <a href="../../细胞生物学/知识点/阻断" class="internal">阻断</a>）</td></tr></tbody></table>
+<blockquote>
+<p><strong>p53 的双重结局</strong>：损伤可修复 → p21 暂时阻滞；损伤过重 → p53 诱导 <strong>Bax/PUMA/NOXA</strong> → 凋亡，或诱导 <strong>p16</strong> → 细胞衰老。</p>
+</blockquote>
+<hr/>
+<h2 id="八泛素连接酶不可逆的方向性">八、泛素连接酶：不可逆的方向性<a aria-hidden="true" tabindex="-1" href="#八泛素连接酶不可逆的方向性" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>E3</th><th>激活子 / 调控</th><th>活跃时相</th><th>主要底物</th><th>作用</th></tr></thead><tbody><tr><td><strong>SCF</strong>（Skp1–Cul1–F-box）</td><td><strong>组成型活性</strong>，靠底物先被磷酸化形成 <strong>phosphodegron</strong> 才识别</td><td>全周期</td><td>见下</td><td>降解抑制因子、推动 G1/S</td></tr><tr><td>├ SCF^Skp2</td><td>—</td><td>G1/S</td><td><strong>p27</strong>、p21</td><td>释放 CDK2 活性</td></tr><tr><td>├ SCF^βTrCP</td><td>—</td><td>S/G2、损伤时</td><td><strong>Cdc25A</strong>、Emi1</td><td>阻断 CDK2、解除 APC/C 抑制</td></tr><tr><td>└ SCF^FBW7</td><td>—</td><td>S/G2</td><td><strong>cyclin E</strong>、Myc、Notch、Jun</td><td>防止 cyclin E 过量</td></tr><tr><td><strong>APC/C^Cdc20</strong></td><td>被 M 期 CDK1 磷酸化激活；<strong>受 SAC/MCC 抑制</strong></td><td>中期→后期</td><td><strong>securin、cyclin B</strong>（D-box）</td><td>启动后期 + 关闭 MPF</td></tr><tr><td><strong>APC/C^Cdh1</strong></td><td>后期末 Cdc20 下降、CDK 活性降低后接管（识别 <strong>KEN box / D-box</strong>）</td><td>后期末 → G1</td><td>cyclin B、Plk1、Aurora A、Cdc20、Skp2、<strong>geminin</strong></td><td>维持 G1 低 CDK、允许复制许可</td></tr></tbody></table>
+<blockquote>
+<p><strong>SCF 与 APC/C 的调控逻辑正好相反</strong>：<strong>SCF 一直开着，靠”底物被磷酸化”决定降解谁</strong>；<strong>APC/C 平时关着，靠”激活子 + 磷酸化 + 解除 SAC”决定何时开</strong>。前者管”选谁”，后者管”何时”。</p>
+<p><strong>降解信号</strong>：cyclin B / securin 用 <strong>D-box（RxxL）</strong>；Cdh1 底物常用 <strong>KEN box</strong>；SCF 底物用 <strong>phosphodegron</strong>。</p>
+</blockquote>
+<hr/>
+<h2 id="九rbe2fg1-的限制点r-point">九、Rb–E2F：G1 的限制点（R point）<a aria-hidden="true" tabindex="-1" href="#九rbe2fg1-的限制点r-point" class="internal"></a></h2>
+<ul>
+<li><strong>无生长因子</strong>：cyclin D 低 → Rb 低磷酸化 → 结合并抑制 E2F（招募 HDAC）→ 停在 G1。</li>
+<li><strong>有生长因子</strong>：Ras/MAPK → cyclin D ↑ → cyclin D–CDK4/6 单磷酸化 Rb → cyclin E–CDK2 超磷酸化 Rb → E2F 释放 → 转录 cyclin E、cyclin A、Cdc6、MCM、DNA Pol α、TK、DHFR → 正反馈自我维持 ★ → 越过 R 点：此后即使撤掉生长因子也照走完本周期。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>刹车</th><th>机制</th></tr></thead><tbody><tr><td><strong>p16^INK4A</strong></td><td>抑制 CDK4/6 → Rb 保持低磷酸化 → 停 G1</td></tr><tr><td><strong>p21 / p27</strong></td><td>抑制 CDK2 → 无法超磷酸化 Rb</td></tr><tr><td>TGF-β</td><td>上调 p15/p27、下调 c-Myc</td></tr></tbody></table>
+<blockquote>
+<p><strong>临床</strong>：<strong>CDK4/6 抑制剂</strong>（帕博西林 palbociclib、瑞博西尼 ribociclib、阿贝西利 abemaciclib）联合内分泌治疗用于 <strong>HR+/HER2− 晚期乳腺癌</strong>，前提是 <strong>Rb 功能完整</strong>（Rb 缺失则无效，是耐药机制之一）。</p>
+</blockquote>
+<hr/>
+<h2 id="十复制许可licensing每周期只复制一次">十、复制许可（licensing）：每周期只复制一次<a aria-hidden="true" tabindex="-1" href="#十复制许可licensing每周期只复制一次" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>时相</th><th>事件</th></tr></thead><tbody><tr><td>1</td><td><strong>G1（低 CDK）</strong></td><td><strong>ORC</strong> 结合起点 → <strong>Cdc6 + Cdt1</strong> 装载 <strong>MCM2-7 双六聚体</strong> → 形成 <strong>pre-RC</strong>（许可完成）</td></tr><tr><td>2</td><td><strong>S 期</strong></td><td><strong>CDK2–cyclin A / E</strong> 与 <strong>DDK（Cdc7–Dbf4）</strong> 激活起点 → CMG 解旋酶（Cdc45–MCM–GINS）启动双向复制</td></tr><tr><td>3</td><td>防再复制</td><td>见下四重机制</td></tr><tr><td>4</td><td>后期末 / G1</td><td><strong>APC/C^Cdh1 降解 geminin</strong> → Cdt1 解放 → 下一轮许可</td></tr></tbody></table>
+<p><strong>四重防再复制机制</strong></p>
+<ol>
+<li>CDK2 磷酸化 <strong>Cdc6</strong> → 出核 / 被降解；</li>
+<li><strong>geminin</strong> 结合并抑制 <strong>Cdt1</strong>，且 Cdt1 被 <strong>SCF^Skp2 / CRL4^Cdt2</strong>（PCNA 依赖）降解；</li>
+<li>CDK 磷酸化 <strong>ORC</strong>、降低其再装载能力；</li>
+<li><strong>MCM 随复制叉离开起点</strong>，起点上无解旋酶可再用。</li>
+</ol>
+<blockquote>
+<p><strong>与细菌对比</strong>（见 <a href="../../细胞生物学/知识点/快生长和慢生长" class="internal">快生长和慢生长</a>）：细菌用 <strong>DnaA-ATP 阈值 + RIDA + SeqA 隔离</strong> 保证 oriC 一周期只起始一次；真核用 <strong>licensing 与起始分属 G1/S 两个不同 CDK 状态</strong>，逻辑相通、零件完全不同。</p>
+</blockquote>
+<hr/>
+<h2 id="十一经典实验与常用工具">十一、经典实验与常用工具<a aria-hidden="true" tabindex="-1" href="#十一经典实验与常用工具" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工具 / 实验</th><th>用途</th><th>要点</th></tr></thead><tbody><tr><td><strong>非洲爪蟾卵提取物</strong>（cell-free）</td><td>体外重建细胞周期、测 MPF 活性</td><td>用<strong>组蛋白 H1 激酶活性</strong>作为 MPF 读出；可加入重组 cyclin B 驱动多轮振荡</td></tr><tr><td><strong>cdc2 突变体</strong></td><td>鉴定 CDK1</td><td><code>cdc2-3w</code> 提前分裂（wee 表型）、<code>cdc2-1w</code> 阻滞 G2</td></tr><tr><td><strong>wee1 突变体</strong></td><td>证明抑制性磷酸化存在</td><td>细胞<strong>过小就分裂</strong>（wee = 苏格兰语”小”）</td></tr><tr><td><strong>双胸腺嘧啶核苷阻断</strong></td><td>G1/S 同步化</td><td>两次 2 mM thymidine</td></tr><tr><td><strong>Nocodazole + shake-off</strong></td><td>M 期同步化</td><td>详见 <a href="../../细胞生物学/知识点/阻断" class="internal">阻断</a></td></tr><tr><td><strong>RO-3306</strong></td><td>G2/M 边界可逆阻断，洗脱后同步入 M</td><td>做 M 期磷酸化研究首选，无药物残留干扰</td></tr><tr><td><strong>血清饥饿</strong></td><td>使细胞进入 <strong>G0</strong></td><td>再血清刺激可同步进入 G1</td></tr><tr><td><strong>流式 PI 染色</strong></td><td>分析 DNA 含量分布（G1 / S / G2M 峰）</td><td>需配合 BrdU/EdU 区分 S 期</td></tr></tbody></table>
+<p><strong>常用抑制剂速查</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>化合物</th><th>靶点</th><th>用途</th></tr></thead><tbody><tr><td>Palbociclib / Ribociclib / Abemaciclib</td><td><strong>CDK4/6</strong></td><td>临床抗肿瘤（HR+ 乳腺癌）</td></tr><tr><td><strong>RO-3306</strong></td><td>CDK1</td><td>实验同步化</td></tr><tr><td>Flavopiridol / Dinaciclib</td><td>广谱 CDK</td><td>研究/临床</td></tr><tr><td><strong>AZD1775（MK-1775）</strong></td><td><strong>Wee1</strong></td><td>与 DNA 损伤药合成致死</td></tr><tr><td>UCN-01 / 咖啡因</td><td>Chk1</td><td>废除 G2/M 检查点（实验用）</td></tr><tr><td>MG132 / 硼替佐米</td><td>26S 蛋白酶体</td><td>阻止 cyclin B / securin 降解，卡在中期</td></tr><tr><td>Nutlin-3</td><td>MDM2</td><td>稳定 p53，诱导 p21</td></tr></tbody></table>
+<hr/>
+<h2 id="十二常见误区澄清">十二、常见误区澄清<a aria-hidden="true" tabindex="-1" href="#十二常见误区澄清" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>误区</th><th>纠正</th></tr></thead><tbody><tr><td>❌ “MPF 是一种蛋白”</td><td>✅ 是 <strong>CDK1 + cyclin B 的复合物</strong>（异二聚体），且需 CAK 磷酸化 Thr161</td></tr><tr><td>❌ “CDK 蛋白量周期性升降”</td><td>✅ <strong>CDK 量恒定</strong>；周期性合成与降解的是 <strong>cyclin</strong></td></tr><tr><td>❌ “cyclin B 积够了就进 M 期”</td><td>✅ G2 时 cyclin B 已充足，但被 <strong>Wee1 的 Thr14/Tyr15 抑制磷酸</strong>压住（pre-MPF），要 <strong>Cdc25 去磷酸化</strong>才放行</td></tr><tr><td>❌ “MPF 活性是慢慢升上去的”</td><td>✅ 正反馈（激活 Cdc25 / 抑制 Wee1）造成<strong>双稳态、全或无</strong>的开关</td></tr><tr><td>❌ “退出 M 期靠磷酸酶把 MPF 关掉”</td><td>✅ 主要靠 <strong>APC/C^Cdc20 降解 cyclin B</strong>（蛋白水解，不可逆），磷酸酶只负责把底物复位</td></tr><tr><td>❌ “p21 / p27 专一抑制 CDK4/6”</td><td>✅ 那是 <strong>INK4 家族（p16）</strong>；CIP/KIP 是<strong>广谱</strong>抑制 CDK2/1</td></tr><tr><td>❌ “SCF 和 APC/C 差不多”</td><td>✅ <strong>SCF 组成型活性、靠底物磷酸化选靶；APC/C 周期性激活、靠激活子与 SAC 定时</strong></td></tr><tr><td>❌ “SAC 抑制 CDK1”</td><td>✅ SAC 抑制的是 <strong>APC/C^Cdc20</strong>，与 CDK1 活性无直接关系（详见 <a href="../../细胞生物学/知识点/阻断" class="internal">阻断</a>）</td></tr><tr><td>❌ “Wee1 是 CDK，Cdc25 是激酶”</td><td>✅ <strong>Wee1 是酪氨酸激酶</strong>（给 CDK1 加抑制磷酸）；<strong>Cdc25 是磷酸酶</strong>（去掉它）</td></tr><tr><td>❌ “MPF 只在 M 期存在”</td><td>✅ cyclin B 从 S/G2 就积累，只是处于<strong>无活性的 pre-MPF</strong> 状态</td></tr><tr><td>❌ “DNA 损伤直接抑制 CDK1”</td><td>✅ 经 <strong>ATM/ATR → Chk1/2 → Cdc25C 失活 + Wee1 稳定</strong>，间接维持 CDK1 抑制性磷酸化</td></tr></tbody></table>
+<hr/>
+<h2 id="十三要点速记">十三、要点速记<a aria-hidden="true" tabindex="-1" href="#十三要点速记" class="internal"></a></h2>
+<blockquote>
+<p><strong>一台引擎、一个开关、一次销毁</strong></p>
+<ol>
+<li><strong>MPF = CDK1 + cyclin B</strong>；CDK1 恒定，cyclin B 周期性合成/降解</li>
+<li><strong>激活四步</strong>：结合 cyclin B → CAK 磷酸化 <strong>Thr161</strong> → Wee1 加 <strong>Thr14/Tyr15</strong>（pre-MPF）→ <strong>Cdc25 去磷酸化</strong>爆发</li>
+<li><strong>正反馈双稳态</strong>：活性 MPF 激活 Cdc25、抑制 Wee1（Plk1 助阵）→ 全或无进入 M 期</li>
+<li><strong>底物</strong>：lamin → 核膜解体；condensin/H3 → 凝缩；MAP → 纺锤体；GM130 → 高尔基碎裂</li>
+<li><strong>关闭</strong>：<strong>APC/C^Cdc20</strong> 降解 securin（→separase 切 cohesin）+ cyclin B；<strong>APC/C^Cdh1</strong> 锁住 G1</li>
+<li><strong>方向性</strong>：<strong>进入靠可逆的去磷酸化，退出靠不可逆的蛋白水解</strong></li>
+<li><strong>时相组合</strong>：D–CDK4/6 → E–CDK2 → A–CDK2 → A/B–CDK1</li>
+<li><strong>刹车</strong>：INK4（p16，专一 CDK4/6）／CIP-KIP（p21/p27/p57，广谱）</li>
+<li><strong>E3 逻辑</strong>：SCF 恒定靠底物磷酸化选靶；APC/C 靠激活子 + 解除 SAC 定时</li>
+<li><strong>R 点</strong>：Rb 超磷酸化 → 释放 E2F → 越过 R 点后不再依赖生长因子</li>
+<li><strong>licensing</strong>：G1 装 MCM（低 CDK），S 期起始（高 CDK），靠 Cdc6/Cdt1/geminin/ORC 防再复制</li>
+</ol>
+</blockquote>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>说明</th></tr></thead><tbody><tr><td><strong>MPF</strong></td><td>M-phase / maturation-promoting factor</td><td>CDK1–cyclin B 复合物</td></tr><tr><td><strong>CDK</strong></td><td>Cyclin-dependent kinase</td><td>周期蛋白依赖性激酶</td></tr><tr><td><strong>CAK</strong></td><td>CDK-activating kinase</td><td>CDK7–cyclin H–MAT1，磷酸化 Thr161</td></tr><tr><td><strong>pre-MPF</strong></td><td>—</td><td>已结合 cyclin B、Thr161 已磷酸化，但 Thr14/Tyr15 仍被抑制的蓄势状态</td></tr><tr><td><strong>Wee1 / Myt1</strong></td><td>—</td><td>给 CDK1 加抑制性磷酸的激酶</td></tr><tr><td><strong>Cdc25</strong></td><td>Cell division cycle 25</td><td>双特异性磷酸酶，去掉 Thr14/Tyr15 磷酸</td></tr><tr><td><strong>CKI</strong></td><td>CDK inhibitor</td><td>周期蛋白依赖性激酶抑制因子</td></tr><tr><td><strong>INK4</strong></td><td>Inhibitor of CDK4</td><td>p15/p16/p18/p19，专一 CDK4/6</td></tr><tr><td><strong>CIP/KIP</strong></td><td>CDK-interacting protein / kinase inhibitory protein</td><td>p21/p27/p57，广谱</td></tr><tr><td><strong>APC/C</strong></td><td>Anaphase-promoting complex / cyclosome</td><td>E3 泛素连接酶，降解 cyclin B 与 securin</td></tr><tr><td><strong>SCF</strong></td><td>Skp1–Cullin1–F-box</td><td>E3，识别 phosphodegron</td></tr><tr><td><strong>D-box / KEN box</strong></td><td>Destruction box / KEN-box</td><td>APC/C 识别的降解信号（RxxL / KEN）</td></tr><tr><td><strong>MCC</strong></td><td>Mitotic checkpoint complex</td><td>Mad2–BubR1–Bub3–Cdc20，SAC 效应体</td></tr><tr><td><strong>SAC</strong></td><td>Spindle assembly checkpoint</td><td>纺锤体组装检查点</td></tr><tr><td><strong>securin / separase / cohesin</strong></td><td>—</td><td>后期启动三元件，详见 <a href="../../细胞生物学/知识点/阻断" class="internal">阻断</a></td></tr><tr><td><strong>Rb</strong></td><td>Retinoblastoma protein</td><td>G1 闸门，结合抑制 E2F</td></tr><tr><td><strong>E2F</strong></td><td>E2 promoter-binding factor</td><td>S 期基因转录因子</td></tr><tr><td><strong>R point</strong></td><td>Restriction point</td><td>G1 限制点，越过后不再依赖生长因子</td></tr><tr><td><strong>ORC / pre-RC</strong></td><td>Origin recognition complex / pre-replicative complex</td><td>复制起点识别 / 复制前复合体</td></tr><tr><td><strong>MCM2-7</strong></td><td>Minichromosome maintenance 2-7</td><td>复制解旋酶核心，licensing 标志</td></tr><tr><td><strong>Cdc6 / Cdt1</strong></td><td>—</td><td>装载 MCM 的许可因子</td></tr><tr><td><strong>geminin</strong></td><td>—</td><td>抑制 Cdt1，防再复制；G1 被 APC/C^Cdh1 降解</td></tr><tr><td><strong>DDK / CMG</strong></td><td>Dbf4-dependent kinase / Cdc45–MCM–GINS</td><td>起点激活激酶 / 活性解旋酶</td></tr><tr><td><strong>ATM / ATR</strong></td><td>Ataxia telangiectasia mutated / ATM-Rad3-related</td><td>DSB / 复制应激传感激酶</td></tr><tr><td><strong>Chk1 / Chk2</strong></td><td>Checkpoint kinase 1/2</td><td>效应激酶，压住 Cdc25</td></tr><tr><td><strong>Plk1</strong></td><td>Polo-like kinase 1</td><td>促 G2/M、激活 Cdc25、抑制 Wee1</td></tr><tr><td><strong>GVBD</strong></td><td>Germinal vesicle breakdown</td><td>生发泡破裂，MPF 经典读出</td></tr></tbody></table>
+<hr/>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li><a href="../../细胞生物学/知识点/阻断" class="internal">阻断</a> —— SAC、APC/C、securin/cohesin，以及 RO-3306 / Nocodazole 等同步化与阻断剂</li>
+<li><a href="../../细胞生物学/知识点/快生长和慢生长" class="internal">快生长和慢生长</a> —— 细菌 DnaA / RIDA / 起始质量，与真核 licensing 对比</li>
+<li><a href="../../细胞生物学/知识点/分裂方式" class="internal">分裂方式</a> —— 有丝分裂与减数分裂的时相和形态</li>
+<li><a href="../../细胞生物学/知识点/动态方法" class="internal">动态方法</a> —— 活细胞成像追踪 cyclin 振荡与 CDK 活性（FRET 传感器）</li>
+<li><a href="../../细胞生物学/知识点/动物细胞培养" class="internal">动物细胞培养</a> —— 细胞同步化与细胞周期的实验操作</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

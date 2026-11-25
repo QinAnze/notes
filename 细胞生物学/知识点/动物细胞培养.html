@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html><head><title>动物细胞培养</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="动物细胞培养"/><meta property="og:description" content="动物细胞培养 动物细胞培养（Animal Cell Culture）是将离体动物组织或细胞置于人工条件下，提供适宜环境以保持存活、生长或增殖的过程。它是细胞生物学、药物开发、疫苗生产和再生医学的核心工具。 〇、四个阶段总览：原代 → 传代 → 细胞系 → 细胞株 这是动物细胞培养最核心的一条主线。四个术语代表细胞来源、处理历史、遗传稳定性的不同层级。 动物细胞培养四阶段演进：原代细胞到细胞株 活体组织经分离得到原代细胞（P0），经传代扩大培养量，连续传代获得无限增殖能力成为细胞系，再经单克隆分离成为遗传均一的细胞株，最终冻存建库用于实验与工业生产。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="动物细胞培养 动物细胞培养（Animal Cell Culture）是将离体动物组织或细胞置于人工条件下，提供适宜环境以保持存活、生长或增殖的过程。它是细胞生物学、药物开发、疫苗生产和再生医学的核心工具。 〇、四个阶段总览：原代 → 传代 → 细胞系 → 细胞株 这是动物细胞培养最核心的一条主线。四个术语代表细胞来源、处理历史、遗传稳定性的不同层级。 动物细胞培养四阶段演进：原代细胞到细胞株 活体组织经分离得到原代细胞（P0），经传代扩大培养量，连续传代获得无限增殖能力成为细胞系，再经单克隆分离成为遗传均一的细胞株，最终冻存建库用于实验与工业生产。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/动物细胞培养"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#动物细胞培养" data-for="动物细胞培养">动物细胞培养</a></li><li class="depth-1"><a href="#〇四个阶段总览原代--传代--细胞系--细胞株" data-for="〇四个阶段总览原代--传代--细胞系--细胞株">〇、四个阶段总览：原代 → 传代 → 细胞系 → 细胞株</a></li><li class="depth-1"><a href="#一阶段原代细胞primary-cells" data-for="一阶段原代细胞primary-cells">一、阶段①：原代细胞（Primary Cells）</a></li><li class="depth-2"><a href="#来源与定义" data-for="来源与定义">来源与定义</a></li><li class="depth-2"><a href="#特点" data-for="特点">特点</a></li><li class="depth-2"><a href="#培养方法" data-for="培养方法">培养方法</a></li><li class="depth-2"><a href="#常见原代细胞" data-for="常见原代细胞">常见原代细胞</a></li><li class="depth-1"><a href="#二阶段传代passaging--subculture" data-for="二阶段传代passaging--subculture">二、阶段②：传代（Passaging / Subculture）</a></li><li class="depth-2"><a href="#定义" data-for="定义">定义</a></li><li class="depth-2"><a href="#目的" data-for="目的">目的</a></li><li class="depth-2"><a href="#标准操作" data-for="标准操作">标准操作</a></li><li class="depth-2"><a href="#关键控制点" data-for="关键控制点">关键控制点</a></li><li class="depth-2"><a href="#关键节点原代--细胞系的转折" data-for="关键节点原代--细胞系的转折">关键节点：原代 → 细胞系的转折</a></li><li class="depth-1"><a href="#三阶段细胞系cell-line" data-for="三阶段细胞系cell-line">三、阶段③：细胞系（Cell Line）</a></li><li class="depth-2"><a href="#定义" data-for="定义">定义</a></li><li class="depth-2"><a href="#两种类型" data-for="两种类型">两种类型</a></li><li class="depth-2"><a href="#不朽性的三条获得途径" data-for="不朽性的三条获得途径">不朽性的三条获得途径</a></li><li class="depth-2"><a href="#特点" data-for="特点">特点</a></li><li class="depth-2"><a href="#常用培养条件" data-for="常用培养条件">常用培养条件</a></li><li class="depth-1"><a href="#四阶段细胞株cell-strain--subclone" data-for="四阶段细胞株cell-strain--subclone">四、阶段④：细胞株（Cell Strain / Subclone）</a></li><li class="depth-2"><a href="#定义" data-for="定义">定义</a></li><li class="depth-2"><a href="#与细胞系的关系" data-for="与细胞系的关系">与细胞系的关系</a></li><li class="depth-2"><a href="#单克隆分离方法" data-for="单克隆分离方法">单克隆分离方法</a></li><li class="depth-2"><a href="#常见细胞株举例" data-for="常见细胞株举例">常见细胞株举例</a></li><li class="depth-2"><a href="#重要意义" data-for="重要意义">重要意义</a></li><li class="depth-1"><a href="#五四阶段关键区别总表" data-for="五四阶段关键区别总表">五、四阶段关键区别总表</a></li><li class="depth-2"><a href="#应用选择建议" data-for="应用选择建议">应用选择建议</a></li><li class="depth-1"><a href="#六典型细胞系及用途速查" data-for="六典型细胞系及用途速查">六、典型细胞系及用途速查</a></li><li class="depth-1"><a href="#七培养基速查表" data-for="七培养基速查表">七、培养基速查表</a></li><li class="depth-1"><a href="#八常见污染识别与处理" data-for="八常见污染识别与处理">八、常见污染识别与处理</a></li><li class="depth-1"><a href="#九冷冻保存与复苏标准流程" data-for="九冷冻保存与复苏标准流程">九、冷冻保存与复苏标准流程</a></li><li class="depth-2"><a href="#冷冻保存" data-for="冷冻保存">冷冻保存</a></li><li class="depth-2"><a href="#复苏" data-for="复苏">复苏</a></li><li class="depth-1"><a href="#十质量控制清单" data-for="十质量控制清单">十、质量控制清单</a></li><li class="depth-1"><a href="#十一细胞状态判读" data-for="十一细胞状态判读">十一、细胞状态判读</a></li><li class="depth-1"><a href="#十二常见问题解决" data-for="十二常见问题解决">十二、常见问题解决</a></li><li class="depth-1"><a href="#附常用缩写对照" data-for="附常用缩写对照">附：常用缩写对照</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">动物细胞培养</h1><p class="content-meta">Nov 25, 2026, 28 min read</p></div></div><article class="popover-hint"><h1 id="动物细胞培养">动物细胞培养<a aria-hidden="true" tabindex="-1" href="#动物细胞培养" class="internal"></a></h1>
+<p>动物细胞培养（Animal Cell Culture）是将<strong>离体动物组织或细胞</strong>置于人工条件下，提供适宜环境以保持存活、生长或增殖的过程。它是细胞生物学、药物开发、疫苗生产和再生医学的核心工具。</p>
+<hr/>
+<h2 id="〇四个阶段总览原代--传代--细胞系--细胞株">〇、四个阶段总览：原代 → 传代 → 细胞系 → 细胞株<a aria-hidden="true" tabindex="-1" href="#〇四个阶段总览原代--传代--细胞系--细胞株" class="internal"></a></h2>
+<p>这是动物细胞培养最核心的一条主线。四个术语代表细胞<strong>来源、处理历史、遗传稳定性</strong>的不同层级。</p>
+<p></p><figure class="svg-figure" data-svg="cell-culture-four-stages.svg"><svg viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>动物细胞培养四阶段演进：原代细胞到细胞株</title>
+<desc>活体组织经分离得到原代细胞（P0），经传代扩大培养量，连续传代获得无限增殖能力成为细胞系，再经单克隆分离成为遗传均一的细胞株，最终冻存建库用于实验与工业生产。</desc>
+<defs>
+<marker id="dn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .nm   { font-size: 14px; font-weight: 500; }
+  .en   { font-size: 11px; fill: #4b5563; }
+  .ds   { font-size: 12px; fill: #1f2937; }
+  .hint { font-size: 11px; fill: #6b7280; }
+  .edge { fill: none; stroke: #6b7280; stroke-width: 1; }
+  .frame{ fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">四阶段演进主线</text>
+<text class="hint" x="160" y="24">来源、处理历史、遗传稳定性逐级改变</text>
+
+<rect x="240" y="42" width="200" height="36" rx="8" fill="#5F5E5A" stroke="var(--color-border-secondary, #B4B2A9)" stroke-width="0.5"></rect>
+<text x="340" y="60" font-size="13" font-weight="500" fill="#F1EFE8" text-anchor="middle" dominant-baseline="central">活体组织 / 器官</text>
+
+<path class="edge" d="M340 78 L340 96" marker-end="url(#dn)"></path>
+
+<rect x="180" y="98" width="320" height="66" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="nm" x="200" y="120" fill="#042C53">① 原代细胞</text>
+<text class="en" x="200" y="136">Primary Cell　·　P0</text>
+<text class="ds" x="200" y="154" fill="#185FA5">遗传背景正常，分化完整　寿命有限 1–30 代</text>
+<text class="hint" x="200" y="120" dx="0" dy="0" opacity="0"></text>
+
+<path class="edge" d="M340 164 L340 190" marker-end="url(#dn)"></path>
+<text class="en" x="350" y="180">胰酶 / EDTA 消化　→　转移至新容器</text>
+
+<rect x="180" y="192" width="320" height="66" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="nm" x="200" y="214" fill="#04342C">② 传代</text>
+<text class="en" x="200" y="230">Passaging　·　P1, P2, Pn</text>
+<text class="ds" x="200" y="248" fill="#0F6E56">扩大培养量　仍是有限寿命　每次记为 P+n</text>
+
+<path class="edge" d="M340 258 L340 284" marker-end="url(#dn)"></path>
+<text class="en" x="350" y="274">连续传代 >20–30 代　或　获得不朽性</text>
+
+<rect x="180" y="286" width="320" height="66" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="nm" x="200" y="308" fill="#412402">③ 细胞系</text>
+<text class="en" x="200" y="324">Cell Line　·　无限增殖</text>
+<text class="ds" x="200" y="342" fill="#854F0B">遗传异质性增加　可能发生表型漂变</text>
+
+<path class="edge" d="M340 352 L340 378" marker-end="url(#dn)"></path>
+<text class="en" x="350" y="368">单克隆分离　有限稀释 / FACS / 软琼脂</text>
+
+<rect x="180" y="380" width="320" height="66" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"></rect>
+<text class="nm" x="200" y="402" fill="#26215C">④ 细胞株</text>
+<text class="en" x="200" y="418">Cell Strain / Subclone　·　亚克隆</text>
+<text class="ds" x="200" y="436" fill="#534AB7">遗传均一　标准可重复　单克隆来源</text>
+
+<path class="edge" d="M340 446 L340 472" marker-end="url(#dn)"></path>
+
+<rect x="140" y="474" width="400" height="60" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"></rect>
+<text class="nm" x="340" y="496" fill="#2C2C2A" text-anchor="middle">冷冻保存　MCB / WCB 细胞库</text>
+<text class="en" x="340" y="518" fill="#5F5E5A" text-anchor="middle">实验应用　·　工业生产　·　病毒生产　·　重组蛋白表达</text>
+
+<text class="hint" x="40" y="552">寿命递增：有限 → 有限 → 无限 → 无限　　均一性递增：低 →—→ 高（单克隆）　　遗传稳定性递减</text>
+</svg></figure><p></p>
+<blockquote>
+<p><strong>纵向看</strong>：寿命从”有限 → 有限 → 无限 → 无限”，<strong>均一性从低到高</strong>（④ 是单克隆来源），但<strong>遗传稳定性递减</strong>——这正是”越传代越偏离原始组织表型”的根源（P1 最接近原组织，P5+ 需警惕漂变）。</p>
+<p><strong>横向对比</strong>：① 与 ② 的共同点是寿命有限，区别在于② 已脱离”直接分离”状态；② 与 ③ 的分水岭是<strong>获得不朽性</strong>；③ 与 ④ 的分水岭是<strong>单克隆化带来的遗传均一性</strong>。</p>
+</blockquote>
+<details>
+<summary>文本版流程图（便于复制）</summary>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;活体组织 / 器官&quot;] --> B[&quot;① 原代细胞（Primary Cell）· 直接分离·P0 · 遗传背景正常，分化完整 · 寿命有限（1–30 代）&quot;]
+    B -->|&quot;胰酶/EDTA 消化 → 转移至新容器&quot;| C[&quot;② 传代（Passaging）· P1、P2、Pn · 扩大培养量，仍是有限寿命 · 每次传代记为 P+n&quot;]
+    C -->|&quot;连续传代 >20–30 代 / 获得不朽性&quot;| D[&quot;③ 细胞系（Cell Line）· 无限增殖 · 遗传异质性增加，可表型漂变&quot;]
+    D -->|&quot;单克隆分离（有限稀释 / FACS）&quot;| E[&quot;④ 细胞株（Cell Strain）· 亚克隆 · 遗传均一，标准可重复 · 可冻存建 MCB/WCB&quot;]
+    E --> F[&quot;冷冻保存 → 实验 / 工业生产&quot;]
+</code></pre>
+</details>
+<hr/>
+<h2 id="一阶段原代细胞primary-cells">一、阶段①：原代细胞（Primary Cells）<a aria-hidden="true" tabindex="-1" href="#一阶段原代细胞primary-cells" class="internal"></a></h2>
+<h3 id="来源与定义">来源与定义<a aria-hidden="true" tabindex="-1" href="#来源与定义" class="internal"></a></h3>
+<p>直接从<strong>活体组织或器官</strong>分离获得的细胞，是”第一次传代之前”的全部细胞。分离方式包括<strong>组织块法</strong>（剪碎后自然贴壁或酶解）与<strong>酶解/机械消化法</strong>。</p>
+<h3 id="特点">特点<a aria-hidden="true" tabindex="-1" href="#特点" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>特点</th></tr></thead><tbody><tr><td><strong>遗传背景</strong></td><td>正常 <strong>2n</strong>，接近原有组织的遗传背景</td></tr><tr><td><strong>表型</strong></td><td><strong>保留组织特异性功能</strong>：肝细胞糖原合成、肾细胞尿素合成、神经元电信号转导、巨噬细胞吞噬</td></tr><tr><td><strong>寿命</strong></td><td><strong>有限</strong>，受 <strong>Hayflick 限制</strong>（约 50 次群体倍增 / 1–30 代），随后衰老、<strong>失去克隆能力</strong>、最终死亡</td></tr><tr><td><strong>克隆能力</strong></td><td>高，但需要<strong>基质/配基</strong>（如透明质酸）辅助贴壁</td></tr><tr><td><strong>均一性</strong></td><td><strong>差</strong>，组织中多种细胞混杂（成纤维细胞、上皮细胞、内皮细胞、免疫细胞）</td></tr><tr><td><strong>代次标记</strong></td><td><strong>P0</strong> = 原代直接分离；<strong>P1</strong> = 首次传代后</td></tr></tbody></table>
+<h3 id="培养方法">培养方法<a aria-hidden="true" tabindex="-1" href="#培养方法" class="internal"></a></h3>
+<p><strong>（a）基质与配基</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>组分</th><th>作用</th><th>常用浓度/说明</th></tr></thead><tbody><tr><td><strong>聚二甲基硅氧烷（PDMS）</strong></td><td>抗粘附、易后处理</td><td>适用于特定培养与细胞分离</td></tr><tr><td><strong>透明质酸（HA）</strong></td><td>促进细胞<strong>粘附</strong>、增加形态多样性</td><td><strong>1 mg/L</strong></td></tr><tr><td><strong>胶原 / 纤维连接蛋白 / 层粘连蛋白</strong></td><td>提供贴壁信号</td><td>原代上皮/内皮常用</td></tr><tr><td><strong>Matrigel</strong></td><td>3D 培养支架</td><td>类器官（Organoid）、干细胞</td></tr></tbody></table>
+<p><strong>（b）培养基成分</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类别</th><th>常见组分</th><th>作用与浓度</th></tr></thead><tbody><tr><td><strong>基础培养基</strong></td><td>DMEM、RPMI 1640、Ham’s F-12</td><td>基础盐 + 缓冲 + 碳源</td></tr><tr><td><strong>血清</strong></td><td><strong>10–15% 胎牛血清（FBS）</strong>（原代常用 10%）</td><td>提供生长因子、贴附因子；稳定预期效果</td></tr><tr><td><strong>无机盐类</strong></td><td>NaCl、KCl、Mg²⁺、Ca²⁺、磷酸盐</td><td>维持渗透压与 pH</td></tr><tr><td><strong>水溶性维生素</strong></td><td>维生素 A、B、C、D、E（约 1 mg/L）</td><td>促进存活与分裂；血清中已含</td></tr><tr><td><strong>激素</strong></td><td>胰岛素、类固醇、皮质醇、甲状腺激素等</td><td>促进增殖、分化；常补加 <strong>胰岛素 + 维生素 B₁₂ + 类固醇</strong></td></tr><tr><td><strong>抗生素</strong></td><td><strong>青霉素 100 U/L</strong>、<strong>庆大霉素 10 mg/L</strong>、链霉素</td><td>防止细菌污染</td></tr><tr><td><strong>氨基酸</strong></td><td>必需氨基酸 + <strong>NEAA</strong></td><td>合成蛋白/核酸原料</td></tr></tbody></table>
+<p><strong>（c）培养条件</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>参数</th><th>条件</th></tr></thead><tbody><tr><td><strong>温度</strong></td><td><strong>37°C ± 0.5°C</strong></td></tr><tr><td><strong>CO₂</strong></td><td><strong>5–10%</strong>，维持 <strong>pH 7.2–7.4</strong></td></tr><tr><td><strong>相对湿度</strong></td><td><strong>95–98%</strong>，防止表面脱水</td></tr><tr><td><strong>氧气</strong></td><td>5% O₂（培养箱）/ 可低氧培养（2–5%）模拟体内</td></tr></tbody></table>
+<h3 id="常见原代细胞">常见原代细胞<a aria-hidden="true" tabindex="-1" href="#常见原代细胞" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>细胞来源</th><th>特征功能</th><th>重要性</th></tr></thead><tbody><tr><td><strong>小鼠/人肝原代细胞</strong></td><td>肝糖原合成、葡萄糖-6-磷酸脱氢酶活性、CYP 酶</td><td>药物肝毒性、高分子药物代谢</td></tr><tr><td><strong>小鼠/人肾原代细胞</strong></td><td>葡萄糖-1,6-二磷酸、<strong>尿素</strong>合成</td><td>肾毒性测试（尿毒症模型）</td></tr><tr><td><strong>小鼠腹腔巨噬细胞</strong></td><td>吞噬功能</td><td>免疫毒理学</td></tr><tr><td><strong>神经元</strong></td><td>神经信号转导、神经调节网络</td><td>神经药物开发</td></tr><tr><td><strong>原代肝细胞（PHH）</strong></td><td>肝代谢（Ⅰ/Ⅱ 相）、转运体</td><td><strong>药物代谢（DMPK）金标准</strong></td></tr></tbody></table>
+<hr/>
+<h2 id="二阶段传代passaging--subculture">二、阶段②：传代（Passaging / Subculture）<a aria-hidden="true" tabindex="-1" href="#二阶段传代passaging--subculture" class="internal"></a></h2>
+<h3 id="定义">定义<a aria-hidden="true" tabindex="-1" href="#定义" class="internal"></a></h3>
+<p>当培养皿/瓶达到 <strong>80–90% 汇合度（Confluence）</strong> 时，用<strong>胰酶/EDTA</strong>消化使细胞脱离基质，收集、离心，重悬并接种至新容器的过程。记录记为 <strong>P+1</strong>。</p>
+<h3 id="目的">目的<a aria-hidden="true" tabindex="-1" href="#目的" class="internal"></a></h3>
+<p>延长存活时间、<strong>扩大培养规模</strong>、<strong>建立连续培养体系</strong>。</p>
+<h3 id="标准操作">标准操作<a aria-hidden="true" tabindex="-1" href="#标准操作" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>操作</th><th>参数</th></tr></thead><tbody><tr><td><strong>1. 弃液</strong></td><td>吸去培养液，PBS 轻洗 1–2 次</td><td>去除残余血清（<strong>中和胰酶</strong>）</td></tr><tr><td><strong>2. 消化</strong></td><td>加 <strong>0.25% 胰蛋白酶 + EDTA</strong></td><td><strong>37°C，1–2 min</strong>；镜下观察细胞变圆、间隙增大即停</td></tr><tr><td><strong>3. 终止</strong></td><td>加含 <strong>10–20% FBS</strong> 的培养基</td><td>血清胰酶抑制剂中止消化</td></tr><tr><td><strong>4. 吹打</strong></td><td>吹打成单细胞悬液</td><td><strong>动作轻</strong>，避免机械创伤</td></tr><tr><td><strong>5. 离心</strong></td><td><strong>800–1,000 rpm，10 min</strong>（或 300×g，5 min）</td><td>弃上清</td></tr><tr><td><strong>6. 重悬/接种</strong></td><td>重悬至新容器</td><td><strong>传代比（Split Ratio）常用 1:2 ~ 1:10</strong></td></tr></tbody></table>
+<h3 id="关键控制点">关键控制点<a aria-hidden="true" tabindex="-1" href="#关键控制点" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>问题</th><th>后果</th><th>处理</th></tr></thead><tbody><tr><td><strong>过早传代</strong></td><td>细胞未充分扩增，<strong>浪费培养基</strong>、细胞量不足</td><td>等到 80–90% 汇合度</td></tr><tr><td><strong>过晚传代</strong></td><td><strong>接触抑制</strong>引发衰老或凋亡</td><td>及时传代；<strong>原代细胞</strong>尤为敏感</td></tr><tr><td><strong>传代比过大</strong></td><td>稀释过度、适应期延长</td><td>悬浮/快速增殖细胞可加大传代比</td></tr><tr><td><strong>消化过度</strong></td><td>细胞损伤、活力下降</td><td>镜下monitor，1–2 min 足够</td></tr><tr><td><strong>胰酶浓度过高</strong></td><td>表面蛋白被降解，影响贴壁</td><td>用 <strong>0.05–0.25%</strong>，血清及时中和</td></tr></tbody></table>
+<h3 id="关键节点原代--细胞系的转折">关键节点：原代 → 细胞系的转折<a aria-hidden="true" tabindex="-1" href="#关键节点原代--细胞系的转折" class="internal"></a></h3>
+<p>原代细胞<strong>首次传代（P1）后</strong>，若仍保持有限寿命 → 仍属<strong>原代系列</strong>；若连续传代后<strong>获得持续增殖能力</strong>（>20–30 代）→ 进入<strong>细胞系</strong>阶段。</p>
+<blockquote>
+<p>⚠️ <strong>P1 是最接近原始状态的实验材料</strong>。传代过多（<strong>P5+</strong>）常已发生明显<strong>表型漂变</strong>。</p>
+</blockquote>
+<hr/>
+<h2 id="三阶段细胞系cell-line">三、阶段③：细胞系（Cell Line）<a aria-hidden="true" tabindex="-1" href="#三阶段细胞系cell-line" class="internal"></a></h2>
+<h3 id="定义-1">定义<a aria-hidden="true" tabindex="-1" href="#定义-1" class="internal"></a></h3>
+<p>经<strong>连续传代</strong>（通常 <strong>>20–30 代</strong>，或达到稳定增殖期）后形成的、可<strong>持续培养</strong>的细胞群体。</p>
+<h3 id="两种类型">两种类型<a aria-hidden="true" tabindex="-1" href="#两种类型" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>定义</th><th>寿命</th><th>代表</th></tr></thead><tbody><tr><td><strong>有限细胞系</strong><br/>Finite Cell Line</td><td>已脱离原代直接状态，但仍有一定传代限制</td><td>有限</td><td>某些人源成纤维细胞系（BJ、MRC-5）</td></tr><tr><td><strong>无限细胞系</strong><br/>Immortalized / Continuous Cell Line</td><td>获得<strong>不朽性（Immortality）</strong></td><td>无限</td><td><strong>HeLa、HEK293、CHO、COS-7、NS0</strong></td></tr></tbody></table>
+<h3 id="不朽性的三条获得途径">不朽性的三条获得途径<a aria-hidden="true" tabindex="-1" href="#不朽性的三条获得途径" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>途径</th><th>机制</th><th>代表细胞</th></tr></thead><tbody><tr><td><strong>自然癌变</strong></td><td>体内肿瘤组织直接建立</td><td><strong>HeLa</strong>（宫颈癌，Henrietta Lacks）</td></tr><tr><td><strong>病毒转化</strong></td><td>病毒基因整合/表达改变细胞周期</td><td><strong>HEK293</strong>（腺病毒 E1A/E1B）、<strong>COS-7</strong>（SV40 大 T 抗原）</td></tr><tr><td><strong>化学/物理诱导</strong></td><td>特定处理诱导永生化</td><td>部分成纤维细胞系</td></tr></tbody></table>
+<blockquote>
+<p>📌 <strong>HEK293</strong> 是<strong>腺病毒 E1 基因</strong>转化的（不是 SV40）；<strong>HEK293T</strong> 进一步表达 <strong>SV40 大 T 抗原</strong>，转染效率更高。<strong>COS-7</strong> 表达 <strong>SV40 大 T 抗原</strong>。三者常被混淆。</p>
+</blockquote>
+<h3 id="特点-1">特点<a aria-hidden="true" tabindex="-1" href="#特点-1" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>特点</th></tr></thead><tbody><tr><td><strong>增殖</strong></td><td>无限分裂，倍增时间稳定（<strong>HEK293 ~24 h</strong>）</td></tr><tr><td><strong>形态</strong></td><td><strong>相对均一</strong>，生长曲线简洁（对数期快）</td></tr><tr><td><strong>遗传</strong></td><td><strong>遗传异质性增加</strong>，随代数累积突变；<strong>染色体可能异常</strong>（数目与结构畸变）</td></tr><tr><td><strong>表型</strong></td><td>可能发生<strong>表型漂变（Phenotypic Drift）</strong>；<strong>异质性增加</strong></td></tr><tr><td><strong>血清依赖</strong></td><td>部分细胞（HeLa、HEK293）<strong>无血清也可存活</strong>；多数仍需 10% FBS</td></tr><tr><td><strong>生长特性</strong></td><td>接触抑制减弱（失去密度依赖性抑制）</td></tr></tbody></table>
+<h3 id="常用培养条件">常用培养条件<a aria-hidden="true" tabindex="-1" href="#常用培养条件" class="internal"></a></h3>
+<ul>
+<li><strong>基础培养基</strong>：DMEM、RPMI 1640、Ham’s F-12、McCoy’s 5A</li>
+<li><strong>血清</strong>：10% FBS / 10% 冷冻血清 / 无血清（表达用 CD-CHO、FreeStyle 293）</li>
+<li><strong>血清替代与添加</strong>：胰岛素、维生素、氨基酸、脂肪酸、透明质酸</li>
+<li><strong>温度</strong> 37°C；<strong>CO₂</strong> 5–10%；<strong>湿度</strong> 95–98%</li>
+<li><strong>悬浮培养</strong>：加入抗剪切保护剂 <strong>PVA/明胶</strong>，控制溶氧 DO 10–30%、pH 7.0–7.4、渗透压 280–320 mOsm/kg</li>
+</ul>
+<hr/>
+<h2 id="四阶段细胞株cell-strain--subclone">四、阶段④：细胞株（Cell Strain / Subclone）<a aria-hidden="true" tabindex="-1" href="#四阶段细胞株cell-strain--subclone" class="internal"></a></h2>
+<h3 id="定义-2">定义<a aria-hidden="true" tabindex="-1" href="#定义-2" class="internal"></a></h3>
+<p>从<strong>细胞系中经单克隆分离</strong>（Single Clone / Limiting Dilution / Colony Picking / FACS）获得的、<strong>遗传结构均一</strong>的亚群体。强调<strong>克隆均一性</strong>与<strong>遗传稳定性</strong>。</p>
+<h3 id="与细胞系的关系">与细胞系的关系<a aria-hidden="true" tabindex="-1" href="#与细胞系的关系" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>概念</th><th>本质</th><th>是否均一</th></tr></thead><tbody><tr><td><strong>细胞系</strong></td><td>整体连续培养群体</td><td>❌ 可能含<strong>多克隆混合</strong></td></tr><tr><td><strong>细胞株</strong></td><td>细胞系中的<strong>亚克隆（Subclone / Subline）</strong></td><td>✅ <strong>均一</strong></td></tr></tbody></table>
+<h3 id="单克隆分离方法">单克隆分离方法<a aria-hidden="true" tabindex="-1" href="#单克隆分离方法" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>原理</th><th>效率/准确性</th></tr></thead><tbody><tr><td><strong>有限稀释法</strong></td><td>0.5–1 细胞/mL，每孔 0.1 mL</td><td>最常用；需<strong>重复 2–3 轮</strong>，通常加<strong>饲养细胞</strong>（腹腔巨噬细胞、NIH 3T3）</td></tr><tr><td><strong>软琼脂集落法</strong></td><td>0.8% 琼脂铺底 + 0.4% 半固体上层</td><td>单细胞形成独立圆形集落，<strong>克隆环</strong>挑取</td></tr><tr><td><strong>FACS 单细胞分选</strong></td><td>抗 IgG 荧光标记 + Index Sorting</td><td>可<strong>同时筛选产量与特异性</strong>；需流式仪</td></tr><tr><td><strong>显微操作法</strong></td><td>倒置镜下玻璃微吸管挑单细胞</td><td><strong>100% 单克隆</strong>，极耗时</td></tr></tbody></table>
+<h3 id="常见细胞株举例">常见细胞株举例<a aria-hidden="true" tabindex="-1" href="#常见细胞株举例" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>细胞株</th><th>所属细胞系</th><th>亚株特征</th></tr></thead><tbody><tr><td><strong>HEK293T</strong></td><td>HEK293</td><td>含 <strong>SV40 大 T 抗原</strong>，<strong>转染效率更高</strong></td></tr><tr><td><strong>CHO-K1</strong></td><td>CHO</td><td>适合<strong>贴壁培养</strong></td></tr><tr><td><strong>CHO-S / CHO-DG44</strong></td><td>CHO</td><td>适合<strong>悬浮培养</strong>，便于无血清重组蛋白生产</td></tr><tr><td><strong>HepG2 vs HepaRG</strong></td><td>人肝癌系</td><td>分化状态不同：HepG2 较低分化，HepaRG 更接近正常肝细胞</td></tr><tr><td><strong>HeLa-S3</strong></td><td>HeLa</td><td>更适合形成单克隆（本身不易成株）</td></tr><tr><td><strong>Lenti-293</strong></td><td>HEK293</td><td>慢病毒包装优化株</td></tr></tbody></table>
+<h3 id="重要意义">重要意义<a aria-hidden="true" tabindex="-1" href="#重要意义" class="internal"></a></h3>
+<ul>
+<li><strong>标准化实验</strong>：同一细胞株 → 实验可重复性</li>
+<li><strong>基因工程</strong>：构建<strong>稳定转染株</strong>必须经<strong>单克隆筛选</strong></li>
+<li><strong>生产一致性</strong>：生物制药强制要求使用<strong>固定细胞株</strong></li>
+<li><strong>细胞库体系</strong>：
+<ul>
+<li>原始细胞系
+<ul>
+<li><strong>MCB</strong>（Master Cell Bank，主细胞库）——早期代次，量小、备用
+<ul>
+<li><strong>WCB</strong>（Working Cell Bank，工作细胞库）——日常使用
+<ul>
+<li>生产/实验用细胞
+选 <strong>HEK293T + MCB/WCB</strong> 是 GMP 生物制品的通行做法。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="五四阶段关键区别总表">五、四阶段关键区别总表<a aria-hidden="true" tabindex="-1" href="#五四阶段关键区别总表" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>① 原代细胞</th><th>② 传代过程</th><th>③ 细胞系</th><th>④ 细胞株</th></tr></thead><tbody><tr><td><strong>来源</strong></td><td>活体直接分离</td><td>原代→新容器</td><td>连续传代建立</td><td>细胞系→单克隆筛选</td></tr><tr><td><strong>代次</strong></td><td>P0</td><td>P1, P2…</td><td>通常 >20–30 代</td><td>基于细胞系进一步克隆</td></tr><tr><td><strong>寿命</strong></td><td>有限（1–30 代）</td><td>延长但仍有限</td><td>无限（或有限但稳定）</td><td>无限，且均一稳定</td></tr><tr><td><strong>染色体</strong></td><td>正常 2n</td><td>接近正常</td><td>可能异常（癌变/转化）</td><td>同细胞系，但均一</td></tr><tr><td><strong>表型</strong></td><td>接近原组织</td><td>逐渐适应培养</td><td>可能漂变</td><td>均一性加强</td></tr><tr><td><strong>均一性</strong></td><td>差（多种细胞混杂）</td><td>—</td><td>中等</td><td><strong>高</strong></td></tr><tr><td><strong>克隆性</strong></td><td>—</td><td>—</td><td>混合</td><td><strong>单克隆</strong></td></tr><tr><td><strong>应用重点</strong></td><td>毒理学 / 安全性 / 真实模型</td><td>扩大培养量</td><td>大规模生产 / 病毒 / 基因表达</td><td>标准化实验 / 生产一致性</td></tr></tbody></table>
+<h3 id="应用选择建议">应用选择建议<a aria-hidden="true" tabindex="-1" href="#应用选择建议" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>目标</th><th>推荐</th></tr></thead><tbody><tr><td>追求<strong>生物学真实性</strong>（肝毒性、药物代谢）</td><td><strong>原代细胞</strong>（尤其 <strong>PHH</strong>）或短期传代（<strong>P1–P3</strong>）原代细胞</td></tr><tr><td>需要<strong>大规模、可重复、可长期冻存</strong></td><td>稳定<strong>细胞系/细胞株</strong>（CHO、HEK293T）</td></tr><tr><td>需要<strong>单克隆性与遗传均一性</strong>（稳定转染株、抗体生产株）</td><td>必须从细胞系<strong>筛选单克隆细胞株</strong></td></tr><tr><td>重组蛋白<strong>工业生产</strong></td><td><strong>CHO</strong> 亚株（CHO-S/CHO-DG44）+ 无血清悬浮培养 + MCB/WCB</td></tr></tbody></table>
+<hr/>
+<h2 id="六典型细胞系及用途速查">六、典型细胞系及用途速查<a aria-hidden="true" tabindex="-1" href="#六典型细胞系及用途速查" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>细胞系</th><th>来源</th><th>特点</th><th>常用用途</th></tr></thead><tbody><tr><td><strong>HEK293 / HEK293T</strong></td><td>人胚胎肾（<strong>腺病毒 E1 / SV40 大 T 抗原</strong>）</td><td>高效转染，表达强</td><td>单抗生产、病毒载体（AAV/慢病毒）、基因研究</td></tr><tr><td><strong>CHO-K1 / CHO-S</strong></td><td>中国仓鼠卵巢</td><td><strong>分泌重组蛋白能力强</strong>；CHO-S 适合悬浮</td><td>单抗、疫苗、生物制品（工业主力）</td></tr><tr><td><strong>HeLa</strong></td><td>人宫颈癌（Henrietta Lacks，1951）</td><td>无限分裂，无需血清，存活久</td><td>病毒学、肿瘤学、药物毒理</td></tr><tr><td><strong>HepG2 / Huh7</strong></td><td>人肝癌</td><td>表达 CYP 肝药酶</td><td>药物代谢、肝损伤毒理</td></tr><tr><td><strong>A549</strong></td><td>人肺泡癌</td><td>易培养、稳定</td><td>呼吸系统药物筛选</td></tr><tr><td><strong>MCF-7</strong></td><td>人乳腺癌</td><td>雌激素受体阳性</td><td>乳腺癌研究</td></tr><tr><td><strong>PC3 / DU145</strong></td><td>人前列腺癌</td><td>—</td><td>前列腺癌研究</td></tr><tr><td><strong>COS-7</strong></td><td>非洲绿猴肾（<strong>SV40 大 T 抗原</strong>）</td><td>瞬时表达效率高</td><td>表达载体、蛋白表达</td></tr><tr><td><strong>NIH 3T3</strong></td><td>小鼠胚胎成纤维细胞（<strong>SV40 大 T 抗原</strong>）</td><td>高密度贴附、无细胞毒性</td><td>转染、信号转导</td></tr><tr><td><strong>C2C12</strong></td><td>小鼠骨骼肌前体</td><td>可<strong>分化</strong>为肌管</td><td>肌肉发育、疾病模型</td></tr><tr><td><strong>Sf9</strong></td><td>草地贪夜蛾（昆虫）</td><td>悬浮、高密度、成本低</td><td><strong>重组蛋白/疫苗</strong>生产</td></tr><tr><td><strong>Jurkat / THP-1</strong></td><td>人 T 淋巴细胞系</td><td>悬浮</td><td>免疫学、T 细胞功能</td></tr><tr><td><strong>iPSC（诱导多能干细胞）</strong></td><td>成纤维细胞重编程</td><td>** pluripotency**，可分化为三胚层细胞</td><td>再生医学、疾病模型、药物筛选</td></tr></tbody></table>
+<hr/>
+<h2 id="七培养基速查表">七、培养基速查表<a aria-hidden="true" tabindex="-1" href="#七培养基速查表" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类别</th><th>常用基础培养基</th><th>适用细胞</th><th>关键补充成分</th></tr></thead><tbody><tr><td><strong>通用贴壁细胞</strong></td><td>DMEM (High Glucose)</td><td>HEK293, HeLa, CHO, 成纤维细胞</td><td>10% FBS, 1% P/S, 可选 1% NEAA</td></tr><tr><td><strong>悬浮/淋巴细胞</strong></td><td>RPMI 1640</td><td>Jurkat, THP-1, 淋巴瘤细胞</td><td>10% FBS, 1% P/S, 50 μM β-巯基乙醇</td></tr><tr><td><strong>原代上皮/内皮</strong></td><td>DMEM/F12 (1:1)</td><td>原代肝细胞、肾小管、气管上皮</td><td>10% FBS, ITS, EGF, Hydrocortisone, Cholera Toxin</td></tr><tr><td><strong>干细胞/胚胎干细胞</strong></td><td>Knockout DMEM / mTeSR / E8</td><td>hESC, iPSC</td><td>bFGF (10–20 ng/mL), LIF (小鼠), ROCK 抑制剂（传代时）</td></tr><tr><td><strong>无血清/蛋白表达</strong></td><td>CD-CHO, CD293, FreeStyle 293/F17</td><td>CHO 悬浮表达、HEK293 悬浮表达</td><td>无需血清，含脂质、微量元素、生长因子</td></tr><tr><td><strong>代谢/毒理</strong></td><td>Williams’ E, Hepato-STIM</td><td>原代肝细胞</td><td>辅加<strong>限定型胰岛素/转铁蛋白</strong>以减少干扰</td></tr></tbody></table>
+<blockquote>
+<p><strong>FBS</strong> = 胎牛血清；<strong>P/S</strong> = 青霉素/链霉素；<strong>NEAA</strong> = 非必需氨基酸；<strong>ITS</strong> = 胰岛素-转铁蛋白-硒</p>
+</blockquote>
+<hr/>
+<h2 id="八常见污染识别与处理">八、常见污染识别与处理<a aria-hidden="true" tabindex="-1" href="#八常见污染识别与处理" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>污染类型</th><th>显微镜特征</th><th>来源</th><th>处理</th></tr></thead><tbody><tr><td><strong>细菌</strong></td><td>培养基迅速变黄/浑浊，小圆点或杆状运动</td><td>操作不洁、血清/培养基污染</td><td>弃培养、器械高压灭菌、环境消毒</td></tr><tr><td><strong>真菌</strong></td><td>丝状菌丝/分枝，培养基变浑浊或变色</td><td>空气、水浴箱、培养箱</td><td>彻底清洁培养箱、更换水盘，必要时熏蒸</td></tr><tr><td><strong>支原体</strong></td><td><strong>光镜下不可见</strong>；细胞生长缓慢、脱落、形态异常</td><td>血清、操作者口腔、交叉污染</td><td><strong>PCR/荧光染色（Mycoplasma PCR Kit）</strong> 检测；阳性用高温法（41°C）或抗生素法（<strong>Minocycline / Plasmocin / Tylosin</strong>）清除，或直接弃用</td></tr><tr><td><strong>病毒</strong></td><td><strong>细胞病变效应（CPE）</strong>：融合、溶解、空泡化</td><td>细胞系本身携带（如某些瘤株）</td><td>阳性细胞系弃用；严格分区操作</td></tr><tr><td><strong>交叉污染</strong></td><td>形态突然改变、生长速率异常</td><td>同一生物安全柜操作不同细胞、共用试剂</td><td><strong>STR 分型鉴定</strong>、单独器材、分时段操作</td></tr><tr><td><strong>真菌孢子</strong></td><td>圆球状、分裂</td><td>环境空气</td><td>密闭培养、湿棉布擦拭</td></tr></tbody></table>
+<blockquote>
+<p>⚠️ <strong>支原体是最隐蔽的污染</strong>：光镜看不见，但可改变细胞代谢、免疫表型与实验结果。<strong>定期 PCR 检测是硬要求</strong>。</p>
+</blockquote>
+<hr/>
+<h2 id="九冷冻保存与复苏标准流程">九、冷冻保存与复苏标准流程<a aria-hidden="true" tabindex="-1" href="#九冷冻保存与复苏标准流程" class="internal"></a></h2>
+<h3 id="冷冻保存">冷冻保存<a aria-hidden="true" tabindex="-1" href="#冷冻保存" class="internal"></a></h3>
+<ol>
+<li>取<strong>对数生长期</strong>细胞，汇合度 <strong>80–90%</strong></li>
+<li>胰酶消化 → 离心（<strong>300×g, 5 min</strong>）→ 弃上清</li>
+<li><strong>冻存液</strong>：<strong>90% FBS + 10% DMSO</strong>（或商业化无血清冻存液）</li>
+<li>调整浓度 <strong>1–5×10⁶ cells/mL</strong>，分装冻存管（1 mL/管）</li>
+<li><strong>程序降温</strong>：<strong>−80°C 冰盒（~1°C/min）过夜</strong> → **液氮罐（−196°C）**长期保存</li>
+<li>记录：细胞名、<strong>代次(P数)</strong>、日期、浓度、冻存液配方、罐位</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>DMSO 在慢降温时毒性大</strong>（防止细胞内冰晶 + 减少 DMSO 渗透伤害），<strong>必须慢降温</strong>。<strong>液氮气相保存</strong>比液相更安全（防爆管）。</p>
+</blockquote>
+<h3 id="复苏">复苏<a aria-hidden="true" tabindex="-1" href="#复苏" class="internal"></a></h3>
+<ol>
+<li>液氮取出 → <strong>37°C 水浴快速摇动融化（&lt;1 min）</strong></li>
+<li>转移至 15 mL 离心管，缓慢加入**预温培养基（含 10% FBS）**稀释 DMSO</li>
+<li>离心（<strong>300×g, 5 min</strong>）→ 弃上清（去除 DMSO）→ 重悬新鲜培养基</li>
+<li>接种培养瓶，<strong>首日不换液</strong>以利贴壁；次日换液观察状态</li>
+<li><strong>活力检测</strong>：Trypan Blue / AO-PI，<strong>>70% 可接受，理想 >90%</strong></li>
+<li><strong>传代 1–2 次后再用于正式实验</strong></li>
+</ol>
+<hr/>
+<h2 id="十质量控制清单">十、质量控制清单<a aria-hidden="true" tabindex="-1" href="#十质量控制清单" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>频率</th><th>方法</th><th>合格标准</th></tr></thead><tbody><tr><td><strong>形态观察</strong></td><td>每日/每次传代</td><td>倒置显微镜 10×/20×</td><td>形态特异、折光性好、<strong>无空泡/碎片</strong></td></tr><tr><td><strong>生长曲线/倍增时间</strong></td><td>新建株/定期</td><td>计数板/自动计数仪</td><td>符合该株历史数据（如 HEK293 ~24 h）</td></tr><tr><td><strong>支原体检测</strong></td><td>每月 / 每次新株入库</td><td><strong>PCR / 荧光染料</strong></td><td><strong>阴性</strong></td></tr><tr><td><strong>STR 分型 / 物种鉴定</strong></td><td>入库 / 发表前 / 每年</td><td>STR-PCR / COI 测序</td><td>与母本株匹配（≥80%），<strong>无交叉污染</strong></td></tr><tr><td><strong>病毒检测</strong></td><td>入库 / 按法规</td><td>ELISA / PCR</td><td>指标病毒阴性</td></tr><tr><td><strong>细胞活力</strong></td><td>复苏后 / 传代时</td><td>Trypan Blue / AO/PI</td><td><strong>>90%</strong>（复苏后 >70% 可接受）</td></tr><tr><td><strong>分化/功能标志</strong></td><td>实验前</td><td>qPCR / WB / Flow / 功能测定</td><td>表达关键标志物（如 <strong>CYP3A4、Albumin</strong>）</td></tr><tr><td><strong>无菌检查</strong></td><td>定期</td><td>培养 + 微生物检验</td><td>无菌生长</td></tr></tbody></table>
+<hr/>
+<h2 id="十一细胞状态判读">十一、细胞状态判读<a aria-hidden="true" tabindex="-1" href="#十一细胞状态判读" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>状态</th><th>显微特征</th><th>处理</th></tr></thead><tbody><tr><td><strong>正常</strong></td><td><strong>扁平、边界清晰、透明、生长密度均匀</strong></td><td>可正常传代</td></tr><tr><td><strong>应激/衰老</strong></td><td><strong>大小不一、边缘模糊、有水平裂纹</strong>，细胞延迟存活</td><td>传代过晚或培养条件异常，及时换液或传代</td></tr><tr><td><strong>凋亡</strong></td><td><strong>细胞皱缩（shrinkage）、染色质浓缩、膜起泡（blebbing）、凋亡小体</strong></td><td>弃用；检查诱导因素</td></tr><tr><td><strong>坏死</strong></td><td>细胞肿胀、膜破裂、内容物外溢、碎片增多</td><td>弃用；多为物理损伤或营养耗尽</td></tr></tbody></table>
+<blockquote>
+<p><strong>方向性原则</strong>：<strong>原代细胞</strong>对换液频率和密度更敏感 → 需密切监测；<strong>无限细胞系</strong>容错度高 → 但仍需定期 STR 与支原体检。</p>
+</blockquote>
+<hr/>
+<h2 id="十二常见问题解决">十二、常见问题解决<a aria-hidden="true" tabindex="-1" href="#十二常见问题解决" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>问题</th><th>解决方法</th></tr></thead><tbody><tr><td><strong>培养基过酸/过碱</strong></td><td>调 pH 到 <strong>7.2–7.4</strong>，核对 <strong>CO₂ 浓度</strong>（pH 与 CO₂ 呈反相关）</td></tr><tr><td><strong>贴壁能力差</strong></td><td>添加<strong>透明质酸/胶原/纤连蛋白</strong>，调整胰酶活度，稳定基质；血清质量</td></tr><tr><td><strong>污染</strong></td><td>加强无菌操作、<strong>抗生素预防</strong>、定期<strong>支原体 PCR</strong></td></tr><tr><td><strong>细胞寿命短</strong></td><td>检查营养成分、培养条件、血清比例；避免传代过密</td></tr><tr><td><strong>细胞长不起来</strong></td><td>换批号血清、提高细胞密度至最低临界密度、延长静置时间</td></tr><tr><td><strong>细菌污染疑似</strong></td><td>先取样测<strong>抗生素敏感性</strong>，<strong>不要急于弃用</strong>（可尝试挽救）</td></tr><tr><td><strong>转染效率低</strong></td><td>用 <strong>HEK293T</strong> 而非 HEK293；优化 <strong>DNA:转染试剂</strong> 比例、无血清、细胞状态与汇合度</td></tr></tbody></table>
+<hr/>
+<h2 id="附常用缩写对照">附：常用缩写对照<a aria-hidden="true" tabindex="-1" href="#附常用缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>中文</th></tr></thead><tbody><tr><td><strong>FBS / HS</strong></td><td>Fetal Bovine Serum / Horse Serum</td><td>胎牛血清 / 马血清</td></tr><tr><td><strong>P/S</strong></td><td>Penicillin / Streptomycin</td><td>青霉素 / 链霉素</td></tr><tr><td><strong>NEAA</strong></td><td>Non-Essential Amino Acids</td><td>非必需氨基酸</td></tr><tr><td><strong>ITS</strong></td><td>Insulin-Transferrin-Selenium</td><td>胰岛素-转铁蛋白-硒</td></tr><tr><td><strong>P0 / P1 / Pn</strong></td><td>Passage 0 / 1 / n</td><td>第 0 / 1 / n 代</td></tr><tr><td><strong>PDL</strong></td><td>Population Doubling Level</td><td>群体倍增水平</td></tr><tr><td><strong>MCB / WCB</strong></td><td>Master / Working Cell Bank</td><td>主细胞库 / 工作细胞库</td></tr><tr><td><strong>CPE</strong></td><td>Cytopathic Effect</td><td>细胞病变效应</td></tr><tr><td><strong>STR</strong></td><td>Short Tandem Repeat</td><td>短串联重复序列（指纹图谱）</td></tr><tr><td><strong>DMSO</strong></td><td>Dimethyl Sulfoxide</td><td>二甲基亚砜</td></tr><tr><td><strong>ROCKi</strong></td><td>ROCK Inhibitor</td><td>ROCK 抑制剂（Y-27632）</td></tr><tr><td><strong>bFGF / EGF</strong></td><td>Basic FGF / Epidermal GF</td><td>碱性成纤维细胞 / 表皮生长因子</td></tr><tr><td><strong>HA</strong></td><td>Hyaluronic Acid</td><td>透明质酸</td></tr><tr><td><strong>bFGF</strong></td><td>Basic Fibroblast Growth Factor</td><td>基础成纤维细胞生长因子</td></tr><tr><td><strong>PDMS</strong></td><td>Polydimethylsiloxane</td><td>聚二甲基硅氧烷</td></tr><tr><td><strong>DO</strong></td><td>Dissolved Oxygen</td><td>溶氧</td></tr><tr><td><strong>DMSO</strong></td><td>—</td><td>冷冻保护剂</td></tr><tr><td><strong>FBS 灭活</strong></td><td>Heat-inactivated FBS</td><td><strong>56°C 30 min 灭活</strong>补体，贴壁细胞培养常用</td></tr><tr><td><strong>PHH</strong></td><td>Primary Human Hepatocytes</td><td>原代人肝细胞</td></tr><tr><td><strong>iPSC</strong></td><td>induced Pluripotent Stem Cell</td><td>诱导多能干细胞</td></tr><tr><td><strong>HAMA</strong></td><td>Human Anti-Mouse Antibody</td><td>人抗鼠抗体</td></tr></tbody></table>
+<hr/>
+<blockquote>
+<p><strong>总结</strong></p>
+<ul>
+<li><strong>原代细胞</strong>：保留组织特异性功能，但寿命有限、耗时长、成本高、血清依赖 → 用于<strong>毒理学、安全性评估、疾病模型</strong>。</li>
+<li><strong>细胞系</strong>：可无限增殖，培养条件稳定，便于大规模生产，但可能<strong>表型漂变</strong>、遗传异质性增加 → 用于<strong>生物制品、病毒生产、基因表达</strong>。</li>
+<li><strong>细胞株</strong>：由细胞系单克隆化而来，<strong>遗传均一、标准可重复</strong>，是<strong>工业生产一致性与实验可重复性的核心保障</strong>。</li>
+<li><strong>传代</strong>：贯穿全过程的放大手段，但<strong>次数越多越偏离原始表型</strong>（P1 最接近原组织，P5+ 需警惕漂变）。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>记住：<strong>细胞培养</strong> 是一个系统化过程，优质的细胞是成功的基础，而正确的培养方法是成功的保障。选择的目标决定了你该用<strong>原代细胞</strong>（要真实）还是<strong>细胞株</strong>（要可控、可重复、能规模化）。</p>
+</blockquote></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

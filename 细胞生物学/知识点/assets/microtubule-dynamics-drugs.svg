@@ -1,0 +1,93 @@
+<svg viewBox="0 0 680 460" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>微管动态不稳定性与三类微管靶向药物</title>
+<desc>有丝分裂期微管在 GTP cap 驱动下不停生长与灾变解聚，半衰期仅十至三十秒。秋水仙素结合游离二聚体并封住正端，长春碱促进解聚并形成类结晶，紫杉醇促进聚合抑制解聚。三者方向不同但都消除动态不稳定性，使动粒无法附着与建立张力，SAC 持续激活而停滞在中期。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+<defs>
+  <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#0F6E56"/>
+  </marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"/>
+  </marker>
+  <marker id="n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"/>
+  </marker>
+</defs>
+
+<text class="ttl" x="40" y="24">微管动态不稳定性　三类药物怎么把它冻住</text>
+<text class="hint" x="308" y="24">M 期微管半衰期仅 10–30 秒　动态一停纺锤体就废</text>
+
+<!-- 正常动态 -->
+<rect x="40" y="40" width="600" height="96" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="60" y="62" fill="#04342C">正常　GTP cap 驱动的生长 ↔ 灾变</text>
+
+<text class="sm" x="60" y="84" fill="#085041">负端 −</text>
+<rect x="104" y="74" width="300" height="14" rx="3" fill="#0F6E56"/>
+<rect x="104" y="92" width="300" height="10" rx="3" fill="#0F6E56" opacity="0.65"/>
+<rect x="360" y="74" width="44" height="14" rx="3" fill="#BA7517"/>
+<rect x="360" y="92" width="44" height="10" rx="3" fill="#BA7517" opacity="0.7"/>
+<text class="sm" x="382" y="116" fill="#412402" text-anchor="middle">GTP cap</text>
+<text class="sm" x="150" y="116" fill="#085041">GDP-微管蛋白（弯曲倾向）</text>
+<line x1="410" y1="81" x2="470" y2="81" stroke="#0F6E56" stroke-width="1.4" marker-end="url(#g)"/>
+<text class="sm" x="440" y="72" fill="#04342C" text-anchor="middle">生长（rescue）</text>
+<line x1="470" y1="98" x2="410" y2="98" stroke="#B3261E" stroke-width="1.4" marker-end="url(#r)"/>
+<text class="sm" x="440" y="112" fill="#8C1D18" text-anchor="middle">灾变（catastrophe）</text>
+<text class="sm" x="500" y="86" fill="#085041">正端 +　朝向动粒</text>
+
+<!-- 三列药物 -->
+<rect x="40" y="150" width="192" height="168" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="56" y="174" fill="#8C1D18">① 秋水仙素</text>
+<text class="sm" x="56" y="192" fill="#8C1D18">colchicine site（β/α 界面）</text>
+<text class="sm" x="56" y="212" fill="#8C1D18">先结合游离 α/β 二聚体</text>
+<text class="sm" x="56" y="230" fill="#8C1D18">再共聚合到正端 → 封端</text>
+<rect x="56" y="240" width="160" height="10" rx="3" fill="#B3261E"/>
+<rect x="56" y="254" width="160" height="8" rx="3" fill="#B3261E" opacity="0.6"/>
+<rect x="196" y="238" width="20" height="26" rx="4" fill="#854F0B"/>
+<text class="sm" x="136" y="288" fill="#412402" text-anchor="middle">亚化学计量浓度即抑制动态</text>
+<text class="sm" x="136" y="306" fill="#8C1D18" text-anchor="middle">→ 纺锤体搭不起来（C-有丝分裂）</text>
+
+<rect x="244" y="150" width="192" height="168" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="260" y="174" fill="#412402">② 长春花生物碱</text>
+<text class="sm" x="260" y="192" fill="#633806">vinca domain（β-tubulin）</text>
+<text class="sm" x="260" y="212" fill="#633806">低浓度　稳定正端、抑制加成</text>
+<text class="sm" x="260" y="230" fill="#633806">高浓度　促解聚、形成类结晶</text>
+<rect x="260" y="242" width="120" height="10" rx="3" fill="#BA7517" opacity="0.55"/>
+<rect x="260" y="256" width="120" height="8" rx="3" fill="#BA7517" opacity="0.4"/>
+<path d="M390 246 L404 240 M390 256 L404 262 M390 266 L404 272" stroke="#854F0B" stroke-width="2" stroke-linecap="round"/>
+<text class="sm" x="340" y="288" fill="#412402" text-anchor="middle">微管总量下降（去稳定）</text>
+<text class="sm" x="340" y="306" fill="#633806" text-anchor="middle">Vincristine 神经毒 / Vinblastine 骨髓抑制</text>
+
+<rect x="448" y="150" width="192" height="168" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="464" y="174" fill="#042C53">③ 紫杉烷类</text>
+<text class="sm" x="464" y="192" fill="#0C447C">taxane site（β-tubulin 内腔）</text>
+<text class="sm" x="464" y="212" fill="#0C447C">促进聚合、抑制解聚</text>
+<text class="sm" x="464" y="230" fill="#0C447C">微管异常稳定并成束</text>
+<rect x="464" y="240" width="160" height="8" rx="3" fill="#185FA5"/>
+<rect x="464" y="252" width="160" height="8" rx="3" fill="#185FA5"/>
+<rect x="464" y="264" width="160" height="8" rx="3" fill="#185FA5" opacity="0.7"/>
+<text class="sm" x="544" y="288" fill="#042C53" text-anchor="middle">微管被「冻在长的状态」</text>
+<text class="sm" x="544" y="306" fill="#0C447C" text-anchor="middle">→ 与长春碱方向相反、结局相同</text>
+
+<!-- 汇合结论 -->
+<line x1="136" y1="318" x2="136" y2="340" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#n)"/>
+<line x1="340" y1="318" x2="340" y2="340" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#n)"/>
+<line x1="544" y1="318" x2="544" y2="340" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#n)"/>
+
+<rect x="40" y="344" width="600" height="42" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="340" y="364" fill="#8C1D18" text-anchor="middle">共同点　动态不稳定性被消除</text>
+<text class="sm" x="340" y="380" fill="#8C1D18" text-anchor="middle">不管冻在「长」还是「缩」，动粒都无法完成捕获与张力建立</text>
+
+<line x1="340" y1="386" x2="340" y2="402" stroke="#B3261E" stroke-width="1.2" marker-end="url(#r)"/>
+
+<rect x="40" y="406" width="600" height="34" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="340" y="427" fill="#412402" text-anchor="middle">SAC 持续 ON → APC/C 被抑制 → securin / cyclin B 不降解 → cohesin 不切 → 停滞中期</text>
+
+<text class="hint" x="40" y="454">M 期微管 turnover 比间期快一个数量级以上，这正是微管药物对分裂细胞选择性毒性的来源</text>
+</svg>

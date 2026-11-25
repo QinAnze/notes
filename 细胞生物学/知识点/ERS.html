@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html><head><title>ERS：内质网应激中的三个反应</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="ERS：内质网应激中的三个反应"/><meta property="og:description" content="ERS：内质网应激中的三个反应 内质网（ER）是”造蛋白”和”造脂”两条流水线的车间，所以 ER 出问题时也分两类根源：蛋白（折不出、搬不动）与脂（胆固醇/磷脂不足或过量）。细胞给出的对应反应就是三个： 反应感知什么核心解决UPR未折叠/错误折叠蛋白折叠能力、降解能力EORER 腔内蛋白负荷超载ER 体积、分泌通量固醇调节级联ER 胆固醇水平胆固醇合成与摄取 三者共享 NF-κB / ATF 等转录枢纽，因此常同时被激活、互相串扰，不能简单当成三条平行线。 一、总览对比 维度UPR（未折叠蛋白反应）EOR（ER 超载反应）固醇调节级联（SREBP 通路）触发信号未折叠蛋白（UPs）积聚蛋白合成速率 &amp;gt; ER 加工/分泌能力（即使折叠正确）ER 胆固醇↓、甘油三酯↓、脂肪酸代谢变化触发方式BiP 被占满 → 释放 PERK/ATF6/IRE1折叠正确的蛋白太多，不经过 BiP-UPR 轴SREBP/SCAP 感知胆固醇 → 移位主要传感器BiP（GRP78）NF-κB / TRAF2 等，尚在研究中SCAP 的 SSD 域反应核心先停翻译、后扩产能、不行就凋亡扩大 ER 膜面积 + 上调分泌通路上调 HMG-CoA 还原酶、LDLR 合成时间尺度秒~小时（可逆）小时级小时~天典型诱导剂Tunicamycin（阻断 N-糖基化）、Thapsigargin、DTT单纯过表达正确折叠的分泌蛋白（如过表达胰岛素原、白蛋白、免疫球蛋白）甲羟戊酸缺乏、LDL 缺乏、环糊精抽提胆固醇结局适应 / 凋亡适应为主（较少凋亡）代谢稳态恢复关键转录因子ATF6、XBP1s、ATF4/CHOPNF-κB、ATF6（重叠）SREBP-2（胆固醇）、SREBP-1（脂肪酸/甘油三酯） 内质网应激的三个反应：UPR、EOR 与固醇调节级联 内质网作为蛋白与脂质合成车间，其应激分三类根源：蛋白折叠错误触发 UPR，蛋白合成超载触发 EOR，胆固醇水平变化触发 SREBP 固醇调节级联。三者共享 S1P/S2P 蛋白酶等元件并相互串扰。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="ERS：内质网应激中的三个反应 内质网（ER）是”造蛋白”和”造脂”两条流水线的车间，所以 ER 出问题时也分两类根源：蛋白（折不出、搬不动）与脂（胆固醇/磷脂不足或过量）。细胞给出的对应反应就是三个： 反应感知什么核心解决UPR未折叠/错误折叠蛋白折叠能力、降解能力EORER 腔内蛋白负荷超载ER 体积、分泌通量固醇调节级联ER 胆固醇水平胆固醇合成与摄取 三者共享 NF-κB / ATF 等转录枢纽，因此常同时被激活、互相串扰，不能简单当成三条平行线。 一、总览对比 维度UPR（未折叠蛋白反应）EOR（ER 超载反应）固醇调节级联（SREBP 通路）触发信号未折叠蛋白（UPs）积聚蛋白合成速率 &amp;gt; ER 加工/分泌能力（即使折叠正确）ER 胆固醇↓、甘油三酯↓、脂肪酸代谢变化触发方式BiP 被占满 → 释放 PERK/ATF6/IRE1折叠正确的蛋白太多，不经过 BiP-UPR 轴SREBP/SCAP 感知胆固醇 → 移位主要传感器BiP（GRP78）NF-κB / TRAF2 等，尚在研究中SCAP 的 SSD 域反应核心先停翻译、后扩产能、不行就凋亡扩大 ER 膜面积 + 上调分泌通路上调 HMG-CoA 还原酶、LDLR 合成时间尺度秒~小时（可逆）小时级小时~天典型诱导剂Tunicamycin（阻断 N-糖基化）、Thapsigargin、DTT单纯过表达正确折叠的分泌蛋白（如过表达胰岛素原、白蛋白、免疫球蛋白）甲羟戊酸缺乏、LDL 缺乏、环糊精抽提胆固醇结局适应 / 凋亡适应为主（较少凋亡）代谢稳态恢复关键转录因子ATF6、XBP1s、ATF4/CHOPNF-κB、ATF6（重叠）SREBP-2（胆固醇）、SREBP-1（脂肪酸/甘油三酯） 内质网应激的三个反应：UPR、EOR 与固醇调节级联 内质网作为蛋白与脂质合成车间，其应激分三类根源：蛋白折叠错误触发 UPR，蛋白合成超载触发 EOR，胆固醇水平变化触发 SREBP 固醇调节级联。三者共享 S1P/S2P 蛋白酶等元件并相互串扰。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/ERS"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#ers内质网应激中的三个反应" data-for="ers内质网应激中的三个反应">ERS：内质网应激中的三个反应</a></li><li class="depth-1"><a href="#一总览对比" data-for="一总览对比">一、总览对比</a></li><li class="depth-1"><a href="#二upr未折叠蛋白反应" data-for="二upr未折叠蛋白反应">二、UPR（未折叠蛋白反应）</a></li><li class="depth-1"><a href="#三eorer-overload-response内质网超载反应" data-for="三eorer-overload-response内质网超载反应">三、EOR（ER Overload Response，内质网超载反应）</a></li><li class="depth-2"><a href="#31-定义与核心特征" data-for="31-定义与核心特征">3.1 定义与核心特征</a></li><li class="depth-2"><a href="#32-触发与实验证据" data-for="32-触发与实验证据">3.2 触发与实验证据</a></li><li class="depth-2"><a href="#33-与-upr-的关系" data-for="33-与-upr-的关系">3.3 与 UPR 的关系</a></li><li class="depth-1"><a href="#四固醇调节级联srebp-通路" data-for="四固醇调节级联srebp-通路">四、固醇调节级联（SREBP 通路）</a></li><li class="depth-2"><a href="#41-核心逻辑胆固醇多了就不许再合成" data-for="41-核心逻辑胆固醇多了就不许再合成">4.1 核心逻辑：胆固醇多了就&quot;不许再合成&quot;</a></li><li class="depth-2"><a href="#42-srebp-家族分工" data-for="42-srebp-家族分工">4.2 SREBP 家族分工</a></li><li class="depth-2"><a href="#43-三种-srebp-加工方式注意区分" data-for="43-三种-srebp-加工方式注意区分">4.3 三种 SREBP 加工方式（注意区分）</a></li><li class="depth-2"><a href="#44-与临床的直接联系" data-for="44-与临床的直接联系">4.4 与临床的直接联系</a></li><li class="depth-1"><a href="#五三个反应的比较与整合" data-for="五三个反应的比较与整合">五、三个反应的比较与整合</a></li><li class="depth-2"><a href="#51-一张图看懂感知对象的差别" data-for="51-一张图看懂感知对象的差别">5.1 一张图看懂&quot;感知对象&quot;的差别</a></li><li class="depth-2"><a href="#52-交叉点" data-for="52-交叉点">5.2 交叉点</a></li><li class="depth-2"><a href="#53-诱导剂对照实验设计直接可用" data-for="53-诱导剂对照实验设计直接可用">5.3 诱导剂对照（实验设计直接可用）</a></li><li class="depth-1"><a href="#六要点速记" data-for="六要点速记">六、要点速记</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">ERS：内质网应激中的三个反应</h1><p class="content-meta">Nov 25, 2026, 15 min read</p></div></div><article class="popover-hint"><h1 id="ers内质网应激中的三个反应">ERS：内质网应激中的三个反应<a aria-hidden="true" tabindex="-1" href="#ers内质网应激中的三个反应" class="internal"></a></h1>
+<blockquote>
+<p><strong>内质网（ER）是”造蛋白”和”造脂”两条流水线的车间</strong>，所以 ER 出问题时也分两类根源：<strong>蛋白</strong>（折不出、搬不动）与<strong>脂</strong>（胆固醇/磷脂不足或过量）。细胞给出的对应反应就是三个：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>反应</th><th>感知什么</th><th>核心解决</th></tr></thead><tbody><tr><td><strong>UPR</strong></td><td>未折叠/错误折叠蛋白</td><td>折叠能力、降解能力</td></tr><tr><td><strong>EOR</strong></td><td>ER 腔内<strong>蛋白负荷超载</strong></td><td>ER 体积、分泌通量</td></tr><tr><td><strong>固醇调节级联</strong></td><td>ER 胆固醇水平</td><td>胆固醇合成与摄取</td></tr></tbody></table>
+<p>三者共享 NF-κB / ATF 等转录枢纽，因此<strong>常同时被激活、互相串扰</strong>，不能简单当成三条平行线。</p>
+</blockquote>
+<hr/>
+<h2 id="一总览对比">一、总览对比<a aria-hidden="true" tabindex="-1" href="#一总览对比" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th><strong>UPR</strong>（未折叠蛋白反应）</th><th><strong>EOR</strong>（ER 超载反应）</th><th><strong>固醇调节级联</strong>（SREBP 通路）</th></tr></thead><tbody><tr><td>触发信号</td><td>未折叠蛋白（UPs）积聚</td><td><strong>蛋白合成速率 > ER 加工/分泌能力</strong>（即使折叠正确）</td><td>ER 胆固醇↓、甘油三酯↓、脂肪酸代谢变化</td></tr><tr><td>触发方式</td><td>BiP 被占满 → 释放 PERK/ATF6/IRE1</td><td>折叠正确的蛋白太多，<strong>不经过 BiP-UPR 轴</strong></td><td>SREBP/SCAP 感知胆固醇 → 移位</td></tr><tr><td>主要传感器</td><td>BiP（GRP78）</td><td>NF-κB / TRAF2 等，尚在研究中</td><td>SCAP 的 SSD 域</td></tr><tr><td>反应核心</td><td>先停翻译、后扩产能、不行就凋亡</td><td><strong>扩大 ER 膜面积 + 上调分泌通路</strong></td><td>上调 HMG-CoA 还原酶、LDLR 合成</td></tr><tr><td>时间尺度</td><td>秒~小时（可逆）</td><td>小时级</td><td>小时~天</td></tr><tr><td>典型诱导剂</td><td><strong>Tunicamycin</strong>（阻断 N-糖基化）、Thapsigargin、DTT</td><td><strong>单纯过表达正确折叠的分泌蛋白</strong>（如过表达胰岛素原、白蛋白、免疫球蛋白）</td><td>甲羟戊酸缺乏、LDL 缺乏、环糊精抽提胆固醇</td></tr><tr><td>结局</td><td>适应 / 凋亡</td><td>适应为主（较少凋亡）</td><td>代谢稳态恢复</td></tr><tr><td>关键转录因子</td><td>ATF6、XBP1s、ATF4/CHOP</td><td>NF-κB、ATF6（重叠）</td><td>SREBP-2（胆固醇）、SREBP-1（脂肪酸/甘油三酯）</td></tr></tbody></table>
+<p></p><figure class="svg-figure" data-svg="ers-three-pathways.svg"><svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>内质网应激的三个反应：UPR、EOR 与固醇调节级联</title>
+<desc>内质网作为蛋白与脂质合成车间，其应激分三类根源：蛋白折叠错误触发 UPR，蛋白合成超载触发 EOR，胆固醇水平变化触发 SREBP 固醇调节级联。三者共享 S1P/S2P 蛋白酶等元件并相互串扰。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">ERS 的三个反应　按车间故障类型分流</text>
+<text class="hint" x="310" y="24">蛋白折坏走 UPR　订单超载走 EOR　原料不足走固醇调节</text>
+
+
+<rect x="40" y="40" width="600" height="52" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="62" fill="#412402">内质网应激</text>
+<text class="sm" x="150" y="62" fill="#633806">蛋白合成车间　脂质合成车间同时承压</text>
+
+
+<rect x="40" y="104" width="192" height="72" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="126" fill="#8C1D18">蛋白折坏了</text>
+<text class="sm" x="60" y="146" fill="#8C1D18">未折叠蛋白积聚</text>
+<text class="sm" x="60" y="164" fill="#8C1D18">BiP 被占满</text>
+
+<rect x="244" y="104" width="192" height="72" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="264" y="126" fill="#042C53">订单超载</text>
+<text class="sm" x="264" y="146" fill="#0C447C">蛋白折叠正确</text>
+<text class="sm" x="264" y="164" fill="#0C447C">但分泌量超过产能</text>
+
+<rect x="448" y="104" width="192" height="72" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="468" y="126" fill="#04342C">原料不足</text>
+<text class="sm" x="468" y="146" fill="#085041">ER 胆固醇降低</text>
+<text class="sm" x="468" y="164" fill="#085041">膜脂稳态失衡</text>
+
+<line x1="136" y1="176" x2="136" y2="198" stroke="#B3261E" stroke-width="1.2" marker-end="url(#a)"></line>
+<line x1="340" y1="176" x2="340" y2="198" stroke="#185FA5" stroke-width="1.2" marker-end="url(#a)"></line>
+<line x1="544" y1="176" x2="544" y2="198" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#a)"></line>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"></path>
+  </marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"></path>
+  </marker>
+  <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"></path>
+  </marker>
+  <marker id="d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#0F6E56"></path>
+  </marker>
+</defs>
+
+
+<rect x="40" y="202" width="192" height="196" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="224" fill="#8C1D18">UPR</text>
+<text class="sm" x="96" y="224" fill="#8C1D18">未折叠蛋白反应</text>
+
+<rect x="54" y="234" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="136" y="251" fill="#412402" text-anchor="middle">ATF6　上调折叠酶</text>
+<rect x="54" y="264" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="136" y="281" fill="#412402" text-anchor="middle">IRE1　剪接 XBP1</text>
+<rect x="54" y="294" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="136" y="311" fill="#412402" text-anchor="middle">PERK　磷酸化 eIF2α</text>
+
+<line x1="136" y1="320" x2="136" y2="332" stroke="#B3261E" stroke-width="1.2" marker-end="url(#b)"></line>
+<rect x="54" y="336" width="164" height="24" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="136" y="352" fill="#04342C" text-anchor="middle">停翻译　扩产能　降解</text>
+<rect x="54" y="364" width="164" height="24" rx="5" fill="#F5F5F0" stroke="#8A8A85" stroke-width="0.5"></rect>
+<text class="sm" x="136" y="380" fill="#5c5c5a" text-anchor="middle">持续则 CHOP 凋亡</text>
+
+
+<rect x="244" y="202" width="192" height="196" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="260" y="224" fill="#042C53">EOR</text>
+<text class="sm" x="308" y="224" fill="#0C447C">ER 超载反应</text>
+
+<rect x="258" y="234" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="340" y="251" fill="#412402" text-anchor="middle">活化 NF-κB</text>
+<rect x="258" y="264" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="340" y="281" fill="#412402" text-anchor="middle">ER 膜面积扩张</text>
+<rect x="258" y="294" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="340" y="311" fill="#412402" text-anchor="middle">分泌通量上调</text>
+
+<line x1="340" y1="320" x2="340" y2="332" stroke="#185FA5" stroke-width="1.2" marker-end="url(#c)"></line>
+<rect x="258" y="336" width="164" height="52" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="340" y="358" fill="#04342C" text-anchor="middle">适应为主</text>
+<text class="sm" x="340" y="376" fill="#04342C" text-anchor="middle">较少凋亡</text>
+
+
+<rect x="448" y="202" width="192" height="196" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="464" y="224" fill="#04342C">固醇调节</text>
+<text class="sm" x="512" y="224" fill="#085041">SREBP 通路</text>
+
+<rect x="462" y="234" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="544" y="251" fill="#412402" text-anchor="middle">SCAP 释放 SREBP</text>
+<rect x="462" y="264" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="544" y="281" fill="#412402" text-anchor="middle">运至高尔基体</text>
+<rect x="462" y="294" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="544" y="311" fill="#412402" text-anchor="middle">S1P　S2P 双切</text>
+
+<line x1="544" y1="320" x2="544" y2="332" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#d)"></line>
+<rect x="462" y="336" width="164" height="52" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="544" y="358" fill="#04342C" text-anchor="middle">上调 HMGCR</text>
+<text class="sm" x="544" y="376" fill="#04342C" text-anchor="middle">上调 LDLR　PCSK9</text>
+
+
+<rect x="40" y="412" width="600" height="70" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="434" fill="#412402">三条反应的交叉点</text>
+
+<circle cx="120" cy="456" r="9" fill="#854F0B"></circle>
+<text class="sm" x="140" y="460" fill="#633806">S1P/S2P 既切 ATF6（UPR）也切 SREBP（固醇）</text>
+
+<circle cx="120" cy="472" r="9" fill="#854F0B"></circle>
+<text class="sm" x="140" y="476" fill="#633806">ATF6 与 NF-κB 同时参与 UPR 与 EOR</text>
+
+
+<rect class="frame" x="40" y="492" width="600" height="20" rx="6"></rect>
+<text class="sm" x="60" y="506" fill="#5c5c5a">关键分岔　ERS 下 SREBP 的命运取决于胆固醇水平　不足则活化　充足则被降解</text>
+</svg>
+</figure><p></p>
+<hr/>
+<h2 id="二upr未折叠蛋白反应">二、UPR（未折叠蛋白反应）<a aria-hidden="true" tabindex="-1" href="#二upr未折叠蛋白反应" class="internal"></a></h2>
+<blockquote>
+<p>详见 <a href="../../细胞生物学/知识点/Bip" class="internal">Bip</a>。这里只作定位性总结。</p>
+</blockquote>
+<p><strong>核心逻辑</strong>：BiP 结合位点被未折叠蛋白占满 → 三个 ER 膜感受器（PERK、ATF6、IRE1）获得自由 → 三条支路。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>支路</th><th>传感器</th><th>分子事件</th><th>功能</th></tr></thead><tbody><tr><td><strong>ATF6</strong></td><td>ATF6（90 kDa）</td><td>运至高尔基体，被 S1P/S2P 双切成活性片段 → 入核</td><td>上调 BiP、PDI、ERp57、钙网蛋白</td></tr><tr><td><strong>IRE1</strong></td><td>IRE1α/β</td><td>寡聚化 → 内切核酸酶活性 → <strong>剪接 XBP1 mRNA</strong>（移码）</td><td>XBP1s 上调折叠酶、ERAD、脂质合成</td></tr><tr><td><strong>PERK</strong></td><td>PERK</td><td>自磷酸化 → 磷酸化 eIF2α → 全局翻译抑制</td><td>少数 mRNA 逃逸翻译：ATF4 → CHOP（凋亡开关）</td></tr></tbody></table>
+<p><strong>关键特征</strong>：UPR 感知的是 <strong>BiP 的占用率</strong>，不是蛋白总量。<strong>折叠有问题的蛋白少而正确</strong>时，UPR 不激活——这正是 EOR 存在的理由。</p>
+<hr/>
+<h2 id="三eorer-overload-response内质网超载反应">三、EOR（ER Overload Response，内质网超载反应）<a aria-hidden="true" tabindex="-1" href="#三eorer-overload-response内质网超载反应" class="internal"></a></h2>
+<h3 id="31-定义与核心特征">3.1 定义与核心特征<a aria-hidden="true" tabindex="-1" href="#31-定义与核心特征" class="internal"></a></h3>
+<p>EOR 指 <strong>分泌蛋白合成速率超过 ER 加工与分泌能力</strong>时启动的反应，<strong>关键点在于这些蛋白本身折叠正常</strong>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特征</th><th>说明</th></tr></thead><tbody><tr><td><strong>不经过 UPR/BiP 轴</strong></td><td>蛋白折叠正确，不占用 BiP 折叠位点</td></tr><tr><td><strong>激活 NF-κB</strong></td><td>通过非经典通路（常涉及 p50/p65 核易位）</td></tr><tr><td><strong>与 UPR 有交集</strong></td><td>两者都上调 BiP、部分共享 ATF6</td></tr><tr><td><strong>诱导 ER 扩张</strong></td><td>增加 ER 膜面积以提升分泌通量</td></tr><tr><td><strong>可独立于 CHOP</strong></td><td>EOR 通常不引发凋亡，以适应性为主</td></tr></tbody></table>
+<h3 id="32-触发与实验证据">3.2 触发与实验证据<a aria-hidden="true" tabindex="-1" href="#32-触发与实验证据" class="internal"></a></h3>
+<p>经典实验：在细胞中<strong>过表达正确的分泌蛋白</strong>（如胰岛素原、白蛋白、Ig 轻链），观察到：</p>
+<ul>
+<li>ER 膜面积显著扩张；</li>
+<li>BiP 与 PDI 表达上调；</li>
+<li>NF-κB 活化；</li>
+<li><strong>但不伴随 UPR 标志性变化</strong>（如 XBP1 剪接、eIF2α 磷酸化程度较轻）。</li>
+</ul>
+<blockquote>
+<p><strong>生理对应</strong>：浆细胞大量分泌抗体、胰腺 β 细胞大量分泌胰岛素、肝细胞分泌白蛋白时的<strong>产能瓶颈</strong>——蛋白本身没问题，是”<strong>订单量</strong>“压垮了车间。</p>
+</blockquote>
+<h3 id="33-与-upr-的关系">3.3 与 UPR 的关系<a aria-hidden="true" tabindex="-1" href="#33-与-upr-的关系" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;蛋白合成超载&quot;] --> B[&quot;蛋白折叠正确&quot;]
+    A --> C[&quot;蛋白折叠错误&quot;]
+    B --> D[&quot;EOR（ER 扩张、NF-κB）&quot;]
+    C --> E[&quot;UPR（停翻译、折叠/降解、CHOP）&quot;]
+    D --> F[&quot;共同结果：ER 产能提升（BiP、PDI、钙网蛋白上调）&quot;]
+    E --> F
+</code></pre>
+<blockquote>
+<p><strong>易混点</strong>：很多教材把 EOR 直接归入 UPR 讨论。严格说二者是<strong>平行且可重叠</strong>的两套反应——UPR 问”折得好不好”，EOR 问”订单多不多”。</p>
+</blockquote>
+<hr/>
+<h2 id="四固醇调节级联srebp-通路">四、固醇调节级联（SREBP 通路）<a aria-hidden="true" tabindex="-1" href="#四固醇调节级联srebp-通路" class="internal"></a></h2>
+<h3 id="41-核心逻辑胆固醇多了就不许再合成">4.1 核心逻辑：胆固醇多了就”不许再合成”<a aria-hidden="true" tabindex="-1" href="#41-核心逻辑胆固醇多了就不许再合成" class="internal"></a></h3>
+<p>细胞需要精确控制膜胆固醇水平，<strong>感知点在 ER</strong>——但合成车间在<strong>胞质</strong>（HMG-CoA 还原酶）。ER 如何远程调控？答案是 <strong>SREBP/SCAP 穿梭机制</strong>。</p>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;ER 胆固醇充足&quot;] --> B[&quot;SCAP 与胆固醇结合 → SCAP 与 INSIG 锁定&quot;]
+    B --> C[&quot;SREBP 被扣留在 ER → 不下调任何基因 → 关闭&quot;]
+    D[&quot;ER 胆固醇降低&quot;] --> E[&quot;SCAP 释放 → SCAP–SREBP 复合物被 COPII 包裹&quot;]
+    E --> F[&quot;运至高尔基体&quot;]
+    F --> G[&quot;S1P 切一次（去除腔内结构域）&quot;]
+    F --> H[&quot;S2P 切第二次（释放 N 末端）&quot;]
+    G --> I[&quot;活性 SREBP（成熟形式）入核&quot;]
+    H --> I
+    I --> J[&quot;结合 SRE（固醇调节元件）&quot;]
+    J --> K[&quot;HMG-CoA 还原酶 ↑ 自身合成&quot;]
+    J --> L[&quot;LDL 受体（LDLR）↑ 从血浆摄回胆固醇&quot;]
+    J --> M[&quot;PCSK9（负调控 LDLR）↑ 促 LDLR 降解&quot;]
+</code></pre>
+<h3 id="42-srebp-家族分工">4.2 SREBP 家族分工<a aria-hidden="true" tabindex="-1" href="#42-srebp-家族分工" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>成员</th><th>主要调控</th><th>靶基因</th></tr></thead><tbody><tr><td><strong>SREBP-1a</strong></td><td>胆固醇 + 脂肪酸</td><td>兼而有之</td></tr><tr><td><strong>SREBP-1c</strong></td><td><strong>脂肪酸 / 甘油三酯合成</strong></td><td>脂肪酸合成酶、ACC、SCD1</td></tr><tr><td><strong>SREBP-2</strong></td><td><strong>胆固醇</strong></td><td><strong>HMG-CoA 还原酶（HMGCR）</strong>、LDLR、PCSK9</td></tr></tbody></table>
+<h3 id="43-三种-srebp-加工方式注意区分">4.3 三种 SREBP 加工方式（注意区分）<a aria-hidden="true" tabindex="-1" href="#43-三种-srebp-加工方式注意区分" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>加工方式</th><th>触发条件</th><th>切割酶</th><th>产物</th></tr></thead><tbody><tr><td><strong>经典固醇调节</strong></td><td>ER 胆固醇↓</td><td>S1P + S2P（在高尔基体）</td><td>核形式 nSREBP</td></tr><tr><td><strong>应激应急加工</strong></td><td>ER 应激、ER 胆固醇耗竭</td><td>S1P + S2P（<strong>直接在 ER 膜上</strong>）</td><td>核形式 nSREBP</td></tr><tr><td><strong>ER 应激降解</strong></td><td>ER 应激、胆固醇正常</td><td>蛋白酶体（ERAD 相关）</td><td>被降解，通路关闭</td></tr></tbody></table>
+<blockquote>
+<p><strong>关键易混点</strong>：ERS 条件下 SREBP 的命运取决于<strong>胆固醇水平</strong>。胆固醇耗竭 → 应急加工、上调合成；胆固醇正常而 ER 应激 → SREBP 被降解。这就是”脂应激”与”蛋白应激”在 SREBP 层面的分岔。</p>
+</blockquote>
+<h3 id="44-与临床的直接联系">4.4 与临床的直接联系<a aria-hidden="true" tabindex="-1" href="#44-与临床的直接联系" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>靶点/药物</th><th>作用</th><th>意义</th></tr></thead><tbody><tr><td><strong>他汀类</strong>（抑制 HMGCR）</td><td>阻断胆固醇合成</td><td>第一线降脂药</td></tr><tr><td><strong>依折麦布</strong></td><td>抑制肠道胆固醇吸收</td><td>减少外源摄入</td></tr><tr><td><strong>PCSK9 抑制剂</strong>（单抗）</td><td>阻止 LDLR 降解</td><td>LDL 大幅下降</td></tr><tr><td>SREBP-1c 过表达</td><td>脂肪肝、胰岛素抵抗</td><td>代谢病机制</td></tr><tr><td>SREBP-2 激活</td><td>肿瘤生长需胆固醇</td><td>抗肿瘤靶点</td></tr></tbody></table>
+<hr/>
+<h2 id="五三个反应的比较与整合">五、三个反应的比较与整合<a aria-hidden="true" tabindex="-1" href="#五三个反应的比较与整合" class="internal"></a></h2>
+<h3 id="51-一张图看懂感知对象的差别">5.1 一张图看懂”感知对象”的差别<a aria-hidden="true" tabindex="-1" href="#51-一张图看懂感知对象的差别" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>车间状态</th><th>激活反应</th></tr></thead><tbody><tr><td>蛋白折坏了</td><td><strong>UPR</strong>（BiP 被占）</td></tr><tr><td>蛋白订单太多但折得好</td><td><strong>EOR</strong>（NF-κB、ER 扩张）</td></tr><tr><td>原料（胆固醇）不够</td><td><strong>固醇调节级联</strong>（SREBP 移位）</td></tr><tr><td>蛋白折坏 + 订单多</td><td>UPR + EOR <strong>共同激活</strong></td></tr></tbody></table>
+<h3 id="52-交叉点">5.2 交叉点<a aria-hidden="true" tabindex="-1" href="#52-交叉点" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>交叉分子</th><th>在三个反应中的角色</th></tr></thead><tbody><tr><td><strong>ATF6</strong></td><td>UPR 核心传感器；EOR 中也参与上调产能</td></tr><tr><td><strong>NF-κB</strong></td><td>EOR 核心；ER 应激时也可被 UPR 间接激活</td></tr><tr><td><strong>BiP</strong></td><td>UPR 核心；固醇调节中不受直接影响</td></tr><tr><td><strong>S1P / S2P</strong></td><td>切 ATF6（UPR）<strong>也</strong>切 SREBP（固醇调节）——<strong>同一对蛋白酶，两套底物</strong></td></tr><tr><td><strong>IRE1</strong></td><td>除剪 XBP1 外，还调控脂质合成基因 → 与固醇调节相连</td></tr><tr><td><strong>ER 脂质组成</strong></td><td>脂质异常本身可影响 BiP 功能 → 脂应激反向触发 UPR</td></tr></tbody></table>
+<h3 id="53-诱导剂对照实验设计直接可用">5.3 诱导剂对照（实验设计直接可用）<a aria-hidden="true" tabindex="-1" href="#53-诱导剂对照实验设计直接可用" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>诱导剂</th><th>主要触发反应</th><th>机制</th></tr></thead><tbody><tr><td><strong>Tunicamycin</strong></td><td>UPR</td><td>抑制 GlcNAc-1-磷酸转移酶 → 阻断 N-糖基化 → 折叠崩溃</td></tr><tr><td><strong>Thapsigargin</strong></td><td>UPR（伴 Ca²⁺ 耗竭）</td><td>抑制 SERCA → ER Ca²⁺ 排空 → 钙依赖折叠酶失活</td></tr><tr><td><strong>2-巯基乙醇 / DTT</strong></td><td>UPR</td><td>还原剂，破坏二硫键形成</td></tr><tr><td><strong>过表达分泌蛋白</strong></td><td><strong>EOR</strong></td><td>产能过载（蛋白本身折叠正确）</td></tr><tr><td><strong>β-巯基乙醇</strong></td><td>EOR</td><td>增加蛋白输出需求</td></tr><tr><td><strong>甲羟戊酸耗尽 / 甲羟戊酸缺乏</strong></td><td>固醇调节级联</td><td>阻断胆固醇合成 → ER 胆固醇↓ → SREBP 活化</td></tr><tr><td><strong>环糊精抽提胆固醇</strong></td><td>固醇调节级联</td><td>直接从膜抽走胆固醇</td></tr><tr><td><strong>T0901317</strong>（LXR 激动剂）</td><td>固醇调节级联</td><td>上调脂肪酸合成，间接抑制 SREBP-2</td></tr></tbody></table>
+<hr/>
+<h2 id="六要点速记">六、要点速记<a aria-hidden="true" tabindex="-1" href="#六要点速记" class="internal"></a></h2>
+<blockquote>
+<p><strong>ER 出问题分两类：蛋白问题和脂问题。</strong></p>
+<ol>
+<li><strong>UPR</strong>：蛋白折坏了 → BiP 占满 → PERK/ATF6/IRE1 → 停翻译、扩产能、不行凋亡</li>
+<li><strong>EOR</strong>：订单太多但折得好 → NF-κB + ER 扩张 → <strong>不经过 BiP 轴</strong></li>
+<li><strong>固醇调节级联</strong>：ER 胆固醇降 → SCAP 释放 SREBP → 运高尔基体被 S1P/S2P 切开 → 上调 HMGCR、LDLR</li>
+</ol>
+<p><strong>一个关键分岔</strong>：ERS 下 SREBP 命运取决于胆固醇水平——不够就活化，够就被降解。</p>
+<p><strong>一对共用的刀</strong>：S1P/S2P 既切 ATF6（UPR）也切 SREBP（固醇调节）。</p>
+</blockquote>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>说明</th></tr></thead><tbody><tr><td><strong>ER</strong></td><td>Endoplasmic reticulum</td><td>内质网</td></tr><tr><td><strong>ERS</strong></td><td>ER stress</td><td>内质网应激</td></tr><tr><td><strong>UPR</strong></td><td>Unfolded protein response</td><td>未折叠蛋白反应</td></tr><tr><td><strong>EOR</strong></td><td>ER overload response</td><td>ER 超载反应</td></tr><tr><td><strong>UPs</strong></td><td>Unfolded proteins</td><td>未折叠蛋白</td></tr><tr><td><strong>SREBP</strong></td><td>Sterol regulatory element-binding protein</td><td>固醇调节元件结合蛋白</td></tr><tr><td><strong>SCAP</strong></td><td>SREBP cleavage-activating protein</td><td>SREBP 切割激活蛋白</td></tr><tr><td><strong>INSIG</strong></td><td>Insulin-induced gene protein</td><td>扣留 SREBP 的 ER 锚定蛋白</td></tr><tr><td><strong>SSD</strong></td><td>Sterol-sensing domain</td><td>固醇感知域（SCAP 感知胆固醇的部位）</td></tr><tr><td><strong>SRE</strong></td><td>Sterol response element</td><td>SREBP 结合的 DNA 序列</td></tr><tr><td><strong>S1P / S2P</strong></td><td>Site-1 / Site-2 protease</td><td>高尔基体蛋白酶</td></tr><tr><td><strong>HMGCR</strong></td><td>HMG-CoA reductase</td><td>胆固醇合成限速酶（他汀靶点）</td></tr><tr><td><strong>LDLR</strong></td><td>Low-density lipoprotein receptor</td><td>LDL 受体</td></tr><tr><td><strong>PCSK9</strong></td><td>Proprotein convertase subtilisin/kexin type 9</td><td>促 LDLR 降解</td></tr><tr><td><strong>BiP / GRP78</strong></td><td>Binding immunoglobulin protein</td><td>UPR 核心传感器</td></tr><tr><td><strong>CHOP</strong></td><td>C/EBP homologous protein (DDIT3)</td><td>UPR 促凋亡因子</td></tr><tr><td><strong>ERAD</strong></td><td>ER-associated degradation</td><td>ER 相关降解</td></tr><tr><td><strong>LXR</strong></td><td>Liver X receptor</td><td>胆固醇/脂肪酸感受核受体</td></tr><tr><td><strong>NF-κB</strong></td><td>Nuclear factor kappa B</td><td>EOR 核心转录因子</td></tr></tbody></table>
+<hr/>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li><a href="../../细胞生物学/知识点/Bip" class="internal">Bip</a> —— UPR 的核心传感器与分子伴侣机制</li>
+<li><a href="../../细胞生物学/知识点/膜电位" class="internal">膜电位</a> —— 跨膜转运与电化学梯度</li>
+<li><a href="../../细胞生物学/知识点/动态方法" class="internal">动态方法</a> —— 活细胞成像与动态研究技术</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

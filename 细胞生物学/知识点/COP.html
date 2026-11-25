@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html><head><title>高尔基体与 COPI / COPII：分泌途径的运输与加工</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="高尔基体与 COPI / COPII：分泌途径的运输与加工"/><meta property="og:description" content="高尔基体与 COPI / COPII：分泌途径的运输与加工 一句话：蛋白在核糖体上合成，分泌蛋白/膜蛋白在 粗面 ER 上边合成边转入 ER 腔；之后不再”合成”，而是被 COPII 囊泡运往高尔基体加工、COPI 囊泡把逃逸的 ER 蛋白送回去。高尔基体是加工与分选站，COPI/COPII 是连接它的运输车。 一、全景：蛋白从合成到分选 flowchart TD A[&amp;quot;核糖体合成（胞质）&amp;quot;] --&amp;gt; B[&amp;quot;胞质蛋白 / 核蛋白 → 留在胞质或入核&amp;quot;] A --&amp;gt; C[&amp;quot;含 N 端信号肽的蛋白 → 被 SRP 带往 ER&amp;quot;] C --&amp;gt; D[&amp;quot;粗面 ER（共翻译转位，Sec61 通道）· 线粒体/ER 等利用 BiP 折叠、N-糖基化起始&amp;quot;] D --&amp;gt;|&amp;quot;COPII 囊泡（顺向 / anterograde）&amp;quot;| E[&amp;quot;顺面（cis）高尔基体&amp;quot;] E --&amp;gt;|&amp;quot;逐层通过囊腔（cis → medial → trans）· 糖基化修饰、磷酸化、硫酸化、蛋白水解&amp;quot;| F[&amp;quot;反面（trans）高尔基体（TGN 反面管网）&amp;quot;] F --&amp;gt; G[&amp;quot;分泌囊泡 → 质膜（胞吐）&amp;quot;] F --&amp;gt; H[&amp;quot;运输囊泡 → 溶酶体 / 内体&amp;quot;] F --&amp;gt; I[&amp;quot;膜蛋白 → 整合入膜&amp;quot;] F --&amp;gt;|&amp;quot;ER 逃逸蛋白经 COPI 逆行 / retrograde 回到 ER&amp;quot;| D 分泌途径：蛋白合成、COPII/COPI 运输与高尔基体加工 分泌蛋白在核糖体上合成后经 SRP 导向粗面 ER，共翻译转位进入 ER 腔并由 BiP 折叠，随后由 COPII 囊泡顺向运往高尔基体，经各层修饰分选后投递到质膜或溶酶体，逃逸的 ER 蛋白由 COPI 逆行回收。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="高尔基体与 COPI / COPII：分泌途径的运输与加工 一句话：蛋白在核糖体上合成，分泌蛋白/膜蛋白在 粗面 ER 上边合成边转入 ER 腔；之后不再”合成”，而是被 COPII 囊泡运往高尔基体加工、COPI 囊泡把逃逸的 ER 蛋白送回去。高尔基体是加工与分选站，COPI/COPII 是连接它的运输车。 一、全景：蛋白从合成到分选 flowchart TD A[&amp;quot;核糖体合成（胞质）&amp;quot;] --&amp;gt; B[&amp;quot;胞质蛋白 / 核蛋白 → 留在胞质或入核&amp;quot;] A --&amp;gt; C[&amp;quot;含 N 端信号肽的蛋白 → 被 SRP 带往 ER&amp;quot;] C --&amp;gt; D[&amp;quot;粗面 ER（共翻译转位，Sec61 通道）· 线粒体/ER 等利用 BiP 折叠、N-糖基化起始&amp;quot;] D --&amp;gt;|&amp;quot;COPII 囊泡（顺向 / anterograde）&amp;quot;| E[&amp;quot;顺面（cis）高尔基体&amp;quot;] E --&amp;gt;|&amp;quot;逐层通过囊腔（cis → medial → trans）· 糖基化修饰、磷酸化、硫酸化、蛋白水解&amp;quot;| F[&amp;quot;反面（trans）高尔基体（TGN 反面管网）&amp;quot;] F --&amp;gt; G[&amp;quot;分泌囊泡 → 质膜（胞吐）&amp;quot;] F --&amp;gt; H[&amp;quot;运输囊泡 → 溶酶体 / 内体&amp;quot;] F --&amp;gt; I[&amp;quot;膜蛋白 → 整合入膜&amp;quot;] F --&amp;gt;|&amp;quot;ER 逃逸蛋白经 COPI 逆行 / retrograde 回到 ER&amp;quot;| D 分泌途径：蛋白合成、COPII/COPI 运输与高尔基体加工 分泌蛋白在核糖体上合成后经 SRP 导向粗面 ER，共翻译转位进入 ER 腔并由 BiP 折叠，随后由 COPII 囊泡顺向运往高尔基体，经各层修饰分选后投递到质膜或溶酶体，逃逸的 ER 蛋白由 COPI 逆行回收。 text { font-family: var(--bodyFont, sans-serif); } ."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/COP"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#高尔基体与-copi--copii分泌途径的运输与加工" data-for="高尔基体与-copi--copii分泌途径的运输与加工">高尔基体与 COPI / COPII：分泌途径的运输与加工</a></li><li class="depth-1"><a href="#一全景蛋白从合成到分选" data-for="一全景蛋白从合成到分选">一、全景：蛋白从合成到分选</a></li><li class="depth-1"><a href="#二copiier--高尔基体顺向运输" data-for="二copiier--高尔基体顺向运输">二、COPII：ER → 高尔基体（顺向运输）</a></li><li class="depth-2"><a href="#21-核心组成" data-for="21-核心组成">2.1 核心组成</a></li><li class="depth-2"><a href="#22-形成循环" data-for="22-形成循环">2.2 形成循环</a></li><li class="depth-2"><a href="#23-选择性" data-for="23-选择性">2.3 选择性</a></li><li class="depth-1"><a href="#三copi高尔基体--er逆行运输" data-for="三copi高尔基体--er逆行运输">三、COPI：高尔基体 → ER（逆行运输）</a></li><li class="depth-2"><a href="#31-核心组成" data-for="31-核心组成">3.1 核心组成</a></li><li class="depth-2"><a href="#32-两大职能" data-for="32-两大职能">3.2 两大职能</a></li><li class="depth-1"><a href="#四高尔基体加工与分选站" data-for="四高尔基体加工与分选站">四、高尔基体：加工与分选站</a></li><li class="depth-2"><a href="#41-极性结构" data-for="41-极性结构">4.1 极性结构</a></li><li class="depth-2"><a href="#42-加工反应高尔基体做什么" data-for="42-加工反应高尔基体做什么">4.2 加工反应（高尔基体&quot;做什么&quot;）</a></li><li class="depth-2"><a href="#43-分选信号" data-for="43-分选信号">4.3 分选信号</a></li><li class="depth-1"><a href="#五囊泡运输的通用循环copicopii-共享" data-for="五囊泡运输的通用循环copicopii-共享">五、囊泡运输的通用循环（COPI/COPII 共享）</a></li><li class="depth-1"><a href="#六方向性对比一张表记牢" data-for="六方向性对比一张表记牢">六、方向性对比（一张表记牢）</a></li><li class="depth-1"><a href="#七与蛋白合成的关系整合总结" data-for="七与蛋白合成的关系整合总结">七、与蛋白合成的关系（整合总结）</a></li><li class="depth-1"><a href="#八临床与实验" data-for="八临床与实验">八、临床与实验</a></li><li class="depth-1"><a href="#九常见误区澄清" data-for="九常见误区澄清">九、常见误区澄清</a></li><li class="depth-1"><a href="#十要点速记" data-for="十要点速记">十、要点速记</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">高尔基体与 COPI / COPII：分泌途径的运输与加工</h1><p class="content-meta">Nov 25, 2026, 14 min read</p></div></div><article class="popover-hint"><h1 id="高尔基体与-copi--copii分泌途径的运输与加工">高尔基体与 COPI / COPII：分泌途径的运输与加工<a aria-hidden="true" tabindex="-1" href="#高尔基体与-copi--copii分泌途径的运输与加工" class="internal"></a></h1>
+<blockquote>
+<p><strong>一句话</strong>：蛋白在核糖体上合成，分泌蛋白/膜蛋白在 <strong>粗面 ER</strong> 上边合成边转入 ER 腔；之后不再”合成”，而是被 <strong>COPII 囊泡</strong>运往高尔基体加工、<strong>COPI 囊泡</strong>把逃逸的 ER 蛋白送回去。高尔基体是<strong>加工与分选站</strong>，COPI/COPII 是连接它的<strong>运输车</strong>。</p>
+</blockquote>
+<hr/>
+<h2 id="一全景蛋白从合成到分选">一、全景：蛋白从合成到分选<a aria-hidden="true" tabindex="-1" href="#一全景蛋白从合成到分选" class="internal"></a></h2>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;核糖体合成（胞质）&quot;] --> B[&quot;胞质蛋白 / 核蛋白 → 留在胞质或入核&quot;]
+    A --> C[&quot;含 N 端信号肽的蛋白 → 被 SRP 带往 ER&quot;]
+    C --> D[&quot;粗面 ER（共翻译转位，Sec61 通道）· 线粒体/ER 等利用 BiP 折叠、N-糖基化起始&quot;]
+    D -->|&quot;COPII 囊泡（顺向 / anterograde）&quot;| E[&quot;顺面（cis）高尔基体&quot;]
+    E -->|&quot;逐层通过囊腔（cis → medial → trans）· 糖基化修饰、磷酸化、硫酸化、蛋白水解&quot;| F[&quot;反面（trans）高尔基体（TGN 反面管网）&quot;]
+    F --> G[&quot;分泌囊泡 → 质膜（胞吐）&quot;]
+    F --> H[&quot;运输囊泡 → 溶酶体 / 内体&quot;]
+    F --> I[&quot;膜蛋白 → 整合入膜&quot;]
+    F -->|&quot;ER 逃逸蛋白经 COPI 逆行 / retrograde 回到 ER&quot;| D
+</code></pre>
+<p></p><figure class="svg-figure" data-svg="golgi-cop-pathway.svg"><svg viewBox="0 0 680 470" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>分泌途径：蛋白合成、COPII/COPI 运输与高尔基体加工</title>
+<desc>分泌蛋白在核糖体上合成后经 SRP 导向粗面 ER，共翻译转位进入 ER 腔并由 BiP 折叠，随后由 COPII 囊泡顺向运往高尔基体，经各层修饰分选后投递到质膜或溶酶体，逃逸的 ER 蛋白由 COPI 逆行回收。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<defs>
+  <marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"></path>
+  </marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"></path>
+  </marker>
+</defs>
+
+<text class="ttl" x="40" y="24">分泌途径流水线　合成 → 运输 → 加工分选</text>
+<text class="hint" x="300" y="24">合成只在核糖体　COPII 出厂　COPI 退货　高尔基体贴标签</text>
+
+
+<rect x="40" y="54" width="120" height="56" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="78" fill="#042C53">核糖体</text>
+<text class="sm" x="56" y="98" fill="#0C447C">蛋白合成（翻译）</text>
+
+
+<rect x="40" y="150" width="120" height="56" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="56" y="174" fill="#04342C">粗面 ER</text>
+<text class="sm" x="56" y="194" fill="#085041">共翻译转位 + 折叠</text>
+
+
+<rect x="186" y="150" width="96" height="56" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="202" y="174" fill="#042C53">COPII</text>
+<text class="sm" x="202" y="194" fill="#0C447C">Sar1 启动</text>
+
+
+<rect x="320" y="150" width="240" height="56" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="336" y="174" fill="#412402">高尔基体</text>
+<text class="sm" x="336" y="194" fill="#633806">cis → medial → trans　加工分选</text>
+
+
+<path d="M320 206 L240 250 L360 250" fill="none" stroke="#854F0B" stroke-width="1" marker-end="url(#f)"></path>
+<path d="M360 206 L420 250 L500 250" fill="none" stroke="#854F0B" stroke-width="1" marker-end="url(#f)"></path>
+
+<rect x="196" y="250" width="80" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="236" y="274" fill="#04342C" text-anchor="middle">质膜</text>
+<rect x="420" y="250" width="80" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="460" y="274" fill="#04342C" text-anchor="middle">溶酶体</text>
+
+
+<line x1="100" y1="110" x2="100" y2="150" stroke="#185FA5" stroke-width="1.4" marker-end="url(#f)"></line>
+<text class="sm" x="110" y="136" fill="#0C447C">SRP 导向</text>
+
+
+<line x1="160" y1="178" x2="186" y2="178" stroke="#185FA5" stroke-width="1.4" marker-end="url(#f)"></line>
+
+<line x1="282" y1="178" x2="320" y2="178" stroke="#185FA5" stroke-width="1.4" marker-end="url(#f)"></line>
+<text class="sm" x="296" y="170" fill="#0C447C" text-anchor="middle">顺向</text>
+
+
+<path d="M320 206 L280 230 L240 230" fill="none" stroke="#B3261E" stroke-width="1.2" marker-end="url(#r)"></path>
+<text class="sm" x="270" y="224" fill="#8C1D18">COPI 逆行</text>
+<path d="M96 206 L120 230 L160 230" fill="none" stroke="#B3261E" stroke-width="1.2" marker-end="url(#r)"></path>
+<text class="sm" x="128" y="224" fill="#8C1D18">KDEL 回收</text>
+
+
+<rect class="frame" x="40" y="312" width="600" height="110" rx="10"></rect>
+<text class="ttl" x="60" y="334" fill="#1a1a1a">与蛋白合成的关系</text>
+
+<rect x="60" y="346" width="270" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="sm" x="76" y="366" fill="#042C53">① 合成　只发生在核糖体</text>
+<text class="sm" x="76" y="384" fill="#0C447C">分泌蛋白带信号肽 → 边合成边转入 ER</text>
+<text class="sm" x="76" y="402" fill="#0C447C">之后不再&quot;合成&quot;而是&quot;搬运+修饰&quot;</text>
+
+<rect x="350" y="346" width="270" height="64" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="366" y="366" fill="#412402">② 运输与加工　靠囊泡与酶</text>
+<text class="sm" x="366" y="384" fill="#633806">COPII 出厂 / COPI 回收 / 高尔基体贴标签</text>
+<text class="sm" x="366" y="402" fill="#633806">缺囊泡 → 新蛋白堆在 ER 出不去</text>
+
+<text class="hint" x="40" y="446">被膜管方向（COPI/COPII 识别 source 信号），Rab+SNARE 管对接融合——二者缺一不可</text>
+</svg>
+</figure><p></p>
+<blockquote>
+<p><strong>关键澄清</strong>：<strong>蛋白”合成”只发生在核糖体上</strong>，且 ER 腔里完成的主要是<strong>起始折叠与起始糖基化</strong>。高尔基体<strong>不合成蛋白</strong>，它做的是<strong>修饰加工 + 分选</strong>；COPI/COPII 做的是<strong>把蛋白从一个区室搬到另一个区室</strong>。三者关系是”生产—运输—加工分选”的流水线，而非并列的三种合成方式。</p>
+</blockquote>
+<hr/>
+<h2 id="二copiier--高尔基体顺向运输">二、COPII：ER → 高尔基体（顺向运输）<a aria-hidden="true" tabindex="-1" href="#二copiier--高尔基体顺向运输" class="internal"></a></h2>
+<h3 id="21-核心组成">2.1 核心组成<a aria-hidden="true" tabindex="-1" href="#21-核心组成" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>成分</th><th>角色</th></tr></thead><tbody><tr><td><strong>Sar1</strong>（小 GTP 酶）</td><td>启动者：GTP 结合后插入 ER 膜，招募 Sec23/24</td></tr><tr><td><strong>Sec23/24</strong>（内层被膜）</td><td>直接<strong>选择 cargo</strong>；Sec24 识别分选信号</td></tr><tr><td><strong>Sec13/31</strong>（外层被膜）</td><td>形成笼状外骨架，决定囊泡形态</td></tr><tr><td><strong>Sec12</strong>（GEF）</td><td>在 ER 膜上激活 Sar1（催化 GDP→GTP）</td></tr><tr><td><strong>Sec16</strong></td><td>脚手架，组织 COPII 装配位点</td></tr></tbody></table>
+<h3 id="22-形成循环">2.2 形成循环<a aria-hidden="true" tabindex="-1" href="#22-形成循环" class="internal"></a></h3>
+<ol>
+<li>Sar1-GDP →（Sec12 作 GEF）→ Sar1-GTP</li>
+<li>Sar1-GTP 插入 ER 膜，暴露疏水 N 端</li>
+<li>招募 Sec23/24（内层），Sec24 抓 cargo</li>
+<li>招募 Sec13/31（外层），形成笼状被膜</li>
+<li>膜弯曲、缢裂（fission），囊泡脱落</li>
+<li>Sar1 水解 GTP → 被膜解离（uncoating）</li>
+<li>COPII 囊泡经 ER-Golgi 中间体（ERGIC）运抵顺面高尔基体</li>
+</ol>
+<h3 id="23-选择性">2.3 选择性<a aria-hidden="true" tabindex="-1" href="#23-选择性" class="internal"></a></h3>
+<ul>
+<li><strong>信号依赖</strong>：如 <strong>di-acidic 基序（DXE）</strong>、疏水基序。</li>
+<li><strong>受体介导</strong>：分泌蛋白/膜蛋白经 cargo receptor（如 p24 家族、ERGIC-53）浓缩。</li>
+<li><strong>大小筛分</strong>：COPII 囊泡可选择性富集 cargo。</li>
+</ul>
+<hr/>
+<h2 id="三copi高尔基体--er逆行运输">三、COPI：高尔基体 → ER（逆行运输）<a aria-hidden="true" tabindex="-1" href="#三copi高尔基体--er逆行运输" class="internal"></a></h2>
+<h3 id="31-核心组成">3.1 核心组成<a aria-hidden="true" tabindex="-1" href="#31-核心组成" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>成分</th><th>角色</th></tr></thead><tbody><tr><td><strong>Arf1</strong>（小 GTP 酶）</td><td>启动者：GEF（GBF1）催化激活后招募被膜</td></tr><tr><td><strong>COPI 七聚体</strong>（α/β/β’/γ/δ/ε/ζ）</td><td>形成笼状被膜，包被囊泡</td></tr><tr><td><strong>GBF1</strong>（GEF）</td><td>激活 Arf1</td></tr><tr><td><strong>KDEL 受体</strong></td><td>识别 ER 逃逸蛋白（带 KDEL 信号）并递交给 COPI</td></tr></tbody></table>
+<h3 id="32-两大职能">3.2 两大职能<a aria-hidden="true" tabindex="-1" href="#32-两大职能" class="internal"></a></h3>
+<ol>
+<li><strong>逆行回收（retrieval）</strong>：把从 ER 逃逸的驻留蛋白（BiP、calreticulin、PDI 等带 <strong>KDEL</strong> 信号）经 COPI 运回 ER。
+<ul>
+<li>机制：KDEL 受体在<strong>高尔基体低 pH</strong> 下结合 KDEL 肽，经 COPI 逆行；到 ER 中性 pH 释放。</li>
+</ul>
+</li>
+<li><strong>高尔基体内部运输（intra-Golgi）</strong>：在 cisternae 之间顺/逆向搬运，维持各层区室的酶组成。</li>
+</ol>
+<blockquote>
+<p><strong>易混点</strong>：COPI 不只是”回 ER”那么简单。它同时负责<strong>高尔基体层间运输</strong>——这使得”囊腔成熟模型（cisternal maturation）“成为可能：高尔基体各层不是固定管道，而是不断由囊泡供给、成熟、再被回收的动态结构。</p>
+</blockquote>
+<hr/>
+<h2 id="四高尔基体加工与分选站">四、高尔基体：加工与分选站<a aria-hidden="true" tabindex="-1" href="#四高尔基体加工与分选站" class="internal"></a></h2>
+<h3 id="41-极性结构">4.1 极性结构<a aria-hidden="true" tabindex="-1" href="#41-极性结构" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>区室</th><th>别名</th><th>主要事件</th></tr></thead><tbody><tr><td><strong>CGN</strong>（cis-Golgi network）</td><td>顺面管网</td><td>接收 COPII 囊泡，初步分拣</td></tr><tr><td><strong>cis 囊腔</strong></td><td>顺面</td><td>甘露糖修饰、O-糖基化起始</td></tr><tr><td><strong>medial 囊腔</strong></td><td>中间</td><td>多数糖基化（N-糖链加工）</td></tr><tr><td><strong>trans 囊腔</strong></td><td>反面</td><td>半乳糖/唾液酸添加、硫酸化</td></tr><tr><td><strong>TGN</strong>（trans-Golgi network）</td><td>反面管网</td><td><strong>最终分选</strong>：质膜/溶酶体/分泌方向</td></tr></tbody></table>
+<h3 id="42-加工反应高尔基体做什么">4.2 加工反应（高尔基体”做什么”）<a aria-hidden="true" tabindex="-1" href="#42-加工反应高尔基体做什么" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>反应</th><th>例子</th></tr></thead><tbody><tr><td>N-糖基化加工</td><td>修剪 Man，加 GlcNAc、Gal、唾液酸</td><td>成熟糖蛋白</td></tr><tr><td>O-糖基化</td><td>添加 GalNAc 等</td><td>黏蛋白</td></tr><tr><td>磷酸化</td><td>甘露糖-6-磷酸（M6P）标记</td><td>溶酶体酶定向</td></tr><tr><td>硫酸化</td><td>酪氨酸/糖胺聚糖硫酸化</td><td>蛋白聚糖</td></tr><tr><td>蛋白水解</td><td>前体切割</td><td>胰岛素原→胰岛素、胶原前体</td></tr></tbody></table>
+<h3 id="43-分选信号">4.3 分选信号<a aria-hidden="true" tabindex="-1" href="#43-分选信号" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>目的地</th><th>信号</th></tr></thead><tbody><tr><td>溶酶体</td><td><strong>M6P</strong>（甘露糖-6-磷酸）</td></tr><tr><td>质膜</td><td>多种膜锚定 + 分选基序</td></tr><tr><td>regulated 分泌</td><td>聚集信号（如分泌颗粒蛋白）</td></tr><tr><td>组成型分泌</td><td>默认通路（无特殊信号即去质膜）</td></tr></tbody></table>
+<hr/>
+<h2 id="五囊泡运输的通用循环copicopii-共享">五、囊泡运输的通用循环（COPI/COPII 共享）<a aria-hidden="true" tabindex="-1" href="#五囊泡运输的通用循环copicopii-共享" class="internal"></a></h2>
+<pre><code class="mermaid">flowchart LR
+  A[&quot;选择 cargo&quot;] --> B[&quot;招募 GTP 酶（Sar1/Arf1）&quot;] --> C[&quot;被膜聚合&quot;]
+  C --> D[&quot;膜弯曲缢裂&quot;] --> E[&quot;脱被膜（uncoating）&quot;]
+  E --> F[&quot;经细胞骨架运输&quot;] --> G[&quot;tethering（拴系）&quot;]
+  G --> H[&quot;SNARE 介导膜融合&quot;] --> I[&quot;内容物投递&quot;]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>关键分子</th><th>说明</th></tr></thead><tbody><tr><td>选择</td><td>Sec24 / KDEL 受体</td><td>信号依赖的 cargo 富集</td></tr><tr><td>启动</td><td>Sar1-GTP / Arf1-GTP</td><td>小 GTP 酶锚定膜并招募被膜</td></tr><tr><td>成形</td><td>Sec13/31（COPII）/ COPI 七聚体</td><td>笼状骨架产生曲率</td></tr><tr><td>缢裂</td><td>发动蛋白样蛋白（DRP1 样）/ 内陷</td><td>膜剪断</td></tr><tr><td>脱被</td><td>GTP 水解</td><td>被膜解体以便融合</td></tr><tr><td>拴系</td><td>Rab 蛋白 + tether 复合体</td><td>空间识别目标区室</td></tr><tr><td>融合</td><td><strong>v-SNARE + t-SNARE</strong></td><td>形成跨膜 SNARE 复合体拉合膜</td></tr></tbody></table>
+<blockquote>
+<p><strong>核心命题</strong>：COPI / COPII 决定”<strong>从哪到哪</strong>“（方向性靠被膜蛋白识别 source 区室信号），而 <strong>Rab + SNARE</strong> 决定”<strong>融到哪</strong>“。被膜管方向，SNARE 管对接。</p>
+</blockquote>
+<hr/>
+<h2 id="六方向性对比一张表记牢">六、方向性对比（一张表记牢）<a aria-hidden="true" tabindex="-1" href="#六方向性对比一张表记牢" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特征</th><th><strong>COPII</strong></th><th><strong>COPI</strong></th></tr></thead><tbody><tr><td>方向</td><td>ER → 高尔基体（顺向）</td><td>高尔基体 → ER（逆行）+ 高尔基体内</td></tr><tr><td>启动 GTP 酶</td><td><strong>Sar1</strong></td><td><strong>Arf1</strong></td></tr><tr><td>GEF（激活因子）</td><td><strong>Sec12</strong>（ER 膜）</td><td><strong>GBF1</strong>（高尔基体）</td></tr><tr><td>被膜蛋白</td><td>Sec23/24 + Sec13/31</td><td>α/β/β’/γ/δ/ε/ζ 七聚体</td></tr><tr><td>cargo 选择</td><td>Sec24 识别分选信号</td><td>KDEL 受体等回收信号</td></tr><tr><td>主要功能</td><td>输出新合成蛋白</td><td>回收逃逸 ER 蛋白、维持高尔基体</td></tr><tr><td>疾病关联</td><td>SEC23B 突变→先天性红细胞生成异常性贫血</td><td>COG 复合体缺陷→先天性糖基化病（CDG）</td></tr></tbody></table>
+<hr/>
+<h2 id="七与蛋白合成的关系整合总结">七、与蛋白合成的关系（整合总结）<a aria-hidden="true" tabindex="-1" href="#七与蛋白合成的关系整合总结" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>发生地点</th><th>涉及装置</th></tr></thead><tbody><tr><td>① 翻译（合成）</td><td>核糖体（胞质 / ER 膜结合）</td><td>核糖体、tRNA、mRNA</td></tr><tr><td>② 共翻译转位</td><td>粗面 ER</td><td>SRP、Sec61、BiP（拉入动力）</td></tr><tr><td>③ 起始折叠/糖基化</td><td>ER 腔</td><td>BiP、PDI、calnexin/calreticulin</td></tr><tr><td>④ 顺向运输</td><td>ER → 高尔基体</td><td><strong>COPII</strong>（Sar1）</td></tr><tr><td>⑤ 加工/分选</td><td>高尔基体各层 + TGN</td><td>糖基转移酶、M6P 标记、SNARE</td></tr><tr><td>⑥ 逆行回收</td><td>高尔基体 → ER</td><td><strong>COPI</strong>（Arf1、KDEL 受体）</td></tr><tr><td>⑦ 投递</td><td>TGN → 质膜/溶酶体</td><td>分泌囊泡、v/t-SNARE</td></tr></tbody></table>
+<blockquote>
+<p><strong>记忆钩子</strong>：</p>
+<ul>
+<li><strong>合成</strong>只发生在 <strong>①</strong>（核糖体）；</li>
+<li><strong>COPII 是出厂物流</strong>（ER → Golgi）；</li>
+<li><strong>COPI 是退货/回收物流</strong>（Golgi → ER）；</li>
+<li><strong>高尔基体是质检+贴标签的中央仓</strong>；</li>
+<li>没有这些囊泡，新合成的蛋白就堆在 ER 里出不去。</li>
+</ul>
+</blockquote>
+<hr/>
+<h2 id="八临床与实验">八、临床与实验<a aria-hidden="true" tabindex="-1" href="#八临床与实验" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>主题</th><th>内容</th></tr></thead><tbody><tr><td><strong>SEC23B 突变</strong></td><td>COPII 内层组分缺陷 → 红细胞生成异常性贫血（CDA II）</td></tr><tr><td><strong>COG 复合体缺陷</strong></td><td>COPI 介导的 intra-Golgi 运输受损 → 先天性糖基化病（CDG）</td></tr><tr><td><strong>Sar1/Arf1 显性失活突变</strong></td><td>阻断 COPII/COPI 形成 → 蛋白分泌停滞</td></tr><tr><td><strong>Brefeldin A（BFA）</strong></td><td>抑制 Arf1 GEF → 高尔基体崩解、COPI 运输阻断</td></tr><tr><td><strong>N-乙基马来酰亚胺（NEM）</strong></td><td>烷基化 NSF → 阻断 SNARE 循环 → 融合失败</td></tr><tr><td><strong>实验标记</strong></td><td>VSV-G 蛋白（COPII cargo 经典模型）、温度敏感突变体用于同步化运输</td></tr></tbody></table>
+<hr/>
+<h2 id="九常见误区澄清">九、常见误区澄清<a aria-hidden="true" tabindex="-1" href="#九常见误区澄清" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>误区</th><th>纠正</th></tr></thead><tbody><tr><td>❌ “高尔基体合成蛋白”</td><td>✅ 高尔基体<strong>只加工与分选</strong>，不合成多肽；合成只在核糖体</td></tr><tr><td>❌ “COPI 单向去 ER”</td><td>✅ COPI 还负责<strong>高尔基体内部层间运输</strong></td></tr><tr><td>❌ “COPII 和 COPI 只是方向反了”</td><td>✅ 二者被膜成分、GTP 酶、GEF 都不同，是两套独立机器</td></tr><tr><td>❌ “囊泡带 cargo 直接融合”</td><td>✅ 必须先<strong>脱被（uncoating）</strong> 才能被 SNARE 融合</td></tr><tr><td>❌ “所有分泌蛋白都经经典途径”</td><td>✅ 还有<strong>非经典分泌</strong>（如 IL-1β 经溶酶体/外泌体），不经 ER-Golgi</td></tr><tr><td>❌ “ER 驻留蛋白不会离开 ER”</td><td>✅ 它们会<strong>少量逃逸</strong>，靠 COPI + KDEL 受体持续回收维持稳态</td></tr></tbody></table>
+<hr/>
+<h2 id="十要点速记">十、要点速记<a aria-hidden="true" tabindex="-1" href="#十要点速记" class="internal"></a></h2>
+<blockquote>
+<p><strong>合成在核糖体，运输靠囊泡，加工在高尔基体</strong></p>
+<ul>
+<li><strong>COPII = 出厂物流</strong>（Sar1 启动，ER→Golgi 顺向）</li>
+<li><strong>COPI = 退货/回收物流</strong>（Arf1 启动，Golgi→ER 逆行 + 高尔基体内）</li>
+<li><strong>高尔基体 = 中央仓</strong>（糖基化、磷酸化、硫酸化、分选 M6P/质膜/分泌）</li>
+<li><strong>方向靠被膜，对接靠 SNARE</strong>（COPI/COPII 管从哪来，Rab+SNARE 管融到哪）</li>
+<li><strong>蛋白只合成一次</strong>，之后全靠囊泡搬运与酶修饰</li>
+</ul>
+</blockquote>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>说明</th></tr></thead><tbody><tr><td><strong>SRP</strong></td><td>Signal recognition particle</td><td>信号识别颗粒，导向 ER</td></tr><tr><td><strong>COP</strong></td><td>Coat protein</td><td>被膜蛋白（COPI / COPII）</td></tr><tr><td><strong>Sar1</strong></td><td>Secretion-associated Ras superfamily 1</td><td>COPII 启动 GTP 酶</td></tr><tr><td><strong>Arf1</strong></td><td>ADP-ribosylation factor 1</td><td>COPI 启动 GTP 酶</td></tr><tr><td><strong>GEF</strong></td><td>Guanine nucleotide exchange factor</td><td>鸟苷酸交换因子（激活小 GTP 酶）</td></tr><tr><td><strong>GAP</strong></td><td>GTPase-activating protein</td><td>促进 GTP 水解（终止信号）</td></tr><tr><td><strong>ERGIC</strong></td><td>ER-Golgi intermediate compartment</td><td>ER-高尔基体中间体</td></tr><tr><td><strong>CGN / TGN</strong></td><td>cis-Golgi / trans-Golgi network</td><td>顺面/反面管网</td></tr><tr><td><strong>M6P</strong></td><td>Mannose-6-phosphate</td><td>溶酶体酶分拣标记</td></tr><tr><td><strong>KDEL</strong></td><td>Lys-Asp-Glu-Leu</td><td>ER 驻留蛋白回收信号</td></tr><tr><td><strong>SNARE</strong></td><td>Soluble NSF attachment protein receptor</td><td>膜融合装置（v/t-SNARE）</td></tr><tr><td><strong>Rab</strong></td><td>Ras superfamily GTPase</td><td>囊泡拴系与靶向</td></tr><tr><td><strong>NSF</strong></td><td>N-ethylmaleimide-sensitive factor</td><td>SNARE 复合体解离 ATP 酶</td></tr><tr><td><strong>CDA II</strong></td><td>Congenital dyserythropoietic anemia type II</td><td>SEC23B 缺陷病</td></tr><tr><td><strong>CDG</strong></td><td>Congenital disorder of glycosylation</td><td>先天性糖基化病</td></tr></tbody></table>
+<hr/>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li><a href="../../细胞生物学/知识点/Bip" class="internal">Bip</a> —— ER 共翻译转位与 UPR 机制</li>
+<li><a href="../../细胞生物学/知识点/ERS" class="internal">ERS</a> —— ER 应激的三类反应（与 COPII 运输受阻相关）</li>
+<li><a href="../../细胞生物学/知识点/动态方法" class="internal">动态方法</a> —— 活细胞成像追踪囊泡运输</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

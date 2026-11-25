@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html><head><title>核糖体与蛋白质翻译的全过程</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="核糖体与蛋白质翻译的全过程"/><meta property="og:description" content="核糖体与蛋白质翻译的全过程 相关笔记：RNA 0. 一句话概括 翻译是核糖体把 mRNA 上的核苷酸序列解码成蛋白质氨基酸序列的过程。核糖体本身既是“解码器”，又是“肽基转移酶中心”（peptidyl transferase center，本质是核酶）。整个过程分为起始、延伸、终止三大阶段，延伸阶段又以“解码—成肽—转位”三步循环推进。 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="核糖体与蛋白质翻译的全过程 相关笔记：RNA 0. 一句话概括 翻译是核糖体把 mRNA 上的核苷酸序列解码成蛋白质氨基酸序列的过程。核糖体本身既是“解码器”，又是“肽基转移酶中心”（peptidyl transferase center，本质是核酶）。整个过程分为起始、延伸、终止三大阶段，延伸阶段又以“解码—成肽—转位”三步循环推进。 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/翻译"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#核糖体与蛋白质翻译的全过程" data-for="核糖体与蛋白质翻译的全过程">核糖体与蛋白质翻译的全过程</a></li><li class="depth-1"><a href="#0-一句话概括" data-for="0-一句话概括">0. 一句话概括</a></li><li class="depth-1"><a href="#1-参与者总览" data-for="1-参与者总览">1. 参与者总览</a></li><li class="depth-2"><a href="#密码子与-trna-的基本规则" data-for="密码子与-trna-的基本规则">密码子与 tRNA 的基本规则</a></li><li class="depth-1"><a href="#2-核糖体结构一台两亚基机器" data-for="2-核糖体结构一台两亚基机器">2. 核糖体结构：一台“两亚基机器”</a></li><li class="depth-2"><a href="#三个-trna-位点以-trna-结合状态命名" data-for="三个-trna-位点以-trna-结合状态命名">三个 tRNA 位点（以 tRNA 结合状态命名）</a></li><li class="depth-2"><a href="#四个关键功能区" data-for="四个关键功能区">四个关键功能区</a></li><li class="depth-1"><a href="#3-起始阶段" data-for="3-起始阶段">3. 起始阶段</a></li><li class="depth-2"><a href="#31-细菌shinedalgarno-定位--fmet" data-for="31-细菌shinedalgarno-定位--fmet">3.1 细菌：Shine–Dalgarno 定位 + fMet</a></li><li class="depth-2"><a href="#32-真核帽子--扫描--kozak-序列" data-for="32-真核帽子--扫描--kozak-序列">3.2 真核：帽子 + 扫描 + Kozak 序列</a></li><li class="depth-2"><a href="#33-起始阶段的调控点" data-for="33-起始阶段的调控点">3.3 起始阶段的调控点</a></li><li class="depth-1"><a href="#4-延伸阶段解码成肽转位" data-for="4-延伸阶段解码成肽转位">4. 延伸阶段：解码—成肽—转位</a></li><li class="depth-2"><a href="#第一步解码decoding" data-for="第一步解码decoding">第一步：解码（decoding）</a></li><li class="depth-2"><a href="#第二步成肽peptidyl-transfer" data-for="第二步成肽peptidyl-transfer">第二步：成肽（peptidyl transfer）</a></li><li class="depth-2"><a href="#第三步转位translocation" data-for="第三步转位translocation">第三步：转位（translocation）</a></li><li class="depth-2"><a href="#延伸的混合态与棘轮" data-for="延伸的混合态与棘轮">延伸的“混合态”与棘轮</a></li><li class="depth-1"><a href="#5-终止与回收" data-for="5-终止与回收">5. 终止与回收</a></li><li class="depth-2"><a href="#51-细菌" data-for="51-细菌">5.1 细菌</a></li><li class="depth-2"><a href="#52-真核" data-for="52-真核">5.2 真核</a></li><li class="depth-2"><a href="#53-终止密码子的重编码" data-for="53-终止密码子的重编码">5.3 终止密码子的“重编码”</a></li><li class="depth-1"><a href="#6-能量账本与速率" data-for="6-能量账本与速率">6. 能量账本与速率</a></li><li class="depth-2"><a href="#每个氨基酸的消耗" data-for="每个氨基酸的消耗">每个氨基酸的消耗</a></li><li class="depth-2"><a href="#速率" data-for="速率">速率</a></li><li class="depth-1"><a href="#7-保真性核糖体如何校对" data-for="7-保真性核糖体如何校对">7. 保真性：核糖体如何“校对”</a></li><li class="depth-1"><a href="#8-共翻译事件翻译不只是造一条线" data-for="8-共翻译事件翻译不只是造一条线">8. 共翻译事件：翻译不只是“造一条线”</a></li><li class="depth-1"><a href="#9-原核-vs-真核一张对照表" data-for="9-原核-vs-真核一张对照表">9. 原核 vs 真核：一张对照表</a></li><li class="depth-1"><a href="#10-抗生素与毒素翻译机器的靶点地图" data-for="10-抗生素与毒素翻译机器的靶点地图">10. 抗生素与毒素：翻译机器的“靶点地图”</a></li><li class="depth-1"><a href="#11-与疾病医学的关系" data-for="11-与疾病医学的关系">11. 与疾病、医学的关系</a></li><li class="depth-1"><a href="#12-常见误区" data-for="12-常见误区">12. 常见误区</a></li><li class="depth-1"><a href="#13-一页速记" data-for="13-一页速记">13. 一页速记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">核糖体与蛋白质翻译的全过程</h1><p class="content-meta">Nov 25, 2026, 19 min read</p></div></div><article class="popover-hint"><h1 id="核糖体与蛋白质翻译的全过程">核糖体与蛋白质翻译的全过程<a aria-hidden="true" tabindex="-1" href="#核糖体与蛋白质翻译的全过程" class="internal"></a></h1>
+<blockquote>
+<p>相关笔记：RNA</p>
+</blockquote>
+<h2 id="0-一句话概括">0. 一句话概括<a aria-hidden="true" tabindex="-1" href="#0-一句话概括" class="internal"></a></h2>
+<p>翻译是核糖体把 mRNA 上的<strong>核苷酸序列</strong>解码成蛋白质<strong>氨基酸序列</strong>的过程。核糖体本身既是“解码器”，又是“肽基转移酶中心”（peptidyl transferase center，本质是核酶）。整个过程分为<strong>起始、延伸、终止</strong>三大阶段，延伸阶段又以“<strong>解码—成肽—转位</strong>”三步循环推进。</p>
+<hr/>
+<h2 id="1-参与者总览">1. 参与者总览<a aria-hidden="true" tabindex="-1" href="#1-参与者总览" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>成分</th><th>作用</th></tr></thead><tbody><tr><td>mRNA</td><td>模板，按密码子（3 个碱基一组）被读取</td></tr><tr><td>tRNA</td><td>“适配器”：一端反密码子配对密码子，另一端携带氨基酸</td></tr><tr><td>核糖体</td><td>小亚基负责解码，大亚基负责成肽；提供 A/P/E 三个位点</td></tr><tr><td>起始因子</td><td>组装起始复合物，保证从正确的起点开始</td></tr><tr><td>延伸因子</td><td>运送 aminoacyl-tRNA、驱动转位</td></tr><tr><td>终止因子</td><td>识别终止密码子、释放多肽</td></tr><tr><td>GTP / ATP</td><td>供能；GTP 用于各步构象开关，ATP 用于氨基酸活化</td></tr></tbody></table>
+<h3 id="密码子与-trna-的基本规则">密码子与 tRNA 的基本规则<a aria-hidden="true" tabindex="-1" href="#密码子与-trna-的基本规则" class="internal"></a></h3>
+<ul>
+<li>64 个密码子：61 个编码氨基酸，3 个终止（UAA、UAG、UGA）。</li>
+<li>AUG 既是起始密码子，也编码甲硫氨酸。</li>
+<li>tRNA 长 75–90 个核苷酸，三叶草二级结构折叠成 <strong>L 形</strong>（约 7 nm）；3′ 端是 CCA，氨基酸接在 3′-OH 上；反密码子在另一个“臂”上。</li>
+<li>密码子第 3 位存在<strong>摆动配对（wobble）</strong>，允许一个 tRNA 识别多个同义密码子；次黄嘌呤（I）常出现在反密码子第 1 位。</li>
+</ul>
+<hr/>
+<h2 id="2-核糖体结构一台两亚基机器">2. 核糖体结构：一台“两亚基机器”<a aria-hidden="true" tabindex="-1" href="#2-核糖体结构一台两亚基机器" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>细菌 70S</th><th>真核 80S</th></tr></thead><tbody><tr><td>小亚基</td><td>30S（16S rRNA + 约 21 种蛋白）</td><td>40S（18S rRNA + 约 33 种蛋白）</td></tr><tr><td>大亚基</td><td>50S（23S + 5S rRNA + 约 34 种蛋白）</td><td>60S（28S + 5.8S + 5S rRNA + 约 47 种蛋白）</td></tr><tr><td>质量</td><td>约 2.5 MDa</td><td>约 4.2 MDa</td></tr><tr><td>rRNA 占比</td><td>约 2/3</td><td>约 2/3</td></tr><tr><td>直径</td><td>约 25 nm</td><td>约 25–30 nm</td></tr></tbody></table>
+<h3 id="三个-trna-位点以-trna-结合状态命名">三个 tRNA 位点（以 tRNA 结合状态命名）<a aria-hidden="true" tabindex="-1" href="#三个-trna-位点以-trna-结合状态命名" class="internal"></a></h3>
+<ul>
+<li><strong>A 位（aminoacyl site）</strong>：进入位点，新来的 aminoacyl-tRNA 在此与密码子配对。</li>
+<li><strong>P 位（peptidyl site）</strong>：持有正在延长的肽链（peptidyl-tRNA）。</li>
+<li><strong>E 位（exit site）</strong>：脱去氨基酸的“空载 tRNA”从此离开。</li>
+</ul>
+<p>核糖体沿 mRNA <strong>5′ → 3′</strong> 方向移动，因此 A 位总在 P 位的 3′ 侧。</p>
+<h3 id="四个关键功能区">四个关键功能区<a aria-hidden="true" tabindex="-1" href="#四个关键功能区" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能区</th><th>所在亚基</th><th>功能</th></tr></thead><tbody><tr><td>解码中心（decoding center）</td><td>小亚基</td><td>检查密码子–反密码子配对；细菌中 16S rRNA 的 A1492/A1493 参与“嗅探”</td></tr><tr><td>肽基转移酶中心（PTC）</td><td>大亚基</td><td>形成肽键；催化核心是 23S/28S rRNA，<strong>没有蛋白直接催化</strong></td></tr><tr><td>肽链出口隧道</td><td>大亚基</td><td>新生肽链从这里通向胞质，长约 10 nm；也是大环内酯类抗生素的结合点</td></tr><tr><td>GTPase 激活中心</td><td>大亚基</td><td>触发 EF-Tu / EF-G / eRF3 等 GTP 酶水解，充当“计时器”</td></tr></tbody></table>
+<blockquote>
+<p>记忆要点：<strong>小亚基“读”，大亚基“写”</strong>；读的是 mRNA，写的是肽链。核糖体是<strong>核酶（ribozyme）</strong>，肽键形成靠 rRNA。</p>
+</blockquote>
+<hr/>
+<h2 id="3-起始阶段">3. 起始阶段<a aria-hidden="true" tabindex="-1" href="#3-起始阶段" class="internal"></a></h2>
+<p>起始阶段要解决三个问题：<strong>小亚基如何找到起始密码子、起始 tRNA 如何进入 P 位、大小亚基如何正确组装</strong>。</p>
+<h3 id="31-细菌shinedalgarno-定位--fmet">3.1 细菌：Shine–Dalgarno 定位 + fMet<a aria-hidden="true" tabindex="-1" href="#31-细菌shinedalgarno-定位--fmet" class="internal"></a></h3>
+<ol>
+<li><strong>30S 亚基</strong>在 IF3 帮助下保持游离，避免与 50S 过早结合。</li>
+<li>mRNA 的 <strong>Shine–Dalgarno 序列</strong>（约 AGGAGG）与 16S rRNA 3′ 端的反 SD 序列（CCUCCU）互补配对，把起始 AUG 定位到 P 位。</li>
+<li><strong>IF1</strong> 占据 A 位，防止其他 tRNA 误入；<strong>IF2·GTP</strong> 携带起始 tRNA（<strong>fMet-tRNAfMet</strong>）进入 P 位。</li>
+<li>起始 codon 通常是 AUG，也可以是 GUG、UUG；起始氨基酸被甲酰化（fMet）。</li>
+<li>50S 加入，形成 70S 起始复合物；IF2 的 GTP 水解，IF1、IF2、IF3 依次释放。</li>
+<li>结果：<strong>P 位坐着 fMet-tRNA，A 位空着</strong>，等待第一个延伸因子送来的 tRNA。</li>
+</ol>
+<blockquote>
+<p>原核 mRNA 常是<strong>多顺反子</strong>：一条 mRNA 上有多个 SD 序列与多个起始位点，可同时翻译出几种蛋白。</p>
+</blockquote>
+<h3 id="32-真核帽子--扫描--kozak-序列">3.2 真核：帽子 + 扫描 + Kozak 序列<a aria-hidden="true" tabindex="-1" href="#32-真核帽子--扫描--kozak-序列" class="internal"></a></h3>
+<ol>
+<li><strong>eIF4F 复合体</strong>识别 5′ 帽：eIF4E 结合 m⁷G 帽，eIF4G 作为支架，eIF4A 作为 RNA 解旋酶。</li>
+<li><strong>43S 预起始复合物</strong>：40S + eIF1 + eIF1A + eIF3 + eIF2·GTP·Met-tRNAi 组装。</li>
+<li>43S 结合到 mRNA 5′ 端，沿 5′→3′ <strong>扫描</strong>，直到遇到第一个处于合适 <strong>Kozak 序列</strong>（如 GCCRCCAUGG）中的 AUG。</li>
+<li>识别起始密码子后，eIF5 激活 eIF2 的 GTP 水解，eIF1 释放，构象锁定。</li>
+<li><strong>eIF5B·GTP</strong> 招募 60S 大亚基；GTP 水解后 eIF5B 释放，形成 80S 起始复合物。</li>
+<li>eIF2·GDP 释放，由 <strong>eIF2B</strong> 交换回 GTP，准备下一轮。</li>
+</ol>
+<blockquote>
+<p>真核 mRNA 通常是<strong>单顺反子</strong>，只有一条主要编码序列；但也有例外（多顺反子样转录本、病毒 mRNA）。部分病毒与应激状态下的 mRNA 使用 <strong>IRES</strong>（内部核糖体进入位点），不依赖帽子，直接招募 40S。</p>
+</blockquote>
+<h3 id="33-起始阶段的调控点">3.3 起始阶段的调控点<a aria-hidden="true" tabindex="-1" href="#33-起始阶段的调控点" class="internal"></a></h3>
+<ul>
+<li><strong>eIF2α 磷酸化</strong>（由 PKR、PERK、GCN2、HRI 等激酶催化）会隔离并抑制 eIF2B，全局抑制翻译起始——这是整合应激反应（ISR）的核心。</li>
+<li><strong>eIF4E 结合蛋白（4E-BP）</strong> 受 mTOR 调控：去磷酸化时结合 eIF4E，抑制帽依赖翻译。</li>
+<li><strong>eIF2B 突变</strong> 导致白质消融性白质脑病（VWM）。</li>
+</ul>
+<hr/>
+<h2 id="4-延伸阶段解码成肽转位">4. 延伸阶段：解码—成肽—转位<a aria-hidden="true" tabindex="-1" href="#4-延伸阶段解码成肽转位" class="internal"></a></h2>
+<p>这是翻译的主体，每掺入一个氨基酸走一圈。</p>
+<pre><code class="mermaid">flowchart LR
+    A[&quot;A 位空出，等待下一个 aa-tRNA&quot;] --> B[&quot;EF-Tu·GTP·aa-tRNA 进入 A 位&quot;]
+    B --> C[&quot;密码子–反密码子配对&lt;br/>解码中心构象检查&quot;]
+    C --> D[&quot;GTP 水解，EF-Tu·GDP 释放&lt;br/>（错误 tRNA 被拒绝）&quot;]
+    D --> E[&quot;肽基转移：P 位肽链转移到 A 位 tRNA&quot;]
+    E --> F[&quot;EF-G·GTP 驱动转位&lt;br/>mRNA 与 tRNA 一起移动 3 nt&quot;]
+    F --> G[&quot;A 位重新空出；E 位释放空载 tRNA&quot;]
+    G --> A
+</code></pre>
+<h3 id="第一步解码decoding">第一步：解码（decoding）<a aria-hidden="true" tabindex="-1" href="#第一步解码decoding" class="internal"></a></h3>
+<ol>
+<li><strong>EF-Tu·GTP</strong>（真核为 <strong>eEF1A·GTP</strong>）携带 aminoacyl-tRNA 进入 A 位。</li>
+<li>反密码子与密码子在<strong>解码中心</strong>配对。正确的配对会诱导小亚基关键碱基（细菌 16S rRNA 的 A1492、A1493）翻转，把“配对正确”的信号传给大亚基。</li>
+<li>信号触发 EF-Tu 的 GTPase 活性，GTP 水解，EF-Tu·GDP 释放。</li>
+<li>错误的 tRNA 在 GTP 水解前就解离，形成<strong>动力学校对（kinetic proofreading）</strong>；这一步把错误率压到约 10⁻³–10⁻⁴。</li>
+<li>EF-Tu·GDP 由 <strong>EF-Ts</strong>（真核 <strong>eEF1B</strong>）交换回 GTP，循环使用。</li>
+</ol>
+<h3 id="第二步成肽peptidyl-transfer">第二步：成肽（peptidyl transfer）<a aria-hidden="true" tabindex="-1" href="#第二步成肽peptidyl-transfer" class="internal"></a></h3>
+<ol>
+<li>P 位肽链的 C 端与 tRNA 的 3′-OH 形成酯键；A 位新氨基酸的 α-氨基作为<strong>亲核试剂</strong>，攻击这个酯键的羰基碳。</li>
+<li>肽键形成，肽链从 P 位 tRNA <strong>转移到 A 位 tRNA</strong> 上；P 位 tRNA 变成“空载 tRNA”。</li>
+<li>催化由大亚基 rRNA（23S/28S 的肽基转移酶中心）完成；核糖体主要通过<strong>定位底物、稳定过渡态、排除水</strong>来降低活化能。</li>
+<li>这一步<strong>不需要额外 ATP/GTP</strong>，能量来自酯键→肽键的交换。</li>
+</ol>
+<h3 id="第三步转位translocation">第三步：转位（translocation）<a aria-hidden="true" tabindex="-1" href="#第三步转位translocation" class="internal"></a></h3>
+<ol>
+<li><strong>EF-G·GTP</strong>（真核 <strong>eEF2·GTP</strong>）结合核糖体，其形状模拟 tRNA。</li>
+<li>GTP 水解驱动核糖体构象变化（“棘轮”运动），mRNA–tRNA 复合物相对核糖体移动 <strong>3 个核苷酸</strong>。</li>
+<li>结果：A 位 peptidyl-tRNA 移到 P 位，P 位空载 tRNA 移到 E 位，A 位空出。</li>
+<li>E 位的空载 tRNA 释放；细菌的 E 位功能较明确，真核的 E 位作用相对弱。</li>
+</ol>
+<h3 id="延伸的混合态与棘轮">延伸的“混合态”与棘轮<a aria-hidden="true" tabindex="-1" href="#延伸的混合态与棘轮" class="internal"></a></h3>
+<ul>
+<li>转位不是一步到位，而是经过 <strong>杂交状态（hybrid state）</strong>：tRNA 的接受臂先移动，反密码子端后移动，核糖体两个亚基发生相对旋转。</li>
+<li>这种“棘轮 + 弹簧”机制保证 mRNA 严格按 3 nt 步进，不会滑移。</li>
+</ul>
+<hr/>
+<h2 id="5-终止与回收">5. 终止与回收<a aria-hidden="true" tabindex="-1" href="#5-终止与回收" class="internal"></a></h2>
+<h3 id="51-细菌">5.1 细菌<a aria-hidden="true" tabindex="-1" href="#51-细菌" class="internal"></a></h3>
+<ol>
+<li>终止密码子（UAA、UAG、UGA）进入 A 位。</li>
+<li><strong>RF1</strong> 识别 UAA/UAG，<strong>RF2</strong> 识别 UGA；它们模拟 tRNA 的形状进入 A 位。</li>
+<li><strong>RF3·GTP</strong> 促进 RF1/RF2 的释放与循环。</li>
+<li>肽基转移酶中心把肽链从 P 位 tRNA 转移到<strong>水分子</strong>上（水解），多肽释放。</li>
+<li><strong>RRF（核糖体回收因子）+ EF-G·GTP + IF3</strong> 把 70S 拆成 30S 与 50S，mRNA 与空载 tRNA 释放。</li>
+</ol>
+<h3 id="52-真核">5.2 真核<a aria-hidden="true" tabindex="-1" href="#52-真核" class="internal"></a></h3>
+<ol>
+<li><strong>eRF1</strong> 识别三个终止密码子（UAA、UAG、UGA），进入 A 位。</li>
+<li><strong>eRF3·GTP</strong> 协助 eRF1 识别与水解肽链。</li>
+<li><strong>ABCE1</strong>（ATP 酶）驱动核糖体拆分与回收。</li>
+<li>终止后 mRNA 可能进入 <strong>NMD（无义介导降解）</strong> 或普通降解；核糖体亚基回到游离池。</li>
+</ol>
+<h3 id="53-终止密码子的重编码">5.3 终止密码子的“重编码”<a aria-hidden="true" tabindex="-1" href="#53-终止密码子的重编码" class="internal"></a></h3>
+<ul>
+<li><strong>硒代半胱氨酸（Sec）</strong>：UGA + <strong>SECIS 元件</strong> + 特异 tRNA（tRNA^Sec） + EFsec，把 UGA 读成 Sec。</li>
+<li><strong>吡咯赖氨酸（Pyl）</strong>：UAG + 特异 tRNA/合成酶，见于某些古菌与细菌。</li>
+<li><strong>终止密码子通读（readthrough）</strong>：特定药物或突变可让终止密码子被读成氨基酸，是部分遗传病（如无义突变）的治疗思路。</li>
+</ul>
+<hr/>
+<h2 id="6-能量账本与速率">6. 能量账本与速率<a aria-hidden="true" tabindex="-1" href="#6-能量账本与速率" class="internal"></a></h2>
+<h3 id="每个氨基酸的消耗">每个氨基酸的消耗<a aria-hidden="true" tabindex="-1" href="#每个氨基酸的消耗" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>消耗</th></tr></thead><tbody><tr><td>氨基酸活化（aminoacyl-tRNA synthetase）</td><td>ATP → AMP + PPi，相当于 <strong>2 个高能磷酸键</strong></td></tr><tr><td>解码（EF-Tu/eEF1A）</td><td>1 GTP</td></tr><tr><td>转位（EF-G/eEF2）</td><td>1 GTP</td></tr><tr><td>起始（每条约 1 次）</td><td>1 GTP（分摊到每个残基很少）</td></tr><tr><td>终止（每条约 1 次）</td><td>1 GTP（分摊）</td></tr></tbody></table>
+<blockquote>
+<p>经验值：每掺入 1 个氨基酸约消耗 <strong>2 GTP + 2 个 ATP 高能键</strong>，合计约 <strong>4 个高能磷酸键</strong>。</p>
+</blockquote>
+<h3 id="速率">速率<a aria-hidden="true" tabindex="-1" href="#速率" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>体系</th><th>延伸速率</th></tr></thead><tbody><tr><td>细菌</td><td>约 15–20 个氨基酸/秒</td></tr><tr><td>真核</td><td>约 2–6 个氨基酸/秒</td></tr><tr><td>体外最适条件</td><td>可达 20–30 个氨基酸/秒（细菌）</td></tr></tbody></table>
+<p>一个 300 个氨基酸的蛋白，细菌约 20 秒完成，真核细胞约 1–2 分钟。</p>
+<hr/>
+<h2 id="7-保真性核糖体如何校对">7. 保真性：核糖体如何“校对”<a aria-hidden="true" tabindex="-1" href="#7-保真性核糖体如何校对" class="internal"></a></h2>
+<ol>
+<li><strong>氨基酸活化时的校对</strong>：aminoacyl-tRNA synthetase 有合成位点与编辑位点，错误氨基酸被水解。</li>
+<li><strong>起始选择</strong>：起始 tRNA 与起始因子的特殊结构，保证从 AUG 而非内部 Met 密码子开始。</li>
+<li><strong>解码中心的几何检查</strong>：只有正确的 codon–anticodon 配对才能诱导 A1492/A1493 翻转，触发 GTP 水解。</li>
+<li><strong>动力学校对</strong>：GTP 水解前给错误 tRNA 留出解离时间；水解释放不可逆，等于“锁定”。</li>
+<li><strong>摆动配对</strong>：第 3 位允许非标准配对，扩大 tRNA 识别范围，但仍在可接受的能量范围内。</li>
+<li><strong>核糖体质量控制（RQC）</strong>：翻译 stalled 或 mRNA 损坏时，RQC 复合体识别停滞核糖体，降解异常肽链。</li>
+</ol>
+<p>错误率通常约 <strong>10⁻³–10⁻⁴/氨基酸</strong>，即每合成 1000–10000 个残基出现 1 个错误。</p>
+<hr/>
+<h2 id="8-共翻译事件翻译不只是造一条线">8. 共翻译事件：翻译不只是“造一条线”<a aria-hidden="true" tabindex="-1" href="#8-共翻译事件翻译不只是造一条线" class="internal"></a></h2>
+<ul>
+<li><strong>N 端加工</strong>：甲硫氨酸/甲酰甲硫氨酸常被切除，随后可能乙酰化。</li>
+<li><strong>信号肽与 SRP</strong>：N 端信号肽被 SRP 识别，核糖体–SRP–新生肽复合物被引导到内质网，通过 Sec61 转位子共翻译转运。</li>
+<li><strong>共翻译折叠</strong>：肽链边合成边折叠，分子 chaperone（如 Hsp70、TRiC）参与；稀有密码子造成的“翻译暂停”会影响折叠路径。</li>
+<li><strong>多聚核糖体（polysome）</strong>：一条 mRNA 上同时有多个核糖体，提高产量；真核中常形成环状结构（eIF4G–PABP–polyA 互作）。</li>
+<li><strong>mRNA  surveillance</strong>：NMD、no-go decay、ribosome collision 触发降解与应激。</li>
+</ul>
+<hr/>
+<h2 id="9-原核-vs-真核一张对照表">9. 原核 vs 真核：一张对照表<a aria-hidden="true" tabindex="-1" href="#9-原核-vs-真核一张对照表" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>细菌</th><th>真核</th></tr></thead><tbody><tr><td>核糖体</td><td>70S（30S + 50S）</td><td>80S（40S + 60S）</td></tr><tr><td>mRNA 结构</td><td>常多顺反子，无帽无尾</td><td>单顺反子，有 m⁷G 帽与 poly(A) 尾</td></tr><tr><td>起始定位</td><td>Shine–Dalgarno 序列</td><td>帽子结合 + 5′→3′ 扫描 + Kozak</td></tr><tr><td>起始 tRNA</td><td>fMet-tRNAfMet</td><td>Met-tRNAi</td></tr><tr><td>起始因子</td><td>IF1、IF2、IF3</td><td>eIF1、1A、2、3、4A/4E/4G、4B、5、5B</td></tr><tr><td>延伸因子</td><td>EF-Tu、EF-Ts、EF-G</td><td>eEF1A、eEF1B、eEF2</td></tr><tr><td>终止因子</td><td>RF1、RF2、RF3、RRF</td><td>eRF1、eRF3、ABCE1</td></tr><tr><td>转录与翻译</td><td>可偶联（无核膜）</td><td>转录在核内，翻译在胞质/ER</td></tr><tr><td>与抗生素</td><td>差异敏感</td><td>差异敏感</td></tr></tbody></table>
+<hr/>
+<h2 id="10-抗生素与毒素翻译机器的靶点地图">10. 抗生素与毒素：翻译机器的“靶点地图”<a aria-hidden="true" tabindex="-1" href="#10-抗生素与毒素翻译机器的靶点地图" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>试剂</th><th>靶点</th><th>机制</th></tr></thead><tbody><tr><td>链霉素</td><td>30S 解码中心</td><td>增加错误率、抑制起始</td></tr><tr><td>四环素</td><td>30S A 位</td><td>阻止 aa-tRNA 进入</td></tr><tr><td>氨基糖苷类（庆大霉素等）</td><td>30S</td><td>干扰校对，导致误读</td></tr><tr><td>氯霉素</td><td>50S PTC</td><td>抑制肽键形成</td></tr><tr><td>大环内酯类（红霉素）</td><td>50S 出口隧道</td><td>阻断新生肽链外排</td></tr><tr><td>林可霉素</td><td>50S PTC</td><td>抑制成肽</td></tr><tr><td>嘌呤霉素</td><td>50S PTC</td><td>模拟 aminoacyl-tRNA，提前释放肽链</td></tr><tr><td>夫西地酸</td><td>EF-G</td><td>抑制转位</td></tr><tr><td>环己酰亚胺</td><td>真核 60S</td><td>抑制转位（不作用于细菌）</td></tr><tr><td>白喉毒素</td><td>eEF2</td><td>ADP-核糖基化，抑制转位</td></tr><tr><td>蓖麻毒素</td><td>28S rRNA</td><td>脱嘌呤，破坏 PTC</td></tr><tr><td>志贺毒素</td><td>28S rRNA</td><td>同类作用</td></tr></tbody></table>
+<blockquote>
+<p>抗生素选择性来自原核与真核核糖体的结构差异；但线粒体核糖体更像细菌核糖体，因此部分抗生素有线粒体毒性。</p>
+</blockquote>
+<hr/>
+<h2 id="11-与疾病医学的关系">11. 与疾病、医学的关系<a aria-hidden="true" tabindex="-1" href="#11-与疾病医学的关系" class="internal"></a></h2>
+<ul>
+<li><strong>核糖体病（ribosomopathy）</strong>：Diamond–Blackfan 贫血（RPS/RPL 突变）、Shwachman–Diamond 综合征（SBDS）、Treacher Collins 综合征（TCOF1）等。</li>
+<li><strong>eIF2B 突变</strong>：白质消融性白质脑病（VWM）。</li>
+<li><strong>无义突变</strong>：提前出现终止密码子，可用 readthrough 药物（如 ataluren）尝试通读。</li>
+<li><strong>CFTR ΔF508</strong>：共翻译折叠失败，被 ER 质量控制降解；调节剂（ivacaftor/lumacaftor）可部分纠正。</li>
+<li><strong>肿瘤</strong>：翻译起始因子（eIF4E、eIF2α）常被上调，mTOR 通路是重要靶点。</li>
+<li><strong>病毒</strong>：IRES 介导的帽非依赖翻译、蛋白酶切割 eIF4G、PKR 磷酸化 eIF2α 等，都是病毒劫持宿主翻译的策略。</li>
+</ul>
+<hr/>
+<h2 id="12-常见误区">12. 常见误区<a aria-hidden="true" tabindex="-1" href="#12-常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“肽基转移酶是蛋白质”</strong>：错。催化核心是 rRNA，核糖体是核酶；蛋白主要维持结构与定位。</li>
+<li><strong>“核糖体沿 mRNA 从 3′ 到 5′”</strong>：错。方向是 <strong>5′ → 3′</strong>。</li>
+<li><strong>“A 位在 P 位的 5′ 侧”</strong>：错。A 位在 P 位的 <strong>3′ 侧</strong>；核糖体向前移动，新的密码子进入 A 位。</li>
+<li><strong>“每个氨基酸消耗 1 个 GTP”</strong>：少算。延伸本身 2 GTP，加上氨基酸活化的 2 个高能键，约 4 个。</li>
+<li><strong>“tRNA 只是搬运工”</strong>：它同时是解码器与催化中心的“底物定位器”；L 形结构让反密码子与氨基酸端相距约 7 nm，正好跨越核糖体两个功能中心。</li>
+<li><strong>“真核翻译和原核完全一样”</strong>：起始机制差别最大（帽子扫描 vs SD），因子名称与数量也不同。</li>
+<li><strong>“终止就是简单停下”</strong>：终止需要释放因子识别、肽链水解、核糖体拆分与回收，是一套主动过程。</li>
+<li><strong>“抗生素只杀细菌不影响人”</strong>：线粒体核糖体是细菌型，部分药物有 mitochondrial toxicity。</li>
+<li><strong>“翻译错误率极低所以不需要校对”</strong>：错误率约 10⁻³–10⁻⁴，仍需要动力学校对与 RQC 多层保障。</li>
+<li><strong>“一条 mRNA 只能被一个核糖体翻译”</strong>：多聚核糖体可同时翻译；原核中转录与翻译还可偶联。</li>
+</ol>
+<hr/>
+<h2 id="13-一页速记">13. 一页速记<a aria-hidden="true" tabindex="-1" href="#13-一页速记" class="internal"></a></h2>
+<ul>
+<li><strong>三阶段</strong>：起始（找 AUG、放 fMet/Met）→ 延伸（解码—成肽—转位）→ 终止（识密码、放肽、拆核糖体）。</li>
+<li><strong>三位点</strong>：A 进、P 长、E 出；核糖体沿 mRNA 5′→3′ 走。</li>
+<li><strong>两亚基</strong>：小亚基读密码子，大亚基催化成肽；催化核心是 rRNA。</li>
+<li><strong>两套因子</strong>：原核 IF/EF/RF，真核 eIF/eEF/eRF；起始机制差异最大。</li>
+<li><strong>两 GTP</strong>：EF-Tu/eEF1A 一次，EF-G/eEF2 一次；加活化约 4 个高能键/残基。</li>
+<li><strong>一个方向</strong>：mRNA 5′→3′，肽链 N 端→C 端。</li>
+<li><strong>一句提醒</strong>：翻译是“解码 + 成肽 + 转位”的循环，核糖体是核酶，不是普通蛋白机器。</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

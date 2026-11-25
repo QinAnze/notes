@@ -1,0 +1,88 @@
+<svg viewBox="0 0 680 520" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>动作电位五个阶段与对应转运装置</title>
+<desc>静息态由钾漏通道主导，去极化由电压门控钠通道爆发开放，复极化由钾通道开放加钠通道失活共同完成，超极化因钾通道延迟关闭，后超极化由钙激活的钾通道参与，随后靠转运体长期恢复梯度。</desc>
+<defs>
+<marker id="ap" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">动作电位五阶段与驱动装置</text>
+<text class="hint" x="240" y="24">毫秒级　电压门控通道按时间程序开关</text>
+
+<rect class="frame" x="40" y="38" width="380" height="250" rx="12"/>
+
+<line x1="86" y1="62" x2="86" y2="258" stroke="#888780" stroke-width="1"/>
+<line x1="86" y1="160" x2="400" y2="160" stroke="#B4B2A9" stroke-width="0.5"/>
+<text class="sm" x="80" y="66" fill="#5F5E5A" text-anchor="end">+40</text>
+<text class="sm" x="80" y="164" fill="#5F5E5A" text-anchor="end">0</text>
+<text class="sm" x="80" y="212" fill="#5F5E5A" text-anchor="end">−55</text>
+<text class="sm" x="80" y="256" fill="#5F5E5A" text-anchor="end">−90</text>
+
+<path d="M92 232 L118 232 L126 160 L138 74 L152 66 L166 118 L180 196 L196 236 L214 240 L232 244 L250 242"
+      fill="none" stroke="#D85A30" stroke-width="2" stroke-linejoin="round"/>
+
+<line x1="92" y1="212" x2="240" y2="212" stroke="#5DCAA5" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text class="sm" x="244" y="216" fill="#0F6E56">阈值 −55</text>
+
+<circle cx="126" cy="160" r="3.5" fill="#A32D2D"/>
+<circle cx="180" cy="196" r="3.5" fill="#185FA5"/>
+<circle cx="250" cy="242" r="3.5" fill="#534AB7"/>
+
+<text class="sm" x="96" y="278" fill="#5F5E5A">静息态</text>
+<text class="sm" x="112" y="152" fill="#A32D2D">去极化</text>
+<text class="sm" x="172" y="214" fill="#185FA5">复极化</text>
+<text class="sm" x="216" y="260" fill="#3B6D11">超极化</text>
+
+<rect x="440" y="38" width="200" height="250" rx="12" fill="none" stroke="var(--color-border-tertiary, rgba(128,128,128,0.25))" stroke-width="0.5"/>
+
+<circle cx="452" cy="62" r="3.5" fill="#0F6E56"/>
+<text class="lbl" x="464" y="66" fill="#04342C">① 静息态　−70 mV</text>
+<text class="sm" x="464" y="82" fill="#5c5c5a">钾漏通道主导</text>
+
+<circle cx="452" cy="106" r="3.5" fill="#A32D2D"/>
+<text class="lbl" x="464" y="110" fill="#501313">② 去极化　约 1 ms</text>
+<text class="sm" x="464" y="126" fill="#5c5c5a">钠电压门控通道开放</text>
+
+<circle cx="452" cy="150" r="3.5" fill="#185FA5"/>
+<text class="lbl" x="464" y="154" fill="#042C53">③ 复极化　1–2 ms</text>
+<text class="sm" x="464" y="170" fill="#5c5c5a">钾通道开放　钠通道失活</text>
+
+<circle cx="452" cy="194" r="3.5" fill="#3B6D11"/>
+<text class="lbl" x="464" y="198" fill="#173404">④ 超极化　约 10 ms</text>
+<text class="sm" x="464" y="214" fill="#5c5c5a">钾通道延迟关闭</text>
+
+<circle cx="452" cy="238" r="3.5" fill="#534AB7"/>
+<text class="lbl" x="464" y="242" fill="#26215C">⑤ 后超极化</text>
+<text class="sm" x="464" y="258" fill="#5c5c5a">钙激活的钾通道</text>
+
+<rect class="frame" x="40" y="304" width="600" height="196" rx="12"/>
+<text class="ttl" x="60" y="326">恢复靠通道　维持靠泵</text>
+
+<text class="sm" x="60" y="350" fill="#5c5c5a">同一个动作电位期间搬运的电荷量</text>
+
+<rect x="60" y="362" width="330" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="74" y="377" fill="#04342C" dominant-baseline="central">电压门控钾通道</text>
+<text class="sm" x="376" y="377" fill="#0F6E56" text-anchor="end" dominant-baseline="central">约 10 pmol/cm²　瞬间完成</text>
+
+<rect x="60" y="398" width="22" height="30" rx="6" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+<text class="sm" x="90" y="413" fill="#2C2C2A" dominant-baseline="central">钠钾泵</text>
+<text class="sm" x="376" y="413" fill="#5F5E5A" text-anchor="end" dominant-baseline="central">约 0.001 pmol/cm²　慢两个数量级</text>
+
+<text class="sm" x="60" y="452" fill="#5c5c5a">钠钾泵慢两个数量级 → 所以电位恢复靠钾通道关闭，泵只负责把被侵蚀的梯度补回来</text>
+
+<rect x="410" y="362" width="216" height="66" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="424" y="382" fill="#412402" dominant-baseline="central">钠钙交换器</text>
+<text class="sm" x="424" y="400" fill="#633806" dominant-baseline="central">3 钠入 1 钙出　净入 2 正电荷</text>
+<text class="sm" x="424" y="418" fill="#633806" dominant-baseline="central">参与后超极化</text>
+
+<text class="hint" x="40" y="512">电生性　钠钾泵 净 1 出　·　钠钙交换 净 2 入　·　钙泵 净 1 出　　电中性　钠氢交换 1 比 1　·　钠钾氯同向 1-1-2</text>
+</svg>

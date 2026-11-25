@@ -1,0 +1,85 @@
+<svg viewBox="0 0 680 440" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>细胞周期四时相的时长、DNA 含量变化与检查点</title>
+<desc>G1 约占四成时间并完成生长决策与复制许可，S 期约占三成使 DNA 从 2C 升到 4C 而染色体数不变，G2 约占两成做质检备料并形成无活性的 pre-MPF，M 期约占一成且 DNA 含量在分裂完成时回到每个子细胞 2C。R 点、G1/S、intra-S、G2/M 与 SAC 分别把守各转换点。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">四时相　时长占比与 DNA 含量曲线</text>
+<text class="hint" x="272" y="24">间期占 90% 以上　M 期最短但变化最剧烈</text>
+
+<!-- 时相条 -->
+<rect x="70" y="40" width="228" height="32" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="184" y="61" fill="#042C53" text-anchor="middle">G1　约 40%（10–12 h）</text>
+<rect x="298" y="40" width="171" height="32" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="383" y="61" fill="#04342C" text-anchor="middle">S　约 30%（6–8 h）</text>
+<rect x="469" y="40" width="114" height="32" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="526" y="61" fill="#412402" text-anchor="middle">G2　约 20%</text>
+<rect x="583" y="40" width="57" height="32" rx="5" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="611" y="61" fill="#8C1D18" text-anchor="middle">M</text>
+
+<!-- 检查点标记 -->
+<circle cx="240" cy="80" r="3.5" fill="#B3261E"/>
+<text class="sm" x="240" y="94" fill="#8C1D18" text-anchor="middle">R 点</text>
+<circle cx="298" cy="80" r="3.5" fill="#B3261E"/>
+<text class="sm" x="302" y="94" fill="#8C1D18" text-anchor="middle">G1/S</text>
+<circle cx="383" cy="80" r="3.5" fill="#B3261E"/>
+<text class="sm" x="383" y="94" fill="#8C1D18" text-anchor="middle">intra-S</text>
+<circle cx="583" cy="80" r="3.5" fill="#B3261E"/>
+<text class="sm" x="583" y="94" fill="#8C1D18" text-anchor="middle">G2/M</text>
+<circle cx="612" cy="80" r="3.5" fill="#B3261E"/>
+<text class="sm" x="616" y="94" fill="#8C1D18" text-anchor="middle">SAC</text>
+
+<!-- DNA 含量曲线 -->
+<text class="sm" x="40" y="124" fill="#5c5c5a">4C</text>
+<text class="sm" x="40" y="204" fill="#5c5c5a">2C</text>
+<line x1="70" y1="120" x2="640" y2="120" stroke="#B4B2A9" stroke-width="0.7" stroke-dasharray="3 4"/>
+<line x1="70" y1="200" x2="640" y2="200" stroke="#B4B2A9" stroke-width="0.7" stroke-dasharray="3 4"/>
+
+<path d="M70 200 L298 200 L469 120 L583 120 L628 120 L628 200 L640 200" fill="none" stroke="#185FA5" stroke-width="2.5" stroke-linejoin="round"/>
+<text class="sm" x="180" y="192" fill="#0C447C" text-anchor="middle">2C 恒定</text>
+<text class="sm" x="383" y="158" fill="#0C447C" text-anchor="middle">DNA 复制　C 升　N 不变</text>
+<text class="sm" x="523" y="112" fill="#0C447C" text-anchor="middle">4C 恒定</text>
+<text class="sm" x="606" y="216" fill="#8C1D18" text-anchor="middle">分裂完成</text>
+
+<text class="sm" x="70" y="230" fill="#5c5c5a">DNA 含量（C）　G1 恒定 2C → S 升至 4C → G2 与 M 前中期维持 4C → 子细胞回到 2C</text>
+<text class="sm" x="70" y="246" fill="#8C1D18">染色体数（N）　全程 2N，仅后期姐妹单体分离时全细胞暂时 4N</text>
+
+<!-- 四时相卡片 -->
+<rect x="40" y="256" width="144" height="112" rx="9" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="54" y="278" fill="#042C53">G1</text>
+<text class="sm" x="54" y="298" fill="#0C447C">2C　2N</text>
+<text class="sm" x="54" y="316" fill="#0C447C">长大 + R 点决策</text>
+<text class="sm" x="54" y="334" fill="#0C447C">复制许可（装 MCM）</text>
+<text class="sm" x="54" y="352" fill="#0C447C">p53–p21 把关</text>
+
+<rect x="192" y="256" width="144" height="112" rx="9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="206" y="278" fill="#04342C">S</text>
+<text class="sm" x="206" y="298" fill="#085041">2C→4C　2N</text>
+<text class="sm" x="206" y="316" fill="#085041">半保留复制一次</text>
+<text class="sm" x="206" y="334" fill="#085041">组蛋白 + 中心体复制</text>
+<text class="sm" x="206" y="352" fill="#085041">cohesin 建立黏连</text>
+
+<rect x="344" y="256" width="144" height="112" rx="9" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="358" y="278" fill="#412402">G2</text>
+<text class="sm" x="358" y="298" fill="#633806">4C　2N</text>
+<text class="sm" x="358" y="316" fill="#633806">HR 修复 + M 期备料</text>
+<text class="sm" x="358" y="334" fill="#633806">pre-MPF 蓄势不放行</text>
+<text class="sm" x="358" y="352" fill="#633806">Chk1–Cdc25C 把关</text>
+
+<rect x="496" y="256" width="144" height="112" rx="9" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="510" y="278" fill="#8C1D18">M</text>
+<text class="sm" x="510" y="298" fill="#8C1D18">4C → 子细胞 2C</text>
+<text class="sm" x="510" y="316" fill="#8C1D18">凝缩 → 排列 → 分离</text>
+<text class="sm" x="510" y="334" fill="#8C1D18">SAC / separase</text>
+<text class="sm" x="510" y="352" fill="#8C1D18">核分裂 + 胞质分裂</text>
+
+<rect class="frame" x="40" y="378" width="600" height="48" rx="9"/>
+<text class="sm" x="56" y="398" fill="#412402">★ S 期只变 C 不变 N　后期只变 N 不变 C　DNA 减半发生在分裂完成，不在后期</text>
+<text class="sm" x="56" y="416" fill="#5c5c5a">实验坑　G2 与 M 都是 4C，流式 PI 分不开，须用 p-H3（Ser10）或染色体形态区分</text>
+</svg>

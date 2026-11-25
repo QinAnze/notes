@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html><head><title>氧化磷酸化（Oxidative Phosphorylation, OXPHOS）</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="氧化磷酸化（Oxidative Phosphorylation, OXPHOS）"/><meta property="og:description" content="氧化磷酸化（Oxidative Phosphorylation, OXPHOS） 一句话：NADH / FADH₂ 把电子交给呼吸链，电子逐级传递到 O₂；每一步释放的能量不直接用来成键，而是”存”成跨内膜的质子梯度（Δp），最后由 ATP 合酶把 H⁺ 的回流转化为 ADP + Pi → ATP。 三个关键词：电子传递（氧化）、质子梯度（能量中间货币）、磷酸化（ATP 合成）。 一、总览 项目内容位置线粒体内膜（嵴）；细菌/古菌在质膜组成呼吸链（复合体 I–IV + Q + cyt c）+ ATP 合酶（复合体 V）电子供体NADH、FADH₂（以及琥珀酸、脂酰-CoA 等经 Q 进入）终末受体O₂ → H₂O能量中间体质子动力势 Δp（膜电位 + pH 差）净反应NADH+H++21​O2​→NAD++H2​O，ΔE∘′=+1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="氧化磷酸化（Oxidative Phosphorylation, OXPHOS） 一句话：NADH / FADH₂ 把电子交给呼吸链，电子逐级传递到 O₂；每一步释放的能量不直接用来成键，而是”存”成跨内膜的质子梯度（Δp），最后由 ATP 合酶把 H⁺ 的回流转化为 ADP + Pi → ATP。 三个关键词：电子传递（氧化）、质子梯度（能量中间货币）、磷酸化（ATP 合成）。 一、总览 项目内容位置线粒体内膜（嵴）；细菌/古菌在质膜组成呼吸链（复合体 I–IV + Q + cyt c）+ ATP 合酶（复合体 V）电子供体NADH、FADH₂（以及琥珀酸、脂酰-CoA 等经 Q 进入）终末受体O₂ → H₂O能量中间体质子动力势 Δp（膜电位 + pH 差）净反应NADH+H++21​O2​→NAD++H2​O，ΔE∘′=+1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/氧化磷酸化"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#氧化磷酸化oxidative-phosphorylation-oxphos" data-for="氧化磷酸化oxidative-phosphorylation-oxphos">氧化磷酸化（Oxidative Phosphorylation, OXPHOS）</a></li><li class="depth-1"><a href="#一总览" data-for="一总览">一、总览</a></li><li class="depth-1"><a href="#二呼吸链的分子组成" data-for="二呼吸链的分子组成">二、呼吸链的分子组成</a></li><li class="depth-2"><a href="#1-复合体-inadh泛醌氧化还原酶" data-for="1-复合体-inadh泛醌氧化还原酶">1. 复合体 I（NADH:泛醌氧化还原酶）</a></li><li class="depth-2"><a href="#2-复合体-ii琥珀酸脱氢酶sdh" data-for="2-复合体-ii琥珀酸脱氢酶sdh">2. 复合体 II（琥珀酸脱氢酶，SDH）</a></li><li class="depth-2"><a href="#3-复合体-iii细胞色素-bcqcyt-c-氧化还原酶" data-for="3-复合体-iii细胞色素-bcqcyt-c-氧化还原酶">3. 复合体 III（细胞色素 bc₁，Q:cyt c 氧化还原酶）</a></li><li class="depth-2"><a href="#4-复合体-iv细胞色素-c-氧化酶" data-for="4-复合体-iv细胞色素-c-氧化酶">4. 复合体 IV（细胞色素 c 氧化酶）</a></li><li class="depth-2"><a href="#5-移动电子载体" data-for="5-移动电子载体">5. 移动电子载体</a></li><li class="depth-1"><a href="#三化学渗透质子梯度怎么建立怎么用" data-for="三化学渗透质子梯度怎么建立怎么用">三、化学渗透：质子梯度怎么建立、怎么用</a></li><li class="depth-2"><a href="#1-质子动力势" data-for="1-质子动力势">1. 质子动力势</a></li><li class="depth-2"><a href="#2-三个前提mitchell-的化学渗透假说19611978-诺贝尔化学奖" data-for="2-三个前提mitchell-的化学渗透假说19611978-诺贝尔化学奖">2. 三个前提（Mitchell 的化学渗透假说，1961；1978 诺贝尔化学奖）</a></li><li class="depth-2"><a href="#3-质子账本每-2e" data-for="3-质子账本每-2e">3. 质子账本（每 2e⁻）</a></li><li class="depth-2"><a href="#4-atp-合酶简述详见单独笔记" data-for="4-atp-合酶简述详见单独笔记">4. ATP 合酶（简述，详见单独笔记）</a></li><li class="depth-1"><a href="#四全过程按顺序走一遍" data-for="四全过程按顺序走一遍">四、全过程（按顺序走一遍）</a></li><li class="depth-1"><a href="#五能量学与化学计量" data-for="五能量学与化学计量">五、能量学与化学计量</a></li><li class="depth-2"><a href="#1-电子为什么愿意往下走氧化还原电位" data-for="1-电子为什么愿意往下走氧化还原电位">1. 电子为什么&quot;愿意&quot;往下走：氧化还原电位</a></li><li class="depth-2"><a href="#2-为什么-atp-产率是-25--15" data-for="2-为什么-atp-产率是-25--15">2. 为什么 ATP 产率是 2.5 / 1.5</a></li><li class="depth-2"><a href="#3-穿梭系统决定胞质-nadh-值多少-atp" data-for="3-穿梭系统决定胞质-nadh-值多少-atp">3. 穿梭系统决定&quot;胞质 NADH 值多少 ATP&quot;</a></li><li class="depth-2"><a href="#4-能量账" data-for="4-能量账">4. 能量账</a></li><li class="depth-1"><a href="#六调节" data-for="六调节">六、调节</a></li><li class="depth-1"><a href="#七抑制剂与解偶联剂实验与药理的核心工具" data-for="七抑制剂与解偶联剂实验与药理的核心工具">七、抑制剂与解偶联剂（实验与药理的核心工具）</a></li><li class="depth-1"><a href="#八病理与药理" data-for="八病理与药理">八、病理与药理</a></li><li class="depth-1"><a href="#九常见误区" data-for="九常见误区">九、常见误区</a></li><li class="depth-1"><a href="#十自测" data-for="十自测">十、自测</a></li><li class="depth-1"><a href="#相关" data-for="相关">相关</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">氧化磷酸化（Oxidative Phosphorylation, OXPHOS）</h1><p class="content-meta">Nov 25, 2026, 20 min read</p></div></div><article class="popover-hint"><h1 id="氧化磷酸化oxidative-phosphorylation-oxphos">氧化磷酸化（Oxidative Phosphorylation, OXPHOS）<a aria-hidden="true" tabindex="-1" href="#氧化磷酸化oxidative-phosphorylation-oxphos" class="internal"></a></h1>
+<blockquote>
+<p><strong>一句话</strong>：NADH / FADH₂ 把电子交给呼吸链，电子逐级传递到 O₂；每一步释放的能量不直接用来成键，而是”存”成跨内膜的<strong>质子梯度（Δp）</strong>，最后由 ATP 合酶把 H⁺ 的回流转化为 ADP + Pi → ATP。</p>
+<p>三个关键词：<strong>电子传递</strong>（氧化）、<strong>质子梯度</strong>（能量中间货币）、<strong>磷酸化</strong>（ATP 合成）。</p>
+</blockquote>
+<hr/>
+<h2 id="一总览">一、总览<a aria-hidden="true" tabindex="-1" href="#一总览" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>位置</td><td>线粒体内膜（嵴）；细菌/古菌在质膜</td></tr><tr><td>组成</td><td>呼吸链（复合体 I–IV + Q + cyt c）+ ATP 合酶（复合体 V）</td></tr><tr><td>电子供体</td><td>NADH、FADH₂（以及琥珀酸、脂酰-CoA 等经 Q 进入）</td></tr><tr><td>终末受体</td><td>O₂ → H₂O</td></tr><tr><td>能量中间体</td><td>质子动力势 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord mathnormal">p</span></span></span></span></span>（膜电位 + pH 差）</td></tr><tr><td>净反应</td><td><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mord mathrm">NADH</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathrm">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">NA</span><span class="mord"><span class="mord mathrm">D</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">O</span></span></span></span></span></span>，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">+</span><span class="mord">1.136</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span></span></span></span></span>，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord">219</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ/mol</span></span></span></span></span></span></td></tr><tr><td>产率</td><td>NADH ≈ 2.5 ATP；FADH₂ ≈ 1.5 ATP（哺乳动物）</td></tr><tr><td>总效率</td><td>约 50–60%（其余以热的形式散失）</td></tr></tbody></table>
+<p><strong>逻辑链</strong>（务必记住顺序）：</p>
+<pre><code class="mermaid">flowchart LR
+    NADH[&quot;NADH&quot;] --> CI[&quot;复合体 I（泵出 4 H+）&quot;]
+    FADH2[&quot;FADH2 / 琥珀酸&quot;] --> CII[&quot;复合体 II（不泵 H+）&quot;]
+    CI --> Q[&quot;Q 池（Q ⇌ QH2）&quot;]
+    CII --> Q
+    Q --> CIII[&quot;复合体 III（泵出 4 H+）&quot;]
+    CIII --> CYT[&quot;cyt c&quot;]
+    CYT --> CIV[&quot;复合体 IV（泵出 2 H+）&quot;]
+    CIV --> O2[&quot;O2 → H2O&quot;]
+    H[&quot;质子梯度 Δp&quot;] --> V[&quot;ATP 合酶（8 H+ → 3 ATP）&quot;]
+    V --> ATP[&quot;ATP&quot;]
+</code></pre>
+<hr/>
+<h2 id="二呼吸链的分子组成">二、呼吸链的分子组成<a aria-hidden="true" tabindex="-1" href="#二呼吸链的分子组成" class="internal"></a></h2>
+<h3 id="1-复合体-inadh泛醌氧化还原酶">1. 复合体 I（NADH:泛醌氧化还原酶）<a aria-hidden="true" tabindex="-1" href="#1-复合体-inadh泛醌氧化还原酶" class="internal"></a></h3>
+<ul>
+<li><strong>结构</strong>：L 形，哺乳动物约 45 个亚基（14 个核心亚基 + 31 个”超数”亚基）；亲水臂伸向基质，疏水臂嵌在膜内。</li>
+<li><strong>氧化还原中心</strong>：FMN → 一串铁硫簇（Fe-S）→ 位于膜臂与亲水臂交界处的 Q 结合位点。</li>
+<li><strong>反应</strong>：NADH → NAD⁺ + 2e⁻ + H⁺；2e⁻ 经 FMN/Fe-S 传给 Q，Q + 2H⁺ + 2e⁻ → QH₂（H⁺ 来自基质）。</li>
+<li><strong>质子泵</strong>：每 2e⁻ 泵出 <strong>4 H⁺</strong>。机制可概括为：Q 位点的氧化还原反应产生”构象波”，沿膜臂传到几个类似反向转运体的亚基（ND2、ND4、ND5 等），把 H⁺ 泵到膜间隙。</li>
+<li><strong>意义</strong>：NADH 的主要入口；复合体 I 也是 ROS 产生的重要位点之一（FMN 位点与 Q 结合位点均可泄漏电子给 O₂）。</li>
+<li><strong>抑制</strong>：鱼藤酮（rotenone）、piericidin A、阿米妥（amytal）。</li>
+</ul>
+<h3 id="2-复合体-ii琥珀酸脱氢酶sdh">2. 复合体 II（琥珀酸脱氢酶，SDH）<a aria-hidden="true" tabindex="-1" href="#2-复合体-ii琥珀酸脱氢酶sdh" class="internal"></a></h3>
+<ul>
+<li><strong>结构</strong>：4 个亚基（黄素蛋白 SDHA、铁硫蛋白 SDHB、两个膜亚基 SDHC/SDHD）；含 FAD、Fe-S 与血红素 b560。</li>
+<li><strong>反应</strong>：琥珀酸 → 延胡索酸（TCA 循环的一步），FAD → FADH₂，电子经 Fe-S → Q。</li>
+<li><strong>关键点</strong>：<strong>不泵质子</strong>。所以经复合体 II 进入的电子（FADH₂）只在下游 III、IV 产生梯度，ATP 产率低（≈1.5）。</li>
+<li><strong>抑制</strong>：丙二酸（malonate，竞争性）、TTFA、carboxin。</li>
+<li><strong>临床</strong>：SDHB/SDHC/SDHD 突变与嗜铬细胞瘤/副神经节瘤相关。</li>
+</ul>
+<h3 id="3-复合体-iii细胞色素-bcqcyt-c-氧化还原酶">3. 复合体 III（细胞色素 bc₁，Q:cyt c 氧化还原酶）<a aria-hidden="true" tabindex="-1" href="#3-复合体-iii细胞色素-bcqcyt-c-氧化还原酶" class="internal"></a></h3>
+<ul>
+<li><strong>结构</strong>：二聚体；哺乳动物约 11 个亚基。核心为细胞色素 b（两个血红素 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>、<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">H</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>）、Rieske 铁硫蛋白、细胞色素 c₁。</li>
+<li><strong>两个 Q 位点</strong>：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>（朝向膜间隙）与 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>（朝向基质）。</li>
+<li><strong>Q 循环</strong>（重点）：
+<ol>
+<li>QH₂ 在 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 被氧化：2H⁺ 释放到膜间隙，2e⁻ 分两路——一路经 Rieske → c₁ → cyt c；另一路经 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> → <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">H</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> → <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>。</li>
+<li>在 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>，Q 接受 2e⁻ 与基质来的 2H⁺，被还原为 QH₂。</li>
+<li><strong>净效果</strong>：每氧化 1 个 QH₂，向膜间隙释放 <strong>4 H⁺</strong>（2 个来自 QH₂，2 个由基质泵入），并还原 <strong>2 个 cyt c</strong>。</li>
+</ol>
+</li>
+<li><strong>意义</strong>：把 2e⁻ 的”一次性”传递拆成两步，既传递电子又泵质子；Q 循环也是 ROS（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 半醌）的来源。</li>
+<li><strong>抑制</strong>：抗霉素 A（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>）、myxothiazol/stigmatellin（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>）、阿托伐醌（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>，抗疟药）。</li>
+</ul>
+<h3 id="4-复合体-iv细胞色素-c-氧化酶">4. 复合体 IV（细胞色素 c 氧化酶）<a aria-hidden="true" tabindex="-1" href="#4-复合体-iv细胞色素-c-氧化酶" class="internal"></a></h3>
+<ul>
+<li><strong>结构</strong>：哺乳动物约 13–14 个亚基；核心亚基 COX1、COX2、COX3 由线粒体基因编码。</li>
+<li><strong>氧化还原中心</strong>：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>（COX2）→ 血红素 a → 血红素 a₃–<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>（COX1，O₂ 结合位点）。</li>
+<li><strong>反应</strong>：cyt c（Fe²⁺）→ <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> → heme a → heme a₃/<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> → O₂；每 2e⁻ 消耗 2 个基质 H⁺、生成 1 个 H₂O。</li>
+<li><strong>质子泵</strong>：每 2e⁻ 泵出 <strong>2 H⁺</strong>（经 D 通道/K 通道进入的质子参与化学与泵送）。</li>
+<li><strong>意义</strong>：决定呼吸链的”终末速度”；O₂ 不足时整条链停摆。</li>
+<li><strong>抑制</strong>：氰化物、叠氮化物、CO、H₂S（均作用于 heme a₃–<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>）。</li>
+</ul>
+<h3 id="5-移动电子载体">5. 移动电子载体<a aria-hidden="true" tabindex="-1" href="#5-移动电子载体" class="internal"></a></h3>
+<ul>
+<li><strong>泛醌（Q / CoQ10）</strong>：脂溶性，可在膜内扩散；一次接受 <strong>2e⁻ + 2H⁺</strong>，在 Q 池中循环；是 I、II 与 III 之间的”集线器”。</li>
+<li><strong>细胞色素 c</strong>：可溶性，位于膜间隙侧；一次只传 <strong>1e⁻</strong>；在 III 与 IV 之间往返。凋亡时 cyt c 释放到胞质，激活 caspase（与 OXPHOS 无关的”兼职”）。</li>
+<li><strong>其他电子入口</strong>：β-氧化产生的 FADH₂ 经 <strong>ETF-QO</strong> 传给 Q；甘油-3-磷酸脱氢酶（G3PDH）、二氢乳清酸脱氢酶（DHODH）也直接把电子交给 Q。它们都绕开复合体 I，产 ATP 较少。</li>
+</ul>
+<hr/>
+<h2 id="三化学渗透质子梯度怎么建立怎么用">三、化学渗透：质子梯度怎么建立、怎么用<a aria-hidden="true" tabindex="-1" href="#三化学渗透质子梯度怎么建立怎么用" class="internal"></a></h2>
+<h3 id="1-质子动力势">1. 质子动力势<a aria-hidden="true" tabindex="-1" href="#1-质子动力势" class="internal"></a></h3>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2173em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2.3</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">RT</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">Δ</span><span class="mord"><span class="mord mathrm">pH</span></span></span></span></span></span></p>
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span></span>：膜电位（内负外正），约 −150～−180 mV；</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathrm">pH</span></span></span></span></span></span>：基质偏碱，约 0.5～1 个单位（约 30～60 mV）；</li>
+<li>合计约 <strong>180～220 mV</strong>，每摩尔 H⁺ 约 <strong>20 kJ</strong> 自由能；</li>
+<li>线粒体中 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span></span> 贡献约 3/4，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathrm">pH</span></span></span></span></span></span> 约 1/4（与”纯 pH 梯度”的叶绿体不同）。</li>
+</ul>
+<h3 id="2-三个前提mitchell-的化学渗透假说19611978-诺贝尔化学奖">2. 三个前提（Mitchell 的化学渗透假说，1961；1978 诺贝尔化学奖）<a aria-hidden="true" tabindex="-1" href="#2-三个前提mitchell-的化学渗透假说19611978-诺贝尔化学奖" class="internal"></a></h3>
+<ol>
+<li>呼吸链把 H⁺ 从基质泵到膜间隙；</li>
+<li>内膜对 H⁺ <strong>不通透</strong>（除 ATP 合酶与少量泄漏），梯度得以维持；</li>
+<li>ATP 合酶允许 H⁺ 回流，并把回流的自由能用于 ATP 合成。</li>
+</ol>
+<p><strong>经典证据</strong>：</p>
+<ul>
+<li><strong>Jagendorf 酸-碱跳跃实验</strong>（1966）：叶绿体类囊体先在酸性缓冲中平衡，再转入含 ADP + Pi 的碱性缓冲，<strong>黑暗中</strong>也能合成 ATP——说明 ΔpH 本身就足以驱动合成。</li>
+<li><strong>Racker 重建实验</strong>：脂质体中共嵌细菌视紫红质（光驱动质子泵）与 ATP 合酶，光照即可合成 ATP——证明两个组件可以”解耦”重组。</li>
+<li><strong>解偶联剂与离子载体</strong>：DNP/FCCP 消除 Δp，呼吸加快但 ATP 不合成；缬氨霉素（K⁺ 载体）只消 Δψ，尼日霉素（H⁺/K⁺ 交换）只消 ΔpH——可用它们拆分两种梯度成分。</li>
+</ul>
+<h3 id="3-质子账本每-2e">3. 质子账本（每 2e⁻）<a aria-hidden="true" tabindex="-1" href="#3-质子账本每-2e" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>泵出 H⁺</th><th>说明</th></tr></thead><tbody><tr><td>复合体 I（NADH）</td><td>4</td><td>NADH → Q</td></tr><tr><td>复合体 II（琥珀酸）</td><td>0</td><td>不泵质子</td></tr><tr><td>复合体 III</td><td>4</td><td>每 QH₂；2 个来自 QH₂，2 个来自基质</td></tr><tr><td>复合体 IV</td><td>2</td><td>每 2e⁻；另消耗 2 个基质 H⁺ 生成水</td></tr><tr><td><strong>NADH 合计</strong></td><td><strong>10</strong></td><td>→ 约 2.5 ATP</td></tr><tr><td><strong>FADH₂ 合计</strong></td><td><strong>6</strong></td><td>→ 约 1.5 ATP</td></tr></tbody></table>
+<blockquote>
+<p>注意：复合体 IV 消耗的 2 个 H⁺ 属于 O₂ 还原的化学计量，通常不额外计入”泵出”数；不同教材的”10 H⁺“口径即按上表。</p>
+</blockquote>
+<h3 id="4-atp-合酶简述详见单独笔记">4. ATP 合酶（简述，详见单独笔记）<a aria-hidden="true" tabindex="-1" href="#4-atp-合酶简述详见单独笔记" class="internal"></a></h3>
+<ul>
+<li>结构：F1（α3β3γδε，基质侧催化）+ Fo（c8 + a，膜内质子通道）+ 外周柄（b、OSCP、d、F6）。</li>
+<li>机制：H⁺ 经 a 的两个半通道使 c-Glu 质子化/去质子化 → c 环旋转（每个 H⁺ 转 45°）→ γ 旋转 → β 依次 O→L→T → ATP 释放。</li>
+<li>计量：c8 时 8 H⁺/圈 → 3 ATP（2.7 H⁺/ATP）；加上磷酸载体与 ATP/ADP 转位酶的耗能，整体约 <strong>4 H⁺/ATP</strong>。</li>
+<li>可逆：Δp 崩溃时可水解 ATP 泵质子；IF1 在缺血时抑制水解。</li>
+<li>详见 <a href="../../细胞生物学/知识点/ATP合酶" class="internal">ATP合酶</a>。</li>
+</ul>
+<hr/>
+<h2 id="四全过程按顺序走一遍">四、全过程（按顺序走一遍）<a aria-hidden="true" tabindex="-1" href="#四全过程按顺序走一遍" class="internal"></a></h2>
+<ol>
+<li>
+<p><strong>底物氧化产生 NADH/FADH₂</strong></p>
+<ul>
+<li>糖酵解（胞质）→ 丙酮酸；丙酮酸脱氢酶复合体 → 乙酰-CoA；TCA 循环产生 NADH、FADH₂、GTP。</li>
+<li>脂肪酸 β-氧化产生 NADH、FADH₂（后者经 ETF-QO 交给 Q）。</li>
+<li>胞质 NADH 需经<strong>穿梭系统</strong>进入线粒体（见第五节）。</li>
+</ul>
+</li>
+<li>
+<p><strong>复合体 I：NADH → Q</strong></p>
+<ul>
+<li>NADH 结合亲水臂，2e⁻ 经 FMN、Fe-S 链到 Q 位点；Q 还原为 QH₂。</li>
+<li>同时 4 H⁺ 被泵到膜间隙；基质 H⁺ 浓度下降。</li>
+</ul>
+</li>
+<li>
+<p><strong>复合体 II：琥珀酸 → Q（可选入口）</strong></p>
+<ul>
+<li>琥珀酸氧化为延胡索酸，FADH₂ 的电子经 Fe-S 给 Q；<strong>不泵质子</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>Q 池</strong>：把 2e⁻ 从 I/II 送到 III；QH₂ 在膜内扩散。</p>
+</li>
+<li>
+<p><strong>复合体 III：Q 循环</strong></p>
+<ul>
+<li>QH₂ 在 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 氧化，2H⁺ 释放到膜间隙；2e⁻ 分路（Rieske→cyt c；<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>→<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">H</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>→<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>）。</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 处 Q 被还原为 QH₂（消耗基质 2H⁺）；净泵出 4 H⁺，2 个 cyt c 被还原。</li>
+</ul>
+</li>
+<li>
+<p><strong>cyt c → 复合体 IV</strong></p>
+<ul>
+<li>2 个 cyt c（Fe²⁺）依次把 1e⁻ 交给 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">A</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> → heme a → heme a₃/<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>。</li>
+<li>O₂ + 4e⁻ + 4H⁺ → 2H₂O（H⁺ 来自基质）；每 2e⁻ 泵出 2 H⁺。</li>
+</ul>
+</li>
+<li>
+<p><strong>质子梯度达到稳态</strong></p>
+<ul>
+<li>膜间隙 H⁺ 高、基质 H⁺ 低；Δψ 内负外正；内膜像”充电的电容器”。</li>
+<li>梯度既驱动 ATP 合成，也驱动底物转运（如 ATP/ADP、Pi、丙酮酸、Ca²⁺ 等）。</li>
+</ul>
+</li>
+<li>
+<p><strong>ATP 合酶回收能量</strong></p>
+<ul>
+<li>H⁺ 经 Fo 回流基质；c 环旋转 → γ 旋转 → β 的 O/L/T 循环 → ATP。</li>
+<li>ATP 在基质生成，经 ATP/ADP 转位酶（ATP 出、ADP 入，受 Δψ 驱动）与磷酸载体输出/输入。</li>
+</ul>
+</li>
+<li>
+<p><strong>ATP 的”去向”</strong></p>
+<ul>
+<li>胞质消耗 ATP → ADP 回线粒体 → 再磷酸化；形成”ATP/ADP 循环”。</li>
+<li>线粒体自身也用 ATP（如蛋白导入、复制转录）。</li>
+</ul>
+</li>
+</ol>
+<p><strong>总反应式</strong>（以 NADH 为例）：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mord mathrm">NADH</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathrm">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathrm">NA</span><span class="mord"><span class="mord mathrm">D</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">O</span></span><span class="mspace" style="margin-right:2em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord">219</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ/mol</span></span></span></span></span></span></p>
+<p>以琥珀酸为例：</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">琥珀酸</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathrm">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">延胡索酸</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9019em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">O</span></span><span class="mspace" style="margin-right:2em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9463em;vertical-align:-0.1944em;"></span><span class="mord">+</span><span class="mord">0.785</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span><span class="mpunct">,</span><span class="mspace"> </span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord">151</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ/mol</span></span></span></span></span></span></p>
+<hr/>
+<h2 id="五能量学与化学计量">五、能量学与化学计量<a aria-hidden="true" tabindex="-1" href="#五能量学与化学计量" class="internal"></a></h2>
+<h3 id="1-电子为什么愿意往下走氧化还原电位">1. 电子为什么”愿意”往下走：氧化还原电位<a aria-hidden="true" tabindex="-1" href="#1-电子为什么愿意往下走氧化还原电位" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>半反应</th><th><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span> (V)</th></tr></thead><tbody><tr><td>NAD⁺ + 2e⁻ + H⁺ → NADH</td><td>−0.320</td></tr><tr><td>延胡索酸 + 2e⁻ + 2H⁺ → 琥珀酸</td><td>+0.031</td></tr><tr><td>Q + 2e⁻ + 2H⁺ → QH₂</td><td>+0.045</td></tr><tr><td>cyt c (Fe³⁺) + e⁻ → cyt c (Fe²⁺)</td><td>+0.254</td></tr><tr><td>½O₂ + 2e⁻ + 2H⁺ → H₂O</td><td>+0.816</td></tr></tbody></table>
+<ul>
+<li>电子从低电位流向高电位；每一步的 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></span> 决定该步能泵出几个 H⁺。</li>
+<li>NADH → Q：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">0.365</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span></span></span></span></span>，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal">G</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord">70</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ/mol</span></span></span></span></span></span> → 泵 4 H⁺；</li>
+<li>QH₂ → cyt c：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">0.21</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span></span></span></span></span> → 泵 4 H⁺；</li>
+<li>cyt c → O₂：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Δ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">0.56</span><span class="mspace"> </span><span class="mord mathrm" style="margin-right:0.01389em;">V</span></span></span></span></span> → 泵 2 H⁺。</li>
+</ul>
+<h3 id="2-为什么-atp-产率是-25--15">2. 为什么 ATP 产率是 2.5 / 1.5<a aria-hidden="true" tabindex="-1" href="#2-为什么-atp-产率是-25--15" class="internal"></a></h3>
+<ul>
+<li>NADH：10 H⁺ → 10 / 4 ≈ <strong>2.5 ATP</strong>；</li>
+<li>FADH₂（经 II）：6 H⁺ → 6 / 4 ≈ <strong>1.5 ATP</strong>；</li>
+<li>旧教材的 3 / 2 来自不同的 H⁺/ATP 假设（如 c10、转运耗能估计不同）；现代哺乳动物数据多用 2.5 / 1.5。</li>
+</ul>
+<h3 id="3-穿梭系统决定胞质-nadh-值多少-atp">3. 穿梭系统决定”胞质 NADH 值多少 ATP”<a aria-hidden="true" tabindex="-1" href="#3-穿梭系统决定胞质-nadh-值多少-atp" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>穿梭系统</th><th>机制</th><th>折算</th></tr></thead><tbody><tr><td><strong>苹果酸-天冬氨酸穿梭</strong></td><td>胞质 NADH → 苹果酸 → 基质 NADH → 复合体 I</td><td>2.5 ATP</td></tr><tr><td><strong>甘油-3-磷酸穿梭</strong></td><td>胞质 NADH → 甘油-3-磷酸 → 线粒体 FADH₂ → Q</td><td>1.5 ATP</td></tr></tbody></table>
+<ul>
+<li>肝、心等以苹果酸-天冬氨酸为主；骨骼肌、脂肪组织更多用甘油-3-磷酸穿梭。</li>
+<li>因此”1 分子葡萄糖产多少 ATP”依组织而异：糖酵解 2 ATP + 2 NADH + TCA 2 GTP + 10 NADH + 2 FADH₂ → 约 <strong>30–32 ATP</strong>（经典值）。</li>
+</ul>
+<h3 id="4-能量账">4. 能量账<a aria-hidden="true" tabindex="-1" href="#4-能量账" class="internal"></a></h3>
+<ul>
+<li>NADH 氧化释放约 220 kJ/mol；2.5 ATP × 约 50 kJ/mol ≈ 125 kJ/mol → 效率约 <strong>55%</strong>。</li>
+<li>ATP 合成反应 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathnormal">G</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∘</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">+</span><span class="mord">30.5</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">kJ/mol</span></span></span></span></span></span>，细胞内实际约 +45～+55 kJ/mol；3 个 H⁺（约 60 kJ）刚好够用，因此反应<strong>接近平衡</strong>，酶容易反向运转。</li>
+<li>未捕获的能量以热散失；这也是棕色脂肪”解偶联产热”的物理基础。</li>
+</ul>
+<hr/>
+<h2 id="六调节">六、调节<a aria-hidden="true" tabindex="-1" href="#六调节" class="internal"></a></h2>
+<ul>
+<li><strong>ADP 是关键限速因素</strong>（呼吸控制）：ADP 增多 → ATP 合酶加速 → 质子回流加快 → 呼吸链加速；ADP 耗尽则慢下来。</li>
+<li><strong>Chance 状态</strong>（氧电极经典描述）：
+<ul>
+<li>State 3：底物 + O₂ + ADP 充足，耗氧快，ATP 合成；</li>
+<li>State 4：ADP 耗尽，耗氧慢（仅维持质子泄漏）；</li>
+<li>State 2：缺底物；State 5：缺氧。</li>
+<li><strong>呼吸控制比（RCR）</strong> = State 3 / State 4，反映线粒体”健康度”。</li>
+</ul>
+</li>
+<li><strong>O₂ 与底物供应</strong>：缺氧时 OXPHOS 下降，HIF-1α 稳定、糖酵解上调。</li>
+<li><strong>质子泄漏与解偶联</strong>：基础代谢中有相当比例质子经泄漏回流；棕色脂肪的 <strong>UCP1</strong> 受去甲肾上腺素/寒冷激活，把 Δp 直接转为热。</li>
+<li><strong>其他</strong>：Ca²⁺、甲状腺激素、超复合体（I+III₂+IV 的”呼吸体”）与心磷脂（cardiolipin）影响效率与稳定性；运动/饥饿改变底物偏好。</li>
+</ul>
+<hr/>
+<h2 id="七抑制剂与解偶联剂实验与药理的核心工具">七、抑制剂与解偶联剂（实验与药理的核心工具）<a aria-hidden="true" tabindex="-1" href="#七抑制剂与解偶联剂实验与药理的核心工具" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>试剂</th><th>靶点</th><th>效果</th></tr></thead><tbody><tr><td><strong>鱼藤酮</strong>、piericidin A</td><td>复合体 I</td><td>阻断 NADH → Q；呼吸下降</td></tr><tr><td><strong>丙二酸</strong>、TTFA</td><td>复合体 II</td><td>阻断琥珀酸 → Q</td></tr><tr><td><strong>抗霉素 A</strong></td><td>复合体 III <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3175em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td><td>阻断 Q 循环，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 半醌积累 → ROS</td></tr><tr><td><strong>myxothiazol / stigmatellin</strong></td><td>复合体 III <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td><td>阻断 QH₂ 氧化</td></tr><tr><td><strong>阿托伐醌</strong></td><td>复合体 III <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></td><td>抗疟药/抗弓形虫</td></tr><tr><td><strong>氰化物、CO、叠氮、H₂S</strong></td><td>复合体 IV（heme a₃–<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">B</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>）</td><td>阻断 O₂ 还原，致死性</td></tr><tr><td><strong>寡霉素</strong></td><td>ATP 合酶 Fo</td><td>阻断 H⁺ 回流；呼吸因”背压”而减慢</td></tr><tr><td><strong>DCCD</strong></td><td>ATP 合酶 c-Glu</td><td>共价锁死旋转</td></tr><tr><td><strong>DNP、FCCP</strong></td><td>内膜（质子载体）</td><td>解偶联：Δp 消失，耗氧<strong>加快</strong>、ATP 不合成</td></tr><tr><td><strong>缬氨霉素</strong></td><td>K⁺ 载体</td><td>只消 Δψ（K⁺ 内流中和内负电荷）</td></tr><tr><td><strong>尼日霉素</strong></td><td>H⁺/K⁺ 反向交换</td><td>只消 ΔpH</td></tr><tr><td><strong>二甲双胍</strong></td><td>复合体 I（部分抑制）</td><td>降低肝糖异生；临床抗高血糖</td></tr><tr><td><strong>bedaquiline</strong></td><td>分枝杆菌 ATP 合酶</td><td>抗结核（不针对人酶）</td></tr></tbody></table>
+<blockquote>
+<p>区分”抑制”与”解偶联”：抑制剂让耗氧下降；解偶联剂让耗氧上升但 ATP 产率下降（P/O 趋近 0）。</p>
+</blockquote>
+<hr/>
+<h2 id="八病理与药理">八、病理与药理<a aria-hidden="true" tabindex="-1" href="#八病理与药理" class="internal"></a></h2>
+<ul>
+<li><strong>mtDNA 突变（母系遗传、异质性 + 阈值效应）</strong>：
+<ul>
+<li><strong>LHON</strong>：ND1/ND4/ND6（复合体 I），无痛性中心视力丧失，男性多见；</li>
+<li><strong>MELAS</strong>：m.3243A>G（MT-TL1，tRNA-Leu），乳酸酸中毒、卒中样发作；</li>
+<li><strong>MERRF</strong>：m.8344A>G（MT-TK），肌阵挛癫痫、破碎红纤维；</li>
+<li><strong>NARP / Leigh</strong>：MT-ATP6 m.8993T>G（L156R）或 T>C（L156P），ATP 合酶缺陷。</li>
+</ul>
+</li>
+<li><strong>核基因/装配因子</strong>：复合体 I 亚基（NDUFS1、NDUFS4 等）突变 → Leigh 样表型；复合体 IV 装配因子 <strong>SURF1</strong> 突变 → Leigh；复合体 III 装配因子 BCS1L → GRACILE/BJORN 综合征。</li>
+<li><strong>复合体 II</strong>：SDHB/C/D 突变 → 嗜铬细胞瘤/副神经节瘤（“代谢酶变成抑癌基因”的经典例子）。</li>
+<li><strong>ROS 与损伤</strong>：复合体 I、III 产生超氧化物；缺血-再灌注时电子传递与 O₂ 供给不匹配，ROS 爆发；MnSOD/谷胱甘肽系统负责清除。</li>
+<li><strong>药物/毒物</strong>：氰化物（工业/火灾烟雾）、CO（血红蛋白 + 复合体 IV）、二甲双胍（I）、阿托伐醌（III）、bedaquiline（细菌 V）；历史上 DNP 曾被用作减肥药，因高热致死被禁用。</li>
+<li><strong>棕色脂肪</strong>：UCP1 解偶联，寒冷/去甲肾上腺素激活，产热而非产 ATP。</li>
+</ul>
+<hr/>
+<h2 id="九常见误区">九、常见误区<a aria-hidden="true" tabindex="-1" href="#九常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“O₂ 直接氧化 NADH”</strong>：电子经黄素、Fe-S、Q、cyt c 逐级传递，O₂ 只在复合体 IV 接收电子。</li>
+<li><strong>“复合体 II 也泵质子”</strong>：不泵；这是 FADH₂ 产 ATP 较少的根本原因。</li>
+<li><strong>“Q 只传电子”</strong>：Q 同时结合/释放 H⁺（2e⁻/2H⁺），Q 循环是泵质子的关键。</li>
+<li><strong>“P/O 是固定整数”</strong>：取决于 c 环数目、转运耗能、质子泄漏、穿梭系统与组织。</li>
+<li><strong>“电子传递的能量直接用于 ATP 成键”</strong>：能量先存为 Δp；ATP 合酶再”花”质子梯度。</li>
+<li><strong>“解偶联剂抑制呼吸”</strong>：相反，它让呼吸加快（P/O↓）。</li>
+<li><strong>“寡霉素直接阻断呼吸链”</strong>：它阻断 ATP 合酶，呼吸因产物/质子”背压”而减慢；去掉 ADP 也能造成类似效果。</li>
+<li><strong>“ATP 合酶只在线粒体”</strong>：细菌/叶绿体有同源酶；V 型 ATP 酶（溶酶体）方向相反，抑制剂不同（巴弗洛霉素）。</li>
+<li><strong>“Δp 主要是 pH 差”</strong>：线粒体以 Δψ 为主（约 3/4）；叶绿体才以 ΔpH 为主。</li>
+<li><strong>“氧化磷酸化 = 呼吸链”</strong>：OXPHOS 包含电子传递 <strong>和</strong> 磷酸化两步；只测耗氧不能证明 ATP 合成。</li>
+</ol>
+<hr/>
+<h2 id="十自测">十、自测<a aria-hidden="true" tabindex="-1" href="#十自测" class="internal"></a></h2>
+<ol>
+<li>写出 NADH 经呼吸链到 O₂ 的四步电子路径，并标出每步泵出的 H⁺ 数。</li>
+<li>为什么琥珀酸氧化只产约 1.5 ATP，而 NADH 产约 2.5？从复合体功能和 H⁺ 账本两方面解释。</li>
+<li>Q 循环中”4 个 H⁺ 来自哪里”？抗霉素 A 与 myxothiazol 的作用位点有何不同？</li>
+<li>用 Jagendorf 实验和 Racker 重建实验说明”化学渗透”的核心证据。</li>
+<li>解释：为什么解偶联剂使耗氧上升、P/O 下降？为什么寡霉素使耗氧下降？</li>
+<li>一患者线粒体复合体 IV 的 SURF1 缺失，可能出现什么表型？为什么 mtDNA 突变常呈”阈值效应”？</li>
+</ol>
+<hr/>
+<h2 id="相关">相关<a aria-hidden="true" tabindex="-1" href="#相关" class="internal"></a></h2>
+<ul>
+<li><a href="../../细胞生物学/知识点/ATP合酶" class="internal">ATP合酶</a></li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

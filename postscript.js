@@ -1627,6 +1627,7 @@ async function render3D(mol, host) {
   const w = window;
   if (!w.$3Dmol) {
     const ok = await loadScript([
+      "https://cdn.jsdelivr.net/npm/3dmol@2.0.1/build/3Dmol-min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/3Dmol/2.0.1/3Dmol-min.js",
       "https://3Dmol.org/build/3Dmol-min.js"
     ]);
@@ -1654,8 +1655,8 @@ async function render3D(mol, host) {
     setZoomAvailable(true);
   };
   if (mol.pdb.startsWith("AF-")) {
-    const url = `https://alphafold.ebi.ac.uk/files/${mol.pdb}-F1-model_v4.pdb`;
-    fetch(url).then((res) => {
+    const url2 = `https://alphafold.ebi.ac.uk/files/${mol.pdb}-F1-model_v4.pdb`;
+    fetch(url2).then((res) => {
       if (!res.ok)
         throw new Error(`HTTP ${res.status}`);
       return res.text();
@@ -1668,7 +1669,18 @@ async function render3D(mol, host) {
     });
     return;
   }
-  D.download(`pdb:${mol.pdb}`, viewer, { multimodel: false }, styleAndZoom);
+  const url = `https://files.rcsb.org/download/${mol.pdb}.pdb`;
+  fetch(url).then((res) => {
+    if (!res.ok)
+      throw new Error(`HTTP ${res.status}`);
+    return res.text();
+  }).then((text) => {
+    viewer.addModel(text, "pdb");
+    styleAndZoom();
+  }).catch((err) => {
+    console.warn("[molecule] PDB \u52A0\u8F7D\u5931\u8D25", mol.pdb, err);
+    setHint(`PDB \u7ED3\u6784 ${mol.pdb} \u52A0\u8F7D\u5931\u8D25\uFF1A${err instanceof Error ? err.message : String(err)}`);
+  });
 }
 function renderMeta(mol) {
   if (!metaEl)

@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html><head><title>减数分裂</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="减数分裂"/><meta property="og:description" content="减数分裂 相关笔记：有丝、Ca、染色体带 0. 一句话概括 减数分裂（meiosis）是一次 DNA 复制、两次连续分裂的特殊细胞周期：S 期把每条染色体复制成两条姐妹染色单体；减数第一次分裂（MI）分开同源染色体，减数第二次分裂（MII）分开姐妹染色单体，最终由一个 2n 细胞产生四个 n 的单倍体细胞。 它的两个核心任务是： 把染色体数减半（2n→n），使受精后能恢复二倍性； 制造遗传多样性：通过同源染色体的自由组合与同源重组（交叉互换），让每个配子的染色体组合都不同。 与有丝分裂最本质的差别不在”分两次”，而在于 MI 有一套有丝分裂没有的机器：同源染色体配对、联会复合体、程序性 DNA 双链断裂、交叉互换，以及”着丝粒黏连不被切开”的两步释放机制。 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="减数分裂 相关笔记：有丝、Ca、染色体带 0. 一句话概括 减数分裂（meiosis）是一次 DNA 复制、两次连续分裂的特殊细胞周期：S 期把每条染色体复制成两条姐妹染色单体；减数第一次分裂（MI）分开同源染色体，减数第二次分裂（MII）分开姐妹染色单体，最终由一个 2n 细胞产生四个 n 的单倍体细胞。 它的两个核心任务是： 把染色体数减半（2n→n），使受精后能恢复二倍性； 制造遗传多样性：通过同源染色体的自由组合与同源重组（交叉互换），让每个配子的染色体组合都不同。 与有丝分裂最本质的差别不在”分两次”，而在于 MI 有一套有丝分裂没有的机器：同源染色体配对、联会复合体、程序性 DNA 双链断裂、交叉互换，以及”着丝粒黏连不被切开”的两步释放机制。 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/减数"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#减数分裂" data-for="减数分裂">减数分裂</a></li><li class="depth-1"><a href="#0-一句话概括" data-for="0-一句话概括">0. 一句话概括</a></li><li class="depth-1"><a href="#1-总体路线与数字账" data-for="1-总体路线与数字账">1. 总体路线与数字账</a></li><li class="depth-2"><a href="#11-染色体数与-dna-量的变化" data-for="11-染色体数与-dna-量的变化">1.1 染色体数与 DNA 量的变化</a></li><li class="depth-2"><a href="#12-时间尺度" data-for="12-时间尺度">1.2 时间尺度</a></li><li class="depth-1"><a href="#2-关键术语" data-for="2-关键术语">2. 关键术语</a></li><li class="depth-1"><a href="#3-前期-i五亚期" data-for="3-前期-i五亚期">3. 前期 I：五亚期</a></li><li class="depth-2"><a href="#31-细线期leptonema" data-for="31-细线期leptonema">3.1 细线期（leptonema）</a></li><li class="depth-2"><a href="#32-偶线期zygonema" data-for="32-偶线期zygonema">3.2 偶线期（zygonema）</a></li><li class="depth-2"><a href="#33-粗线期pachynema" data-for="33-粗线期pachynema">3.3 粗线期（pachynema）</a></li><li class="depth-2"><a href="#34-双线期diplonema" data-for="34-双线期diplonema">3.4 双线期（diplonema）</a></li><li class="depth-2"><a href="#35-终变期diakinesis" data-for="35-终变期diakinesis">3.5 终变期（diakinesis）</a></li><li class="depth-2"><a href="#36-重组的分子过程" data-for="36-重组的分子过程">3.6 重组的分子过程</a></li><li class="depth-2"><a href="#37-交叉干涉与必有一个交叉" data-for="37-交叉干涉与必有一个交叉">3.7 交叉干涉与&quot;必有一个交叉&quot;</a></li><li class="depth-1"><a href="#4-中期-i共定向与张力" data-for="4-中期-i共定向与张力">4. 中期 I：共定向与张力</a></li><li class="depth-1"><a href="#5-后期-i-与末期-i两步释放的第一步" data-for="5-后期-i-与末期-i两步释放的第一步">5. 后期 I 与末期 I：两步释放的第一步</a></li><li class="depth-2"><a href="#51-着丝粒黏连为什么不被切开" data-for="51-着丝粒黏连为什么不被切开">5.1 着丝粒黏连为什么不被切开</a></li><li class="depth-2"><a href="#52-后期-i-与末期-i-的事件" data-for="52-后期-i-与末期-i-的事件">5.2 后期 I 与末期 I 的事件</a></li><li class="depth-1"><a href="#6-减数第二次分裂mii" data-for="6-减数第二次分裂mii">6. 减数第二次分裂（MII）</a></li><li class="depth-1"><a href="#7-参与的分子清单" data-for="7-参与的分子清单">7. 参与的分子清单</a></li><li class="depth-1"><a href="#8-遗传学后果" data-for="8-遗传学后果">8. 遗传学后果</a></li><li class="depth-2"><a href="#81-多样性从哪来" data-for="81-多样性从哪来">8.1 多样性从哪来</a></li><li class="depth-2"><a href="#82-连锁与图距" data-for="82-连锁与图距">8.2 连锁与图距</a></li><li class="depth-2"><a href="#83-非整倍体" data-for="83-非整倍体">8.3 非整倍体</a></li><li class="depth-2"><a href="#84-交叉异常与不育" data-for="84-交叉异常与不育">8.4 交叉异常与不育</a></li><li class="depth-1"><a href="#9-与有丝分裂的系统对照" data-for="9-与有丝分裂的系统对照">9. 与有丝分裂的系统对照</a></li><li class="depth-1"><a href="#10-特殊情形" data-for="10-特殊情形">10. 特殊情形</a></li><li class="depth-1"><a href="#11-研究方法与临床相关" data-for="11-研究方法与临床相关">11. 研究方法与临床相关</a></li><li class="depth-1"><a href="#12-常见误区" data-for="12-常见误区">12. 常见误区</a></li><li class="depth-1"><a href="#13-一页速记" data-for="13-一页速记">13. 一页速记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">减数分裂</h1><p class="content-meta">Nov 25, 2026, 29 min read</p></div></div><article class="popover-hint"><h1 id="减数分裂">减数分裂<a aria-hidden="true" tabindex="-1" href="#减数分裂" class="internal"></a></h1>
+<blockquote>
+<p>相关笔记：<a href="../../细胞生物学/知识点/有丝" class="internal">有丝</a>、<a href="../../细胞生物学/知识点/Ca" class="internal">Ca</a>、<a href="../../细胞生物学/知识点/染色体带" class="internal">染色体带</a></p>
+</blockquote>
+<h2 id="0-一句话概括">0. 一句话概括<a aria-hidden="true" tabindex="-1" href="#0-一句话概括" class="internal"></a></h2>
+<p>减数分裂（meiosis）是<strong>一次 DNA 复制、两次连续分裂</strong>的特殊细胞周期：S 期把每条染色体复制成两条姐妹染色单体；减数第一次分裂（MI）分开<strong>同源染色体</strong>，减数第二次分裂（MII）分开<strong>姐妹染色单体</strong>，最终由一个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span></span></span></span></span> 细胞产生四个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 的单倍体细胞。</p>
+<p>它的两个核心任务是：</p>
+<ul>
+<li><strong>把染色体数减半</strong>（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>），使受精后能恢复二倍性；</li>
+<li><strong>制造遗传多样性</strong>：通过同源染色体的自由组合与同源重组（交叉互换），让每个配子的染色体组合都不同。</li>
+</ul>
+<p>与有丝分裂最本质的差别不在”分两次”，而在于 MI 有一套有丝分裂没有的机器：<strong>同源染色体配对、联会复合体、程序性 DNA 双链断裂、交叉互换，以及”着丝粒黏连不被切开”的两步释放机制</strong>。</p>
+<hr/>
+<h2 id="1-总体路线与数字账">1. 总体路线与数字账<a aria-hidden="true" tabindex="-1" href="#1-总体路线与数字账" class="internal"></a></h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="620" viewBox="0 0 1220 620">
+<rect width="1220" height="620" fill="#ffffff"></rect>
+<text x="620" y="40" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="bold" fill="#1F2937">减数分裂：一次复制、两次分裂，2n → 4 个 n</text>
+<text x="110" y="86" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">减数分裂前（S 期已复制）</text>
+<text x="360" y="86" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">MI 之后：2 个细胞</text>
+<text x="620" y="86" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" fill="#374151">MII 之后：4 个单倍体细胞</text>
+<circle cx="110" cy="300" r="70" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="82.2" y1="278.0" x2="82.2" y2="322.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="85.8" y1="278.0" x2="85.8" y2="322.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="84" cy="296.5" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="94.2" y1="278.0" x2="94.2" y2="322.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="97.8" y1="278.0" x2="97.8" y2="322.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="96" cy="296.5" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="122.2" y1="278.0" x2="122.2" y2="322.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="125.8" y1="278.0" x2="125.8" y2="322.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="124" cy="296.5" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="134.2" y1="278.0" x2="134.2" y2="322.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="137.8" y1="278.0" x2="137.8" y2="322.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="136" cy="296.5" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="110" y="360" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#4B5563">2n = 4，4C</text>
+<circle cx="360" cy="195" r="58" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="343.2" y1="170.0" x2="343.2" y2="216.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="343.2" y1="170.0" x2="343.2" y2="181.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="346.8" y1="170.0" x2="346.8" y2="216.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="346.8" y1="170.0" x2="346.8" y2="181.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="345" cy="189.3" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="373.2" y1="170.0" x2="373.2" y2="216.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="373.2" y1="170.0" x2="373.2" y2="181.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="376.8" y1="170.0" x2="376.8" y2="216.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="376.8" y1="170.0" x2="376.8" y2="181.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="375" cy="189.3" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="360" y="262" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#4B5563">n = 2，2C</text>
+<circle cx="360" cy="405" r="58" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="343.2" y1="380.0" x2="343.2" y2="426.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="343.2" y1="380.0" x2="343.2" y2="391.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="346.8" y1="380.0" x2="346.8" y2="426.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="346.8" y1="380.0" x2="346.8" y2="391.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="345" cy="399.3" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="373.2" y1="380.0" x2="373.2" y2="426.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="373.2" y1="380.0" x2="373.2" y2="391.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="376.8" y1="380.0" x2="376.8" y2="426.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="376.8" y1="380.0" x2="376.8" y2="391.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="375" cy="399.3" rx="3.6" ry="1.7" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="360" y="472" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#4B5563">n = 2，2C</text>
+<line x1="180.0" y1="288.0" x2="296.0" y2="200.0" stroke="#6B7280" stroke-width="1.8" marker-end="url(#ar)"></line>
+<line x1="180.0" y1="312.0" x2="296.0" y2="400.0" stroke="#6B7280" stroke-width="1.8" marker-end="url(#ar)"></line>
+<line x1="418.0" y1="182.0" x2="568.0" y2="136.0" stroke="#6B7280" stroke-width="1.8" marker-end="url(#ar)"></line>
+<line x1="418.0" y1="208.0" x2="568.0" y2="246.0" stroke="#6B7280" stroke-width="1.8" marker-end="url(#ar)"></line>
+<line x1="418.0" y1="392.0" x2="568.0" y2="374.0" stroke="#6B7280" stroke-width="1.8" marker-end="url(#ar)"></line>
+<line x1="418.0" y1="418.0" x2="568.0" y2="486.0" stroke="#6B7280" stroke-width="1.8" marker-end="url(#ar)"></line>
+<text x="240" y="276" font-family="Noto Sans CJK SC, sans-serif" font-size="13" font-weight="bold" fill="#1F2937">MI</text>
+<text x="240" y="294" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">同源染色体分开</text>
+<text x="492" y="330" font-family="Noto Sans CJK SC, sans-serif" font-size="13" font-weight="bold" fill="#1F2937">MII</text>
+<text x="492" y="348" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">姐妹染色单体分开</text>
+<circle cx="620" cy="130" r="46" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="606.0" y1="108.0" x2="606.0" y2="152.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="606.0" y1="108.0" x2="606.0" y2="119.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="606" cy="126.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="622.0" y1="108.0" x2="622.0" y2="152.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="622.0" y1="108.0" x2="622.0" y2="119.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="622" cy="126.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="678" y="134" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">n = 2，1C</text>
+<circle cx="620" cy="250" r="46" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="606.0" y1="228.0" x2="606.0" y2="272.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="606.0" y1="228.0" x2="606.0" y2="239.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="606" cy="246.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="622.0" y1="228.0" x2="622.0" y2="272.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="622.0" y1="228.0" x2="622.0" y2="239.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="622" cy="246.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="678" y="254" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">n = 2，1C</text>
+<circle cx="620" cy="370" r="46" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="606.0" y1="348.0" x2="606.0" y2="392.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="606.0" y1="348.0" x2="606.0" y2="359.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="606" cy="366.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="622.0" y1="348.0" x2="622.0" y2="392.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="622.0" y1="348.0" x2="622.0" y2="359.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="622" cy="366.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="678" y="374" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">n = 2，1C</text>
+<circle cx="620" cy="490" r="46" fill="#F8FBFF" stroke="#9DB4CC" stroke-width="1.5"></circle>
+<line x1="606.0" y1="468.0" x2="606.0" y2="512.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="606.0" y1="468.0" x2="606.0" y2="479.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="606" cy="486.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<line x1="622.0" y1="468.0" x2="622.0" y2="512.0" stroke="#C0392B" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<line x1="622.0" y1="468.0" x2="622.0" y2="479.0" stroke="#2F6FBF" stroke-width="3.2" opacity="1.0" stroke-linecap="round"></line>
+<ellipse cx="622" cy="486.5" rx="2.4" ry="1.5" fill="#1B2631" opacity="0.85"></ellipse>
+<text x="678" y="494" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">n = 2，1C</text>
+<rect x="800" y="96" width="390" height="452" rx="10" fill="#FFFDF8" stroke="#E5D6B8" stroke-width="1.3"></rect>
+<text x="995" y="126" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="14" font-weight="bold" fill="#4B3A24">粗线期的交叉互换（放大）</text>
+<line x1="974.0" y1="176.0" x2="974.0" y2="376.0" stroke="#2F6FBF" stroke-width="4.6" opacity="1.0" stroke-linecap="round"></line>
+<line x1="1016.0" y1="176.0" x2="1016.0" y2="376.0" stroke="#C0392B" stroke-width="4.6" opacity="1.0" stroke-linecap="round"></line>
+<path d="M 986 376 L 986 282 L 1004 230 L 1004 176" fill="none" stroke="#2F6FBF" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round"></path>
+<path d="M 1004 376 L 1004 282 L 986 230 L 986 176" fill="none" stroke="#C0392B" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round"></path>
+<ellipse cx="980" cy="316.0" rx="12" ry="2.8" fill="#1B2631" opacity="0.9"></ellipse>
+<ellipse cx="1010" cy="316.0" rx="12" ry="2.8" fill="#1B2631" opacity="0.9"></ellipse>
+<circle cx="995.0" cy="256" r="27" fill="none" stroke="#B5651D" stroke-width="1.1" stroke-dasharray="3 3" opacity="0.55"></circle>
+<line x1="986.0" y1="161.0" x2="986.0" y2="174.0" stroke="#B5651D" stroke-width="1.0" opacity="0.85" stroke-linecap="round"></line>
+<circle cx="986" cy="150" r="8.5" fill="#B5651D"></circle>
+<text x="986" y="154" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">3</text>
+<line x1="963.0" y1="316.0" x2="966.0" y2="316.0" stroke="#B5651D" stroke-width="1.0" opacity="0.85" stroke-linecap="round"></line>
+<circle cx="954" cy="316.0" r="8.5" fill="#B5651D"></circle>
+<text x="954" y="320.0" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">2</text>
+<line x1="1034.0" y1="256.0" x2="1023.0" y2="256.0" stroke="#B5651D" stroke-width="1.0" opacity="0.85" stroke-linecap="round"></line>
+<circle cx="1042" cy="256" r="8.5" fill="#B5651D"></circle>
+<text x="1042" y="260" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">1</text>
+<text x="995" y="402" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6B7280">蓝＝母源　红＝父源</text>
+<text x="820" y="420" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#4B3A24">① 交叉（chiasma）：非姐妹染色单体交换的位置。</text>
+<text x="820" y="442" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#4B3A24">② 着丝粒：MI 时同源染色体的着丝粒分向两极，</text>
+<text x="843" y="464" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#4B3A24">姐妹动粒保持同向（单极定向），故不分开。</text>
+<text x="820" y="486" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#4B3A24">③ 远端片段互换：染色单体呈“马赛克”，</text>
+<text x="843" y="508" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#4B3A24">是子代遗传组合多样性的直接来源。</text>
+<text x="40" y="576" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">过程要点：S 期复制一次 → 前期 I 配对并交叉互换 → MI 同源染色体分离（着丝粒不分开）→ 无 S 期 → MII 姐妹染色单体分离。</text>
+<text x="40" y="598" font-family="Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6B7280">人类：每个减数分裂细胞约产生数百个 DNA 双链断裂，最终只保留约 50 个交叉（可用 MLH1 焦点计数）。</text>
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"></path></marker></defs></svg>
+<h3 id="11-染色体数与-dna-量的变化">1.1 染色体数与 DNA 量的变化<a aria-hidden="true" tabindex="-1" href="#11-染色体数与-dna-量的变化" class="internal"></a></h3>
+<p>以人为例（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">46</span></span></span></span></span>）：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>染色体数</th><th>DNA 量</th><th>每条染色体的染色单体数</th><th>备注</th></tr></thead><tbody><tr><td>G1 期精原细胞／卵原细胞</td><td>46</td><td>2C</td><td>1</td><td>复制前</td></tr><tr><td>减数分裂前 S 期后</td><td>46</td><td>4C</td><td>2</td><td>一次复制</td></tr><tr><td>前期 I 至中期 I</td><td>46</td><td>4C</td><td>2</td><td>同源染色体配对成 23 个二价体</td></tr><tr><td>末期 I 后（次级精母细胞）</td><td>23</td><td>2C</td><td>2</td><td>同源染色体已分开，着丝粒未分</td></tr><tr><td>中期 II</td><td>23</td><td>2C</td><td>2</td><td>无 S 期，直接进入</td></tr><tr><td>末期 II 后（精细胞）</td><td>23</td><td>1C</td><td>1</td><td>姐妹染色单体分开</td></tr></tbody></table>
+<p>三个容易混的点：</p>
+<ul>
+<li><strong><span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 指染色体数，<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span> 指 DNA 量</strong>。MI 后染色体数已减半（<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>），但 DNA 仍是 2C，因为每条染色体还带着两条染色单体。</li>
+<li>减数分裂<strong>只复制一次</strong>（减数分裂前 S 期），此后 MI 与 MII 之间<strong>没有 S 期</strong>。这是”两次分裂只复制一次”的字面含义。</li>
+<li>人类 MI 前期 I 的粗线期，23 个二价体的 DNA 总长约 6 pg（二倍体细胞核约 6.6 pg），全部塞进一个核里，靠的是高度有序的染色体轴与环状染色质结构。</li>
+</ul>
+<h3 id="12-时间尺度">1.2 时间尺度<a aria-hidden="true" tabindex="-1" href="#12-时间尺度" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>对象</th><th>时间特征</th></tr></thead><tbody><tr><td>人精子发生</td><td>从精原细胞到成熟精子约 74 天，其中减数分裂段约占 2–3 周</td></tr><tr><td>人卵母细胞</td><td>胎儿期进入双线期后<strong>停滞数十年</strong>，排卵前才完成 MI；MII 停在中期 II 等待受精</td></tr><tr><td>酵母</td><td>整个减数分裂数小时可完成</td></tr><tr><td>植物（如百合）</td><td>减数分裂同步性极好，是细胞学经典材料</td></tr></tbody></table>
+<blockquote>
+<p>卵母细胞的长期停滞是理解”母亲年龄效应”的钥匙：黏连蛋白（cohesin）在胎儿期一次性装好，此后不再更新，一放就是几十年。</p>
+</blockquote>
+<hr/>
+<h2 id="2-关键术语">2. 关键术语<a aria-hidden="true" tabindex="-1" href="#2-关键术语" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>术语</th><th>英文</th><th>含义</th></tr></thead><tbody><tr><td>同源染色体</td><td>homologous chromosomes</td><td>一对来源不同（父源/母源）、大小与基因座位基本相同的染色体</td></tr><tr><td>姐妹染色单体</td><td>sister chromatids</td><td>S 期复制产生的两条完全相同的拷贝，由 cohesin 黏在一起</td></tr><tr><td>非姐妹染色单体</td><td>non-sister chromatids</td><td>同一二价体中，来自不同同源染色体的染色单体</td></tr><tr><td>联会</td><td>synapsis</td><td>同源染色体沿全长紧密配对，中间形成联会复合体</td></tr><tr><td>联会复合体</td><td>synaptonemal complex, SC</td><td>蛋白质拉链结构：两条侧元件 + 中央元件 + 横向纤维</td></tr><tr><td>二价体</td><td>bivalent</td><td>配对后的一对同源染色体（含 4 条染色单体）</td></tr><tr><td>四分体</td><td>tetrad</td><td>与二价体同义，强调”4 条染色单体”</td></tr><tr><td>交叉</td><td>chiasma（复数 chiasmata）</td><td>交叉互换在显微镜下的形态学表现，是 MI 时同源染色体的物理连接点</td></tr><tr><td>交叉互换</td><td>crossing over</td><td>非姐妹染色单体之间同源重组、交换片段的过程</td></tr><tr><td>单极定向</td><td>mono-orientation</td><td>MI 时一对姐妹动粒朝向同一极，作为一个功能单位</td></tr><tr><td>共定向</td><td>co-orientation</td><td>两个同源染色体的动粒朝向相反两极</td></tr><tr><td>端化</td><td>terminalization</td><td>双线期到终变期，交叉沿染色体向端部移动</td></tr><tr><td>网期停滞</td><td>dictyate arrest</td><td>卵母细胞在双线期长期停留的状态</td></tr></tbody></table>
+<blockquote>
+<p>记住一句：<strong>交叉（chiasma）是”看得见的连接”，交叉互换（crossing over）是”发生在分子层面的事件”</strong>。前者是后者的形态学结果。</p>
+</blockquote>
+<hr/>
+<h2 id="3-前期-i五亚期">3. 前期 I：五亚期<a aria-hidden="true" tabindex="-1" href="#3-前期-i五亚期" class="internal"></a></h2>
+<p>前期 I 是整个减数分裂最长、最复杂的阶段，按染色体形态与联会状态分为五期。</p>
+<h3 id="31-细线期leptonema">3.1 细线期（leptonema）<a aria-hidden="true" tabindex="-1" href="#31-细线期leptonema" class="internal"></a></h3>
+<ul>
+<li>染色体开始螺旋化，光镜下呈细长线状，此时<strong>已能看出每条染色体由两条姐妹染色单体组成</strong>（但常贴合在一起，不易分辨）。</li>
+<li>同源染色体尚未配对，随机分布在核内。</li>
+<li>端粒开始通过 LINC 复合体（SUN-KASH）附着到核膜内表面。</li>
+<li>重组程序启动：<strong>SPO11 在此期前后催化程序性 DNA 双链断裂（DSB）</strong>。</li>
+</ul>
+<h3 id="32-偶线期zygonema">3.2 偶线期（zygonema）<a aria-hidden="true" tabindex="-1" href="#32-偶线期zygonema" class="internal"></a></h3>
+<ul>
+<li>同源染色体开始<strong>配对（synapsis）</strong>，联会复合体（SC）在两个同源染色体之间组装。</li>
+<li>端粒在核膜上聚集，形成<strong>端粒花束（telomere bouquet）</strong>，这一构象被认为有助于同源染色体在三维空间中找到彼此。</li>
+<li>配对并非从一点拉链到底：常有多个起始位点，随后向两侧延伸，直到全长联会。</li>
+<li>联会依赖重组：小鼠中敲除 <em>Spo11</em> 后 DSB 消失，同源染色体无法完成联会，说明”断裂—修复”过程本身参与配对识别。</li>
+</ul>
+<h3 id="33-粗线期pachynema">3.3 粗线期（pachynema）<a aria-hidden="true" tabindex="-1" href="#33-粗线期pachynema" class="internal"></a></h3>
+<ul>
+<li>联会完成，形成 23 个<strong>二价体（四分体）</strong>；SC 全长可见，是细胞学上最容易识别的时期。</li>
+<li><strong>交叉互换在此期完成并成熟</strong>：重组中间体被解析为交叉（crossover）或非交叉（non-crossover）。</li>
+<li>交叉的分子标记是 <strong>MLH1/MLH3 焦点</strong>：每个焦点对应一个 I 型交叉，可在免疫荧光下计数——这是评估人类重组频率的标准方法。</li>
+<li>染色体轴上有大量环状染色质（chromatin loops）向外伸出，转录仍然活跃。</li>
+</ul>
+<h3 id="34-双线期diplonema">3.4 双线期（diplonema）<a aria-hidden="true" tabindex="-1" href="#34-双线期diplonema" class="internal"></a></h3>
+<ul>
+<li><strong>SC 解聚</strong>，同源染色体彼此分开，但仍在<strong>交叉点</strong>处相连——此时交叉第一次在光镜下清晰可见。</li>
+<li>交叉开始<strong>端化</strong>：交叉点沿染色体轴向端部滑动，形态从”中段相连”逐渐变成”端部相连”。</li>
+<li>卵母细胞在此期进入<strong>网期停滞（dictyate arrest）</strong>，可以停几年到几十年。</li>
+</ul>
+<h3 id="35-终变期diakinesis">3.5 终变期（diakinesis）<a aria-hidden="true" tabindex="-1" href="#35-终变期diakinesis" class="internal"></a></h3>
+<ul>
+<li>染色体高度凝缩，变得短粗，交叉集中到端部。</li>
+<li>核仁消失，核膜破裂（NEBD），纺锤体开始组装，二价体被纺锤体捕获。</li>
+<li>此期结束即进入中期 I。</li>
+</ul>
+<h3 id="36-重组的分子过程">3.6 重组的分子过程<a aria-hidden="true" tabindex="-1" href="#36-重组的分子过程" class="internal"></a></h3>
+<p>交叉互换不是”剪断再接上”这么简单，而是一套高度保守的同源重组程序：</p>
+<ol>
+<li><strong>切割</strong>：SPO11（拓扑异构酶 VI 样蛋白）以共价酪氨酰中间体方式切断 DNA，形成 DSB；每个细胞产生数百个 DSB。</li>
+<li><strong>切除</strong>：MRE11–RAD50–NBS1（MRN）与 EXO1 切除 5’ 端，产生 3’ 单链悬突。</li>
+<li><strong>核蛋白丝</strong>：RAD51 与 DMC1（减数分裂特异的 RecA 同源物）包裹单链，形成核蛋白丝，在 BRCA2 等辅助下完成同源搜索。</li>
+<li><strong>侵入与 D-loop</strong>：核蛋白丝侵入同源双链，形成 D-loop（置换环）。</li>
+<li><strong>双 Holliday 交叉</strong>：second-end capture 后形成双 Holliday 交叉（dHJ）。</li>
+<li><strong>解析</strong>：
+<ul>
+<li>由 <strong>MLH1–MLH3</strong> 解析 → <strong>I 型交叉</strong>（受交叉干涉调控，占多数）；</li>
+<li>由 <strong>MUS81–EME1–SLX4</strong> 解析 → <strong>II 型交叉</strong>（不受干涉）；</li>
+<li>经 SDSA（合成依赖链退火）途径 → <strong>非交叉</strong>产物，只造成局部基因转换。</li>
+</ul>
+</li>
+</ol>
+<h3 id="37-交叉干涉与必有一个交叉">3.7 交叉干涉与”必有一个交叉”<a aria-hidden="true" tabindex="-1" href="#37-交叉干涉与必有一个交叉" class="internal"></a></h3>
+<ul>
+<li><strong>交叉干涉（crossover interference）</strong>：一个交叉会抑制其附近再形成交叉，使交叉在染色体上分布得比随机（泊松）更均匀。表现为 MLH1 焦点间距大于随机预期。</li>
+<li><strong>必有一个交叉（obligate crossover）</strong>：每个二价体至少需要一个交叉，否则同源染色体在 MI 时没有物理连接，无法建立张力，极易发生不分离。</li>
+<li>人类每条染色体平均 1–2 个交叉，全基因组约 50–60 个（男性），女性总体重组率更高，但分布更集中于染色体中部；男性交叉更偏向端部。这些交叉位置本身会影响不分离风险。</li>
+<li>干涉的分子机制尚无定论，主流解释包括”计数/扩散”模型与染色体轴力学模型（黏连蛋白、condensin 参与），不宜当成已定论的知识点背。</li>
+</ul>
+<hr/>
+<h2 id="4-中期-i共定向与张力">4. 中期 I：共定向与张力<a aria-hidden="true" tabindex="-1" href="#4-中期-i共定向与张力" class="internal"></a></h2>
+<p>MI 的纺锤体装配方式与有丝分裂相似，但动粒的朝向规则完全不同。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>有丝分裂</th><th>减数第一次分裂</th></tr></thead><tbody><tr><td>姐妹动粒朝向</td><td>相反两极（双极定向）</td><td><strong>同一极</strong>（单极定向）</td></tr><tr><td>同源染色体动粒</td><td>无配对关系</td><td><strong>朝向相反两极</strong>（共定向）</td></tr><tr><td>张力来源</td><td>姐妹染色单体被拉向两侧</td><td><strong>交叉</strong>把同源染色体连在一起，形成张力</td></tr><tr><td>结果</td><td>姐妹染色单体分开</td><td>同源染色体分开</td></tr></tbody></table>
+<ul>
+<li>单极定向让一对姐妹动粒”合并”成一个功能单位，因此 MI 时每条染色体整体走向一极，着丝粒处的黏连不被切开。</li>
+<li>实现单极定向的关键因子包括 <strong>MEIKIN</strong>（哺乳动物）、Mo a1（裂殖酵母）等，它们与着丝粒 cohesin、动粒蛋白相互作用。</li>
+<li><strong>纺锤体装配检查点（SAC）</strong> 在 MI 同样工作：未建立正确张力的二价体会抑制 APC/C，阻止后期启动。但与有丝分裂相比，卵母细胞的 SAC 相对”宽松”，错误连接更容易漏过——这是卵母细胞非整倍体率高的原因之一。</li>
+<li>Aurora B/C 激酶纠正错误连接，但在 MI 中其作用方式与有丝分裂不同（同源染色体之间的连接不能被简单”纠正”为双极连接）。</li>
+</ul>
+<hr/>
+<h2 id="5-后期-i-与末期-i两步释放的第一步">5. 后期 I 与末期 I：两步释放的第一步<a aria-hidden="true" tabindex="-1" href="#5-后期-i-与末期-i两步释放的第一步" class="internal"></a></h2>
+<h3 id="51-着丝粒黏连为什么不被切开">5.1 着丝粒黏连为什么不被切开<a aria-hidden="true" tabindex="-1" href="#51-着丝粒黏连为什么不被切开" class="internal"></a></h3>
+<p>cohesin 环把姐妹染色单体捆在一起。MI 中，染色体<strong>臂部</strong>的 cohesin 被切开，<strong>着丝粒处</strong>的 cohesin 被保护，于是同源染色体分开、姐妹染色单体仍相连。</p>
+<p>分子逻辑：</p>
+<ol>
+<li>进入后期前，CDK1 与 Polo 样激酶磷酸化染色体臂上的黏连蛋白亚基 <strong>Rec8</strong>；磷酸化的 Rec8 成为分离酶（separase，ESPL1）的良好底物。</li>
+<li>着丝粒处的 Rec8 由 <strong>shugoshin（SGO1）–PP2A</strong> 复合体守护：PP2A 不断把 Rec8 去磷酸化，使其免于被 separase 切割。</li>
+<li>后期启动时，APC/C 降解 securin，释放 separase；separase 只切臂部 Rec8，着丝粒 Rec8 保留。</li>
+<li>结果：同源染色体分离，姐妹染色单体仍由着丝粒 cohesin 连接，直到 MII 才被切开。</li>
+</ol>
+<blockquote>
+<p>一句话：<strong>MI 切”手臂”，MII 切”腰”</strong>。这是减数分裂最核心的机械设计。</p>
+</blockquote>
+<h3 id="52-后期-i-与末期-i-的事件">5.2 后期 I 与末期 I 的事件<a aria-hidden="true" tabindex="-1" href="#52-后期-i-与末期-i-的事件" class="internal"></a></h3>
+<ul>
+<li>交叉解除，同源染色体分别移向两极；交叉点远端的片段已经完成了交换，因此每条染色单体的远端可以是”混合”的。</li>
+<li>染色体臂上 Rec8 被切后，臂部黏连消失，染色体形态从”X 形”变为”V 形”（着丝粒朝极）。</li>
+<li>末期 I：核膜重建、染色体部分去凝缩、胞质分裂。</li>
+<li><strong>关键点：两次分裂之间没有 S 期</strong>，DNA 不再复制。</li>
+</ul>
+<p>配子形成的数量差异：</p>
+<ul>
+<li>精子发生：一个初级精母细胞 → 2 个次级精母细胞 → 4 个精细胞，<strong>全部成为精子</strong>。</li>
+<li>卵子发生：一个初级卵母细胞 → 1 个次级卵母细胞 + 1 个第一极体 → 1 个卵子 + 1 个第二极体（第一极体也可再分）。胞质几乎全部留给卵子，极体退化。<strong>最终只有 1 个功能配子</strong>。</li>
+</ul>
+<hr/>
+<h2 id="6-减数第二次分裂mii">6. 减数第二次分裂（MII）<a aria-hidden="true" tabindex="-1" href="#6-减数第二次分裂mii" class="internal"></a></h2>
+<p>MII 在机制上”几乎就是一次有丝分裂”，只是染色体数是 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span>：</p>
+<ol>
+<li>染色体（每条仍含两条染色单体）排列在赤道板。</li>
+<li>姐妹动粒改为<strong>双极定向</strong>，分别朝向两极。</li>
+<li>SAC 监控连接，张力满足后 APC/C 激活。</li>
+<li>separase 切开<strong>着丝粒处</strong>的 Rec8（此时 SGO1–PP2A 已不再保护），姐妹染色单体分开。</li>
+<li>染色单体移向两极，核膜重建，胞质分裂，形成 4 个 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 的单倍体细胞。</li>
+</ol>
+<p>卵母细胞的 MII 停在中期 II，直到受精触发钙信号才完成；若未受精则细胞死亡。这也是为什么”卵子”严格来说是”次级卵母细胞在 MII 中期”。</p>
+<hr/>
+<h2 id="7-参与的分子清单">7. 参与的分子清单<a aria-hidden="true" tabindex="-1" href="#7-参与的分子清单" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类别</th><th>关键因子</th><th>功能</th></tr></thead><tbody><tr><td>DSB 生成</td><td>SPO11、PRDM9（决定重组热点位置）</td><td>程序性双链断裂；PRDM9 通过 H3K4me3/H3K36me3 标记热点</td></tr><tr><td>断裂处理</td><td>MRE11–RAD50–NBS1、EXO1、CTIP</td><td>切除 5’ 端，产生 3’ 单链</td></tr><tr><td>链交换</td><td>RAD51、DMC1、BRCA2、RAD51B/C/D</td><td>同源搜索与侵入</td></tr><tr><td>交叉解析</td><td>MLH1–MLH3（I 型）、MUS81–EME1–SLX4（II 型）</td><td>决定交叉 vs 非交叉</td></tr><tr><td>联会复合体</td><td>SYCP1（横向纤维）、SYCP2/SYCP3（侧元件）、SYCE1–6、TEX12（中央元件）</td><td>同源染色体全长配对</td></tr><tr><td>染色体轴</td><td>cohesin（REC8、STAG3、SMC1β、SMC3、RAD21L）</td><td>姐妹染色单体黏连、轴环结构</td></tr><tr><td>黏连保护</td><td>SGO1、SGO2、PP2A-B56、MEIKIN</td><td>保护着丝粒 Rec8，维持单极定向</td></tr><tr><td>黏连解除</td><td>separase（ESPL1）、securin、APC/C、CDK1、PLK1</td><td>臂部/着丝粒 Rec8 的时序性切割</td></tr><tr><td>纺锤体与动粒</td><td>微管、动粒蛋白（NDC80 复合体）、Aurora B/C、MPS1、Mad1/Mad2</td><td>连接、纠错、SAC</td></tr><tr><td>染色体凝缩</td><td>condensin I/II、topoisomerase II</td><td>染色体个体化与轴缩短</td></tr><tr><td>端粒与核膜</td><td>SUN1/2、KASH5、TERB1/2、MAJIN</td><td>端粒花束形成、同源配对助推</td></tr></tbody></table>
+<hr/>
+<h2 id="8-遗传学后果">8. 遗传学后果<a aria-hidden="true" tabindex="-1" href="#8-遗传学后果" class="internal"></a></h2>
+<h3 id="81-多样性从哪来">8.1 多样性从哪来<a aria-hidden="true" tabindex="-1" href="#81-多样性从哪来" class="internal"></a></h3>
+<ul>
+<li><strong>自由组合</strong>：23 对同源染色体独立分配，仅此一项就可产生 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">8.4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span></span> 种染色体组合。</li>
+<li><strong>交叉互换</strong>：每条染色体平均 1–2 个交叉，使每条染色单体都是”母源块 + 父源块”的嵌合体，组合数远超 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span></span>。</li>
+<li><strong>配子随机结合</strong>：两个个体产生的配子再随机组合，子代基因型多样性进一步放大。</li>
+</ul>
+<h3 id="82-连锁与图距">8.2 连锁与图距<a aria-hidden="true" tabindex="-1" href="#82-连锁与图距" class="internal"></a></h3>
+<ul>
+<li>同一条染色体上的基因<strong>连锁</strong>；交叉可以打破连锁。</li>
+<li>两个座位间发生奇数次交换的概率即<strong>重组率</strong>，1% 重组率定义为 1 cM（厘摩）。</li>
+<li>人类常染色体总遗传图长约 3500 cM，而物理长度约 3000 Mb，说明平均约每 50–60 Mb 有一个交叉。</li>
+<li>双交换、交叉干涉、重组热点（PRDM9 决定）都会让”物理距离—重组率”关系偏离线性。</li>
+</ul>
+<h3 id="83-非整倍体">8.3 非整倍体<a aria-hidden="true" tabindex="-1" href="#83-非整倍体" class="internal"></a></h3>
+<ul>
+<li><strong>MI 不分离</strong>：同源染色体未分开，同时进入一极 → 配子 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span> 或 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span>。</li>
+<li><strong>MII 不分离</strong>：姐妹染色单体未分开 → 同样产生 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span>/<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span> 配子，但两条染色体是”同一拷贝”。</li>
+<li>21 三体约 95% 为母源，其中多数错误发生在 MI；母亲年龄是独立危险因素。</li>
+<li>机制解释（cohesin 消耗假说）：卵母细胞的黏连蛋白在胎儿期装好后再不更新，随着停滞时间延长，REC8、SMC1β、SGO1 等逐渐损耗，交叉减少、张力不足，SAC 又相对宽松，于是不分离概率上升。</li>
+<li>其他后果：反复流产、先天性心脏病、Turner 综合征（45,X，常为父源性染色体丢失）、Klinefelter 综合征（47,XXY）。</li>
+</ul>
+<h3 id="84-交叉异常与不育">8.4 交叉异常与不育<a aria-hidden="true" tabindex="-1" href="#84-交叉异常与不育" class="internal"></a></h3>
+<ul>
+<li>交叉过少（hyporecombination）：二价体缺少连接，MI 不分离风险升高。</li>
+<li>交叉位置异常（过于靠近端部或着丝粒）：同样影响张力与分离。</li>
+<li>人类中 <em>SPO11</em>、<em>SYCP3</em>、<em>REC8</em>、<em>MEIKIN</em> 等基因的缺陷与无精子症、卵巢早衰相关。</li>
+</ul>
+<hr/>
+<h2 id="9-与有丝分裂的系统对照">9. 与有丝分裂的系统对照<a aria-hidden="true" tabindex="-1" href="#9-与有丝分裂的系统对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>有丝分裂</th><th>减数分裂</th></tr></thead><tbody><tr><td>分裂次数</td><td>1</td><td>2（MI + MII）</td></tr><tr><td>DNA 复制</td><td>每次分裂前复制</td><td>只复制一次</td></tr><tr><td>同源染色体配对</td><td>不发生</td><td>前期 I 发生（联会 + SC）</td></tr><tr><td>交叉互换</td><td>极罕见（体细胞重组）</td><td>程序性、必需</td></tr><tr><td>中期排列</td><td>单条染色体排赤道板</td><td>MI：二价体排赤道板；MII：单条染色体</td></tr><tr><td>后期分离对象</td><td>姐妹染色单体</td><td>MI：同源染色体；MII：姐妹染色单体</td></tr><tr><td>着丝粒黏连</td><td>一次切开</td><td>两步切开（MI 臂部、MII 着丝粒）</td></tr><tr><td>子细胞</td><td>2 个，与母细胞相同</td><td>4 个，单倍体、遗传上各不相同</td></tr><tr><td>产物命运</td><td>体细胞、增殖</td><td>配子（精子/卵子/花粉等）</td></tr></tbody></table>
+<hr/>
+<h2 id="10-特殊情形">10. 特殊情形<a aria-hidden="true" tabindex="-1" href="#10-特殊情形" class="internal"></a></h2>
+<ul>
+<li><strong>雄性果蝇无交叉互换</strong>：果蝇雄性减数分裂不发生交叉，同源染色体分离依赖特殊的”替代连接”机制（如 SNM 等），因此雄性果蝇的连锁图完全连锁。</li>
+<li><strong>雌性家蚕</strong>：同样以无交叉方式完成减数分裂。</li>
+<li><strong>卵母细胞的两次停滞</strong>：双线期停滞（网期）与 MII 中期停滞，前者可长达数十年。</li>
+<li><strong>多倍体与未减数配子</strong>：减数分裂失败可产生 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span></span></span></span></span> 配子，是植物多倍化与部分动物孤雌生殖的来源；反之，体细胞染色体加倍后再减数分裂可形成同源多倍体。</li>
+<li><strong>无融合生殖（apomixis）</strong>：植物中绕过减数分裂、直接产生胚的机制，农业上可用于固定杂种优势。</li>
+<li><strong>减数分裂驱动（meiotic drive）</strong>：某些”自私”遗传元件让自身进入超过 50% 的配子，如小鼠 t 单倍型、果蝇 SD 系统，是基因组内部的”作弊”。</li>
+<li><strong>B 染色体</strong>：额外的小染色体，在减数分裂中常通过驱动机制优先传递。</li>
+</ul>
+<hr/>
+<h2 id="11-研究方法与临床相关">11. 研究方法与临床相关<a aria-hidden="true" tabindex="-1" href="#11-研究方法与临床相关" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>用途</th></tr></thead><tbody><tr><td>MLH1 焦点免疫荧光</td><td>直接计数交叉，评估重组频率（男性不育、卵母细胞质量）</td></tr><tr><td>SYCP1/SYCP3 染色</td><td>显示联会复合体，判断联会是否完成</td></tr><tr><td>染色体铺展（spread）</td><td>观察二价体形态、交叉位置、XY 二价体</td></tr><tr><td>FISH / 染色体涂染</td><td>检测特定染色体在精子中的比例（精子非整倍体检测）</td></tr><tr><td>PGT-A / PGT-SR</td><td>胚胎植入前非整倍体/结构重排检测，间接反映配子减数分裂错误</td></tr><tr><td>单细胞测序</td><td>研究重组热点、交叉分布与个体差异</td></tr></tbody></table>
+<p>临床关联的要点：</p>
+<ul>
+<li>重组异常是男性不育与女性卵子质量下降的重要机制之一。</li>
+<li>罗氏易位、相互易位的携带者在减数分裂时形成复杂多价体，易产生不平衡配子，是反复流产的常见原因。</li>
+<li>部分减数分裂基因（如 <em>SPO11</em>、<em>REC8</em>）在肿瘤中异常表达，与基因组不稳定相关，但属于研究阶段的观察，不宜当作临床结论。</li>
+</ul>
+<hr/>
+<h2 id="12-常见误区">12. 常见误区<a aria-hidden="true" tabindex="-1" href="#12-常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“减数分裂复制两次”</strong>：只复制一次（减数分裂前 S 期），MI 与 MII 之间没有 S 期。</li>
+<li><strong>“MI 分开的是姐妹染色单体”</strong>：MI 分开同源染色体，MII 才分开姐妹染色单体。</li>
+<li><strong>“着丝粒在 MI 就分开了”</strong>：着丝粒处的 cohesin 被 SGO1–PP2A 保护，直到 MII 才切开。</li>
+<li><strong>“交叉是随机交换片段”</strong>：交叉是精确的同源重组，有固定的热点、干涉与最低数量要求。</li>
+<li><strong>“每条染色单体都会发生交换”</strong>：一个交叉只涉及两条非姐妹染色单体，四条中常有两条不参与。</li>
+<li><strong>“交叉越多越好”</strong>：过少导致不分离，过多同样可能干扰分离；位置比数量有时更关键。</li>
+<li><strong>”<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 就是 DNA 减半”</strong>：<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span></span> 是染色体数，DNA 量用 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span> 表示；MI 后是 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span>。</li>
+<li><strong>“卵子发生产生四个卵子”</strong>：只产生一个功能卵子，其余为极体。</li>
+<li><strong>“女性减数分裂从青春期开始”</strong>：胎儿期已进入双线期并停滞，青春期只是恢复并完成 MI。</li>
+<li><strong>“重组率与物理距离严格成正比”</strong>：双交换、干涉、热点、性别差异都会破坏线性关系。</li>
+<li><strong>“减数分裂只发生在生殖细胞”</strong>：正常情况确实如此，但部分肿瘤会异位表达减数分裂基因（研究层面）。</li>
+<li><strong>“同源染色体靠序列一一配对”</strong>：配对依赖端粒花束、重组与染色体轴动力学，是”搜索—试探—稳定”的过程。</li>
+</ol>
+<hr/>
+<h2 id="13-一页速记">13. 一页速记<a aria-hidden="true" tabindex="-1" href="#13-一页速记" class="internal"></a></h2>
+<ul>
+<li><strong>总账</strong>：一次复制，两次分裂；<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span></span>；人 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">46</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">23</span></span></span></span></span>，一个精母细胞出 4 个精子，一个卵母细胞出 1 个卵。</li>
+<li><strong>前期 I 五期</strong>：细线（凝缩）→ 偶线（联会）→ 粗线（交叉成熟）→ 双线（SC 解体、交叉可见、卵母细胞停滞）→ 终变（高度凝缩、核膜破裂）。</li>
+<li><strong>重组链</strong>：SPO11 切割 → MRN/EXO1 切除 → RAD51/DMC1 核蛋白丝 → D-loop → dHJ → MLH1–MLH3（交叉）或 SDSA（非交叉）。</li>
+<li><strong>MI 三条铁律</strong>：同源染色体配对成二价体；姐妹动粒单极定向；着丝粒 Rec8 被 SGO1–PP2A 保护。</li>
+<li><strong>两步释放</strong>：MI 切臂部 Rec8（同源染色体分开），MII 切着丝粒 Rec8（姐妹染色单体分开）。</li>
+<li><strong>多样性</strong>：自由组合 <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">23</span></span></span></span></span></span></span></span></span></span></span></span></span> × 交叉互换 × 配子随机结合。</li>
+<li><strong>临床抓手</strong>：MLH1 焦点计数、21 三体母源 MI 错误、母亲年龄与 cohesin 消耗、交叉异常与不育。</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

@@ -1,0 +1,150 @@
+<svg viewBox="0 0 680 470" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>细胞周期各时相的 Cyclin-CDK 组合、开关、泛素连接酶与检查点</title>
+<desc>按 G1、G1/S 限制点、S、G2、M 五个阶段列出主导的 Cyclin-CDK 复合物、关键分子开关、E3 泛素连接酶及其底物，以及对应的检查点。CDK 蛋白量恒定，cyclin 周期性合成与降解造成激酶活性振荡；SCF 为组成型活性靠底物磷酸化选靶，APC/C 为周期性激活靠激活子与检查点定时。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">一个周期　四层调控　按时间排布</text>
+<text class="hint" x="256" y="24">CDK 量恒定　变的是 cyclin 与磷酸化状态</text>
+
+<!-- 时相条 -->
+<rect x="40" y="40" width="70" height="30" rx="6" fill="#F5F5F0" stroke="var(--color-border-tertiary, #B4B2A9)" stroke-width="0.5"/>
+<text class="sm" x="75" y="59" fill="#5c5c5a" text-anchor="middle">时相</text>
+
+<rect x="118" y="40" width="98" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="167" y="59" fill="#042C53" text-anchor="middle">G1</text>
+<rect x="222" y="40" width="98" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="271" y="59" fill="#04342C" text-anchor="middle">G1/S　R 点</text>
+<rect x="326" y="40" width="98" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="375" y="59" fill="#042C53" text-anchor="middle">S</text>
+<rect x="430" y="40" width="98" height="30" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="479" y="59" fill="#412402" text-anchor="middle">G2</text>
+<rect x="534" y="40" width="98" height="30" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="583" y="59" fill="#8C1D18" text-anchor="middle">M</text>
+
+<!-- 行1 Cyclin-CDK -->
+<rect x="40" y="76" width="70" height="62" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="75" y="102" fill="#042C53" text-anchor="middle">引擎</text>
+<text class="sm" x="75" y="120" fill="#0C447C" text-anchor="middle">Cyclin</text>
+<text class="sm" x="75" y="134" fill="#0C447C" text-anchor="middle">CDK</text>
+
+<rect x="118" y="76" width="98" height="62" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="167" y="102" fill="#042C53" text-anchor="middle">cyclin D</text>
+<text class="sm" x="167" y="120" fill="#0C447C" text-anchor="middle">CDK4/6</text>
+<text class="sm" x="167" y="134" fill="#0C447C" text-anchor="middle">单磷酸 Rb</text>
+
+<rect x="222" y="76" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="271" y="102" fill="#04342C" text-anchor="middle">cyclin E</text>
+<text class="sm" x="271" y="120" fill="#085041" text-anchor="middle">CDK2</text>
+<text class="sm" x="271" y="134" fill="#085041" text-anchor="middle">超磷酸 Rb</text>
+
+<rect x="326" y="76" width="98" height="62" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="375" y="102" fill="#042C53" text-anchor="middle">cyclin A</text>
+<text class="sm" x="375" y="120" fill="#0C447C" text-anchor="middle">CDK2</text>
+<text class="sm" x="375" y="134" fill="#0C447C" text-anchor="middle">防再复制</text>
+
+<rect x="430" y="76" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="479" y="102" fill="#412402" text-anchor="middle">cyclin A</text>
+<text class="sm" x="479" y="120" fill="#633806" text-anchor="middle">CDK1</text>
+<text class="sm" x="479" y="134" fill="#633806" text-anchor="middle">蓄势</text>
+
+<rect x="534" y="76" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="583" y="102" fill="#8C1D18" text-anchor="middle">cyclin B</text>
+<text class="sm" x="583" y="120" fill="#8C1D18" text-anchor="middle">CDK1 = MPF</text>
+<text class="sm" x="583" y="134" fill="#8C1D18" text-anchor="middle">★ 引擎全开</text>
+
+<!-- 行2 开关 -->
+<rect x="40" y="144" width="70" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="75" y="170" fill="#412402" text-anchor="middle">开关</text>
+<text class="sm" x="75" y="188" fill="#633806" text-anchor="middle">磷酸化</text>
+
+<rect x="118" y="144" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="167" y="168" fill="#412402" text-anchor="middle">Rb 低磷酸</text>
+<text class="sm" x="167" y="186" fill="#633806" text-anchor="middle">E2F 被抑制</text>
+
+<rect x="222" y="144" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="271" y="168" fill="#04342C" text-anchor="middle">释放 E2F</text>
+<text class="sm" x="271" y="186" fill="#085041" text-anchor="middle">越过 R 点 ★</text>
+
+<rect x="326" y="144" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="375" y="168" fill="#412402" text-anchor="middle">pre-RC 发放</text>
+<text class="sm" x="375" y="186" fill="#633806" text-anchor="middle">CDK2 / DDK</text>
+
+<rect x="430" y="144" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="479" y="168" fill="#412402" text-anchor="middle">pre-MPF</text>
+<text class="sm" x="479" y="186" fill="#633806" text-anchor="middle">Wee1 压住</text>
+
+<rect x="534" y="144" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="583" y="168" fill="#8C1D18" text-anchor="middle">Cdc25 去磷酸</text>
+<text class="sm" x="583" y="186" fill="#8C1D18" text-anchor="middle">MPF 爆发</text>
+
+<!-- 行3 E3 -->
+<rect x="40" y="212" width="70" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="75" y="238" fill="#04342C" text-anchor="middle">销毁</text>
+<text class="sm" x="75" y="256" fill="#085041" text-anchor="middle">E3</text>
+
+<rect x="118" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="167" y="236" fill="#04342C" text-anchor="middle">APC/C^Cdh1</text>
+<text class="sm" x="167" y="254" fill="#085041" text-anchor="middle">降解 geminin</text>
+
+<rect x="222" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="271" y="236" fill="#04342C" text-anchor="middle">SCF^Skp2</text>
+<text class="sm" x="271" y="254" fill="#085041" text-anchor="middle">降解 p27</text>
+
+<rect x="326" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="375" y="236" fill="#04342C" text-anchor="middle">SCF^FBW7</text>
+<text class="sm" x="375" y="254" fill="#085041" text-anchor="middle">降解 cyclin E</text>
+
+<rect x="430" y="212" width="98" height="62" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="479" y="236" fill="#04342C" text-anchor="middle">SCF^βTrCP</text>
+<text class="sm" x="479" y="254" fill="#085041" text-anchor="middle">降解 Cdc25A</text>
+
+<rect x="534" y="212" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="583" y="236" fill="#8C1D18" text-anchor="middle">APC/C^Cdc20</text>
+<text class="sm" x="583" y="254" fill="#8C1D18" text-anchor="middle">降解 cyclin B</text>
+
+<!-- 行4 检查点 -->
+<rect x="40" y="280" width="70" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="75" y="306" fill="#8C1D18" text-anchor="middle">检查点</text>
+<text class="sm" x="75" y="324" fill="#8C1D18" text-anchor="middle">刹车</text>
+
+<rect x="118" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="167" y="304" fill="#8C1D18" text-anchor="middle">G1/S 损伤</text>
+<text class="sm" x="167" y="322" fill="#8C1D18" text-anchor="middle">p53 → p21</text>
+
+<rect x="222" y="280" width="98" height="62" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="271" y="304" fill="#412402" text-anchor="middle">生长因子</text>
+<text class="sm" x="271" y="322" fill="#633806" text-anchor="middle">决定是否过 R</text>
+
+<rect x="326" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="375" y="304" fill="#8C1D18" text-anchor="middle">Intra-S</text>
+<text class="sm" x="375" y="322" fill="#8C1D18" text-anchor="middle">ATR → Chk1</text>
+
+<rect x="430" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="479" y="304" fill="#8C1D18" text-anchor="middle">G2/M</text>
+<text class="sm" x="479" y="322" fill="#8C1D18" text-anchor="middle">Chk1 压 Cdc25C</text>
+
+<rect x="534" y="280" width="98" height="62" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="583" y="304" fill="#8C1D18" text-anchor="middle">SAC</text>
+<text class="sm" x="583" y="322" fill="#8C1D18" text-anchor="middle">MCC 抑 APC/C</text>
+
+<!-- 底部两块 -->
+<rect x="40" y="352" width="292" height="66" rx="9" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="56" y="374" fill="#412402">CKI 两家族</text>
+<text class="sm" x="56" y="394" fill="#633806">INK4（p16）　专一抑制 CDK4/6</text>
+<text class="sm" x="56" y="410" fill="#633806">CIP/KIP（p21、p27、p57）　广谱抑制 CDK2/1</text>
+
+<rect x="348" y="352" width="284" height="66" rx="9" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="364" y="374" fill="#042C53">两种 E3 逻辑</text>
+<text class="sm" x="364" y="394" fill="#0C447C">SCF　恒定活性　靠底物磷酸化选靶</text>
+<text class="sm" x="364" y="410" fill="#0C447C">APC/C　周期激活　靠激活子与检查点定时</text>
+
+<text class="hint" x="40" y="440">方向性　进入靠可逆的去磷酸化　退出靠不可逆的泛素化降解</text>
+<text class="hint" x="40" y="458">临床　CDK4/6 抑制剂需 Rb 完整　Wee1 抑制剂与 DNA 损伤药合成致死</text>
+</svg>

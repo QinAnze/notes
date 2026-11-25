@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html><head><title>微管结合蛋白（MAP）：以 MAP2 与 tau 为中心</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="微管结合蛋白（MAP）：以 MAP2 与 tau 为中心"/><meta property="og:description" content="微管结合蛋白（MAP）：以 MAP2 与 tau 为中心 相关笔记：踏车行为、有丝 0. 一句话概括 微管结合蛋白（microtubule-associated proteins, MAPs）是一大类结合在微管表面、调控微管成核、稳定、交联、切割与运输的蛋白。神经系统里最经典的两个是 MAP2 与 tau：它们同属 MAP2/tau 家族，C 端都有微管结合重复序列，但分布截然不同——MAP2 在树突，tau 在轴突。这一”分工”既是神经元极性的标志，也是 tau 蛋白病（阿尔茨海默病等）的核心线索。 1."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="微管结合蛋白（MAP）：以 MAP2 与 tau 为中心 相关笔记：踏车行为、有丝 0. 一句话概括 微管结合蛋白（microtubule-associated proteins, MAPs）是一大类结合在微管表面、调控微管成核、稳定、交联、切割与运输的蛋白。神经系统里最经典的两个是 MAP2 与 tau：它们同属 MAP2/tau 家族，C 端都有微管结合重复序列，但分布截然不同——MAP2 在树突，tau 在轴突。这一”分工”既是神经元极性的标志，也是 tau 蛋白病（阿尔茨海默病等）的核心线索。 1."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/MAP"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#微管结合蛋白map以-map2-与-tau-为中心" data-for="微管结合蛋白map以-map2-与-tau-为中心">微管结合蛋白（MAP）：以 MAP2 与 tau 为中心</a></li><li class="depth-1"><a href="#0-一句话概括" data-for="0-一句话概括">0. 一句话概括</a></li><li class="depth-1"><a href="#1-map-是什么分类与共同逻辑" data-for="1-map-是什么分类与共同逻辑">1. MAP 是什么：分类与共同逻辑</a></li><li class="depth-2"><a href="#11-按功能分类" data-for="11-按功能分类">1.1 按功能分类</a></li><li class="depth-2"><a href="#12-共同的结构逻辑" data-for="12-共同的结构逻辑">1.2 共同的结构逻辑</a></li><li class="depth-1"><a href="#2-神经元里的两个主角map2-与-tau" data-for="2-神经元里的两个主角map2-与-tau">2. 神经元里的两个主角：MAP2 与 tau</a></li><li class="depth-1"><a href="#3-map2" data-for="3-map2">3. MAP2</a></li><li class="depth-2"><a href="#31-结构与异构体" data-for="31-结构与异构体">3.1 结构与异构体</a></li><li class="depth-2"><a href="#32-功能" data-for="32-功能">3.2 功能</a></li><li class="depth-2"><a href="#33-调控" data-for="33-调控">3.3 调控</a></li><li class="depth-2"><a href="#34-临床与实验" data-for="34-临床与实验">3.4 临床与实验</a></li><li class="depth-1"><a href="#4-tau" data-for="4-tau">4. tau</a></li><li class="depth-2"><a href="#41-结构与异构体" data-for="41-结构与异构体">4.1 结构与异构体</a></li><li class="depth-2"><a href="#42-正常功能" data-for="42-正常功能">4.2 正常功能</a></li><li class="depth-2"><a href="#43-磷酸化正常与异常" data-for="43-磷酸化正常与异常">4.3 磷酸化：正常与异常</a></li><li class="depth-2"><a href="#44-聚集与-tau-蛋白病" data-for="44-聚集与-tau-蛋白病">4.4 聚集与 tau 蛋白病</a></li><li class="depth-2"><a href="#45-疾病谱" data-for="45-疾病谱">4.5 疾病谱</a></li><li class="depth-2"><a href="#46-治疗方向" data-for="46-治疗方向">4.6 治疗方向</a></li><li class="depth-1"><a href="#5-map2tau-家族与其他-map" data-for="5-map2tau-家族与其他-map">5. MAP2/tau 家族与其他 MAP</a></li><li class="depth-2"><a href="#51-map2tau-家族" data-for="51-map2tau-家族">5.1 MAP2/tau 家族</a></li><li class="depth-2"><a href="#52-其他重要-map" data-for="52-其他重要-map">5.2 其他重要 MAP</a></li><li class="depth-1"><a href="#6-map-如何调控微管五种作用" data-for="6-map-如何调控微管五种作用">6. MAP 如何调控微管：五种作用</a></li><li class="depth-1"><a href="#7-研究方法与标志物" data-for="7-研究方法与标志物">7. 研究方法与标志物</a></li><li class="depth-1"><a href="#8-常见误区" data-for="8-常见误区">8. 常见误区</a></li><li class="depth-1"><a href="#9-一页速记" data-for="9-一页速记">9. 一页速记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">微管结合蛋白（MAP）：以 MAP2 与 tau 为中心</h1><p class="content-meta">Nov 25, 2026, 14 min read</p></div></div><article class="popover-hint"><h1 id="微管结合蛋白map以-map2-与-tau-为中心">微管结合蛋白（MAP）：以 MAP2 与 tau 为中心<a aria-hidden="true" tabindex="-1" href="#微管结合蛋白map以-map2-与-tau-为中心" class="internal"></a></h1>
+<blockquote>
+<p>相关笔记：<a href="../../细胞生物学/知识点/踏车行为" class="internal">踏车行为</a>、<a href="../../细胞生物学/知识点/有丝" class="internal">有丝</a></p>
+</blockquote>
+<h2 id="0-一句话概括">0. 一句话概括<a aria-hidden="true" tabindex="-1" href="#0-一句话概括" class="internal"></a></h2>
+<p>微管结合蛋白（microtubule-associated proteins, MAPs）是一大类结合在微管表面、调控微管<strong>成核、稳定、交联、切割与运输</strong>的蛋白。神经系统里最经典的两个是 <strong>MAP2</strong> 与 <strong>tau</strong>：它们同属 MAP2/tau 家族，C 端都有微管结合重复序列，但分布截然不同——<strong>MAP2 在树突，tau 在轴突</strong>。这一”分工”既是神经元极性的标志，也是 tau 蛋白病（阿尔茨海默病等）的核心线索。</p>
+<hr/>
+<h2 id="1-map-是什么分类与共同逻辑">1. MAP 是什么：分类与共同逻辑<a aria-hidden="true" tabindex="-1" href="#1-map-是什么分类与共同逻辑" class="internal"></a></h2>
+<h3 id="11-按功能分类">1.1 按功能分类<a aria-hidden="true" tabindex="-1" href="#11-按功能分类" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类别</th><th>代表</th><th>作用</th></tr></thead><tbody><tr><td>结构/稳定型</td><td>MAP1A/1B、MAP2、MAP4、tau、MAP6/STOP、DCX</td><td>结合微管侧面，稳定晶格、调节间距</td></tr><tr><td>交联型</td><td>MAP2、tau、PRC1/MAP65、NuMA</td><td>把微管与微管、微管与 actin 连起来</td></tr><tr><td>马达型</td><td>kinesin、dynein</td><td>沿微管运输货物，也影响微管组织</td></tr><tr><td>+TIP 型</td><td>EB1/EB3、CLIP-170、APC</td><td>追踪正在生长的 + 端，调控动力学</td></tr><tr><td>切割型</td><td>katanin、spastin</td><td>切断微管，参与重塑与分支</td></tr><tr><td>成核型</td><td>γ-TuRC、augmin、TPX2</td><td>从零成核或在侧面产生分支</td></tr></tbody></table>
+<blockquote>
+<p>严格说，“MAP”最初专指能随微管一起纯化出来的结构蛋白；现在广义上把马达、+TIP、切割酶也算作微管相关蛋白。答题时要说明用的是狭义还是广义。</p>
+</blockquote>
+<h3 id="12-共同的结构逻辑">1.2 共同的结构逻辑<a aria-hidden="true" tabindex="-1" href="#12-共同的结构逻辑" class="internal"></a></h3>
+<ul>
+<li>大多数结构 MAP 有两个功能模块：
+<ol>
+<li><strong>微管结合结构域（MBD）</strong>：常由带正电的重复序列组成，与微管表面（C 端 E-hook）靠静电与疏水作用结合；</li>
+<li><strong>突出结构域（projection domain）</strong>：伸向胞质，决定微管之间的间距，也可与其他蛋白/膜结合。</li>
+</ol>
+</li>
+<li>结合亲和力受<strong>磷酸化</strong>调节：磷酸基团引入负电荷，削弱与微管的静电结合，使 MAP 从微管上脱落。</li>
+<li>一个 MAP 往往同时具备”稳定 + 交联 + 调控”多种功能，取决于浓度、磷酸化状态与结合伙伴。</li>
+</ul>
+<hr/>
+<h2 id="2-神经元里的两个主角map2-与-tau">2. 神经元里的两个主角：MAP2 与 tau<a aria-hidden="true" tabindex="-1" href="#2-神经元里的两个主角map2-与-tau" class="internal"></a></h2>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="570" viewBox="0 0 1100 570">
+<rect width="1100" height="570" fill="#ffffff"></rect>
+<text x="550.0" y="36" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="bold" fill="#1F2937">MAP2 与 tau：同一家族，两种神经元微管</text>
+<path d="M 185 225 C 150 190, 120 160, 92 132" fill="none" stroke="#D9C6A8" stroke-width="11" stroke-linecap="round"></path>
+<path d="M 185 225 C 150 190, 120 160, 92 132" fill="none" stroke="#2F6FBF" stroke-width="2.6" stroke-dasharray="7 5" opacity="0.9"></path>
+<path d="M 175 268 C 150 300, 132 330, 118 362" fill="none" stroke="#D9C6A8" stroke-width="11" stroke-linecap="round"></path>
+<path d="M 175 268 C 150 300, 132 330, 118 362" fill="none" stroke="#2F6FBF" stroke-width="2.6" stroke-dasharray="7 5" opacity="0.9"></path>
+<path d="M 212 205 C 250 170, 286 150, 318 132" fill="none" stroke="#D9C6A8" stroke-width="11" stroke-linecap="round"></path>
+<path d="M 212 205 C 250 170, 286 150, 318 132" fill="none" stroke="#2F6FBF" stroke-width="2.6" stroke-dasharray="7 5" opacity="0.9"></path>
+<ellipse cx="200" cy="243" rx="42" ry="50" fill="#F6EFE2" stroke="#B59A73" stroke-width="2"></ellipse>
+<ellipse cx="200" cy="243" rx="30" ry="40" fill="none" stroke="#7FA8D4" stroke-width="1.6" stroke-dasharray="6 4"></ellipse>
+<path d="M 240 243 C 360 236, 520 250, 700 244 C 780 242, 840 240, 900 242" fill="none" stroke="#CDBB9E" stroke-width="6" stroke-linecap="round"></path>
+<path d="M 240 243 C 360 236, 520 250, 700 244 C 780 242, 840 240, 900 242" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-dasharray="8 5"></path>
+<path d="M 898 242 C 922 224, 940 210, 952 196" fill="none" stroke="#CDBB9E" stroke-width="4" stroke-linecap="round"></path>
+<path d="M 898 242 C 922 224, 940 210, 952 196" fill="none" stroke="#C0392B" stroke-width="1.4" stroke-dasharray="5 4"></path>
+<path d="M 898 242 C 924 246, 944 252, 958 260" fill="none" stroke="#CDBB9E" stroke-width="4" stroke-linecap="round"></path>
+<path d="M 898 242 C 924 246, 944 252, 958 260" fill="none" stroke="#C0392B" stroke-width="1.4" stroke-dasharray="5 4"></path>
+<text x="110" y="118" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="11" font-weight="bold" fill="#2F6FBF">树突：MAP2 富集</text>
+<text x="110" y="136" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10" fill="#5B6B7C">微管间距较大、稳定</text>
+<line x1="160" y1="124" x2="150" y2="150" stroke="#2F6FBF" stroke-width="1.0" opacity="1.0" stroke-linecap="round" stroke-dasharray="0.7"></line>
+<text x="560" y="214" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="11" font-weight="bold" fill="#C0392B">轴突：tau 富集</text>
+<text x="560" y="232" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10" fill="#5B6B7C">微管成束、间距较小</text>
+<line x1="608" y1="216" x2="640" y2="236" stroke="#C0392B" stroke-width="1.0" opacity="1.0" stroke-linecap="round" stroke-dasharray="0.7"></line>
+<text x="200" y="312" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10" fill="#5B6B7C">胞体</text>
+<line x1="60" y1="340" x2="100" y2="340" stroke="#2F6FBF" stroke-width="2.6" opacity="1.0" stroke-linecap="round" stroke-dasharray="7 5"></line>
+<text x="108" y="344" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#5B6B7C">微管（树突）</text>
+<line x1="230" y1="340" x2="270" y2="340" stroke="#C0392B" stroke-width="2.2" opacity="1.0" stroke-linecap="round" stroke-dasharray="8 5"></line>
+<text x="278" y="344" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#5B6B7C">微管（轴突）</text>
+<line x1="50" y1="372" x2="1050" y2="372" stroke="#DCE4EE" stroke-width="1.2" opacity="1.0" stroke-linecap="round"></line>
+<text x="60" y="398" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="12.5" font-weight="bold" fill="#1F2937">结构域对比</text>
+<text x="60" y="432" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="bold" fill="#1F2937">MAP2</text>
+<rect x="120" y="416" width="250" height="26" rx="5" fill="#EDF3FA" stroke="#9DB4CC" stroke-width="1.5"></rect>
+<text x="245" y="433" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="9.8" fill="#5B6B7C">projection domain（长，伸向胞质）</text>
+<rect x="370" y="416" width="96" height="26" rx="5" fill="#FDECEA" stroke="#C0392B" stroke-width="1.5"></rect>
+<text x="418" y="433" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="9.8" fill="#8C2F22">MBD</text>
+<line x1="466" y1="429" x2="522" y2="429" stroke="#6B7280" stroke-width="1.5" marker-end="url(#a)"></line>
+<text x="548" y="433" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10" fill="#5B6B7C">微管</text>
+<text x="620" y="433" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.2" fill="#5B6B7C">N 端长臂决定微管间距；C 端重复序列负责结合</text>
+<text x="60" y="502" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="12" font-weight="bold" fill="#1F2937">tau</text>
+<rect x="120" y="486" width="62" height="26" rx="5" fill="#F3F7FC" stroke="#9DB4CC" stroke-width="1.5"></rect>
+<text x="151" y="503" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="9.2" fill="#5B6B7C">N 0/1/2</text>
+<rect x="182" y="486" width="118" height="26" rx="5" fill="#FFF6E8" stroke="#B5651D" stroke-width="1.5"></rect>
+<text x="241" y="503" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="9.6" fill="#8C5A18">P-rich</text>
+<rect x="300" y="486" width="120" height="26" rx="5" fill="#FDECEA" stroke="#C0392B" stroke-width="1.5"></rect>
+<text x="360" y="503" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="9.6" fill="#8C2F22">R1–R4</text>
+<line x1="420" y1="499" x2="476" y2="499" stroke="#6B7280" stroke-width="1.5" marker-end="url(#a)"></line>
+<text x="502" y="503" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10" fill="#5B6B7C">微管</text>
+<text x="620" y="503" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.2" fill="#5B6B7C">3R/4R 由外显子 10 剪接决定；P-rich 是磷酸化调控区</text>
+<text x="60" y="540" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.2" fill="#5B6B7C">共同点：都属于 MAP2/tau 家族，C 端带重复序列，靠带电与疏水作用结合微管侧面。</text>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"></path></marker></defs></svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>维度</th><th>MAP2</th><th>tau</th></tr></thead><tbody><tr><td>基因</td><td><em>MAP2</em>（2q34）</td><td><em>MAPT</em>（17q21.31）</td></tr><tr><td>分子量</td><td>高 Mr（约 200 kDa，MAP2a/b）；低 Mr（MAP2c/d）</td><td>352–441 个氨基酸（6 种异构体）</td></tr><tr><td>主要分布</td><td>胞体、树突、树突棘</td><td>轴突（正常神经元）</td></tr><tr><td>微管结合区</td><td>C 端 3–4 个重复序列 + R 区</td><td>C 端 3R 或 4R 重复序列</td></tr><tr><td>突出区</td><td>N 端很长</td><td>N 端较短（0/1/2 inserts）</td></tr><tr><td>主要功能</td><td>稳定树突微管、调节间距、参与突触可塑性</td><td>稳定轴突微管、调节运输、影响微管间距</td></tr><tr><td>病理</td><td>缺血后丢失（损伤标志）</td><td>过度磷酸化 → 缠结 → tau 蛋白病</td></tr></tbody></table>
+<p><strong>为什么一个在树突、一个在轴突？</strong></p>
+<ul>
+<li>神经元把微管分成两类：树突微管极性混杂、间距较大、动态性较高；轴突微管极性统一（+ 端朝前）、成束紧密、更稳定。</li>
+<li>MAP2 的长突出臂适合”撑开”树突微管；tau 的短臂适合”束紧”轴突微管。</li>
+<li>两者的定位差异被广泛用作<strong>神经元极性的免疫标志</strong>：MAP2 标树突，tau/磷酸化 tau 标轴突。</li>
+</ul>
+<hr/>
+<h2 id="3-map2">3. MAP2<a aria-hidden="true" tabindex="-1" href="#3-map2" class="internal"></a></h2>
+<h3 id="31-结构与异构体">3.1 结构与异构体<a aria-hidden="true" tabindex="-1" href="#31-结构与异构体" class="internal"></a></h3>
+<ul>
+<li>高 Mr 型：MAP2a、MAP2b；低 Mr 型：MAP2c、MAP2d。</li>
+<li>MAP2c 在胚胎期高表达，MAP2a 在出生后逐渐出现；不同异构体的突出臂长度不同，决定微管间距。</li>
+<li>C 端重复序列结合微管，N 端突出臂伸向胞质，可与其他 MAP、actin、膜蛋白相互作用。</li>
+</ul>
+<h3 id="32-功能">3.2 功能<a aria-hidden="true" tabindex="-1" href="#32-功能" class="internal"></a></h3>
+<ul>
+<li><strong>稳定树突微管</strong>：降低微管的临界浓度、抑制解聚。</li>
+<li><strong>调节微管间距</strong>：突出臂像”刷毛”一样把相邻微管撑开，形成树突特有的松散阵列。</li>
+<li><strong>交联 actin</strong>：MAP2 可与 actin 结合，参与树突棘形态与突触可塑性。</li>
+<li><strong>参与突触信号</strong>：LTP 等刺激可改变 MAP2 的磷酸化与定位，影响树突棘结构。</li>
+</ul>
+<h3 id="33-调控">3.3 调控<a aria-hidden="true" tabindex="-1" href="#33-调控" class="internal"></a></h3>
+<ul>
+<li>PKA、CaMKII、ERK 等磷酸化 MAP2，降低其微管亲和力。</li>
+<li>磷酸化状态改变时，MAP2 从微管转移到胞质或 actin 骨架，改变树突微管的稳定性。</li>
+</ul>
+<h3 id="34-临床与实验">3.4 临床与实验<a aria-hidden="true" tabindex="-1" href="#34-临床与实验" class="internal"></a></h3>
+<ul>
+<li><strong>MAP2 免疫染色</strong>是区分树突与轴突的常规手段。</li>
+<li>脑缺血、癫痫、神经退行性疾病中，MAP2 丢失是<strong>神经元损伤的早期标志</strong>。</li>
+<li>抗 MAP2 抗体也见于部分自身免疫性神经疾病。</li>
+</ul>
+<hr/>
+<h2 id="4-tau">4. tau<a aria-hidden="true" tabindex="-1" href="#4-tau" class="internal"></a></h2>
+<h3 id="41-结构与异构体">4.1 结构与异构体<a aria-hidden="true" tabindex="-1" href="#41-结构与异构体" class="internal"></a></h3>
+<ul>
+<li><em>MAPT</em> 基因通过可变剪接产生 <strong>6 种异构体</strong>：
+<ul>
+<li>N 端插入：0N、1N、2N（外显子 2、3）；</li>
+<li>C 端重复：3R 或 4R（外显子 10 决定是否含第二个重复）。</li>
+</ul>
+</li>
+<li>成人脑中以 3R 与 4R 共存；胎儿脑以 3R0N 为主。</li>
+<li>结构分区：
+<ul>
+<li>N 端：参与与膜、其他蛋白的相互作用；</li>
+<li><strong>P-rich（脯氨酸富集区）</strong>：主要磷酸化位点所在；</li>
+<li><strong>C 端重复区（R1–R4）</strong>：结合微管。</li>
+</ul>
+</li>
+</ul>
+<h3 id="42-正常功能">4.2 正常功能<a aria-hidden="true" tabindex="-1" href="#42-正常功能" class="internal"></a></h3>
+<ul>
+<li>稳定轴突微管，维持轴突口径与运输通道。</li>
+<li>调节微管间距与成束程度。</li>
+<li>影响<strong>轴突运输</strong>：tau 与 kinesin/dynein 竞争微管表面，可调节货物分配；磷酸化状态改变这种竞争。</li>
+<li>tau 敲除小鼠可存活，表型相对轻微——说明 tau 不是微管组装的”必需品”，而是<strong>调节器</strong>。</li>
+</ul>
+<h3 id="43-磷酸化正常与异常">4.3 磷酸化：正常与异常<a aria-hidden="true" tabindex="-1" href="#43-磷酸化正常与异常" class="internal"></a></h3>
+<ul>
+<li>正常脑内 tau 就有磷酸化，发育期磷酸化水平更高；磷酸化调节 tau 与微管的结合。</li>
+<li>主要激酶：CDK5、GSK-3β、ERK、JNK、p38（Pro-directed）；MARK、CK1、DYRK1A（非 Pro 位点）。</li>
+<li>主要磷酸酶：<strong>PP2A</strong>（负责约 70% 的去磷酸化），其次 PP1、PP2B。</li>
+<li><strong>过度磷酸化</strong> → tau 从微管脱落 → 微管失稳 → 轴突运输障碍 → tau 聚集。</li>
+</ul>
+<h3 id="44-聚集与-tau-蛋白病">4.4 聚集与 tau 蛋白病<a aria-hidden="true" tabindex="-1" href="#44-聚集与-tau-蛋白病" class="internal"></a></h3>
+<ul>
+<li>过度磷酸化的 tau 形成<strong>成对螺旋丝（PHF）<strong>与</strong>神经原纤维缠结（NFT）</strong>。</li>
+<li>AD 中 NFT 沿 Braak 分期从内嗅皮层向新皮层扩散，与认知下降的相关性比淀粉样斑块更强。</li>
+<li>tau 具有”类朊病毒”传播性：错误折叠的 tau 可在细胞间扩散，模板化正常 tau。</li>
+<li>tau 也可发生<strong>液-液相分离（LLPS）</strong>，在拥挤环境中形成液滴，被认为是聚集的早期步骤。</li>
+</ul>
+<h3 id="45-疾病谱">4.5 疾病谱<a aria-hidden="true" tabindex="-1" href="#45-疾病谱" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>疾病</th><th>tau 类型</th><th>特点</th></tr></thead><tbody><tr><td>阿尔茨海默病（AD）</td><td>3R + 4R</td><td>斑块 + 缠结；p-tau217/181 为生物标志物</td></tr><tr><td>进行性核上性麻痹（PSP）</td><td>4R</td><td>中脑萎缩、垂直凝视障碍</td></tr><tr><td>皮质基底节变性（CBD）</td><td>4R</td><td>不对称皮质萎缩</td></tr><tr><td>皮克病（PiD）</td><td>3R</td><td>Pick 小体</td></tr><tr><td>额颞叶痴呆伴帕金森（FTDP-17）</td><td>多为 4R 或 3R</td><td><em>MAPT</em> 突变（P301L、P301S、V337M、R406W 等）</td></tr><tr><td>慢性创伤性脑病（CTE）</td><td>3R + 4R</td><td>反复头部外伤</td></tr></tbody></table>
+<h3 id="46-治疗方向">4.6 治疗方向<a aria-hidden="true" tabindex="-1" href="#46-治疗方向" class="internal"></a></h3>
+<ul>
+<li><strong>抗 tau 抗体</strong>：阻断 tau 传播（多项临床试验，结果不一）。</li>
+<li><strong>反义寡核苷酸（ASO）</strong>：降低 tau 表达（如 BIIB080，早期试验中）。</li>
+<li><strong>聚集抑制剂</strong>：抑制 tau 纤维形成。</li>
+<li><strong>微管稳定剂</strong>：补偿 tau 丢失导致的微管失稳（临床证据有限）。</li>
+<li><strong>tau PET</strong>：flortaucipir 等示踪剂可活体显示 tau 沉积。</li>
+</ul>
+<hr/>
+<h2 id="5-map2tau-家族与其他-map">5. MAP2/tau 家族与其他 MAP<a aria-hidden="true" tabindex="-1" href="#5-map2tau-家族与其他-map" class="internal"></a></h2>
+<h3 id="51-map2tau-家族">5.1 MAP2/tau 家族<a aria-hidden="true" tabindex="-1" href="#51-map2tau-家族" class="internal"></a></h3>
+<ul>
+<li>包括 <strong>MAP2、MAP4、tau</strong>，共享 C 端微管结合重复序列。</li>
+<li>MAP4 广泛表达于非神经细胞，参与间期与分裂期微管动力学调控。</li>
+</ul>
+<h3 id="52-其他重要-map">5.2 其他重要 MAP<a aria-hidden="true" tabindex="-1" href="#52-其他重要-map" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>蛋白</th><th>功能</th><th>相关疾病</th></tr></thead><tbody><tr><td>MAP1A/1B</td><td>稳定微管、连接 actin；MAP1B 在发育中高表达</td><td>神经系统发育异常</td></tr><tr><td>MAP6/STOP</td><td>钙调素调节的微管稳定蛋白</td><td>突触可塑性、精神疾病关联</td></tr><tr><td>DCX（双皮质素）</td><td>稳定微管，神经元迁移</td><td><em>DCX</em> 突变 → 无脑回畸形</td></tr><tr><td>PRC1/MAP65</td><td>交联反平行微管，胞质分裂</td><td>肿瘤中表达异常</td></tr><tr><td>EB1/EB3</td><td>+TIP，追踪生长端</td><td>肿瘤、微管动力学</td></tr><tr><td>katanin / spastin</td><td>切割微管</td><td>spastin → 遗传性痉挛性截瘫（SPG4）</td></tr><tr><td>γ-TuRC / augmin</td><td>成核与分支成核</td><td>发育缺陷</td></tr></tbody></table>
+<hr/>
+<h2 id="6-map-如何调控微管五种作用">6. MAP 如何调控微管：五种作用<a aria-hidden="true" tabindex="-1" href="#6-map-如何调控微管五种作用" class="internal"></a></h2>
+<ol>
+<li><strong>稳定晶格</strong>：结合微管侧面，降低解聚速率（MAP2、tau、MAP4、MAP6）。</li>
+<li><strong>交联与成束</strong>：把微管与微管、微管与 actin 连起来（MAP2、tau、PRC1）。</li>
+<li><strong>调节间距</strong>：突出臂的长度决定微管之间的距离（MAP2 长臂 vs tau 短臂）。</li>
+<li><strong>竞争运输</strong>：占据微管表面，影响 kinesin/dynein 的结合与货物分配（tau）。</li>
+<li><strong>参与动力学</strong>：+TIP 追踪生长端，切割酶切断微管，成核因子从零或侧面成核。</li>
+</ol>
+<hr/>
+<h2 id="7-研究方法与标志物">7. 研究方法与标志物<a aria-hidden="true" tabindex="-1" href="#7-研究方法与标志物" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法/试剂</th><th>用途</th></tr></thead><tbody><tr><td>抗 MAP2 抗体</td><td>标记树突与胞体</td></tr><tr><td>抗 tau / AT8（p-Ser202/Thr205）</td><td>标记轴突与磷酸化 tau</td></tr><tr><td>SMI-31</td><td>标记磷酸化神经丝（常与 tau 联用）</td></tr><tr><td>EB3-GFP</td><td>活细胞追踪微管 + 端生长</td></tr><tr><td>体外微管聚合/交联实验</td><td>测定 MAP 的亲和力与交联能力</td></tr><tr><td>质谱磷酸化组学</td><td>定位 tau/MAP2 的磷酸化位点</td></tr><tr><td>tau PET、脑脊液/血浆 p-tau</td><td>活体诊断与分期</td></tr></tbody></table>
+<hr/>
+<h2 id="8-常见误区">8. 常见误区<a aria-hidden="true" tabindex="-1" href="#8-常见误区" class="internal"></a></h2>
+<ol>
+<li><strong>“MAP 都是稳定微管的”</strong>：还有马达、+TIP、切割与成核蛋白。</li>
+<li><strong>“MAP2 和 tau 分布相同”</strong>：MAP2 在树突，tau 在轴突，是神经元极性的经典标志。</li>
+<li><strong>“tau 只在病理状态下存在”</strong>：正常神经元中 tau 有重要生理功能，敲除小鼠只是表型轻微。</li>
+<li><strong>“磷酸化一定有害”</strong>：发育与生理状态下磷酸化是正常调控；只有过度磷酸化才致病。</li>
+<li><strong>“tau 是阿尔茨海默病的唯一原因”</strong>：Aβ 与 tau 共同参与，tau 与认知下降的相关性更强。</li>
+<li><strong>“MAP2 是轴突标志”</strong>：MAP2 是树突标志，轴突标志常用 tau/磷酸化 tau。</li>
+<li><strong>“tau 只结合微管”</strong>：tau 还可与 actin、膜、核酸等相互作用。</li>
+<li><strong>“所有 tau 蛋白病都是 4R”</strong>：皮克病是 3R，AD 是 3R + 4R。</li>
+<li><strong>“微管稳定剂能治愈 AD”</strong>：目前证据有限，不能替代病因治疗。</li>
+<li><strong>“MAP 只存在于神经元”</strong>：MAP4 等广泛表达于各种细胞。</li>
+</ol>
+<hr/>
+<h2 id="9-一页速记">9. 一页速记<a aria-hidden="true" tabindex="-1" href="#9-一页速记" class="internal"></a></h2>
+<ul>
+<li><strong>MAP 广义</strong>：结构型、马达型、+TIP、切割型、成核型。</li>
+<li><strong>MAP2/tau 家族</strong>：MAP2、MAP4、tau，共享 C 端重复序列。</li>
+<li><strong>MAP2</strong>：树突、长突出臂、撑开微管间距、突触可塑性；缺血后丢失是损伤标志。</li>
+<li><strong>tau</strong>：轴突、短臂、束紧微管；3R/4R 由外显子 10 剪接决定；过度磷酸化 → PHF/NFT。</li>
+<li><strong>疾病</strong>：AD（3R+4R）、PSP/CBD（4R）、PiD（3R）、FTDP-17（<em>MAPT</em> 突变）、CTE。</li>
+<li><strong>标志物</strong>：MAP2 标树突，tau/AT8 标轴突与病理；p-tau217/181 用于 AD 诊断。</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>

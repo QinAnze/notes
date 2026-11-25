@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html><head><title>BiP（GRP78 / HSPA5）</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="BiP（GRP78 / HSPA5）"/><meta property="og:description" content="BiP（GRP78 / HSPA5） 一句话：BiP 是内质网腔内的 Hsp70 分子伴侣，负责新生多肽的折叠、错误折叠蛋白的返工与降解、跨膜转运的马达动力，并通过”感知错误折叠的量”来启动 UPR（未折叠蛋白反应）。 名字来历：Binding immunoglobulin Protein —— 最初因为能结合浆细胞内质网中的免疫球蛋白重链而得名。 一、基本信息速查 项目内容基因HSPA5（heat shock protein family A member 5）常用名BiP / GRP78 / 78 kDa 葡萄糖调节蛋白家族Hsp70 家族（与胞质 Hsc70、DnaK 同源）定位内质网腔（N 端带信号肽，KDEL 锚定在腔面）分子量78 kDa，约 637 aa表达组成型高表达，是 ER 中含量最丰富的蛋白之一二聚化天然为同源二聚体；功能单体为主；也可形成寡聚体关键结构域NBD（核苷酸结合域）+ SBD（底物结合域）+ lid 结构域核心功能折叠催化、品质控制、转运马达、UPR 传感器病理关联肿瘤、神经退行性疾病、自身免疫病、病毒感染、代谢病 易混点：BiP（GRP78）在 ER 腔；Hsc70（HSPA1A/B）在胞质。两者是同一家族不同成员，抗体不交叉识别。 二、结构：三个结构域 + 一个”盖子” 2."/><meta property="og:image" content="https://qinanze.github.io/notes/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="BiP（GRP78 / HSPA5） 一句话：BiP 是内质网腔内的 Hsp70 分子伴侣，负责新生多肽的折叠、错误折叠蛋白的返工与降解、跨膜转运的马达动力，并通过”感知错误折叠的量”来启动 UPR（未折叠蛋白反应）。 名字来历：Binding immunoglobulin Protein —— 最初因为能结合浆细胞内质网中的免疫球蛋白重链而得名。 一、基本信息速查 项目内容基因HSPA5（heat shock protein family A member 5）常用名BiP / GRP78 / 78 kDa 葡萄糖调节蛋白家族Hsp70 家族（与胞质 Hsc70、DnaK 同源）定位内质网腔（N 端带信号肽，KDEL 锚定在腔面）分子量78 kDa，约 637 aa表达组成型高表达，是 ER 中含量最丰富的蛋白之一二聚化天然为同源二聚体；功能单体为主；也可形成寡聚体关键结构域NBD（核苷酸结合域）+ SBD（底物结合域）+ lid 结构域核心功能折叠催化、品质控制、转运马达、UPR 传感器病理关联肿瘤、神经退行性疾病、自身免疫病、病毒感染、代谢病 易混点：BiP（GRP78）在 ER 腔；Hsc70（HSPA1A/B）在胞质。两者是同一家族不同成员，抗体不交叉识别。 二、结构：三个结构域 + 一个”盖子” 2."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="细胞生物学/知识点/Bip"><div id="quartz-root" class="page"><div class="bg-stack" aria-hidden="true"><div class="bg-layer bg-image-light"></div><div class="bg-layer bg-image-dark"></div><div class="bg-tint"></div></div><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="https://qinanze.github.io/notes/" data-router-ignore="true">🪴 Quartz 4.0</a><a href="#" class="page-back" id="page-back-btn" title="返回上一级" aria-label="返回上一级"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="20" y1="12" x2="5" y2="12"></line><polyline points="11,18 5,12 11,6"></polyline></svg></a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#bipgrp78--hspa5" data-for="bipgrp78--hspa5">BiP（GRP78 / HSPA5）</a></li><li class="depth-1"><a href="#一基本信息速查" data-for="一基本信息速查">一、基本信息速查</a></li><li class="depth-1"><a href="#二结构三个结构域--一个盖子" data-for="二结构三个结构域--一个盖子">二、结构：三个结构域 + 一个&quot;盖子&quot;</a></li><li class="depth-2"><a href="#21-结构域组成" data-for="21-结构域组成">2.1 结构域组成</a></li><li class="depth-2"><a href="#22-盖子的构象切换--分子伴侣循环的核心" data-for="22-盖子的构象切换--分子伴侣循环的核心">2.2 盖子的构象切换 = 分子伴侣循环的核心</a></li><li class="depth-1"><a href="#三分子伴侣循环与细菌-dnak-同源" data-for="三分子伴侣循环与细菌-dnak-同源">三、分子伴侣循环（与细菌 DnaK 同源）</a></li><li class="depth-1"><a href="#四bip-的四大功能" data-for="四bip-的四大功能">四、BiP 的四大功能</a></li><li class="depth-2"><a href="#41-折叠催化" data-for="41-折叠催化">4.1 折叠催化</a></li><li class="depth-2"><a href="#42-品质控制quality-control与-erad-挂钩" data-for="42-品质控制quality-control与-erad-挂钩">4.2 品质控制（Quality Control）与 ERAD 挂钩</a></li><li class="depth-2"><a href="#43-蛋白质转位translocation" data-for="43-蛋白质转位translocation">4.3 蛋白质转位（Translocation）</a></li><li class="depth-2"><a href="#44-upr-传感器最核心的调控功能见下节" data-for="44-upr-传感器最核心的调控功能见下节">4.4 UPR 传感器（最核心的调控功能，见下节）</a></li><li class="depth-1"><a href="#五bip-与-upr折叠需求量的传感器" data-for="五bip-与-upr折叠需求量的传感器">五、BiP 与 UPR：折叠需求量的&quot;传感器&quot;</a></li><li class="depth-2"><a href="#51-核心模型" data-for="51-核心模型">5.1 核心模型</a></li><li class="depth-2"><a href="#52-三条-upr-支路详解" data-for="52-三条-upr-支路详解">5.2 三条 UPR 支路详解</a></li><li class="depth-1"><a href="#六bip-的其他生物学角色" data-for="六bip-的其他生物学角色">六、BiP 的其他生物学角色</a></li><li class="depth-1"><a href="#七bip-的调控" data-for="七bip-的调控">七、BiP 的调控</a></li><li class="depth-2"><a href="#71-转录与翻译水平" data-for="71-转录与翻译水平">7.1 转录与翻译水平</a></li><li class="depth-2"><a href="#72-药理学干预" data-for="72-药理学干预">7.2 药理学干预</a></li><li class="depth-1"><a href="#八实验方法如何研究-bip" data-for="八实验方法如何研究-bip">八、实验方法：如何研究 BiP</a></li><li class="depth-1"><a href="#九常见误区澄清" data-for="九常见误区澄清">九、常见误区澄清</a></li><li class="depth-1"><a href="#十要点速记" data-for="十要点速记">十、要点速记</a></li><li class="depth-1"><a href="#附关键缩写对照" data-for="附关键缩写对照">附：关键缩写对照</a></li><li class="depth-1"><a href="#相关笔记" data-for="相关笔记">相关笔记</a></li></ul></div></div><div class="molecule-wrapper desktop-only" id="molecule-wrapper" style="display:none;"><h3>结构演示</h3><svg class="zoom-btn is-hidden" id="molecule-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大结构式"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="molecule-head"><span class="molecule-title" id="molecule-title">结构演示</span><span class="molecule-group" id="molecule-group"></span></div><div class="molecule-view" id="molecule-view"><div class="molecule-hint" id="molecule-hint">正在加载渲染器…</div></div><div class="molecule-meta" id="molecule-meta"></div><div class="molecule-ctrl"><button class="molecule-btn" id="molecule-prev" title="上一个结构" aria-label="上一个">◀</button><span class="molecule-index" id="molecule-index">0 / 0</span><button class="molecule-btn" id="molecule-next" title="下一个结构" aria-label="下一个">▶</button><button class="molecule-btn molecule-btn-mode" id="molecule-mode" title="切换 2D / 3D">看 3D</button></div><div class="molecule-tip" id="molecule-tip"></div><div class="zoom-overlay" id="molecule-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="molecule-zoom-body"></div></div></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">BiP（GRP78 / HSPA5）</h1><p class="content-meta">Nov 25, 2026, 24 min read</p></div></div><article class="popover-hint"><h1 id="bipgrp78--hspa5">BiP（GRP78 / HSPA5）<a aria-hidden="true" tabindex="-1" href="#bipgrp78--hspa5" class="internal"></a></h1>
+<blockquote>
+<p><strong>一句话</strong>：BiP 是<strong>内质网腔内的 Hsp70 分子伴侣</strong>，负责新生多肽的折叠、错误折叠蛋白的返工与降解、跨膜转运的马达动力，并通过”感知错误折叠的量”来启动 <strong>UPR（未折叠蛋白反应）</strong>。</p>
+<p>名字来历：<strong>B</strong>inding <strong>i</strong>mmunoglobulin <strong>P</strong>rotein —— 最初因为能结合浆细胞内质网中的免疫球蛋白重链而得名。</p>
+</blockquote>
+<hr/>
+<h2 id="一基本信息速查">一、基本信息速查<a aria-hidden="true" tabindex="-1" href="#一基本信息速查" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody><tr><td>基因</td><td><strong>HSPA5</strong>（heat shock protein family A member 5）</td></tr><tr><td>常用名</td><td>BiP / GRP78 / 78 kDa 葡萄糖调节蛋白</td></tr><tr><td>家族</td><td><strong>Hsp70 家族</strong>（与胞质 Hsc70、DnaK 同源）</td></tr><tr><td>定位</td><td><strong>内质网腔</strong>（N 端带信号肽，KDEL 锚定在腔面）</td></tr><tr><td>分子量</td><td>78 kDa，约 637 aa</td></tr><tr><td>表达</td><td><strong>组成型高表达</strong>，是 ER 中含量最丰富的蛋白之一</td></tr><tr><td>二聚化</td><td>天然为<strong>同源二聚体</strong>；功能单体为主；也可形成寡聚体</td></tr><tr><td>关键结构域</td><td>NBD（核苷酸结合域）+ SBD（底物结合域）+ <strong>lid 结构域</strong></td></tr><tr><td>核心功能</td><td>折叠催化、品质控制、转运马达、UPR 传感器</td></tr><tr><td>病理关联</td><td>肿瘤、神经退行性疾病、自身免疫病、病毒感染、代谢病</td></tr></tbody></table>
+<blockquote>
+<p><strong>易混点</strong>：BiP（GRP78）在 <strong>ER 腔</strong>；Hsc70（HSPA1A/B）在<strong>胞质</strong>。两者是同一家族不同成员，抗体不交叉识别。</p>
+</blockquote>
+<hr/>
+<h2 id="二结构三个结构域--一个盖子">二、结构：三个结构域 + 一个”盖子”<a aria-hidden="true" tabindex="-1" href="#二结构三个结构域--一个盖子" class="internal"></a></h2>
+<h3 id="21-结构域组成">2.1 结构域组成<a aria-hidden="true" tabindex="-1" href="#21-结构域组成" class="internal"></a></h3>
+<svg viewBox="0 0 700 200" width="100%" style="max-width:700px;height:auto;display:block;margin:1rem auto;" xmlns="http://www.w3.org/2000/svg">
+<text x="350" y="30" text-anchor="middle" font-size="13" stroke="none">BiP 单体（约 78 kDa）</text>
+  <g stroke="currentColor" stroke-width="1.5" fill="none">
+    <rect x="30" y="52" width="42" height="58"></rect>
+    <rect x="72" y="52" width="322" height="58"></rect>
+    <rect x="394" y="52" width="44" height="58"></rect>
+    <rect x="438" y="52" width="186" height="58"></rect>
+    <rect x="624" y="52" width="50" height="58"></rect>
+  </g>
+  <g text-anchor="middle" stroke="none">
+    <text x="51" y="78" font-size="10">信号肽</text>
+    <text x="51" y="94" font-size="8.5">~20 aa</text>
+    <text x="233" y="78" font-size="11">NBD（核苷酸结合域）</text>
+    <text x="233" y="94" font-size="8.5">~1-380 aa</text>
+    <text x="416" y="78" font-size="8">linker</text>
+    <text x="416" y="94" font-size="7.5">~380-400</text>
+    <text x="531" y="78" font-size="11">SBD（底物结合域）</text>
+    <text x="531" y="94" font-size="8.5">~400-590</text>
+    <text x="649" y="78" font-size="10">lid</text>
+    <text x="649" y="94" font-size="7.5">590-637</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" fill="none">
+    <line x1="233" y1="110" x2="233" y2="132"></line>
+    <line x1="531" y1="110" x2="531" y2="132"></line>
+    <line x1="649" y1="110" x2="649" y2="132"></line>
+  </g>
+  <g text-anchor="middle" stroke="none">
+    <text x="233" y="150" font-size="10">ATP/ADP 结合</text>
+    <text x="233" y="167" font-size="10">分子伴侣循环动力</text>
+    <text x="531" y="150" font-size="10">底物结合口袋</text>
+    <text x="531" y="167" font-size="10">结合未折叠链</text>
+    <text x="649" y="150" font-size="10">螺旋盖</text>
+    <text x="649" y="167" font-size="10">开合控制</text>
+  </g></svg>
+<p><em>上图：结构域线性排布——NBD 结合并水解 ATP 提供动力，SBD 抓未折叠链，lid 像盖子控制口袋开合。</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>结构域</th><th>主要功能</th><th>关键特征</th></tr></thead><tbody><tr><td><strong>NBD</strong>（nucleotide-binding domain）</td><td>结合并水解 ATP，提供重折叠的能量</td><td>类 actin 折叠，两叶结构，ATP 口袋夹在中间</td></tr><tr><td><strong>linker</strong></td><td>连接 NBD 与 SBD</td><td>富含谷氨酸/赖氨酸，传递构象变化</td></tr><tr><td><strong>SBD</strong>（substrate-binding domain）</td><td>结合未折叠多肽，提供”拉链”式作用力</td><td>β 折叠片层构成底物结合口袋（偏好疏水片段）</td></tr><tr><td><strong>lid</strong>（螺旋盖）</td><td>控制底物结合口袋的开放与关闭</td><td>在 <strong>α 构象（开）</strong> 与 <strong>β 构象（闭）</strong> 间切换</td></tr></tbody></table>
+<h3 id="22-盖子的构象切换--分子伴侣循环的核心">2.2 盖子的构象切换 = 分子伴侣循环的核心<a aria-hidden="true" tabindex="-1" href="#22-盖子的构象切换--分子伴侣循环的核心" class="internal"></a></h3>
+<ul>
+<li><strong>ATP 结合 → lid 处于 α 螺旋构象 → 口袋开放 → 结合底物</strong></li>
+<li><strong>ATP 水解 → lid 跌落成 β 构象 → 口袋闭合 → 夹紧底物</strong></li>
+<li><strong>ADP 释放 → ATP 换入 → lid 重新打开 → 释放底物</strong></li>
+</ul>
+<p></p><figure class="svg-figure" data-svg="bip-domain-lid-cycle.svg"><svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>BiP 的结构域组成与 lid 构象循环</title>
+<desc>BiP 由NBD、linker、SBD 和 lid 四个部分组成。ATP 结合时 lid 呈α 螺旋构象口袋开放，水解后跌落为 β 构象口袋闭合并夹紧底物，构成抓—挤—放的分子伴侣循环。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">BiP 的结构域组成与 lid 开合循环</text>
+<text class="hint" x="300" y="24">非酶类伴侣　用 ATP 反复抓挤放</text>
+
+
+<text class="lbl" x="40" y="58">结构域线性排布　N 端 → C 端</text>
+
+<rect x="40" y="68" width="600" height="30" rx="6" fill="none" stroke="#e5e7eb" stroke-width="0.5"></rect>
+
+<rect x="48" y="74" width="46" height="18" rx="4" fill="#B4B2A9"></rect>
+<text class="sm" x="71" y="87" fill="#412402" text-anchor="middle">信号肽</text>
+
+<rect x="100" y="72" width="250" height="22" rx="4" fill="#185FA5"></rect>
+<text class="sm" x="225" y="87" fill="#E6F1FB" text-anchor="middle">NBD　核苷酸结合域　结合并水解 ATP</text>
+
+<rect x="354" y="74" width="40" height="18" rx="3" fill="#8A8A85"></rect>
+<text class="sm" x="374" y="87" fill="#FFFFFF" text-anchor="middle">linker</text>
+
+<rect x="398" y="72" width="150" height="22" rx="4" fill="#0F6E56"></rect>
+<text class="sm" x="473" y="87" fill="#E1F5EE" text-anchor="middle">SBD　底物结合域</text>
+
+<rect x="552" y="72" width="80" height="22" rx="4" fill="#BA7517"></rect>
+<text class="sm" x="592" y="87" fill="#FFFFFF" text-anchor="middle">lid 螺旋盖</text>
+
+<text class="sm" x="225" y="112" fill="#0C447C" text-anchor="middle">1–380 aa　提供重折叠能量</text>
+<text class="sm" x="473" y="112" fill="#085041" text-anchor="middle">400–590 aa　结合未折叠疏水片段</text>
+<text class="sm" x="592" y="112" fill="#633806" text-anchor="middle">590–637 aa</text>
+
+
+<text class="lbl" x="40" y="148">lid 构象决定口袋开关</text>
+
+
+<rect x="40" y="158" width="186" height="150" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="182" fill="#042C53">① ATP 结合</text>
+<text class="sm" x="60" y="204" fill="#0C447C">lid 呈 α 螺旋构象</text>
+<text class="sm" x="60" y="224" fill="#0C447C">底物口袋开放</text>
+
+<path d="M110 258 L 156 258" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M110 274 L 156 274" stroke="#185FA5" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M126 288 L126 246" stroke="#185FA5" stroke-width="2" stroke-dasharray="3 3"></path>
+<text class="sm" x="133" y="270" fill="#042C53">底物进入</text>
+
+
+<rect x="247" y="158" width="186" height="150" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="267" y="182" fill="#412402">② ATP 水解</text>
+<text class="sm" x="267" y="204" fill="#633806">lid 跌落为 β 构象</text>
+<text class="sm" x="267" y="224" fill="#633806">口袋闭合　夹紧底物</text>
+<path d="M317 250 L317 282" stroke="#854F0B" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M363 250 L363 282" stroke="#854F0B" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M340 266 L340 266" stroke="#185FA5" stroke-width="3" stroke-linecap="round"></path>
+<text class="sm" x="373" y="270" fill="#412402">提供重折叠力</text>
+
+
+<rect x="454" y="158" width="186" height="150" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="474" y="182" fill="#04342C">③ ADP 换 ATP</text>
+<text class="sm" x="474" y="204" fill="#085041">lid 重新打开</text>
+<text class="sm" x="474" y="224" fill="#085041">天然态底物释放</text>
+<path d="M524 258 L 570 258" stroke="#0F6E56" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M524 274 L 570 274" stroke="#0F6E56" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M540 244 L 540 288" stroke="#0F6E56" stroke-width="2" stroke-dasharray="3 3"></path>
+<text class="sm" x="547" y="270" fill="#04342C">释放</text>
+
+
+<path d="M226 233 L245 233" stroke="#8A8A85" stroke-width="1.2" marker-end="url(#a)"></path>
+<path d="M433 233 L452 233" stroke="#8A8A85" stroke-width="1.2" marker-end="url(#a)"></path>
+<path d="M547 308 L547 322 L133 322 L133 310" fill="none" stroke="#8A8A85" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#a)"></path>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"></path>
+  </marker>
+</defs>
+<text class="sm" x="340" y="338" fill="#5c5c5a" text-anchor="middle">循环进行数十至数百次　每次消耗一个 ATP</text>
+
+
+<rect class="frame" x="40" y="348" width="600" height="34" rx="10"></rect>
+<text class="sm" x="60" y="370" fill="#5c5c5a">局部去折叠是核心原理：拔出一小段疏水片段 ΔS 为正，把整体折叠的熵障碍拆成多个小步骤</text>
+</svg>
+</figure><p></p>
+<blockquote>
+<p><strong>一句话</strong>：BiP 不是”把蛋白变好”的酶，而是<strong>用 ATP 反复”抓—挤—放”的分子钳</strong>，把错误折叠的能量拉回到正确构象。</p>
+</blockquote>
+<hr/>
+<h2 id="三分子伴侣循环与细菌-dnak-同源">三、分子伴侣循环（与细菌 DnaK 同源）<a aria-hidden="true" tabindex="-1" href="#三分子伴侣循环与细菌-dnak-同源" class="internal"></a></h2>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;ATP 结合（lid 开放）&quot;] -->|&quot;结合未折叠多肽的疏水片段&quot;| B[&quot;ATP 水解 → Pi、ADP 释放&quot;]
+    B -->|&quot;lid 闭合，夹紧底物 → 提供重折叠力&quot;| C[&quot;底物折叠到天然态&quot;]
+    C --> D[&quot;ADP 换成 ATP → lid 打开 → 释放&quot;]
+    D --> E[&quot;若仍折叠失败 → 进入 ERAD 降解&quot;]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>触发条件</th><th>分子事件</th><th>底物状态</th></tr></thead><tbody><tr><td>1</td><td>ATP 高、ADP 低</td><td>NBD 结合 ATP，lid 开放</td><td>未折叠</td></tr><tr><td>2</td><td>—</td><td>SBD 口袋捕捉疏水片段</td><td>被抓住</td></tr><tr><td>3</td><td>ATP 水解</td><td>ATP→ADP+Pi，lid 闭合</td><td>被夹紧、拉伸</td></tr><tr><td>4</td><td>—</td><td>反复循环多次，给予重折叠机会</td><td>趋于正确折叠</td></tr><tr><td>5</td><td>折叠完成</td><td>ADP 换成 ATP，lid 打开</td><td>天然态，释放</td></tr></tbody></table>
+<blockquote>
+<p><strong>消耗比</strong>：Hsp70 类伴侣平均每帮助折叠一个蛋白需要消耗<strong>数十至数百个 ATP</strong>，属于高耗能的”暴力搜索”机制。</p>
+</blockquote>
+<hr/>
+<h2 id="四bip-的四大功能">四、BiP 的四大功能<a aria-hidden="true" tabindex="-1" href="#四bip-的四大功能" class="internal"></a></h2>
+<h3 id="41-折叠催化">4.1 折叠催化<a aria-hidden="true" tabindex="-1" href="#41-折叠催化" class="internal"></a></h3>
+<ul>
+<li>天然蛋白质的折叠在水中是一个<strong>熵减</strong>过程（需要负的 ΔS），热力学上极慢。</li>
+<li>BiP 提供的解决方案是<strong>局部去折叠</strong>：抓住某一小段（5–10 个氨基酸），把它从天然结构中<strong>拔出</strong>并重新折叠。
+<ul>
+<li>这一步 ΔS 为正（解离有利），克服了熵障碍；</li>
+<li>结果是”把熵障碍拆成多个小步骤”，使折叠速度提高约 <strong>10⁴–10⁵ 倍</strong>。</li>
+</ul>
+</li>
+<li>关键概念：<strong>局部去折叠（local unfolding）</strong> 是 Hsp70 类伴侣的通用工作原理。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>参数</th><th>数值</th></tr></thead><tbody><tr><td>底物结合长度</td><td>5–10 aa（偏好疏水 + 富含脯氨酸）</td></tr><tr><td>每循环酶速</td><td>约 1 个 ATP / 1 个底物结合-释放循环</td></tr><tr><td>结合亲和力</td><td>循环中可在 ~10⁵ 范围调控</td></tr></tbody></table>
+<h3 id="42-品质控制quality-control与-erad-挂钩">4.2 品质控制（Quality Control）与 ERAD 挂钩<a aria-hidden="true" tabindex="-1" href="#42-品质控制quality-control与-erad-挂钩" class="internal"></a></h3>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;未折叠 / 错误折叠蛋白&quot;] -->|&quot;BiP 反复重折叠尝试（活性期约数小时）&quot;| B[&quot;仍然失败 → 被标记为 ER 降解信号（常为 N-甘露糖-9 聚糖·Man9GlcNAc2）&quot;]
+    B --> C[&quot;Retraction from the folding cycle&quot;]
+    C --> D[&quot;Man9 糖被糖苷酶修剪（Mannose-9 trimming）&quot;]
+    D --> E[&quot;被全聚糖修饰 → Man9GlcNAc2 变 Man9GlcNAc2Man9GlcNAc2&quot;]
+    E --> F[&quot;ERAD 复合体识别（OS-9、ERLIN1、EDEM1/2/3、p97/VCP）&quot;]
+    F --> G[&quot;Sec61 逆转位 → 泛素化 → 蛋白酶体降解&quot;]
+</code></pre>
+<ul>
+<li>ERAD 的核心机制是<strong>错误折叠蛋白的”滞留 + 退回”</strong>。</li>
+<li><strong>Man9 修剪级联</strong>是决定”折叠还是降解”的时间开关：滞留时间越长，Man9 修剪越多，越可能被送去降解。</li>
+<li>一旦启动降解，<strong>伴侣不能再帮忙</strong>——这被称为 <strong>retraction from the folding cycle</strong>。</li>
+</ul>
+<h3 id="43-蛋白质转位translocation">4.3 蛋白质转位（Translocation）<a aria-hidden="true" tabindex="-1" href="#43-蛋白质转位translocation" class="internal"></a></h3>
+<p>BiP 是<strong>内质网共翻译转位系统的动力来源</strong>：</p>
+<pre><code class="mermaid">flowchart LR
+    A[&quot;核糖体&quot;] --> B[&quot;生长中的多肽&quot;] --> C[&quot;信号肽&quot;] --> D[&quot;Sec61 通道&quot;] --> E[&quot;ER 腔&quot;]
+    B -->|&quot;N 端先进入，被 BiP 抓住&quot;| F[&quot;BiP 结合 N 端新生肽&quot;]
+    F -->|&quot;ATP 水解循环&quot;| G[&quot;拉拽 · 偶联通道易位&quot;]
+    G --> E
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>环节</th><th>细节</th></tr></thead><tbody><tr><td>启动</td><td>信号肽被 <strong>SRP</strong> 识别，核糖体被导向 Sec61 通道</td></tr><tr><td>动力</td><td>BiP（SRP 的”分子对应物”）结合信号肽，通过 ATP 水解把多肽拉入腔内</td></tr><tr><td>拉入方向</td><td>BiP 通过 <strong>BIPAR（BAX inhibitor factor 1 样蛋白）</strong>、RAMP4 与膜连接</td></tr><tr><td>方向性</td><td>每次 ATP 水解净推进 <strong>约 2–3 个氨基酸</strong></td></tr><tr><td>高度保守</td><td>细菌 SecYEG 的同源马达是 DnaK + SecD/F，<strong>机制完全一致</strong></td></tr></tbody></table>
+<blockquote>
+<p><strong>演化意义</strong>：细菌 SecYEG 转位 + DnaK 马达，与真核 Sec61 + BiP 是同一套零件的不同组装。<strong>这个机制从细菌一直用到哺乳动物细胞。</strong></p>
+</blockquote>
+<h3 id="44-upr-传感器最核心的调控功能见下节">4.4 UPR 传感器（最核心的调控功能，见下节）<a aria-hidden="true" tabindex="-1" href="#44-upr-传感器最核心的调控功能见下节" class="internal"></a></h3>
+<hr/>
+<h2 id="五bip-与-upr折叠需求量的传感器">五、BiP 与 UPR：折叠需求量的”传感器”<a aria-hidden="true" tabindex="-1" href="#五bip-与-upr折叠需求量的传感器" class="internal"></a></h2>
+<h3 id="51-核心模型">5.1 核心模型<a aria-hidden="true" tabindex="-1" href="#51-核心模型" class="internal"></a></h3>
+<p><strong>BiP 的结合位点是有限的</strong>。它必须同时扮演两个角色：</p>
+<ol>
+<li><strong>给错误折叠蛋白提供折叠帮助</strong></li>
+<li><strong>与三个 UPR 感受器的腔内结构域结合，抑制它们</strong></li>
+</ol>
+<p>因此 BiP 本身就像一个”<strong>分子音量旋钮</strong>“：</p>
+<pre><code class="mermaid">flowchart TD
+    A[&quot;错误折叠蛋白少&quot;] --> B[&quot;BiP 充裕&quot;]
+    B --> C[&quot;感受器被 BiP 死死拉住&quot;]
+    C --> D[&quot;UPR 关闭&quot;]
+    D -->|&quot;错误折叠蛋白堆积&quot;| E[&quot;BiP 被抢走去帮折叠&quot;]
+    E --> F[&quot;感受器获得自由&quot;]
+    F --> G[&quot;UPR 开启&quot;]
+    G --> H[&quot;停止翻译、降解 mRNA（快速）&quot;]
+    G --> I[&quot;增加伴侣、折叠酶表达（中等）&quot;]
+    G --> J[&quot;若无法缓解 → 凋亡（CHOP）&quot;]
+    H --> K[&quot;细胞存活与适应&quot;]
+    I --> K
+</code></pre>
+<p></p><figure class="svg-figure" data-svg="bip-upr-sensor.svg"><svg viewBox="0 0 680 470" xmlns="http://www.w3.org/2000/svg" class="inlined-svg" preserveAspectRatio="xMidYMid meet">
+<title>BiP 作为 UPR 感受器的占有率模型</title>
+<desc>BiP 结合位点有限，必须同时帮助错误折叠蛋白并抑制 PERK、ATF6、IRE1。错误折叠蛋白堆积会占用 BiP，使三个感受器获得自由并启动三条 UPR 支路，分别导向适应或 CHOP 介导的凋亡。</desc>
+<style>
+  text { font-family: var(--bodyFont, sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: #1f2937; }
+  .lbl { font-size: 12px; fill: #4b5563; }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: #6b7280; }
+  .frame { fill: none; stroke: #e5e7eb); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">BiP 是 UPR 的分子音量旋钮</text>
+<text class="hint" x="256" y="24">UPR 检测的不是错误折叠蛋白本身，而是 BiP 被占用的程度</text>
+
+
+<rect x="40" y="40" width="600" height="92" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="64" fill="#04342C">未应激　BiP 充裕</text>
+<text class="sm" x="196" y="64" fill="#085041">感受器被 BiP 死死拉住　UPR 关闭</text>
+
+<circle cx="132" cy="98" r="21" fill="#0F6E56"></circle>
+<text class="sm" x="132" y="102" fill="#FFFFFF" text-anchor="middle">BiP</text>
+
+<text class="sm" x="164" y="94" fill="#085041">被三个感受器占住　无法去帮折叠</text>
+<text class="sm" x="164" y="114" fill="#085041">BiP 仍有剩余容量处理少量错误折叠蛋白</text>
+
+<rect x="420" y="72" width="86" height="26" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="463" y="89" fill="#412402" text-anchor="middle">PERK　静默</text>
+<rect x="516" y="72" width="104" height="26" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="sm" x="568" y="89" fill="#412402" text-anchor="middle">ATF6　滞留 ER</text>
+
+
+<text class="sm" x="340" y="156" fill="#8A8A85" text-anchor="middle">错误折叠蛋白堆积　BiP 被抢走</text>
+<line x1="340" y1="132" x2="340" y2="176" stroke="#8A8A85" stroke-width="1.2" marker-end="url(#a)"></line>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"></path>
+  </marker>
+</defs>
+
+
+<rect x="40" y="182" width="600" height="238" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="60" y="206" fill="#412402">应激　感受器获得自由　UPR 开启</text>
+
+<circle cx="86" cy="238" r="21" fill="#185FA5"></circle>
+<text class="sm" x="86" y="242" fill="#FFFFFF" text-anchor="middle">BiP</text>
+<text class="sm" x="120" y="234" fill="#0C447C">全部投入折叠与转运</text>
+<text class="sm" x="120" y="252" fill="#0C447C">结合位点被占满</text>
+
+
+<rect x="60" y="268" width="176" height="88" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"></rect>
+<text class="ttl" x="76" y="290" fill="#042C53">ATF6　最快</text>
+<text class="sm" x="76" y="312" fill="#0C447C">转运至高尔基体</text>
+<text class="sm" x="76" y="330" fill="#0C447C">被 S1P　S2P 切开</text>
+<text class="sm" x="76" y="348" fill="#0C447C">入核激活 ERQC 基因</text>
+
+<rect x="252" y="268" width="176" height="88" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="ttl" x="268" y="290" fill="#04342C">IRE1　中等</text>
+<text class="sm" x="268" y="312" fill="#085041">剪接 XBP1 mRNA</text>
+<text class="sm" x="268" y="330" fill="#085041">移码产生 XBP1s</text>
+<text class="sm" x="268" y="348" fill="#085041">过强时 TRAF2 促凋亡</text>
+
+<rect x="444" y="268" width="176" height="88" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"></rect>
+<text class="ttl" x="460" y="290" fill="#412402">PERK　最慢</text>
+<text class="sm" x="460" y="312" fill="#633806">磷酸化 eIF2α</text>
+<text class="sm" x="460" y="330" fill="#633806">抑制全局翻译</text>
+<text class="sm" x="460" y="348" fill="#633806">逃逸翻译 ATF4　CHOP</text>
+
+<line x1="148" y1="356" x2="148" y2="376" stroke="#0F6E56" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a)"></line>
+<line x1="340" y1="356" x2="340" y2="376" stroke="#0F6E56" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a)"></line>
+<line x1="532" y1="356" x2="532" y2="376" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a)"></line>
+
+<rect x="60" y="380" width="368" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"></rect>
+<text class="sm" x="244" y="399" fill="#04342C" text-anchor="middle">一过性应激　CHOP 短时表达　细胞适应存活</text>
+
+<rect x="444" y="380" width="176" height="30" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"></rect>
+<text class="sm" x="532" y="399" fill="#8C1D18" text-anchor="middle">持续应激　凋亡</text>
+
+<text class="hint" x="40" y="446">增殖细胞对 PERK 支路更敏感　不增殖细胞中 UPR 倾向于降级为纯适应反应</text>
+<text class="hint" x="40" y="464">BiP 高表达既是保护机制也是肿瘤标志　预后判断需结合表达强度与持续时间</text>
+</svg>
+</figure><p></p>
+<blockquote>
+<p><strong>核心命题</strong>：UPR 不是”检测到错误折叠蛋白”，而是<strong>检测”BiP 被占用掉了”</strong>——这是一个<strong>分子水平的占有率传感器</strong>，而非”错误折叠传感器”。</p>
+</blockquote>
+<h3 id="52-三条-upr-支路详解">5.2 三条 UPR 支路详解<a aria-hidden="true" tabindex="-1" href="#52-三条-upr-支路详解" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>感受器</th><th>位于</th><th>激活后事件</th><th>初始响应速度</th></tr></thead><tbody><tr><td><strong>PERK</strong>（PKR-like ER kinase）</td><td>ER 膜</td><td>二聚化自磷酸化 → 磷酸化 <strong>eIF2α</strong> → 抑制翻译起始</td><td>慢（分钟级）</td></tr><tr><td><strong>ATF6</strong></td><td>ER 膜</td><td>转运到高尔基体，被 <strong>S1P/S2P</strong> 蛋白酶切开 → 入核</td><td><strong>最快（秒~分钟）</strong></td></tr><tr><td><strong>IRE1</strong></td><td>ER 膜</td><td>寡聚化 → 内切核酸酶活性 → <strong>XBP1 mRNA 可变剪接</strong></td><td>中等</td></tr></tbody></table>
+<h4 id="1atf6-通路最先响起的警报">（1）ATF6 通路：最先响起的警报<a aria-hidden="true" tabindex="-1" href="#1atf6-通路最先响起的警报" class="internal"></a></h4>
+<ul>
+<li>未应激时，ATF6 与 BiP 结合，滞留在 ER 膜。</li>
+<li>应激时 BiP 被抽走 → ATF6 变成 <strong>高尔基体驻留信号</strong> → 被包装进 COPII 囊泡 → 运到高尔基体 → 被 <strong>site-1 protease (S1P)</strong> 与 <strong>site-2 protease (S2P)</strong> 双切 → N 片段入核。</li>
+<li>核内 ATF6 与 <strong>NF-Y</strong> 结合，激活 BiP、蛋白二硫键异构酶（PDI）、ERp57、钙网蛋白等 <strong>ERQC 基因</strong>的转录。</li>
+</ul>
+<h4 id="2ire1-通路把信息剪接进-mrna">（2）IRE1 通路：把信息”剪接”进 mRNA<a aria-hidden="true" tabindex="-1" href="#2ire1-通路把信息剪接进-mrna" class="internal"></a></h4>
+<ul>
+<li>IRE1 是<strong>唯一的 RNA 内切核酸酶</strong>，切的是自己 mRNA。</li>
+<li>剪切 <strong>XBP1 mRNA</strong> 引发 <strong>+1 移码（frameshift）</strong>，去掉一段 26 nt 内含子，成熟 XBP1 蛋白比未剪接的长 <strong>50 个氨基酸</strong>。</li>
+<li>这个多出来的片段形成一个新的 C 末端结构域，让 XBP1 成为一个<strong>转录因子</strong>（记忆犹新：mRNA 序列本身就编码了蛋白质功能的变化，非常巧妙）。</li>
+<li>XBP1s 激活 BiP、EDEM1、HERD 等质量控制与脂质合成基因。</li>
+<li><strong>过强时</strong>：IRE1 还能通过 <strong>TRAF2–ASK1–JNK</strong> 通路促进凋亡（临床正在研究 IRE1 激酶抑制剂）。</li>
+</ul>
+<h4 id="3perk-通路减产量--决定生死">（3）PERK 通路：减产量 + 决定生死<a aria-hidden="true" tabindex="-1" href="#3perk-通路减产量--决定生死" class="internal"></a></h4>
+<ul>
+<li>PERK 自磷酸化后磷酸化 <strong>eIF2α</strong>（真核起始因子 2α）。</li>
+<li>eIF2α 磷酸化 → 无法再生 ternary complex（tRNA-GTP-GTP-tRNA 三元复合体）→ <strong>全局翻译抑制</strong>。</li>
+<li>同时，少数 mRNA 逃逸翻译抑制并被翻译：
+<ul>
+<li><strong>ATF4</strong> → 应激适应（上调 BiP、氨基酸转运体、抗氧化）；</li>
+<li>ATF4 → <strong>CHOP (DDIT3)</strong> → 若持续表达，则启动凋亡。</li>
+</ul>
+</li>
+</ul>
+<h4 id="chopupr-从适应走向死亡的开关">CHOP：UPR 从”适应”走向”死亡”的开关<a aria-hidden="true" tabindex="-1" href="#chopupr-从适应走向死亡的开关" class="internal"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>通路</th><th>机制</th><th>结果</th></tr></thead><tbody><tr><td>CHOP → JNK</td><td>激活 JNK → 抑制 Bcl-2</td><td>促凋亡</td></tr><tr><td>CHOP → Bim / Noxa</td><td>上调 BH3-only 蛋白</td><td>线粒体外膜通透化</td></tr><tr><td>CHAP1 转位</td><td>CHOP-CHAP1 复合物入核，抑制 Bcl-2</td><td>阻断抗凋亡</td></tr><tr><td>CHOP → GADD34 → 反馈</td><td>去磷酸化 eIF2α</td><td><strong>负反馈，恢复翻译</strong></td></tr></tbody></table>
+<blockquote>
+<p><strong>关键反直觉点</strong>：<strong>细胞不增殖时，UPR 倾向于被”降级”为适应反应</strong>；只有在**快速增殖的细胞（如肿瘤）**中，持续的 eIF2α 抑制才会触发 CHOP 凋亡。这解释了为什么 UPR 既能救细胞也能杀细胞。</p>
+</blockquote>
+<hr/>
+<h2 id="六bip-的其他生物学角色">六、BiP 的其他生物学角色<a aria-hidden="true" tabindex="-1" href="#六bip-的其他生物学角色" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>角色</th><th>说明</th><th>临床/研究意义</th></tr></thead><tbody><tr><td><strong>细胞表面表达</strong></td><td>BiP 可异常转位到细胞膜外表面（CS-BiP）</td><td>肿瘤标志物；CD91/α2M 受体；镰状细胞病、单核细胞疟疾受体</td></tr><tr><td><strong>受体激活</strong></td><td>与 Par-1、α2-巨球蛋白、Cripto/TFPI 相互作用</td><td>与细胞增殖、血管生成相关</td></tr><tr><td><strong>肿瘤中的高表达</strong></td><td>肿瘤细胞依赖 BiP 存活；BiP 高表达预后差</td><td>抗 GRP78 抗体单抗（如 MAb159）、BTP-2 抑制剂</td></tr><tr><td><strong>神经保护</strong></td><td>神经元 BiP 抑制可致 ER 应激过度 → 细胞死亡；BiP 上调保护</td><td>帕金森病、阿尔茨海默病、亨廷顿病</td></tr><tr><td><strong>病毒入侵受体</strong></td><td>多种病毒（HCV、Zika、SFV、登革）在内质网组装时依赖 GRP78</td><td>抗病毒药物靶点</td></tr><tr><td><strong>肠道屏障</strong></td><td>调控上皮通透性与紧密连接</td><td>炎症性肠病</td></tr><tr><td><strong>发育与胚胎</strong></td><td>小鼠 BiP 敲除胚胎致死；BiP 过表达可提高细胞耐受性</td><td>生物工程（工业细胞株抗 ER 应激改造）</td></tr><tr><td><strong>金属离子结合</strong></td><td>C 端 MEEVD 尾可结合 Zn²⁺</td><td>与蛋白质折叠、酶活性调节</td></tr></tbody></table>
+<hr/>
+<h2 id="七bip-的调控">七、BiP 的调控<a aria-hidden="true" tabindex="-1" href="#七bip-的调控" class="internal"></a></h2>
+<h3 id="71-转录与翻译水平">7.1 转录与翻译水平<a aria-hidden="true" tabindex="-1" href="#71-转录与翻译水平" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>层面</th><th>机制</th></tr></thead><tbody><tr><td><strong>启动子</strong></td><td>ER 应激元件 <strong>ERSE (ER stress response element, CCAAT-n9-ATTCC)</strong> 与 NF-Y、ATF6 协同激活</td></tr><tr><td><strong>mRNA 稳定性</strong></td><td>mRNA 稳定序列 <strong>+ORF (+downstream ORF)</strong> 使 BiP mRNA 在未应激时翻译效率低，应激时解除抑制</td></tr><tr><td><strong>蛋白稳定性</strong></td><td>BiP 自身周转快（半衰期约 12–24 h），需持续合成以维持稳态</td></tr><tr><td><strong>蛋白水解</strong></td><td>被 <strong>EGTA、G325E 突变</strong>改变；也可被泛素-蛋白酶体降解</td></tr><tr><td><strong>亚细胞定位</strong></td><td>KDEL 依赖回收；也可与前体蛋白竞争 Sec61</td></tr></tbody></table>
+<blockquote>
+<p><strong>BiP mRNA 的 +ORF 机制很值得记</strong>：mRNA 上游框 (uORF) 在未应激时抑制下游 BiP 编码序列的翻译，应激时 PERK 抑制翻译但 uORF 起始占优势下降，BiP 得以翻译——这是一个<strong>精巧的”翻译层”开关</strong>。</p>
+</blockquote>
+<h3 id="72-药理学干预">7.2 药理学干预<a aria-hidden="true" tabindex="-1" href="#72-药理学干预" class="internal"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>化合物</th><th>靶点</th><th>作用</th></tr></thead><tbody><tr><td><strong>BTP-2</strong>（seratrodast）</td><td>GRP78 的 <strong>NB 域 ATP 酶位点</strong></td><td>抑制 BiP 的伴侣活性与 UPR，诱导肿瘤凋亡</td></tr><tr><td>16F16</td><td>GRP78 抑制剂</td><td>抗肿瘤</td></tr><tr><td><strong>HS-72</strong></td><td>GRP78 抑制剂</td><td>抗肿瘤</td></tr><tr><td>抗 GRP78 抗体</td><td>细胞表面 BiP</td><td>抗体依赖细胞毒杀伤</td></tr><tr><td>IRE1 激酶抑制剂</td><td>IRE1</td><td>阻断 JNK 凋亡通路</td></tr></tbody></table>
+<hr/>
+<h2 id="八实验方法如何研究-bip">八、实验方法：如何研究 BiP<a aria-hidden="true" tabindex="-1" href="#八实验方法如何研究-bip" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>用途</th><th>注意事项</th></tr></thead><tbody><tr><td><strong>免疫荧光（抗 BiP/GRP78）</strong></td><td>观察 ER 形态、BiP 表达上调</td><td>BiP 过度表达时 ER 扩张；细胞表面染色需特殊固定</td></tr><tr><td><strong>Western blot（抗 BiP）</strong></td><td>检测 BiP 蛋白水平（≈ 78 kDa 带）</td><td>必须用能区分 BiP 与 Hsc70 的特异性抗体</td></tr><tr><td><strong>免疫沉淀（IP BiP）</strong></td><td>拉下 BiP 结合的底物 → 质谱鉴定”BiP interactome”</td><td>交联（DSP/DSG）可捕获瞬时互作</td></tr><tr><td><strong>交联质谱（XL-MS）</strong></td><td>解析 BiP 底物谱与 UPR 复合物</td><td>依赖交联剂类型与位点鉴定</td></tr><tr><td><strong>BiP ATPase 活性测定</strong></td><td>用荧光底物或 NADPH 氧化酶偶联法</td><td>需无 ATP 的纯化蛋白</td></tr><tr><td><strong>内质网应激诱导剂</strong></td><td>Thapsigargin（SERCA 抑制剂）、Tunicamycin（GlcNAc2-ER 阻断 N-糖基化）、DTT、2-ME</td><td><strong>Tunicamycin 是 N-糖基化最佳模型</strong>，Thapsigargin 是急性 Ca²⁺ 耗竭</td></tr><tr><td><strong>BiP 过表达</strong></td><td>工业细胞株抗逆改造（抗体产量提升）</td><td>需电转，电击效率影响大</td></tr><tr><td><strong>ChIP-qPCR</strong></td><td>观察 ATF6/XBP1 在 BiP 启动子上的结合</td><td>XBP1s 结合位点与 ATF6 不同</td></tr></tbody></table>
+<blockquote>
+<p><strong>实验陷阱</strong>：BiP 是 ER 最丰富的蛋白之一，IP 背景极高。<strong>Co-IP 必须做 IgG 对照 + 用 BiP 敲低或 ATP 缺失突变体（如 D119A）做特异性验证。</strong></p>
+</blockquote>
+<hr/>
+<h2 id="九常见误区澄清">九、常见误区澄清<a aria-hidden="true" tabindex="-1" href="#九常见误区澄清" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>误区</th><th>纠正</th></tr></thead><tbody><tr><td>❌ “BiP 是酶，能催化折叠”</td><td>✅ BiP 是<strong>非酶类伴侣</strong>。真正的折叠酶是 PDI（异构化二硫键）、肽基脯氨酰异构酶（FKBP、cyclophilin）。BiP 提供的是<strong>物理力（binding + 局部去折叠）</strong></td></tr><tr><td>❌ “BiP 和 Hsc70 是一回事”</td><td>✅ 同家族不同基因。<strong>BiP = HSPA5（ER）</strong>；Hsc70 = HSPA1A/1B（胞质）；Bip 的 B 常用语也被引申到 <strong>Bcl-2-interacting mediator of cell death (Bim)</strong>，注意不要混</td></tr><tr><td>❌ “UPR 是被错误折叠蛋白”激活的</td><td>✅ 更准确说是被 <strong>BiP 占有率下降</strong>激活的。三个感受器（PERK、ATF6、IRE1）直接由 BiP 感知</td></tr><tr><td>❌ “BiP 越高越好”</td><td>✅ 适度上调是保护；长期上调（如肿瘤）反而预后差。BiP 是 <strong>UPR 双刃剑</strong></td></tr><tr><td>❌ “GRP78 和 BiP 是两个蛋白”</td><td>✅ 同一蛋白的不同历史命名</td></tr><tr><td>❌ “Hsp70 只在应激时表达”</td><td>✅ 伴侣蛋白多为<strong>组成型高表达</strong>，应激只是进一步上调。BiP 甚至在无应激时就是 ER 最丰富的蛋白</td></tr></tbody></table>
+<hr/>
+<h2 id="十要点速记">十、要点速记<a aria-hidden="true" tabindex="-1" href="#十要点速记" class="internal"></a></h2>
+<blockquote>
+<p><strong>BiP = ER 里的 Hsp70 = UPR 的开关</strong></p>
+<ol>
+<li><strong>结构</strong>：NBD（水解 ATP）+ SBD（抓底物）+ lid（开合控制）</li>
+<li><strong>循环</strong>：ATP 结合→开口抓→水解→闭口夹→换 ATP→放人</li>
+<li><strong>四大功能</strong>：折叠催化、品质控制、转位马达、UPR 传感器</li>
+<li><strong>UPR 三支</strong>：ATF6（最快，入高尔基体切开）、IRE1（剪 XBP1 mRNA）、PERK（磷酸化 eIF2α，→ ATF4 → CHOP）</li>
+<li><strong>生死分岔</strong>：CHOP 持续表达 → 凋亡；一过性 → 适应</li>
+<li><strong>一个原理</strong>：局部去折叠 = 把大熵障拆成小步骤</li>
+</ol>
+</blockquote>
+<hr/>
+<h2 id="附关键缩写对照">附：关键缩写对照<a aria-hidden="true" tabindex="-1" href="#附关键缩写对照" class="internal"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>缩写</th><th>全称</th><th>说明</th></tr></thead><tbody><tr><td><strong>BiP</strong></td><td>Binding immunoglobulin protein</td><td>别称 GRP78、78 kDa 葡萄糖调节蛋白</td></tr><tr><td><strong>HSPA5</strong></td><td>Heat shock protein family A member 5</td><td>BiP 的基因名</td></tr><tr><td><strong>UPR</strong></td><td>Unfolded protein response</td><td>未折叠蛋白反应</td></tr><tr><td><strong>ERAD</strong></td><td>ER-associated degradation</td><td>内质网相关降解</td></tr><tr><td><strong>NBD / SBD</strong></td><td>Nucleotide-binding / Substrate-binding domain</td><td>核苷酸结合域 / 底物结合域</td></tr><tr><td><strong>NEF</strong></td><td>Nucleotide exchange factor</td><td>核苷交换因子（如 BAP）</td></tr><tr><td><strong>UPR sensors</strong></td><td>PERK / ATF6 / IRE1</td><td>三个内质网膜感受器</td></tr><tr><td><strong>eIF2α</strong></td><td>Eukaryotic translation initiation factor 2α</td><td>被 PERK 磷酸化以抑制翻译</td></tr><tr><td><strong>CHOP</strong></td><td>C/EBP homologous protein (DDIT3)</td><td>UPR 促凋亡转录因子</td></tr><tr><td><strong>XBP1s</strong></td><td>X-box binding protein 1, spliced</td><td>IRE1 剪接后的成熟 XBP1</td></tr><tr><td><strong>PDI</strong></td><td>Protein disulfide isomerase</td><td>二硫键异构折叠酶</td></tr><tr><td><strong>S1P / S2P</strong></td><td>Site-1 / Site-2 protease</td><td>高尔基体蛋白酶，切 ATF6</td></tr><tr><td><strong>EDEM</strong></td><td>ER degradation-enhancing mannosidase-like</td><td>ERAD 中的甘露糖酶</td></tr><tr><td><strong>p97 / VCP</strong></td><td>Valosin-containing protein</td><td>ERAD 中从膜上抽出底物的 ATP 酶</td></tr><tr><td><strong>GRP94</strong></td><td>Glucose-regulated protein 94</td><td>ER 另一大 Hsp90，与 BiP 协同</td></tr><tr><td><strong>CNX / CRT</strong></td><td>Calnexin / Calreticulin</td><td>钙伴侣，参与 N-糖基化折叠循环</td></tr></tbody></table>
+<hr/>
+<h2 id="相关笔记">相关笔记<a aria-hidden="true" tabindex="-1" href="#相关笔记" class="internal"></a></h2>
+<ul>
+<li><a href="../../细胞生物学/知识点/膜电位" class="internal">膜电位</a> —— 跨膜转运与电化学梯度</li>
+<li><a href="../../细胞生物学/知识点/GLUT" class="internal">GLUT</a> —— 膜转运体家族</li>
+<li><a href="../../细胞生物学/知识点/AQP" class="internal">AQP</a> —— 通道蛋白家族</li>
+<li><a href="../../细胞生物学/知识点/单抗" class="internal">单抗</a> —— 抗体制备（可用于开发抗 BiP 抗体）</li>
+<li><a href="../../细胞生物学/知识点/动态方法" class="internal">动态方法</a> —— 活细胞成像与动态研究技术</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>双向链接图谱</h3><svg class="zoom-btn" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大图谱"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.7,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.4,&quot;linkDistance&quot;:18,&quot;fontSize&quot;:0.5,&quot;opacityScale&quot;:1.5}"></div></div><div class="zoom-overlay" id="global-graph-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:1,&quot;repelForce&quot;:0.7,&quot;centerForce&quot;:0.35,&quot;linkDistance&quot;:45,&quot;fontSize&quot;:0.7,&quot;opacityScale&quot;:1.5}"></div></div></div></div><div class="markmap-wrapper"><h3>思维导图</h3><svg class="zoom-btn" id="markmap-zoom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="button" aria-label="放大思维导图"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg><div id="markmap-container" class="markmap-container"></div><div class="zoom-overlay" id="markmap-zoom-outer"><div class="zoom-overlay-inner"><div class="zoom-overlay-body" id="markmap-zoom-body"></div></div></div></div></div></div><footer><hr/><p>Powered by GLM-5.2, Kimi 2.6 and Seed 2.1</p><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.8</a>, © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer><div class="timer-float"><div class="timer-ball">25:00</div><div class="timer-panel"><div class="timer-header"><span class="timer-title">⏱️ 计时器</span><button class="timer-close">×</button></div><div class="timer-progress"><div class="timer-progress-bar"></div></div><div class="timer-display"><div class="timer-time">25:00</div><div class="timer-mode">专注模式</div></div><div class="timer-modes"><button class="timer-mode-btn active" data-mode="pomodoro">专注</button><button class="timer-mode-btn" data-mode="shortBreak">短休息</button><button class="timer-mode-btn" data-mode="longBreak">长休息</button><button class="timer-mode-btn" data-mode="custom">自定义</button></div><div class="timer-custom"><label>自定义时长（分钟）</label><input type="number" value="25" min="1" max="120"/></div><div class="timer-controls"><button class="timer-btn start">开始</button><button class="timer-btn reset">重置</button></div></div></div><div class="todo-float" data-spa-preserve="true" id="todo-component"><div class="todo-ball">待办</div><div class="todo-panel"><div class="todo-header"><span class="todo-title">待办事项</span><button class="todo-close">×</button></div><div class="todo-input-container"><input type="text" class="todo-input" placeholder="添加待办..."/><button class="todo-add-btn">添加</button></div><div class="todo-list"></div></div></div></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+// ===== 科学示意图渲染（Mermaid + SMILES）=====
+// 由 quartz/plugins/transformers/scienceDiagrams.ts 注入。
+// 约定：渲染失败时**不要**动原始文本，用户至少还能读到内容。
+
+const DIAGRAM_MERMAID_URLS = [
+  'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://unpkg.com/mermaid@11.12.0/dist/mermaid.esm.min.mjs',
+  'https://esm.sh/mermaid@11.12.0',
+]
+
+const DIAGRAM_SMILES_URLS = [
+  'https://cdn.jsdelivr.net/npm/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+  'https://unpkg.com/smiles-drawer@2.1.7/dist/smiles-drawer.min.js',
+]
+
+function diagramIsDark() {
+  return document.documentElement.getAttribute('saved-theme') === 'dark'
+}
+
+function diagramTheme() {
+  return diagramIsDark() ? 'dark' : 'light'
+}
+
+// ---------- Mermaid ----------
+
+let mermaidPromise = null
+let mermaidInitedTheme = null
+
+function loadMermaid() {
+  if (mermaidPromise) return mermaidPromise
+  mermaidPromise = (async () => {
+    for (const url of DIAGRAM_MERMAID_URLS) {
+      try {
+        const mod = await import(url)
+        return mod.default ?? mod
+      } catch (err) {
+        console.warn('[mermaid] CDN 失败，换下一个源：', url, err)
+      }
+    }
+    console.warn('[mermaid] 所有 CDN 都没加载成功')
+    return null
+  })()
+  return mermaidPromise
+}
+
+async function renderMermaid() {
+  const nodes = Array.from(document.querySelectorAll('code.mermaid'))
+  if (nodes.length === 0) return
+
+  const mermaid = await loadMermaid()
+  if (!mermaid) {
+    nodes.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramTheme()
+  if (mermaidInitedTheme !== theme) {
+    const dark = theme === 'dark'
+    // 透明底 + 透明节点：不画白框，切换主题时不会出现“白底白字”。
+    // 文字/连线的颜色按当前主题给，主题切换时由下面的 MutationObserver 重渲染。
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'loose',
+      theme: 'base',
+      themeVariables: {
+        darkMode: dark,
+        background: 'transparent',
+        primaryColor: 'transparent',
+        mainBkg: 'transparent',
+        secondaryColor: 'transparent',
+        tertiaryColor: 'transparent',
+        primaryTextColor: dark ? '#f8fafc' : '#0f172a',
+        textColor: dark ? '#f8fafc' : '#0f172a',
+        primaryBorderColor: dark ? '#cbd5e1' : '#334155',
+        nodeBorder: dark ? '#cbd5e1' : '#334155',
+        lineColor: dark ? '#cbd5e1' : '#334155',
+        clusterBkg: 'transparent',
+        clusterBorder: dark ? '#64748b' : '#cbd5e1',
+        edgeLabelBackground: 'transparent',
+        fontSize: '16px',
+      },
+      fontFamily: 'var(--bodyFont)',
+    })
+    mermaidInitedTheme = theme
+  }
+
+  for (const el of nodes) {
+    // 首次渲染从文本里取源码；之后（换主题）从 dataset 取，
+    // 因为渲染完 innerHTML 已经被换成 SVG 了。
+    const src = el.dataset.diagramSrc || el.textContent || ''
+    el.dataset.diagramSrc = src
+    if (el.dataset.renderedTheme === theme) {
+      if (el.querySelector('svg')) continue
+    }
+
+    try {
+      const id = 'mmd-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
+      const result = await mermaid.render(id, src)
+      el.innerHTML = result.svg
+      el.dataset.renderedTheme = theme
+      el.classList.remove('diagram-failed')
+      normalizeMermaid(el.querySelector('svg'))
+    } catch (err) {
+      console.warn('[mermaid] 渲染失败，保留源码：', err)
+      el.textContent = src
+      el.dataset.renderedTheme = ''
+      el.classList.add('diagram-failed')
+    }
+  }
+}
+
+// ---------- SMILES（Obsidian Chem 语法）----------
+
+let smilesPromise = null
+
+function loadScriptOnce(url) {
+  return new Promise((resolve) => {
+    const s = document.createElement('script')
+    s.src = url
+    s.async = true
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+}
+
+function loadSmilesDrawer() {
+  if (window.SmilesDrawer) {
+    if (window.SmilesDrawer.Drawer) return Promise.resolve(window.SmilesDrawer)
+  }
+  if (smilesPromise) return smilesPromise
+  smilesPromise = (async () => {
+    for (const url of DIAGRAM_SMILES_URLS) {
+      const ok = await loadScriptOnce(url)
+      if (ok) {
+        if (window.SmilesDrawer) {
+          if (window.SmilesDrawer.Drawer) return window.SmilesDrawer
+        }
+      }
+    }
+    console.warn('[smiles] SmilesDrawer 加载失败')
+    return null
+  })()
+  return smilesPromise
+}
+
+function drawSmilesLine(SD, line, host, theme, width, height, onError) {
+  SD.parse(
+    line,
+    (tree) => {
+      try {
+        // ⚠️ 2.1.7 的 UMD 包有 bug：Drawer.drawCanvas 内部引用不存在的 this.svgDrawer，
+        // 走 canvas 必炸（drawCanvas is not a function / 读 undefined 的 draw）。
+        // 能用的是 SvgDrawer.draw(tree, svg, theme, null, false) —— 注意第 4 个参数
+        // 必须是 null（weights），传 false 会让内部的 svgWrapper 不初始化。
+        // 直接画成 SVG 也更清晰：矢量图，缩放不糊，还能继承主题配色。
+        const drawer = new SD.SvgDrawer({
+          width: width,
+          height: height,
+          bondThickness: 1.1,
+          padding: 12,
+          terminalCarbons: true,
+        })
+        const NS = 'http://www.w3.org/2000/svg'
+        const svg = document.createElementNS(NS, 'svg')
+        svg.setAttribute('xmlns', NS)
+        svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height)
+        svg.setAttribute('width', '100%')
+        svg.setAttribute('height', String(height))
+        drawer.draw(tree, svg, theme, null, false)
+        svg.style.maxWidth = '100%'
+        svg.style.height = 'auto'
+        host.appendChild(svg)
+      } catch (err) {
+        onError(err)
+      }
+    },
+    onError,
+  )
+}
+
+async function renderSmiles() {
+  const blocks = Array.from(document.querySelectorAll('code.smiles-diagram'))
+  if (blocks.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    blocks.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+
+  for (const code of blocks) {
+    const pre = code.parentElement
+    if (!pre) continue
+
+    const src = code.dataset.diagramSrc || code.textContent || ''
+    code.dataset.diagramSrc = src
+    const lines = src
+      .split('\n')
+      .map((s) => s.trim())
+      .filter((s) => !(!s.length || s.startsWith('#')))
+
+    let wrap = pre.nextElementSibling
+    if (!wrap) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    if (!wrap.classList.contains('smiles-diagram-wrap')) {
+      wrap = document.createElement('div')
+      wrap.className = 'smiles-diagram-wrap'
+      pre.after(wrap)
+      pre.hidden = true
+    }
+    wrap.innerHTML = ''
+
+    lines.forEach((line) => {
+      const fig = document.createElement('figure')
+      fig.className = 'smiles-item'
+      fig.title = line
+      wrap.appendChild(fig)
+      drawSmilesLine(SD, line, fig, theme, 240, 240, (err) => {
+        console.warn('[smiles] 解析失败：', line, err)
+        fig.classList.add('diagram-failed')
+        fig.textContent = line
+      })
+    })
+  }
+}
+
+// ---------- 行内 $smiles=...（Obsidian Chem 的行内语法）----------
+
+const INLINE_SMILES_RE = /\$smiles=([^\s,;，。；、]+)/g
+
+function expandInlineSmiles() {
+  const host = document.querySelector('.markdown-preview-view') || document.body
+  if (!host) return
+
+  const walker = document.createTreeWalker(host, NodeFilter.SHOW_TEXT, null)
+  const nodes = []
+  while (walker.nextNode()) {
+    const node = walker.currentNode
+    const text = node.nodeValue
+    if (!text) continue
+    if (text.indexOf('$smiles=') === -1) continue
+    const parent = node.parentElement
+    if (!parent) continue
+    if (parent.closest('pre, code, .katex, script, style')) continue
+    nodes.push(node)
+  }
+
+  nodes.forEach((node) => {
+    const text = node.nodeValue || ''
+    const frag = document.createDocumentFragment()
+    let last = 0
+    text.replace(INLINE_SMILES_RE, (match, smiles, index) => {
+      if (index > last) frag.appendChild(document.createTextNode(text.slice(last, index)))
+      const span = document.createElement('span')
+      span.className = 'smiles-inline'
+      span.dataset.smiles = smiles
+      span.title = smiles
+      frag.appendChild(span)
+      last = index + match.length
+      return match
+    })
+    if (last === 0) return
+    if (last !== text.length) frag.appendChild(document.createTextNode(text.slice(last)))
+    if (node.parentNode) node.parentNode.replaceChild(frag, node)
+  })
+}
+
+async function renderInlineSmiles() {
+  const spans = Array.from(document.querySelectorAll('span.smiles-inline'))
+  if (spans.length === 0) return
+
+  const SD = await loadSmilesDrawer()
+  if (!SD) {
+    spans.forEach((el) => el.classList.add('diagram-failed'))
+    return
+  }
+
+  const theme = diagramIsDark() ? 'dark' : 'light'
+  for (const span of spans) {
+    if (span.dataset.renderedTheme === theme) {
+      if (span.querySelector('svg')) continue
+    }
+    const smiles = span.dataset.smiles || ''
+    if (!smiles) continue
+
+    span.innerHTML = ''
+    drawSmilesLine(SD, smiles, span, theme, 110, 110, (err) => {
+      console.warn('[smiles] 行内解析失败：', smiles, err)
+      span.classList.add('diagram-failed')
+      span.textContent = smiles
+    })
+    span.dataset.renderedTheme = theme
+  }
+}
+
+// ---------- 入口与主题联动 ----------
+
+function renderAllDiagrams() {
+  expandInlineSmiles()
+  wrapInlineSvgs()
+  normalizeSvgCards()
+  renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
+  renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
+  renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 svg：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function colorLum(value) {
+  if (!value) return null
+  // 注意：这段脚本整体写在模板字符串里，正则里的 ( 和 ) 会被吃掉，
+  // 所以不要用带括号的正则，直接抽数字。
+  const nums = String(value).replace(/[^0-9.,]/g, '')
+  if (!nums) return null
+  const parts = nums.split(',').map((v) => parseFloat(v))
+  if (!parts.length) return null
+  if (parts.length > 3) {
+    if (parts[3] === 0) return null
+  }
+  const r = parts[0] || 0
+  const g = parts[1] || 0
+  const b = parts[2] || 0
+  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
+}
+
+// 一张 SVG 卡片的对比度修复：
+// 1) 整张图自带深色底 → 卡片换深底、文字转浅色；
+// 2) 否则一律白底：把浅色文字（白/浅灰）改成深墨，把浅色描边改成深灰，
+//    这样不会出现“白底白字/浅灰字看不清/整张图像空的”。
+function normalizeSvgCard(svg, card) {
+  if (!svg) return
+  if (svg.dataset.contrastFixed === '1') return
+  svg.dataset.contrastFixed = '1'
+
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  let vw = 0
+  let vh = 0
+  if (vb) {
+    if (vb.width) vw = vb.width
+    if (vb.height) vh = vb.height
+  }
+
+  let darkBg = false
+  const rects = Array.from(svg.querySelectorAll('rect'))
+  for (const rect of rects) {
+    const w = parseFloat(rect.getAttribute('width') || '0')
+    const h = parseFloat(rect.getAttribute('height') || '0')
+    if (!vw || !vh) continue
+    if (vw * 0.85 > w) continue
+    if (vh * 0.85 > h) continue
+    const lum = colorLum(getComputedStyle(rect).fill)
+    if (lum !== null) {
+      if (0.45 > lum) darkBg = true
+    }
+  }
+
+  const ink = darkBg ? '#f8fafc' : '#1f2937'
+  const line = darkBg ? '#cbd5e1' : '#334155'
+  card.classList.toggle('is-dark', darkBg)
+
+  for (const text of Array.from(svg.querySelectorAll('text, tspan'))) {
+    const lum = colorLum(getComputedStyle(text).fill)
+    if (lum === null) continue
+    if (darkBg) {
+      if (0.55 > lum) text.style.fill = ink
+    } else {
+      if (lum > 0.55) text.style.fill = ink
+      if (text.style.stroke) {
+        const sl = colorLum(getComputedStyle(text).stroke)
+        if (sl !== null) {
+          if (sl > 0.8) text.style.stroke = 'none'
+        }
+      }
+    }
+  }
+
+  for (const shape of Array.from(svg.querySelectorAll('line, path, polyline, polygon, circle, ellipse, rect'))) {
+    const stroke = getComputedStyle(shape).stroke
+    const lum = colorLum(stroke)
+    if (lum !== null) {
+      if (lum > 0.85) shape.style.stroke = line
+    }
+    if (darkBg) continue
+    const fill = colorLum(getComputedStyle(shape).fill)
+    if (fill === null) continue
+    if (fill > 0.96) {
+      // 纯白填充在白卡上等于隐形：箭头、方框、分隔条都可能这样。
+      // 背景大矩形除外（它就是画布本身）。
+      const rect = shape.getBoundingClientRect()
+      const cardRect = card.getBoundingClientRect()
+      if (rect.width > cardRect.width * 0.92) continue
+      if (rect.height > cardRect.height * 0.92) continue
+      shape.style.fill = '#e5e7eb'
+    }
+  }
+}
+
+function normalizeSvgCards() {
+  const nodes = document.querySelectorAll('figure.svg-figure svg, span.svg-card svg')
+  for (const svg of Array.from(nodes)) {
+    const card = svg.closest('figure.svg-figure') || svg.closest('span.svg-card')
+    if (card) normalizeSvgCard(svg, card)
+  }
+}
+
+// Mermaid 也统一：节点填充全部透明（保留描边区分分组），
+// 文字按主题上色；高度超过 78vh 的图缩到可读尺寸（点击仍可放大）。
+function normalizeMermaid(svg) {
+  if (!svg) return
+  const dark = diagramIsDark()
+  const ink = dark ? '#f8fafc' : '#0f172a'
+  const line = dark ? '#cbd5e1' : '#334155'
+  const shapes = svg.querySelectorAll('.node rect, .node polygon, .node circle, .node ellipse, .node path')
+  for (const el of Array.from(shapes)) {
+    el.style.setProperty('fill', 'transparent', 'important')
+    if (el.style.stroke) el.style.setProperty('stroke', line, 'important')
+  }
+  for (const el of Array.from(svg.querySelectorAll('.nodeLabel, .edgeLabel, .label, text'))) {
+    // classDef 的 color 写在 mermaid 注入的 style 标签里，必须 !important 才盖得住
+    el.style.setProperty('fill', ink, 'important')
+    el.style.setProperty('color', ink, 'important')
+  }
+  // 尺寸策略（不放大、不过度缩小）：
+  // - 小图保持原始尺寸，不再被拉伸到满行（否则字会突然变巨大）；
+  // - 超宽图缩到容器宽度，但最多缩到 0.7 倍（约 11px 正文），再宽就横向滚动；
+  // - 超高由 CSS 的 max-height + overflow 处理。
+  // 注意：这段脚本在模板字符串里，不能出现 &amp;&amp; 和小于号。
+  let vb = null
+  if (svg.viewBox) vb = svg.viewBox.baseVal
+  const host = svg.parentElement
+  if (vb) {
+    if (vb.width > 0) {
+      if (host) {
+        const avail = host.clientWidth || Math.min(750, window.innerWidth * 0.7)
+        let target = vb.width
+        if (target > avail) {
+          const minW = vb.width * 0.7
+          target = avail > minW ? avail : minW
+        }
+        svg.style.setProperty('width', Math.round(target) + 'px', 'important')
+        svg.style.setProperty('max-width', 'none', 'important')
+        svg.style.setProperty('height', 'auto', 'important')
+      }
+    }
+  }
+}
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    // KaTeX 会插一个 width=&quot;400em&quot;、height≈0 的 SVG 撑高排版，别包成图卡片。
+    if (svg.closest('.katex')) continue
+    if (svg.closest('.katex-display')) continue
+    if (svg.getAttribute('width') === '400em') continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
+}
+
+// ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
+
+let diagramZoomEl = null
+
+function diagramZoomOverlay() {
+  if (diagramZoomEl) return diagramZoomEl
+  const overlay = document.createElement('div')
+  overlay.className = 'diagram-zoom-overlay'
+  const body = document.createElement('div')
+  body.className = 'diagram-zoom-body'
+  const close = document.createElement('button')
+  close.className = 'diagram-zoom-close'
+  close.setAttribute('aria-label', '关闭')
+  close.textContent = '×'
+  overlay.appendChild(body)
+  overlay.appendChild(close)
+  document.body.appendChild(overlay)
+  diagramZoomEl = overlay
+
+  const hide = () => {
+    overlay.classList.remove('is-open')
+    body.innerHTML = ''
+    document.body.classList.remove('diagram-zoom-lock')
+  }
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) hide()
+  })
+  close.addEventListener('click', hide)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hide()
+  })
+  return overlay
+}
+
+function openDiagramZoom(svg) {
+  const overlay = diagramZoomOverlay()
+  const body = overlay.querySelector('.diagram-zoom-body')
+  if (!body) return
+  body.innerHTML = ''
+  const clone = svg.cloneNode(true)
+  clone.removeAttribute('width')
+  clone.removeAttribute('height')
+  clone.style.width = '100%'
+  // 高图在浮层里也保持原始纵横比，超出部分滚动查看，不压扁。
+  clone.style.height = 'auto'
+  clone.style.maxWidth = '100%'
+  clone.style.maxHeight = 'none'
+  body.appendChild(clone)
+  overlay.classList.add('is-open')
+  document.body.classList.add('diagram-zoom-lock')
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!target) return
+  if (!target.closest) return
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
+  if (!svg) return
+  openDiagramZoom(svg)
+})
+
+document.addEventListener('nav', renderAllDiagrams)
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderAllDiagrams)
+} else {
+  renderAllDiagrams()
+}
+
+// 站点主题切换只改 html 上的 saved-theme 属性，没有自定义事件，
+// 只能盯着这个属性（MEMORY.md 里记过这条）。
+let diagramThemeTimer = undefined
+new MutationObserver(() => {
+  if (diagramThemeTimer) clearTimeout(diagramThemeTimer)
+  diagramThemeTimer = setTimeout(renderAllDiagrams, 200)
+}).observe(document.documentElement, { attributes: true, attributeFilter: ['saved-theme'] })
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
