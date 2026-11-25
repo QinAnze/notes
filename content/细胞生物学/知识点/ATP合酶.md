@@ -28,7 +28,7 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
 ## 二、结构总览
 
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="'Noto Sans CJK SC','Source Han Sans SC','WenQuanYi Zen Hei',sans-serif">
-  <defs>
+<defs>
     <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#2874a6"/>
     </marker>
@@ -39,7 +39,6 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
       <path d="M0,0 L10,5 L0,10 z" fill="#7d3c98"/>
     </marker>
   </defs>
-
   <rect x="0" y="0" width="900" height="300" fill="#f2f9fd"/>
   <rect x="0" y="300" width="900" height="80" fill="#e9e9e9"/>
   <rect x="0" y="380" width="900" height="180" fill="#fdf7ec"/>
@@ -48,7 +47,6 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
   <text x="35" y="38" font-size="16" fill="#1a5276">基质（matrix）</text>
   <text x="35" y="522" font-size="16" fill="#b9770e">膜间隙（IMS）</text>
   <text x="785" y="348" font-size="12" fill="#555555" text-anchor="middle">线粒体内膜</text>
-
   <circle cx="512" cy="345" r="16" fill="#f7cfa8" stroke="#b9770e" stroke-width="1.2"/>
   <circle cx="494" cy="366" r="16" fill="#f7cfa8" stroke="#b9770e" stroke-width="1.2"/>
   <circle cx="450" cy="375" r="16" fill="#f7cfa8" stroke="#b9770e" stroke-width="1.2"/>
@@ -58,10 +56,8 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
   <circle cx="450" cy="315" r="16" fill="#f7cfa8" stroke="#b9770e" stroke-width="1.2"/>
   <circle cx="494" cy="324" r="16" fill="#f7cfa8" stroke="#b9770e" stroke-width="1.2"/>
   <text x="450" y="349" font-size="12" fill="#7e5109" text-anchor="middle">c8</text>
-
   <rect x="298" y="318" width="60" height="64" rx="8" fill="#d9c2e8" stroke="#6c3483" stroke-width="1.4"/>
   <text x="328" y="355" font-size="15" fill="#4a235a" text-anchor="middle">a</text>
-
   <rect x="318" y="218" width="13" height="112" fill="#a9dfbf" stroke="#1e8449" stroke-width="1.2"/>
   <circle cx="330" cy="195" r="25" fill="#a9dfbf" stroke="#1e8449" stroke-width="1.4"/>
   <text x="330" y="199" font-size="10" fill="#145a32" text-anchor="middle">OSCP</text>
@@ -69,7 +65,6 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
   <text x="140" y="258" font-size="11" fill="#1e8449">b、OSCP、d、F6</text>
   <line x1="222" y1="253" x2="313" y2="253" stroke="#1e8449" stroke-width="0.9" stroke-dasharray="3 3"/>
   <text x="340" y="290" font-size="12" fill="#1e8449">b</text>
-
   <rect x="442" y="160" width="16" height="158" rx="3" fill="#c39bd3" stroke="#7d3c98" stroke-width="1.2"/>
   <circle cx="450" cy="262" r="11" fill="#e8daef" stroke="#7d3c98" stroke-width="1.2"/>
   <rect x="439" y="296" width="22" height="22" rx="4" fill="#d7b4e8" stroke="#7d3c98" stroke-width="1.2"/>
@@ -77,7 +72,6 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
   <text x="500" y="270" font-size="11" fill="#6c3483">中央转轴</text>
   <text x="500" y="284" font-size="10" fill="#6c3483">γ、δ、ε</text>
   <line x1="498" y1="276" x2="462" y2="276" stroke="#7d3c98" stroke-width="0.9" stroke-dasharray="3 3"/>
-
   <text x="450" y="42" font-size="15" fill="#1a5276" text-anchor="middle">F1 头部（α3β3，基质侧）</text>
   <circle cx="510" cy="150" r="40" fill="#8ec5e2" stroke="#2874a6" stroke-width="1.5"/>
   <circle cx="480" cy="202" r="40" fill="#f2b880" stroke="#b9770e" stroke-width="1.5"/>
@@ -89,22 +83,17 @@ title: 线粒体 ATP 合酶（F1Fo-ATP synthase，复合体 V）
   <text x="480" y="103" font-size="15" fill="#5b3a00" text-anchor="middle">β</text>
   <text x="420" y="103" font-size="15" fill="#0b3a55" text-anchor="middle">α</text>
   <text x="390" y="155" font-size="15" fill="#5b3a00" text-anchor="middle">β</text>
-
   <circle cx="252" cy="150" r="18" fill="#f9e79f" stroke="#b7950b" stroke-width="1.4"/>
   <text x="252" y="154" font-size="10" fill="#7d6608" text-anchor="middle">IF1</text>
   <line x1="270" y1="155" x2="348" y2="164" stroke="#b7950b" stroke-width="0.9" stroke-dasharray="3 3"/>
-
   <path d="M 720 450 Q 540 472 366 400" fill="none" stroke="#2874a6" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrBlue)"/>
   <text x="648" y="472" font-size="14" fill="#2874a6">H+</text>
   <path d="M 306 316 L 306 252" fill="none" stroke="#2874a6" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrBlue)"/>
   <text x="338" y="256" font-size="11" fill="#2874a6">H+ → 基质</text>
-
   <path d="M 538 312 Q 588 345 538 380" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arrDark)"/>
   <text x="592" y="350" font-size="12" fill="#333333">旋转</text>
   <path d="M 470 250 Q 492 262 470 274" fill="none" stroke="#7d3c98" stroke-width="1.8" marker-end="url(#arrPurple)"/>
-
-  <text x="450" y="548" font-size="15" fill="#333333" text-anchor="middle">图 1　线粒体 ATP 合酶（F1Fo）的结构与质子驱动旋转</text>
-</svg>
+  <text x="450" y="548" font-size="15" fill="#333333" text-anchor="middle">图 1　线粒体 ATP 合酶（F1Fo）的结构与质子驱动旋转</text></svg>
 
 **四个功能区**
 

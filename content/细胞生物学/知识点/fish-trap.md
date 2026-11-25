@@ -32,7 +32,7 @@ NPC 要同时满足四个看似矛盾的要求：
 ## 2. 建筑剖面：从“篮口”到“篮底”
 
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
-  <defs>
+<defs>
     <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#2874a6"/>
     </marker>
@@ -40,26 +40,19 @@ NPC 要同时满足四个看似矛盾的要求：
       <path d="M0,0 L10,5 L0,10 z" fill="#1e8449"/>
     </marker>
   </defs>
-
   <rect width="900" height="620" fill="#fbfcfd"/>
-
   <text x="450" y="32" font-family="sans-serif" font-size="19" fill="#1a5276" text-anchor="middle">核孔复合体（NPC）纵切：捕鱼篮模型</text>
-
   <text x="80" y="72" font-family="sans-serif" font-size="15" fill="#34495e">细胞质</text>
   <text x="80" y="585" font-family="sans-serif" font-size="15" fill="#34495e">核质</text>
-
   <line x1="50" y1="268" x2="370" y2="268" stroke="#95a5a6" stroke-width="7" stroke-linecap="round"/>
   <line x1="530" y1="268" x2="850" y2="268" stroke="#95a5a6" stroke-width="7" stroke-linecap="round"/>
   <line x1="50" y1="298" x2="370" y2="298" stroke="#95a5a6" stroke-width="7" stroke-linecap="round"/>
   <line x1="530" y1="298" x2="850" y2="298" stroke="#95a5a6" stroke-width="7" stroke-linecap="round"/>
   <text x="190" y="291" font-family="sans-serif" font-size="12" fill="#7f8c8d">核膜（外膜 / 内膜）</text>
-
   <ellipse cx="450" cy="245" rx="82" ry="15" fill="#cfe0ee" stroke="#4a7ba7" stroke-width="2.5"/>
   <ellipse cx="450" cy="322" rx="82" ry="15" fill="#cfe0ee" stroke="#4a7ba7" stroke-width="2.5"/>
-
   <line x1="372" y1="252" x2="398" y2="316" stroke="#6b8fb3" stroke-width="9" stroke-linecap="round" opacity="0.55"/>
   <line x1="528" y1="252" x2="502" y2="316" stroke="#6b8fb3" stroke-width="9" stroke-linecap="round" opacity="0.55"/>
-
   <g fill="none" stroke="#d68910" stroke-width="3" stroke-linecap="round">
     <path d="M410,255 C400,270 420,282 410,295 C400,306 415,315 410,322"/>
     <path d="M430,252 C440,268 420,282 430,296 C440,308 425,315 430,322"/>
@@ -72,7 +65,6 @@ NPC 要同时满足四个看似矛盾的要求：
     <circle cx="450" cy="284" r="2.8"/><circle cx="470" cy="288" r="2.8"/>
     <circle cx="490" cy="283" r="2.8"/>
   </g>
-
   <g fill="none" stroke="#d68910" stroke-width="4" stroke-linecap="round">
     <path d="M410,240 C400,220 415,200 405,180 C400,170 402,164 406,158"/>
     <path d="M430,238 C420,218 435,198 428,178 C424,168 426,162 428,156"/>
@@ -83,7 +75,6 @@ NPC 要同时满足四个看似矛盾的要求：
     <circle cx="406" cy="158" r="4"/><circle cx="428" cy="156" r="4"/>
     <circle cx="472" cy="156" r="4"/><circle cx="494" cy="158" r="4"/>
   </g>
-
   <g fill="none" stroke="#8e44ad" stroke-width="4" stroke-linecap="round">
     <path d="M412,325 C405,360 415,395 420,425"/>
     <path d="M432,328 C428,365 432,400 436,430"/>
@@ -91,18 +82,14 @@ NPC 要同时满足四个看似矛盾的要求：
     <path d="M488,325 C495,360 485,395 480,425"/>
   </g>
   <ellipse cx="450" cy="432" rx="42" ry="9" fill="none" stroke="#8e44ad" stroke-width="3"/>
-
   <line x1="450" y1="130" x2="450" y2="468" stroke="#2874a6" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrB)"/>
   <line x1="450" y1="462" x2="450" y2="478" stroke="#1e8449" stroke-width="3" marker-end="url(#arrG)"/>
-
   <circle cx="450" cy="110" r="15" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
   <text x="450" y="114" font-family="sans-serif" font-size="10" fill="#1a5276" text-anchor="middle">cargo</text>
   <text x="450" y="80" font-family="sans-serif" font-size="13" fill="#2874a6" text-anchor="middle">importin–cargo（带 NLS 的货物）</text>
-
   <circle cx="450" cy="505" r="24" fill="#d5f5e3" stroke="#1e8449" stroke-width="2.5"/>
   <text x="450" y="509" font-family="sans-serif" font-size="10" fill="#145a32" text-anchor="middle">RanGTP</text>
   <text x="450" y="552" font-family="sans-serif" font-size="14" fill="#1e8449" text-anchor="middle">RanGTP 结合 → 货物释放</text>
-
   <text x="600" y="182" font-family="sans-serif" font-size="13" fill="#7e5109">胞质纤维（篮口）</text>
   <text x="600" y="200" font-family="sans-serif" font-size="11" fill="#7e5109">Nup358 / Nup214 / Nup88</text>
   <text x="600" y="224" font-family="sans-serif" font-size="13" fill="#1f4e79">胞质环（Y 复合体）</text>
@@ -113,15 +100,13 @@ NPC 要同时满足四个看似矛盾的要求：
   <text x="600" y="440" font-family="sans-serif" font-size="11" fill="#5b2c6f">Tpr / Nup153 / Nup50</text>
   <text x="515" y="438" font-family="sans-serif" font-size="11" fill="#5b2c6f">远端环</text>
   <text x="352" y="352" font-family="sans-serif" font-size="12" fill="#4a6b85" text-anchor="end">辐（spoke）</text>
-
   <rect x="620" y="470" width="250" height="88" rx="8" fill="#f4f6f7" stroke="#d0d7de"/>
   <text x="632" y="495" font-family="sans-serif" font-size="13" fill="#34495e">小分子（&lt; 40 kDa）</text>
   <text x="632" y="516" font-family="sans-serif" font-size="12" fill="#566573">可直接扩散通过</text>
   <circle cx="648" cy="538" r="4" fill="#95a5a6"/>
   <circle cx="666" cy="538" r="4" fill="#95a5a6"/>
   <circle cx="684" cy="538" r="4" fill="#95a5a6"/>
-  <line x1="700" y1="538" x2="830" y2="538" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrB)"/>
-</svg>
+  <line x1="700" y1="538" x2="830" y2="538" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrB)"/></svg>
 
 ### 各区域的“零件清单”
 

@@ -68,14 +68,11 @@ title: GLUT 家族（葡萄糖转运蛋白家族）
 ### 2.2 跨膜螺旋的分组
 
 <svg viewBox="0 0 700 312" width="100%" style="max-width:700px;height:auto;display:block;margin:1rem auto" xmlns="http://www.w3.org/2000/svg">
-
-  <text x="350" y="22" text-anchor="middle" font-size="13" stroke="none">胞外（Extracellular）</text>
+<text x="350" y="22" text-anchor="middle" font-size="13" stroke="none">胞外（Extracellular）</text>
   <text x="350" y="46" text-anchor="middle" font-size="10" stroke="none">胞外环 E1 · 糖基化位点 N-X-S/T（形成糖萼）</text>
-
   <rect x="24" y="68" width="652" height="150" fill="var(--lightgray)" opacity="0.16"/>
   <line x1="24" y1="68" x2="676" y2="68" stroke="currentColor" stroke-width="1" opacity="0.55"/>
   <line x1="24" y1="218" x2="676" y2="218" stroke="currentColor" stroke-width="1" opacity="0.55"/>
-
   <g stroke="currentColor" stroke-width="1.6" fill="none">
     <ellipse cx="52" cy="143" rx="10" ry="62"/>
     <ellipse cx="100" cy="143" rx="10" ry="62"/>
@@ -89,17 +86,14 @@ title: GLUT 家族（葡萄糖转运蛋白家族）
     <ellipse cx="552" cy="143" rx="10" ry="62"/>
     <ellipse cx="600" cy="143" rx="10" ry="62"/>
     <ellipse cx="648" cy="143" rx="10" ry="62"/>
-
     <path d="M292,81 Q350,52 408,81"/>
     <path d="M456,218 Q480,244 504,218"/>
   </g>
-
   <g fill="currentColor" stroke="none">
     <circle cx="408" cy="143" r="4"/>
     <circle cx="456" cy="143" r="4"/>
     <circle cx="600" cy="143" r="4"/>
   </g>
-
   <g font-size="8.5" text-anchor="middle" stroke="none">
     <text x="52" y="232">TM1</text>
     <text x="100" y="232">TM2</text>
@@ -114,11 +108,9 @@ title: GLUT 家族（葡萄糖转运蛋白家族）
     <text x="600" y="232">TM11</text>
     <text x="648" y="232">TM12</text>
   </g>
-
   <text x="480" y="266" text-anchor="middle" font-size="10" stroke="none">胞内长连接环 I1 · 含 NLS（GLUT8）</text>
   <text x="24" y="286" font-size="9" stroke="none">⊙ 关键底物结合残基：Q（TM7）、GL+GE（TM8）、N-I（TM11），共同组成家族保守三联体</text>
-  <text x="350" y="306" text-anchor="middle" font-size="13" stroke="none">胞质（Cytoplasm）</text>
-</svg>
+  <text x="350" y="306" text-anchor="middle" font-size="13" stroke="none">胞质（Cytoplasm）</text></svg>
 
 *上图：12-TM 拓扑——中央结合区由 TM7（Q）、TM8（GL/GE）、TM11（N-I）组成；TM6–TM7 的胞外环带糖基化位点，TM8–TM9 的胞内环最长并含 NLS。*
 

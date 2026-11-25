@@ -112,14 +112,11 @@ title: 水通道蛋白（Aquaporin, AQP）
 ### 3.1 拓扑结构
 
 <svg viewBox="0 0 640 300" width="100%" style="max-width:640px;height:auto;display:block;margin:1rem auto" xmlns="http://www.w3.org/2000/svg">
-
-  <text x="320" y="22" text-anchor="middle" font-size="13" stroke="none">胞外（Extracellular）</text>
+<text x="320" y="22" text-anchor="middle" font-size="13" stroke="none">胞外（Extracellular）</text>
   <text x="320" y="44" text-anchor="middle" font-size="10.5" stroke="none">三个胞外环 A / C / E 上各有 ar/R 选择性滤器</text>
-
   <rect x="30" y="80" width="580" height="140" fill="var(--lightgray)" opacity="0.18"/>
   <line x1="30" y1="80" x2="610" y2="80" stroke="currentColor" stroke-width="1" opacity="0.55"/>
   <line x1="30" y1="220" x2="610" y2="220" stroke="currentColor" stroke-width="1" opacity="0.55"/>
-
   <g stroke="currentColor" stroke-width="1.6" fill="none">
     <ellipse cx="70" cy="150" rx="13" ry="58"/>
     <ellipse cx="125" cy="150" rx="13" ry="58"/>
@@ -129,17 +126,13 @@ title: 水通道蛋白（Aquaporin, AQP）
     <ellipse cx="405" cy="150" rx="13" ry="44" stroke-dasharray="5 4"/>
     <ellipse cx="480" cy="150" rx="13" ry="58"/>
     <ellipse cx="535" cy="150" rx="13" ry="58"/>
-
     <polyline points="125,208 200,194 275,208"/>
     <polyline points="330,208 405,194 480,208"/>
-
     <path d="M70,90 Q97,62 125,90"/>
     <path d="M275,90 Q302,62 330,90"/>
     <path d="M480,90 Q507,62 535,90"/>
   </g>
-
   <text x="320" y="292" text-anchor="middle" font-size="13" stroke="none">胞质（Cytoplasm）</text>
-
   <g font-size="9" text-anchor="middle" stroke="none">
     <text x="70" y="238">TM1</text>
     <text x="125" y="238">TM2</text>
@@ -150,14 +143,12 @@ title: 水通道蛋白（Aquaporin, AQP）
     <text x="480" y="238">TM5</text>
     <text x="535" y="238">TM6</text>
   </g>
-
   <g font-size="10" text-anchor="middle" stroke="none">
     <text x="200" y="262">环 B · NPA</text>
     <text x="405" y="262">环 D · NPA</text>
     <text x="62" y="262">N 端</text>
     <text x="543" y="262">C 端</text>
-  </g>
-</svg>
+  </g></svg>
 
 *上图：6-TM 拓扑——环 B / 环 D 的两个 NPA 各自形成伸入膜内的半螺旋 Pa / Pb，与 TM2、TM5 共同围成水通道桶（water-filled pore）。*
 
@@ -183,20 +174,16 @@ ar/R 滤器位于**胞外端**，由芳香族残基（**F165 / W188 / Y202**，�
 ### 3.3 四聚体与"原生功能单位"
 
 <svg viewBox="0 0 560 212" width="100%" style="max-width:560px;height:auto;display:block;margin:1rem auto" xmlns="http://www.w3.org/2000/svg">
-
-  <defs>
+<defs>
     <marker id="arrow-aqp4-tetramer" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/>
     </marker>
   </defs>
-
   <rect x="40" y="48" width="120" height="80" rx="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
   <text x="100" y="82" text-anchor="middle" font-size="12" stroke="none">单体 AQP</text>
   <text x="100" y="102" text-anchor="middle" font-size="10" stroke="none">6-TM · 一条水通道</text>
-
   <line x1="176" y1="88" x2="240" y2="88" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow-aqp4-tetramer)"/>
   <text x="208" y="78" text-anchor="middle" font-size="10" stroke="none">四聚化</text>
-
   <g fill="none" stroke="currentColor" stroke-width="1.6">
     <circle cx="305" cy="66" r="27"/>
     <circle cx="363" cy="66" r="27"/>
@@ -209,10 +196,8 @@ ar/R 滤器位于**胞外端**，由芳香族残基（**F165 / W188 / Y202**，�
     <circle cx="305" cy="124" r="3.5"/>
     <circle cx="363" cy="124" r="3.5"/>
   </g>
-
   <text x="334" y="178" text-anchor="middle" font-size="11" stroke="none">同源四聚体（AQP1 晶体结构证实）</text>
-  <text x="334" y="198" text-anchor="middle" font-size="10" stroke="none">每个单体各有一条独立通道 · 四聚体界面决定脂筏定位与组装稳定性</text>
-</svg>
+  <text x="334" y="198" text-anchor="middle" font-size="10" stroke="none">每个单体各有一条独立通道 · 四聚体界面决定脂筏定位与组装稳定性</text></svg>
 
 *上图：一个单体即一条水通道；四个单体组成同源四聚体，中心黑点标出各自的通道。*
 

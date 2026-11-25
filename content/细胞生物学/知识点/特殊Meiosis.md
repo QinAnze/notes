@@ -169,8 +169,7 @@ title: 特殊的减数分裂
 <text x="961" y="372" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#4B3A24">于是两次分裂的分工对调：</text>
 <text x="961" y="392" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#4B3A24">MI 分姐妹染色单体，MII 分同源染色体。</text>
 <text x="30" y="600" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="11" fill="#6B7280">注：倒置减数分裂见于线虫、蚜虫、介壳虫、蝴蝶等全着丝粒类群；这些类群的交叉互换仍可正常发生。</text>
-<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"/></marker></defs>
-</svg>
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"/></marker></defs></svg>
 
 ### 4.1 触发条件：全着丝粒染色体
 

@@ -173,9 +173,8 @@ Knudson 研究视网膜母细胞瘤提出：抑癌基因需**两次打击**才�
 ## 4. 十四大标志：癌细胞的"能力清单"
 
 <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="540" viewBox="0 0 1240 540">
-  <rect width="1240" height="540" fill="#ffffff"/>
+<rect width="1240" height="540" fill="#ffffff"/>
   <text x="620" y="46" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="bold" fill="#1f2937">癌细胞与癌症：十四大标志（Hanahan, 2000 → 2011 → 2022）</text>
-
   <!-- ===== 第一行：2000 年六大标志（蓝） ===== -->
   <g>
     <rect x="40" y="76" width="216" height="104" rx="8" fill="#EAF4FF" stroke="#2F6FBF" stroke-width="1.8"/>
@@ -212,7 +211,6 @@ Knudson 研究视网膜母细胞瘤提出：抑癌基因需**两次打击**才�
     <text x="1084" y="146" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#123f73">血管拟态、血管共选择</text>
     <text x="1084" y="166" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#123f73">周细胞缺失、通透性高</text>
   </g>
-
   <!-- ===== 第二行：侵袭转移（蓝）+ 2011/使能（绿） ===== -->
   <g>
     <rect x="40" y="196" width="216" height="104" rx="8" fill="#EAF4FF" stroke="#2F6FBF" stroke-width="1.8"/>
@@ -249,7 +247,6 @@ Knudson 研究视网膜母细胞瘤提出：抑癌基因需**两次打击**才�
     <text x="1084" y="266" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#1c5c3a">ROS、RANKL、TNF</text>
     <text x="1084" y="286" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#1c5c3a">慢性炎症 → 癌变温床</text>
   </g>
-
   <!-- ===== 第三行：2022 新维度（紫）+ 图例 ===== -->
   <g>
     <rect x="40" y="316" width="216" height="104" rx="8" fill="#F3EAFB" stroke="#7B3FA0" stroke-width="1.8"/>
@@ -289,11 +286,9 @@ Knudson 研究视网膜母细胞瘤提出：抑癌基因需**两次打击**才�
     <rect x="1000" y="394" width="12" height="10" fill="#F3EAFB" stroke="#7B3FA0"/>
     <text x="1020" y="404" font-family="Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#374151">2022 年新增维度</text>
   </g>
-
   <text x="40" y="456" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#374151">共同底座：基因组不稳定 + 促肿瘤炎症 + 表观遗传重编程，三者互相放大，构成“演化引擎”。</text>
   <text x="40" y="480" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#374151">注意：这些标志不是“清单打勾”，而是同一群细胞在时间中逐步获得、并可逆可失的能力组合。</text>
-  <text x="40" y="504" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280">参考：Hanahan D, Weinberg RA. Cell 2000;100:57–70；Cell 2011;144:646–674；Hanahan D. Cancer Discov 2022;12:31–46.</text>
-</svg>
+  <text x="40" y="504" font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280">参考：Hanahan D, Weinberg RA. Cell 2000;100:57–70；Cell 2011;144:646–674；Hanahan D. Cancer Discov 2022;12:31–46.</text></svg>
 
 下面按"能力"逐条讲机制、关键分子与对应的治疗切入点。**每一条都不是孤立开关，而是可以逐步获得、也可以丢失的能力。**
 

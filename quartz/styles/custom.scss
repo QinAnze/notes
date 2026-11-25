@@ -283,7 +283,10 @@ pre:has(> code.mermaid) {
 }
 
 code.mermaid {
-  font-family: inherit;
+  // 不能用 inherit：父级 pre 是 var(--codeFont) 等宽字体，
+  // 而 mermaid 量标签宽度时用的是 body 字体，中文字宽会对不上，
+  // 结果是节点框算窄了、文字右边被裁掉。
+  font-family: var(--bodyFont);
   font-size: 1rem;
   line-height: normal;
   background: transparent;
@@ -291,12 +294,25 @@ code.mermaid {
   padding: 0;
   display: block;
   width: 100%;
+  // 特别高的流程图不再整体缩小（缩小后只剩一条窄缝、字也看不清），
+  // 改为限高 + 内部滚动，宽度保持满行，字是正常大小。
+  max-height: 82vh;
+  overflow-y: auto;
+  overflow-x: auto;
   cursor: zoom-in;
 
+  .nodeLabel,
+  .edgeLabel,
+  foreignObject div,
+  text {
+    font-family: var(--bodyFont) !important;
+  }
+
   > svg {
-    // mermaid 会在 svg 上写 inline style="max-width: 276px"，
-    // 不加 !important 就永远只有原始尺寸（用户 2026-11-25 反馈“太小”）。
-    width: 100% !important;
+    // 实际宽度由注入脚本按 viewBox 算（不放大、最多缩到 0.7），
+    // 这里只兜底：别超过容器、别把高度锁死。
+    display: block;
+    margin: 0 auto;
     max-width: 100% !important;
     height: auto !important;
   }
@@ -387,6 +403,15 @@ code.mermaid.diagram-failed {
   }
 }
 
+.svg-figure,
+.svg-card {
+  &.is-dark {
+    background: #0f172a;
+    color: #f8fafc;
+    border-color: #334155;
+  }
+}
+
 // md 里直接写的 <svg>（不是 ![[x.svg]] 文件）由 scienceDiagrams.ts 运行期包成 .svg-card。
 // 同样白底黑字：这些图里有大量固定浅色填充块，透明底 + 暗色模式会白字压白块。
 .svg-card {
@@ -431,7 +456,7 @@ code.mermaid.diagram-failed {
   height: 88vh;
   padding: 1rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: auto;
   background: var(--light);
@@ -439,7 +464,7 @@ code.mermaid.diagram-failed {
 
   svg {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 

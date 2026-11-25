@@ -88,8 +88,7 @@ title: 微管结合蛋白（MAP）：以 MAP2 与 tau 为中心
 <text x="502" y="503" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10" fill="#5B6B7C">微管</text>
 <text x="620" y="503" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.2" fill="#5B6B7C">3R/4R 由外显子 10 剪接决定；P-rich 是磷酸化调控区</text>
 <text x="60" y="540" text-anchor="start" font-family="Noto Sans CJK SC, sans-serif" font-size="10.2" fill="#5B6B7C">共同点：都属于 MAP2/tau 家族，C 端带重复序列，靠带电与疏水作用结合微管侧面。</text>
-<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"/></marker></defs>
-</svg>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6B7280"/></marker></defs></svg>
 
 | 维度 | MAP2 | tau |
 |---|---|---|

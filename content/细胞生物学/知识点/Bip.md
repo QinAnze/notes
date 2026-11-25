@@ -34,9 +34,7 @@ title: BiP（GRP78 / HSPA5）
 ### 2.1 结构域组成
 
 <svg viewBox="0 0 700 200" width="100%" style="max-width:700px;height:auto;display:block;margin:1rem auto" xmlns="http://www.w3.org/2000/svg">
-
-  <text x="350" y="30" text-anchor="middle" font-size="13" stroke="none">BiP 单体（约 78 kDa）</text>
-
+<text x="350" y="30" text-anchor="middle" font-size="13" stroke="none">BiP 单体（约 78 kDa）</text>
   <g stroke="currentColor" stroke-width="1.5" fill="none">
     <rect x="30" y="52" width="42" height="58"/>
     <rect x="72" y="52" width="322" height="58"/>
@@ -44,7 +42,6 @@ title: BiP（GRP78 / HSPA5）
     <rect x="438" y="52" width="186" height="58"/>
     <rect x="624" y="52" width="50" height="58"/>
   </g>
-
   <g text-anchor="middle" stroke="none">
     <text x="51" y="78" font-size="10">信号肽</text>
     <text x="51" y="94" font-size="8.5">~20 aa</text>
@@ -57,13 +54,11 @@ title: BiP（GRP78 / HSPA5）
     <text x="649" y="78" font-size="10">lid</text>
     <text x="649" y="94" font-size="7.5">590-637</text>
   </g>
-
   <g stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" fill="none">
     <line x1="233" y1="110" x2="233" y2="132"/>
     <line x1="531" y1="110" x2="531" y2="132"/>
     <line x1="649" y1="110" x2="649" y2="132"/>
   </g>
-
   <g text-anchor="middle" stroke="none">
     <text x="233" y="150" font-size="10">ATP/ADP 结合</text>
     <text x="233" y="167" font-size="10">分子伴侣循环动力</text>
@@ -71,8 +66,7 @@ title: BiP（GRP78 / HSPA5）
     <text x="531" y="167" font-size="10">结合未折叠链</text>
     <text x="649" y="150" font-size="10">螺旋盖</text>
     <text x="649" y="167" font-size="10">开合控制</text>
-  </g>
-</svg>
+  </g></svg>
 
 *上图：结构域线性排布——NBD 结合并水解 ATP 提供动力，SBD 抓未折叠链，lid 像盖子控制口袋开合。*
 
