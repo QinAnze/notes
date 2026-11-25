@@ -69,6 +69,9 @@ const config: QuartzConfig = {
       // 不跟主题切换，这里关掉避免两套脚本抢同一个块。
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, mermaid: false }),
       Plugin.ScienceDiagrams(),
+      // `![[x.svg]]` 构建期内联：否则 <img> 里的 SVG 读不到站点主题变量，
+      // 暗色模式下线条/文字会看不见。找不到或超过 200 KB 的原样保留。
+      Plugin.LocalSvgInline(),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),

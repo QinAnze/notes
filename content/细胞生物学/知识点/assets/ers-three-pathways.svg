@@ -1,0 +1,120 @@
+<svg viewBox="0 0 680 520" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>内质网应激的三个反应：UPR、EOR 与固醇调节级联</title>
+<desc>内质网作为蛋白与脂质合成车间，其应激分三类根源：蛋白折叠错误触发 UPR，蛋白合成超载触发 EOR，胆固醇水平变化触发 SREBP 固醇调节级联。三者共享 S1P/S2P 蛋白酶等元件并相互串扰。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">ERS 的三个反应　按车间故障类型分流</text>
+<text class="hint" x="310" y="24">蛋白折坏走 UPR　订单超载走 EOR　原料不足走固醇调节</text>
+
+<!-- 顶部触发 -->
+<rect x="40" y="40" width="600" height="52" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="60" y="62" fill="#412402">内质网应激</text>
+<text class="sm" x="150" y="62" fill="#633806">蛋白合成车间　脂质合成车间同时承压</text>
+
+<!-- 三条分流 -->
+<rect x="40" y="104" width="192" height="72" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="60" y="126" fill="#8C1D18">蛋白折坏了</text>
+<text class="sm" x="60" y="146" fill="#8C1D18">未折叠蛋白积聚</text>
+<text class="sm" x="60" y="164" fill="#8C1D18">BiP 被占满</text>
+
+<rect x="244" y="104" width="192" height="72" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="264" y="126" fill="#042C53">订单超载</text>
+<text class="sm" x="264" y="146" fill="#0C447C">蛋白折叠正确</text>
+<text class="sm" x="264" y="164" fill="#0C447C">但分泌量超过产能</text>
+
+<rect x="448" y="104" width="192" height="72" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="468" y="126" fill="#04342C">原料不足</text>
+<text class="sm" x="468" y="146" fill="#085041">ER 胆固醇降低</text>
+<text class="sm" x="468" y="164" fill="#085041">膜脂稳态失衡</text>
+
+<line x1="136" y1="176" x2="136" y2="198" stroke="#B3261E" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="340" y1="176" x2="340" y2="198" stroke="#185FA5" stroke-width="1.2" marker-end="url(#a)"/>
+<line x1="544" y1="176" x2="544" y2="198" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#a)"/>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"/>
+  </marker>
+  <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"/>
+  </marker>
+  <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#185FA5"/>
+  </marker>
+  <marker id="d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#0F6E56"/>
+  </marker>
+</defs>
+
+<!-- UPR 块 -->
+<rect x="40" y="202" width="192" height="196" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="56" y="224" fill="#8C1D18">UPR</text>
+<text class="sm" x="96" y="224" fill="#8C1D18">未折叠蛋白反应</text>
+
+<rect x="54" y="234" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="136" y="251" fill="#412402" text-anchor="middle">ATF6　上调折叠酶</text>
+<rect x="54" y="264" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="136" y="281" fill="#412402" text-anchor="middle">IRE1　剪接 XBP1</text>
+<rect x="54" y="294" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="136" y="311" fill="#412402" text-anchor="middle">PERK　磷酸化 eIF2α</text>
+
+<line x1="136" y1="320" x2="136" y2="332" stroke="#B3261E" stroke-width="1.2" marker-end="url(#b)"/>
+<rect x="54" y="336" width="164" height="24" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="136" y="352" fill="#04342C" text-anchor="middle">停翻译　扩产能　降解</text>
+<rect x="54" y="364" width="164" height="24" rx="5" fill="#F5F5F0" stroke="#8A8A85" stroke-width="0.5"/>
+<text class="sm" x="136" y="380" fill="#5c5c5a" text-anchor="middle">持续则 CHOP 凋亡</text>
+
+<!-- EOR 块 -->
+<rect x="244" y="202" width="192" height="196" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="260" y="224" fill="#042C53">EOR</text>
+<text class="sm" x="308" y="224" fill="#0C447C">ER 超载反应</text>
+
+<rect x="258" y="234" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="340" y="251" fill="#412402" text-anchor="middle">活化 NF-κB</text>
+<rect x="258" y="264" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="340" y="281" fill="#412402" text-anchor="middle">ER 膜面积扩张</text>
+<rect x="258" y="294" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="340" y="311" fill="#412402" text-anchor="middle">分泌通量上调</text>
+
+<line x1="340" y1="320" x2="340" y2="332" stroke="#185FA5" stroke-width="1.2" marker-end="url(#c)"/>
+<rect x="258" y="336" width="164" height="52" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="340" y="358" fill="#04342C" text-anchor="middle">适应为主</text>
+<text class="sm" x="340" y="376" fill="#04342C" text-anchor="middle">较少凋亡</text>
+
+<!-- 固醇块 -->
+<rect x="448" y="202" width="192" height="196" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="464" y="224" fill="#04342C">固醇调节</text>
+<text class="sm" x="512" y="224" fill="#085041">SREBP 通路</text>
+
+<rect x="462" y="234" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="544" y="251" fill="#412402" text-anchor="middle">SCAP 释放 SREBP</text>
+<rect x="462" y="264" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="544" y="281" fill="#412402" text-anchor="middle">运至高尔基体</text>
+<rect x="462" y="294" width="164" height="26" rx="5" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="544" y="311" fill="#412402" text-anchor="middle">S1P　S2P 双切</text>
+
+<line x1="544" y1="320" x2="544" y2="332" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#d)"/>
+<rect x="462" y="336" width="164" height="52" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="544" y="358" fill="#04342C" text-anchor="middle">上调 HMGCR</text>
+<text class="sm" x="544" y="376" fill="#04342C" text-anchor="middle">上调 LDLR　PCSK9</text>
+
+<!-- 交叉点 -->
+<rect x="40" y="412" width="600" height="70" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="60" y="434" fill="#412402">三条反应的交叉点</text>
+
+<circle cx="120" cy="456" r="9" fill="#854F0B"/>
+<text class="sm" x="140" y="460" fill="#633806">S1P/S2P 既切 ATF6（UPR）也切 SREBP（固醇）</text>
+
+<circle cx="120" cy="472" r="9" fill="#854F0B"/>
+<text class="sm" x="140" y="476" fill="#633806">ATF6 与 NF-κB 同时参与 UPR 与 EOR</text>
+
+<!-- 底栏 -->
+<rect class="frame" x="40" y="492" width="600" height="20" rx="6"/>
+<text class="sm" x="60" y="506" fill="#5c5c5a">关键分岔　ERS 下 SREBP 的命运取决于胆固醇水平　不足则活化　充足则被降解</text>
+</svg>

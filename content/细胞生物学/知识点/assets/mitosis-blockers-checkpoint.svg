@@ -1,0 +1,143 @@
+<svg viewBox="0 0 680 510" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>有丝分裂阻断剂的作用时相与纺锤体组装检查点</title>
+<desc>各类阻断剂按分子靶点分布在不同时相：CDK1 与 DNA 损伤检查点抑制剂作用于 G2，Aurora A 与 Plk1 抑制剂作用于前期，微管去稳定剂与 Eg5 抑制剂作用于前中期，紫杉烷与蛋白酶体抑制剂作用于中期，肌动蛋白抑制剂作用于胞质分裂。微管类药物共同造成动粒无附着或无张力，使 MCC 抑制 APC/C，securin 与 cyclin B 不降解，cohesin 不被切割，细胞停滞在中期。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"/>
+  </marker>
+  <marker id="rd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"/>
+  </marker>
+</defs>
+
+<text class="ttl" x="40" y="24">阻断剂落在哪个时相　中期是共同终点</text>
+<text class="hint" x="286" y="24">药打微管或马达 → 动粒没附着/没张力 → SAC 不许过关</text>
+
+<!-- 进程箭头 -->
+<line x1="40" y1="52" x2="636" y2="52" stroke="#B4B2A9" stroke-width="1.2" marker-end="url(#ar)"/>
+<text class="sm" x="40" y="44" fill="#5c5c5a">细胞周期进程</text>
+
+<!-- 六阶段 -->
+<rect x="40" y="60" width="96" height="62" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="88" y="80" fill="#042C53" text-anchor="middle" font-weight="500">G2</text>
+<text class="sm" x="88" y="98" fill="#0C447C" text-anchor="middle">准备入 M</text>
+<text class="sm" x="88" y="114" fill="#0C447C" text-anchor="middle">CDK1 待激活</text>
+
+<rect x="140" y="60" width="96" height="62" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="188" y="80" fill="#042C53" text-anchor="middle" font-weight="500">前期</text>
+<text class="sm" x="188" y="98" fill="#0C447C" text-anchor="middle">染色体凝缩</text>
+<text class="sm" x="188" y="114" fill="#0C447C" text-anchor="middle">中心体分离</text>
+
+<rect x="240" y="60" width="96" height="62" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="288" y="80" fill="#412402" text-anchor="middle" font-weight="500">前中期</text>
+<text class="sm" x="288" y="98" fill="#633806" text-anchor="middle">核膜破裂</text>
+<text class="sm" x="288" y="114" fill="#633806" text-anchor="middle">动粒被捕获</text>
+
+<rect x="340" y="60" width="96" height="62" rx="8" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="388" y="80" fill="#8C1D18" text-anchor="middle" font-weight="500">中期 ★</text>
+<text class="sm" x="388" y="98" fill="#8C1D18" text-anchor="middle">赤道板排列</text>
+<text class="sm" x="388" y="114" fill="#8C1D18" text-anchor="middle">SAC 关卡</text>
+
+<rect x="440" y="60" width="96" height="62" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="488" y="80" fill="#04342C" text-anchor="middle" font-weight="500">后期</text>
+<text class="sm" x="488" y="98" fill="#085041" text-anchor="middle">cohesin 被切</text>
+<text class="sm" x="488" y="114" fill="#085041" text-anchor="middle">姐妹单体分离</text>
+
+<rect x="540" y="60" width="96" height="62" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="588" y="80" fill="#04342C" text-anchor="middle" font-weight="500">末期</text>
+<text class="sm" x="588" y="98" fill="#085041" text-anchor="middle">核膜重建</text>
+<text class="sm" x="588" y="114" fill="#085041" text-anchor="middle">胞质分裂</text>
+
+<!-- 阻断药标注 -->
+<text class="sm" x="40" y="140" fill="#5c5c5a">对应阻断剂</text>
+
+<rect x="40" y="146" width="96" height="72" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="88" y="164" fill="#042C53" text-anchor="middle">RO-3306</text>
+<text class="sm" x="88" y="180" fill="#0C447C" text-anchor="middle">CDK1 抑制</text>
+<text class="sm" x="88" y="196" fill="#0C447C" text-anchor="middle">依托泊苷</text>
+<text class="sm" x="88" y="212" fill="#0C447C" text-anchor="middle">羟基脲</text>
+
+<rect x="140" y="146" width="96" height="72" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="188" y="164" fill="#412402" text-anchor="middle">Alisertib</text>
+<text class="sm" x="188" y="180" fill="#633806" text-anchor="middle">Aurora A</text>
+<text class="sm" x="188" y="196" fill="#633806" text-anchor="middle">BI 2536</text>
+<text class="sm" x="188" y="212" fill="#633806" text-anchor="middle">Plk1</text>
+
+<rect x="240" y="146" width="96" height="72" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="288" y="164" fill="#8C1D18" text-anchor="middle">秋水仙素</text>
+<text class="sm" x="288" y="180" fill="#8C1D18" text-anchor="middle">诺考达唑</text>
+<text class="sm" x="288" y="196" fill="#8C1D18" text-anchor="middle">长春碱</text>
+<text class="sm" x="288" y="212" fill="#8C1D18" text-anchor="middle">Monastrol</text>
+
+<rect x="340" y="146" width="96" height="72" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="388" y="164" fill="#8C1D18" text-anchor="middle">紫杉醇</text>
+<text class="sm" x="388" y="180" fill="#8C1D18" text-anchor="middle">Colcemid</text>
+<text class="sm" x="388" y="196" fill="#8C1D18" text-anchor="middle">MG132</text>
+<text class="sm" x="388" y="212" fill="#8C1D18" text-anchor="middle">Aurora B 抑制</text>
+
+<rect x="440" y="146" width="96" height="72" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="488" y="164" fill="#04342C" text-anchor="middle">Reversine</text>
+<text class="sm" x="488" y="180" fill="#085041" text-anchor="middle">Mps1 抑制</text>
+<text class="sm" x="488" y="196" fill="#085041" text-anchor="middle">★ 废除 SAC</text>
+<text class="sm" x="488" y="212" fill="#085041" text-anchor="middle">提前进后期</text>
+
+<rect x="540" y="146" width="96" height="72" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="588" y="164" fill="#04342C" text-anchor="middle">细胞松弛素</text>
+<text class="sm" x="588" y="180" fill="#085041" text-anchor="middle">Blebbistatin</text>
+<text class="sm" x="588" y="196" fill="#085041" text-anchor="middle">核分裂照常</text>
+<text class="sm" x="588" y="212" fill="#085041" text-anchor="middle">→ 双核细胞</text>
+
+<!-- SAC 通路 -->
+<rect class="frame" x="40" y="232" width="600" height="234" rx="10"/>
+<text class="ttl" x="60" y="256">SAC：为什么微管类药物一律卡在中期</text>
+
+<rect x="60" y="268" width="128" height="46" rx="7" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="124" y="288" fill="#8C1D18" text-anchor="middle">动粒未附着</text>
+<text class="sm" x="124" y="305" fill="#8C1D18" text-anchor="middle">或无张力</text>
+
+<line x1="188" y1="291" x2="212" y2="291" stroke="#B3261E" stroke-width="1.2" marker-end="url(#rd)"/>
+
+<rect x="216" y="268" width="128" height="46" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="280" y="288" fill="#412402" text-anchor="middle">Mps1 → Mad2</text>
+<text class="sm" x="280" y="305" fill="#633806" text-anchor="middle">BubR1 组装 MCC</text>
+
+<line x1="344" y1="291" x2="368" y2="291" stroke="#B3261E" stroke-width="1.2" marker-end="url(#rd)"/>
+
+<rect x="372" y="268" width="128" height="46" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="436" y="288" fill="#412402" text-anchor="middle">抑制 APC/C</text>
+<text class="sm" x="436" y="305" fill="#633806" text-anchor="middle">Cdc20 被扣住</text>
+
+<line x1="500" y1="291" x2="524" y2="291" stroke="#B3261E" stroke-width="1.2" marker-end="url(#rd)"/>
+
+<rect x="528" y="268" width="92" height="46" rx="7" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="574" y="288" fill="#8C1D18" text-anchor="middle">中期停滞</text>
+<text class="sm" x="574" y="305" fill="#8C1D18" text-anchor="middle">★</text>
+
+<line x1="436" y1="314" x2="436" y2="336" stroke="#8A8A85" stroke-width="1" stroke-dasharray="3 3"/>
+
+<rect x="216" y="340" width="284" height="46" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="358" y="360" fill="#042C53" text-anchor="middle">securin 与 cyclin B 不降解</text>
+<text class="sm" x="358" y="377" fill="#0C447C" text-anchor="middle">separase 不活化 → cohesin 不被切割</text>
+
+<rect x="60" y="340" width="144" height="46" rx="7" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="132" y="360" fill="#04342C" text-anchor="middle">张力建立后 SAC 沉默</text>
+<text class="sm" x="132" y="377" fill="#085041" text-anchor="middle">APC/C 活化 → 进后期</text>
+
+<rect x="512" y="340" width="108" height="46" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="566" y="360" fill="#412402" text-anchor="middle">久阻不下</text>
+<text class="sm" x="566" y="377" fill="#633806" text-anchor="middle">滑脱→多倍体</text>
+
+<text class="hint" x="60" y="406">单个未附着动粒即可让整个细胞停在中期　这是极高增益的全或无开关</text>
+<text class="hint" x="60" y="428">长期阻断三种结局　凋亡 / 有丝分裂滑脱（cyclin B 漏降解）/ 有丝分裂灾难</text>
+<text class="sm" x="60" y="452" fill="#5c5c5a">SAC 感知的是动粒附着与张力，不是药物本身——药物只是制造了「没附着、没张力」的状态</text>
+
+<text class="hint" x="40" y="492">注　Mps1 抑制剂与 Chk1 抑制剂废除检查点，属「取消阻断」而非「制造阻断」</text>
+</svg>

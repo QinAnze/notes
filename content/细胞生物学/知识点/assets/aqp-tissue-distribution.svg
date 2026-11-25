@@ -1,0 +1,92 @@
+<svg viewBox="0 0 680 560" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>水通道蛋白的组织分布与功能对应关系</title>
+<desc>按组织归纳：肾集合管有AQP2 受 ADH 调控，中枢神经有AQP4 双向调节脑水肿，脂肪组织有 AQP7 导出甘油，眼晶状体有AQP0，肝有AQP8 与AQP9，呼吸与分泌上皮有AQP3 AQP5。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .org  { font-size: 13px; font-weight: 500; }
+  .aqp  { font-size: 12px; fill: var(--color-text-primary, #1a1a1a); }
+  .fn   { font-size: 11px; fill: var(--color-text-secondary, #5c5c5c); }
+  .hint { font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .box  { stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">分布即功能　每个组织只表达它需要的通道</text>
+<text class="hint" x="290" y="24">教材原表列AQP0–AQP7，此处补全至AQP12</text>
+
+<rect class="box" x="40" y="40" width="200" height="96" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+<text class="org" x="56" y="62" fill="#042C53">肾　集合管</text>
+<text class="aqp" x="56" y="82">AQP2　AQP3　AQP4</text>
+<text class="aqp" x="56" y="100">AQP6　AQP11</text>
+<text class="fn" x="56" y="120">AQP2 受 ADH 急性调控</text>
+
+<rect class="box" x="256" y="40" width="200" height="96" rx="10" fill="#EEEDFE" stroke="#534AB7"/>
+<text class="org" x="272" y="62" fill="#26215C">中枢神经系统</text>
+<text class="aqp" x="272" y="82">AQP4　星形胶质细胞</text>
+<text class="fn" x="272" y="100">脑水肿双向作用</text>
+<text class="fn" x="272" y="118">促细胞毒性　抑血管源性</text>
+
+<rect class="box" x="472" y="40" width="168" height="96" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text class="org" x="488" y="62" fill="#412402">眼</text>
+<text class="aqp" x="488" y="82">AQP0　晶状体</text>
+<text class="aqp" x="488" y="100">AQP1　AQP4　AQP5</text>
+<text class="fn" x="488" y="120">C 端切除增加稳定性</text>
+
+<rect class="box" x="40" y="152" width="200" height="96" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text class="org" x="56" y="174" fill="#04342C">肺与气道</text>
+<text class="aqp" x="56" y="194">AQP1　肺泡上皮</text>
+<text class="aqp" x="56" y="212">AQP3　AQP4　AQP5</text>
+<text class="fn" x="56" y="232">呼气末清除肺泡水</text>
+
+<rect class="box" x="256" y="152" width="200" height="96" rx="10" fill="#E1F5EE" stroke="#0F6E56"/>
+<text class="org" x="272" y="174" fill="#04342C">分泌型上皮</text>
+<text class="aqp" x="272" y="194">AQP5　泪腺　汗腺</text>
+<text class="aqp" x="272" y="212">AQP3　唾液腺　乳腺</text>
+<text class="fn" x="272" y="232">分泌液体的水通道</text>
+
+<rect class="box" x="472" y="152" width="168" height="96" rx="10" fill="#FAECE7" stroke="#993C1D"/>
+<text class="org" x="488" y="174" fill="#4A1B0C">皮肤</text>
+<text class="aqp" x="488" y="194">AQP3　AQP5</text>
+<text class="aqp" x="488" y="212">AQP7</text>
+<text class="fn" x="488" y="232">汗液分泌　经皮吸水</text>
+
+<rect class="box" x="40" y="264" width="200" height="96" rx="10" fill="#FCEBEB" stroke="#A32D2D"/>
+<text class="org" x="56" y="286" fill="#501313">脂肪组织</text>
+<text class="aqp" x="56" y="306">AQP7　甘油通道</text>
+<text class="fn" x="56" y="324">导出脂解产生的甘油</text>
+<text class="fn" x="56" y="344">脂解关键通道</text>
+
+<rect class="box" x="256" y="264" width="200" height="96" rx="10" fill="#FAEEDA" stroke="#854F0B"/>
+<text class="org" x="272" y="286" fill="#412402">肝</text>
+<text class="aqp" x="272" y="306">AQP8　肝再生必需</text>
+<text class="aqp" x="272" y="324">AQP9　先天免疫</text>
+<text class="fn" x="272" y="344">HNF4A 下游肝癌标志物</text>
+
+<rect class="box" x="472" y="264" width="168" height="96" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+<text class="org" x="488" y="286" fill="#042C53">肾近曲小管</text>
+<text class="aqp" x="488" y="306">AQP1　AQP6</text>
+<text class="fn" x="488" y="324">重吸收九成滤液水</text>
+<text class="fn" x="488" y="344">AQP6 由 pH 门控</text>
+
+<rect class="box" x="40" y="376" width="200" height="96" rx="10" fill="#FBEAF0" stroke="#993556"/>
+<text class="org" x="56" y="398" fill="#4B1528">血液与免疫</text>
+<text class="aqp" x="56" y="418">AQP1　红细胞</text>
+<text class="aqp" x="56" y="436">AQP9　中性粒细胞</text>
+<text class="fn" x="56" y="456">调节体积与 ROS 爆发</text>
+
+<rect class="box" x="256" y="376" width="200" height="96" rx="10" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text class="org" x="272" y="398" fill="#2C2C2A">植物</text>
+<text class="aqp" x="272" y="418">γ-TIP　液泡膜</text>
+<text class="fn" x="272" y="436">维持细胞膨压</text>
+<text class="fn" x="272" y="456">气孔开闭</text>
+
+<rect class="box" x="472" y="376" width="168" height="96" rx="10" fill="#EAF3DE" stroke="#3B6D11"/>
+<text class="org" x="488" y="398" fill="#173404">消化道</text>
+<text class="aqp" x="488" y="418">AQP3　AQP7　AQP8</text>
+<text class="aqp" x="488" y="436">AQP9　AQP10　AQP12</text>
+<text class="fn" x="488" y="456">肠腔水分吸收</text>
+
+<rect class="frame" x="40" y="490" width="600" height="52" rx="10" fill="none" stroke="var(--color-border-tertiary, rgba(128,128,128,0.25))" stroke-width="0.5"/>
+<text class="ttl" x="60" y="512">共同规律</text>
+<text class="fn" x="60" y="532">分泌上皮到分泌型水通道　·　中枢神经到双向调节通道　·　代谢组织到甘油通道　·　长期使用部位演化出加工修饰</text>
+</svg>

@@ -313,8 +313,7 @@
       "note": "醇酚醚",
       "group": "有机",
       "tip": "无 O–H，中性、低极性；久置会生成爆炸性过氧化物。"
-    }
-    ,
+    },
     {
       "name": "甲醛",
       "smiles": "C=O",
@@ -659,8 +658,7 @@
       "note": "羧酸及其衍生物",
       "group": "有机",
       "tip": "pKa ≈ 13，烷基化后水解脱羧可一次引入两个不同烷基。"
-    }
-    ,
+    },
     {
       "name": "吡啶",
       "smiles": "c1ccncc1",
@@ -932,8 +930,7 @@
       "note": "立体化学",
       "group": "生物",
       "tip": "[α]D = +52.7°：它是 D 型，但 D 型 ≠ 右旋 —— 这是最常被误解的一点。"
-    }
-    ,
+    },
     {
       "name": "HEPES",
       "smiles": "OCCN1CCN(CCS(O)(=O)=O)CC1",
@@ -3587,6 +3584,150 @@
       "note": "拓展-氧化还原与细胞信号转导",
       "group": "生化",
       "tip": "维生素 C：烯二醇结构让它既能给出两个电子，又能把 Fe³⁺ 还原回 Fe²⁺ —— 抗氧化和促吸收是同一件事。",
+      "src": "manual"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "线粒体和叶绿体",
+      "group": "生物",
+      "tip": "线粒体内膜上合成后交给腺苷酸转位体运出；叶绿体光反应生成的 ATP 只供暗反应。"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "ATP合酶",
+      "group": "生物",
+      "tip": "底物本身：结合槽里 ATP/ADP 的构象变化，就是旋转催化的最后一环。"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "氧化磷酸化",
+      "group": "生物",
+      "tip": "化学渗透的「能量货币」：质子梯度越强，ATP/ADP 比值越高。"
+    },
+    {
+      "name": "三磷酸腺苷",
+      "smiles": "Nc1ncnc2n(cnc12)C3OC(CO[P](O)(=O)O[P](O)(=O)O[P](O)(O)=O)C(O)C3O",
+      "formula": "C₁₀H₁₆N₅O₁₃P₃",
+      "note": "物质的跨膜运输",
+      "group": "生物",
+      "tip": "Na⁺/K⁺ 泵、Ca²⁺ 泵每水解 1 个 ATP 逆梯度转运离子 —— 主动运输的直接能源。"
+    },
+    {
+      "name": "胆固醇",
+      "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+      "formula": "C₂₇H₄₆O",
+      "note": "细胞质膜",
+      "group": "生物",
+      "tip": "膜流动性的双向调节器：高温「刹车」、低温「抗间隙填充」，还参与脂筏形成。"
+    },
+    {
+      "name": "胆固醇",
+      "smiles": "CC(C)CCC[C@@H](C)[C@H]1CC[C@H]2[C@@H]3CC=C4C[C@@H](O)CC[C@]4(C)[C@H]3CC[C@]12C",
+      "formula": "C₂₇H₄₆O",
+      "note": "胆固醇对脂膜的调节",
+      "group": "生物",
+      "tip": "主角分子：甾核体积「尴尬」是它能双向调节流动性的结构根源。"
+    },
+    {
+      "name": "D-葡萄糖",
+      "smiles": "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C=O",
+      "formula": "C₆H₁₂O₆",
+      "note": "物质的跨膜运输",
+      "group": "生物",
+      "tip": "与 SGLT 对照看：GLUT 走易化扩散，只能顺浓度梯度，不耗 ATP。"
+    },
+    {
+      "name": "D-葡萄糖",
+      "smiles": "OC[C@@H](O)[C@@H](O)[C@H](O)[C@@H](O)C=O",
+      "formula": "C₆H₁₂O₆",
+      "note": "GLUT",
+      "group": "生物",
+      "tip": "底物：GLUT1 的交替进入机制就是为它设计的；D 型才是天然构型。"
+    },
+    {
+      "name": "丙酮酸",
+      "smiles": "CC(=O)C(O)=O",
+      "formula": "C₃H₄O₃",
+      "note": "氧化磷酸化",
+      "group": "生物",
+      "tip": "糖酵解终产物：进入线粒体后由 PDH 脱羧为乙酰 CoA，进入 TCA 循环供电子。"
+    },
+    {
+      "name": "2,4-二硝基苯酚",
+      "smiles": "Oc1ccc(cc1[N+](=O)[O-])[N+](=O)[O-]",
+      "formula": "C₆H₄N₂O₅",
+      "note": "氧化磷酸化",
+      "group": "生物",
+      "tip": "经典解偶联剂：携 H⁺ 穿过内膜，把质子梯度短路成热，ATP 合成下降而耗氧上升。",
+      "src": "manual"
+    },
+    {
+      "name": "水通道蛋白 AQP1",
+      "pdb": "1FQY",
+      "formula": "同源四聚体 · 每亚基 6 次跨膜",
+      "note": "AQP",
+      "group": "蛋白",
+      "tip": "点「3D」。四聚体里每个亚基都是独立水孔；NPA 基序与 ar/R 滤器决定只让水过。",
+      "src": "manual"
+    },
+    {
+      "name": "葡萄糖转运蛋白 GLUT1",
+      "pdb": "4PYP",
+      "formula": "12 次跨膜单链",
+      "note": "GLUT",
+      "group": "蛋白",
+      "tip": "点「3D」。交替进入（alternating access）机制：结合葡萄糖后构象翻转，把底物放进门内。",
+      "src": "manual"
+    },
+    {
+      "name": "ATP 合酶 F1 头部",
+      "pdb": "1BMF",
+      "formula": "α₃β₃γδε",
+      "note": "ATP合酶",
+      "group": "蛋白",
+      "tip": "点「3D」。这是牛心线粒体 F1-ATPase：看 α/β 六聚体中间的 γ 轴，旋转催化的核心。",
+      "src": "manual"
+    },
+    {
+      "name": "微管蛋白 α/β 二聚体",
+      "pdb": "1JFF",
+      "formula": "α-微管蛋白 + β-微管蛋白",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点「3D」。紫杉醇结合位点在 β 亚基；微管动态不稳定性就来自 GTP 水解后的构象差异。",
+      "src": "manual"
+    },
+    {
+      "name": "肌动蛋白 actin",
+      "pdb": "1ATN",
+      "formula": "actin–DNase I 复合物",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点「3D」。ATP 结合口袋在裂缝底部；ATP 水解 → ADP 使解聚概率上升。",
+      "src": "manual"
+    },
+    {
+      "name": "核小体核心颗粒",
+      "pdb": "1AOI",
+      "formula": "146 bp DNA + 组蛋白八聚体",
+      "note": "细胞核和核糖体",
+      "group": "蛋白",
+      "tip": "点「3D」。DNA 绕八聚体 1.65 圈；组蛋白尾部伸出，是表观修饰的位点。",
+      "src": "manual"
+    },
+    {
+      "name": "驱动蛋白 kinesin",
+      "pdb": "1BG2",
+      "formula": "马达结构域二聚体",
+      "note": "细胞骨架",
+      "group": "蛋白",
+      "tip": "点「3D」。两个马达头交替结合微管，沿「微管轨道」向正端行走。",
       "src": "manual"
     }
   ]

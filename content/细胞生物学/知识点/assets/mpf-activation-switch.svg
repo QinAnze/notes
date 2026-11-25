@@ -1,0 +1,84 @@
+<svg viewBox="0 0 680 460" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>MPF 的激活开关与不可逆关闭</title>
+<desc>MPF 由恒定的 CDK1 与周期性积累的 cyclin B 组成。先经 CAK 磷酸化 Thr161，再被 Wee1 与 Myt1 加上 Thr14 和 Tyr15 抑制性磷酸形成 pre-MPF；Cdc25 去除抑制磷酸后 MPF 爆发激活，并通过激活 Cdc25、抑制 Wee1 形成双稳态正反馈。活性 MPF 磷酸化 lamin、condensin、微管相关蛋白等引发 M 期事件。最终 APC/C 降解 cyclin B 与 securin，使 MPF 不可逆关闭并退出 M 期。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"/>
+  </marker>
+  <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#B3261E"/>
+  </marker>
+</defs>
+
+<text class="ttl" x="40" y="24">MPF　蓄势 → 松刹车 → 爆发 → 销毁</text>
+<text class="hint" x="286" y="24">CDK1 恒定　cyclin B 周期性　活性由磷酸化开关决定</text>
+
+<!-- 组成条 -->
+<rect x="40" y="40" width="600" height="42" rx="10" fill="#F5F5F0" stroke="var(--color-border-tertiary, #B4B2A9)" stroke-width="0.5"/>
+<text class="sm" x="56" y="66" fill="#5c5c5a">组成</text>
+<rect x="100" y="50" width="180" height="22" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="190" y="65" fill="#042C53" text-anchor="middle">CDK1（p34^cdc2）　量恒定</text>
+<text class="sm" x="288" y="66" fill="#5c5c5a">+</text>
+<rect x="302" y="50" width="180" height="22" rx="5" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="392" y="65" fill="#04342C" text-anchor="middle">cyclin B　周期性合成降解</text>
+<text class="sm" x="494" y="66" fill="#412402">= MPF（H1 激酶）</text>
+
+<!-- 左栏：四步 -->
+<text class="ttl" x="40" y="102">激活四步　先蓄势，再松刹车</text>
+
+<rect x="56" y="110" width="270" height="38" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="70" y="134" fill="#042C53">① 结合 cyclin B → CDK1 构象改变</text>
+
+<line x1="191" y1="148" x2="191" y2="154" stroke="#8A8A85" stroke-width="1.1" marker-end="url(#a)"/>
+
+<rect x="56" y="158" width="270" height="38" rx="7" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="70" y="182" fill="#042C53">② CAK 磷酸化 Thr161（激活位）</text>
+
+<line x1="191" y1="196" x2="191" y2="202" stroke="#8A8A85" stroke-width="1.1" marker-end="url(#a)"/>
+
+<rect x="56" y="206" width="270" height="48" rx="7" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="70" y="226" fill="#412402">③ Wee1 / Myt1 加 Thr14、Tyr15 抑制磷酸</text>
+<text class="sm" x="70" y="244" fill="#633806">→ pre-MPF　蓄势但不放行 ★</text>
+
+<line x1="191" y1="254" x2="191" y2="260" stroke="#8A8A85" stroke-width="1.1" marker-end="url(#a)"/>
+
+<rect x="56" y="264" width="270" height="48" rx="7" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="70" y="284" fill="#8C1D18">④ Cdc25 脱去 Thr14 / Tyr15 磷酸</text>
+<text class="sm" x="70" y="302" fill="#8C1D18">→ MPF 爆发激活　进入 M 期</text>
+
+<!-- 正反馈折线 -->
+<path d="M326 288 L338 288 L338 156 L348 156" fill="none" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#r)"/>
+<text class="sm" x="336" y="326" fill="#8C1D18" text-anchor="end">正反馈</text>
+
+<!-- 右栏：正反馈 -->
+<rect x="350" y="110" width="290" height="94" rx="9" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="366" y="132" fill="#04342C">正反馈 → 双稳态（全或无）</text>
+<text class="sm" x="366" y="152" fill="#085041">活性 MPF 磷酸化并激活 Cdc25C</text>
+<text class="sm" x="366" y="170" fill="#085041">活性 MPF 磷酸化并抑制 Wee1</text>
+<text class="sm" x="366" y="188" fill="#085041">Plk1 同向助阵　无稳定中间态</text>
+
+<!-- 右栏：底物 -->
+<rect x="350" y="214" width="290" height="98" rx="9" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="366" y="236" fill="#412402">MPF 底物 → M 期形态变化</text>
+<text class="sm" x="366" y="256" fill="#633806">lamin → 核纤层解聚、核膜解体</text>
+<text class="sm" x="366" y="274" fill="#633806">condensin / H3 → 染色体凝缩</text>
+<text class="sm" x="366" y="292" fill="#633806">MAP / stathmin → 纺锤体形成</text>
+<text class="sm" x="366" y="307" fill="#633806">GM130 → 高尔基体碎裂</text>
+
+<!-- 关闭 -->
+<rect x="40" y="336" width="600" height="98" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="60" y="358" fill="#8C1D18">关闭　APC/C 把 cyclin B 销毁，不可逆</text>
+<text class="sm" x="60" y="380" fill="#8C1D18">SAC 沉默 → APC/C^Cdc20 活化 → 降解 securin（separase 切 cohesin）+ cyclin B</text>
+<text class="sm" x="60" y="398" fill="#8C1D18">CDK1 失活 → PP1 / PP2A 复位底物 → 核膜重建、去凝缩、胞质分裂、退出 M 期</text>
+<text class="sm" x="60" y="416" fill="#8C1D18">APC/C^Cdh1 在 G1 继续降解 cyclin B、Plk1、geminin，锁住低 CDK 状态</text>
+
+<text class="hint" x="40" y="452">方向性　进入 M 期靠可逆的去磷酸化　退出 M 期靠不可逆的蛋白水解</text>
+</svg>

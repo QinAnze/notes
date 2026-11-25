@@ -1,0 +1,74 @@
+<svg viewBox="0 0 680 500" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>水通道蛋白六次跨膜结构与底物选择性</title>
+<desc>AQP 单体为 6 次跨膜螺旋，两个胞质环各含一个 NPA 基序，与两个半螺旋 Pa、Pb 及 TM2、TM5 共同围成水通道桶；胞外ar/R 滤器决定只过水或同时过甘油。</desc>
+<defs>
+<marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl  { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm   { font-size: 11px; }
+  .hint { font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame{ fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">单体结构　六次跨膜与 NPA 通道桶</text>
+
+<rect class="frame" x="40" y="38" width="330" height="270" rx="12"/>
+
+<text class="lbl" x="56" y="58">胞外　含三个胞外环 A / C / E</text>
+
+<rect x="60" y="74" width="290" height="26" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="sm" x="205" y="87" fill="#042C53" text-anchor="middle" dominant-baseline="central">ar/R 选择性滤器　芳香族残基 + 精氨酸</text>
+
+<text class="sm" x="76" y="122" fill="#5c5c5a">环A</text>
+<text class="sm" x="158" y="122" fill="#5c5c5a">环C</text>
+<text class="sm" x="252" y="122" fill="#5c5c5a">环E</text>
+
+<line x1="90" y1="132" x2="90" y2="228" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+<line x1="126" y1="132" x2="126" y2="228" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+<line x1="215" y1="132" x2="215" y2="228" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+<line x1="251" y1="132" x2="251" y2="228" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+<line x1="287" y1="132" x2="287" y2="228" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+<line x1="323" y1="132" x2="323" y2="228" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+
+<text class="sm" x="88" y="248" fill="#185FA5" text-anchor="middle">TM1</text>
+<text class="sm" x="126" y="248" fill="#185FA5" text-anchor="middle">TM2</text>
+<text class="sm" x="215" y="248" fill="#185FA5" text-anchor="middle">TM3</text>
+<text class="sm" x="251" y="248" fill="#185FA5" text-anchor="middle">TM4</text>
+<text class="sm" x="287" y="248" fill="#185FA5" text-anchor="middle">TM5</text>
+<text class="sm" x="323" y="248" fill="#185FA5" text-anchor="middle">TM6</text>
+
+<path d="M158 132 L158 228" fill="none" stroke="#EF9F27" stroke-width="9" stroke-linecap="round"/>
+<path d="M287 132 L287 228" fill="none" stroke="#EF9F27" stroke-width="9" stroke-linecap="round"/>
+
+<rect x="140" y="158" width="36" height="18" rx="4" fill="#854F0B" stroke="#FAC775" stroke-width="0.5"/>
+<text class="sm" x="158" y="167" fill="#FAEEDA" text-anchor="middle" dominant-baseline="central">NPA</text>
+<rect x="269" y="158" width="36" height="18" rx="4" fill="#854F0B" stroke="#FAC775" stroke-width="0.5"/>
+<text class="sm" x="287" y="167" fill="#FAEEDA" text-anchor="middle" dominant-baseline="central">NPA</text>
+
+<text class="lbl" x="40" y="296">桶壁组成：两个 NPA 基序 + 半螺旋 Pa / Pb + TM2 / TM5</text>
+<text class="lbl" x="40" y="316">同源四聚体为膜上的原生状态　界面决定质膜与脂筏定位</text>
+
+<rect class="frame" x="40" y="336" width="600" height="146" rx="12"/>
+<text class="ttl" x="60" y="358">一个氨基酸决定底物选择性</text>
+
+<rect x="60" y="374" width="270" height="92" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="lbl" x="76" y="396" fill="#042C53">水选择性　aquaporin</text>
+<text class="sm" x="76" y="416" fill="#0C447C">NPA 的 N 为天冬酰胺　极性且体积小</text>
+<text class="sm" x="76" y="434" fill="#0C447C">滤器窄　只容许单个水分子</text>
+<text class="sm" x="76" y="454" fill="#0C447C">AQP0　AQP1　AQP2　AQP4　AQP5</text>
+
+<path d="M340 420 L356 420" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#ar2)"/>
+
+<rect x="366" y="374" width="274" height="92" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="lbl" x="382" y="396" fill="#412402">甘油通道　aquaglyceroporin</text>
+<text class="sm" x="382" y="416" fill="#633806">N 替换为缬 / 异亮 / 苯丙氨酸　疏水且大</text>
+<text class="sm" x="382" y="434" fill="#633806">滤器变宽　容许甘油、尿素、H₂O₂ 等</text>
+<text class="sm" x="382" y="454" fill="#633806">AQP3　AQP7　AQP9　AQP10</text>
+
+<text class="hint" x="40" y="502">AQP1 单点突变 NPA 中 N 换为 V，即可由水通道转为甘油通道</text>
+</svg>

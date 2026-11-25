@@ -359,6 +359,21 @@ code.mermaid.diagram-failed {
   }
 }
 
+// `![[x.svg]]` 由 localSvg.ts 内联后的容器：
+// 宽度交给 CSS，高度按 viewBox 等比缩放；颜色走 SVG 里的 var(--dark) 等站点变量。
+.svg-figure {
+  margin: 1.5rem auto;
+  text-align: center;
+
+  .inlined-svg {
+    display: block;
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
 // Inline code styling
 code {
   background-color: rgba(59, 130, 246, 0.08);

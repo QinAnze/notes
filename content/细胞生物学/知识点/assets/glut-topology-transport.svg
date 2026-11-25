@@ -1,0 +1,69 @@
+<svg viewBox="0 0 680 430" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>GLUT 十二次跨膜结构与交替进入机制</title>
+<desc>GLUT 蛋白为 12 次跨膜螺旋，含胞外糖基化环与胞内连接环，TM7、TM8、TM11 组成底物结合三联体；转运通过外向开放与内向开放构象交替实现易化扩散。</desc>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl  { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm   { font-size: 11px; }
+  .frame{ fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="26">十二次跨膜拓扑　12-TM</text>
+<text class="lbl" x="240" y="26">保守底物结合三联体：TM7 的 Q、TM8 的 GL/GE、TM11 的 N-I</text>
+
+<rect class="frame" x="40" y="40" width="420" height="230" rx="14"/>
+<text class="lbl" x="56" y="62">胞外　含 N-糖基化位点，形成糖萼</text>
+
+<line x1="60" y1="112" x2="60" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="96" y1="112" x2="96" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="132" y1="112" x2="132" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="168" y1="112" x2="168" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="204" y1="112" x2="204" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="240" y1="112" x2="240" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="276" y1="112" x2="276" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="312" y1="112" x2="312" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="348" y1="112" x2="348" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="384" y1="112" x2="384" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+<line x1="420" y1="112" x2="420" y2="196" stroke="#7F77DD" stroke-width="6" stroke-linecap="round"/>
+
+<rect x="256" y="146" width="176" height="16" rx="8" fill="#534AB7" stroke="#AFA9EC" stroke-width="0.5"/>
+<text x="344" y="154" font-size="11" fill="#EEEDFE" text-anchor="middle" dominant-baseline="central">中央四螺旋束　底物通道</text>
+
+<circle cx="276" cy="212" r="7" fill="#EF9F27" stroke="#FAC775" stroke-width="0.5"/>
+<circle cx="348" cy="212" r="7" fill="#EF9F27" stroke="#FAC775" stroke-width="0.5"/>
+
+<text class="lbl" x="56" y="240">胞质　长连接环，含核定位信号（GLUT8）</text>
+
+<text class="lbl" x="480" y="112">TM1–TM6　第一结构域</text>
+<text class="lbl" x="480" y="180">TM7–TM12　第二结构域</text>
+<text x="480" y="212" font-size="13" font-weight="500" fill="#EF9F27">两个单元相对滑动</text>
+<text class="lbl" x="480" y="234">电梯机制 elevator</text>
+
+<rect class="frame" x="40" y="292" width="600" height="118" rx="12"/>
+<text class="ttl" x="60" y="316">交替进入机制　不同时开放两侧</text>
+
+<rect x="64" y="332" width="170" height="60" rx="8" fill="#0C447C" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="149" y="352" font-size="13" fill="#B5D4F4" text-anchor="middle">外向开放　Of</text>
+<text class="sm" x="149" y="372" fill="#85B7EB" text-anchor="middle">胞质环闭合</text>
+<text class="sm" x="149" y="386" fill="#85B7EB" text-anchor="middle">底物从胞质侧进入</text>
+
+<path d="M244 362 L292 362" stroke="#5DCAA5" stroke-width="1" fill="none" marker-end="url(#ar)"/>
+<text class="lbl" x="268" y="348" text-anchor="middle">滑动</text>
+
+<rect x="302" y="332" width="170" height="60" rx="8" fill="#085041" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="387" y="352" font-size="13" fill="#9FE1CB" text-anchor="middle">内向开放　If</text>
+<text class="sm" x="387" y="372" fill="#5DCAA5" text-anchor="middle">外侧环闭合</text>
+<text class="sm" x="387" y="386" fill="#5DCAA5" text-anchor="middle">底物向胞外释放</text>
+
+<path d="M482 362 L530 362" stroke="#5DCAA5" stroke-width="1" fill="none" marker-end="url(#ar)"/>
+
+<text class="lbl" x="546" y="348">易化扩散</text>
+<text class="lbl" x="546" y="368">不耗 ATP</text>
+<text class="lbl" x="546" y="386">可逆　不浓缩</text>
+</svg>

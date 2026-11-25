@@ -1,0 +1,67 @@
+<svg viewBox="0 0 680 420" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>通道、交换体与离子泵的分工与时间尺度</title>
+<desc>离子通道被动且快速，驱动毫秒级膜电位变化；交换体被动且中速，缓慢转移电荷并参与后超极化；离子泵主动且慢速，长期维持离子梯度。三者时间尺度相差多个数量级。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">三类转运装置　同一件事的三种时间尺度</text>
+<text class="hint" x="290" y="24">被动为主快速产生电位　主动缓慢维持梯度</text>
+
+<rect x="40" y="40" width="190" height="200" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="60" y="64" font-size="13" font-weight="500" fill="#042C53">离子通道</text>
+<text class="sm" x="60" y="86" fill="#0C447C">电压门控　配体门控　漏通道</text>
+<text class="sm" x="60" y="108" fill="#0C447C">机制　门控开闭</text>
+<text class="sm" x="60" y="126" fill="#0C447C">方向　顺电化学梯度</text>
+<text class="sm" x="60" y="144" fill="#0C447C">能耗　不耗能</text>
+<text class="sm" x="60" y="170" fill="#042C53">尺度　微秒至毫秒</text>
+<text class="sm" x="60" y="196" fill="#0C447C">钠通道　钾通道</text>
+<text class="sm" x="60" y="214" fill="#0C447C">钙通道　钾漏通道</text>
+<text class="sm" x="60" y="232" fill="#0C447C">水通道</text>
+
+<rect x="245" y="40" width="190" height="200" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text x="265" y="64" font-size="13" font-weight="500" fill="#412402">交换体</text>
+<text class="sm" x="265" y="86" fill="#633806">用另一离子驱动</text>
+<text class="sm" x="265" y="108" fill="#633806">机制　构象交替进入</text>
+<text class="sm" x="265" y="126" fill="#633806">方向　顺各自梯度</text>
+<text class="sm" x="265" y="144" fill="#633806">能耗　不直接耗能</text>
+<text class="sm" x="265" y="170" fill="#412402">尺度　毫秒至秒</text>
+<text class="sm" x="265" y="196" fill="#633806">钠钙交换器</text>
+<text class="sm" x="265" y="214" fill="#633806">钠氢交换器</text>
+<text class="sm" x="265" y="232" fill="#633806">钠钾氯同向转运</text>
+
+<rect x="450" y="40" width="190" height="200" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="470" y="64" font-size="13" font-weight="500" fill="#04342C">离子泵</text>
+<text class="sm" x="470" y="86" fill="#085041">水解三磷酸腺苷</text>
+<text class="sm" x="470" y="108" fill="#085041">机制　磷酸化循环</text>
+<text class="sm" x="470" y="126" fill="#085041">方向　逆浓度梯度</text>
+<text class="sm" x="470" y="144" fill="#085041">能耗　直接耗能</text>
+<text class="sm" x="470" y="170" fill="#04342C">尺度　秒至分钟</text>
+<text class="sm" x="470" y="196" fill="#085041">钠钾泵</text>
+<text class="sm" x="470" y="214" fill="#085041">钙泵　氢钾泵</text>
+<text class="sm" x="470" y="232" fill="#085041">囊性纤维化氯通道</text>
+
+<rect class="frame" x="40" y="256" width="600" height="144" rx="12"/>
+<text class="ttl" x="60" y="278">时间尺度相差多个数量级</text>
+
+<line x1="70" y1="300" x2="620" y2="300" stroke="#B4B2A9" stroke-width="1"/>
+<line x1="70" y1="300" x2="70" y2="366" stroke="#B4B2A9" stroke-width="1"/>
+<text class="sm" x="70" y="384" fill="#5c5c5a">微秒</text>
+<text class="sm" x="340" y="384" fill="#5c5c5a" text-anchor="middle">毫秒</text>
+<text class="sm" x="614" y="384" fill="#5c5c5a" text-anchor="end">分钟</text>
+
+<rect x="76" y="312" width="110" height="12" rx="6" fill="#185FA5"/>
+<rect x="196" y="312" width="150" height="12" rx="6" fill="#BA7517"/>
+<rect x="356" y="312" width="258" height="12" rx="6" fill="#0F6E56"/>
+
+<text class="sm" x="131" y="340" fill="#0C447C" text-anchor="middle">通道</text>
+<text class="sm" x="271" y="340" fill="#633806" text-anchor="middle">交换体</text>
+<text class="sm" x="485" y="340" fill="#085041" text-anchor="middle">泵</text>
+
+<text class="hint" x="40" y="408">动作电位的每个相位由通道的时间程序决定　泵在秒至分钟尺度上补回被侵蚀的梯度</text>
+</svg>

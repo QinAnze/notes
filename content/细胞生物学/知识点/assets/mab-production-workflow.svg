@@ -1,0 +1,74 @@
+<svg viewBox="0 0 680 620" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>单克隆抗体制备流程：从抗原免疫到成品纯化</title>
+<desc>流程为：抗原制备→小鼠免疫→脾细胞与骨髓瘤细胞PEG融合→HAT选择培养→抗体初筛→有限稀释单克隆化→扩大培养→Protein A 纯化→质量鉴定。</desc>
+<defs>
+<marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .step { font-size: 13px; font-weight: 500; }
+  .sub  { font-size: 11px; fill: var(--color-text-secondary, #5c5c5c); }
+  .hint { font-size: 11px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .edge { fill: none; stroke: var(--color-text-tertiary, #8a8a8a); stroke-width: 1; }
+  .sep  { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">单克隆抗体制备流程</text>
+<text class="hint" x="200" y="24">每一步的目标是确保"一个细胞克隆 → 一种抗体 → 可无限重复生产"</text>
+
+<rect x="240" y="40" width="200" height="38" rx="8" fill="#5F5E5A" stroke="#B4B2A9" stroke-width="0.5"/>
+<text class="step" x="340" y="59" fill="#F1EFE8" text-anchor="middle" dominant-baseline="central">抗原制备</text>
+
+<path class="edge" d="M340 78L340 96" marker-end="url(#fa)"/>
+
+<rect x="60" y="98" width="560" height="56" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="step" x="80" y="120" fill="#412402">① 动物免疫　BALB/c 小鼠</text>
+<text class="sub" x="80" y="138" fill="#633806">CFA 一免 → IFA 二免 → 三免　·　融合前 3–5 天final boost　·　ELISA 测效价达10⁵–10⁶</text>
+
+<path class="edge" d="M340 154 L340 172" marker-end="url(#fa)"/>
+
+<rect x="60" y="174" width="560" height="66" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+<text class="step" x="80" y="196" fill="#501313">② 细胞融合　脾细胞 + 骨髓瘤细胞（SP2/0）</text>
+<text class="sub" x="80" y="214" fill="#791F1F">比例 5:1 ~ 10:1　·　PEG 1500 融合（90 s–2 min）或电融合</text>
+<text class="sub" x="80" y="230" fill="#791F1F">脾细胞提供特异性抗体　+　瘤细胞提供无限增殖能力</text>
+
+<path class="edge" d="M340 240 L340 258" marker-end="url(#fa)"/>
+
+<rect x="60" y="260" width="560" height="66" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="step" x="80" y="282" fill="#042C53">③ HAT 选择培养　2–3 周</text>
+<text class="sub" x="80" y="300" fill="#0C447C">未融合脾细胞自行死亡　·　未融合瘤细胞 HGPRT⁻ 无法救回　·　只有脾-瘤杂交瘤存活</text>
+<text class="sub" x="80" y="316" fill="#0C447C">一周后转 HT 培养基维持　·　每 3–4 天半量换液</text>
+
+<path class="edge" d="M340 326 L340 344" marker-end="url(#fa)"/>
+
+<rect x="60" y="346" width="560" height="56" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="step" x="80" y="368" fill="#04342C">④ 抗体初筛　双筛选</text>
+<text class="sub" x="80" y="386" fill="#085041">ELISA 做高通量初筛　→　IFA / Western blot 确认特异性　→　功能实验</text>
+
+<path class="edge" d="M340 402 L340 420" marker-end="url(#fa)"/>
+
+<rect x="60" y="422" width="560" height="66" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="step" x="80" y="444" fill="#26215C">⑤ 单克隆化　重复 2–3 轮</text>
+<text class="sub" x="80" y="462" fill="#3C3489">有限稀释法（0.5–1 细胞/mL + 饲养细胞）·　软琼脂集落法　·　FACS 单细胞分选</text>
+<text class="sub" x="80" y="478" fill="#3C3489">目的：确保"一个细胞—一种抗体"，排除多核融合产生的双抗体克隆</text>
+
+<path class="edge" d="M340 488 L340 506" marker-end="url(#fa)"/>
+
+<rect x="60" y="508" width="270" height="56" rx="10" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+<text class="step" x="80" y="530" fill="#4B1528">⑥ 扩大培养</text>
+<text class="sub" x="80" y="548" fill="#72243E">无血清悬浮 1–10 g/L（工业主流）</text>
+<text class="sub" x="80" y="560" fill="#72243E">或腹水法 1–10 mg/mL（已淘汰）</text>
+
+<rect x="350" y="508" width="270" height="56" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text class="step" x="370" y="530" fill="#173404">⑦ Protein A/G 亲和纯化</text>
+<text class="sub" x="370" y="548" fill="#27500A">pH 8.0 上样 → 甘氨酸 pH 2.7 洗脱</text>
+<text class="sub" x="370" y="560" fill="#27500A">立即中和 → 离子交换 → SEC</text>
+
+<path class="edge" d="M340 566 L340 584" marker-end="url(#fa)"/>
+
+<rect x="200" y="586" width="280" height="26" rx="8" fill="#1D9E75" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="step" x="340" y="599" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">⑧ 质量鉴定 → 冻干 / 液氮保存</text>
+</svg>

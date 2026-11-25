@@ -1,0 +1,81 @@
+<svg viewBox="0 0 680 470" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>BiP 作为 UPR 感受器的占有率模型</title>
+<desc>BiP 结合位点有限，必须同时帮助错误折叠蛋白并抑制 PERK、ATF6、IRE1。错误折叠蛋白堆积会占用 BiP，使三个感受器获得自由并启动三条 UPR 支路，分别导向适应或 CHOP 介导的凋亡。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">BiP 是 UPR 的分子音量旋钮</text>
+<text class="hint" x="256" y="24">UPR 检测的不是错误折叠蛋白本身，而是 BiP 被占用的程度</text>
+
+<!-- 上半：静息态 -->
+<rect x="40" y="40" width="600" height="92" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="60" y="64" fill="#04342C">未应激　BiP 充裕</text>
+<text class="sm" x="196" y="64" fill="#085041">感受器被 BiP 死死拉住　UPR 关闭</text>
+
+<circle cx="132" cy="98" r="21" fill="#0F6E56"/>
+<text class="sm" x="132" y="102" fill="#FFFFFF" text-anchor="middle">BiP</text>
+
+<text class="sm" x="164" y="94" fill="#085041">被三个感受器占住　无法去帮折叠</text>
+<text class="sm" x="164" y="114" fill="#085041">BiP 仍有剩余容量处理少量错误折叠蛋白</text>
+
+<rect x="420" y="72" width="86" height="26" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="463" y="89" fill="#412402" text-anchor="middle">PERK　静默</text>
+<rect x="516" y="72" width="104" height="26" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="sm" x="568" y="89" fill="#412402" text-anchor="middle">ATF6　滞留 ER</text>
+
+<!-- 箭头 -->
+<text class="sm" x="340" y="156" fill="#8A8A85" text-anchor="middle">错误折叠蛋白堆积　BiP 被抢走</text>
+<line x1="340" y1="132" x2="340" y2="176" stroke="#8A8A85" stroke-width="1.2" marker-end="url(#a)"/>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8A85"/>
+  </marker>
+</defs>
+
+<!-- 下半：应激态 -->
+<rect x="40" y="182" width="600" height="238" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="60" y="206" fill="#412402">应激　感受器获得自由　UPR 开启</text>
+
+<circle cx="86" cy="238" r="21" fill="#185FA5"/>
+<text class="sm" x="86" y="242" fill="#FFFFFF" text-anchor="middle">BiP</text>
+<text class="sm" x="120" y="234" fill="#0C447C">全部投入折叠与转运</text>
+<text class="sm" x="120" y="252" fill="#0C447C">结合位点被占满</text>
+
+<!-- 三条支路 -->
+<rect x="60" y="268" width="176" height="88" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="76" y="290" fill="#042C53">ATF6　最快</text>
+<text class="sm" x="76" y="312" fill="#0C447C">转运至高尔基体</text>
+<text class="sm" x="76" y="330" fill="#0C447C">被 S1P　S2P 切开</text>
+<text class="sm" x="76" y="348" fill="#0C447C">入核激活 ERQC 基因</text>
+
+<rect x="252" y="268" width="176" height="88" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ttl" x="268" y="290" fill="#04342C">IRE1　中等</text>
+<text class="sm" x="268" y="312" fill="#085041">剪接 XBP1 mRNA</text>
+<text class="sm" x="268" y="330" fill="#085041">移码产生 XBP1s</text>
+<text class="sm" x="268" y="348" fill="#085041">过强时 TRAF2 促凋亡</text>
+
+<rect x="444" y="268" width="176" height="88" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="ttl" x="460" y="290" fill="#412402">PERK　最慢</text>
+<text class="sm" x="460" y="312" fill="#633806">磷酸化 eIF2α</text>
+<text class="sm" x="460" y="330" fill="#633806">抑制全局翻译</text>
+<text class="sm" x="460" y="348" fill="#633806">逃逸翻译 ATF4　CHOP</text>
+
+<line x1="148" y1="356" x2="148" y2="376" stroke="#0F6E56" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a)"/>
+<line x1="340" y1="356" x2="340" y2="376" stroke="#0F6E56" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a)"/>
+<line x1="532" y1="356" x2="532" y2="376" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#a)"/>
+
+<rect x="60" y="380" width="368" height="30" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="sm" x="244" y="399" fill="#04342C" text-anchor="middle">一过性应激　CHOP 短时表达　细胞适应存活</text>
+
+<rect x="444" y="380" width="176" height="30" rx="6" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="sm" x="532" y="399" fill="#8C1D18" text-anchor="middle">持续应激　凋亡</text>
+
+<text class="hint" x="40" y="446">增殖细胞对 PERK 支路更敏感　不增殖细胞中 UPR 倾向于降级为纯适应反应</text>
+<text class="hint" x="40" y="464">BiP 高表达既是保护机制也是肿瘤标志　预后判断需结合表达强度与持续时间</text>
+</svg>

@@ -1,0 +1,108 @@
+<svg viewBox="0 0 680 470" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>C 期 D 期与倍增时间：慢生长顺序模式与快生长多叉重叠</title>
+<desc>C 期约四十分钟、D 期约二十分钟，C 加 D 约六十分钟是起始到对应分裂的固定延迟。慢生长倍增时间大于六十分钟，一轮复制接一次分裂并有 B 期；快生长倍增时间二十分钟，多轮复制周期在母代提前起始并彼此重叠，形成多叉复制，起始比分裂早约三代。</desc>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .lbl { font-size: 12px; fill: var(--color-text-secondary, #5c5c5c); }
+  .sm  { font-size: 11px; }
+  .hint{ font-size: 12px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .frame { fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">C + D 是固定延迟　τ 决定要不要多叉</text>
+<text class="hint" x="296" y="24">C≈40 min　D≈20 min　C+D≈60 min</text>
+
+<!-- ============ 慢生长 ============ -->
+<rect x="40" y="40" width="600" height="146" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ttl" x="56" y="62" fill="#042C53">慢生长　τ = 70 min ≥ C+D　顺序排队</text>
+<text class="sm" x="400" y="62" fill="#0C447C">一轮复制 → 一次分裂 → B 期等待</text>
+
+<!-- 慢生长链 -->
+<rect x="40" y="84" width="171" height="22" rx="4" fill="#0F6E56"/>
+<text class="sm" x="125" y="99" fill="#FFFFFF" text-anchor="middle">C 期　复制 40 min</text>
+<rect x="211" y="84" width="86" height="22" rx="4" fill="#BA7517"/>
+<text class="sm" x="254" y="99" fill="#FFFFFF" text-anchor="middle">D 期 20</text>
+<rect x="297" y="84" width="43" height="22" rx="4" fill="#B4B2A9"/>
+<text class="sm" x="318" y="99" fill="#412402" text-anchor="middle">B</text>
+<rect x="340" y="84" width="171" height="22" rx="4" fill="#0F6E56"/>
+<text class="sm" x="425" y="99" fill="#FFFFFF" text-anchor="middle">C 期　第二轮</text>
+<rect x="511" y="84" width="86" height="22" rx="4" fill="#BA7517"/>
+<text class="sm" x="554" y="99" fill="#FFFFFF" text-anchor="middle">D 期</text>
+
+<circle cx="40" cy="95" r="5" fill="#185FA5"/>
+<text class="sm" x="40" y="126" fill="#0C447C" text-anchor="middle">起始 I₁</text>
+<circle cx="340" cy="95" r="5" fill="#185FA5"/>
+<text class="sm" x="340" y="126" fill="#0C447C" text-anchor="middle">起始 I₂</text>
+
+<line x1="297" y1="76" x2="297" y2="146" stroke="#B3261E" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text class="sm" x="297" y="140" fill="#8C1D18" text-anchor="middle">分裂</text>
+<line x1="597" y1="76" x2="597" y2="146" stroke="#B3261E" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text class="sm" x="597" y="140" fill="#8C1D18" text-anchor="middle">分裂</text>
+
+<text class="sm" x="56" y="166" fill="#042C53">B 期 = τ − (C+D) = 10 min　出生时 1 份未复制染色体　同时只有 2 个复制叉</text>
+
+<!-- ============ 快生长 ============ -->
+<rect x="40" y="196" width="600" height="212" rx="10" fill="#FBE9E7" stroke="#B3261E" stroke-width="0.5"/>
+<text class="ttl" x="56" y="218" fill="#8C1D18">快生长　τ = 20 min &lt; C+D　多轮复制重叠</text>
+<text class="sm" x="404" y="218" fill="#8C1D18">起始比分裂早约 3 代</text>
+
+<!-- 五条堆叠链 -->
+<rect x="40" y="232" width="171" height="18" rx="3" fill="#0F6E56"/>
+<rect x="211" y="232" width="86" height="18" rx="3" fill="#BA7517"/>
+<text class="sm" x="125" y="245" fill="#FFFFFF" text-anchor="middle">C①</text>
+<text class="sm" x="254" y="245" fill="#FFFFFF" text-anchor="middle">D①</text>
+
+<rect x="126" y="256" width="171" height="18" rx="3" fill="#0F6E56"/>
+<rect x="297" y="256" width="86" height="18" rx="3" fill="#BA7517"/>
+<text class="sm" x="211" y="269" fill="#FFFFFF" text-anchor="middle">C②</text>
+<text class="sm" x="340" y="269" fill="#FFFFFF" text-anchor="middle">D②</text>
+
+<rect x="211" y="280" width="171" height="18" rx="3" fill="#0F6E56"/>
+<rect x="383" y="280" width="86" height="18" rx="3" fill="#BA7517"/>
+<text class="sm" x="297" y="293" fill="#FFFFFF" text-anchor="middle">C③</text>
+<text class="sm" x="426" y="293" fill="#FFFFFF" text-anchor="middle">D③</text>
+
+<rect x="297" y="304" width="171" height="18" rx="3" fill="#0F6E56"/>
+<rect x="469" y="304" width="86" height="18" rx="3" fill="#BA7517"/>
+<text class="sm" x="383" y="317" fill="#FFFFFF" text-anchor="middle">C④</text>
+<text class="sm" x="512" y="317" fill="#FFFFFF" text-anchor="middle">D④</text>
+
+<rect x="383" y="328" width="171" height="18" rx="3" fill="#0F6E56"/>
+<rect x="554" y="328" width="86" height="18" rx="3" fill="#BA7517"/>
+<text class="sm" x="469" y="341" fill="#FFFFFF" text-anchor="middle">C⑤</text>
+<text class="sm" x="597" y="341" fill="#FFFFFF" text-anchor="middle">D⑤</text>
+
+<!-- 起始点 -->
+<circle cx="40" cy="241" r="4" fill="#185FA5"/>
+<circle cx="126" cy="265" r="4" fill="#185FA5"/>
+<circle cx="211" cy="289" r="4" fill="#185FA5"/>
+<circle cx="297" cy="313" r="4" fill="#185FA5"/>
+<circle cx="383" cy="337" r="4" fill="#185FA5"/>
+
+<!-- 分裂虚线 -->
+<line x1="297" y1="226" x2="297" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="383" y1="226" x2="383" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="469" y1="226" x2="469" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="554" y1="226" x2="554" y2="360" stroke="#B3261E" stroke-width="1" stroke-dasharray="3 3"/>
+
+<text class="sm" x="297" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+<text class="sm" x="383" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+<text class="sm" x="469" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+<text class="sm" x="554" y="374" fill="#8C1D18" text-anchor="middle">分裂</text>
+
+<text class="sm" x="56" y="396" fill="#8C1D18">同一时刻有多条 C 段在跑 → 4–8 个复制叉　B 期消失　ori : ter ≈ 4 : 1</text>
+
+<!-- 时间刻度 -->
+<line x1="40" y1="414" x2="640" y2="414" stroke="#B4B2A9" stroke-width="1"/>
+<text class="sm" x="40" y="430" fill="#5c5c5a" text-anchor="middle">0</text>
+<text class="sm" x="126" y="430" fill="#5c5c5a" text-anchor="middle">20</text>
+<text class="sm" x="211" y="430" fill="#5c5c5a" text-anchor="middle">40</text>
+<text class="sm" x="297" y="430" fill="#5c5c5a" text-anchor="middle">60</text>
+<text class="sm" x="383" y="430" fill="#5c5c5a" text-anchor="middle">80</text>
+<text class="sm" x="469" y="430" fill="#5c5c5a" text-anchor="middle">100</text>
+<text class="sm" x="554" y="430" fill="#5c5c5a" text-anchor="middle">120</text>
+<text class="sm" x="620" y="430" fill="#5c5c5a" text-anchor="end">min</text>
+
+<text class="hint" x="40" y="454">快生长不是复制叉跑得更快　C 与 D 基本不变　变的是起始频率与重叠轮数</text>
+</svg>

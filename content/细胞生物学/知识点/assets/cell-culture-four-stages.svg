@@ -1,0 +1,65 @@
+<svg viewBox="0 0 680 560" width="100%" xmlns="http://www.w3.org/2000/svg">
+<title>动物细胞培养四阶段演进：原代细胞到细胞株</title>
+<desc>活体组织经分离得到原代细胞（P0），经传代扩大培养量，连续传代获得无限增殖能力成为细胞系，再经单克隆分离成为遗传均一的细胞株，最终冻存建库用于实验与工业生产。</desc>
+<defs>
+<marker id="dn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<style>
+  text { font-family: var(--font-sans, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif); }
+  .ttl  { font-size: 14px; font-weight: 500; fill: var(--color-text-primary, #1a1a1a); }
+  .nm   { font-size: 14px; font-weight: 500; }
+  .en   { font-size: 11px; fill: var(--color-text-secondary, #5c5c5c); }
+  .ds   { font-size: 12px; fill: var(--color-text-primary, #1a1a1a); }
+  .hint { font-size: 11px; fill: var(--color-text-tertiary, #8a8a8a); }
+  .edge { fill: none; stroke: var(--color-text-tertiary, #8a8a8a); stroke-width: 1; }
+  .frame{ fill: none; stroke: var(--color-border-tertiary, rgba(128,128,128,0.25)); stroke-width: 0.5; }
+</style>
+
+<text class="ttl" x="40" y="24">四阶段演进主线</text>
+<text class="hint" x="160" y="24">来源、处理历史、遗传稳定性逐级改变</text>
+
+<rect x="240" y="42" width="200" height="36" rx="8" fill="#5F5E5A" stroke="var(--color-border-secondary, #B4B2A9)" stroke-width="0.5"/>
+<text x="340" y="60" font-size="13" font-weight="500" fill="#F1EFE8" text-anchor="middle" dominant-baseline="central">活体组织 / 器官</text>
+
+<path class="edge" d="M340 78 L340 96" marker-end="url(#dn)"/>
+
+<rect x="180" y="98" width="320" height="66" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="nm" x="200" y="120" fill="#042C53">① 原代细胞</text>
+<text class="en" x="200" y="136">Primary Cell　·　P0</text>
+<text class="ds" x="200" y="154" fill="#185FA5">遗传背景正常，分化完整　寿命有限 1–30 代</text>
+<text class="hint" x="200" y="120" dx="0" dy="0" opacity="0"></text>
+
+<path class="edge" d="M340 164 L340 190" marker-end="url(#dn)"/>
+<text class="en" x="350" y="180">胰酶 / EDTA 消化　→　转移至新容器</text>
+
+<rect x="180" y="192" width="320" height="66" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="nm" x="200" y="214" fill="#04342C">② 传代</text>
+<text class="en" x="200" y="230">Passaging　·　P1, P2, Pn</text>
+<text class="ds" x="200" y="248" fill="#0F6E56">扩大培养量　仍是有限寿命　每次记为 P+n</text>
+
+<path class="edge" d="M340 258 L340 284" marker-end="url(#dn)"/>
+<text class="en" x="350" y="274">连续传代 &gt;20–30 代　或　获得不朽性</text>
+
+<rect x="180" y="286" width="320" height="66" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text class="nm" x="200" y="308" fill="#412402">③ 细胞系</text>
+<text class="en" x="200" y="324">Cell Line　·　无限增殖</text>
+<text class="ds" x="200" y="342" fill="#854F0B">遗传异质性增加　可能发生表型漂变</text>
+
+<path class="edge" d="M340 352 L340 378" marker-end="url(#dn)"/>
+<text class="en" x="350" y="368">单克隆分离　有限稀释 / FACS / 软琼脂</text>
+
+<rect x="180" y="380" width="320" height="66" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="nm" x="200" y="402" fill="#26215C">④ 细胞株</text>
+<text class="en" x="200" y="418">Cell Strain / Subclone　·　亚克隆</text>
+<text class="ds" x="200" y="436" fill="#534AB7">遗传均一　标准可重复　单克隆来源</text>
+
+<path class="edge" d="M340 446 L340 472" marker-end="url(#dn)"/>
+
+<rect x="140" y="474" width="400" height="60" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text class="nm" x="340" y="496" fill="#2C2C2A" text-anchor="middle">冷冻保存　MCB / WCB 细胞库</text>
+<text class="en" x="340" y="518" fill="#5F5E5A" text-anchor="middle">实验应用　·　工业生产　·　病毒生产　·　重组蛋白表达</text>
+
+<text class="hint" x="40" y="552">寿命递增：有限 → 有限 → 无限 → 无限　　均一性递增：低 →—→ 高（单克隆）　　遗传稳定性递减</text>
+</svg>
