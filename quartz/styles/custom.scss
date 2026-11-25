@@ -268,37 +268,94 @@ div[data-rehype-pretty-code-fragment] {
   }
 }
 
-// Mermaid 图渲染完成后仍带着 rehype-pretty-code 的外壳（深色渐变背景 + 内阴影 +
-// IBM Plex Mono），会让 SVG 看起来像"贴在代码框里"，且暗色模式下配色打架。
-// 这里把外壳拆掉，让图自己居中、跟随主题。
-// ⚠️ mermaid 是 CDN 动态加载的，v10 的 `securityLevel: 'loose'` 会让 SVG
-// 自带配色，所以**不能反色处理**，只能去掉容器样式让它用主题默认色。
-div[data-rehype-pretty-code-fragment]:has(> pre > code > .mermaid),
-figure:has(.mermaid) {
-  background: transparent;
+// Mermaid / SMILES 块：去掉代码框外壳，让图自己居中、跟随主题。
+// ⚠️ 这里的 DOM 是 <pre><code class="mermaid">源码</code></pre>，
+// 渲染成功后 SVG 直接进 <code> 里（scienceDiagrams.ts 注入的脚本负责）。
+// 不要给 svg 做反色：mermaid 的 dark 主题已经自带配色。
+pre:has(> code.mermaid) {
+  background: transparent !important;
   box-shadow: none;
   border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
 
-  pre {
-    background: transparent !important;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-  }
+code.mermaid {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: normal;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  display: block;
 
-  code {
-    font-family: inherit;
-    font-size: 1rem;
-    line-height: normal;
-    background: transparent;
-    color: inherit;
-  }
-
-  // mermaid 渲染成功后会把源码文本替换成 <svg>
-  svg {
+  > svg {
     max-width: 100%;
     height: auto;
+  }
+}
+
+// 渲染失败时保留源码，至少内容可读
+code.mermaid.diagram-failed {
+  white-space: pre;
+  font-family: var(--codeFont);
+  font-size: 0.85rem;
+  color: var(--darkgray);
+  padding: 0.75rem;
+  border: 1px dashed var(--lightgray);
+  border-radius: 8px;
+}
+
+// Obsidian Chem 的 ```smiles 块：每行一个结构，横排自动换行
+.smiles-diagram-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.smiles-item {
+  margin: 0;
+
+  svg {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.diagram-failed {
+    font-family: var(--codeFont);
+    font-size: 0.85rem;
+    color: var(--darkgray);
+    padding: 0.75rem;
+    border: 1px dashed var(--lightgray);
+    border-radius: 8px;
+  }
+}
+
+// 行内 $smiles=... —— 结构式跟着文字走，基线对齐
+.smiles-inline {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+
+  svg {
+    display: inline-block;
+    width: 110px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.diagram-failed {
+    font-family: var(--codeFont);
+    font-size: 0.85em;
+    color: var(--darkgray);
+    border-bottom: 1px dashed var(--gray);
   }
 }
 

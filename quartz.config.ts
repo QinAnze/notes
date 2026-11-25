@@ -65,7 +65,10 @@ const config: QuartzConfig = {
         priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.SyntaxHighlighting(),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      // mermaid 交给 ScienceDiagrams 渲染：上游那套只在 nav 跑一次、不锁版本、
+      // 不跟主题切换，这里关掉避免两套脚本抢同一个块。
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, mermaid: false }),
+      Plugin.ScienceDiagrams(),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),

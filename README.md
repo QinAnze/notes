@@ -64,8 +64,12 @@ content/
 - **PDF 链接写连字符形式**：`2 生命的化学基础.pdf` → `2-生命的化学基础.pdf`，否则 404。
 - **提示框（callout）里不放表格**，表格一律拆到框外紧跟着 —— callout 有内边距，
   表格塞进去列宽会被压到不可读。
-- **画图用 SVG，不用 ASCII 字符画，也不用 mermaid**（本站 mermaid 渲染不出来）。
+- **画图优先内联 SVG**，不用 ASCII 字符画；关系图 / 流程图也可以用 **Mermaid**：
+  ` ```mermaid ` 代码块（由 `quartz/plugins/transformers/scienceDiagrams.ts` 渲染，跟随明暗主题）。
   关系、流程、层级**能一行文字说清的别上图**：`A ──(试剂/条件)──► B`，一行一条。
+- **化学结构式（Obsidian Chem 语法）**：整块用 ` ```smiles `（每行一个 SMILES）；
+  行内写 `$smiles=CCO`，会渲染成跟着文字走的小结构式。
+  ⚠️ 行内不要写收尾 `$` —— `$smiles=...$` 会被当成 KaTeX 公式。
 - **配图的三条路**：示意图用内联 SVG；有真实数据的定量图（能量剖面、滴定曲线、Arrhenius…）
   可以用 matplotlib；显微图之类画不出来的，找权威机构的现成图并注明来源与许可。
   ⚠️ **不凭空造数据** —— 没有数值就画成示意图并标「示意，非按比例」。
@@ -144,7 +148,8 @@ npm run format             # Prettier 格式化
 - **站点背景图**是 `content/有机化学笔记/图片保存/` 下的 `bg.jpg` / `bg-light.jpg`，
   路径写死在 `quartz/styles/custom.scss`，改名或移动会导致背景丢失。
 - **本项目对 Quartz 上游打过补丁**（全中文文件名下的链接解码、图谱配置合并顺序、
-  侧栏模块、移动文件监听等）。**升级或重装 Quartz 前，先看
+  侧栏模块、移动文件监听、Mermaid/SMILES 渲染 `quartz/plugins/transformers/scienceDiagrams.ts` 等）。
+  **升级或重装 Quartz 前，先看
   `.workbuddy/memory/MEMORY.md` 里的补丁清单**，否则会静默失效。
 - **改组件要从 `quartz.layout.ts` 下手** —— `componentResources.ts` 只收集
   「layout 里注册过的组件」的样式和脚本，漏注册等于没写（不报错，只是悄悄不生效）。
