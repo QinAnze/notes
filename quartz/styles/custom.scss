@@ -387,6 +387,29 @@ code.mermaid.diagram-failed {
   }
 }
 
+// md 里直接写的 <svg>（不是 ![[x.svg]] 文件）由 scienceDiagrams.ts 运行期包成 .svg-card。
+// 同样白底黑字：这些图里有大量固定浅色填充块，透明底 + 暗色模式会白字压白块。
+.svg-card {
+  display: block;
+  margin: 1.25rem auto;
+  padding: 0.75rem;
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  text-align: center;
+
+  > svg {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    height: auto;
+    margin: 0 auto;
+    cursor: zoom-in;
+  }
+}
+
 // 点击放大浮层（Mermaid + 内联 SVG 共用；逻辑在 scienceDiagrams.ts）
 .diagram-zoom-overlay {
   position: fixed;

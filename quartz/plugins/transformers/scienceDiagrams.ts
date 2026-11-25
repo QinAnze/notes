@@ -334,9 +334,37 @@ async function renderInlineSmiles() {
 
 function renderAllDiagrams() {
   expandInlineSmiles()
+  wrapInlineSvgs()
   renderMermaid().catch((err) => console.warn('[diagrams] mermaid 渲染异常', err))
   renderSmiles().catch((err) => console.warn('[diagrams] smiles 渲染异常', err))
   renderInlineSmiles().catch((err) => console.warn('[diagrams] 行内 smiles 渲染异常', err))
+}
+
+// ---------- 统一处理正文里的内联 SVG（用户手写 / ASCII 改造产生的）----------
+// ![[x.svg]] 由 localSvg.ts 在构建期内联并包好 .svg-figure；
+// 这里负责 md 里直接写的 <svg>：套白卡片、强制深色墨水，
+// 否则暗色模式下 currentColor 变白、压在图里的浅色块上会看不见。
+
+function wrapInlineSvgs() {
+  const article = document.querySelector('article') || document.body
+  if (!article) return
+  const svgs = Array.from(article.querySelectorAll('svg'))
+  for (const svg of svgs) {
+    if (svg.closest('code.mermaid')) continue
+    if (svg.closest('.svg-figure')) continue
+    if (svg.closest('span.svg-card')) continue
+    if (svg.closest('.callout')) continue
+    if (svg.closest('.graph')) continue
+    if (svg.closest('.markmap-wrapper')) continue
+    if (svg.closest('.molecule-wrapper')) continue
+    if (svg.closest('a')) continue
+    if (svg.closest('button')) continue
+    const card = document.createElement('span')
+    card.className = 'svg-card'
+    svg.parentNode.insertBefore(card, svg)
+    card.appendChild(svg)
+    svg.classList.add('inlined-svg')
+  }
 }
 
 // ---------- 点击放大（Mermaid + 内联 SVG 共用）----------
@@ -393,7 +421,7 @@ document.addEventListener('click', (event) => {
   const target = event.target
   if (!target) return
   if (!target.closest) return
-  const svg = target.closest('code.mermaid svg, figure.svg-figure svg')
+  const svg = target.closest('code.mermaid svg, figure.svg-figure svg, span.svg-card svg')
   if (!svg) return
   openDiagramZoom(svg)
 })
