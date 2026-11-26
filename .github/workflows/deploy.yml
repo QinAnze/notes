@@ -14,9 +14,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # 不拉 LFS 对象的话，content/ 里的 PDF/图片只是 pointer，
-          # npx quartz build 会把 pointer 复制进 public/，线上链接全坏。
-          lfs: true
+          # LFS 对象单独拉取：checkout 内置的 lfs:true 一旦有一个对象超时就整步失败，
+          # 这里改成下面的重试步骤，避免瞬时 5xx 把整个部署打挂。
+          lfs: false
+
+      - name: Fetch LFS objects (with retry)
+        run: |
+          git lfs install --local
+          for i in 1 2 3 4; do
+            if git lfs fetch origin "$GITHUB_SHA" && git lfs checkout; then
+              echo "LFS fetch OK on attempt $i"
+              exit 0
+            fi
+            echo "LFS fetch failed (attempt $i), retrying..."
+            sleep 15
+          done
+          echo "LFS fetch failed after 4 attempts"
+          exit 1
 
       - name: Setup Node
         uses: actions/setup-node@v4
